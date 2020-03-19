@@ -1,0 +1,1 @@
+scoreboard players set @e[scores={Time=2..}] Time 2

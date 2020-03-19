@@ -1,0 +1,15 @@
+execute as @s at @s run function game:projectile/bolt/lshot
+execute as @s at @s run function game:projectile/bolt/lshot
+execute as @s at @s run function game:projectile/bolt/lshot
+execute as @s at @s run function game:projectile/bolt/lshot
+execute as @s at @s run function game:projectile/bolt/lshot
+execute as @s at @s run function game:projectile/bolt/lshot
+execute as @s at @s run function game:projectile/bolt/lshot
+execute as @s at @s run function game:projectile/bolt/lshot
+execute as @s at @s run function game:projectile/bolt/lshot
+execute as @s at @s run function game:projectile/bolt/lshot
+execute as @s at @s run function game:projectile/bolt/lshot
+execute as @s at @s run function game:projectile/bolt/lshot
+execute as @s at @s run function game:projectile/bolt/lshot
+execute as @s at @s run function game:projectile/bolt/lshot
+execute as @s at @s run function game:projectile/bolt/lshot

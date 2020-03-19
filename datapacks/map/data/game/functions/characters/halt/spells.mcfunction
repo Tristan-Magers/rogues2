@@ -1,0 +1,35 @@
+#dagger
+scoreboard players set @s[nbt={SelectedItem:{id:"minecraft:feather"}}] wtimer 81
+scoreboard players remove @s[nbt={SelectedItem:{id:"minecraft:feather"}}] Mana 4
+execute as @s[nbt={SelectedItem:{id:"minecraft:feather"}}] at @s run replaceitem entity @s hotbar.0 minecraft:stone_sword{Unbreakable:1b,AttributeModifiers:[{AttributeName:"generic.attackSpeed",Name:"generic.attackSpeed",Amount:-3.0,Operation:0,UUIDLeast:688731,UUIDMost:349779,Slot:"mainhand"},{AttributeName:"generic.attackDamage",Name:"generic.attackDamage",Amount:5,Operation:0,UUIDLeast:337862,UUIDMost:868656,Slot:"mainhand"}],display:{Name:"[{\"text\":\"Draining Claw\",\"color\":\"gray\",\"italic\":\"false\",\"bold\":\"true\"},{\"text\":\" (\",\"color\":\"white\",\"italic\":\"false\"},{\"text\":\"6 Damage\",\"color\":\"red\",\"italic\":\"false\"},{\"text\":\") (\",\"color\":\"white\",\"italic\":\"false\"},{\"text\":\"Boost on hit\",\"color\":\"gold\",\"italic\":\"false\"},{\"text\":\")\",\"color\":\"white\",\"italic\":\"false\"}]"}}
+
+#hover
+scoreboard players set @s[nbt={SelectedItem:{id:"minecraft:iron_nugget"}}] hover 40
+execute as @s[nbt={SelectedItem:{id:"minecraft:iron_nugget"}}] at @s run playsound minecraft:entity.bat.takeoff master @a ~ ~ ~ 1 0
+execute as @s[nbt={SelectedItem:{id:"minecraft:iron_nugget"}}] at @s run playsound minecraft:block.beacon.deactivate master @a ~ ~ ~ 1 .7
+execute as @s[nbt={SelectedItem:{id:"minecraft:iron_nugget"}}] at @s run playsound minecraft:block.beacon.deactivate master @a ~ ~ ~ 1 .4
+scoreboard players remove @s[nbt={SelectedItem:{id:"minecraft:iron_nugget"}}] Mana 4
+
+#lethal shot
+scoreboard players set @s[nbt={SelectedItem:{id:"minecraft:nether_brick"}}] btimer 3
+scoreboard players remove @s[nbt={SelectedItem:{id:"minecraft:nether_brick"}}] Mana 9
+execute as @s[nbt={SelectedItem:{id:"minecraft:nether_brick"}}] at @s run replaceitem entity @s hotbar.1 minecraft:bow{Enchantments:[{id:"minecraft:power",lvl:5},{id:"minecraft:punch",lvl:2}]} 1
+
+#summon spider
+
+#web
+execute as @s[nbt={SelectedItem:{id:"minecraft:iron_ingot"}}] at @s run summon minecraft:area_effect_cloud ~ ~ ~ {NoGravity:1,Marker:1,Invulnerable:1,CustomName:"\"web\"",Invisible:1,Duration:999999}
+execute as @s[nbt={SelectedItem:{id:"minecraft:iron_ingot"}}] at @s run tp @e[name=web,distance=...1,limit=1,sort=nearest] @p
+execute as @s[nbt={SelectedItem:{id:"minecraft:iron_ingot"}}] at @s run scoreboard players set @e[name=web,distance=...1,limit=1,sort=nearest] move 1
+execute as @s[nbt={SelectedItem:{id:"minecraft:iron_ingot"}}] at @s run execute as @e[name=web,distance=..2,limit=1,sort=nearest,scores={move=1}] at @s run tp @s ~ ~1.45 ~
+#execute as @s[nbt={SelectedItem:{id:"minecraft:iron_ingot"}}] at @s run execute as @e[name=web,distance=..2,limit=1,sort=nearest,scores={move=1}] at @s run function game:faceaway
+scoreboard players remove @s[nbt={SelectedItem:{id:"minecraft:iron_ingot"}}] Mana 2
+execute as @s[nbt={SelectedItem:{id:"minecraft:iron_ingot"}}] at @s run playsound minecraft:block.gravel.break master @a ~ ~ ~ 1 1.4
+execute as @s[nbt={SelectedItem:{id:"minecraft:iron_ingot"}}] at @s run playsound minecraft:block.gravel.break master @a ~ ~ ~ 1 .5
+
+#spider
+execute as @s[nbt={SelectedItem:{id:"minecraft:bone_meal"}}] at @s run summon minecraft:cave_spider ~ ~ ~ {NoAI:1,Health:6.0}
+execute as @s[nbt={SelectedItem:{id:"minecraft:bone_meal"}}] at @s run tp @e[type=cave_spider,distance=...1,limit=1,sort=nearest] @p
+execute as @s[nbt={SelectedItem:{id:"minecraft:bone_meal"}}] at @s run scoreboard players operation @e[type=cave_spider,distance=...1,limit=1,sort=nearest] playerID = @s playerID
+execute as @s[nbt={SelectedItem:{id:"minecraft:bone_meal"}}] at @s run execute as @e[type=cave_spider,distance=...2,limit=1,sort=nearest] at @s run tp @s ~ ~1.2 ~ ~ 0
+scoreboard players remove @s[nbt={SelectedItem:{id:"minecraft:bone_meal"}}] Mana 4
