@@ -27,9 +27,9 @@ execute as @e[type=armor_stand,name=Fire] at @s run function game:projectile/fir
 #web shot
 execute as @e[name=web] at @s run function game:projectile/web
 
-#smoker shot
-execute as @e[tag=smoker] at @s run function game:projectile/smoke
-execute as @e[tag=smokerloc] at @s run function game:projectile/smokeloc
+#decoy
+execute as @e[tag=smoker] at @s run function game:projectile/decoy/smoke
+execute as @e[tag=smokerloc] at @s run function game:projectile/decoy/smokeloc
 kill @e[tag=smoker]
 
 #portal
