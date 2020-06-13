@@ -29,6 +29,8 @@ execute as @e[name=web] at @s run function game:projectile/web
 
 #smoker shot
 execute as @e[tag=smoker] at @s run function game:projectile/smoke
+execute as @e[tag=smokerloc] at @s run function game:projectile/smokeloc
+kill @e[tag=smoker]
 
 #portal
 execute as @e[tag=portalset] at @s run particle minecraft:witch ~ ~.5 ~ .2 .3 .2 0 1 force
@@ -43,7 +45,7 @@ execute as @e[tag=hurpro] at @s run function game:projectile/hurpro
 execute as @e[tag=soulsend] at @s run function game:projectile/soulsend
 execute as @e[tag=soulsend] at @s run function game:projectile/soulsend
 
-#gernade
+#totem
 execute as @e[tag=totem] at @s run function game:characters/vohelm/active/totemactive
 
 #gernade

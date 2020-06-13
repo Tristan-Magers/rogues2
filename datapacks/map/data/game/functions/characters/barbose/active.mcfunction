@@ -1,7 +1,7 @@
 tag @s remove portaltest
 tag @s[scores={portal=1}] add self
 
-effect give @s minecraft:speed 1 0 true
+#effect give @s minecraft:speed 1 0 true
 effect give @s minecraft:jump_boost 1 0 true
 
 execute as @s[scores={portal=1}] at @s run scoreboard players operation @e[tag=portalset] playerID -= @s playerID
@@ -15,7 +15,7 @@ tag @s remove self
 
 scoreboard players set @s diaaxehit 0
 
-execute as @s[scores={dummylook=1..}] at @s run function game:characters/barbose/active/dummylook
+execute as @s[scores={dummylook=4..}] at @s run function game:characters/barbose/active/dummylook
 scoreboard players remove @s dummylook 1
 
 execute as @s[scores={dummylook=0}] at @s run function game:spells/manaup

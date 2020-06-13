@@ -7,3 +7,6 @@ execute as @a at @s run execute as @e[name=point,type=minecraft:armor_stand,tag=
 execute as @a at @s run scoreboard players set @e[tag=point1,tag=map2] pointsT 520
 execute as @a at @s run scoreboard players set @e[tag=point2,tag=map2] pointsT 160
 execute as @a at @s run scoreboard players set @e[tag=point3,tag=map2] pointsT -200
+
+setblock 151 27 206 minecraft:end_rod
+setblock 154 28 202 end_rod

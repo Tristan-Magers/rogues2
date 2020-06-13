@@ -1,0 +1,9 @@
+scoreboard players set @s respawn -100
+scoreboard players set @s[gamemode=!creative] burnout -100
+scoreboard players set @s[gamemode=!creative] shotCharge -100
+scoreboard players set @s[gamemode=!creative] wtimer -100
+scoreboard players set @s[gamemode=!creative] btimer -100
+scoreboard players set @s[gamemode=!creative] dummylook -100
+scoreboard players set @s[gamemode=!creative] portal -100
+scoreboard players set @s manaT 0
+scoreboard players set @s glowing -1

@@ -1,24 +1,30 @@
 tag @e remove gethit
 
-execute as @s at @s run tp @s ^ ^ ^.15
-execute as @s at @s positioned ~ ~1.5 ~ run function game:inblock
+tag @a remove isthrow
+
+scoreboard players operation @a playerID -= @s playerID
+tag @a[scores={playerID=0}] add isthrow
+scoreboard players operation @a playerID += @s playerID
 
 execute as @s at @s run tp @s ^ ^ ^.15
 execute as @s at @s positioned ~ ~1.5 ~ run function game:inblock
 
-execute as @s[scores={hurpower=2..},tag=in] at @s run tp @s ^ ^ ^.23
+execute as @s at @s run tp @s ^ ^ ^.15
+execute as @s at @s positioned ~ ~1.5 ~ run function game:inblock
+
+execute as @s[scores={hurpower=2..},tag=in] at @s run tp @s ^ ^ ^.28
 execute as @s[scores={hurpower=2..}] at @s positioned ~ ~1.5 ~ run function game:inblock
 
-execute as @s[scores={hurpower=3..},tag=in] at @s run tp @s ^ ^ ^.19
+execute as @s[scores={hurpower=3..},tag=in] at @s run tp @s ^ ^ ^.24
 execute as @s[scores={hurpower=3..}] at @s positioned ~ ~1.5 ~ run function game:inblock
 
-execute as @s[scores={hurpower=4..},tag=in] at @s run tp @s ^ ^ ^.16
+execute as @s[scores={hurpower=4..},tag=in] at @s run tp @s ^ ^ ^.21
 execute as @s[scores={hurpower=4..}] at @s positioned ~ ~1.5 ~ run function game:inblock
 
-execute as @s[scores={hurpower=5..},tag=in] at @s run tp @s ^ ^ ^.14
+execute as @s[scores={hurpower=5..},tag=in] at @s run tp @s ^ ^ ^.19
 execute as @s[scores={hurpower=5..}] at @s positioned ~ ~1.5 ~ run function game:inblock
 
-execute as @s[scores={hurpower=6..},tag=in] at @s run tp @s ^ ^ ^.13
+execute as @s[scores={hurpower=6..},tag=in] at @s run tp @s ^ ^ ^.17
 execute as @s[scores={hurpower=6..}] at @s positioned ~ ~1.5 ~ run function game:inblock
 
 execute as @s[tag=!in] at @s run tp @s ^ ^ ^-.15
@@ -29,14 +35,8 @@ execute as @s[tag=!in] at @s positioned ~ ~1.5 ~ run tag @a[tag=hittest,distance
 
 #execute as @s[tag=!in] at @s positioned ~ ~1.5 ~ run say @e[distance=..1.5]
 
-tag @a remove isthrow
-
 tag @a[scores={shield=1..}] remove gethit
 tag @a[scores={Invul=1..}] remove gethit
-
-scoreboard players operation @a playerID -= @s playerID
-tag @a[scores={playerID=0}] add isthrow
-scoreboard players operation @a playerID += @s playerID
 
 execute as @s[tag=!in] at @s positioned ~ ~1.5 ~ run scoreboard players set @e[tag=gethit] glowing 35
 
@@ -104,3 +104,5 @@ kill @s[tag=!in]
 scoreboard players add @s stepcount 1
 
 kill @s[scores={stepcount=140..}]
+
+tag @a remove isthrow

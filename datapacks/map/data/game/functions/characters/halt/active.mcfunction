@@ -14,9 +14,12 @@ scoreboard players remove @s hover 1
 
 execute as @s[scores={hover=-1}] at @s run function game:spells/manaup
 
+execute if entity @s[scores={haltdamage=20..}] run playsound minecraft:entity.arrow.hit_player master @a ~ ~ ~ 1 2
+execute if entity @s[scores={haltdamage=40..}] run playsound minecraft:entity.arrow.hit_player master @a ~ ~ ~ 1 1
+execute if entity @s[scores={haltdamage=60..}] run playsound minecraft:entity.arrow.hit_player master @a ~ ~ ~ 1 0
 
+scoreboard players add @s[scores={haltdamage=20..}] healthshow 1
 scoreboard players add @s[scores={haltdamage=40..}] healthshow 1
-scoreboard players add @s[scores={haltdamage=50..}] healthshow 1
 scoreboard players add @s[scores={haltdamage=60..}] healthshow 1
 scoreboard players add @s[scores={haltdamage=70..}] healthshow 1
 

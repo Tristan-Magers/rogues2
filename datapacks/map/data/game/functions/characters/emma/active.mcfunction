@@ -26,11 +26,11 @@ scoreboard players remove @s manaboost 1
 
 execute as @s[scores={manaboost=1..}] at @s run particle minecraft:rain ~ ~.5 ~ .25 .4 .25 0 2 force
 
-scoreboard players remove @s[scores={potion=1..}] Mana 4
+scoreboard players remove @s[scores={potion=1..}] Mana 3
 scoreboard players set @s[scores={potion=1..}] manaboost 120
 effect give @s[scores={manaboost=20..}] jump_boost 1 2 true
 effect give @s[scores={manaboost=20..}] resistance 1 0 true
 scoreboard players set @s potion 0
 
-execute as @s[tag=!spiritworld,scores={Mana=4..},nbt=!{Inventory:[{id:"minecraft:potion",Slot:4b}]}] run replaceitem entity @s hotbar.4 potion{display:{Name:"[{\"text\":\"Storm Energy\",\"color\":\"aqua\",\"italic\":\"false\",\"bold\":\"true\"},{\"text\":\" (Boost/Resistance/Strength) [\",\"color\":\"white\",\"italic\":\"false\"},{\"text\":\"4 Mana\",\"color\":\"gold\",\"italic\":\"false\"},{\"text\":\"]\",\"color\":\"white\",\"italic\":\"false\"}]"},CustomPotionEffects:[{Id:1b,Amplifier:1b,Duration:120,ShowParticles:1b},{Id:8b,Amplifier:2b,Duration:120,ShowParticles:1b},{Id:5b,Amplifier:0b,Duration:120,ShowParticles:1b},{Id:16b,Amplifier:0b,Duration:120,ShowParticles:0b},{Id:11b,Amplifier:0b,Duration:120,ShowParticles:1b}],Potion:"minecraft:thick"}
+execute as @s[tag=!spiritworld,scores={Mana=3..},nbt=!{Inventory:[{id:"minecraft:potion",Slot:4b}]}] run replaceitem entity @s hotbar.4 potion{display:{Name:"[{\"text\":\"Storm Energy\",\"color\":\"aqua\",\"italic\":\"false\",\"bold\":\"true\"},{\"text\":\" (Boost/Resistance/Strength) [\",\"color\":\"white\",\"italic\":\"false\"},{\"text\":\"3 Mana\",\"color\":\"gold\",\"italic\":\"false\"},{\"text\":\"]\",\"color\":\"white\",\"italic\":\"false\"}]"},CustomPotionEffects:[{Id:1b,Amplifier:1b,Duration:120,ShowParticles:1b},{Id:8b,Amplifier:2b,Duration:120,ShowParticles:1b},{Id:5b,Amplifier:0b,Duration:120,ShowParticles:1b},{Id:16b,Amplifier:0b,Duration:120,ShowParticles:0b},{Id:11b,Amplifier:0b,Duration:120,ShowParticles:1b}],Potion:"minecraft:thick"}
 

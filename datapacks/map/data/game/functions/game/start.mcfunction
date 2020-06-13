@@ -1,3 +1,7 @@
+scoreboard objectives remove Score
+scoreboard objectives add Score dummy
+scoreboard objectives setdisplay sidebar Score
+
 execute as @e[scores={map=1}] run function game:game/maps/map1/spawn
 execute as @e[scores={map=2}] run function game:game/maps/map2/spawn
 execute as @e[scores={map=3}] run function game:game/maps/map3/spawn
@@ -56,8 +60,9 @@ scoreboard objectives setdisplay sidebar Score
 
 scoreboard players set @a Score 0
 
-scoreboard players set Time Score 5400
+scoreboard players set Time Score 270
 scoreboard players set @e[name="Time Left"] Time 5400
+scoreboard players set @e[name="Time Left"] TimeS 20
 
 gamemode adventure @a
 

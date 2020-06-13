@@ -3,13 +3,17 @@ execute as @a at @s if block ~ ~-.4 ~ minecraft:black_stained_glass run effect g
 execute as @e[type=minecraft:skeleton] at @s run tp @s ~ ~-.1 ~
 
 #portal
-execute as @e[scores={map=1}] run function game:game/maps/map1/portal
-execute as @e[scores={map=2}] run function game:game/maps/map2/portal
-execute as @e[scores={map=3}] run function game:game/maps/map3/portal
-execute as @e[scores={map=4}] run function game:game/maps/map4/portal
+execute if entity @e[scores={map=1}] run function game:game/maps/map1/portal
+execute if entity @e[scores={map=2}] run function game:game/maps/map2/portal
+execute if entity @e[scores={map=3}] run function game:game/maps/map3/portal
+execute if entity @e[scores={map=4}] run function game:game/maps/map4/portal
+
+#spec correct
 
 #lavatick
-execute as @e[scores={map=2,lavatick=29..}] run function game:game/maps/map2/lavatick
+execute if entity @e[scores={map=2,lavatick=100..}] run function game:game/maps/map2/lavatick
+execute if entity @e[scores={map=4,lavatick=5..}] run fill 212 26 -107 171 26 -36 air replace water
+execute if entity @e[scores={map=4,lavatick=5..}] run scoreboard players set @e[scores={lavatick=1..}] lavatick 0
 
 #capture point code
 tag @a remove point

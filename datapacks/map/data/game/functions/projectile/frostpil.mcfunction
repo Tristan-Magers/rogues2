@@ -15,5 +15,6 @@ execute as @s[scores={frost=80..}] at @s positioned ~-.5 ~ ~-.5 run fill ~ 0 ~ ~
 execute as @s[scores={frost=80..}] at @s run execute as @e[name=frostwall,type=!player,scores={frost=2..79}] at @s positioned ~-.5 ~ ~-.5 run fill ~ 0 ~ ~1 ~4 ~1 minecraft:packed_ice replace air
 kill @s[scores={frost=80..}]
 execute as @s[scores={frost=1}] at @s positioned ~-.5 ~ ~-.5 run fill ~ 0 ~ ~1 ~4 ~1 minecraft:packed_ice replace air
+execute as @s[x=-100,y=40,z=50,distance=..100,scores={frost=1}] at @s positioned ~-.5 ~ ~-.5 run fill ~ 46 ~ ~1 0 ~1 minecraft:air replace packed_ice
 kill @s[scores={frostT=200..,frost=0}]
 execute as @e[scores={frost=3}] at @s run data merge entity @s {ArmorItems:[{},{},{},{Count:1,id:air}]}

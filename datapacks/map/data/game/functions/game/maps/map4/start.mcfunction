@@ -24,6 +24,8 @@ fill 170 41 -45 142 50 -97 minecraft:green_concrete_powder replace minecraft:gre
 fill 165 38 -40 126 38 -99 minecraft:yellow_concrete_powder replace minecraft:yellow_concrete
 fill 153 38 -44 147 38 -56 minecraft:red_concrete_powder replace minecraft:red_concrete
 fill 161 38 -48 161 38 -44 minecraft:orange_concrete_powder replace minecraft:orange_concrete
+fill 125 39 -79 128 39 -74 minecraft:cyan_concrete_powder replace minecraft:cyan_concrete
+fill 151 42 -81 144 42 -76 minecraft:cyan_concrete_powder replace minecraft:cyan_concrete
 
 clone 173 10 -88 174 13 -85 173 33 -88 replace
 clone 191 10 -63 198 12 -55 191 41 -63 replace
@@ -43,3 +45,5 @@ clone 148 13 -84 147 10 -88 147 4 -88
 fill 134 38 -72 134 39 -72 minecraft:sugar_cane
 
 fill 156 43 -93 156 43 -91 minecraft:spruce_trapdoor[facing=west,open=false,half=top]
+
+clone 146 3 -109 145 0 -105 147 33 -88

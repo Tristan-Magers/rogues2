@@ -1,5 +1,5 @@
 #soul send
-scoreboard players remove @s[nbt={SelectedItem:{id:"minecraft:flint"}}] Mana 4
+scoreboard players remove @s[nbt={SelectedItem:{id:"minecraft:flint"}}] Mana 5
 execute as @s[nbt={SelectedItem:{id:"minecraft:flint"}}] at @s run function game:characters/pluto/spells/soulsend
 
 #regen

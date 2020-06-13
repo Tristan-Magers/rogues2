@@ -7,6 +7,7 @@ execute as @s[scores={move=1..700}] at @s run execute if block ~ ~ ~ cobweb run 
 execute as @s[scores={move=1..700}] at @s run tp @s[tag=!in] ^ ^ ^-.3
 scoreboard players set @s[scores={move=..1000},tag=!in] move 1000
 execute as @s[scores={move=1000}] at @s run fill ~ ~-.4 ~ ~ ~1.6 ~ cobweb replace air
+execute as @s[x=-100,y=40,z=50,distance=..100,scores={move=1000}] at @s run fill ~ 45 ~ ~1 0 ~1 minecraft:air replace cobweb
 execute as @s[scores={move=1051}] at @s run fill ~ ~-.4 ~ ~ ~1.6 ~ air replace cobweb
 scoreboard players add @s move 1
 kill @s[scores={move=500}]

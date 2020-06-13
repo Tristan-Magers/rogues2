@@ -1,6 +1,9 @@
-execute as @s[scores={Time=1..}] at @s run scoreboard players remove Time Score 1
-execute as @s[scores={Time=2..}] at @s unless entity @a[x=-35,y=4,z=6,distance=20..,gamemode=!creative] run tellraw @a {"text":"No players, game has ended"}
-execute as @s[scores={Time=2..}] at @s unless entity @a[x=-35,y=4,z=6,distance=20..,gamemode=!creative] run scoreboard players set @s Time 1
+scoreboard players remove @s[scores={TimeS=1..}] TimeS 1
+execute as @s[scores={TimeS=0,Time=1..}] at @s run scoreboard players remove Time Score 1
+scoreboard players set @s[scores={TimeS=0}] TimeS 20
+
+execute as @s[scores={Time=2..}] at @s unless entity @a[tag=ingame,tag=!lobby,gamemode=!creative] run tellraw @a {"text":"No players, game has ended"}
+execute as @s[scores={Time=2..}] at @s unless entity @a[tag=ingame,tag=!lobby,gamemode=!creative] run scoreboard players set @s Time 1
 scoreboard players remove @s[scores={Time=0..}] Time 1
 
 #gamedone
@@ -61,3 +64,4 @@ execute as @s[scores={Time=1200}] at @s run execute as @a at @s run playsound mi
 execute as @s[scores={Time=300}] at @s run execute as @a at @s run playsound minecraft:entity.ender_dragon.growl master @p ~ ~ ~ .5 1.3
 
 execute as @s[scores={Time=1..}] at @s run scoreboard players add @e[scores={map=2}] lavatick 1
+execute as @s[scores={Time=1..}] at @s run scoreboard players add @e[scores={map=4}] lavatick 1

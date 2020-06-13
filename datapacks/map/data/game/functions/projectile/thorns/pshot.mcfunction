@@ -1,5 +1,5 @@
 function game:inblock
-execute as @s[tag=!in] at @s run summon area_effect_cloud ~ ~.3 ~ {Particle:"minecraft:crit",ReapplicationDelay:0,RadiusPerTick:-.03f,Radius:3f,Duration:100,Potion:"minecraft:harming",Tags:["thorns"]}
+execute as @s[tag=!in] at @s run summon area_effect_cloud ~ ~.3 ~ {Particle:"minecraft:crit",ReapplicationDelay:0,RadiusPerTick:-.05f,Radius:3f,Duration:60,Potion:"minecraft:harming",Tags:["thorns"]}
 execute as @s[tag=!in] at @s run particle minecraft:witch ~ ~.3 ~ .8 .8 .8 .2 100
 execute as @s[tag=!in] at @s run playsound minecraft:entity.arrow.hit master @a ~ ~ ~ .8 .8 .2
 execute as @s[tag=!in] at @s run playsound minecraft:entity.firework_rocket.twinkle master @a ~ ~ ~ .5 1.1 .1

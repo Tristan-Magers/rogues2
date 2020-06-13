@@ -19,12 +19,23 @@ tag @e[tag=portalset] add hittest
 tag @e[type=cave_spider] add hittest2
 tag @e[tag=soulsend] add hittest2
 
+#player in game
+tag @a remove lobby
+tag @a[x=-100,y=40,z=50,distance=..80] add lobby
+tag @a[x=-22,y=6,z=24,distance=..30] add lobby
+tag @a remove ingame
+tag @a[x=-100,y=40,z=50,distance=120..] add ingame
+tag @a[x=-150,y=48,z=20,dx=70,dy=50,dz=70,distance=..200] add ingame
+execute as @a[tag=ingame] at @s run function game:players/ingame
+execute as @a[tag=lobby] at @s run function game:players/lobby
+clear @a[gamemode=!creative,tag=lobby,tag=!ingame]
+
 #execute as @e[tag=totem] at @s run tp @s ~ ~ ~ ~ ~
 
 #run game
 function game:game/rungame
 
-#remve resistance
+#remove resistance
 effect clear @e[tag=resremove] minecraft:resistance
 tag @e[tag=resremove] remove resremove
 
@@ -33,13 +44,8 @@ tag @a remove spiritworld
 execute as @a[x=69,y=38,z=-30,distance=..20] at @s run function game:game/spiritrealm
 
 #carrot on a stick
-execute as @a[gamemode=adventure,x=-35,y=4,z=6,distance=20..,nbt=!{Inventory:[{id:"minecraft:carrot_on_a_stick",Slot:-106b}]}] at @s run function game:spells/manaup
-replaceitem entity @a[gamemode=adventure,x=-35,y=4,z=6,distance=20..,nbt=!{Inventory:[{id:"minecraft:carrot_on_a_stick",Slot:-106b}]}] weapon.offhand minecraft:carrot_on_a_stick
-
-#player in game
-tag @a remove ingame
-tag @a[x=-35,y=4,z=6,distance=40..] add ingame
-execute as @a[tag=ingame] at @s run function game:players/ingame
+execute as @a[gamemode=adventure,tag=ingame,nbt=!{Inventory:[{id:"minecraft:carrot_on_a_stick",Slot:-106b}]}] at @s run function game:spells/manaup
+replaceitem entity @a[gamemode=adventure,tag=ingame,nbt=!{Inventory:[{id:"minecraft:carrot_on_a_stick",Slot:-106b}]}] weapon.offhand minecraft:carrot_on_a_stick
 
 #manage items
 execute as @e[type=item] at @s run function game:game/item
@@ -69,3 +75,9 @@ scoreboard players add @e[tag=damnum] timer 1
 kill @e[tag=damnum,scores={timer=25..}]
 team join visible @e[tag=damnum,tag=!plus]
 team join invisible @e[tag=damnum,tag=plus]
+
+#menu
+execute as @e[tag=charmask] at @s if entity @p[distance=..5] run tp @s ~ ~ ~ facing entity @p
+execute as @e[tag=charmask] at @s unless entity @p[distance=..5] run tp @s ~ ~ ~ facing -22 6 24
+
+function game:game/menu/portals

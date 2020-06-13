@@ -25,7 +25,7 @@ scoreboard players remove @s[nbt={SelectedItem:{id:"minecraft:sugar"}}] Mana 7
 #scoreboard players remove @s[nbt={SelectedItem:{id:"minecraft:bone"}}] Mana 4
 
 #totem
-execute as @s[nbt={SelectedItem:{id:"minecraft:bone"}}] at @s run summon minecraft:vindicator ~ ~ ~ {Tags:["totem"],Invulnerable:0b,IsBaby:0b,ArmorItems:[{},{},{},{id:"minecraft:bamboo",Count:1b}],Attributes:[{Name:generic.followRange,Base:0},{Name:generic.movementSpeed,Base:0},{Name:generic.attackDamage,Base:0}],Silent:1}
+execute as @s[nbt={SelectedItem:{id:"minecraft:bone"}}] at @s run summon minecraft:vindicator ~ ~ ~ {Health:5,Tags:["totem"],Invulnerable:0b,IsBaby:0b,ArmorItems:[{},{},{},{id:"minecraft:bamboo",Count:1b}],Attributes:[{Name:generic.followRange,Base:0},{Name:generic.movementSpeed,Base:0},{Name:generic.attackDamage,Base:0}],Silent:1}
 #team join noColide @e[tag=totem,sort=nearest,limit=1]
 execute as @s[nbt={SelectedItem:{id:"minecraft:bone"}}] at @s run tp @e[tag=totem,sort=nearest,limit=1] @p
 execute as @s[nbt={SelectedItem:{id:"minecraft:bone"}}] at @s run scoreboard players operation @e[tag=totem,distance=...1,limit=1,sort=nearest] playerID = @s playerID

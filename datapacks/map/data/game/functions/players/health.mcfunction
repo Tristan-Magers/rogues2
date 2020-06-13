@@ -2,7 +2,7 @@ tag @s remove zeroh
 tag @s[scores={health=20}] add zeroh
 
 scoreboard players set @s[scores={class=1,healthshow=16..}] healthshow 15
-scoreboard players set @s[scores={class=2,healthshow=19..}] healthshow 18
+scoreboard players set @s[scores={class=2,healthshow=17..}] healthshow 16
 scoreboard players set @s[scores={class=3,healthshow=19..}] healthshow 18
 scoreboard players set @s[scores={class=4,healthshow=19..}] healthshow 18
 scoreboard players set @s[scores={class=5,healthshow=19..}] healthshow 18
@@ -30,10 +30,13 @@ scoreboard players set @s[scores={Mana=..0}] Mana 0
 execute as @s at @s run scoreboard players set @s healthreal 60
 execute as @s at @s run scoreboard players operation @s healthreal -= @s health
 
+scoreboard players set @s[scores={healthshow=..0},tag=lobby] healthshow 100
+
 scoreboard players set @s[nbt={OnGround:1b},tag=nofalldam] healthreal 0
-tag @s[tag=nonofalldam] remove nofalldam
-tag @s[nbt={OnGround:0b}] remove nonofalldam
-tag @s[nbt={OnGround:1b},tag=nofalldam] add nonofalldam
+scoreboard players set @s[scores={nofalldamage=1..2}] healthreal 0
+scoreboard players remove @s[nbt={OnGround:1b},tag=nofalldam] nofalldamage 1
+tag @s[scores={nofalldamage=..0}] remove nofalldam
+
 
 execute as @s[tag=!zeroh] at @s run scoreboard players operation @s healthshow -= @s healthreal
 execute as @s[tag=!zeroh,scores={healthshow=..-1}] at @s run scoreboard players operation @s healthreal += @s healthshow
@@ -100,7 +103,8 @@ execute as @s[scores={healthshow=17..}] at @s run title @s actionbar ["",{"text"
 scoreboard players set @s[scores={healthshow=..0}] respawn 221
 scoreboard players set @s[scores={healthshow=..0}] healthshow 100
 
-replaceitem entity @s[scores={item=2,class=..5}] armor.head minecraft:skeleton_skull
+replaceitem entity @s[scores={item=2,class=2..5}] armor.head minecraft:skeleton_skull
+replaceitem entity @s[scores={item=2,class=1}] armor.head minecraft:pink_dye
 replaceitem entity @s[scores={item=2,class=6}] armor.head minecraft:gray_dye
 replaceitem entity @s[scores={item=2}] armor.feet minecraft:golden_boots{HideFlags:6,Unbreakable:1b,AttributeModifiers:[{AttributeName:"generic.armorToughness",Name:"generic.armorToughness",Amount:-1,Operation:0,UUIDLeast:529172,UUIDMost:361804}]} 1
 replaceitem entity @s[scores={item=..1}] armor.head minecraft:air
