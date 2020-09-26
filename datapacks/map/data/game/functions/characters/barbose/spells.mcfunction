@@ -1,18 +1,19 @@
 #axe
-scoreboard players set @s[nbt={SelectedItem:{id:"minecraft:glowstone_dust"}}] wtimer 61
-scoreboard players remove @s[nbt={SelectedItem:{id:"minecraft:glowstone_dust"}}] Mana 4
-execute as @s[nbt={SelectedItem:{id:"minecraft:glowstone_dust"}}] at @s run replaceitem entity @s hotbar.0 minecraft:diamond_axe{AttributeModifiers:[{AttributeName:"generic.movementSpeed",Name:"generic.movementSpeed",Amount:0.1,Operation:2,UUIDLeast:690452,UUIDMost:338207,Slot:"mainhand"},{AttributeName:"generic.attackDamage",Name:"generic.attackDamage",Amount:13,Operation:0,UUIDMost:82831,UUIDLeast:154830},{AttributeName:"generic.attackSpeed",Name:"generic.attackSpeed",Amount:-3.0,Operation:0,UUIDMost:71176,UUIDLeast:188910}],display:{Name:"[{\"text\":\"Seeking Axe\",\"color\":\"gray\",\"italic\":\"false\",\"bold\":\"true\"},{\"text\":\" [\",\"color\":\"white\",\"italic\":\"false\"},{\"text\":\"14 Damage\",\"color\":\"red\",\"italic\":\"false\"},{\"text\":\"]\",\"color\":\"white\",\"italic\":\"false\"}]"}}
+scoreboard players set @s[nbt={SelectedItem:{id:"minecraft:glowstone_dust"}}] wtimer 73
+scoreboard players remove @s[nbt={SelectedItem:{id:"minecraft:glowstone_dust"}}] Mana 3
+execute as @s[nbt={SelectedItem:{id:"minecraft:glowstone_dust"}}] at @s run replaceitem entity @s hotbar.0 minecraft:diamond_axe{AttributeModifiers:[{AttributeName:"generic.attack_speed",Name:"generic.attack_speed",Amount:-3.3,Operation:0,UUID:[I;170452042,-618446418,-1993398134,2121527740]},{AttributeName:"generic.attack_damage",Name:"generic.attack_damage",Amount:13,Operation:0,UUID:[I;-2116117351,-814987369,-1539314661,1434952524]},{AttributeName:"generic.movement_speed",Name:"generic.movement_speed",Amount:0.1,Operation:2,UUID:[I;-1794733450,173426169,-1787019437,449822666]}],display:{Name:"[{\"text\":\"Seeking Axe\",\"color\":\"gray\",\"italic\":\"false\",\"bold\":\"true\"},{\"text\":\" [\",\"color\":\"white\",\"italic\":\"false\"},{\"text\":\"14 Damage\",\"color\":\"red\",\"italic\":\"false\"},{\"text\":\"]\",\"color\":\"white\",\"italic\":\"false\"}]"}}
 
 #dummy
 scoreboard players set @s[nbt={SelectedItem:{id:"minecraft:green_dye"}}] dummylook 54
 scoreboard players remove @s[nbt={SelectedItem:{id:"minecraft:green_dye"}}] Mana 4
 
 #bomb
-execute as @s[nbt={SelectedItem:{id:"minecraft:leather"}},scores={Mana=7..}] at @s run summon minecraft:armor_stand ~ ~ ~ {Size:0,Small:1,Marker:1,Invulnerable:1,Tags:["gernade"],Invisible:1,ArmorItems:[{},{},{},{Count:1,id:tnt}],DisabledSlots:4144959}
-execute as @s[nbt={SelectedItem:{id:"minecraft:leather"}},scores={Mana=7..}] at @s run tp @e[tag=gernade,distance=...1,limit=1,sort=nearest] @p
-execute as @s[nbt={SelectedItem:{id:"minecraft:leather"}},scores={Mana=7..}] at @s run team join noColide @e[type=minecraft:magma_cube]
-scoreboard players set @s[nbt={SelectedItem:{id:"minecraft:leather"}},scores={Mana=7..}] glowing 15
-scoreboard players remove @s[nbt={SelectedItem:{id:"minecraft:leather"}},scores={Mana=7..}] Mana 7
+execute as @s[nbt={SelectedItem:{id:"minecraft:leather"}},scores={Mana=6..}] at @s run summon minecraft:armor_stand ~ ~ ~ {Size:0,Small:1,Marker:1,Invulnerable:1,CustomName:"\"barbomb\"",Tags:["startsb","gernade"],Invisible:1,ArmorItems:[{},{},{},{Count:1,id:tnt}],DisabledSlots:4144959}
+execute as @s[nbt={SelectedItem:{id:"minecraft:leather"}},scores={Mana=6..}] at @s run tp @e[tag=gernade,distance=...1,limit=1,sort=nearest] @p
+execute as @s[nbt={SelectedItem:{id:"minecraft:leather"}},scores={Mana=6..}] at @s run team join noColide @e[type=minecraft:magma_cube]
+scoreboard players set @s[nbt={SelectedItem:{id:"minecraft:leather"}},scores={Mana=6..}] invisoff 15
+scoreboard players set @s[nbt={SelectedItem:{id:"minecraft:leather"}},scores={Mana=6..}] noname 15
+scoreboard players remove @s[nbt={SelectedItem:{id:"minecraft:leather"}},scores={Mana=6..}] Mana 6
 
 #set portal
 execute as @s[nbt={SelectedItem:{id:"minecraft:red_dye"}}] at @s run summon minecraft:evoker ~ ~ ~ {NoGravity:0,NoAI:1,Invulnerable:0,ArmorItems:[{},{},{},{Count:1,id:apple}],Health:15.0,Silent:1,Tags:["portalset"]}
@@ -35,6 +36,9 @@ scoreboard players set @s[scores={portal=..9},nbt={SelectedItem:{id:"minecraft:c
 
 #boom
 execute as @s[nbt={SelectedItem:{id:"minecraft:ink_sac"}}] at @s run summon minecraft:area_effect_cloud ~ ~.2 ~ {NoGravity:1,Marker:1,Invulnerable:1,Tags:["blackhole"],Invisible:1,Duration:999999}
-scoreboard players remove @s[nbt={SelectedItem:{id:"minecraft:ink_sac"}}] Mana 8
+scoreboard players remove @s[nbt={SelectedItem:{id:"minecraft:ink_sac"}}] Mana 6
+scoreboard players set @s[nbt={SelectedItem:{id:"minecraft:ink_sac"}}] nocap 40
+scoreboard players set @s[nbt={SelectedItem:{id:"minecraft:ink_sac"}}] coolblack 100
+execute as @s[nbt={SelectedItem:{id:"minecraft:ink_sac"}}] at @s run function game:spells/manaup
 scoreboard players operation @e[tag=blackhole,limit=1,sort=nearest] playerID = @s playerID
 #title @s[nbt={SelectedItem:{id:"minecraft:ink_sac"}}] title {"text":"RUN!","bold":"true"}

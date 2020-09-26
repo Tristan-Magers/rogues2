@@ -17,3 +17,5 @@ setblock 131 19 91 minecraft:end_rod
 setblock 132 19 94 end_rod
 setblock 135 19 91 end_rod
 setblock 115 14 94 end_rod
+setblock 106 12 129 minecraft:end_rod
+setblock 106 12 125 minecraft:end_rod

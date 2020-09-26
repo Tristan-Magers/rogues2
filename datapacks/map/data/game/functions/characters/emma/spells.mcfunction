@@ -7,7 +7,7 @@ scoreboard players set @s[nbt={SelectedItem:{id:"minecraft:kelp"}},scores={gettr
 execute as @s[scores={shotCharge=..-3},nbt={SelectedItem:{id:"minecraft:light_blue_dye"}}] at @s run playsound minecraft:block.conduit.deactivate master @a ~ ~ ~ 1 2
 execute as @s[scores={shotCharge=..-3},nbt={SelectedItem:{id:"minecraft:light_blue_dye"}}] at @s run playsound minecraft:block.dispenser.dispense master @a ~ ~ ~ 1 1.2
 execute as @s[scores={shotCharge=..-3},nbt={SelectedItem:{id:"minecraft:light_blue_dye"}}] at @s run playsound minecraft:entity.firework_rocket.launch master @a ~ ~ ~ 1 1.4
-scoreboard players remove @s[scores={shotCharge=..-3},nbt={SelectedItem:{id:"minecraft:light_blue_dye"}}] Mana 5
+scoreboard players remove @s[scores={shotCharge=..-3},nbt={SelectedItem:{id:"minecraft:light_blue_dye"}}] Mana 6
 scoreboard players set @s[scores={shotCharge=..-3},nbt={SelectedItem:{id:"minecraft:light_blue_dye"}}] glowing 12
 effect give @s[scores={shotCharge=..-3},nbt={SelectedItem:{id:"minecraft:light_blue_dye"}}] glowing 1
 scoreboard players set @s[scores={shotCharge=..-3},nbt={SelectedItem:{id:"minecraft:light_blue_dye"}}] shotCharge 6

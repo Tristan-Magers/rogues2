@@ -1,7 +1,7 @@
 scoreboard players add @s timer 1
 
-execute as @s[scores={timer=1}] at @s run playsound minecraft:block.portal.trigger master @a ~ ~ ~ 1 1
-execute as @s[scores={timer=1}] at @s run playsound minecraft:block.portal.travel master @a ~ ~ ~ .5 0
+execute as @s[scores={timer=1}] at @s run playsound minecraft:block.portal.trigger master @a ~ ~ ~ 1 1.3
+#execute as @s[scores={timer=1}] at @s run playsound minecraft:block.portal.travel master @a ~ ~ ~ .5 0
 execute as @s[scores={timer=1}] at @s run playsound minecraft:entity.wither.death master @a ~ ~ ~ 1 2
 execute as @s[scores={timer=1}] at @s run playsound minecraft:entity.wither.hurt master @a ~ ~ ~ 1 0
 execute as @s[scores={timer=4}] at @s run playsound minecraft:entity.wither.hurt master @a ~ ~ ~ .8 .5

@@ -3,10 +3,12 @@ execute as @a at @s if block ~ ~-.4 ~ minecraft:black_stained_glass run effect g
 execute as @e[type=minecraft:skeleton] at @s run tp @s ~ ~-.1 ~
 
 #portal
+function game:game/lobbyport
 execute if entity @e[scores={map=1}] run function game:game/maps/map1/portal
 execute if entity @e[scores={map=2}] run function game:game/maps/map2/portal
 execute if entity @e[scores={map=3}] run function game:game/maps/map3/portal
 execute if entity @e[scores={map=4}] run function game:game/maps/map4/portal
+execute if entity @e[scores={map=5}] run function game:game/maps/map5/portal
 
 #spec correct
 
@@ -19,6 +21,7 @@ execute if entity @e[scores={map=4,lavatick=5..}] run scoreboard players set @e[
 tag @a remove point
 execute as @e[name=point,type=minecraft:armor_stand] at @s run function game:game/point
 scoreboard players set @a[tag=!point] pointsT 0
+scoreboard players remove @a[scores={nocap=1..}] nocap 1
 
 #time
 execute as @e[scores={Time=-5..}] at @s run function game:game/time

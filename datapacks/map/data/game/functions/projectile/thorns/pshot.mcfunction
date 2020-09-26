@@ -4,6 +4,7 @@ execute as @s[tag=!in] at @s run particle minecraft:witch ~ ~.3 ~ .8 .8 .8 .2 10
 execute as @s[tag=!in] at @s run playsound minecraft:entity.arrow.hit master @a ~ ~ ~ .8 .8 .2
 execute as @s[tag=!in] at @s run playsound minecraft:entity.firework_rocket.twinkle master @a ~ ~ ~ .5 1.1 .1
 execute as @s[tag=!in] at @s run playsound minecraft:entity.firework_rocket.twinkle master @a ~ ~ ~ .3 .4 .07
+execute as @s[tag=!in] at @s run scoreboard players set @e[distance=..3,name=web] move 1045
 kill @s[tag=!in]
 particle minecraft:crit ~ ~ ~ .08 .08 .08 .01 2 force
 

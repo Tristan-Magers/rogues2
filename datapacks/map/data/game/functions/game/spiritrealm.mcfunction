@@ -49,3 +49,8 @@ execute as @s[scores={class=2}] run replaceitem entity @s hotbar.0 barrier{displ
 
 execute as @s[scores={class=5}] run replaceitem entity @s hotbar.0 barrier{display:{Name:"{\"text\":\"Reloading\",\"color\":\"white\",\"italic\":\"false\"}"}} 1
 execute as @s[scores={class=5}] run replaceitem entity @s hotbar.1 barrier{display:{Name:"{\"text\":\"Reloading\",\"color\":\"white\",\"italic\":\"false\"}"}} 1
+
+replaceitem entity @s armor.head air
+replaceitem entity @s armor.chest air
+replaceitem entity @s armor.legs air
+replaceitem entity @s armor.feet air

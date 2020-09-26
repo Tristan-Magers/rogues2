@@ -1,3 +1,8 @@
+#spawn
+tp @a[x=14,y=4,z=-41,distance=..20,gamemode=adventure] -145 23 -43 90 -1
+
+effect give @a[x=-150,y=23,z=-43,distance=..10] minecraft:invisibility 1 0 true
+
 scoreboard players set @a[x=69,y=38,z=-30,distance=..20] press 0
 
 scoreboard players add @e[type=arrow] arrowlife 1
@@ -81,3 +86,6 @@ execute as @e[tag=charmask] at @s if entity @p[distance=..5] run tp @s ~ ~ ~ fac
 execute as @e[tag=charmask] at @s unless entity @p[distance=..5] run tp @s ~ ~ ~ facing -22 6 24
 
 function game:game/menu/portals
+
+#bow score reset
+scoreboard players set @a bowshot 0

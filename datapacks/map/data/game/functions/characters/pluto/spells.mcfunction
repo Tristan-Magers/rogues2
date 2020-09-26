@@ -8,9 +8,16 @@ scoreboard players set @s[nbt={SelectedItem:{id:"minecraft:yellow_dye"}}] plutor
 
 #spike
 scoreboard players remove @s[nbt={SelectedItem:{id:"minecraft:sugar_cane"}}] Mana 7
-scoreboard players set @s[nbt={SelectedItem:{id:"minecraft:sugar_cane"}}] plutospike 20
+scoreboard players set @s[nbt={SelectedItem:{id:"minecraft:sugar_cane"}}] plutospike 24
+execute as @s[nbt={SelectedItem:{id:"minecraft:sugar_cane"}}] at @s run playsound minecraft:entity.firework_rocket.blast_far master @a ~ ~ ~ 1 0
+execute as @s[nbt={SelectedItem:{id:"minecraft:sugar_cane"}}] at @s run playsound minecraft:entity.ghast.death master @a ~ ~ ~ 1 2
+execute as @s[nbt={SelectedItem:{id:"minecraft:sugar_cane"}}] at @s run playsound minecraft:entity.ghast.warn master @a ~ ~ ~ 0.3 2
+execute as @s[nbt={SelectedItem:{id:"minecraft:sugar_cane"}}] at @s run playsound minecraft:entity.zombie.infect master @a ~ ~ ~ 1 1.4
+execute as @s[nbt={SelectedItem:{id:"minecraft:sugar_cane"}}] at @s run playsound minecraft:entity.bee.sting master @a ~ ~ ~ 1 0
 
 #jump pad
 execute as @s[nbt={SelectedItem:{id:"minecraft:bowl"}}] at @s run summon minecraft:armor_stand ~ ~ ~ {Small:1,Marker:0,Invulnerable:1,Tags:["jp"],Invisible:1,ArmorItems:[{},{},{},{Count:1,id:sea_pickle}],DisabledSlots:4144959}
 execute as @s[nbt={SelectedItem:{id:"minecraft:bowl"}}] at @s run tp @e[tag=jp,distance=...1,limit=1,sort=nearest] @p
-scoreboard players remove @s[nbt={SelectedItem:{id:"minecraft:bowl"}}] Mana 5
+scoreboard players remove @s[nbt={SelectedItem:{id:"minecraft:bowl"}}] Mana 3
+scoreboard players set @s[nbt={SelectedItem:{id:"minecraft:bowl"}}] cooljp 100
+execute as @s[nbt={SelectedItem:{id:"minecraft:bowl"}}] at @s run function game:spells/manaup

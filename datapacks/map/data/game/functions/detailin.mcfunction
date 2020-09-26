@@ -39,5 +39,6 @@ execute if block ~ ~ ~ barrier run tag @s add in
 execute as @s[type=player] at @s if block ~ ~ ~ barrier run tag @s remove in
 
 execute if block ~ ~ ~ #minecraft:leaves run tag @s add in
+execute as @s[type=!player] at @s if block ~ ~ ~ cobweb run tag @s remove in
 execute as @s[type=player] at @s if block ~ ~ ~ #minecraft:leaves run tag @s remove in
 execute as @s[tag=soulsend] at @s if block ~ ~ ~ #minecraft:leaves run tag @s remove in

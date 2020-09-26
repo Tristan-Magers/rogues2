@@ -61,16 +61,16 @@ execute as @s[tag=!in] at @s run execute as @a[tag=gethit] at @s run playsound m
 tag @a[tag=!isthrow,tag=gethit] add hasres
 tag @a[tag=!isthrow,tag=gethit,scores={manaboost=..0},tag=!totemres] remove hasres
 
-execute as @s[scores={hurpower=1},tag=!in] at @s run execute as @a[tag=!isthrow,tag=gethit] at @s run summon minecraft:armor_stand ~ ~ ~ {Marker:1,Invulnerable:1,Tags:["damnum"],CustomNameVisible:1b,Duration:999999,CustomName:'{"text":"-3"}'}
-execute as @s[scores={hurpower=2},tag=!in] at @s run execute as @a[tag=!isthrow,tag=gethit] at @s run summon minecraft:armor_stand ~ ~ ~ {Marker:1,Invulnerable:1,Tags:["damnum"],CustomNameVisible:1b,Duration:999999,CustomName:'{"text":"-4"}'}
-execute as @s[scores={hurpower=3},tag=!in] at @s run execute as @a[tag=!isthrow,tag=gethit,tag=!hasres] at @s run summon minecraft:armor_stand ~ ~ ~ {Marker:1,Invulnerable:1,Tags:["damnum"],CustomNameVisible:1b,Duration:999999,CustomName:'{"text":"-5"}'}
-execute as @s[scores={hurpower=4},tag=!in] at @s run execute as @a[tag=!isthrow,tag=gethit,tag=!hasres] at @s run summon minecraft:armor_stand ~ ~ ~ {Marker:1,Invulnerable:1,Tags:["damnum"],CustomNameVisible:1b,Duration:999999,CustomName:'{"text":"-6"}'}
-execute as @s[scores={hurpower=5},tag=!in] at @s run execute as @a[tag=!isthrow,tag=gethit,tag=!hasres] at @s run summon minecraft:armor_stand ~ ~ ~ {Marker:1,Invulnerable:1,Tags:["damnum"],CustomNameVisible:1b,Duration:999999,CustomName:'{"text":"-7"}'}
-execute as @s[scores={hurpower=6},tag=!in] at @s run execute as @a[tag=!isthrow,tag=gethit,tag=!hasres] at @s run summon minecraft:armor_stand ~ ~ ~ {Marker:1,Invulnerable:1,Tags:["damnum"],CustomNameVisible:1b,Duration:999999,CustomName:'{"text":"-8"}'}
-execute as @s[scores={hurpower=3},tag=!in] at @s run execute as @a[tag=!isthrow,tag=gethit,tag=hasres] at @s run summon minecraft:armor_stand ~ ~ ~ {Marker:1,Invulnerable:1,Tags:["damnum"],CustomNameVisible:1b,Duration:999999,CustomName:'{"text":"-4"}'}
-execute as @s[scores={hurpower=4},tag=!in] at @s run execute as @a[tag=!isthrow,tag=gethit,tag=hasres] at @s run summon minecraft:armor_stand ~ ~ ~ {Marker:1,Invulnerable:1,Tags:["damnum"],CustomNameVisible:1b,Duration:999999,CustomName:'{"text":"-5"}'}
-execute as @s[scores={hurpower=5},tag=!in] at @s run execute as @a[tag=!isthrow,tag=gethit,tag=hasres] at @s run summon minecraft:armor_stand ~ ~ ~ {Marker:1,Invulnerable:1,Tags:["damnum"],CustomNameVisible:1b,Duration:999999,CustomName:'{"text":"-6"}'}
-execute as @s[scores={hurpower=6},tag=!in] at @s run execute as @a[tag=!isthrow,tag=gethit,tag=hasres] at @s run summon minecraft:armor_stand ~ ~ ~ {Marker:1,Invulnerable:1,Tags:["damnum"],CustomNameVisible:1b,Duration:999999,CustomName:'{"text":"-7"}'}
+execute as @s[scores={hurpower=1},tag=!in] at @s run execute as @a[tag=!isthrow,tag=gethit] at @s run summon minecraft:armor_stand ~ ~ ~ {Marker:1,Invisible:1b,Invulnerable:1,Tags:["damnum"],CustomNameVisible:1b,Duration:999999,CustomName:'{"text":"-3"}'}
+execute as @s[scores={hurpower=2},tag=!in] at @s run execute as @a[tag=!isthrow,tag=gethit] at @s run summon minecraft:armor_stand ~ ~ ~ {Marker:1,Invisible:1b,Invulnerable:1,Tags:["damnum"],CustomNameVisible:1b,Duration:999999,CustomName:'{"text":"-4"}'}
+execute as @s[scores={hurpower=3},tag=!in] at @s run execute as @a[tag=!isthrow,tag=gethit,tag=!hasres] at @s run summon minecraft:armor_stand ~ ~ ~ {Marker:1,Invisible:1b,Invulnerable:1,Tags:["damnum"],CustomNameVisible:1b,Duration:999999,CustomName:'{"text":"-5"}'}
+execute as @s[scores={hurpower=4},tag=!in] at @s run execute as @a[tag=!isthrow,tag=gethit,tag=!hasres] at @s run summon minecraft:armor_stand ~ ~ ~ {Marker:1,Invisible:1b,Invulnerable:1,Tags:["damnum"],CustomNameVisible:1b,Duration:999999,CustomName:'{"text":"-6"}'}
+execute as @s[scores={hurpower=5},tag=!in] at @s run execute as @a[tag=!isthrow,tag=gethit,tag=!hasres] at @s run summon minecraft:armor_stand ~ ~ ~ {Marker:1,Invisible:1b,Invulnerable:1,Tags:["damnum"],CustomNameVisible:1b,Duration:999999,CustomName:'{"text":"-7"}'}
+execute as @s[scores={hurpower=6},tag=!in] at @s run execute as @a[tag=!isthrow,tag=gethit,tag=!hasres] at @s run summon minecraft:armor_stand ~ ~ ~ {Marker:1,Invisible:1b,Invulnerable:1,Tags:["damnum"],CustomNameVisible:1b,Duration:999999,CustomName:'{"text":"-8"}'}
+execute as @s[scores={hurpower=3},tag=!in] at @s run execute as @a[tag=!isthrow,tag=gethit,tag=hasres] at @s run summon minecraft:armor_stand ~ ~ ~ {Marker:1,Invisible:1b,Invulnerable:1,Tags:["damnum"],CustomNameVisible:1b,Duration:999999,CustomName:'{"text":"-4"}'}
+execute as @s[scores={hurpower=4},tag=!in] at @s run execute as @a[tag=!isthrow,tag=gethit,tag=hasres] at @s run summon minecraft:armor_stand ~ ~ ~ {Marker:1,Invisible:1b,Invulnerable:1,Tags:["damnum"],CustomNameVisible:1b,Duration:999999,CustomName:'{"text":"-5"}'}
+execute as @s[scores={hurpower=5},tag=!in] at @s run execute as @a[tag=!isthrow,tag=gethit,tag=hasres] at @s run summon minecraft:armor_stand ~ ~ ~ {Marker:1,Invisible:1b,Invulnerable:1,Tags:["damnum"],CustomNameVisible:1b,Duration:999999,CustomName:'{"text":"-6"}'}
+execute as @s[scores={hurpower=6},tag=!in] at @s run execute as @a[tag=!isthrow,tag=gethit,tag=hasres] at @s run summon minecraft:armor_stand ~ ~ ~ {Marker:1,Invisible:1b,Invulnerable:1,Tags:["damnum"],CustomNameVisible:1b,Duration:999999,CustomName:'{"text":"-7"}'}
 
 
 execute as @s[scores={hurpower=1},tag=!in] at @s run scoreboard players remove @a[tag=!isthrow,tag=gethit] healthshow 3
@@ -98,6 +98,7 @@ execute as @s[tag=!in] at @s run playsound minecraft:block.bell.use master @a ~ 
 execute as @s[tag=!in] at @s run playsound minecraft:block.composter.empty master @a ~ ~ ~ 1 0
 
 execute as @s[tag=!in] at @s run particle minecraft:firework ~ ~1.5 ~ .6 .6 .6 .15 30 force
+execute as @s[tag=!in] at @s run scoreboard players set @e[distance=..3,name=web] move 1045
 
 kill @s[tag=!in]
 

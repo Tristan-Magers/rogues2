@@ -7,15 +7,15 @@ execute as @s[scores={Time=2..}] at @s unless entity @a[tag=ingame,tag=!lobby,ga
 scoreboard players remove @s[scores={Time=0..}] Time 1
 
 #gamedone
+execute as @s[scores={Time=0}] at @s run function game:game/testwin
 execute as @s[scores={Time=..-1}] at @s run function game:game/gamedone
-
-execute as @s[scores={Time=-1}] at @s run setblock -33 5 6 minecraft:oak_button[face=wall,facing=west] keep
-execute as @s[scores={Time=0..}] at @s run setblock -33 5 6 minecraft:air
 
 execute as @s[scores={Time=5380}] at @s run execute as @e[scores={map=1}] run function game:game/maps/map1/start
 execute as @s[scores={Time=5380}] at @s run execute as @e[scores={map=2}] run function game:game/maps/map2/start
 execute as @s[scores={Time=5380}] at @s run execute as @e[scores={map=3}] run function game:game/maps/map3/start
 execute as @s[scores={Time=5380}] at @s run execute as @e[scores={map=4}] run function game:game/maps/map4/start
+execute as @s[scores={Time=5380}] at @s run execute as @e[scores={map=5}] run function game:game/maps/map5/start
+execute as @s[scores={Time=5374}] at @s run execute as @e[scores={map=5}] run function game:game/maps/map5/start
 
 execute as @s[scores={Time=1..}] at @s run scoreboard players add @a presstut 1
 execute as @s[scores={Time=1..}] at @s run scoreboard players add @a[scores={points=1..,Score=0}] scoretut 1
@@ -43,6 +43,11 @@ execute as @s[scores={Time=5398}] at @s run execute as @a at @s run particle min
 execute as @s[scores={Time=5395}] at @s run execute as @a at @s run effect give @a minecraft:blindness 1 2
 
 #increase point amount
+execute as @s[scores={Time=3600}] at @s run title @a times 0 25 10
+execute as @s[scores={Time=1800}] at @s run title @a times 0 25 10
+execute as @s[scores={Time=1200}] at @s run title @a times 0 25 10
+execute as @s[scores={Time=300}] at @s run title @a times 0 25 10
+
 execute as @s[scores={Time=3600}] at @s run execute as @a at @s run playsound minecraft:ui.toast.challenge_complete master @s ~ ~ ~ 1 0
 execute as @s[scores={Time=3560..3600}] at @s run title @a title {"text":"Twilight Intensifies","color":"dark_aqua"}
 execute as @s[scores={Time=3560..3600}] at @s run title @a subtitle {"text":"More souls spawn on points","color":"blue"}
@@ -62,6 +67,25 @@ execute as @s[scores={Time=300}] at @s run tellraw @a {"text":"15 Seconds Left",
 
 execute as @s[scores={Time=1200}] at @s run execute as @a at @s run playsound minecraft:entity.ender_dragon.growl master @p ~ ~ ~ .4 .8
 execute as @s[scores={Time=300}] at @s run execute as @a at @s run playsound minecraft:entity.ender_dragon.growl master @p ~ ~ ~ .5 1.3
+
+execute as @s[scores={Time=280}] at @s run execute as @a[tag=ingame] at @s run playsound minecraft:entity.bat.takeoff master @s ~ ~ ~ 0.4 0.5
+execute as @s[scores={Time=260}] at @s run execute as @a[tag=ingame] at @s run playsound minecraft:entity.bat.takeoff master @s ~ ~ ~ 0.4 0.6
+execute as @s[scores={Time=240}] at @s run execute as @a[tag=ingame] at @s run playsound minecraft:entity.bat.takeoff master @s ~ ~ ~ 0.5 0.7
+execute as @s[scores={Time=220}] at @s run execute as @a[tag=ingame] at @s run playsound minecraft:entity.bat.takeoff master @s ~ ~ ~ 0.5 0.8
+execute as @s[scores={Time=200}] at @s run execute as @a[tag=ingame] at @s run playsound minecraft:entity.bat.takeoff master @s ~ ~ ~ 0.6 0.9
+execute as @s[scores={Time=180}] at @s run execute as @a[tag=ingame] at @s run playsound minecraft:entity.bat.takeoff master @s ~ ~ ~ 0.6 1
+execute as @s[scores={Time=160}] at @s run execute as @a[tag=ingame] at @s run playsound minecraft:entity.bat.takeoff master @s ~ ~ ~ 0.7 1.1
+execute as @s[scores={Time=140}] at @s run execute as @a[tag=ingame] at @s run playsound minecraft:entity.bat.takeoff master @s ~ ~ ~ 0.7 1.2
+execute as @s[scores={Time=120}] at @s run execute as @a[tag=ingame] at @s run playsound minecraft:entity.bat.takeoff master @s ~ ~ ~ 0.8 1.3
+execute as @s[scores={Time=100}] at @s run execute as @a[tag=ingame] at @s run playsound minecraft:entity.bat.takeoff master @s ~ ~ ~ 0.8 1.4
+execute as @s[scores={Time=80}] at @s run execute as @a[tag=ingame] at @s run playsound minecraft:entity.bat.takeoff master @s ~ ~ ~ 0.9 1.5
+execute as @s[scores={Time=60}] at @s run execute as @a[tag=ingame] at @s run playsound minecraft:entity.bat.takeoff master @s ~ ~ ~ 0.9 1.6
+execute as @s[scores={Time=50}] at @s run execute as @a[tag=ingame] at @s run playsound minecraft:entity.bat.takeoff master @s ~ ~ ~ 0.9 1.6
+execute as @s[scores={Time=40}] at @s run execute as @a[tag=ingame] at @s run playsound minecraft:entity.bat.takeoff master @s ~ ~ ~ 1 1.8
+execute as @s[scores={Time=30}] at @s run execute as @a[tag=ingame] at @s run playsound minecraft:entity.bat.takeoff master @s ~ ~ ~ 1 1.8
+execute as @s[scores={Time=20}] at @s run execute as @a[tag=ingame] at @s run playsound minecraft:entity.bat.takeoff master @s ~ ~ ~ 1 2
+execute as @s[scores={Time=10}] at @s run execute as @a[tag=ingame] at @s run playsound minecraft:entity.bat.takeoff master @s ~ ~ ~ 1 2
+
 
 execute as @s[scores={Time=1..}] at @s run scoreboard players add @e[scores={map=2}] lavatick 1
 execute as @s[scores={Time=1..}] at @s run scoreboard players add @e[scores={map=4}] lavatick 1

@@ -8,6 +8,11 @@ execute as @s[scores={portal=1}] at @s run scoreboard players operation @e[tag=p
 execute as @s[scores={portal=1}] at @s run execute as @e[tag=portalset,scores={playerID=0}] at @s run tag @p[tag=self] add portaltest
 execute as @s[scores={portal=1}] at @s run scoreboard players operation @e[tag=portalset] playerID += @s playerID
 
+execute if entity @s[scores={portal=1},tag=!portaltest] run playsound minecraft:entity.endermite.death master @s ~ ~ ~ 1 0
+execute if entity @s[scores={portal=1},tag=!portaltest] run playsound minecraft:entity.enderman.death master @s ~ ~ ~ .3 1.2
+execute if entity @s[scores={portal=1},tag=!portaltest] run playsound minecraft:entity.enderman.death master @s ~ ~ ~ .7 0.6
+execute if entity @s[scores={portal=1},tag=!portaltest] run playsound minecraft:entity.blaze.death master @s ~ ~ ~ 1 1.2
+
 scoreboard players set @s[scores={portal=1},tag=!portaltest] portal -2
 execute as @s[tag=self,tag=!portaltest] at @s run function game:spells/manaup
 
@@ -39,5 +44,8 @@ scoreboard players set @s[scores={portal=10}] portal 0
 
 tag @s remove searcher
 tag @s[nbt={SelectedItem:{id:"minecraft:diamond_axe"}}] add searcher
-execute if entity @s[nbt={SelectedItem:{id:"minecraft:diamond_axe"}}] run execute as @a[gamemode=adventure,limit=5,sort=nearest,distance=0.1..100,scores={respawn=..0}] at @s run function game:characters/barbose/active/tracker
+execute if entity @s[nbt={SelectedItem:{id:"minecraft:diamond_axe"}}] run execute as @a[gamemode=adventure,limit=1,sort=nearest,distance=0.1..80,scores={respawn=..0}] at @s run function game:characters/barbose/active/tracker
 execute if entity @s[nbt=!{Inventory:[{id:"minecraft:red_dye",Slot:3b}]},scores={portal=..0,Mana=6..}] run function game:spells/manaup
+
+#blackhole cooldown
+scoreboard players remove @s[scores={coolblack=1..}] coolblack 1

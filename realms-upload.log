@@ -1,0 +1,6 @@
+Removed world/DIM-1/data/raids.dat: not used
+Removed world/gc-logs/gc-20200726_2202.log: not used
+Removed world/gc-logs/gc-20200728_0027.log: not used
+Removed world/gc-logs/gc-20200728_1045.log: not used
+Removed world/playerdata/a648628b-c8fb-4041-9429-604da9f6cb21.dat_old: not used
+Validated 306 files, 301 accepted, 5 rejected.

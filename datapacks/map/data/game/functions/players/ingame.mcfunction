@@ -1,3 +1,7 @@
+#teams
+team join noColide @s[team=!noColide,tag=spiritworld]
+team leave @s[team=noColide,tag=!spiritworld]
+
 #cast spell
 execute as @s[scores={press=1..,pressdelay=..0}] at @s run function game:spells/click
 
@@ -37,8 +41,16 @@ clear @s[scores={btimer=0,class=5..}] bow
 clear @s[scores={btimer=0,class=..3}] bow
 scoreboard players set @s[scores={btimer=0}] btimer -1
 
+scoreboard players remove @s glowingt 1
+scoreboard players operation @s glowingt -= @s glowing
+execute as @s[scores={glowingt=1..}] run scoreboard players operation @s glowing = @s glowingt
+scoreboard players operation @s glowingt = @s glowing
+
+scoreboard players set @s[scores={glowing=400..}] glowing 0
+scoreboard players set @s[scores={glowing=400..}] glowingt 0
+
 scoreboard players remove @s[scores={particles=1..}] particles 1
-scoreboard players remove @a glowing 1
+scoreboard players remove @s glowing 1
 scoreboard players remove @s[scores={invis=0..}] invis 1
 scoreboard players remove @s[scores={FBreload=1..}] FBreload 1
 scoreboard players remove @s[scores={pressdelay=1..}] pressdelay 1

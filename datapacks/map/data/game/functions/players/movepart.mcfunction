@@ -2,6 +2,7 @@ scoreboard players add @s invis 0
 
 execute as @s at @s if block ~ ~ ~ water run particle bubble ~ ~.2 ~ .2 .2 .2 0 3 force
 
+scoreboard players set @s[scores={shift=1..}] run 0
 execute as @s[scores={walk=1..}] at @s run particle minecraft:falling_dust minecraft:black_concrete ~ ~.1 ~ .12 .09 .12 1 2 force
 scoreboard players set @s walk 0
 execute as @s[scores={run=1..}] at @s run particle minecraft:block minecraft:obsidian ~ ~.2 ~ .3 .4 .3 1 6 force

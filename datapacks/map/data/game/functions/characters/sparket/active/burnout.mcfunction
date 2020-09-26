@@ -7,7 +7,7 @@ execute as @s[scores={burnout=1..}] at @s run function game:wallmove
 effect give @s[scores={burnout=3..}] minecraft:slow_falling 1 0 true
 effect clear @s[scores={burnout=1}] minecraft:slow_falling
 effect clear @s[scores={burnout=19},gamemode=adventure] minecraft:slowness
-effect give @s[scores={burnout=1},gamemode=adventure] minecraft:slowness 2 2
+effect give @s[scores={burnout=1},gamemode=adventure] minecraft:slowness 1 1
 scoreboard players remove @s burnout 1
 scoreboard players set @s invisoff 13
 

@@ -191,25 +191,25 @@
     },
     "done": true
   },
-  "minecraft:recipes/combat/iron_chestplate": {
-    "criteria": {
-      "has_iron_ingot": "2020-02-04 00:41:29 +0000"
-    },
-    "done": true
-  },
   "minecraft:recipes/combat/crossbow": {
     "criteria": {
       "has_iron_ingot": "2020-02-04 00:41:29 +0000"
     },
     "done": true
   },
-  "minecraft:recipes/redstone/iron_trapdoor": {
+  "minecraft:recipes/combat/iron_chestplate": {
     "criteria": {
       "has_iron_ingot": "2020-02-04 00:41:29 +0000"
     },
     "done": true
   },
   "minecraft:recipes/decorations/smithing_table": {
+    "criteria": {
+      "has_iron_ingot": "2020-02-04 00:41:29 +0000"
+    },
+    "done": true
+  },
+  "minecraft:recipes/redstone/iron_trapdoor": {
     "criteria": {
       "has_iron_ingot": "2020-02-04 00:41:29 +0000"
     },
@@ -287,5 +287,5 @@
     },
     "done": true
   },
-  "DataVersion": 2230
+  "DataVersion": 2567
 }
