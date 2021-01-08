@@ -1,3 +1,7 @@
+#remove lev
+scoreboard players remove @s[scores={nolev=0..}] nolev 1
+effect clear @s[scores={nolev=0}] levitation
+
 #teams
 team join noColide @s[team=!noColide,tag=spiritworld]
 team leave @s[team=noColide,tag=!spiritworld]
@@ -56,10 +60,56 @@ scoreboard players remove @s[scores={FBreload=1..}] FBreload 1
 scoreboard players remove @s[scores={pressdelay=1..}] pressdelay 1
 scoreboard players add @s pressdelay 0
 
+#Fire
+tag @s add notinfire
+execute at @s if block ~ ~-1 ~ minecraft:magma_block run tag @s remove notinfire
+execute at @s if block ~ ~ ~ lava run tag @s remove notinfire
+execute at @s if block ~.48 ~ ~ #fire run tag @s remove notinfire
+execute at @s if block ~-.48 ~ ~ #fire run tag @s remove notinfire
+execute at @s if block ~ ~ ~.48 #fire run tag @s remove notinfire
+execute at @s if block ~ ~ ~-.48 #fire run tag @s remove notinfire
+execute at @s if block ~.48 ~1 ~ #fire run tag @s remove notinfire
+execute at @s if block ~-.48 ~1 ~ #fire run tag @s remove notinfire
+execute at @s if block ~ ~1 ~.48 #fire run tag @s remove notinfire
+execute at @s if block ~ ~1 ~-.48 #fire run tag @s remove notinfire
+tag @s[scores={Invul=1..}] add notinfire
+tag @s[scores={shield=1..}] add notinfire
+scoreboard players add @s[tag=!notinfire] fire 1
+scoreboard players set @s[tag=!notinfire] fireT 0
+scoreboard players set @s[tag=notinfire] fire 0
+execute as @s[scores={fire=2},gamemode=adventure] run function game:players/firehit
+effect give @s[scores={fire=2},gamemode=adventure] slowness 1 1 true
+scoreboard players set @s[scores={fire=10..}] fire 0
+execute at @s if block ~ ~ ~ lava run scoreboard players set @s[scores={fire=4..}] fire 0
+
+tag @s remove nofire
+tag @s[nbt={Fire:-20s}] add nofire
+tag @s[scores={Invul=1..}] add nofire
+tag @s[scores={shield=1..}] add nofire
+scoreboard players add @s[tag=!nofire] fireT 1
+scoreboard players set @s[tag=nofire] fireT 0
+execute as @s[scores={fireT=10},gamemode=adventure] run function game:players/firehit
+scoreboard players set @s[scores={fireT=20..}] fireT 0
+
+#poison
+execute as @s[scores={poison=40,Invul=..0,shield=..0},gamemode=adventure] run function game:players/firehit
+execute as @s[scores={poison=30,Invul=..0,shield=..0},gamemode=adventure] run function game:players/firehit
+execute as @s[scores={poison=20,Invul=..0,shield=..0},gamemode=adventure] run function game:players/firehit
+execute as @s[scores={poison=10,Invul=..0,shield=..0},gamemode=adventure] run function game:players/firehit
+scoreboard players remove @s[scores={poison=1..}] poison 1
+
+#poison2
+execute as @s[scores={poison2=75,Invul=..0,shield=..0},gamemode=adventure] run function game:players/firehit
+execute as @s[scores={poison2=60,Invul=..0,shield=..0},gamemode=adventure] run function game:players/firehit
+execute as @s[scores={poison2=45,Invul=..0,shield=..0},gamemode=adventure] run function game:players/firehit
+execute as @s[scores={poison2=30,Invul=..0,shield=..0},gamemode=adventure] run function game:players/firehit
+execute as @s[scores={poison2=15,Invul=..0,shield=..0},gamemode=adventure] run function game:players/firehit
+scoreboard players remove @s[scores={poison2=1..}] poison2 1
+
 #health
-scoreboard players set @s[x=-35,y=4,z=6,distance=..40] healthshow 100
+#scoreboard players set @s[x=-35,y=4,z=6,distance=..40] healthshow 100
 scoreboard players add @s healthshow 0
-execute as @s[scores={respawn=..0}] at @s run function game:players/health
+execute as @s[gamemode=adventure,scores={respawn=..0}] at @s run function game:players/health
 
 #stealth particles
 execute as @s[scores={invis=..0}] at @s run function game:players/movepart

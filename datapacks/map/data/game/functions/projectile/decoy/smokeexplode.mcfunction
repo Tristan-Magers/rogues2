@@ -8,6 +8,7 @@ execute as @s[scores={move=45}] at @s run playsound minecraft:entity.generic.exp
 execute as @s[scores={move=48}] at @s run playsound minecraft:entity.generic.explode master @a ~ ~ ~ 1 .7
 
 execute as @s[scores={move=48}] at @s run particle minecraft:explosion_emitter ~ ~ ~
-execute as @s[scores={move=48}] at @s run effect give @a[gamemode=adventure,distance=..2.5] minecraft:poison 2 3
+scoreboard players set @a[gamemode=adventure,distance=..2.5] poison 39
+#execute as @s[scores={move=48}] at @s run effect give @a[gamemode=adventure,distance=..2.5] minecraft:poison 2 3
 execute as @s[scores={move=48}] at @s run effect give @a[gamemode=adventure,distance=..2.5] minecraft:blindness 3 2
 execute as @s[scores={move=48}] at @s run effect give @a[gamemode=adventure,distance=..2.5] minecraft:slowness 3 2

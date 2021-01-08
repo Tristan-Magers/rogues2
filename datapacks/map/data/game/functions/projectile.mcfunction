@@ -83,3 +83,7 @@ execute as @e[tag=spike] at @s run function game:characters/pluto/spells/spikesh
 execute as @e[tag=spike] at @s run function game:characters/pluto/spells/spikeshot
 execute as @e[tag=spike] at @s run function game:characters/pluto/spells/spikeshot
 execute as @e[tag=spike] at @s run function game:characters/pluto/spells/spikeshot
+
+#totem
+scoreboard players add @e[tag=totem] totemtimer 1
+kill @e[tag=totem,scores={totemtimer=800..}]

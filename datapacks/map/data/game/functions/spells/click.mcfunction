@@ -12,6 +12,11 @@ execute as @s[gamemode=creative] at @s run function game:characters/pluto/spells
 execute as @s[gamemode=creative] at @s run function game:characters/halt/spells
 execute as @s[gamemode=creative] at @s run function game:characters/barbose/spells
 
+execute as @s[tag=lobby] at @s run function game:spells/clickl
+
+execute as @s[nbt={SelectedItem:{id:"minecraft:book"}}] run scoreboard players set @s venge 300
+execute as @s[nbt={SelectedItem:{id:"minecraft:book"}}] run tag @s add vengeuse
+
 function game:spells/manaup
 
 scoreboard players set @s presstut -500

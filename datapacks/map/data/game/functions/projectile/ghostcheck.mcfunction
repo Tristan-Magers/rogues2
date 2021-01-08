@@ -79,7 +79,7 @@ execute as @s[tag=!weakhit] run scoreboard players remove @a[tag=ehit,tag=!me,ta
 execute as @s[tag=weakhit] run scoreboard players remove @a[tag=ehit,tag=!me,tag=hasres] healthshow 5
 execute as @s[tag=weakhit] run scoreboard players remove @a[tag=ehit,tag=!me,tag=!hasres] healthshow 6
 
-scoreboard players set @a[tag=ehit,tag=!me] glowing 26
+scoreboard players set @a[tag=ehit,tag=!me] glowing 22
 
 tag @a remove puser
 tag @s remove me

@@ -19,7 +19,11 @@ execute if entity @e[scores={map=4,lavatick=5..}] run scoreboard players set @e[
 
 #capture point code
 tag @a remove point
-execute as @e[name=point,type=minecraft:armor_stand] at @s run function game:game/point
+execute if entity @e[scores={map=1}] run execute as @e[tag=map1,name=point,type=minecraft:armor_stand] at @s run function game:game/point
+execute if entity @e[scores={map=2}] run execute as @e[tag=map2,name=point,type=minecraft:armor_stand] at @s run function game:game/point
+execute if entity @e[scores={map=3}] run execute as @e[tag=map3,name=point,type=minecraft:armor_stand] at @s run function game:game/point
+execute if entity @e[scores={map=4}] run execute as @e[tag=map4,name=point,type=minecraft:armor_stand] at @s run function game:game/point
+execute if entity @e[scores={map=5}] run execute as @e[tag=map5,name=point,type=minecraft:armor_stand] at @s run function game:game/point
 scoreboard players set @a[tag=!point] pointsT 0
 scoreboard players remove @a[scores={nocap=1..}] nocap 1
 

@@ -1,4 +1,4 @@
-scoreboard players remove @s Mana 4
+scoreboard players remove @s Mana 5
 
 execute as @e[type=arrow,scores={arrowlife=..1},limit=1] at @s run function game:projectile/arrowmot
 scoreboard players operation @s arrowmot = @e[type=arrow,scores={arrowlife=..1},limit=1] arrowmot

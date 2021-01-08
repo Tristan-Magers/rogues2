@@ -2,10 +2,10 @@ tag @s remove zeroh
 tag @s[scores={health=20}] add zeroh
 
 scoreboard players set @s[scores={class=1,healthshow=16..}] healthshow 15
-scoreboard players set @s[scores={class=2,healthshow=17..}] healthshow 16
+scoreboard players set @s[scores={class=2,healthshow=19..}] healthshow 18
 scoreboard players set @s[scores={class=3,healthshow=19..}] healthshow 18
 scoreboard players set @s[scores={class=4,healthshow=17..}] healthshow 16
-scoreboard players set @s[scores={class=5,healthshow=19..}] healthshow 18
+scoreboard players set @s[scores={class=5,healthshow=17..}] healthshow 16
 scoreboard players set @s[scores={class=6,healthshow=23..}] healthshow 22
 
 scoreboard players set @s[scores={healthshow=1..},nbt={SelectedItem:{id:"minecraft:wooden_sword"}}] item 2
@@ -30,13 +30,12 @@ scoreboard players set @s[scores={Mana=..0}] Mana 0
 execute as @s at @s run scoreboard players set @s healthreal 60
 execute as @s at @s run scoreboard players operation @s healthreal -= @s health
 
-scoreboard players set @s[scores={healthshow=..0},tag=lobby] healthshow 100
+scoreboard players set @s[scores={healthshow=..0},tag=lobby,tag=!arena] healthshow 100
 
 scoreboard players set @s[nbt={OnGround:1b},tag=nofalldam] healthreal 0
 scoreboard players set @s[scores={nofalldamage=1..2}] healthreal 0
 scoreboard players remove @s[nbt={OnGround:1b},tag=nofalldam] nofalldamage 1
 tag @s[scores={nofalldamage=..0}] remove nofalldam
-
 
 execute as @s[tag=!zeroh] at @s run scoreboard players operation @s healthshow -= @s healthreal
 execute as @s[tag=!zeroh,scores={healthshow=..-1}] at @s run scoreboard players operation @s healthreal += @s healthshow
@@ -65,7 +64,7 @@ execute as @s[scores={healthreal=21}] at @s run summon minecraft:armor_stand ~ ~
 execute as @s[scores={healthreal=22..}] at @s run summon minecraft:armor_stand ~ ~ ~ {Marker:1,Invisible:1b,Invulnerable:1,Tags:["damnum"],CustomNameVisible:1b,Duration:999999,CustomName:'{"text":"-22"}'}
 
 execute as @s[scores={healthreal=1..},tag=!zeroh] at @s run particle minecraft:block minecraft:redstone_block ~ ~1 ~ .3 .8 .3 2 40 force
-effect give @s[scores={health=..59}] minecraft:health_boost 900 9 true
+effect give @s[scores={health=..59}] minecraft:health_boost 999999 9 true
 effect give @s[scores={health=..59}] minecraft:instant_health 1 9 true
 effect clear @s minecraft:absorption
 execute as @s[scores={healthshow=..0}] at @s run summon skeleton ~ ~ ~ {NoAI:1,Invulnerable:1,Fire:9000}
@@ -87,11 +86,13 @@ execute as @s[scores={healthshow=1..,item=2}] at @s run execute as @e[tag=stealt
 execute as @s[scores={healthshow=1..,item=2}] at @s run team join smoke @e[tag=stealth]
 execute as @s[scores={healthshow=1..,invisoff=-2..}] at @s run execute as @e[tag=stealth] at @s run data merge entity @s {CustomName:"\"Visible\""}
 execute as @s[scores={healthshow=1..,invisoff=-2..}] at @s run team join visible @e[tag=stealth]
-execute as @s[scores={healthshow=1..},nbt=!{Fire:-20s}] at @s run execute as @e[tag=stealth] at @s run data merge entity @s {CustomName:"\"FIRE!!!\""}
+execute as @s[scores={healthshow=1..},nbt=!{Fire:-20s}] at @s run execute as @e[tag=stealth] at @s run data merge entity @s {CustomName:"\"FIRE!!\""}
 execute as @s[scores={healthshow=1..},nbt=!{Fire:-20s}] at @s run team join visible @e[tag=stealth]
 execute as @s[scores={healthshow=1..,shield=1..}] at @s run execute as @e[tag=stealth] at @s run data merge entity @s {CustomName:"\"Armor\""}
 execute as @s[scores={healthshow=1..,shield=1..}] at @s run team join shield @e[tag=stealth]
-execute as @s[scores={healthshow=1..,glowing=1..}] at @s run execute as @e[tag=stealth] at @s run data merge entity @s {CustomName:"\"Glowing\""}
+execute as @s[scores={healthshow=1..,noname=..-1,invisoff=-2..},tag=!lobby] at @s run execute as @e[tag=stealth] at @s run data merge entity @s {CustomName:"\"NAMETAG\""}
+execute as @s[scores={healthshow=1..,noname=..-1,invisoff=-2..},tag=!lobby] at @s run team join darkred @e[tag=stealth]
+execute as @s[scores={healthshow=1..,glowing=1..}] at @s run execute as @e[tag=stealth] at @s run data merge entity @s {CustomName:"\"GLOWING\""}
 execute as @s[scores={healthshow=1..,glowing=1..}] at @s run team join glowing @e[tag=stealth]
 
 scoreboard players set @s[scores={invisoff=0..}] item 2
@@ -101,11 +102,16 @@ execute as @s[scores={healthshow=9..12}] at @s run title @s actionbar ["",{"text
 execute as @s[scores={healthshow=5..8}] at @s run title @s actionbar ["",{"text":"Health: ","bold":true},{"score":{"name":"@s","objective":"healthshow"},"color":"red","bold":true},{"text":" Mana: ","bold":true},{"score":{"name":"@s","objective":"Mana"},"color":"gold","bold":true},{"text":" Visibility: ","bold":true},{"selector":"@e[tag=stealth]","bold":true}]
 execute as @s[scores={healthshow=1..4}] at @s run title @s actionbar ["",{"text":"Health: ","bold":true},{"score":{"name":"@s","objective":"healthshow"},"color":"dark_red","bold":true},{"text":" Mana: ","bold":true},{"score":{"name":"@s","objective":"Mana"},"color":"gold","bold":true},{"text":" Visibility: ","bold":true},{"selector":"@e[tag=stealth]","bold":true}]
 execute as @s[scores={healthshow=17..}] at @s run title @s actionbar ["",{"text":"Health: ","bold":true},{"score":{"name":"@s","objective":"healthshow"},"color":"green","bold":true},{"text":" Mana: ","bold":true},{"score":{"name":"@s","objective":"Mana"},"color":"gold","bold":true},{"text":" Visibility: ","bold":true},{"selector":"@e[tag=stealth]","bold":true}]
-scoreboard players set @s[scores={healthshow=..0}] respawn 221
+scoreboard players set @s[scores={healthshow=..0},tag=!arena] respawn 221
+tp @s[scores={healthshow=..0},tag=arena] -122 57 42 180 0
+effect give @s[scores={healthshow=..0},tag=arena] minecraft:blindness 1 0 true
+execute as @s[scores={healthshow=..0},tag=arena] at @s run playsound minecraft:entity.wither.hurt master @s
 scoreboard players set @s[scores={healthshow=..0}] healthshow 100
 
-replaceitem entity @s[tag=!spiritworld,scores={item=2,class=2..4}] armor.head minecraft:skeleton_skull
+replaceitem entity @s[tag=!spiritworld,scores={item=2,class=2}] armor.head minecraft:melon_seeds
+replaceitem entity @s[tag=!spiritworld,scores={item=2,class=4}] armor.head minecraft:gold_nugget
 replaceitem entity @s[tag=!spiritworld,scores={item=2,class=1}] armor.head minecraft:pink_dye
+replaceitem entity @s[tag=!spiritworld,scores={item=2,class=3}] armor.head minecraft:cyan_dye
 replaceitem entity @s[tag=!spiritworld,scores={item=2,class=5}] armor.head minecraft:light_gray_dye
 replaceitem entity @s[tag=!spiritworld,scores={item=2,class=6}] armor.head minecraft:gray_dye
 replaceitem entity @s[tag=!spiritworld,scores={item=2}] armor.feet minecraft:golden_boots{HideFlags:6,Unbreakable:1b,AttributeModifiers:[{AttributeName:"generic.armorToughness",Name:"generic.armorToughness",Amount:-1,Operation:0,UUIDLeast:529172,UUIDMost:361804}]} 1
@@ -116,6 +122,6 @@ scoreboard players set @s item 0
 
 #nametag
 scoreboard players add @s noname 0
-team join noname @s[scores={noname=0..}]
+team join noname @s[scores={noname=0..},tag=!lobby]
 team leave @s[scores={noname=-1}]
 scoreboard players remove @s[scores={noname=-1..}] noname 1

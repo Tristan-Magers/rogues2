@@ -10,7 +10,7 @@ scoreboard players set @s[scores={respawn=130..200,Score=4}] respawn 130
 scoreboard players set @s[scores={respawn=140..200,Score=5}] respawn 140
 scoreboard players set @s[scores={respawn=150..200,Score=6}] respawn 150
 scoreboard players set @s[scores={respawn=160..200,Score=7}] respawn 160
-scoreboard players set @s[scores={respawn=160..200,Score=8}] respawn 170
+scoreboard players set @s[scores={respawn=170..200,Score=8}] respawn 170
 scoreboard players set @s[scores={respawn=180..200,Score=9}] respawn 180
 scoreboard players set @s[scores={respawn=190..200,Score=10}] respawn 190
 scoreboard players set @s[scores={respawn=200..200,Score=11..}] respawn 200
@@ -59,7 +59,16 @@ effect give @s[scores={respawn=0}] speed 1 1 true
 #effect give @s[scores={respawn=0,Score=4}] speed 2 1 true
 #effect give @s[scores={respawn=0,Score=5}] speed 1 1 true
 
-execute as @s[scores={respawn=220}] at @s run me Died
+execute if entity @s[scores={respawn=220,class=1},tag=game] run tellraw @a [{"text":"* ","color":"white"},{"selector":"@s"},{"text":" ("},{"text":"Sparket","color":"red"},{"text":") Died","color":"white"}]
+execute if entity @s[scores={respawn=220,class=2},tag=game] run tellraw @a [{"text":"* ","color":"white"},{"selector":"@s"},{"text":" ("},{"text":"Vohelm","color":"green"},{"text":") Died","color":"white"}]
+execute if entity @s[scores={respawn=220,class=3},tag=game] run tellraw @a [{"text":"* ","color":"white"},{"selector":"@s"},{"text":" ("},{"text":"Emma","color":"aqua"},{"text":") Died","color":"white"}]
+execute if entity @s[scores={respawn=220,class=4},tag=game] run tellraw @a [{"text":"* ","color":"white"},{"selector":"@s"},{"text":" ("},{"text":"Pluto","color":"gray"},{"text":") Died","color":"white"}]
+execute if entity @s[scores={respawn=220,class=5},tag=game] run tellraw @a [{"text":"* ","color":"white"},{"selector":"@s"},{"text":" ("},{"text":"Halt","color":"gold"},{"text":") Died","color":"white"}]
+execute if entity @s[scores={respawn=220,class=6},tag=game] run tellraw @a [{"text":"* ","color":"white"},{"selector":"@s"},{"text":" ("},{"text":"Barbose","color":"yellow"},{"text":") Died","color":"white"}]
+
+tag @s add me
+execute as @s[scores={respawn=220}] run execute as @a[tag=game,scores={respawn=..0,healthshow=..50}] run tellraw @a[tag=me] [{"selector":"@s"},{"text":" Health Remaining","color":"white"},{"text":" : ","color":"white"},{"color":"white","score":{"name":"@s","color":"red","objective":"healthshow"}}]
+tag @s remove me
 
 scoreboard players set @s portal -2
 scoreboard players set @s dummylook -2

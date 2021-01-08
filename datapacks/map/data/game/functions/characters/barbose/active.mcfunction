@@ -23,7 +23,7 @@ scoreboard players set @s diaaxehit 0
 execute as @s[scores={dummylook=4..}] at @s run function game:characters/barbose/active/dummylook
 scoreboard players remove @s dummylook 1
 
-execute as @s[scores={dummylook=0}] at @s run function game:spells/manaup
+execute as @s[scores={dummylook=-30}] at @s run function game:spells/manaup
 
 execute as @s[scores={portal=..-1}] at @s run scoreboard players operation @e[tag=portalset] playerID -= @s playerID
 execute as @s[scores={portal=..-1}] at @s run kill @e[tag=portalset,scores={playerID=0}]
@@ -42,7 +42,7 @@ execute as @s[scores={portal=10}] at @s run kill @e[tag=portalset,scores={player
 execute as @s[scores={portal=10}] at @s run scoreboard players operation @e[tag=portalset] playerID += @s playerID
 scoreboard players set @s[scores={portal=10}] portal 0
 
-tag @s remove searcher
+tag @a remove searcher
 tag @s[nbt={SelectedItem:{id:"minecraft:diamond_axe"}}] add searcher
 execute if entity @s[nbt={SelectedItem:{id:"minecraft:diamond_axe"}}] run execute as @a[gamemode=adventure,limit=1,sort=nearest,distance=0.1..80,scores={respawn=..0}] at @s run function game:characters/barbose/active/tracker
 execute if entity @s[nbt=!{Inventory:[{id:"minecraft:red_dye",Slot:3b}]},scores={portal=..0,Mana=6..}] run function game:spells/manaup

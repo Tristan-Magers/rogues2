@@ -12,7 +12,6 @@ execute as @s[nbt={SelectedItem:{id:"minecraft:leather"}},scores={Mana=6..}] at 
 execute as @s[nbt={SelectedItem:{id:"minecraft:leather"}},scores={Mana=6..}] at @s run tp @e[tag=gernade,distance=...1,limit=1,sort=nearest] @p
 execute as @s[nbt={SelectedItem:{id:"minecraft:leather"}},scores={Mana=6..}] at @s run team join noColide @e[type=minecraft:magma_cube]
 scoreboard players set @s[nbt={SelectedItem:{id:"minecraft:leather"}},scores={Mana=6..}] invisoff 15
-scoreboard players set @s[nbt={SelectedItem:{id:"minecraft:leather"}},scores={Mana=6..}] noname 15
 scoreboard players remove @s[nbt={SelectedItem:{id:"minecraft:leather"}},scores={Mana=6..}] Mana 6
 
 #set portal
@@ -36,9 +35,9 @@ scoreboard players set @s[scores={portal=..9},nbt={SelectedItem:{id:"minecraft:c
 
 #boom
 execute as @s[nbt={SelectedItem:{id:"minecraft:ink_sac"}}] at @s run summon minecraft:area_effect_cloud ~ ~.2 ~ {NoGravity:1,Marker:1,Invulnerable:1,Tags:["blackhole"],Invisible:1,Duration:999999}
+execute as @s[nbt={SelectedItem:{id:"minecraft:ink_sac"}}] at @s run scoreboard players operation @e[tag=blackhole,limit=1,sort=nearest] playerID = @s playerID
 scoreboard players remove @s[nbt={SelectedItem:{id:"minecraft:ink_sac"}}] Mana 6
 scoreboard players set @s[nbt={SelectedItem:{id:"minecraft:ink_sac"}}] nocap 40
 scoreboard players set @s[nbt={SelectedItem:{id:"minecraft:ink_sac"}}] coolblack 100
 execute as @s[nbt={SelectedItem:{id:"minecraft:ink_sac"}}] at @s run function game:spells/manaup
-scoreboard players operation @e[tag=blackhole,limit=1,sort=nearest] playerID = @s playerID
 #title @s[nbt={SelectedItem:{id:"minecraft:ink_sac"}}] title {"text":"RUN!","bold":"true"}

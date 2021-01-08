@@ -1,5 +1,5 @@
 #water trident
-scoreboard players remove @s[nbt={SelectedItem:{id:"minecraft:kelp"}},scores={gettri=..-2}] Mana 5
+scoreboard players remove @s[nbt={SelectedItem:{id:"minecraft:kelp"}},scores={gettri=..-2}] Mana 6
 scoreboard players set @s[nbt={SelectedItem:{id:"minecraft:kelp"}},scores={gettri=..-2}] trident 1
 scoreboard players set @s[nbt={SelectedItem:{id:"minecraft:kelp"}},scores={gettri=..-2}] gettri 8
 
@@ -15,7 +15,7 @@ scoreboard players set @s[scores={shotCharge=..-3},nbt={SelectedItem:{id:"minecr
 #frost pillar
 execute as @s[nbt={SelectedItem:{id:"minecraft:diamond"}}] at @s run summon minecraft:armor_stand ~ ~ ~ {NoGravity:1,Marker:1,Invulnerable:1,Tags:["frostwall"],ArmorItems:[{},{},{},{Count:1,id:ice}],Invisible:1}
 execute as @s[nbt={SelectedItem:{id:"minecraft:diamond"}}] at @s run tp @e[tag=frostwall,distance=...1,limit=1,sort=nearest] @p
-scoreboard players remove @s[nbt={SelectedItem:{id:"minecraft:diamond"}}] Mana 2
+scoreboard players remove @s[nbt={SelectedItem:{id:"minecraft:diamond"}}] Mana 3
 execute as @s[nbt={SelectedItem:{id:"minecraft:diamond"}}] at @s run playsound minecraft:item.hoe.till master @a ~ ~ ~ 1 .3
 
 #wave

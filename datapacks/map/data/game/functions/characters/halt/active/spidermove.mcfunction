@@ -37,10 +37,10 @@ execute as @s at @s positioned ^-6 ^ ^6 run execute as @e[tag=other,distance=..5
 
 tag @s remove tag
 
-scoreboard players set @e[tag=other,distance=..1.6] glowing 60
-effect give @e[tag=other,distance=..1.6] slowness 3 2
-effect give @e[tag=other,distance=..1.6] wither 3 1
-execute if entity @e[tag=other,distance=..1.6] run kill @s
-#effect give @a[distance=..1.6] wither 1 2
+scoreboard players set @e[tag=other,distance=..1.3] glowing 60
+effect give @e[tag=other,distance=..1.3] slowness 3 2
+scoreboard players set @e[tag=other,distance=..1.3] poison2 76
+execute if entity @e[tag=other,distance=..1.3] run kill @s
+#effect give @a[distance=..1.3] wither 1 2
 
 scoreboard players operation @a playerID += @s playerID

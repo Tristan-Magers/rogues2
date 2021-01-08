@@ -2,12 +2,13 @@ scoreboard players remove @s[scores={TimeS=1..}] TimeS 1
 execute as @s[scores={TimeS=0,Time=1..}] at @s run scoreboard players remove Time Score 1
 scoreboard players set @s[scores={TimeS=0}] TimeS 20
 
-execute as @s[scores={Time=2..}] at @s unless entity @a[tag=ingame,tag=!lobby,gamemode=!creative] run tellraw @a {"text":"No players, game has ended"}
-execute as @s[scores={Time=2..}] at @s unless entity @a[tag=ingame,tag=!lobby,gamemode=!creative] run scoreboard players set @s Time 1
+execute as @s[scores={Time=2..}] at @s unless entity @a[tag=ingame,tag=!lobby,tag=game] run tellraw @a {"text":"No players, game has ended"}
+execute as @s[scores={Time=2..}] at @s unless entity @a[tag=ingame,tag=!lobby,tag=game] run scoreboard players set @s Time 1
 scoreboard players remove @s[scores={Time=0..}] Time 1
 
 #gamedone
 execute as @s[scores={Time=0}] at @s run function game:game/testwin
+execute as @s[scores={Time=0}] at @s run scoreboard players set @s restartcool 200
 execute as @s[scores={Time=..-1}] at @s run function game:game/gamedone
 
 execute as @s[scores={Time=5380}] at @s run execute as @e[scores={map=1}] run function game:game/maps/map1/start
@@ -23,46 +24,46 @@ execute as @s[scores={Time=1..}] at @s run scoreboard players add @a[scores={Sco
 
 execute as @s[scores={Time=1..}] at @s run tellraw @a[scores={presstut=400}] [{"text":"["},{"bold":"true","color":"red","text":"!!"},{"text":"] To cast spells, "},{"bold":"true","color":"gold","text":"RIGHT-CLICK"},{"text":" with them."}]
 execute as @s[scores={Time=1..}] at @s run tellraw @a[scores={pointtut=600}] [{"text":"["},{"bold":"true","color":"red","text":"!!"},{"text":"] Stand on points to collect "},{"bold":"true","color":"aqua","text":"SOULS"},{"text":"."}]
-execute as @s[scores={Time=1..}] at @s run tellraw @a[scores={scoretut=250}] [{"text":"["},{"bold":"true","color":"red","text":"!!"},{"text":"] Score by reurning "},{"bold":"true","color":"aqua","text":"SOULS"},{"text":" to the "},{"bold":"true","color":"dark_aqua","text":"SPIRIT REALM"},{"text":" (portals)."}]
+execute as @s[scores={Time=1..}] at @s run tellraw @a[scores={scoretut=250}] [{"text":"["},{"bold":"true","color":"red","text":"!!"},{"text":"] Score by returning "},{"bold":"true","color":"aqua","text":"SOULS"},{"text":" to the "},{"bold":"true","color":"dark_aqua","text":"SPIRIT REALM"},{"text":" (portals)."}]
 
 execute as @s[scores={Time=1..}] at @s run scoreboard players set @a[scores={presstut=400..}] presstut -300
 execute as @s[scores={Time=1..}] at @s run scoreboard players set @a[scores={pointtut=600..}] pointtut 0
 execute as @s[scores={Time=1..}] at @s run scoreboard players set @a[scores={scoretut=250..}] scoretut -300
 
-execute as @s[scores={Time=5390}] at @s run title @a times 10 40 10
-execute as @s[scores={Time=5390}] at @s run title @a title {"text":"Collect souls","color":"aqua"}
-execute as @s[scores={Time=5390}] at @s run title @a subtitle {"text":"(glowing points)","color":"white"}
+execute as @s[scores={Time=5390}] at @s run title @a[tag=game,scores={respawn=..1}] times 10 40 10
+execute as @s[scores={Time=5390}] at @s run title @a[tag=game,scores={respawn=..1}] title {"text":"Collect souls","color":"aqua"}
+execute as @s[scores={Time=5390}] at @s run title @a[tag=game,scores={respawn=..1}] subtitle {"text":"(glowing points)","color":"white"}
 
-execute as @s[scores={Time=5340}] at @s run title @a times 10 40 10
-execute as @s[scores={Time=5340}] at @s run title @a title {"text":"Return to Soul Realm","color":"gold"}
-execute as @s[scores={Time=5340}] at @s run title @a subtitle {"text":"(the portals)","color":"white"}
+execute as @s[scores={Time=5340}] at @s run title @a[tag=game,scores={respawn=..1}] times 10 40 10
+execute as @s[scores={Time=5340}] at @s run title @a[tag=game,scores={respawn=..1}] title {"text":"Return to Soul Realm","color":"gold"}
+execute as @s[scores={Time=5340}] at @s run title @a[tag=game,scores={respawn=..1}] subtitle {"text":"(the portals)","color":"white"}
 
-execute as @s[scores={Time=5300}] at @s run title @a times 0 20 10
+execute as @s[scores={Time=5300}] at @s run title @a[tag=game,scores={respawn=..1}] times 0 20 10
 
 execute as @s[scores={Time=5398}] at @s run execute as @a at @s run particle minecraft:poof ~ ~1 ~ .2 .4 .2 .1 60 force
 execute as @s[scores={Time=5395}] at @s run execute as @a at @s run effect give @a minecraft:blindness 1 2
 
 #increase point amount
-execute as @s[scores={Time=3600}] at @s run title @a times 0 25 10
-execute as @s[scores={Time=1800}] at @s run title @a times 0 25 10
-execute as @s[scores={Time=1200}] at @s run title @a times 0 25 10
-execute as @s[scores={Time=300}] at @s run title @a times 0 25 10
+execute as @s[scores={Time=3600}] at @s run title @a[tag=game,scores={respawn=..1}] times 0 25 10
+execute as @s[scores={Time=1800}] at @s run title @a[tag=game,scores={respawn=..1}] times 0 25 10
+execute as @s[scores={Time=1200}] at @s run title @a[tag=game,scores={respawn=..1}] times 0 25 10
+execute as @s[scores={Time=300}] at @s run title @a[tag=game,scores={respawn=..1}] times 0 25 10
 
 execute as @s[scores={Time=3600}] at @s run execute as @a at @s run playsound minecraft:ui.toast.challenge_complete master @s ~ ~ ~ 1 0
-execute as @s[scores={Time=3560..3600}] at @s run title @a title {"text":"Twilight Intensifies","color":"dark_aqua"}
-execute as @s[scores={Time=3560..3600}] at @s run title @a subtitle {"text":"More souls spawn on points","color":"blue"}
+execute as @s[scores={Time=3560..3600}] at @s run title @a[tag=game,scores={respawn=..1}] title {"text":"Twilight Intensifies","color":"dark_aqua"}
+execute as @s[scores={Time=3560..3600}] at @s run title @a[tag=game,scores={respawn=..1}] subtitle {"text":"More souls spawn on points","color":"blue"}
 
 execute as @s[scores={Time=1800}] at @s run execute as @a at @s run playsound minecraft:ui.toast.challenge_complete master @s ~ ~ ~ 1 0
-execute as @s[scores={Time=1760..1800}] at @s run title @a title {"text":"Twilight Intensifies","color":"dark_aqua"}
-execute as @s[scores={Time=1760..1800}] at @s run title @a subtitle {"text":"More souls spawn on points","color":"blue"}
+execute as @s[scores={Time=1760..1800}] at @s run title @a[tag=game,scores={respawn=..1}] title {"text":"Twilight Intensifies","color":"dark_aqua"}
+execute as @s[scores={Time=1760..1800}] at @s run title @a[tag=game,scores={respawn=..1}] subtitle {"text":"More souls spawn on points","color":"blue"}
 
 scoreboard players set @e[name=point,tag=!stable] pointAmount 1
 execute as @s[scores={Time=..3600}] at @s run scoreboard players set @e[name=point,tag=!stable] pointAmount 2
 execute as @s[scores={Time=..1800}] at @s run scoreboard players set @e[name=point,tag=!stable] pointAmount 3
 
-execute as @s[scores={Time=1200}] at @s run title @a title {"text":"One Minute Left","color":"dark_red"}
+execute as @s[scores={Time=1200}] at @s run title @a[tag=game,scores={respawn=..1}] title {"text":"One Minute Left","color":"dark_red"}
 execute as @s[scores={Time=1200}] at @s run tellraw @a {"text":"One Minute Left","color":"red"}
-execute as @s[scores={Time=300}] at @s run title @a title {"text":"15 Seconds Left","color":"dark_red"}
+execute as @s[scores={Time=300}] at @s run title @a[tag=game,scores={respawn=..1}] title {"text":"15 Seconds Left","color":"dark_red"}
 execute as @s[scores={Time=300}] at @s run tellraw @a {"text":"15 Seconds Left","color":"red"}
 
 execute as @s[scores={Time=1200}] at @s run execute as @a at @s run playsound minecraft:entity.ender_dragon.growl master @p ~ ~ ~ .4 .8

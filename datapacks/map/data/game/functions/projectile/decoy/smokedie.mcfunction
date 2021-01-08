@@ -1,5 +1,5 @@
 scoreboard players operation @a playerID -= @s playerID
-execute as @a[scores={playerID=0}] run me Died
+execute as @a[scores={playerID=0}] run tellraw @a [{"text":"* ","color":"white"},{"selector":"@s"},{"text":" ("},{"text":"Barbose","color":"yellow"},{"text":") Died","color":"white"}]
 scoreboard players operation @a playerID += @s playerID
 playsound minecraft:entity.player.hurt master @a
 particle minecraft:block minecraft:redstone_block ~ ~1 ~ .3 .8 .3 2 40 force

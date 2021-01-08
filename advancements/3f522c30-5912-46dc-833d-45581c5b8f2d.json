@@ -17,6 +17,12 @@
     },
     "done": true
   },
+  "minecraft:recipes/building_blocks/brick_stairs_from_bricks_stonecutting": {
+    "criteria": {
+      "has_bricks": "2020-11-25 21:15:41 +0000"
+    },
+    "done": true
+  },
   "minecraft:recipes/redstone/lever": {
     "criteria": {
       "has_cobblestone": "2018-10-22 02:58:37 +0000"
@@ -38,6 +44,12 @@
   "minecraft:recipes/combat/iron_sword": {
     "criteria": {
       "has_iron_ingot": "2019-02-23 06:13:42 +0000"
+    },
+    "done": true
+  },
+  "minecraft:recipes/decorations/brick_wall": {
+    "criteria": {
+      "has_bricks": "2020-11-25 21:15:41 +0000"
     },
     "done": true
   },
@@ -263,6 +275,12 @@
     },
     "done": true
   },
+  "minecraft:recipes/building_blocks/dark_oak_planks": {
+    "criteria": {
+      "has_log": "2020-11-25 20:58:21 +0000"
+    },
+    "done": true
+  },
   "minecraft:recipes/combat/iron_leggings": {
     "criteria": {
       "has_iron_ingot": "2019-02-23 06:13:42 +0000"
@@ -485,6 +503,12 @@
     },
     "done": true
   },
+  "minecraft:recipes/building_blocks/spruce_planks": {
+    "criteria": {
+      "has_logs": "2020-11-25 20:53:16 +0000"
+    },
+    "done": true
+  },
   "minecraft:story/lava_bucket": {
     "criteria": {
       "lava_bucket": "2019-02-23 05:04:43 +0000"
@@ -554,6 +578,12 @@
   "minecraft:adventure/root": {
     "criteria": {
       "killed_something": "2018-10-11 03:47:28 +0000"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/polished_basalt_from_basalt_stonecutting": {
+    "criteria": {
+      "has_basalt": "2020-10-28 06:02:04 +0000"
     },
     "done": true
   },
@@ -673,6 +703,18 @@
     },
     "done": true
   },
+  "minecraft:recipes/decorations/brick_wall_from_bricks_stonecutting": {
+    "criteria": {
+      "has_bricks": "2020-11-25 21:15:41 +0000"
+    },
+    "done": true
+  },
+  "minecraft:recipes/decorations/granite_wall_from_granite_stonecutting": {
+    "criteria": {
+      "has_granite": "2020-11-25 21:15:46 +0000"
+    },
+    "done": true
+  },
   "minecraft:recipes/building_blocks/polished_blackstone_brick_stairs_from_blackstone_stonecutting": {
     "criteria": {
       "has_blackstone": "2020-07-25 03:13:42 +0000"
@@ -769,6 +811,12 @@
     },
     "done": true
   },
+  "minecraft:recipes/building_blocks/granite_stairs": {
+    "criteria": {
+      "has_granite": "2020-11-25 21:15:46 +0000"
+    },
+    "done": true
+  },
   "minecraft:recipes/decorations/cyan_glazed_terracotta": {
     "criteria": {
       "has_cyan_terracotta": "2019-02-23 05:08:22 +0000"
@@ -805,6 +853,12 @@
     },
     "done": true
   },
+  "minecraft:recipes/building_blocks/stripped_dark_oak_wood": {
+    "criteria": {
+      "has_log": "2020-11-25 21:24:53 +0000"
+    },
+    "done": true
+  },
   "minecraft:recipes/redstone/acacia_pressure_plate": {
     "criteria": {
       "has_planks": "2019-03-20 20:45:34 +0000"
@@ -826,6 +880,12 @@
   "minecraft:recipes/decorations/light_blue_stained_glass_pane": {
     "criteria": {
       "has_glass": "2018-11-15 04:05:31 +0000"
+    },
+    "done": true
+  },
+  "minecraft:recipes/decorations/light_gray_glazed_terracotta": {
+    "criteria": {
+      "has_light_gray_terracotta": "2020-11-26 07:45:36 +0000"
     },
     "done": true
   },
@@ -898,6 +958,12 @@
   "minecraft:recipes/building_blocks/clay": {
     "criteria": {
       "has_clay_ball": "2019-02-23 06:17:55 +0000"
+    },
+    "done": true
+  },
+  "minecraft:recipes/decorations/purple_glazed_terracotta": {
+    "criteria": {
+      "has_purple_terracotta": "2020-11-25 21:14:35 +0000"
     },
     "done": true
   },
@@ -1087,6 +1153,18 @@
     },
     "done": true
   },
+  "minecraft:recipes/building_blocks/granite_stairs_from_granite_stonecutting": {
+    "criteria": {
+      "has_granite": "2020-11-25 21:15:46 +0000"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/warped_planks": {
+    "criteria": {
+      "has_logs": "2020-11-25 21:06:41 +0000"
+    },
+    "done": true
+  },
   "minecraft:recipes/building_blocks/red_concrete_powder": {
     "criteria": {
       "has_gravel": "2018-10-22 03:07:02 +0000"
@@ -1219,6 +1297,12 @@
     },
     "done": true
   },
+  "minecraft:recipes/brewing/fermented_spider_eye": {
+    "criteria": {
+      "has_spider_eye": "2020-11-25 20:58:00 +0000"
+    },
+    "done": true
+  },
   "minecraft:recipes/tools/stone_pickaxe": {
     "criteria": {
       "has_cobblestone": "2018-10-22 02:58:37 +0000"
@@ -1318,6 +1402,12 @@
   "minecraft:recipes/misc/light_gray_dye_from_gray_white_dye": {
     "criteria": {
       "has_gray_dye": "2020-07-25 04:03:23 +0000"
+    },
+    "done": true
+  },
+  "minecraft:recipes/decorations/acacia_sign": {
+    "criteria": {
+      "has_acacia_planks": "2020-11-25 21:15:59 +0000"
     },
     "done": true
   },
@@ -1634,6 +1724,12 @@
     },
     "done": true
   },
+  "minecraft:recipes/building_blocks/packed_ice": {
+    "criteria": {
+      "has_ice": "2020-10-28 05:47:17 +0000"
+    },
+    "done": true
+  },
   "minecraft:recipes/transportation/spruce_boat": {
     "criteria": {
       "in_water": "2018-10-10 03:48:42 +0000"
@@ -1673,6 +1769,12 @@
   "minecraft:recipes/building_blocks/gray_wool": {
     "criteria": {
       "has_white_wool": "2018-10-11 03:33:55 +0000"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/polished_granite_from_granite_stonecutting": {
+    "criteria": {
+      "has_granite": "2020-11-25 21:15:46 +0000"
     },
     "done": true
   },
@@ -1745,6 +1847,12 @@
   "minecraft:recipes/building_blocks/birch_slab": {
     "criteria": {
       "has_planks": "2019-03-20 21:01:56 +0000"
+    },
+    "done": true
+  },
+  "minecraft:recipes/decorations/granite_wall": {
+    "criteria": {
+      "has_granite": "2020-11-25 21:15:46 +0000"
     },
     "done": true
   },
@@ -1982,6 +2090,12 @@
     },
     "done": true
   },
+  "minecraft:recipes/building_blocks/polished_granite_slab_from_granite_stonecutting": {
+    "criteria": {
+      "has_granite": "2020-11-25 21:15:46 +0000"
+    },
+    "done": true
+  },
   "minecraft:recipes/decorations/enchanting_table": {
     "criteria": {
       "has_obsidian": "2018-10-12 00:27:00 +0000"
@@ -2102,6 +2216,12 @@
     },
     "done": true
   },
+  "minecraft:recipes/building_blocks/granite_slab": {
+    "criteria": {
+      "has_granite": "2020-11-25 21:15:46 +0000"
+    },
+    "done": true
+  },
   "minecraft:recipes/building_blocks/smooth_sandstone_stairs": {
     "criteria": {
       "has_smooth_sandstone": "2020-03-02 03:15:08 +0000"
@@ -2201,6 +2321,12 @@
   "minecraft:recipes/decorations/green_carpet_from_white_carpet": {
     "criteria": {
       "has_green_dye": "2019-08-06 05:31:04 +0000"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/polished_granite_stairs_from_granite_stonecutting": {
+    "criteria": {
+      "has_granite": "2020-11-25 21:15:46 +0000"
     },
     "done": true
   },
@@ -2438,6 +2564,12 @@
     },
     "done": true
   },
+  "minecraft:recipes/building_blocks/granite_slab_from_granite_stonecutting": {
+    "criteria": {
+      "has_granite": "2020-11-25 21:15:46 +0000"
+    },
+    "done": true
+  },
   "minecraft:recipes/decorations/jungle_sign": {
     "criteria": {
       "has_jungle_planks": "2020-07-25 03:27:05 +0000"
@@ -2486,6 +2618,12 @@
     },
     "done": true
   },
+  "minecraft:recipes/building_blocks/brick_slab_from_bricks_stonecutting": {
+    "criteria": {
+      "has_bricks": "2020-11-25 21:15:41 +0000"
+    },
+    "done": true
+  },
   "minecraft:recipes/building_blocks/black_terracotta": {
     "criteria": {
       "has_terracotta": "2019-02-23 05:41:10 +0000"
@@ -2495,6 +2633,12 @@
   "minecraft:recipes/decorations/blackstone_wall": {
     "criteria": {
       "has_blackstone": "2020-07-25 03:13:42 +0000"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/polished_basalt": {
+    "criteria": {
+      "has_basalt": "2020-10-28 06:02:04 +0000"
     },
     "done": true
   },
@@ -2525,6 +2669,12 @@
   "minecraft:recipes/misc/coal": {
     "criteria": {
       "has_coal_block": "2018-10-12 00:27:07 +0000"
+    },
+    "done": true
+  },
+  "minecraft:recipes/decorations/pink_glazed_terracotta": {
+    "criteria": {
+      "has_pink_terracotta": "2020-10-28 05:47:30 +0000"
     },
     "done": true
   },
@@ -2888,5 +3038,5 @@
     },
     "done": true
   },
-  "DataVersion": 2578
+  "DataVersion": 2584
 }

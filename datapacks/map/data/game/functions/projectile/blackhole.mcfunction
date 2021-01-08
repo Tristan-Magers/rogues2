@@ -36,5 +36,9 @@ execute as @s[scores={timer=26}] at @s run effect give @a[distance=..3,tag=!isth
 execute as @s[scores={timer=36}] at @s run effect give @a[distance=..3,tag=!isthrow] minecraft:instant_damage 1
 execute as @s[scores={timer=46}] at @s run effect give @a[distance=..3,tag=!isthrow] minecraft:instant_damage 1
 
+execute as @s[scores={timer=06}] at @s run title @a[distance=..3,tag=!isthrow] title {"text":"RUN!","bold":"true"}
+execute as @s[scores={timer=16}] at @s run title @a[distance=..3,tag=!isthrow] title {"text":"RUN!","bold":"true"}
+execute as @s[scores={timer=26}] at @s run title @a[distance=..3,tag=!isthrow] title {"text":"RUN!","bold":"true"}
+execute as @s[scores={timer=36}] at @s run title @a[distance=..3,tag=!isthrow] title {"text":"RUN!","bold":"true"}
 
 kill @s[scores={timer=46..}]

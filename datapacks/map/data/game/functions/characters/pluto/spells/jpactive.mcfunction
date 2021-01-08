@@ -29,7 +29,7 @@ execute as @s[scores={gertimer=20..}] at @s run effect give @a[distance=..1.3,ga
 execute as @s[scores={gertimer=20..}] at @s run tag @a[distance=..1.5,gamemode=adventure] add nofalldam
 execute as @s[scores={gertimer=20..}] at @s run scoreboard players set @a[distance=..1.5,gamemode=adventure] nofalldamage 3
 
-execute as @s[scores={gertimer=230}] at @s run playsound minecraft:block.beacon.power_select master @a ~ ~ ~ .7 0
-execute as @s[scores={gertimer=230}] at @s run playsound minecraft:block.beacon.deactivate master @a ~ ~ ~ .7 1.4
-execute as @s[scores={gertimer=240..}] at @s run particle minecraft:cloud ~ ~1 ~ .1 .1 .1 .1 20 force
-kill @s[scores={gertimer=240..}]
+execute as @s[scores={gertimer=130}] at @s run playsound minecraft:block.beacon.power_select master @a ~ ~ ~ .7 0
+execute as @s[scores={gertimer=130}] at @s run playsound minecraft:block.beacon.deactivate master @a ~ ~ ~ .7 1.4
+execute as @s[scores={gertimer=140..}] at @s run particle minecraft:cloud ~ ~1 ~ .1 .1 .1 .1 20 force
+kill @s[scores={gertimer=140..}]

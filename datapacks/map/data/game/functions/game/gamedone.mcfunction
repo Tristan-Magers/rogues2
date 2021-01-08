@@ -6,3 +6,6 @@ effect give @a[tag=tpback] blindness 2
 tag @a[tag=tpback] remove tpback
 
 tag @a[tag=tpno] remove tpno
+
+tag @a remove game
+tag @a remove spec

@@ -25,7 +25,7 @@ tp @s[scores={move=1}] @e[limit=1,type=area_effect_cloud,tag=smoker,scores={play
 execute as @s at @s if block ~ ~-.2 ~ air run tp @s ~ ~-.1 ~
 execute as @s at @s if block ~ ~-.2 ~ air run tp @s ~ ~-.1 ~
 
-particle minecraft:falling_dust minecraft:black_concrete ~ ~.05 ~ .12 .09 .12 1 2 force
+execute as @s at @s if entity @e[limit=1,type=area_effect_cloud,tag=smoker,scores={playerID=0}] run particle dust 0 0 0 1 ~ ~.2 ~ .1 .1 .1 0 1 force
 
 execute as @s at @s unless entity @e[limit=1,type=area_effect_cloud,tag=smoker,scores={playerID=0},distance=..0.5] run tp @s ^ ^ ^.24
 
@@ -37,7 +37,7 @@ execute as @s[tag=!in] at @s run function game:detailin
 
 tag @s[tag=!in] add wall
 
-execute as @s[tag=!in] at @s run tp @s ^ ^ ^-.24
+execute as @s[tag=!in] at @s run tp @s ^ ^ ^-.22
 execute as @s[tag=!in] at @s run tp @s ~ ~ ~ ~ -90
 execute as @s[tag=!in,scores={y=50..}] at @s run tp @s ~ ~ ~ ~ 0
 

@@ -1,4 +1,4 @@
-#execute as @a at @s run function game:game/start2
+execute as @a at @s run function game:game/start2
 
 execute as @a at @s run effect give @e[name=point,tag=map4] minecraft:glowing 3
 execute as @a at @s run effect give @e[tag=point1,tag=map4] minecraft:glowing 14

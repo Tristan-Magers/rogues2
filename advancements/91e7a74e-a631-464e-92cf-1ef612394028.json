@@ -11,6 +11,12 @@
     },
     "done": true
   },
+  "minecraft:recipes/brewing/blaze_powder": {
+    "criteria": {
+      "has_blaze_rod": "2020-10-27 07:44:59 +0000"
+    },
+    "done": true
+  },
   "minecraft:recipes/misc/paper": {
     "criteria": {
       "has_reeds": "2020-03-10 02:58:08 +0000"
@@ -44,6 +50,18 @@
   "minecraft:recipes/combat/leather_helmet": {
     "criteria": {
       "has_leather": "2020-03-10 03:06:30 +0000"
+    },
+    "done": true
+  },
+  "minecraft:recipes/decorations/campfire": {
+    "criteria": {
+      "has_coal": "2020-10-27 07:45:00 +0000"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/bricks": {
+    "criteria": {
+      "has_brick": "2020-10-27 07:44:57 +0000"
     },
     "done": true
   },
@@ -104,6 +122,12 @@
   "minecraft:recipes/combat/arrow": {
     "criteria": {
       "has_flint": "2020-03-10 02:57:30 +0000"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/coal_block": {
+    "criteria": {
+      "has_coal": "2020-10-27 07:45:00 +0000"
     },
     "done": true
   },
@@ -227,6 +251,12 @@
     },
     "done": true
   },
+  "minecraft:recipes/decorations/cartography_table": {
+    "criteria": {
+      "has_paper": "2020-10-27 07:44:04 +0000"
+    },
+    "done": true
+  },
   "minecraft:recipes/decorations/green_stained_glass_pane_from_glass_pane": {
     "criteria": {
       "has_green_dye": "2020-03-10 03:06:30 +0000"
@@ -260,6 +290,12 @@
   "minecraft:recipes/misc/leather_horse_armor": {
     "criteria": {
       "has_leather": "2020-03-10 03:06:30 +0000"
+    },
+    "done": true
+  },
+  "minecraft:recipes/brewing/brewing_stand": {
+    "criteria": {
+      "has_blaze_rod": "2020-10-27 07:44:59 +0000"
     },
     "done": true
   },
@@ -329,6 +365,12 @@
     },
     "done": true
   },
+  "minecraft:nether/obtain_blaze_rod": {
+    "criteria": {
+      "blaze_rod": "2020-10-27 07:44:59 +0000"
+    },
+    "done": true
+  },
   "minecraft:recipes/decorations/cyan_carpet_from_white_carpet": {
     "criteria": {
       "has_cyan_dye": "2020-06-14 00:29:47 +0000"
@@ -338,6 +380,12 @@
   "minecraft:recipes/transportation/minecart": {
     "criteria": {
       "has_iron_ingot": "2020-03-10 03:09:30 +0000"
+    },
+    "done": true
+  },
+  "minecraft:recipes/brewing/magma_cream": {
+    "criteria": {
+      "has_blaze_powder": "2020-10-27 07:45:02 +0000"
     },
     "done": true
   },
@@ -395,13 +443,13 @@
     },
     "done": true
   },
-  "minecraft:recipes/redstone/iron_trapdoor": {
+  "minecraft:recipes/decorations/smithing_table": {
     "criteria": {
       "has_iron_ingot": "2020-03-10 03:09:30 +0000"
     },
     "done": true
   },
-  "minecraft:recipes/decorations/smithing_table": {
+  "minecraft:recipes/redstone/iron_trapdoor": {
     "criteria": {
       "has_iron_ingot": "2020-03-10 03:09:30 +0000"
     },
@@ -503,6 +551,12 @@
     },
     "done": true
   },
+  "minecraft:recipes/decorations/flower_pot": {
+    "criteria": {
+      "has_brick": "2020-10-27 07:44:57 +0000"
+    },
+    "done": true
+  },
   "minecraft:recipes/tools/diamond_shovel": {
     "criteria": {
       "has_diamond": "2020-03-10 03:14:16 +0000"
@@ -528,6 +582,12 @@
     },
     "done": true
   },
+  "minecraft:recipes/misc/ender_eye": {
+    "criteria": {
+      "has_blaze_powder": "2020-10-27 07:45:02 +0000"
+    },
+    "done": true
+  },
   "minecraft:recipes/decorations/fletching_table": {
     "criteria": {
       "has_flint": "2020-03-10 02:57:30 +0000"
@@ -546,9 +606,21 @@
     },
     "done": true
   },
+  "minecraft:recipes/decorations/pink_stained_glass_pane_from_glass_pane": {
+    "criteria": {
+      "has_pink_dye": "2020-10-27 07:44:54 +0000"
+    },
+    "done": true
+  },
   "minecraft:recipes/decorations/gray_stained_glass_pane_from_glass_pane": {
     "criteria": {
       "has_gray_dye": "2020-03-10 03:06:25 +0000"
+    },
+    "done": true
+  },
+  "minecraft:recipes/decorations/light_gray_stained_glass_pane_from_glass_pane": {
+    "criteria": {
+      "has_light_gray_dye": "2020-10-27 07:59:24 +0000"
     },
     "done": true
   },
@@ -561,6 +633,12 @@
   "minecraft:recipes/food/cookie": {
     "criteria": {
       "has_cocoa": "2020-03-10 03:25:15 +0000"
+    },
+    "done": true
+  },
+  "minecraft:recipes/decorations/chain": {
+    "criteria": {
+      "has_iron_nugget": "2020-10-27 07:59:28 +0000"
     },
     "done": true
   },
@@ -630,9 +708,27 @@
     },
     "done": true
   },
+  "minecraft:recipes/decorations/pink_carpet_from_white_carpet": {
+    "criteria": {
+      "has_pink_dye": "2020-10-27 07:44:54 +0000"
+    },
+    "done": true
+  },
   "minecraft:recipes/misc/brown_dye": {
     "criteria": {
       "has_cocoa_beans": "2020-03-10 03:25:15 +0000"
+    },
+    "done": true
+  },
+  "minecraft:recipes/misc/fire_charge": {
+    "criteria": {
+      "has_blaze_powder": "2020-10-27 07:45:02 +0000"
+    },
+    "done": true
+  },
+  "minecraft:recipes/decorations/light_gray_carpet_from_white_carpet": {
+    "criteria": {
+      "has_light_gray_dye": "2020-10-27 07:59:24 +0000"
     },
     "done": true
   },
@@ -642,5 +738,5 @@
     },
     "done": true
   },
-  "DataVersion": 2230
+  "DataVersion": 2580
 }

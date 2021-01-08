@@ -7,7 +7,6 @@ execute as @s[nbt={SelectedItem:{id:"minecraft:purple_dye"}}] at @s run tp @e[ta
 execute as @s[nbt={SelectedItem:{id:"minecraft:purple_dye"}}] at @s run tp @e[tag=pshot,sort=nearest,limit=1] ~ ~1.7 ~
 execute as @s[nbt={SelectedItem:{id:"minecraft:purple_dye"}}] at @s run execute as @e[tag=pshot,sort=nearest,limit=1] at @s run function game:faceaway
 scoreboard players set @s[nbt={SelectedItem:{id:"minecraft:purple_dye"}}] invisoff 13
-scoreboard players set @s[nbt={SelectedItem:{id:"minecraft:purple_dye"}}] noname 13
 scoreboard players remove @s[nbt={SelectedItem:{id:"minecraft:purple_dye"}}] Mana 5
 
 #invul
@@ -16,6 +15,8 @@ execute as @s[nbt={SelectedItem:{id:"minecraft:sugar"}}] at @s run playsound min
 execute as @s[nbt={SelectedItem:{id:"minecraft:sugar"}}] at @s run playsound minecraft:block.anvil.land master @a ~ ~ ~ .3 .2
 effect give @s[nbt={SelectedItem:{id:"minecraft:sugar"}}] resistance 3 10
 scoreboard players set @s[nbt={SelectedItem:{id:"minecraft:sugar"}}] shield 44
+tag @s[nbt={SelectedItem:{id:"minecraft:sugar"}}] add sworddeg
+scoreboard players set @s[nbt={SelectedItem:{id:"minecraft:sugar"}}] nocap 24
 scoreboard players remove @s[nbt={SelectedItem:{id:"minecraft:sugar"}}] Mana 6
 
 #smoke bomb
@@ -54,23 +55,23 @@ tag @s remove first
 
 tag @s remove switch
 tag @s[scores={Mana=3..},nbt={SelectedItem:{id:"minecraft:golden_hoe"}}] add switch
-execute as @s[scores={Mana=3..},nbt={SelectedItem:{id:"minecraft:golden_hoe"}}] at @s run replaceitem entity @s hotbar.0 minecraft:diamond_hoe{Unbreakable:1b,AttributeModifiers:[{AttributeName:"generic.attack_speed",Name:"generic.attack_speed",Amount:-2.8,Operation:0,UUID:[I;170452042,-618446418,-1993398134,2121527740]},{AttributeName:"generic.attack_damage",Name:"generic.attack_damage",Amount:7,Operation:0,UUID:[I;-2116117351,-814987369,-1539314661,1434952524]},{AttributeName:"generic.movement_speed",Name:"generic.movement_speed",Amount:.4,Operation:2,UUID:[I;-1219426109,1940867735,-1420316675,575706054]}],display:{Name:"[{\"text\":\"Sacred Knife\",\"color\":\"yellow\",\"italic\":\"false\",\"bold\":\"true\"},{\"text\":\" (\",\"color\":\"white\",\"italic\":\"false\"},{\"text\":\"8 Damage\",\"color\":\"red\",\"italic\":\"false\"},{\"text\":\") [\",\"color\":\"white\",\"italic\":\"false\"},{\"text\":\"FULLY UPGRADED\",\"color\":\"gold\",\"italic\":\"false\"},{\"text\":\"]\",\"color\":\"white\",\"italic\":\"false\"}]"}} 1
-scoreboard players remove @s[tag=switch,tag=!end,scores={Mana=3..},nbt={SelectedItem:{id:"minecraft:diamond_hoe"}}] swordcool 100
-scoreboard players remove @s[tag=switch,tag=!end,scores={Mana=3..},nbt={SelectedItem:{id:"minecraft:diamond_hoe"}}] Mana 3
+execute as @s[scores={Mana=2..},nbt={SelectedItem:{id:"minecraft:golden_hoe"}}] at @s run replaceitem entity @s hotbar.0 minecraft:diamond_hoe{Unbreakable:1b,AttributeModifiers:[{AttributeName:"generic.attack_speed",Name:"generic.attack_speed",Amount:-2.8,Operation:0,UUID:[I;170452042,-618446418,-1993398134,2121527740]},{AttributeName:"generic.attack_damage",Name:"generic.attack_damage",Amount:7,Operation:0,UUID:[I;-2116117351,-814987369,-1539314661,1434952524]},{AttributeName:"generic.movement_speed",Name:"generic.movement_speed",Amount:.38,Operation:2,UUID:[I;-1219426109,1940867735,-1420316675,575706054]}],display:{Name:"[{\"text\":\"Sacred Knife\",\"color\":\"yellow\",\"italic\":\"false\",\"bold\":\"true\"},{\"text\":\" (\",\"color\":\"white\",\"italic\":\"false\"},{\"text\":\"8 Damage\",\"color\":\"red\",\"italic\":\"false\"},{\"text\":\") [\",\"color\":\"white\",\"italic\":\"false\"},{\"text\":\"FULLY UPGRADED\",\"color\":\"gold\",\"italic\":\"false\"},{\"text\":\"]\",\"color\":\"white\",\"italic\":\"false\"}]"}} 1
+scoreboard players remove @s[tag=switch,tag=!end,scores={Mana=2..},nbt={SelectedItem:{id:"minecraft:diamond_hoe"}}] swordcool 9999
+scoreboard players remove @s[tag=switch,tag=!end,scores={Mana=2..},nbt={SelectedItem:{id:"minecraft:diamond_hoe"}}] Mana 2
 
 tag @s remove switch
 tag @s[scores={Mana=3..},nbt={SelectedItem:{id:"minecraft:iron_hoe"}}] add switch
-execute as @s[scores={Mana=3..},nbt={SelectedItem:{id:"minecraft:iron_hoe"}}] at @s run replaceitem entity @s hotbar.0 minecraft:golden_hoe{Unbreakable:1b,AttributeModifiers:[{AttributeName:"generic.attack_speed",Name:"generic.attack_speed",Amount:-2.8,Operation:0,UUID:[I;170452042,-618446418,-1993398134,2121527740]},{AttributeName:"generic.attack_damage",Name:"generic.attack_damage",Amount:6,Operation:0,UUID:[I;-2116117351,-814987369,-1539314661,1434952524]},{AttributeName:"generic.movement_speed",Name:"generic.movement_speed",Amount:.3,Operation:2,UUID:[I;-1219426109,1940867735,-1420316675,575706054]}],display:{Name:"[{\"text\":\"Sacred Knife\",\"color\":\"yellow\",\"italic\":\"false\",\"bold\":\"true\"},{\"text\":\" (\",\"color\":\"white\",\"italic\":\"false\"},{\"text\":\"7 Damage\",\"color\":\"red\",\"italic\":\"false\"},{\"text\":\") [\",\"color\":\"white\",\"italic\":\"false\"},{\"text\":\"3 Mana to upgade\",\"color\":\"gold\",\"italic\":\"false\"},{\"text\":\"]\",\"color\":\"white\",\"italic\":\"false\"}]"}} 1
-scoreboard players remove @s[tag=switch,scores={Mana=3..},nbt={SelectedItem:{id:"minecraft:golden_hoe"}}] swordcool 100
+execute as @s[scores={Mana=3..},nbt={SelectedItem:{id:"minecraft:iron_hoe"}}] at @s run replaceitem entity @s hotbar.0 minecraft:golden_hoe{Unbreakable:1b,AttributeModifiers:[{AttributeName:"generic.attack_speed",Name:"generic.attack_speed",Amount:-2.8,Operation:0,UUID:[I;170452042,-618446418,-1993398134,2121527740]},{AttributeName:"generic.attack_damage",Name:"generic.attack_damage",Amount:6,Operation:0,UUID:[I;-2116117351,-814987369,-1539314661,1434952524]},{AttributeName:"generic.movement_speed",Name:"generic.movement_speed",Amount:.3,Operation:2,UUID:[I;-1219426109,1940867735,-1420316675,575706054]}],display:{Name:"[{\"text\":\"Sacred Knife\",\"color\":\"yellow\",\"italic\":\"false\",\"bold\":\"true\"},{\"text\":\" (\",\"color\":\"white\",\"italic\":\"false\"},{\"text\":\"7 Damage\",\"color\":\"red\",\"italic\":\"false\"},{\"text\":\") [\",\"color\":\"white\",\"italic\":\"false\"},{\"text\":\"2 Mana to upgade\",\"color\":\"gold\",\"italic\":\"false\"},{\"text\":\"]\",\"color\":\"white\",\"italic\":\"false\"}]"}} 1
+scoreboard players remove @s[tag=switch,scores={Mana=3..},nbt={SelectedItem:{id:"minecraft:golden_hoe"}}] swordcool 9999
 scoreboard players remove @s[tag=switch,scores={Mana=3..},nbt={SelectedItem:{id:"minecraft:golden_hoe"}}] Mana 3
 
 tag @s remove switch
 tag @s[scores={Mana=3..},nbt={SelectedItem:{id:"minecraft:stone_hoe"}}] add switch
 execute as @s[scores={Mana=3..},nbt={SelectedItem:{id:"minecraft:stone_hoe"}}] at @s run replaceitem entity @s hotbar.0 minecraft:iron_hoe{Unbreakable:1b,AttributeModifiers:[{AttributeName:"generic.attack_speed",Name:"generic.attack_speed",Amount:-2.8,Operation:0,UUID:[I;170452042,-618446418,-1993398134,2121527740]},{AttributeName:"generic.attack_damage",Name:"generic.attack_damage",Amount:5,Operation:0,UUID:[I;-2116117351,-814987369,-1539314661,1434952524]},{AttributeName:"generic.movement_speed",Name:"generic.movement_speed",Amount:.2,Operation:2,UUID:[I;-1219426109,1940867735,-1420316675,575706054]}],display:{Name:"[{\"text\":\"Sacred Knife\",\"color\":\"yellow\",\"italic\":\"false\",\"bold\":\"true\"},{\"text\":\" (\",\"color\":\"white\",\"italic\":\"false\"},{\"text\":\"6 Damage\",\"color\":\"red\",\"italic\":\"false\"},{\"text\":\") [\",\"color\":\"white\",\"italic\":\"false\"},{\"text\":\"3 Mana to upgade\",\"color\":\"gold\",\"italic\":\"false\"},{\"text\":\"]\",\"color\":\"white\",\"italic\":\"false\"}]"}} 1
-scoreboard players remove @s[tag=switch,scores={Mana=3..},nbt={SelectedItem:{id:"minecraft:iron_hoe"}}] swordcool 100
+scoreboard players remove @s[tag=switch,scores={Mana=3..},nbt={SelectedItem:{id:"minecraft:iron_hoe"}}] swordcool 9999
 scoreboard players remove @s[tag=switch,scores={Mana=3..},nbt={SelectedItem:{id:"minecraft:iron_hoe"}}] Mana 3
 
-tag @s[scores={Mana=2..},nbt={SelectedItem:{id:"minecraft:wooden_hoe"}}] add first
+tag @s[scores={Mana=3..},nbt={SelectedItem:{id:"minecraft:wooden_hoe"}}] add first
 execute as @s[tag=first] at @s run replaceitem entity @s hotbar.0 minecraft:stone_hoe{Unbreakable:1b,AttributeModifiers:[{AttributeName:"generic.attack_speed",Name:"generic.attack_speed",Amount:-2.8,Operation:0,UUID:[I;170452042,-618446418,-1993398134,2121527740]},{AttributeName:"generic.attack_damage",Name:"generic.attack_damage",Amount:4,Operation:0,UUID:[I;-2116117351,-814987369,-1539314661,1434952524]},{AttributeName:"generic.movement_speed",Name:"generic.movement_speed",Amount:.1,Operation:2,UUID:[I;-1219426109,1940867735,-1420316675,575706054]}],display:{Name:"[{\"text\":\"Sacred Knife\",\"color\":\"yellow\",\"italic\":\"false\",\"bold\":\"true\"},{\"text\":\" (\",\"color\":\"white\",\"italic\":\"false\"},{\"text\":\"5 Damage\",\"color\":\"red\",\"italic\":\"false\"},{\"text\":\") [\",\"color\":\"white\",\"italic\":\"false\"},{\"text\":\"3 Mana to upgade\",\"color\":\"gold\",\"italic\":\"false\"},{\"text\":\"]\",\"color\":\"white\",\"italic\":\"false\"}]"}} 1
-scoreboard players remove @s[tag=first] swordcool 100
-scoreboard players remove @s[tag=first] Mana 2
+scoreboard players remove @s[tag=first] swordcool 9999
+scoreboard players remove @s[tag=first] Mana 3

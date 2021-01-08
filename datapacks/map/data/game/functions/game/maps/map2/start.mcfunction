@@ -1,3 +1,6 @@
+setblock -89 40 65 minecraft:polished_blackstone_button[face=wall,powered=false,facing=west]
+setblock -88 40 64 minecraft:polished_blackstone_button[face=wall,powered=false,facing=north]
+
 execute as @a at @s run function game:game/start2
 
 execute as @a at @s run effect give @e[name=point,tag=map2] minecraft:glowing 3

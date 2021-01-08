@@ -14,11 +14,12 @@ execute positioned -1057 53 -981.0 run execute as @a[gamemode=adventure,distance
 
 #particles
 
-particle minecraft:dripping_lava -1041 65.9 -1021.3 1.5 1.1 0 0 1 force
-particle minecraft:dripping_lava 77.94 38.76 -32.24 0 1.3 1.5 0 1 force
+particle minecraft:dripping_lava -1041 65.9 -1021.3 1.5 1.1 0 0 1 force @a[x=-1041,y=65,z=-1021,distance=..35]
+particle minecraft:dripping_lava 77.94 38.76 -32.24 0 1.3 1.5 0 1 force @a[x=77,y=38,z=-32,distance=..35]
 
-particle minecraft:dripping_water -1055 55 -980.75 2.3 1.5 0 0 1 force
-particle minecraft:dripping_water 61.57 38.00 -32.58 0 2 1.5 0 1 force
+particle minecraft:dripping_water -1055 55 -980.75 2.3 1.5 0 0 1 force @a[x=-1055,y=55,z=-980,distance=..35]
+particle minecraft:dripping_water 61.57 38.00 -32.58 0 2 1.5 0 1 force @a[x=61,y=38,z=-32,distance=..35]
+
 
 #green
 execute positioned -1025.0 38 -987.0 run execute as @a[gamemode=adventure,distance=..100,dz=5,dx=-5,dy=5] at @s run tp @s -1044 54 -990

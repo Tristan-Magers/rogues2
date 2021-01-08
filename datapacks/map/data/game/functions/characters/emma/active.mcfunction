@@ -26,8 +26,8 @@ scoreboard players remove @s manaboost 1
 
 execute as @s[scores={manaboost=1..}] at @s run particle minecraft:rain ~ ~.5 ~ .25 .4 .25 0 2 force
 
-scoreboard players remove @s[scores={potion=1..}] Mana 3
-scoreboard players set @s[scores={potion=1..}] manaboost 120
+scoreboard players remove @s[nbt={Inventory:[{id:"minecraft:glass_bottle",Slot:4b}]}] Mana 3
+scoreboard players set @s[nbt={Inventory:[{id:"minecraft:glass_bottle",Slot:4b}]}] manaboost 120
 effect give @s[scores={manaboost=20..}] jump_boost 1 2 true
 effect give @s[scores={manaboost=20..}] resistance 1 0 true
 scoreboard players set @s potion 0
