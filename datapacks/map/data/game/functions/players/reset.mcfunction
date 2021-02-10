@@ -62,6 +62,9 @@ scoreboard players set @s noname 1
 
 scoreboard players set @s selwait 100
 
+scoreboard players set @s invis 0
+scoreboard players set @s invisoff 0
+
 clear @s
 title @s times 0 25 10
 

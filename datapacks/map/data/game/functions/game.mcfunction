@@ -47,6 +47,7 @@ scoreboard players operation @r[scores={playerID=0}] playerID = @e[name=numbers,
 tag @a remove hittest
 tag @a[gamemode=adventure] add hittest
 tag @e[type=villager] add hittest
+tag @e[type=creeper] add hittest
 tag @e[tag=totem] add hittest
 tag @e[tag=portalset] add hittest
 tag @e[type=cave_spider] add hittest2
@@ -144,9 +145,17 @@ kill @e[tag=damnum,scores={timer=25..}]
 team join visible @e[tag=damnum,tag=!plus]
 team join invisible @e[tag=damnum,tag=plus]
 
+#random character
+execute as @a run scoreboard players add @r ranchar 1
+scoreboard players remove @a[scores={ranchar=7..}] ranchar 6
+scoreboard players remove @a[scores={ranchar=7..}] ranchar 6
+
 #menu
 execute as @e[tag=charmask] at @s if entity @p[distance=..5] run tp @s ~ ~ ~ facing entity @p
 execute as @e[tag=charmask] at @s unless entity @p[distance=..5] run tp @s ~ ~ ~ facing 1014 12 1007
+
+scoreboard players add @e[scores={map=0..}] randommap 1
+scoreboard players set @e[scores={randommap=6..}] randommap 1
 
 function game:game/menu/portals
 

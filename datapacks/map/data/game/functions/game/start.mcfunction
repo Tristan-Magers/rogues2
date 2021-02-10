@@ -6,6 +6,10 @@ scoreboard objectives remove Score
 scoreboard objectives add Score dummy
 scoreboard objectives setdisplay sidebar Score
 
+scoreboard players operation @e[tag=ranmap] map = @e[tag=ranmap,limit=1] randommap
+
+execute as @a[tag=ranchar] run scoreboard players operation @s class = @s ranchar
+
 execute as @e[scores={map=1}] run function game:game/maps/map1/spawn
 execute as @e[scores={map=2}] run function game:game/maps/map2/spawn
 execute as @e[scores={map=3}] run function game:game/maps/map3/spawn
@@ -27,3 +31,10 @@ kill @e[tag=soulsend]
 tag @e[scores={Time=-100..}] add noscore
 
 execute as @a[tag=ready,tag=lobby] run function game:game/startp
+
+execute as @a[tag=game,scores={class=1}] at @s run tellraw @a [{"selector":"@s","color":"gold"},{"text":" spawning as: ","color":"white"},{"text":"Sparket","color":"red"}]
+execute as @a[tag=game,scores={class=2}] at @s run tellraw @a [{"selector":"@s","color":"gold"},{"text":" spawning as: ","color":"white"},{"text":"Vohelm","color":"green"}]
+execute as @a[tag=game,scores={class=3}] at @s run tellraw @a [{"selector":"@s","color":"gold"},{"text":" spawning as: ","color":"white"},{"text":"Emma","color":"aqua"}]
+execute as @a[tag=game,scores={class=4}] at @s run tellraw @a [{"selector":"@s","color":"gold"},{"text":" spawning as: ","color":"white"},{"text":"Pluto","color":"gray"}]
+execute as @a[tag=game,scores={class=5}] at @s run tellraw @a [{"selector":"@s","color":"gold"},{"text":" spawning as: ","color":"white"},{"text":"Halt","color":"gold"}]
+execute as @a[tag=game,scores={class=6}] at @s run tellraw @a [{"selector":"@s","color":"gold"},{"text":" spawning as: ","color":"white"},{"text":"Barbose","color":"yellow"}]

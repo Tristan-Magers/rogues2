@@ -89,7 +89,10 @@ tag @s[scores={shield=1..}] add nofire
 scoreboard players add @s[tag=!nofire] fireT 1
 scoreboard players set @s[tag=nofire] fireT 0
 execute as @s[scores={fireT=10},gamemode=adventure] run function game:players/firehit
-scoreboard players set @s[scores={fireT=20..}] fireT 0
+scoreboard players set @s[scores={fireT=30..}] fireT 0
+
+effect clear @s[scores={firehit=0,poison=..0,poison2=..0}] slowness
+scoreboard players remove @s[scores={firehit=0..}] firehit 1
 
 #poison
 execute as @s[scores={poison=40,Invul=..0,shield=..0},gamemode=adventure] run function game:players/firehit

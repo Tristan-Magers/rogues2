@@ -9,6 +9,9 @@ scoreboard players add @e[tag=pshot] shotT 1
 
 kill @e[scores={shotT=350..}]
 
+#thorns
+execute as @e[tag=thorns] at @s run function game:projectile/thorns
+
 #frost pillar
 execute as @e[type=arrow] at @s run function game:projectile/arrow
 

@@ -13,21 +13,10 @@ execute as @s[scores={venge=300,class=4}] at @s run tellraw @a [{"selector":"@s"
 execute as @s[scores={venge=300,class=5}] at @s run tellraw @a [{"selector":"@s"},{"text":" ("},{"text":"Halt","color":"gold"},{"text":") went "},{"text":"VENGEFUL","color":"red"}]
 execute as @s[scores={venge=300,class=6}] at @s run tellraw @a [{"selector":"@s"},{"text":" ("},{"text":"Barbose","color":"yellow"},{"text":") went "},{"text":"VENGEFUL","color":"red"}]
 
-scoreboard players add @s[scores={venge=300}] healthshow 1
-scoreboard players add @s[scores={venge=280}] healthshow 1
-scoreboard players add @s[scores={venge=260}] healthshow 1
-scoreboard players add @s[scores={venge=240}] healthshow 1
-scoreboard players add @s[scores={venge=220}] healthshow 1
-scoreboard players add @s[scores={venge=200}] healthshow 1
-scoreboard players add @s[scores={venge=180}] healthshow 1
-scoreboard players add @s[scores={venge=160}] healthshow 1
-scoreboard players add @s[scores={venge=140}] healthshow 1
-scoreboard players add @s[scores={venge=120}] healthshow 1
-scoreboard players add @s[scores={venge=100}] healthshow 1
-scoreboard players add @s[scores={venge=80}] healthshow 1
-scoreboard players add @s[scores={venge=60}] healthshow 1
-scoreboard players add @s[scores={venge=40}] healthshow 1
-scoreboard players add @s[scores={venge=20}] healthshow 1
+scoreboard players add @s[scores={venge=1}] vengeheal 0
+scoreboard players add @s vengeheal 1
+scoreboard players add @s[scores={vengeheal=3}] healthshow 1
+scoreboard players set @s[scores={vengeheal=14..}] vengeheal 0
 
 execute as @s[scores={venge=0}] at @s run playsound minecraft:entity.ender_dragon.hurt master @a ~ ~ ~ 1 0
 

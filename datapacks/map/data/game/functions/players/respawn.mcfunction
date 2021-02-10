@@ -44,11 +44,14 @@ execute as @s[scores={respawn=201..219}] at @s if block ^ ^ ^-.5 air run tp @s ^
 execute as @s[scores={respawn=201..219}] at @s if block ^ ^ ^-.5 air run tp @s @s
 tp @s[scores={respawn=0}] 69 38.3 -30 180 0
 scoreboard players set @s[scores={respawn=0}] Mana 0
-scoreboard players set @s[scores={respawn=0,Score=1}] Mana 1
-scoreboard players set @s[scores={respawn=0,Score=2}] Mana 2
-scoreboard players set @s[scores={respawn=0,Score=3}] Mana 3
-scoreboard players set @s[scores={respawn=0,Score=4}] Mana 4
-scoreboard players set @s[scores={respawn=0,Score=5}] Mana 5
+scoreboard players set @s[scores={respawn=0,Score=1..2}] Mana 1
+scoreboard players set @s[scores={respawn=0,Score=2..3}] Mana 2
+scoreboard players set @s[scores={respawn=0,Score=3..4}] Mana 3
+scoreboard players set @s[scores={respawn=0,Score=4..5}] Mana 4
+scoreboard players set @s[scores={respawn=0,Score=5..6}] Mana 5
+scoreboard players set @s[scores={respawn=0,Score=7..8}] Mana 6
+scoreboard players set @s[scores={respawn=0,Score=9..10}] Mana 7
+scoreboard players set @s[scores={respawn=0,Score=11..}] Mana 8
 scoreboard players set @s[scores={respawn=0}] manaT 0
 
 effect give @s[scores={respawn=0}] speed 1 1 true
@@ -72,3 +75,4 @@ tag @s remove me
 
 scoreboard players set @s portal -2
 scoreboard players set @s dummylook -2
+scoreboard players set @s shotCharge -2

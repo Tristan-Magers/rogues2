@@ -67,6 +67,7 @@ execute as @s[scores={healthreal=1..},tag=!zeroh] at @s run particle minecraft:b
 effect give @s[scores={health=..59}] minecraft:health_boost 999999 9 true
 effect give @s[scores={health=..59}] minecraft:instant_health 1 9 true
 effect clear @s minecraft:absorption
+execute as @s[scores={healthshow=..0}] at @s run clear @s
 execute as @s[scores={healthshow=..0}] at @s run summon skeleton ~ ~ ~ {NoAI:1,Invulnerable:1,Fire:9000}
 execute as @s[scores={healthshow=..0}] at @s positioned ~ ~.5 ~ run tp @e[distance=..1,type=minecraft:skeleton] @s
 
@@ -103,7 +104,13 @@ execute as @s[scores={healthshow=5..8}] at @s run title @s actionbar ["",{"text"
 execute as @s[scores={healthshow=1..4}] at @s run title @s actionbar ["",{"text":"Health: ","bold":true},{"score":{"name":"@s","objective":"healthshow"},"color":"dark_red","bold":true},{"text":" Mana: ","bold":true},{"score":{"name":"@s","objective":"Mana"},"color":"gold","bold":true},{"text":" Visibility: ","bold":true},{"selector":"@e[tag=stealth]","bold":true}]
 execute as @s[scores={healthshow=17..}] at @s run title @s actionbar ["",{"text":"Health: ","bold":true},{"score":{"name":"@s","objective":"healthshow"},"color":"green","bold":true},{"text":" Mana: ","bold":true},{"score":{"name":"@s","objective":"Mana"},"color":"gold","bold":true},{"text":" Visibility: ","bold":true},{"selector":"@e[tag=stealth]","bold":true}]
 scoreboard players set @s[scores={healthshow=..0},tag=!arena] respawn 221
+
+#arena
 tp @s[scores={healthshow=..0},tag=arena] -122 57 42 180 0
+scoreboard players set @s[scores={healthshow=..0},tag=arena] Mana 5
+scoreboard players set @s[scores={healthshow=..0},tag=arena] wtimer 0
+scoreboard players set @s[scores={healthshow=..0},tag=arena] btimer 0
+
 effect give @s[scores={healthshow=..0},tag=arena] minecraft:blindness 1 0 true
 execute as @s[scores={healthshow=..0},tag=arena] at @s run playsound minecraft:entity.wither.hurt master @s
 scoreboard players set @s[scores={healthshow=..0}] healthshow 100

@@ -44,6 +44,8 @@ execute as @s[tag=!in] at @s run effect give @e[tag=!isthrow,tag=gethit] instant
 execute as @s[tag=!in] at @s run effect give @e[tag=!isthrow,tag=gethit] resistance 1 10 true
 execute as @s[tag=!in] at @s run tag @e[tag=!isthrow,tag=gethit] add resremove
 
+tag @e[tag=gethit,type=!player] add ded
+
 execute as @e[tag=gethit,type=!player] store result score @s healthreal run data get entity @s Health
 execute as @s[scores={hurpower=1},tag=!in] at @s run scoreboard players remove @e[tag=gethit,type=!player] healthreal 3
 execute as @s[scores={hurpower=2},tag=!in] at @s run scoreboard players remove @e[tag=gethit,type=!player] healthreal 4

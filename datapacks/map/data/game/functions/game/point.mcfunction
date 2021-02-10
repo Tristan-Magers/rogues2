@@ -13,26 +13,26 @@ execute as @s[scores={pointsT=800..,people=1}] at @s positioned ~-1 ~-2 ~-1 run 
 execute as @s[scores={pointsT=800..,people=2..}] at @s positioned ~-1 ~-2 ~-1 run title @a[gamemode=adventure,distance=..100,dx=1,dz=1,dy=3] subtitle [{"color":"red","text":"Someone else is on the point!"}]
 execute as @s[scores={pointsT=800..}] at @s positioned ~-1 ~-2 ~-1 run tag @a[gamemode=adventure,distance=..100,dx=1,dz=1,dy=3] add point
 
-execute as @s[scores={pointsT=800..}] at @s positioned ~-1 ~-2 ~-1 if entity @e[tag=noscore] run scoreboard players add @a[gamemode=adventure,distance=..100,dx=3,dz=3,dy=3,scores={pointsT=35..}] points 2
-execute as @s[scores={pointsT=800..,pointAmount=1}] at @s positioned ~-1 ~-2 ~-1 run scoreboard players add @a[gamemode=adventure,distance=..100,dx=3,dz=3,dy=3,scores={pointsT=35..}] points 1
-execute as @s[scores={pointsT=800..,pointAmount=2}] at @s positioned ~-1 ~-2 ~-1 run scoreboard players add @a[gamemode=adventure,distance=..100,dx=3,dz=3,dy=3,scores={pointsT=35..}] points 2
-execute as @s[scores={pointsT=800..,pointAmount=3}] at @s positioned ~-1 ~-2 ~-1 run scoreboard players add @a[gamemode=adventure,distance=..100,dx=3,dz=3,dy=3,scores={pointsT=35..}] points 3
+execute as @s[scores={pointsT=800..}] at @s positioned ~-1 ~-2 ~-1 if entity @e[tag=noscore] run scoreboard players add @a[gamemode=adventure,distance=..100,dx=3,dz=3,dy=3,scores={pointsT=30..}] points 2
+execute as @s[scores={pointsT=800..,pointAmount=1}] at @s positioned ~-1 ~-2 ~-1 run scoreboard players add @a[gamemode=adventure,distance=..100,dx=3,dz=3,dy=3,scores={pointsT=30..}] points 1
+execute as @s[scores={pointsT=800..,pointAmount=2}] at @s positioned ~-1 ~-2 ~-1 run scoreboard players add @a[gamemode=adventure,distance=..100,dx=3,dz=3,dy=3,scores={pointsT=30..}] points 2
+execute as @s[scores={pointsT=800..,pointAmount=3}] at @s positioned ~-1 ~-2 ~-1 run scoreboard players add @a[gamemode=adventure,distance=..100,dx=3,dz=3,dy=3,scores={pointsT=30..}] points 3
 
-execute as @s[scores={pointsT=800..}] at @s positioned ~-1 ~-2 ~-1 run execute as @a[gamemode=adventure,distance=..100,dx=3,dz=3,dy=3,scores={pointsT=35..}] run function game:players/souldisplay
-execute as @s[scores={pointsT=800..}] at @s positioned ~-1 ~-2 ~-1 run scoreboard players add @a[gamemode=adventure,distance=..100,dx=3,dz=3,dy=3,scores={pointsT=35..}] healthshow 4
+execute as @s[scores={pointsT=800..}] at @s positioned ~-1 ~-2 ~-1 run execute as @a[gamemode=adventure,distance=..100,dx=3,dz=3,dy=3,scores={pointsT=30..}] run function game:players/souldisplay
+execute as @s[scores={pointsT=800..}] at @s positioned ~-1 ~-2 ~-1 run scoreboard players add @a[gamemode=adventure,distance=..100,dx=3,dz=3,dy=3,scores={pointsT=30..}] healthshow 4
 execute as @s[scores={pointsT=600..799}] at @s positioned ~-1 ~-2 ~-1 run title @a[gamemode=adventure,distance=..100,dx=1,dz=1,dy=3] title [{"text":" "}]
 execute as @s[scores={pointsT=600..799}] at @s positioned ~-1 ~-2 ~-1 run title @a[gamemode=adventure,distance=..100,dx=3,dz=3,dy=3] times 0 3 10
 execute as @s[scores={pointsT=600..799}] at @s positioned ~-1 ~-2 ~-1 run title @a[gamemode=adventure,distance=..100,dx=3,dz=3,dy=3] subtitle {"text":"A Soul is Coming...","color":"light_purple"}
-execute as @s[scores={pointsT=800..}] at @s positioned ~-1 ~-2 ~-1 run title @a[gamemode=adventure,distance=..100,dx=3,dz=3,dy=3,scores={pointsT=35..}] times 0 25 15
-execute as @s[scores={pointsT=800..}] at @s positioned ~-1 ~-2 ~-1 run title @a[gamemode=adventure,distance=..100,dx=3,dz=3,dy=3,scores={pointsT=35..}] title {"text":"Collected Soul"}
-execute as @s[scores={pointsT=800..}] at @s positioned ~-1 ~-2 ~-1 run title @a[gamemode=adventure,distance=..100,dx=3,dz=3,dy=3,scores={pointsT=35..}] subtitle {"text":"Go to the spirit realm"}
-execute as @s[scores={pointsT=800..}] at @s positioned ~-1 ~-2 ~-1 if entity @a[gamemode=adventure,distance=..100,dx=3,dz=3,dy=3,scores={pointsT=35..}] run tellraw @a [{"selector":"@a[gamemode=adventure,distance=..100,dx=3,dz=3,dy=3,scores={pointsT=35..}]"},{"text":" took a soul.","color":"blue"}]
-execute as @s[scores={pointsT=800..}] at @s positioned ~-1 ~-2 ~-1 if entity @a[gamemode=adventure,distance=..100,dx=3,dz=3,dy=3,scores={pointsT=35..}] if entity @e[tag=noscore] run tellraw @a [{"text":"First SOUL collected! (x3 Value)","color":"gold"}]
-execute as @s[scores={pointsT=800..}] at @s positioned ~-1 ~-2 ~-1 if entity @a[gamemode=adventure,distance=..100,dx=3,dz=3,dy=3,scores={pointsT=35..}] run tag @e[scores={Time=-100..}] remove noscore
-execute as @s[scores={pointsT=800..}] at @s positioned ~-1 ~-2 ~-1 if entity @a[gamemode=adventure,distance=..100,dx=3,dz=3,dy=3,scores={pointsT=35..}] run tellraw @a[gamemode=adventure,distance=..100,dx=3,dz=3,dy=3,scores={pointsT=35..,Score=0}] [{"text":"[Return your soul(s) to the spirit realm]"}]
-execute as @s[scores={pointsT=800..}] at @s positioned ~-1 ~-2 ~-1 run effect give @a[gamemode=adventure,distance=..100,dx=3,dz=3,dy=3,scores={pointsT=35..}] glowing 2
-execute as @s[scores={pointsT=800..}] at @s positioned ~-1 ~-2 ~-1 run scoreboard players set @a[gamemode=adventure,distance=..100,dx=3,dz=3,dy=3,scores={pointsT=35..}] glowing 22
-execute as @s[scores={pointsT=800..}] at @s positioned ~-1 ~-2 ~-1 run execute as @a[gamemode=adventure,distance=..100,dx=3,dz=3,dy=3,scores={pointsT=35..}] at @s run scoreboard players set @e[name=point,type=minecraft:armor_stand,distance=..10] pointsT 801
+execute as @s[scores={pointsT=800..}] at @s positioned ~-1 ~-2 ~-1 run title @a[gamemode=adventure,distance=..100,dx=3,dz=3,dy=3,scores={pointsT=30..}] times 0 25 15
+execute as @s[scores={pointsT=800..}] at @s positioned ~-1 ~-2 ~-1 run title @a[gamemode=adventure,distance=..100,dx=3,dz=3,dy=3,scores={pointsT=30..}] title {"text":"Collected Soul"}
+execute as @s[scores={pointsT=800..}] at @s positioned ~-1 ~-2 ~-1 run title @a[gamemode=adventure,distance=..100,dx=3,dz=3,dy=3,scores={pointsT=30..}] subtitle {"text":"Go to the spirit realm"}
+execute as @s[scores={pointsT=800..}] at @s positioned ~-1 ~-2 ~-1 if entity @a[gamemode=adventure,distance=..100,dx=3,dz=3,dy=3,scores={pointsT=30..}] run tellraw @a [{"selector":"@a[gamemode=adventure,distance=..100,dx=3,dz=3,dy=3,scores={pointsT=30..}]"},{"text":" took a soul.","color":"blue"}]
+execute as @s[scores={pointsT=800..}] at @s positioned ~-1 ~-2 ~-1 if entity @a[gamemode=adventure,distance=..100,dx=3,dz=3,dy=3,scores={pointsT=30..}] if entity @e[tag=noscore] run tellraw @a [{"text":"First SOUL collected! (x3 Value)","color":"gold"}]
+execute as @s[scores={pointsT=800..}] at @s positioned ~-1 ~-2 ~-1 if entity @a[gamemode=adventure,distance=..100,dx=3,dz=3,dy=3,scores={pointsT=30..}] run tag @e[scores={Time=-100..}] remove noscore
+execute as @s[scores={pointsT=800..}] at @s positioned ~-1 ~-2 ~-1 if entity @a[gamemode=adventure,distance=..100,dx=3,dz=3,dy=3,scores={pointsT=30..}] run tellraw @a[gamemode=adventure,distance=..100,dx=3,dz=3,dy=3,scores={pointsT=30..,Score=0}] [{"text":"[Return your soul(s) to the spirit realm]"}]
+execute as @s[scores={pointsT=800..}] at @s positioned ~-1 ~-2 ~-1 run effect give @a[gamemode=adventure,distance=..100,dx=3,dz=3,dy=3,scores={pointsT=30..}] glowing 2
+execute as @s[scores={pointsT=800..}] at @s positioned ~-1 ~-2 ~-1 run scoreboard players set @a[gamemode=adventure,distance=..100,dx=3,dz=3,dy=3,scores={pointsT=30..}] glowing 22
+execute as @s[scores={pointsT=800..}] at @s positioned ~-1 ~-2 ~-1 run execute as @a[gamemode=adventure,distance=..100,dx=3,dz=3,dy=3,scores={pointsT=30..}] at @s run scoreboard players set @e[name=point,type=minecraft:armor_stand,distance=..10] pointsT 801
 
 execute as @s[scores={pointsT=801},type=minecraft:armor_stand] at @s run particle minecraft:end_rod ~ ~1 ~ 0 0 0 .5 50 force
 execute as @s[scores={pointsT=801},type=minecraft:armor_stand] at @s run playsound minecraft:block.conduit.activate master @a ~ ~ ~ 1 2

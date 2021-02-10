@@ -22,6 +22,13 @@ execute unless entity @s[scores={class=4,selwait=..10}] if entity @e[tag=selnow,
 execute unless entity @s[scores={class=5,selwait=..10}] if entity @e[tag=selnow,tag=haltselect] run tellraw @s [{"text":"Selected: "},{"text":"Halt","color":"gold"},{"text":", spider spirit"}]
 execute unless entity @s[scores={class=6,selwait=..10}] if entity @e[tag=selnow,tag=barboseselect] run tellraw @s [{"text":"Selected: "},{"text":"Barbose","color":"yellow"},{"text":", fear spirit"}]
 
+execute unless entity @s[scores={class=1,selwait=..10}] if entity @e[tag=selnow,tag=sparketselect] run tag @s remove ranchar
+execute unless entity @s[scores={class=2,selwait=..10}] if entity @e[tag=selnow,tag=vohelmselect] run tag @s remove ranchar
+execute unless entity @s[scores={class=3,selwait=..10}] if entity @e[tag=selnow,tag=emmaselect] run tag @s remove ranchar
+execute unless entity @s[scores={class=4,selwait=..10}] if entity @e[tag=selnow,tag=plutoselect] run tag @s remove ranchar
+execute unless entity @s[scores={class=5,selwait=..10}] if entity @e[tag=selnow,tag=haltselect] run tag @s remove ranchar
+execute unless entity @s[scores={class=6,selwait=..10}] if entity @e[tag=selnow,tag=barboseselect] run tag @s remove ranchar
+
 execute unless entity @s[scores={class=1,selwait=..10}] if entity @e[tag=selnow,tag=sparketselect] run scoreboard players set @s class 1
 execute unless entity @s[scores={class=2,selwait=..10}] if entity @e[tag=selnow,tag=vohelmselect] run scoreboard players set @s class 2
 execute unless entity @s[scores={class=3,selwait=..10}] if entity @e[tag=selnow,tag=emmaselect] run scoreboard players set @s class 3
@@ -35,6 +42,9 @@ execute unless entity @s[scores={class=3,selwait=..10}] if entity @e[tag=selnow,
 execute unless entity @s[scores={class=4,selwait=..10}] if entity @e[tag=selnow,tag=plutoselect] run scoreboard players set @s selwait 0
 execute unless entity @s[scores={class=5,selwait=..10}] if entity @e[tag=selnow,tag=haltselect] run scoreboard players set @s selwait 0
 execute unless entity @s[scores={class=6,selwait=..10}] if entity @e[tag=selnow,tag=barboseselect] run scoreboard players set @s selwait 0
+
+execute if entity @s[tag=insel,x=1012,y=14,z=1006,distance=..20,x_rotation=-100..-40] unless entity @s[scores={selwait=..10}] unless entity @e[tag=selnow] run tellraw @s [{"text":"Selected: "},{"text":"Random","color":"gray"},{"text":""}]
+execute if entity @s[tag=insel,x=1012,y=14,z=1006,distance=..20,tag=!ranchar,x_rotation=-100..-40] unless entity @s[scores={selwait=..10}] unless entity @e[tag=selnow] run tag @s add ranchar
 
 tag @e[tag=selnow] remove selnow
 

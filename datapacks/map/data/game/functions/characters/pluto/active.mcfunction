@@ -8,6 +8,8 @@ scoreboard players set @s[scores={Mana=5..}] btimer 2
 scoreboard players set @s[scores={Mana=..4}] btimer -1
 scoreboard players set @s plutobow 0
 
+clear @s[scores={Mana=..4}] arrow
+
 scoreboard players add @s[scores={plutoregen=80}] healthshow 1
 scoreboard players add @s[scores={plutoregen=60}] healthshow 1
 scoreboard players add @s[scores={plutoregen=40}] healthshow 1

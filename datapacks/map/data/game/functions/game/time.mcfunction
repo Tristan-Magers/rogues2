@@ -2,7 +2,15 @@ scoreboard players remove @s[scores={TimeS=1..}] TimeS 1
 execute as @s[scores={TimeS=0,Time=1..}] at @s run scoreboard players remove Time Score 1
 scoreboard players set @s[scores={TimeS=0}] TimeS 20
 
+tag @e remove me
+tag @s add me
+scoreboard players set @s playercount 0
+execute as @s[scores={Time=2..}] run execute as @a[tag=ingame,tag=!lobby,tag=game] run scoreboard players add @e[tag=me] playercount 1
+tag @s remove me
+
+execute as @s[scores={Time=2..,playercount=1}] at @s if entity @a[tag=lobby,tag=ready] run tellraw @a {"text":"Second player joined, test mode ended"}
 execute as @s[scores={Time=2..}] at @s unless entity @a[tag=ingame,tag=!lobby,tag=game] run tellraw @a {"text":"No players, game has ended"}
+execute as @s[scores={Time=2..,playercount=1}] at @s if entity @a[tag=lobby,tag=ready] run scoreboard players set @s Time 1
 execute as @s[scores={Time=2..}] at @s unless entity @a[tag=ingame,tag=!lobby,tag=game] run scoreboard players set @s Time 1
 scoreboard players remove @s[scores={Time=0..}] Time 1
 

@@ -26,10 +26,10 @@ execute as @s[tag=!wall,tag=in] at @s positioned ^-.3 ^-.1 ^-.3 run function gam
 execute as @s[tag=!wall,tag=in] at @s run tp @s ~ ~-.1 ~
 
 tag @s add tag
-scoreboard players operation @a playerID -= @s playerID
+scoreboard players operation @a[gamemode=adventure] playerID -= @s playerID
 
 tag @e[type=villager] add other
-tag @a add other
+tag @a[gamemode=adventure] add other
 tag @a[scores={playerID=0}] remove other
 
 execute as @s at @s positioned ^6 ^ ^6 run execute as @e[tag=other,distance=..5.7] run execute as @e[tag=tag] at @s run tp @s ~ ~ ~ ~-5 0
@@ -43,4 +43,4 @@ scoreboard players set @e[tag=other,distance=..1.3] poison2 76
 execute if entity @e[tag=other,distance=..1.3] run kill @s
 #effect give @a[distance=..1.3] wither 1 2
 
-scoreboard players operation @a playerID += @s playerID
+scoreboard players operation @a[gamemode=adventure] playerID += @s playerID

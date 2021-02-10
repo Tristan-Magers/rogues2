@@ -1,0 +1,88 @@
+* 1.1 Patch *
+
+Goals: Create better spectating tools and
+add more interactivity to some moves.
+
+[General]
+- Souls capture .25s faster (1.75s -> 1.5s)
+- Vengence heals 43% faster (1s -> .7s)
+ - Heals 6 more (15 -> 21)
+- Readjusted Mana amount on respawn
+- Announces player class picks at the start
+- Ends a 1 player game if a lobby player becomes 'ready'
+
+[Characters]
+
+Sparket
+- Fire Fist gives 5% less speed (+45% -> +40%)
+- Fire afterburn damages 50% slower (1s -> 1.5s)
+- Fire slowness is harsher and much shorter
+- Note: effects all game fire
+
+Emma
+- Frost pillar decays 1.6s faster (3.5s -> 1.9s)
+- Frost pillar spawns 1 lower (4 -> 3)
+- Storm Engery gives 1 lower level Jump Boost (3 -> 2)
+
+Barbose
+- Seeking Axe does 1 less max damage (14 -> 13)
+- Seeking Axe costs 1 more Mana (3 -> 4)
+- Portal gets 9 less health (15 -> 6)
+
+Vohelm
+- Thorns flash on death causing glowing
+ - 2.8 radius, .55s duration
+- Thorns cost 1 more Mana (5 -> 6)
+- Totem costs 1 more Mana (5 -> 6)
+- Totem blast now smaller (bug)
+
+[Lobby]
+- Labeled Spirit Selection
+
+[Spectating]
+- Can be accessed at any time
+- Spectators can see player stats
+  - Souls, Health, Mana
+
+[Bug Fixes]
+- Issue with players being stuck visible until death
+- Players with higher scores respawned with no Mana
+- Bows could be shot after death
+- Patched a hole in lobby barriers
+- Removed old iron armor texture (shield move)
+- Thorns caused x3 particles than desired
+
+* 1.2 Patch *
+
+[General]
+- Added random map selection
+- Added random character selection
+
+[Characters]
+
+Sparket
+- Fire Fist gives 7% less speed (+40% -> +33%)
+- Fire Fist last .4s shorter (3s -> 2.6s)
+
+Emma
+- Bolt give .5s longer glowing (.6s -> 1.1s)
+
+Halt
+- Draining Claw deals 2 less damage (16 -> 14)
+- Draining Claw costs 1 more mana (3 -> 4)
+
+Barbose
+- Dealing 1 damage to decoy fakes damage
+
+Vohelm
+- Max knife gives less speed (38% -> 25% MAX)
+- Knife charges 10% slower
+
+Pluto
+- Removed hidden invul for soulsend to avoid confusion
+
+[Bug Fixes]
+- Issue with loosing weapons in arena
+- Some projectiles couldn't hit decoy
+- Hurricane could be shot without mana in some cases
+- Spiders would track and hit spectators

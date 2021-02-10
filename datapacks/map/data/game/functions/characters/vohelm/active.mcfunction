@@ -15,7 +15,7 @@ execute as @s at @s if entity @e[tag=totem,distance=..7,scores={playerID=0}] run
 execute as @s at @s if entity @e[tag=totem,distance=..7,scores={playerID=0}] run tag @s add totemdust
 execute as @s at @s if entity @e[tag=totem,distance=..7,scores={playerID=0}] run scoreboard players set @s totemres 40
 execute as @s at @s run execute as @e[tag=totem,distance=7..,scores={playerID=0}] at @s run scoreboard players set @e[distance=..4,name=web] move 1045
-execute as @s at @s run execute as @e[tag=totem,distance=7..,scores={playerID=0}] at @s run summon creeper ~ ~ ~ {ignited:1,Fuse:0}
+execute as @s at @s run execute as @e[tag=totem,distance=7..,scores={playerID=0}] at @s run summon creeper ~ ~ ~ {ignited:1,Fuse:0,ExplosionRadius:2}
 execute as @s at @s run tp @e[tag=totem,distance=7..,scores={playerID=0}] ~ ~-1000 ~
 scoreboard players operation @e[tag=totem] playerID += @s playerID
 
