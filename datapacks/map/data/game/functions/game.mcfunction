@@ -186,3 +186,20 @@ execute if entity @e[scores={startdelay=0}] run setblock -88 40 64 minecraft:pol
 #discord
 tellraw @a[tag=discord] [{"text":"["},{"text":"!!!","color":"red"},{"text":"]"},{"text":" CLICK HERE FOR LINK","color":"dark_aqua","hoverEvent":{"action":"show_text","contents":[{"text":"Click Me :)"}]},"clickEvent":{"action":"open_url","value":"https://discord.gg/6xatFYH"}}]
 tag @a remove discord
+
+#patch notes
+tellraw @a[tag=notesclick] [{"text":"["},{"text":"!!!","color":"red"},{"text":"]"},{"text":" CLICK HERE FOR LINK","color":"gray","hoverEvent":{"action":"show_text","contents":[{"text":"Click Me :)"}]},"clickEvent":{"action":"open_url","value":"https://pastebin.com/e2WTZm2e"}}]
+tag @a remove notesclick
+
+#tournaments
+tellraw @a[tag=tourn1] [{"text":"The first ever official Rogues 2 tournament! Many more to come <3"}]
+tag @a remove tourn1
+
+tellraw @a[tag=t1win3] [{"text":"Beld the bald"}]
+tag @a remove t1win3
+
+tellraw @a[tag=t1win2] [{"text":"God"}]
+tag @a remove t1win2
+
+tellraw @a[tag=t1win1] [{"text":"A king emerges"}]
+tag @a remove t1win1

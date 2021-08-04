@@ -32,9 +32,16 @@ tag @e[scores={Time=-100..}] add noscore
 
 execute as @a[tag=ready,tag=lobby] run function game:game/startp
 
-execute as @a[tag=game,scores={class=1}] at @s run tellraw @a [{"selector":"@s","color":"gold"},{"text":" spawning as: ","color":"white"},{"text":"Sparket","color":"red"}]
-execute as @a[tag=game,scores={class=2}] at @s run tellraw @a [{"selector":"@s","color":"gold"},{"text":" spawning as: ","color":"white"},{"text":"Vohelm","color":"green"}]
-execute as @a[tag=game,scores={class=3}] at @s run tellraw @a [{"selector":"@s","color":"gold"},{"text":" spawning as: ","color":"white"},{"text":"Emma","color":"aqua"}]
-execute as @a[tag=game,scores={class=4}] at @s run tellraw @a [{"selector":"@s","color":"gold"},{"text":" spawning as: ","color":"white"},{"text":"Pluto","color":"gray"}]
-execute as @a[tag=game,scores={class=5}] at @s run tellraw @a [{"selector":"@s","color":"gold"},{"text":" spawning as: ","color":"white"},{"text":"Halt","color":"gold"}]
-execute as @a[tag=game,scores={class=6}] at @s run tellraw @a [{"selector":"@s","color":"gold"},{"text":" spawning as: ","color":"white"},{"text":"Barbose","color":"yellow"}]
+execute as @a[tag=game,scores={class=1},tag=!ranchar] at @s run tellraw @a [{"selector":"@s","color":"gold"},{"text":" spawning as: ","color":"white"},{"text":"Sparket","color":"red"}]
+execute as @a[tag=game,scores={class=2},tag=!ranchar] at @s run tellraw @a [{"selector":"@s","color":"gold"},{"text":" spawning as: ","color":"white"},{"text":"Vohelm","color":"green"}]
+execute as @a[tag=game,scores={class=3},tag=!ranchar] at @s run tellraw @a [{"selector":"@s","color":"gold"},{"text":" spawning as: ","color":"white"},{"text":"Emma","color":"aqua"}]
+execute as @a[tag=game,scores={class=4},tag=!ranchar] at @s run tellraw @a [{"selector":"@s","color":"gold"},{"text":" spawning as: ","color":"white"},{"text":"Pluto","color":"gray"}]
+execute as @a[tag=game,scores={class=5},tag=!ranchar] at @s run tellraw @a [{"selector":"@s","color":"gold"},{"text":" spawning as: ","color":"white"},{"text":"Halt","color":"gold"}]
+execute as @a[tag=game,scores={class=6},tag=!ranchar] at @s run tellraw @a [{"selector":"@s","color":"gold"},{"text":" spawning as: ","color":"white"},{"text":"Barbose","color":"yellow"}]
+
+execute as @a[tag=game,scores={class=1},tag=ranchar] at @s run tellraw @a [{"selector":"@s","color":"gold"},{"text":" spawning as: ","color":"white"},{"text":"Sparket","color":"red"},{"text":" (random)","color":"white"}]
+execute as @a[tag=game,scores={class=2},tag=ranchar] at @s run tellraw @a [{"selector":"@s","color":"gold"},{"text":" spawning as: ","color":"white"},{"text":"Vohelm","color":"green"},{"text":" (random)","color":"white"}]
+execute as @a[tag=game,scores={class=3},tag=ranchar] at @s run tellraw @a [{"selector":"@s","color":"gold"},{"text":" spawning as: ","color":"white"},{"text":"Emma","color":"aqua"},{"text":" (random)","color":"white"}]
+execute as @a[tag=game,scores={class=4},tag=ranchar] at @s run tellraw @a [{"selector":"@s","color":"gold"},{"text":" spawning as: ","color":"white"},{"text":"Pluto","color":"gray"},{"text":" (random)","color":"white"}]
+execute as @a[tag=game,scores={class=5},tag=ranchar] at @s run tellraw @a [{"selector":"@s","color":"gold"},{"text":" spawning as: ","color":"white"},{"text":"Halt","color":"gold"},{"text":" (random)","color":"white"}]
+execute as @a[tag=game,scores={class=6},tag=ranchar] at @s run tellraw @a [{"selector":"@s","color":"gold"},{"text":" spawning as: ","color":"white"},{"text":"Barbose","color":"yellow"},{"text":" (random)","color":"white"}]

@@ -106,11 +106,19 @@ play a larger part of the game than intended. Melee has been changed
 almost across the board to try and prevent speed from negating the
 downsides of visibility.
 
+[Lobby]
+- Added "Book for Nerds"
+- Rearranged lobby hotbar
+- Shows version with link to patch notes
+- Added Tick-By-Tick 4 winners
+- Added MajesticPie for Patreon support
+
 [General]
 - Walking doesn't create particles for .6s
  - lets players move small distances quickly and invisibly
  - prevents accidental movement particles
  - resets only after period of zero movement (.2s - .35s)
+- When game starts, says if you selected random character
 
 [Characters]
 
@@ -133,8 +141,8 @@ Halt
 - Daining Claws boost 3s shorter (7s -> 4s)
 - Draining Claw gives 5% less speed (10% -> 5%)
 - Draining Claw has 0.5s cooldown after use
-- Webs last .7s in lobby (previously .1s)
 - Webs last .35s shorter (2.15s -> 1.8s)
+- Webs last .7s in lobby (previously .1s)
 
 Barbose
 - Seeking Axe gives 5% more speed (10% -> 15%)
@@ -150,7 +158,7 @@ Vohelm
  - does not effect jump boost
 
 Pluto
-- Hurricane give 4% less speed (18% -> 14%)
+- Hurricane gives 4% less speed (18% -> 14%)
 - Jump Pad gives visibility instead of glowing
 
 [Bug Fixes]

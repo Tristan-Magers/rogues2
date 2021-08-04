@@ -121,7 +121,7 @@ item replace entity @s[tag=!spiritworld,scores={item=2,class=1}] armor.head with
 item replace entity @s[tag=!spiritworld,scores={item=2,class=3}] armor.head with minecraft:cyan_dye
 item replace entity @s[tag=!spiritworld,scores={item=2,class=5}] armor.head with minecraft:light_gray_dye
 item replace entity @s[tag=!spiritworld,scores={item=2,class=6}] armor.head with minecraft:gray_dye
-item replace entity @s[tag=!spiritworld,scores={item=2}] armor.feet with minecraft:golden_boots{HideFlags:6,Unbreakable:1b,AttributeModifiers:[{AttributeName:"generic.armorToughness",Name:"generic.armorToughness",Amount:-1,Operation:0,UUIDLeast:529172,UUIDMost:361804}]} 1
+item replace entity @s[tag=!spiritworld,scores={item=2},nbt=!{Inventory:[{id:"minecraft:golden_boots",Slot:100b}]}] armor.feet with minecraft:golden_boots{HideFlags:6,Unbreakable:1b,AttributeModifiers:[{AttributeName:"generic.armorToughness",Name:"generic.armorToughness",Amount:-1,Operation:0,UUIDLeast:529172,UUIDMost:361804}]} 1
 item replace entity @s[scores={item=..1}] armor.head with minecraft:air
 item replace entity @s[scores={item=..1}] armor.feet with minecraft:air
 
