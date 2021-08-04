@@ -12,3 +12,5 @@ scoreboard players set @a[gamemode=adventure,distance=..2.5] poison 39
 #execute as @s[scores={move=48}] at @s run effect give @a[gamemode=adventure,distance=..2.5] minecraft:poison 2 3
 execute as @s[scores={move=48}] at @s run effect give @a[gamemode=adventure,distance=..2.5] minecraft:blindness 3 2
 execute as @s[scores={move=48}] at @s run effect give @a[gamemode=adventure,distance=..2.5] minecraft:slowness 3 2
+
+scoreboard players set @a[scores={dummylook=7}] invisoff 20

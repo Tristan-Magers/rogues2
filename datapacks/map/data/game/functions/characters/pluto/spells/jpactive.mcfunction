@@ -22,7 +22,7 @@ execute as @s[scores={gertimer=20..}] at @s if entity @a[distance=..1.3,gamemode
 execute as @s[scores={gertimer=20..}] at @s if entity @a[distance=..1.3,gamemode=adventure,tag=nofalldam,scores={glowing=..20}] run playsound minecraft:block.beacon.power_select master @a ~ ~ ~ .5 1.3
 execute as @s[scores={gertimer=20..}] at @s if entity @a[distance=..1.3,gamemode=adventure,tag=nofalldam,scores={glowing=..20}] run particle minecraft:cloud ~ ~1 ~ .1 .1 .1 .1 10 force
 
-execute as @s[scores={gertimer=20..}] at @s run scoreboard players set @a[distance=..1.3,gamemode=adventure] glowing 40
+execute as @s[scores={gertimer=20..}] at @s run scoreboard players set @a[distance=..1.3,gamemode=adventure] invisoff 40
 execute as @s[scores={gertimer=20..}] at @s run effect give @a[distance=..1.3,gamemode=adventure] minecraft:levitation 1 12 true
 execute as @s[scores={gertimer=20..}] at @s run effect give @a[distance=..1.3,gamemode=adventure] minecraft:speed 2 2 true
 #execute as @s[scores={gertimer=20..}] at @s run effect give @a[distance=..1.3,gamemode=adventure] minecraft:slow_falling 2 0 true

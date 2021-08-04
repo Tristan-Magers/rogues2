@@ -1,6 +1,7 @@
 #water trident
 scoreboard players remove @s[nbt={SelectedItem:{id:"minecraft:kelp"}},scores={gettri=..-2}] Mana 6
 scoreboard players set @s[nbt={SelectedItem:{id:"minecraft:kelp"}},scores={gettri=..-2}] trident 1
+scoreboard players set @s[nbt={SelectedItem:{id:"minecraft:kelp"}},scores={gettri=..-2}] tridentH 3
 scoreboard players set @s[nbt={SelectedItem:{id:"minecraft:kelp"}},scores={gettri=..-2}] gettri 8
 
 #lightning shot
@@ -9,8 +10,9 @@ execute as @s[scores={shotCharge=..-3},nbt={SelectedItem:{id:"minecraft:light_bl
 execute as @s[scores={shotCharge=..-3},nbt={SelectedItem:{id:"minecraft:light_blue_dye"}}] at @s run playsound minecraft:entity.firework_rocket.launch master @a ~ ~ ~ 1 1.4
 scoreboard players remove @s[scores={shotCharge=..-3},nbt={SelectedItem:{id:"minecraft:light_blue_dye"}}] Mana 6
 scoreboard players set @s[scores={shotCharge=..-3},nbt={SelectedItem:{id:"minecraft:light_blue_dye"}}] glowing 22
+scoreboard players set @s[scores={shotCharge=..-3},nbt={SelectedItem:{id:"minecraft:light_blue_dye"}}] boltdelay 20
 effect give @s[scores={shotCharge=..-3},nbt={SelectedItem:{id:"minecraft:light_blue_dye"}}] glowing 1
-scoreboard players set @s[scores={shotCharge=..-3},nbt={SelectedItem:{id:"minecraft:light_blue_dye"}}] shotCharge 6
+scoreboard players set @s[scores={shotCharge=..-3},nbt={SelectedItem:{id:"minecraft:light_blue_dye"}}] shotCharge 7
 
 #frost pillar
 execute as @s[nbt={SelectedItem:{id:"minecraft:diamond"}}] at @s run summon minecraft:armor_stand ~ ~ ~ {NoGravity:1,Marker:1,Invulnerable:1,Tags:["frostwall"],ArmorItems:[{},{},{},{Count:1,id:ice}],Invisible:1}

@@ -27,10 +27,13 @@ scoreboard players set @s press 0
 scoreboard players set @s pressdelay 0
 
 scoreboard players set @s trident 0
+scoreboard players set @s tridentH 0
+scoreboard players set @s tridentU 0
 
 scoreboard players set @s spiderwall 0
 
 scoreboard players set @s shield -1
+scoreboard players set @s shieldT -1
 scoreboard players set @s totemres 0
 tag @s remove totemres
 
@@ -49,6 +52,9 @@ scoreboard players set @s pointtut 0
 scoreboard players set @s scoretut 0
 scoreboard players set @s respawn -100
 
+scoreboard players set @s burnout -1
+scoreboard players set @s burnoutT -1
+
 scoreboard players set @s venge -1
 
 scoreboard players set @s soulheal 0
@@ -64,6 +70,9 @@ scoreboard players set @s selwait 100
 
 scoreboard players set @s invis 0
 scoreboard players set @s invisoff 0
+
+scoreboard players set @s dcdelay 0
+scoreboard players set @s boltdelay 0
 
 clear @s
 title @s times 0 25 10

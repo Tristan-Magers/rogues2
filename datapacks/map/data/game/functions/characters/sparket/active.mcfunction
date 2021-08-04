@@ -1,5 +1,7 @@
 #burnout
 execute as @s[scores={burnout=-10..}] at @s run function game:characters/sparket/active/burnout
+scoreboard players remove @s[scores={burnoutT=-10..}] burnoutT 1
+execute as @s[scores={burnoutT=0}] at @s run function game:spells/manaup
 
 #boost
 scoreboard players remove @s[scores={boostT=0..}] boostT 1

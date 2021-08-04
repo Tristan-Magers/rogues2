@@ -164,7 +164,7 @@ scoreboard players set @a bowshot 0
 
 #carrot on a stick
 execute as @a[gamemode=adventure,tag=ingame,nbt=!{Inventory:[{id:"minecraft:carrot_on_a_stick",Slot:-106b}]}] at @s run function game:spells/manaup
-replaceitem entity @a[gamemode=adventure,nbt=!{Inventory:[{id:"minecraft:carrot_on_a_stick",Slot:-106b}]}] weapon.offhand minecraft:carrot_on_a_stick
+item replace entity @a[gamemode=adventure,nbt=!{Inventory:[{id:"minecraft:carrot_on_a_stick",Slot:-106b}]}] weapon.offhand with minecraft:carrot_on_a_stick
 
 #menu
 execute unless entity @e[scores={Time=1..}] if entity @e[scores={mapcdelay=0}] if block -93 41 66 minecraft:lever[face=wall,powered=true,facing=north] run function game:game/menu/mapnext

@@ -38,7 +38,7 @@ execute as @s[tag=!in] at @s positioned ~ ~1.5 ~ run tag @a[tag=hittest,distance
 tag @a[scores={shield=1..}] remove gethit
 tag @a[scores={Invul=1..}] remove gethit
 
-execute as @s[tag=!in] at @s positioned ~ ~1.5 ~ run scoreboard players set @e[tag=gethit] glowing 35
+#execute as @s[tag=!in] at @s positioned ~ ~1.5 ~ run scoreboard players set @e[tag=gethit] glowing 35
 
 execute as @s[tag=!in] at @s run effect give @e[tag=!isthrow,tag=gethit] instant_damage
 execute as @s[tag=!in] at @s run effect give @e[tag=!isthrow,tag=gethit] resistance 1 10 true
@@ -88,12 +88,25 @@ execute as @s[scores={hurpower=6},tag=!in] at @s run scoreboard players remove @
 
 execute as @s[tag=!in] at @s run effect clear @e[tag=gethit] minecraft:levitation
 execute as @s[tag=!in] at @s run effect give @e[tag=gethit] minecraft:levitation 1 0 true
-execute as @s[scores={hurpower=1},tag=!in] at @s run effect give @e[tag=gethit] minecraft:levitation 1 0 true
-execute as @s[scores={hurpower=2},tag=!in] at @s run effect give @e[tag=gethit] minecraft:levitation 1 1 true
-execute as @s[scores={hurpower=3},tag=!in] at @s run effect give @e[tag=gethit] minecraft:levitation 1 2 true
-execute as @s[scores={hurpower=4},tag=!in] at @s run effect give @e[tag=gethit] minecraft:levitation 1 3 true
+execute as @s[scores={hurpower=1},tag=!in] at @s run effect give @e[tag=gethit] minecraft:levitation 1 3 true
+execute as @s[scores={hurpower=2},tag=!in] at @s run effect give @e[tag=gethit] minecraft:levitation 1 3 true
+execute as @s[scores={hurpower=3},tag=!in] at @s run effect give @e[tag=gethit] minecraft:levitation 1 3 true
+execute as @s[scores={hurpower=4},tag=!in] at @s run effect give @e[tag=gethit] minecraft:levitation 1 4 true
 execute as @s[scores={hurpower=5},tag=!in] at @s run effect give @e[tag=gethit] minecraft:levitation 1 4 true
 execute as @s[scores={hurpower=6},tag=!in] at @s run effect give @e[tag=gethit] minecraft:levitation 1 5 true
+
+execute as @s[scores={hurpower=1},tag=!in] at @s run scoreboard players set @e[tag=gethit] nolev 10
+execute as @s[scores={hurpower=2},tag=!in] at @s run scoreboard players set @e[tag=gethit] nolev 11
+execute as @s[scores={hurpower=3},tag=!in] at @s run scoreboard players set @e[tag=gethit] nolev 12
+execute as @s[scores={hurpower=4},tag=!in] at @s run scoreboard players set @e[tag=gethit] nolev 14
+execute as @s[scores={hurpower=5},tag=!in] at @s run scoreboard players set @e[tag=gethit] nolev 17
+
+execute as @s[scores={hurpower=1},tag=!in] at @s run scoreboard players set @e[tag=gethit] glowing 10
+execute as @s[scores={hurpower=2},tag=!in] at @s run scoreboard players set @e[tag=gethit] glowing 15
+execute as @s[scores={hurpower=3},tag=!in] at @s run scoreboard players set @e[tag=gethit] glowing 20
+execute as @s[scores={hurpower=4},tag=!in] at @s run scoreboard players set @e[tag=gethit] glowing 25
+execute as @s[scores={hurpower=5},tag=!in] at @s run scoreboard players set @e[tag=gethit] glowing 30
+execute as @s[scores={hurpower=6},tag=!in] at @s run scoreboard players set @e[tag=gethit] glowing 35
 
 execute as @s[tag=!in] at @s run playsound minecraft:block.crop.break master @a ~ ~ ~ 1 0
 execute as @s[tag=!in] at @s run playsound minecraft:block.bell.use master @a ~ ~ ~ 1 2

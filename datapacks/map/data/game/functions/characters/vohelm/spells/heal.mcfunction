@@ -1,4 +1,4 @@
-scoreboard players add @s healthshow 3
+scoreboard players add @s healthshow 2
 scoreboard players remove @s Mana 6
 scoreboard players set @s goldenap 0
 effect give @s minecraft:speed 4 0 true

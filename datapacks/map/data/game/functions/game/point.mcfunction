@@ -1,7 +1,7 @@
 tp @s ~ ~ ~ ~2 ~
 scoreboard players add @s[scores={pointsT=..799}] pointsT 1
 scoreboard players set @s people 0
-execute as @s[scores={pointsT=800..}] at @s positioned ~-1 ~-2 ~-1 run execute as @a[gamemode=adventure,distance=..100,dx=3,dz=3,dy=3] at @s run scoreboard players add @e[name=point,type=minecraft:armor_stand,distance=..10] people 1
+execute as @s[scores={pointsT=800..}] at @s positioned ~-1 ~-2 ~-1 run execute as @a[gamemode=adventure,distance=..100,dx=1,dz=1,dy=3] at @s run scoreboard players add @e[name=point,type=minecraft:armor_stand,distance=..10] people 1
 execute as @s[scores={pointsT=800..,people=1}] at @s positioned ~-1 ~-2 ~-1 run scoreboard players add @a[gamemode=adventure,distance=..100,dx=1,dz=1,dy=3,scores={nocap=..0}] pointsT 1
 execute as @s[scores={pointsT=800..,people=1}] at @s positioned ~-1 ~-2 ~-1 run execute as @a[gamemode=adventure,distance=..100,dx=1,dz=1,dy=3,scores={nocap=..0}] at @s run execute as @e[name=point,distance=..8] at @s run particle minecraft:falling_dust snow ~ ~2 ~ .6 .6 .6 .05 2 force
 execute as @s[scores={pointsT=800..,people=0}] at @s positioned ~-1 ~-2 ~-1 unless entity @a[gamemode=adventure,distance=..100,dx=1,dz=1,dy=3,scores={nocap=..0}] run execute as @e[tag=smokerloc,distance=..100,dx=1,dz=1,dy=3] at @s run execute as @e[name=point,distance=..8] at @s run particle minecraft:falling_dust snow ~ ~2 ~ .6 .6 .6 .05 2 force

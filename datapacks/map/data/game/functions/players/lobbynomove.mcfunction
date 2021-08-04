@@ -54,21 +54,21 @@ scoreboard players set @s[tag=!ranchar] ranmask 0
 scoreboard players add @s[tag=ranchar] ranmask 1
 scoreboard players set @s[scores={ranmask=120..}] ranmask 0
 
-replaceitem entity @s[tag=!ready] armor.head minecraft:air
+item replace entity @s[tag=!ready] armor.head with minecraft:air
 
-replaceitem entity @s[scores={ranmask=..20},tag=ready,tag=ranchar] armor.head minecraft:melon_seeds
-replaceitem entity @s[scores={ranmask=21..40},tag=ready,tag=ranchar] armor.head minecraft:gold_nugget
-replaceitem entity @s[scores={ranmask=41..60},tag=ready,tag=ranchar] armor.head minecraft:pink_dye
-replaceitem entity @s[scores={ranmask=61..80},tag=ready,tag=ranchar] armor.head minecraft:cyan_dye
-replaceitem entity @s[scores={ranmask=81..100},tag=ready,tag=ranchar] armor.head minecraft:light_gray_dye
-replaceitem entity @s[scores={ranmask=101..120},tag=ready,tag=ranchar] armor.head minecraft:gray_dye
+item replace entity @s[scores={ranmask=..20},tag=ready,tag=ranchar] armor.head with minecraft:melon_seeds
+item replace entity @s[scores={ranmask=21..40},tag=ready,tag=ranchar] armor.head with minecraft:gold_nugget
+item replace entity @s[scores={ranmask=41..60},tag=ready,tag=ranchar] armor.head with minecraft:pink_dye
+item replace entity @s[scores={ranmask=61..80},tag=ready,tag=ranchar] armor.head with minecraft:cyan_dye
+item replace entity @s[scores={ranmask=81..100},tag=ready,tag=ranchar] armor.head with minecraft:light_gray_dye
+item replace entity @s[scores={ranmask=101..120},tag=ready,tag=ranchar] armor.head with minecraft:gray_dye
 
-replaceitem entity @s[scores={class=2},tag=ready,tag=!ranchar] armor.head minecraft:melon_seeds
-replaceitem entity @s[scores={class=4},tag=ready,tag=!ranchar] armor.head minecraft:gold_nugget
-replaceitem entity @s[scores={class=1},tag=ready,tag=!ranchar] armor.head minecraft:pink_dye
-replaceitem entity @s[scores={class=3},tag=ready,tag=!ranchar] armor.head minecraft:cyan_dye
-replaceitem entity @s[scores={class=5},tag=ready,tag=!ranchar] armor.head minecraft:light_gray_dye
-replaceitem entity @s[scores={class=6},tag=ready,tag=!ranchar] armor.head minecraft:gray_dye
+item replace entity @s[scores={class=2},tag=ready,tag=!ranchar] armor.head with minecraft:melon_seeds
+item replace entity @s[scores={class=4},tag=ready,tag=!ranchar] armor.head with minecraft:gold_nugget
+item replace entity @s[scores={class=1},tag=ready,tag=!ranchar] armor.head with minecraft:pink_dye
+item replace entity @s[scores={class=3},tag=ready,tag=!ranchar] armor.head with minecraft:cyan_dye
+item replace entity @s[scores={class=5},tag=ready,tag=!ranchar] armor.head with minecraft:light_gray_dye
+item replace entity @s[scores={class=6},tag=ready,tag=!ranchar] armor.head with minecraft:gray_dye
 
 #execute if block ~ ~ ~ minecraft:warped_pressure_plate unless entity @e[scores={Time=1..}] run title @s title {"text":"No Game"}
 #execute if block ~ ~ ~ minecraft:warped_pressure_plate unless entity @e[scores={Time=1..}] run tp @s -97 41 62 0 0

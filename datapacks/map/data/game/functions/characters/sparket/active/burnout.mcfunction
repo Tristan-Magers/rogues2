@@ -18,4 +18,4 @@ execute as @s[scores={burnout=1..}] at @s run particle minecraft:dripping_lava ~
 
 execute as @s[scores={burnout=3..}] at @s run tp @s @s
 
-#execute as @s[scores={burnout=19}] run replaceitem entity @s hotbar.3 barrier{display:{Name:"{\"text\":\"Reloading\",\"color\":\"white\",\"italic\":\"false\"}"}} 1
+#execute as @s[scores={burnout=19}] run item replace entity @s hotbar.3 with barrier{display:{Name:"{\"text\":\"Reloading\",\"color\":\"white\",\"italic\":\"false\"}"}} 1

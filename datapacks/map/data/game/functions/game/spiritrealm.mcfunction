@@ -2,7 +2,7 @@ tag @s add spiritworld
 
 tag @s[tag=game] remove spirlob
 tag @s[tag=!game] add spirlob
-replaceitem entity @s[tag=!game] hotbar.8 air
+item replace entity @s[tag=!game] hotbar.8 with air
 
 effect clear @s minecraft:jump_boost
 effect clear @s minecraft:slow_falling
@@ -44,15 +44,15 @@ scoreboard players set @s[scores={boostT=3..}] boostT 2
 execute as @s[scores={points=1..}] at @s run function game:players/collect
 #execute as @s[scores={points=1..,Score=1}] at @s run tellraw @a [{"selector":"@p"},{"text":" returned a soul. "},{"color":"gold","score":{"name":"@p","objective":"Score"}},{"text":"/12 point."}]
 
-execute as @s[scores={class=3}] run replaceitem entity @s hotbar.4 barrier{display:{Name:"{\"text\":\"Reloading\",\"color\":\"white\",\"italic\":\"false\"}"}} 1
+execute as @s[scores={class=3}] run item replace entity @s hotbar.4 with barrier{display:{Name:"{\"text\":\"Reloading\",\"color\":\"white\",\"italic\":\"false\"}"}} 1
 
-execute as @s[scores={class=2}] run replaceitem entity @s hotbar.4 barrier{display:{Name:"{\"text\":\"Reloading\",\"color\":\"white\",\"italic\":\"false\"}"}} 1
-execute as @s[scores={class=2}] run replaceitem entity @s hotbar.0 barrier{display:{Name:"{\"text\":\"Reloading\",\"color\":\"white\",\"italic\":\"false\"}"}} 1
+execute as @s[scores={class=2}] run item replace entity @s hotbar.4 with barrier{display:{Name:"{\"text\":\"Reloading\",\"color\":\"white\",\"italic\":\"false\"}"}} 1
+execute as @s[scores={class=2}] run item replace entity @s hotbar.0 with barrier{display:{Name:"{\"text\":\"Reloading\",\"color\":\"white\",\"italic\":\"false\"}"}} 1
 
-execute as @s[scores={class=5}] run replaceitem entity @s hotbar.0 barrier{display:{Name:"{\"text\":\"Reloading\",\"color\":\"white\",\"italic\":\"false\"}"}} 1
-execute as @s[scores={class=5}] run replaceitem entity @s hotbar.1 barrier{display:{Name:"{\"text\":\"Reloading\",\"color\":\"white\",\"italic\":\"false\"}"}} 1
+execute as @s[scores={class=5}] run item replace entity @s hotbar.0 with barrier{display:{Name:"{\"text\":\"Reloading\",\"color\":\"white\",\"italic\":\"false\"}"}} 1
+execute as @s[scores={class=5}] run item replace entity @s hotbar.1 with barrier{display:{Name:"{\"text\":\"Reloading\",\"color\":\"white\",\"italic\":\"false\"}"}} 1
 
-replaceitem entity @s armor.head air
-replaceitem entity @s armor.chest air
-replaceitem entity @s armor.legs air
-replaceitem entity @s armor.feet air
+item replace entity @s armor.head with air
+item replace entity @s armor.chest with air
+item replace entity @s armor.legs with air
+item replace entity @s armor.feet with air

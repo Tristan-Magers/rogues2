@@ -48,4 +48,5 @@ execute if entity @s[nbt={SelectedItem:{id:"minecraft:diamond_axe"}}] run execut
 execute if entity @s[nbt=!{Inventory:[{id:"minecraft:red_dye",Slot:3b}]},scores={portal=..0,Mana=6..}] run function game:spells/manaup
 
 #blackhole cooldown
-scoreboard players remove @s[scores={coolblack=1..}] coolblack 1
+scoreboard players remove @s[scores={coolblack=0..}] coolblack 1
+execute as @s[scores={coolblack=0}] at @s run function game:spells/manaup

@@ -39,7 +39,7 @@ execute as @s[scores={wtimer=0}] at @s run particle minecraft:falling_dust gray_
 clear @s[scores={wtimer=0}] wooden_sword
 
 #bows
-replaceitem entity @s[scores={btimer=1..}] inventory.0 arrow
+item replace entity @s[scores={btimer=1..}] inventory.0 with arrow
 clear @s[scores={btimer=0}] arrow
 clear @s[scores={btimer=0,class=5..}] bow
 clear @s[scores={btimer=0,class=..3}] bow

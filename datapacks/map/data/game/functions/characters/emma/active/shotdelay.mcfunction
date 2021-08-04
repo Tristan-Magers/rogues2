@@ -4,6 +4,8 @@ execute as @s[scores={shotCharge=0}] at @s run playsound minecraft:entity.firewo
 execute as @s[scores={shotCharge=3}] at @s run playsound minecraft:entity.firework_rocket.shoot master @s ~ ~ ~ 1 1
 execute as @s[scores={shotCharge=0}] at @s run summon armor_stand ~ ~ ~ {Invisible:1,NoGravity:1,Invulnerable:1,Marker:1,Tags:["lshot"]}
 
+execute as @s[scores={shotCharge=0}] at @s run scoreboard players set @s boltdelay 20
+
 execute as @s[scores={shotCharge=0}] at @s run scoreboard players operation @e[tag=lshot,distance=..1] playerID = @s playerID
 
 execute as @s[scores={shotCharge=0}] at @s run tp @e[tag=lshot,sort=nearest,limit=1] @p

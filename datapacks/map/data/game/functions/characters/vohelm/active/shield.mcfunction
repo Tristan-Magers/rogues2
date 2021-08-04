@@ -1,10 +1,10 @@
-replaceitem entity @s[scores={shield=2..}] armor.chest minecraft:iron_chestplate
-replaceitem entity @s[scores={shield=2..}] armor.legs minecraft:iron_leggings
+item replace entity @s[scores={shield=2..}] armor.chest with minecraft:iron_chestplate
+item replace entity @s[scores={shield=2..}] armor.legs with minecraft:iron_leggings
 
-replaceitem entity @s[scores={shield=1}] armor.head air
-replaceitem entity @s[scores={shield=1}] armor.chest air
-replaceitem entity @s[scores={shield=1}] armor.legs air
-replaceitem entity @s[scores={shield=1}] armor.feet air
+item replace entity @s[scores={shield=1}] armor.head with air
+item replace entity @s[scores={shield=1}] armor.chest with air
+item replace entity @s[scores={shield=1}] armor.legs with air
+item replace entity @s[scores={shield=1}] armor.feet with air
 
 execute as @s[scores={shield=1}] at @s run playsound minecraft:block.beacon.deactivate master @a ~ ~ ~ .8 1.4
 execute as @s[scores={shield=1}] at @s run playsound minecraft:block.coral_block.fall master @a ~ ~ ~ 1 0

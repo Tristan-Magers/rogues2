@@ -3,7 +3,7 @@ execute as @s[tag=!spiritworld,scores={spiderwall=0..}] at @s run function game:
 execute as @s[scores={haltboost=1..}] at @s run function game:characters/halt/active/haltboost
 
 #clear @s[nbt=!{Inventory:[{id:"minecraft:iron_nugget",Slot:1b}]}] iron_nugget
-#execute as @s[nbt=!{Inventory:[{id:"minecraft:iron_nugget",Slot:1b}]}] run replaceitem entity @s hotbar.1 iron_nugget{display:{Name:"[{\"text\":\"Hover\",\"color\":\"gray\",\"italic\":\"false\",\"bold\":\"true\"},{\"text\":\" (\",\"color\":\"white\",\"italic\":\"false\"},{\"text\":\"Hold to use\",\"color\":\"gold\",\"italic\":\"false\"},{\"text\":\")\",\"color\":\"white\",\"italic\":\"false\"}]"}}
+#execute as @s[nbt=!{Inventory:[{id:"minecraft:iron_nugget",Slot:1b}]}] run item replace entity @s hotbar.1 with iron_nugget{display:{Name:"[{\"text\":\"Hover\",\"color\":\"gray\",\"italic\":\"false\",\"bold\":\"true\"},{\"text\":\" (\",\"color\":\"white\",\"italic\":\"false\"},{\"text\":\"Hold to use\",\"color\":\"gold\",\"italic\":\"false\"},{\"text\":\")\",\"color\":\"white\",\"italic\":\"false\"}]"}}
 execute as @s[scores={hover=1..}] at @s run function game:characters/halt/active/hover
 execute as @s[scores={hover=0}] at @s run effect clear @s levitation
 scoreboard players set @s[scores={hover=0}] invisoff 8
@@ -28,6 +28,11 @@ execute as @s[scores={haltdamage=40..79}] at @s anchored eyes positioned ^ ^ ^1 
 execute as @s[scores={haltdamage=80..119}] at @s anchored eyes positioned ^ ^ ^1 run summon minecraft:armor_stand ~ ~-1 ~ {Marker:1,Invulnerable:1,Tags:["damnum","plus"],CustomNameVisible:1b,Duration:999999,CustomName:'{"text":"+4"}'}
 execute as @s[scores={haltdamage=120..159}] at @s anchored eyes positioned ^ ^ ^1 run summon minecraft:armor_stand ~ ~-1 ~ {Marker:1,Invulnerable:1,Tags:["damnum","plus"],CustomNameVisible:1b,Duration:999999,CustomName:'{"text":"+6"}'}
 execute as @s[scores={haltdamage=160..}] at @s anchored eyes positioned ^ ^ ^1 run summon minecraft:armor_stand ~ ~-1 ~ {Marker:1,Invulnerable:1,Tags:["damnum","plus"],CustomNameVisible:1b,Duration:999999,CustomName:'{"text":"+8"}'}
+
+#draining claw delay
+execute as @s[scores={dcdelay=0}] at @s run function game:spells/manaup
+scoreboard players remove @s[scores={dcdelay=0..}] dcdelay 1
+scoreboard players set @s[scores={haltdamage=24..}] dcdelay 10
 
 scoreboard players set @s haltdamage 0
 

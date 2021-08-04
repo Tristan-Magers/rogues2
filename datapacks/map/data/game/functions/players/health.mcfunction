@@ -75,8 +75,8 @@ execute as @s[scores={healthshow=..0,class=2}] at @s run function game:character
 
 execute as @s[scores={healthshow=1..}] at @s run execute as @e[tag=stealth] at @s run data merge entity @s {CustomName:"\"Invisible\""}
 execute as @s[scores={healthshow=1..}] at @s run team join invisible @e[tag=stealth]
-execute as @s[scores={healthshow=1..,particles=1..}] at @s run execute as @e[tag=stealth] at @s run data merge entity @s {CustomName:"\"Smoking\""}
-execute as @s[scores={healthshow=1..,particles=1..}] at @s run team join smoke @e[tag=stealth]
+execute as @s[scores={healthshow=1..,particles=1..,partdelay=12..}] at @s run execute as @e[tag=stealth] at @s run data merge entity @s {CustomName:"\"Smoking\""}
+execute as @s[scores={healthshow=1..,particles=1..,partdelay=12..}] at @s run team join smoke @e[tag=stealth]
 execute as @s[scores={healthshow=1..,plutoregen=0..}] at @s run execute as @e[tag=stealth] at @s run data merge entity @s {CustomName:"\"Hearts\""}
 execute as @s[scores={healthshow=1..,plutoregen=0..}] at @s run team join visible @e[tag=stealth]
 execute as @s[scores={healthshow=1..}] at @s if block ~ ~ ~ water run execute as @e[tag=stealth] at @s run data merge entity @s {CustomName:"\"Bubbles\""}
@@ -115,15 +115,15 @@ effect give @s[scores={healthshow=..0},tag=arena] minecraft:blindness 1 0 true
 execute as @s[scores={healthshow=..0},tag=arena] at @s run playsound minecraft:entity.wither.hurt master @s
 scoreboard players set @s[scores={healthshow=..0}] healthshow 100
 
-replaceitem entity @s[tag=!spiritworld,scores={item=2,class=2}] armor.head minecraft:melon_seeds
-replaceitem entity @s[tag=!spiritworld,scores={item=2,class=4}] armor.head minecraft:gold_nugget
-replaceitem entity @s[tag=!spiritworld,scores={item=2,class=1}] armor.head minecraft:pink_dye
-replaceitem entity @s[tag=!spiritworld,scores={item=2,class=3}] armor.head minecraft:cyan_dye
-replaceitem entity @s[tag=!spiritworld,scores={item=2,class=5}] armor.head minecraft:light_gray_dye
-replaceitem entity @s[tag=!spiritworld,scores={item=2,class=6}] armor.head minecraft:gray_dye
-replaceitem entity @s[tag=!spiritworld,scores={item=2}] armor.feet minecraft:golden_boots{HideFlags:6,Unbreakable:1b,AttributeModifiers:[{AttributeName:"generic.armorToughness",Name:"generic.armorToughness",Amount:-1,Operation:0,UUIDLeast:529172,UUIDMost:361804}]} 1
-replaceitem entity @s[scores={item=..1}] armor.head minecraft:air
-replaceitem entity @s[scores={item=..1}] armor.feet minecraft:air
+item replace entity @s[tag=!spiritworld,scores={item=2,class=2}] armor.head with minecraft:melon_seeds
+item replace entity @s[tag=!spiritworld,scores={item=2,class=4}] armor.head with minecraft:gold_nugget
+item replace entity @s[tag=!spiritworld,scores={item=2,class=1}] armor.head with minecraft:pink_dye
+item replace entity @s[tag=!spiritworld,scores={item=2,class=3}] armor.head with minecraft:cyan_dye
+item replace entity @s[tag=!spiritworld,scores={item=2,class=5}] armor.head with minecraft:light_gray_dye
+item replace entity @s[tag=!spiritworld,scores={item=2,class=6}] armor.head with minecraft:gray_dye
+item replace entity @s[tag=!spiritworld,scores={item=2}] armor.feet with minecraft:golden_boots{HideFlags:6,Unbreakable:1b,AttributeModifiers:[{AttributeName:"generic.armorToughness",Name:"generic.armorToughness",Amount:-1,Operation:0,UUIDLeast:529172,UUIDMost:361804}]} 1
+item replace entity @s[scores={item=..1}] armor.head with minecraft:air
+item replace entity @s[scores={item=..1}] armor.feet with minecraft:air
 
 scoreboard players set @s item 0
 

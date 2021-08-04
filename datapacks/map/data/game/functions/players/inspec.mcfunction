@@ -68,5 +68,5 @@ team join spec @s
 
 scoreboard players set @s[tag=!inspec] Leave 1
 
-execute unless entity @a[tag=specp1] run replaceitem entity @s armor.head minecraft:air
-execute if entity @a[tag=specp1] run replaceitem entity @s armor.head minecraft:carved_pumpkin
+execute unless entity @a[tag=specp1] run item replace entity @s armor.head with minecraft:air
+execute if entity @a[tag=specp1] run item replace entity @s armor.head with minecraft:carved_pumpkin

@@ -66,23 +66,94 @@ Sparket
 
 Emma
 - Bolt give .5s longer glowing (.6s -> 1.1s)
+- Water only gives particle on first contact
 
 Halt
 - Draining Claw deals 2 less damage (16 -> 14)
-- Draining Claw costs 1 more mana (3 -> 4)
+- Ghost Bow costs 2 less mana (9 -> 7)
+- Ghost Bow gets 1 less arrow (3 -> 2)
 
 Barbose
+- Seeking Axe lasts .4s longer (3.6s -> 4s)
 - Dealing 1 damage to decoy fakes damage
+- Become visible for 1.5s if decoy explodes
 
 Vohelm
-- Max knife gives less speed (38% -> 25% MAX)
-- Knife charges 10% slower
+- Knife gives less speed (38% -> 20% MAX)
+- Shield capture window .65s smaller (1s -> .35s)
+- Berries heal 1 less (7 -> 6)
 
 Pluto
 - Removed hidden invul for soulsend to avoid confusion
+- Hurricane gives shorter levitation on shorter charges
+- Hurricane gives shorter glowing on shorter charge
 
 [Bug Fixes]
-- Issue with loosing weapons in arena
-- Some projectiles couldn't hit decoy
+- Issue with losing weapons in the arena
+- Some projectiles couldn't hit a decoy
 - Hurricane could be shot without mana in some cases
 - Spiders would track and hit spectators
+- Decoy causes shadow on player
+- Seeking Axe cost 1 more than listed
+- Max Vohelm Knife could be upgraded without cost
+
+* 1.3 Patch *
+
+Goals/Notes: 
+1.3 will be focused on encouraging diverse playstyles.
+It has become obvious that speed increasing and decreasing moves
+play a larger part of the game than intended. Melee has been changed
+almost across the board to try and prevent speed from negating the
+downsides of visibility.
+
+[General]
+- Walking doesn't create particles for .6s
+ - lets players move small distances quickly and invisibly
+ - prevents accidental movement particles
+ - resets only after period of zero movement (.2s - .35s)
+
+[Characters]
+
+Sparket
+- Burnout has .15s cooldown between uses
+- Zero Gravity costs 1 more Mana (4 -> 3)
+- Zero Gravity gives .2s longer flame on jump (.55s -> .75s)
+
+Emma
+- Trident has a durability of 2
+- Bolt has a 1s cooldown between uses
+- Bolt comes out 0.05s slower (.3s -> .35s)
+- Storm Energy gives 1 less level of speed (level 2 -> 1)
+- Storm Energy lasts 1s shorter (6s -> 5s)
+
+Halt
+- Drainging Claw boost no longer gives particles
+- Draing Claw boost gives higher level jump boost (level 1 -> 2)
+- Draining Class does 1 less damage (14 -> 13)
+- Daining Claws boost 3s shorter (7s -> 4s)
+- Draining Claw gives 5% less speed (10% -> 5%)
+- Draining Claw has 0.5s cooldown after use
+- Webs last .7s in lobby (previously .1s)
+- Webs last .35s shorter (2.15s -> 1.8s)
+
+Barbose
+- Seeking Axe gives 5% more speed (10% -> 15%)
+- Decoy visablity (on explosion) .5s shorter (1.5s -> 1s)
+- Blackhole cooldown 1s longer (5s -> 6s)
+
+Vohelm
+- Shield has .75s cooldown between uses
+- Shield gives nocap time equal to shield (1.85s -> 2.2s)
+- Totom gives 2s of resistance after breaking
+- Totem no longer gives resistance
+- Totem strength lasts 1s shorter after breaking (2s -> 1s)
+ - does not effect jump boost
+
+Pluto
+- Hurricane give 4% less speed (18% -> 14%)
+- Jump Pad gives visibility instead of glowing
+
+[Bug Fixes]
+- Fixed issue where nearby players could stop point capture
+ - I am very very sorry lol
+- Storm energy could consume all Mana
