@@ -203,3 +203,6 @@ tag @a remove t1win2
 
 tellraw @a[tag=t1win1] [{"text":"A king emerges"}]
 tag @a remove t1win1
+
+#title area
+clear @a[x=-145,y=23,z=-45,distance=..20,gamemode=adventure]

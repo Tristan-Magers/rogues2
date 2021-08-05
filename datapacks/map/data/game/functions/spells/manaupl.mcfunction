@@ -1,3 +1,6 @@
+clear @s minecraft:written_book
+item replace entity @s hotbar.8 with air
+
 clear @s[tag=!ready,gamemode=adventure] magma_cream
 clear @s[tag=ready,gamemode=adventure] spider_eye
 

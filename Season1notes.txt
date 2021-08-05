@@ -100,11 +100,11 @@ Pluto
 * 1.3 Patch *
 
 Goals/Notes: 
-1.3 will be focused on encouraging diverse playstyles.
-It has become obvious that speed increasing and decreasing moves
-play a larger part of the game than intended. Melee has been changed
-almost across the board to try and prevent speed from negating the
-downsides of visibility.
+Melee has been changed almost across the board to try and 
+prevent speed/damage from negating the downsides of visibility.
+
+[Backend]
+- Updated to 1.17.1
 
 [Lobby]
 - Added "Book for Nerds"
@@ -128,31 +128,37 @@ Sparket
 - Zero Gravity gives .2s longer flame on jump (.55s -> .75s)
 
 Emma
-- Trident has a durability of 2
+- Trident has riptide while in water (uses 2 durability)
+- Trident has a durability of 3
+- Trident does 2 less damage (9 -> 7)
 - Bolt has a 1s cooldown between uses
 - Bolt comes out 0.05s slower (.3s -> .35s)
 - Storm Energy gives 1 less level of speed (level 2 -> 1)
 - Storm Energy lasts 1s shorter (6s -> 5s)
+- Storm Energy only gives strength for Trident
 
 Halt
-- Drainging Claw boost no longer gives particles
-- Draing Claw boost gives higher level jump boost (level 1 -> 2)
+- Draining Claw boost no longer gives particles
+- Draining Claw boost gives higher level jump boost (level 1 -> 2)
 - Draining Class does 1 less damage (14 -> 13)
-- Daining Claws boost 3s shorter (7s -> 4s)
+- Draining Claws boost 3s shorter (7s -> 4s)
 - Draining Claw gives 5% less speed (10% -> 5%)
 - Draining Claw has 0.5s cooldown after use
+- Draining Claw gives 50% healing (max 6 -> 3)
 - Webs last .35s shorter (2.15s -> 1.8s)
 - Webs last .7s in lobby (previously .1s)
 
 Barbose
 - Seeking Axe gives 5% more speed (10% -> 15%)
-- Decoy visablity (on explosion) .5s shorter (1.5s -> 1s)
+- Decoy visibility (on explosion) .5s shorter (1.5s -> 1s)
 - Blackhole cooldown 1s longer (5s -> 6s)
+- Portal has 0.6s delay before you can return
+	- To prevent returning by mistake
 
 Vohelm
 - Shield has .75s cooldown between uses
 - Shield gives nocap time equal to shield (1.85s -> 2.2s)
-- Totom gives 2s of resistance after breaking
+- Totem gives 2s of resistance after breaking
 - Totem no longer gives resistance
 - Totem strength lasts 1s shorter after breaking (2s -> 1s)
  - does not effect jump boost
@@ -160,8 +166,13 @@ Vohelm
 Pluto
 - Hurricane gives 4% less speed (18% -> 14%)
 - Jump Pad gives visibility instead of glowing
+- Soul Send has 1 more health (1 -> 2)
+	- Helps fix buggy deaths
 
 [Bug Fixes]
 - Fixed issue where nearby players could stop point capture
  - I am very very sorry lol
 - Storm energy could consume all Mana
+- Fixed Trident item text
+- Fixed lobby hotbar bug
+- Fixed being able to capture points while under them
