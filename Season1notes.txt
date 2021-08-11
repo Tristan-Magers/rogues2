@@ -123,6 +123,8 @@ prevent speed/damage from negating the downsides of visibility.
 [Characters]
 
 Sparket
+- Fire Fist does 1 more damage (4 -> 5)
+- Fire Fist lasts .4s longer (2.6s -> 3s)
 - Burnout has .15s cooldown between uses
 - Zero Gravity costs 1 more Mana (4 -> 3)
 - Zero Gravity gives .2s longer flame on jump (.55s -> .75s)
@@ -136,6 +138,7 @@ Emma
 - Storm Energy gives 1 less level of speed (level 2 -> 1)
 - Storm Energy lasts 1s shorter (6s -> 5s)
 - Storm Energy only gives strength for Trident
+- Storm Energy costs 1 more Mana (3 -> 4)
 
 Halt
 - Draining Claw boost no longer gives particles
@@ -162,6 +165,7 @@ Vohelm
 - Totem no longer gives resistance
 - Totem strength lasts 1s shorter after breaking (2s -> 1s)
  - does not effect jump boost
+- Totem strength only applied to sword
 
 Pluto
 - Hurricane gives 4% less speed (18% -> 14%)
@@ -176,3 +180,4 @@ Pluto
 - Fixed Trident item text
 - Fixed lobby hotbar bug
 - Fixed being able to capture points while under them
+- Fixed Shield giving invul 1 second too long

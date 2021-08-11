@@ -5,6 +5,8 @@ tag @s[nbt={SelectedItem:{id:"minecraft:iron_hoe"}}] add wood
 tag @s[nbt={SelectedItem:{id:"minecraft:golden_hoe"}}] add wood
 tag @s[nbt={SelectedItem:{id:"minecraft:diamond_hoe"}}] add wood
 
+effect clear @s[tag=!wood] strength
+
 tag @s remove aweap
 tag @s[nbt={Inventory:[{id:"minecraft:wooden_hoe",Slot:0b}]}] add aweap
 tag @s[nbt={Inventory:[{id:"minecraft:stone_hoe",Slot:0b}]}] add aweap

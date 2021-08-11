@@ -9,7 +9,7 @@ execute as @s[tag=!spiritworld,scores={Mana=6..},nbt=!{Inventory:[{id:"minecraft
 
 scoreboard players operation @e[tag=totem] playerID -= @s playerID
 execute as @s at @s if entity @e[tag=totem,distance=..7,scores={playerID=0}] run effect give @s minecraft:jump_boost 2 2
-execute as @s at @s if entity @e[tag=totem,distance=..7,scores={playerID=0}] run effect give @s minecraft:strength 1
+execute as @s at @s if entity @e[tag=totem,distance=..7,scores={playerID=0}] run effect give @s[tag=wood] minecraft:strength 1
 execute as @s at @s if entity @e[tag=totem,distance=..7,scores={playerID=0}] run execute as @e[tag=totem,distance=..8,scores={playerID=0}] at @s run particle dust 1.0 0.5 0.5 1.0 ~ ~1 ~ .3 .5 .3 0 2 force
 execute as @s at @s if entity @e[tag=totem,distance=..7,scores={playerID=0}] run particle dust 1.0 0.5 0.5 1.0 ~ ~.2 ~ .2 .1 .2 0 2 force
 execute as @s at @s if entity @e[tag=totem,distance=..7,scores={playerID=0}] run tag @s add totemdust

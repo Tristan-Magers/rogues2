@@ -54,7 +54,7 @@ scoreboard players remove @s manaboost 1
 
 execute as @s[scores={manaboost=1..}] at @s run particle minecraft:rain ~ ~.5 ~ .25 .4 .25 0 2 force
 
-scoreboard players remove @s[nbt={Inventory:[{id:"minecraft:glass_bottle",Slot:4b}]}] Mana 3
+scoreboard players remove @s[nbt={Inventory:[{id:"minecraft:glass_bottle",Slot:4b}]}] Mana 4
 scoreboard players set @s[nbt={Inventory:[{id:"minecraft:glass_bottle",Slot:4b}]}] manaboost 100
 clear @s[nbt={Inventory:[{id:"minecraft:glass_bottle",Slot:4b}]}] glass_bottle
 effect give @s[scores={manaboost=20..}] jump_boost 1 1 true
@@ -64,8 +64,8 @@ effect clear @s[nbt=!{SelectedItem:{id:"minecraft:trident"}}] strength
 
 scoreboard players set @s potion 0
 
-clear @s[tag=!spiritworld,scores={Mana=3..},nbt=!{Inventory:[{id:"minecraft:potion",Slot:4b}]}] potion
-execute as @s[tag=!spiritworld,scores={Mana=3..},nbt=!{Inventory:[{id:"minecraft:potion",Slot:4b}]}] run item replace entity @s hotbar.4 with potion{display:{Name:"[{\"text\":\"Storm Energy\",\"color\":\"aqua\",\"italic\":\"false\",\"bold\":\"true\"},{\"text\":\" (\",\"color\":\"white\",\"italic\":\"false\"},{\"text\":\"Boost/Resistance/Strength\",\"color\":\"white\",\"bold\":\"false\",\"italic\":\"false\"},{\"text\":\") [\",\"color\":\"white\",\"italic\":\"false\"},{\"text\":\"3 Mana\",\"color\":\"gold\",\"italic\":\"false\"},{\"text\":\"]\",\"color\":\"white\",\"italic\":\"false\"}]"},CustomPotionEffects:[{Id:1b,Amplifier:0b,Duration:100,ShowParticles:1b},{Id:8b,Amplifier:1b,Duration:100,ShowParticles:1b},{Id:5b,Amplifier:0b,Duration:100,ShowParticles:1b},{Id:16b,Amplifier:0b,Duration:100,ShowParticles:0b},{Id:11b,Amplifier:0b,Duration:100,ShowParticles:1b}],Potion:"minecraft:thick"}
+clear @s[tag=!spiritworld,scores={Mana=4..},nbt=!{Inventory:[{id:"minecraft:potion",Slot:4b}]}] potion
+execute as @s[tag=!spiritworld,scores={Mana=4..},nbt=!{Inventory:[{id:"minecraft:potion",Slot:4b}]}] run item replace entity @s hotbar.4 with potion{display:{Name:"[{\"text\":\"Storm Energy\",\"color\":\"aqua\",\"italic\":\"false\",\"bold\":\"true\"},{\"text\":\" (\",\"color\":\"white\",\"italic\":\"false\"},{\"text\":\"Boost/Resistance/Strength\",\"color\":\"white\",\"bold\":\"false\",\"italic\":\"false\"},{\"text\":\") [\",\"color\":\"white\",\"italic\":\"false\"},{\"text\":\"4 Mana\",\"color\":\"gold\",\"italic\":\"false\"},{\"text\":\"]\",\"color\":\"white\",\"italic\":\"false\"}]"},CustomPotionEffects:[{Id:1b,Amplifier:0b,Duration:100,ShowParticles:1b},{Id:8b,Amplifier:1b,Duration:100,ShowParticles:1b},{Id:5b,Amplifier:0b,Duration:100,ShowParticles:1b},{Id:16b,Amplifier:0b,Duration:100,ShowParticles:0b},{Id:11b,Amplifier:0b,Duration:100,ShowParticles:1b}],Potion:"minecraft:thick"}
 
 #bolt delay
 execute as @s[scores={boltdelay=0}] at @s run function game:spells/manaup
