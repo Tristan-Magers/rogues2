@@ -10,9 +10,11 @@ effect clear @s minecraft:slowness
 effect clear @s minecraft:levitation
 
 effect give @s minecraft:fire_resistance 1 100 true
-effect give @s minecraft:resistance 1 100 true
+effect give @s minecraft:resistance 3 100 true
 effect give @s minecraft:weakness 1 100 true
 effect give @s minecraft:invisibility 1 100 true
+
+scoreboard players set @s Invul 60
 
 execute as @s[x=69,y=35,z=-33,distance=..2,nbt={Fire:-20s}] run tp @s 69 38.3 -30 180 0
 execute as @s[nbt=!{Fire:-20s}] run tp 69 35 -33

@@ -14,7 +14,7 @@ execute if entity @e[scores={map=5}] run function game:game/maps/map5/portal
 
 #lavatick
 execute if entity @e[scores={map=2,lavatick=100..}] run function game:game/maps/map2/lavatick
-execute if entity @e[scores={map=4,lavatick=5..}] run fill 212 26 -107 171 26 -36 air replace water
+execute if entity @e[scores={map=4,lavatick=5..}] run fill 1212 26 -107 1171 26 -36 air replace water
 execute if entity @e[scores={map=4,lavatick=5..}] run scoreboard players set @e[scores={lavatick=1..}] lavatick 0
 
 #capture point code

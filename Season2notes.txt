@@ -1,3 +1,23 @@
 * Season 2 Update *
 
-TBA
+[Gernal]
+- Players get 2 more seconds of invulnerability when coming out of a portal (1s -> 3s)
+- All items and spells have lore text that gives details on the move
+- Generally improved colors for items
+
+[Characters]
+
+Pluto
+- Throwing Hurricane causes it's melee charge to reset
+- Shadow Spikes shoot 1 less spike (11 -> 10)
+
+[Maps]
+
+Mountain Temple
+- Relocated map to reduce large lag spikes
+
+[Bug Fixes]
+- Some moves could bypass portal invulnerability
+- Despawing Frost Pillars could break part of active frost pillars
+- Fixed lore text on Fire Fist
+- Fixed lore text on Hurricane
