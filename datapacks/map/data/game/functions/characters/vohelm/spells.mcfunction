@@ -2,7 +2,7 @@
 execute as @s[nbt={SelectedItem:{id:"minecraft:purple_dye"}}] at @s run playsound minecraft:entity.ghast.shoot master @a ~ ~ ~ 1 1
 execute as @s[nbt={SelectedItem:{id:"minecraft:purple_dye"}}] at @s run playsound minecraft:entity.ghast.shoot master @a ~ ~ ~ 1 1.5
 execute as @s[nbt={SelectedItem:{id:"minecraft:purple_dye"}}] at @s run playsound minecraft:block.enchantment_table.use master @a ~ ~ ~ .7 2
-execute as @s[nbt={SelectedItem:{id:"minecraft:purple_dye"}}] at @s run summon armor_stand ~ ~ ~ {Invisible:1,NoGravity:1,Invulnerable:1,Marker:1,Tags:["pshot"]}
+execute as @s[nbt={SelectedItem:{id:"minecraft:purple_dye"}}] at @s run summon armor_stand ~ ~ ~ {Invisible:1,NoGravity:1,Invulnerable:1,Marker:1,Silent:1,Silent:1,Tags:["pshot"]}
 execute as @s[nbt={SelectedItem:{id:"minecraft:purple_dye"}}] at @s run tp @e[tag=pshot,sort=nearest,limit=1] @p
 execute as @s[nbt={SelectedItem:{id:"minecraft:purple_dye"}}] at @s run tp @e[tag=pshot,sort=nearest,limit=1] ~ ~1.7 ~
 execute as @s[nbt={SelectedItem:{id:"minecraft:purple_dye"}}] at @s run execute as @e[tag=pshot,sort=nearest,limit=1] at @s run function game:faceaway
@@ -21,7 +21,7 @@ scoreboard players set @s[nbt={SelectedItem:{id:"minecraft:sugar"}}] nocap 44
 scoreboard players remove @s[nbt={SelectedItem:{id:"minecraft:sugar"}}] Mana 6
 
 #smoke bomb
-#execute as @s[nbt={SelectedItem:{id:"minecraft:bone"}}] at @s run summon armor_stand ~ ~ ~ {Invisible:1,NoGravity:1,Invulnerable:1,Marker:1,Tags:["sb"]}
+#execute as @s[nbt={SelectedItem:{id:"minecraft:bone"}}] at @s run summon armor_stand ~ ~ ~ {Invisible:1,NoGravity:1,Invulnerable:1,Marker:1,Silent:1,Silent:1,Tags:["sb"]}
 #execute as @s[nbt={SelectedItem:{id:"minecraft:bone"}}] at @s run tp @e[tag=sb,sort=nearest,limit=1] @p
 #execute as @s[nbt={SelectedItem:{id:"minecraft:bone"}}] at @s run scoreboard players set @e[tag=sb,sort=nearest,limit=1] move 28
 #execute as @s[nbt={SelectedItem:{id:"minecraft:bone"}}] at @s run tp @e[tag=sb,sort=nearest,limit=1] ~ ~1.7 ~

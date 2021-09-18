@@ -7,9 +7,11 @@ execute as @s[tag=!spiritworld] at @s run function game:characters/vohelm/active
 #execute as @s[tag=!spiritworld,scores={Mana=3..},nbt=!{Inventory:[{id:"minecraft:golden_apple",Slot:4b}]}] run item replace entity @s hotbar.4 with golden_apple{display:{Name:"[{\"text\":\"Sacred Berries\",\"color\":\"green\",\"italic\":\"false\",\"bold\":\"true\"},{\"text\":\" (\",\"color\":\"white\",\"italic\":\"false\"},{\"text\":\"Heal 4\",\"color\":\"red\",\"italic\":\"false\"},{\"text\":\" / \",\"color\":\"white\",\"italic\":\"false\"},{\"text\":\"Glow nearest enemy\",\"color\":\"gray\",\"italic\":\"false\"},{\"text\":\") [\",\"color\":\"white\",\"italic\":\"false\"},{\"text\":\"3 Mana\",\"color\":\"gold\",\"italic\":\"false\"},{\"text\":\"]\",\"color\":\"white\",\"italic\":\"false\"}]"}}
 execute as @s[tag=!spiritworld,scores={Mana=6..},nbt=!{Inventory:[{id:"minecraft:golden_apple",Slot:4b}]}] run item replace entity @s hotbar.4 with golden_apple{display:{Name:"[{\"text\":\"Sacred Berries\",\"color\":\"green\",\"italic\":\"false\",\"bold\":\"true\"},{\"text\":\" (\",\"color\":\"white\",\"italic\":\"false\"},{\"text\":\"Heal 6\",\"color\":\"red\",\"italic\":\"false\"},{\"text\":\" / Speed) [\",\"color\":\"white\",\"italic\":\"false\"},{\"text\":\"6 Mana\",\"color\":\"gold\",\"italic\":\"false\"},{\"text\":\"]\",\"color\":\"white\",\"italic\":\"false\"}]"}}
 
+attribute @s minecraft:generic.attack_damage base set 1
+
 scoreboard players operation @e[tag=totem] playerID -= @s playerID
-execute as @s at @s if entity @e[tag=totem,distance=..7,scores={playerID=0}] run effect give @s minecraft:jump_boost 2 2
-execute as @s at @s if entity @e[tag=totem,distance=..7,scores={playerID=0}] run effect give @s[tag=wood] minecraft:strength 1
+execute as @s at @s if entity @e[tag=totem,distance=..7,scores={playerID=0}] run effect give @s minecraft:jump_boost 2 1
+execute as @s at @s if entity @e[tag=totem,distance=..7,scores={playerID=0}] run attribute @s[tag=wood] minecraft:generic.attack_damage base set 3
 execute as @s at @s if entity @e[tag=totem,distance=..7,scores={playerID=0}] run execute as @e[tag=totem,distance=..8,scores={playerID=0}] at @s run particle dust 1.0 0.5 0.5 1.0 ~ ~1 ~ .3 .5 .3 0 2 force
 execute as @s at @s if entity @e[tag=totem,distance=..7,scores={playerID=0}] run particle dust 1.0 0.5 0.5 1.0 ~ ~.2 ~ .2 .1 .2 0 2 force
 execute as @s at @s if entity @e[tag=totem,distance=..7,scores={playerID=0}] run tag @s add totemdust

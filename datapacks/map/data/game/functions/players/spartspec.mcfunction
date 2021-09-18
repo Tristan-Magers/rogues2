@@ -12,7 +12,7 @@ execute if entity @e[scores={map=5}] run tp @s -992 54 -1000 90 0
 execute if entity @e[scores={map=..0}] run tp @s -93 40 60 -45 -5
 execute if entity @e[scores={map=6..}] run tp @s -93 40 60 -45 -5
 
-execute if entity @e[scores={map=1..5}] run me Joined Spectators
+execute if entity @e[scores={map=1..5}] run tellraw @a [{"text":"* "},{"selector":"@s"},{"text":" Joined Spectators"}]
 
 clear @s
 

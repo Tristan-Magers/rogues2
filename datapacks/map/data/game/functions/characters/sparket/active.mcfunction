@@ -25,3 +25,9 @@ execute as @s[scores={firefist=1..}] at @s run playsound minecraft:entity.blaze.
 execute as @s[scores={firefist=1..}] at @s run playsound minecraft:entity.blaze.shoot master @a ~ ~ ~ .7 1.2
 
 scoreboard players set @p firefist 0
+
+#fire heal
+scoreboard players add @s fireheal 1
+scoreboard players add @s[scores={fireheal=80..}] healthshow 1
+scoreboard players set @s[scores={fireheal=80..}] fireheal 0
+scoreboard players set @s[scores={healthshow=15..}] fireheal -120

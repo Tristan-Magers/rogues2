@@ -66,10 +66,10 @@ execute as @e[tag=ehit,tag=!me,type=!player] at @s run execute store result enti
 tag @a[tag=gethit] add hasres
 tag @a[tag=gethit,scores={manaboost=..0},tag=!totemres] remove hasres
 
-execute as @s[tag=!weakhit] run execute as @a[tag=ehit,tag=!me,tag=hasres] at @s run summon minecraft:armor_stand ~ ~ ~ {Invisible:1b,Marker:1,Invulnerable:1,Tags:["damnum"],CustomNameVisible:1b,Duration:999999,CustomName:'{"text":"-6"}'}
-execute as @s[tag=!weakhit] run execute as @a[tag=ehit,tag=!me,tag=!hasres] at @s run summon minecraft:armor_stand ~ ~ ~ {Invisible:1b,Marker:1,Invulnerable:1,Tags:["damnum"],CustomNameVisible:1b,Duration:999999,CustomName:'{"text":"-7"}'}
-execute as @s[tag=weakhit] run execute as @a[tag=ehit,tag=!me,tag=hasres] at @s run summon minecraft:armor_stand ~ ~ ~ {Invisible:1b,Marker:1,Invulnerable:1,Tags:["damnum"],CustomNameVisible:1b,Duration:999999,CustomName:'{"text":"-5"}'}
-execute as @s[tag=weakhit] run execute as @a[tag=ehit,tag=!me,tag=!hasres] at @s run summon minecraft:armor_stand ~ ~ ~ {Invisible:1b,Marker:1,Invulnerable:1,Tags:["damnum"],CustomNameVisible:1b,Duration:999999,CustomName:'{"text":"-6"}'}
+execute as @s[tag=!weakhit] run execute as @a[tag=ehit,tag=!me,tag=hasres] at @s run summon minecraft:armor_stand ~ ~ ~ {Invisible:1b,Marker:1,Silent:1,Silent:1,Invulnerable:1,Tags:["damnum"],CustomNameVisible:1b,Duration:999999,CustomName:'{"text":"-6"}'}
+execute as @s[tag=!weakhit] run execute as @a[tag=ehit,tag=!me,tag=!hasres] at @s run summon minecraft:armor_stand ~ ~ ~ {Invisible:1b,Marker:1,Silent:1,Silent:1,Invulnerable:1,Tags:["damnum"],CustomNameVisible:1b,Duration:999999,CustomName:'{"text":"-7"}'}
+execute as @s[tag=weakhit] run execute as @a[tag=ehit,tag=!me,tag=hasres] at @s run summon minecraft:armor_stand ~ ~ ~ {Invisible:1b,Marker:1,Silent:1,Silent:1,Invulnerable:1,Tags:["damnum"],CustomNameVisible:1b,Duration:999999,CustomName:'{"text":"-5"}'}
+execute as @s[tag=weakhit] run execute as @a[tag=ehit,tag=!me,tag=!hasres] at @s run summon minecraft:armor_stand ~ ~ ~ {Invisible:1b,Marker:1,Silent:1,Silent:1,Invulnerable:1,Tags:["damnum"],CustomNameVisible:1b,Duration:999999,CustomName:'{"text":"-6"}'}
 
 execute as @a[tag=ehit,tag=!me] at @s run particle minecraft:block minecraft:redstone_block ~ ~1 ~ .3 .8 .3 2 20 force
 execute as @a[tag=ehit,tag=!me] at @s run playsound minecraft:entity.player.hurt master @a

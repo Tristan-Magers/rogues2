@@ -15,13 +15,13 @@ effect give @s[scores={shotCharge=..-3},nbt={SelectedItem:{id:"minecraft:light_b
 scoreboard players set @s[scores={shotCharge=..-3},nbt={SelectedItem:{id:"minecraft:light_blue_dye"}}] shotCharge 7
 
 #frost pillar
-execute as @s[nbt={SelectedItem:{id:"minecraft:diamond"}}] at @s run summon minecraft:armor_stand ~ ~ ~ {NoGravity:1,Marker:1,Invulnerable:1,Tags:["frostwall"],ArmorItems:[{},{},{},{Count:1,id:ice}],Invisible:1}
+execute as @s[nbt={SelectedItem:{id:"minecraft:diamond"}}] at @s run summon minecraft:armor_stand ~ ~ ~ {NoGravity:1,Marker:1,Silent:1,Silent:1,Invulnerable:1,Tags:["frostwall"],ArmorItems:[{},{},{},{Count:1,id:ice}],Invisible:1}
 execute as @s[nbt={SelectedItem:{id:"minecraft:diamond"}}] at @s run tp @e[tag=frostwall,distance=...1,limit=1,sort=nearest] @p
 scoreboard players remove @s[nbt={SelectedItem:{id:"minecraft:diamond"}}] Mana 3
 execute as @s[nbt={SelectedItem:{id:"minecraft:diamond"}}] at @s run playsound minecraft:item.hoe.till master @a ~ ~ ~ 1 .3
 
 #wave
-execute as @s[nbt={SelectedItem:{id:"minecraft:clay_ball"}}] at @s run summon minecraft:armor_stand ~ ~ ~ {NoGravity:1,Marker:1,Invulnerable:1,Tags:["wave"],Invisible:1}
+execute as @s[nbt={SelectedItem:{id:"minecraft:clay_ball"}}] at @s run summon minecraft:armor_stand ~ ~ ~ {NoGravity:1,Marker:1,Silent:1,Silent:1,Invulnerable:1,Tags:["wave"],Invisible:1}
 execute as @s[nbt={SelectedItem:{id:"minecraft:clay_ball"}}] at @s run tp @e[tag=wave,distance=...1,limit=1,sort=nearest] @p
 execute as @s[nbt={SelectedItem:{id:"minecraft:clay_ball"}}] at @s run scoreboard players operation @e[tag=wave,distance=...1,limit=1,sort=nearest] playerID = @s playerID
 execute as @s[nbt={SelectedItem:{id:"minecraft:clay_ball"}}] at @s run execute as @e[tag=wave,distance=...2,limit=1,sort=nearest] at @s run tp @s ~ ~1.6 ~

@@ -18,7 +18,7 @@ execute as @s[nbt={SelectedItem:{id:"minecraft:nether_brick"}}] at @s run item r
 #summon spider
 
 #web
-execute as @s[nbt={SelectedItem:{id:"minecraft:iron_ingot"}}] at @s run summon minecraft:area_effect_cloud ~ ~ ~ {NoGravity:1,Marker:1,Invulnerable:1,CustomName:"\"web\"",Invisible:1,Duration:999999}
+execute as @s[nbt={SelectedItem:{id:"minecraft:iron_ingot"}}] at @s run summon minecraft:area_effect_cloud ~ ~ ~ {NoGravity:1,Marker:1,Silent:1,Silent:1,Invulnerable:1,CustomName:"\"web\"",Invisible:1,Duration:999999}
 execute as @s[nbt={SelectedItem:{id:"minecraft:iron_ingot"}}] at @s run tp @e[name=web,distance=...1,limit=1,sort=nearest] @p
 execute as @s[nbt={SelectedItem:{id:"minecraft:iron_ingot"}}] at @s run scoreboard players set @e[name=web,distance=...1,limit=1,sort=nearest] move 1
 execute as @s[nbt={SelectedItem:{id:"minecraft:iron_ingot"}}] at @s run execute as @e[name=web,distance=..2,limit=1,sort=nearest,scores={move=1}] at @s run tp @s ~ ~1.45 ~

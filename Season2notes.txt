@@ -7,6 +7,14 @@
 
 [Characters]
 
+Sparket
+- Added "Healing Fire",  a passive heal
+	- 10s after damage, 4s past that
+
+Vohelm
+- Totem gives 1 less level Jump Boost (3 -> 2)
+- Totem gives 1 less damage boost (+3 -> +2)
+
 Pluto
 - Throwing Hurricane causes it's melee charge to reset
 - Shadow Spikes shoot 1 less spike (11 -> 10)
@@ -21,3 +29,6 @@ Mountain Temple
 - Despawing Frost Pillars could break part of active frost pillars
 - Fixed lore text on Fire Fist
 - Fixed lore text on Hurricane
+- Ghost SHot says 3 arrows despite being 2
+
+network

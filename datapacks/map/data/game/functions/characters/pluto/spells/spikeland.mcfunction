@@ -11,7 +11,7 @@ playsound minecraft:block.fire.ambient master @a ~ ~ ~ 1 2
 
 particle minecraft:campfire_cosy_smoke ^ ^ ^-.3 .3 .3 .3 .03 4 force
 
-execute if block ~ ~ ~ cobweb run summon minecraft:area_effect_cloud ~ ~ ~ {NoGravity:1,Marker:1,Invulnerable:1,CustomName:"\"webnoblock\"",Invisible:1,Duration:45}
+execute if block ~ ~ ~ cobweb run summon minecraft:area_effect_cloud ~ ~ ~ {NoGravity:1,Marker:1,Silent:1,Silent:1,Invulnerable:1,CustomName:"\"webnoblock\"",Invisible:1,Duration:45}
 execute if block ~ ~ ~ cobweb run setblock ~ ~ ~ air destroy
 
 tag @e[tag=gethit] add resremove
@@ -24,7 +24,7 @@ scoreboard players remove @e[tag=gethit,type=!player] healthreal 1
 
 execute as @e[tag=gethit,type=!player] at @s run execute store result entity @s Health double 1 run scoreboard players get @s healthreal
 
-execute as @a[tag=!isthrow,tag=gethit] at @s run summon minecraft:armor_stand ~ ~ ~ {Marker:1,Invisible:1b,Invulnerable:1,Tags:["damnum"],CustomNameVisible:1b,Duration:999999,CustomName:'{"text":"-1"}'}
+execute as @a[tag=!isthrow,tag=gethit] at @s run summon minecraft:armor_stand ~ ~ ~ {Marker:1,Silent:1,Silent:1,Silent:1,Silent:1,Invisible:1b,Invulnerable:1,Tags:["damnum"],CustomNameVisible:1b,Duration:999999,CustomName:'{"text":"-1"}'}
 execute as @a[tag=!isthrow,tag=gethit] at @s run particle minecraft:block minecraft:redstone_block ~ ~1 ~ .3 .8 .3 2 20 force
 execute as @a[tag=!isthrow,tag=gethit] at @s run playsound minecraft:entity.player.hurt master @a
 
