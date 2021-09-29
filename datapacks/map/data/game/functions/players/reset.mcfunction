@@ -76,6 +76,8 @@ scoreboard players set @s boltdelay 0
 
 scoreboard players set @s fireheal 0
 
+scoreboard players set @s damageob 0
+
 clear @s
 title @s times 0 25 10
 

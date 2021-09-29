@@ -20,7 +20,8 @@ execute as @s[scores={arrowmot=..11664}] at @s run scoreboard players set @e[tag
 
 execute as @s at @s run tp @e[tag=hurpro,limit=1,sort=nearest] @p
 scoreboard players operation @e[tag=hurpro,limit=1,sort=nearest] playerID = @s playerID
-execute as @s at @s run tp @e[tag=hurpro,limit=1,sort=nearest] ~ ~.5 ~
+execute as @s[tag=!isshift] at @s run tp @e[tag=hurpro,limit=1,sort=nearest] ~ ~.5 ~
+execute as @s[tag=isshift] at @s run tp @e[tag=hurpro,limit=1,sort=nearest] ~ ~.2 ~
 execute as @e[tag=hurpro,limit=1,sort=nearest] at @s run function game:faceaway2
 
 clear @s bow

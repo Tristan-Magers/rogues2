@@ -206,3 +206,7 @@ tag @a remove t1win1
 
 #title area
 clear @a[x=-145,y=23,z=-45,distance=..20,gamemode=adventure]
+
+#reset scores
+scoreboard players set @a damageTaken 0
+scoreboard players set @a 10 10

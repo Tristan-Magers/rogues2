@@ -68,16 +68,16 @@ tag @a[tag=gethit,scores={manaboost=..0},tag=!totemres] remove hasres
 
 execute as @s[tag=!weakhit] run execute as @a[tag=ehit,tag=!me,tag=hasres] at @s run summon minecraft:armor_stand ~ ~ ~ {Invisible:1b,Marker:1,Silent:1,Silent:1,Invulnerable:1,Tags:["damnum"],CustomNameVisible:1b,Duration:999999,CustomName:'{"text":"-6"}'}
 execute as @s[tag=!weakhit] run execute as @a[tag=ehit,tag=!me,tag=!hasres] at @s run summon minecraft:armor_stand ~ ~ ~ {Invisible:1b,Marker:1,Silent:1,Silent:1,Invulnerable:1,Tags:["damnum"],CustomNameVisible:1b,Duration:999999,CustomName:'{"text":"-7"}'}
-execute as @s[tag=weakhit] run execute as @a[tag=ehit,tag=!me,tag=hasres] at @s run summon minecraft:armor_stand ~ ~ ~ {Invisible:1b,Marker:1,Silent:1,Silent:1,Invulnerable:1,Tags:["damnum"],CustomNameVisible:1b,Duration:999999,CustomName:'{"text":"-5"}'}
-execute as @s[tag=weakhit] run execute as @a[tag=ehit,tag=!me,tag=!hasres] at @s run summon minecraft:armor_stand ~ ~ ~ {Invisible:1b,Marker:1,Silent:1,Silent:1,Invulnerable:1,Tags:["damnum"],CustomNameVisible:1b,Duration:999999,CustomName:'{"text":"-6"}'}
+execute as @s[tag=weakhit] run execute as @a[tag=ehit,tag=!me,tag=hasres] at @s run summon minecraft:armor_stand ~ ~ ~ {Invisible:1b,Marker:1,Silent:1,Silent:1,Invulnerable:1,Tags:["damnum"],CustomNameVisible:1b,Duration:999999,CustomName:'{"text":"-4"}'}
+execute as @s[tag=weakhit] run execute as @a[tag=ehit,tag=!me,tag=!hasres] at @s run summon minecraft:armor_stand ~ ~ ~ {Invisible:1b,Marker:1,Silent:1,Silent:1,Invulnerable:1,Tags:["damnum"],CustomNameVisible:1b,Duration:999999,CustomName:'{"text":"-5"}'}
 
 execute as @a[tag=ehit,tag=!me] at @s run particle minecraft:block minecraft:redstone_block ~ ~1 ~ .3 .8 .3 2 20 force
 execute as @a[tag=ehit,tag=!me] at @s run playsound minecraft:entity.player.hurt master @a
 
 execute as @s[tag=!weakhit] run scoreboard players remove @a[tag=ehit,tag=!me,tag=hasres] healthshow 6
 execute as @s[tag=!weakhit] run scoreboard players remove @a[tag=ehit,tag=!me,tag=!hasres] healthshow 7
-execute as @s[tag=weakhit] run scoreboard players remove @a[tag=ehit,tag=!me,tag=hasres] healthshow 5
-execute as @s[tag=weakhit] run scoreboard players remove @a[tag=ehit,tag=!me,tag=!hasres] healthshow 6
+execute as @s[tag=weakhit] run scoreboard players remove @a[tag=ehit,tag=!me,tag=hasres] healthshow 4
+execute as @s[tag=weakhit] run scoreboard players remove @a[tag=ehit,tag=!me,tag=!hasres] healthshow 5
 
 scoreboard players set @a[tag=ehit,tag=!me] glowing 22
 

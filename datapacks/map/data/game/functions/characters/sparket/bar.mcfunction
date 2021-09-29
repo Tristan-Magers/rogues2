@@ -23,4 +23,4 @@ execute as @s[scores={Mana=4..},nbt=!{Inventory:[{id:"minecraft:brick",Slot:4b}]
 
 execute as @s[scores={boostT=1..}] run item replace entity @s hotbar.4 with barrier{display:{Name:"{\"text\":\"In-Use\",\"color\":\"white\",\"italic\":\"false\"}"}} 1
 
-execute as @s[scores={Mana=0..}] run item replace entity @s hotbar.5 with paper{display:{Name:"[{\"text\":\"Healing Fire\",\"color\":\"gold\",\"italic\":\"false\",\"bold\":\"true\"},{\"text\":\" : Heal while not in battle (passive effect)\",\"color\":\"white\",\"italic\":\"false\",\"bold\":\"false\"}]"}}
+execute as @s[scores={Mana=0..}] run item replace entity @s hotbar.5 with gold_ingot{display:{Name:"[{\"text\":\"Healing Fire\",\"color\":\"gold\",\"italic\":\"false\",\"bold\":\"true\"},{\"text\":\" : Heal while not in battle (passive effect)\",\"color\":\"white\",\"italic\":\"false\",\"bold\":\"false\"}]",Lore:['{"text":"Heal after not taking damage for 10 seconds","color":"white","italic":false}','{"text":"And every 4 seconds past that","color":"gold","italic":false}']}}

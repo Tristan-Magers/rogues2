@@ -4,6 +4,11 @@ scoreboard players add @s gertimer 1
 
 execute as @s[tag=startsb,scores={gertimer=1}] at @s run function game:characters/barbose/spells/sbstart
 
+execute as @s[scores={gertimer=34}] at @s run scoreboard players operation @a playerID -= @s playerID
+execute as @s[scores={gertimer=34}] at @s run effect give @p[scores={playerID=0}] minecraft:resistance 1 1
+execute as @s[scores={gertimer=34}] at @s run tag @p[scores={playerID=0},distance=..4] add nores
+execute as @s[scores={gertimer=34}] at @s run scoreboard players operation @a playerID += @s playerID
+
 execute as @s[scores={gertimer=34}] at @s run summon creeper ~ ~.8 ~ {ingited:1,Fuse:0,ExplosionRadius:2}
 execute as @s[scores={gertimer=34}] at @s run scoreboard players set @e[distance=..4,name=web] move 1045
 

@@ -1,12 +1,12 @@
-scoreboard players set @e[scores={map=1..5},tag=ranmap,tag=back] map 5
-scoreboard players set @e[scores={map=1..5},tag=ranmap,tag=!back] map 1
-scoreboard players set @e[scores={map=6..},tag=ranmap] map 1
-scoreboard players set @e[scores={map=..0},tag=ranmap] map 5
+scoreboard players set @e[scores={map=1..6},tag=ranmap,tag=back] map 6
+scoreboard players set @e[scores={map=1..6},tag=ranmap,tag=!back] map 1
+scoreboard players set @e[scores={map=7..},tag=ranmap] map 1
+scoreboard players set @e[scores={map=..0},tag=ranmap] map 6
 
 tag @e[scores={map=-100..}] remove back
-tag @e[scores={map=1..5}] remove ranmap
+tag @e[scores={map=1..6}] remove ranmap
 
-tag @e[scores={map=6..},tag=!ranmap] add ranmap
+tag @e[scores={map=7..},tag=!ranmap] add ranmap
 tag @e[scores={map=..0},tag=!ranmap] add ranmap
 
 execute if entity @e[scores={map=1},tag=!ranmap] run tellraw @a [{"text":"Map Selected: "},{"text":"Flower Temple","color":"yellow"}]
@@ -14,6 +14,7 @@ execute if entity @e[scores={map=2},tag=!ranmap] run tellraw @a [{"text":"Map Se
 execute if entity @e[scores={map=3},tag=!ranmap] run tellraw @a [{"text":"Map Selected: "},{"text":"Snow Temple","color":"aqua"}]
 execute if entity @e[scores={map=4},tag=!ranmap] run tellraw @a [{"text":"Map Selected: "},{"text":"Mountain Temple","color":"green"}]
 execute if entity @e[scores={map=5},tag=!ranmap] run tellraw @a [{"text":"Map Selected: "},{"text":"Island Temple","color":"dark_aqua"}]
+execute if entity @e[scores={map=6},tag=!ranmap] run tellraw @a [{"text":"Map Selected: "},{"text":"Forest Temple","color":"dark_green"}]
 execute if entity @e[tag=ranmap] run tellraw @a [{"text":"Map Selected: "},{"text":"Random","color":"gray"}]
 
 setblock -77 43 67 air

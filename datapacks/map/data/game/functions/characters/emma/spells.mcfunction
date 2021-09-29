@@ -1,16 +1,20 @@
 #water trident
+execute as @s[nbt={SelectedItem:{id:"minecraft:kelp"}},scores={gettri=..-2}] at @s run playsound minecraft:item.trident.return master @a ~ ~ ~ 1 0
+execute as @s[nbt={SelectedItem:{id:"minecraft:kelp"}},scores={gettri=..-2}] at @s run playsound minecraft:item.trident.return master @a ~ ~ ~ 1 1.3
 scoreboard players remove @s[nbt={SelectedItem:{id:"minecraft:kelp"}},scores={gettri=..-2}] Mana 6
 scoreboard players set @s[nbt={SelectedItem:{id:"minecraft:kelp"}},scores={gettri=..-2}] trident 1
 scoreboard players set @s[nbt={SelectedItem:{id:"minecraft:kelp"}},scores={gettri=..-2}] tridentH 3
 scoreboard players set @s[nbt={SelectedItem:{id:"minecraft:kelp"}},scores={gettri=..-2}] gettri 8
 
 #lightning shot
+effect give @s[scores={shotCharge=..-3},nbt={SelectedItem:{id:"minecraft:light_blue_dye"}}] slowness 1 0 true
 execute as @s[scores={shotCharge=..-3},nbt={SelectedItem:{id:"minecraft:light_blue_dye"}}] at @s run playsound minecraft:block.conduit.deactivate master @a ~ ~ ~ 1 2
 execute as @s[scores={shotCharge=..-3},nbt={SelectedItem:{id:"minecraft:light_blue_dye"}}] at @s run playsound minecraft:block.dispenser.dispense master @a ~ ~ ~ 1 1.2
 execute as @s[scores={shotCharge=..-3},nbt={SelectedItem:{id:"minecraft:light_blue_dye"}}] at @s run playsound minecraft:entity.firework_rocket.launch master @a ~ ~ ~ 1 1.4
-scoreboard players remove @s[scores={shotCharge=..-3},nbt={SelectedItem:{id:"minecraft:light_blue_dye"}}] Mana 6
+scoreboard players remove @s[scores={shotCharge=..-3},nbt={SelectedItem:{id:"minecraft:light_blue_dye"}}] Mana 5
 scoreboard players set @s[scores={shotCharge=..-3},nbt={SelectedItem:{id:"minecraft:light_blue_dye"}}] glowing 22
-scoreboard players set @s[scores={shotCharge=..-3},nbt={SelectedItem:{id:"minecraft:light_blue_dye"}}] boltdelay 20
+scoreboard players set @s[scores={shotCharge=..-3},nbt={SelectedItem:{id:"minecraft:light_blue_dye"}}] boltdelay 999
+scoreboard players set @s[scores={shotCharge=..-3},nbt={SelectedItem:{id:"minecraft:light_blue_dye"}}] tridentU 1
 effect give @s[scores={shotCharge=..-3},nbt={SelectedItem:{id:"minecraft:light_blue_dye"}}] glowing 1
 scoreboard players set @s[scores={shotCharge=..-3},nbt={SelectedItem:{id:"minecraft:light_blue_dye"}}] shotCharge 7
 

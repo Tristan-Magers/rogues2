@@ -1,5 +1,9 @@
+tag @s remove isshift
+tag @s[scores={shift=1..}] add isshift
+
 scoreboard players add @s invis 0
 
+execute as @s at @s[tag=!watert] if block ~ ~ ~ water run scoreboard players set @s particles 15
 execute as @s at @s[tag=!watert] if block ~ ~ ~ water run particle bubble ~ ~.2 ~ .2 .2 .2 .2 15 force
 execute as @s at @s[tag=!watert] if block ~ ~ ~ water run particle minecraft:splash ~ ~ ~ .4 .3 .4 1 25 force
 execute as @s at @s if block ~ ~ ~ water run tag @s add watert
@@ -33,3 +37,6 @@ execute as @s at @s if block ~ ~ ~ minecraft:cobweb run particle minecraft:spit 
 
 scoreboard players add @s[scores={run=..0,invisoff=..0,noname=..50},tag=!lobby] noname 4
 scoreboard players set @s[scores={noname=50..},tag=!lobby] noname 50
+
+execute as @s[scores={fall=301..}] at @s run particle minecraft:block minecraft:obsidian ~ ~.1 ~ .2 .1 .2 .1 20 force
+scoreboard players set @s fall 0

@@ -9,6 +9,7 @@ execute if entity @e[scores={map=2}] run function game:game/maps/map2/portal
 execute if entity @e[scores={map=3}] run function game:game/maps/map3/portal
 execute if entity @e[scores={map=4}] run function game:game/maps/map4/portal
 execute if entity @e[scores={map=5}] run function game:game/maps/map5/portal
+execute if entity @e[scores={map=6}] run function game:game/maps/map6/portal
 
 #spec correct
 
@@ -24,6 +25,7 @@ execute if entity @e[scores={map=2}] run execute as @e[tag=map2,name=point,type=
 execute if entity @e[scores={map=3}] run execute as @e[tag=map3,name=point,type=minecraft:armor_stand] at @s run function game:game/point
 execute if entity @e[scores={map=4}] run execute as @e[tag=map4,name=point,type=minecraft:armor_stand] at @s run function game:game/point
 execute if entity @e[scores={map=5}] run execute as @e[tag=map5,name=point,type=minecraft:armor_stand] at @s run function game:game/point
+execute if entity @e[scores={map=6}] run execute as @e[tag=map6,name=point,type=minecraft:armor_stand] at @s run function game:game/point
 scoreboard players set @a[tag=!point] pointsT 0
 scoreboard players remove @a[scores={nocap=1..}] nocap 1
 

@@ -1,10 +1,11 @@
 #dagger
 scoreboard players set @s[nbt={SelectedItem:{id:"minecraft:feather"}}] wtimer 9999
 scoreboard players remove @s[nbt={SelectedItem:{id:"minecraft:feather"}}] Mana 3
-execute as @s[nbt={SelectedItem:{id:"minecraft:feather"}}] at @s run item replace entity @s hotbar.0 with minecraft:stone_sword{Unbreakable:1b,AttributeModifiers:[{AttributeName:"generic.attack_speed",Name:"generic.attack_speed",Amount:-3.58,Operation:0,UUID:[I;170452042,-618446418,-1993398134,2121527740]},{AttributeName:"generic.attack_damage",Name:"generic.attack_damage",Amount:12,Operation:0,UUID:[I;-2116117351,-814987369,-1539314661,1434952524]},{AttributeName:"generic.movement_speed",Name:"generic.movement_speed",Amount:0.05,Operation:2,UUID:[I;-1794733450,173426169,-1787019437,449822666]}],display:{Name:"[{\"text\":\"Draining Claw\",\"color\":\"gray\",\"italic\":\"false\",\"bold\":\"true\"},{\"text\":\" (\",\"color\":\"white\",\"italic\":\"false\"},{\"text\":\"13 Damage\",\"color\":\"red\",\"italic\":\"false\"},{\"text\":\") (\",\"color\":\"white\",\"italic\":\"false\"},{\"text\":\"Boost on hit\",\"color\":\"gold\",\"italic\":\"false\"},{\"text\":\")\",\"color\":\"white\",\"italic\":\"false\"}]"}}
+execute as @s[nbt={SelectedItem:{id:"minecraft:feather"}}] at @s run item replace entity @s hotbar.0 with minecraft:stone_sword{Unbreakable:1b,AttributeModifiers:[{AttributeName:"generic.attack_speed",Name:"generic.attack_speed",Amount:-3.58,Operation:0,UUID:[I;170452042,-618446418,-1993398134,2121527740],Slot:"mainhand"},{AttributeName:"generic.attack_damage",Name:"generic.attack_damage",Amount:12,Operation:0,UUID:[I;-2116117351,-814987369,-1539314661,1434952524],Slot:"mainhand"},{AttributeName:"generic.movement_speed",Name:"generic.movement_speed",Amount:0.05,Operation:2,UUID:[I;-1794733450,173426169,-1787019437,449822666],Slot:"mainhand"}],display:{Name:"[{\"text\":\"Draining Claw\",\"color\":\"gray\",\"italic\":\"false\",\"bold\":\"true\"},{\"text\":\" (\",\"color\":\"white\",\"italic\":\"false\"},{\"text\":\"13 Damage\",\"color\":\"red\",\"italic\":\"false\"},{\"text\":\") (\",\"color\":\"white\",\"italic\":\"false\"},{\"text\":\"Boost on hit\",\"color\":\"gold\",\"italic\":\"false\"},{\"text\":\")\",\"color\":\"white\",\"italic\":\"false\"}]",Lore:['{"text":"Deadly claws that steal health","color":"white","italic":false}','{"text":"1-3 Health steal","color":"green","italic":false}','{"text":"Speed and jump boost on hit","color":"green","italic":false}','{"text":"1 use","color":"red","italic":false}']}}
 
 #hover
 scoreboard players set @s[nbt={SelectedItem:{id:"minecraft:iron_nugget"}}] hover 40
+scoreboard players set @s[nbt={SelectedItem:{id:"minecraft:iron_nugget"}}] invisoff 40
 execute as @s[nbt={SelectedItem:{id:"minecraft:iron_nugget"}}] at @s run playsound minecraft:entity.bat.takeoff master @a ~ ~ ~ 1 0
 execute as @s[nbt={SelectedItem:{id:"minecraft:iron_nugget"}}] at @s run playsound minecraft:block.beacon.deactivate master @a ~ ~ ~ 1 .7
 execute as @s[nbt={SelectedItem:{id:"minecraft:iron_nugget"}}] at @s run playsound minecraft:block.beacon.deactivate master @a ~ ~ ~ 1 .4
@@ -13,7 +14,7 @@ scoreboard players remove @s[nbt={SelectedItem:{id:"minecraft:iron_nugget"}}] Ma
 #lethal shot
 scoreboard players set @s[nbt={SelectedItem:{id:"minecraft:nether_brick"}}] btimer 2
 scoreboard players remove @s[nbt={SelectedItem:{id:"minecraft:nether_brick"}}] Mana 7
-execute as @s[nbt={SelectedItem:{id:"minecraft:nether_brick"}}] at @s run item replace entity @s hotbar.1 with minecraft:bow{Damage:80,Unbreakable:1b,display:{Name:"[{\"text\":\"Ghost Bow\",\"color\":\"red\",\"italic\":\"false\",\"bold\":\"true\"},{\"text\":\" (\",\"color\":\"white\",\"italic\":\"false\"},{\"text\":\"Shoot through walls\",\"color\":\"gray\",\"italic\":\"false\"},{\"text\":\") [\",\"color\":\"white\",\"italic\":\"false\"},{\"text\":\"7 Damage\",\"color\":\"red\",\"italic\":\"false\"},{\"text\":\"]\",\"color\":\"white\",\"italic\":\"false\"}]"}} 1
+execute as @s[nbt={SelectedItem:{id:"minecraft:nether_brick"}}] at @s run item replace entity @s hotbar.1 with minecraft:bow{Damage:80,Unbreakable:1b,display:{Name:"[{\"text\":\"Ghost Bow\",\"color\":\"red\",\"italic\":\"false\",\"bold\":\"true\"},{\"text\":\" (\",\"color\":\"white\",\"italic\":\"false\"},{\"text\":\"Shoot through walls\",\"color\":\"gray\",\"italic\":\"false\"},{\"text\":\") [\",\"color\":\"white\",\"italic\":\"false\"},{\"text\":\"7 Damage\",\"color\":\"red\",\"italic\":\"false\"},{\"text\":\"]\",\"color\":\"white\",\"italic\":\"false\"}]",Lore:['{"text":"A bow that can shoot through walls","color":"white","italic":false}','{"text":"7 damage","color":"green","italic":false}','{"text":"5 damage through walls","color":"red","italic":false}']}} 1
 
 #summon spider
 
@@ -33,3 +34,6 @@ execute as @s[nbt={SelectedItem:{id:"minecraft:bone_meal"}}] at @s run tp @e[typ
 execute as @s[nbt={SelectedItem:{id:"minecraft:bone_meal"}}] at @s run scoreboard players operation @e[type=cave_spider,distance=...1,limit=1,sort=nearest] playerID = @s playerID
 execute as @s[nbt={SelectedItem:{id:"minecraft:bone_meal"}}] at @s run execute as @e[type=cave_spider,distance=...2,limit=1,sort=nearest] at @s run tp @s ~ ~.2 ~ ~ 0
 scoreboard players remove @s[nbt={SelectedItem:{id:"minecraft:bone_meal"}}] Mana 5
+
+#Sticky Hands
+tellraw @s[nbt={SelectedItem:{id:"minecraft:paper"}}] {"text":"[§c§l!§r] Move is active at all times and requires no further action.\n§6Hold shift while looking at a block to climb."}
