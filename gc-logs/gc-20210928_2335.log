@@ -1,0 +1,1555 @@
+[0.004s][info][gc] Using Parallel
+[0.006s][info][gc,init] Version: 16.0.2+7 (release)
+[0.006s][info][gc,init] CPUs: 8 total, 8 available
+[0.006s][info][gc,init] Memory: 32117M
+[0.006s][info][gc,init] Large Page Support: Disabled
+[0.006s][info][gc,init] NUMA Support: Disabled
+[0.006s][info][gc,init] Compressed Oops: Enabled (Zero based)
+[0.006s][info][gc,init] Alignments: Space 512K, Generation 512K, Heap 2M
+[0.006s][info][gc,init] Heap Min Capacity: 2054M
+[0.006s][info][gc,init] Heap Initial Capacity: 2054M
+[0.006s][info][gc,init] Heap Max Capacity: 3G
+[0.006s][info][gc,init] Pre-touch: Disabled
+[0.006s][info][gc,init] Parallel Workers: 4
+[0.006s][info][gc,metaspace] CDS disabled.
+[0.006s][info][gc,metaspace] Compressed class space mapped at: 0x0000000800000000-0x0000000840000000, reserved size: 1073741824
+[0.006s][info][gc,metaspace] Narrow klass base: 0x0000000800000000, Narrow klass shift: 0, Narrow klass range: 0x40000000
+[0.563s][info][safepoint   ] Safepoint "ICBufferFull", Time since last: 536730434 ns, Reaching safepoint: 247505 ns, At safepoint: 1500 ns, Total: 249005 ns
+[0.927s][info][gc,start    ] GC(0) Pause Young (Metadata GC Threshold)
+[0.935s][debug][gc,phases   ] GC(0) Scavenge 7.661ms
+[0.935s][debug][gc,ref      ] GC(0) Skipped phase 1 of Reference Processing: no references
+[0.935s][debug][gc,ref      ] GC(0) Skipped phase 3 of Reference Processing: no references
+[0.935s][debug][gc,phases   ] GC(0) Reference Processing 0.223ms
+[0.936s][debug][gc,phases   ] GC(0) Weak Processing 0.669ms
+[0.936s][debug][gc,age      ] GC(0) Desired survivor size 536870912 bytes, new threshold 7 (max threshold 15)
+[0.936s][info ][gc,heap     ] GC(0) PSYoungGen: 178032K(1572864K)->18116K(1572864K) Eden: 178032K(1048576K)->0K(1048576K) From: 0K(524288K)->18116K(524288K)
+[0.936s][info ][gc,heap     ] GC(0) ParOldGen: 0K(6144K)->80K(6144K)
+[0.936s][info ][gc,metaspace] GC(0) Metaspace: 20998K(21248K)->20998K(21248K) NonClass: 18633K(18752K)->18633K(18752K) Class: 2365K(2496K)->2365K(2496K)
+[0.936s][info ][gc          ] GC(0) Pause Young (Metadata GC Threshold) 173M->17M(1542M) 9.130ms
+[0.936s][info ][gc,cpu      ] GC(0) User=0.02s Sys=0.02s Real=0.01s
+[0.936s][debug][gc,phases   ] GC(1) Pre Compact 0.020ms
+[0.936s][info ][gc,start    ] GC(1) Pause Full (Metadata GC Threshold)
+[0.936s][info ][gc,phases,start] GC(1) Marking Phase
+[0.944s][debug][gc,phases      ] GC(1) Par Mark 7.987ms
+[0.944s][debug][gc,ref         ] GC(1) Skipped phase 1 of Reference Processing: no references
+[0.944s][debug][gc,ref         ] GC(1) Skipped phase 3 of Reference Processing: no references
+[0.944s][debug][gc,phases      ] GC(1) Reference Processing 0.128ms
+[0.945s][debug][gc,phases      ] GC(1) Weak Processing 0.256ms
+[0.945s][debug][gc,phases      ] GC(1) ClassLoaderData 0.035ms
+[0.945s][debug][gc,phases      ] GC(1) Trigger cleanups 0.000ms
+[0.948s][debug][gc,phases      ] GC(1) Class Unloading 3.739ms
+[0.948s][info ][gc,phases      ] GC(1) Marking Phase 12.284ms
+[0.948s][info ][gc,phases,start] GC(1) Summary Phase
+[0.948s][info ][gc,phases      ] GC(1) Summary Phase 0.010ms
+[0.948s][info ][gc,phases,start] GC(1) Adjust Roots
+[0.952s][info ][gc,phases      ] GC(1) Adjust Roots 3.553ms
+[0.952s][info ][gc,phases,start] GC(1) Compaction Phase
+[0.960s][info ][gc,phases      ] GC(1) Compaction Phase 8.331ms
+[0.960s][info ][gc,phases,start] GC(1) Post Compact
+[0.961s][info ][gc,phases      ] GC(1) Post Compact 0.806ms
+[0.961s][info ][gc,heap        ] GC(1) PSYoungGen: 18116K(1572864K)->12395K(1572864K) Eden: 0K(1048576K)->0K(1048576K) From: 18116K(524288K)->12395K(524288K)
+[0.961s][info ][gc,heap        ] GC(1) ParOldGen: 80K(6144K)->5681K(6144K)
+[0.961s][info ][gc,metaspace   ] GC(1) Metaspace: 20998K(21248K)->20998K(21248K) NonClass: 18633K(18752K)->18633K(18752K) Class: 2365K(2496K)->2365K(2496K)
+[0.961s][info ][gc             ] GC(1) Pause Full (Metadata GC Threshold) 17M->17M(1542M) 25.207ms
+[0.961s][info ][gc,cpu         ] GC(1) User=0.08s Sys=0.00s Real=0.03s
+[0.961s][info ][safepoint      ] Safepoint "CollectForMetadataAllocation", Time since last: 363545861 ns, Reaching safepoint: 246005 ns, At safepoint: 34548933 ns, Total: 34794938 ns
+[1.195s][info ][safepoint      ] Safepoint "ICBufferFull", Time since last: 233541779 ns, Reaching safepoint: 220404 ns, At safepoint: 7200 ns, Total: 227604 ns
+[1.211s][info ][safepoint      ] Safepoint "ICBufferFull", Time since last: 15767689 ns, Reaching safepoint: 235404 ns, At safepoint: 15501 ns, Total: 250905 ns
+[1.222s][info ][safepoint      ] Safepoint "ICBufferFull", Time since last: 10512392 ns, Reaching safepoint: 164703 ns, At safepoint: 9500 ns, Total: 174203 ns
+[1.238s][info ][safepoint      ] Safepoint "ICBufferFull", Time since last: 16001794 ns, Reaching safepoint: 86901 ns, At safepoint: 9800 ns, Total: 96701 ns
+[1.242s][info ][safepoint      ] Safepoint "ICBufferFull", Time since last: 3731869 ns, Reaching safepoint: 56701 ns, At safepoint: 5400 ns, Total: 62101 ns
+[1.248s][info ][safepoint      ] Safepoint "ICBufferFull", Time since last: 5768106 ns, Reaching safepoint: 78301 ns, At safepoint: 11700 ns, Total: 90001 ns
+[1.252s][info ][safepoint      ] Safepoint "ICBufferFull", Time since last: 4610685 ns, Reaching safepoint: 77001 ns, At safepoint: 10100 ns, Total: 87101 ns
+[1.257s][info ][safepoint      ] Safepoint "ICBufferFull", Time since last: 4362380 ns, Reaching safepoint: 68702 ns, At safepoint: 3100 ns, Total: 71802 ns
+[1.261s][info ][safepoint      ] Safepoint "ICBufferFull", Time since last: 4198276 ns, Reaching safepoint: 45901 ns, At safepoint: 5000 ns, Total: 50901 ns
+[1.271s][info ][safepoint      ] Safepoint "ICBufferFull", Time since last: 10038584 ns, Reaching safepoint: 110002 ns, At safepoint: 7401 ns, Total: 117403 ns
+[1.272s][info ][safepoint      ] Safepoint "ICBufferFull", Time since last: 824315 ns, Reaching safepoint: 29700 ns, At safepoint: 5000 ns, Total: 34700 ns
+[1.273s][info ][safepoint      ] Safepoint "ICBufferFull", Time since last: 849616 ns, Reaching safepoint: 27900 ns, At safepoint: 1100 ns, Total: 29000 ns
+[1.358s][info ][safepoint      ] Safepoint "ICBufferFull", Time since last: 85155461 ns, Reaching safepoint: 201703 ns, At safepoint: 10601 ns, Total: 212304 ns
+[1.360s][info ][safepoint      ] Safepoint "ICBufferFull", Time since last: 1784032 ns, Reaching safepoint: 69702 ns, At safepoint: 1700 ns, Total: 71402 ns
+[1.361s][info ][safepoint      ] Safepoint "ICBufferFull", Time since last: 1373725 ns, Reaching safepoint: 26800 ns, At safepoint: 1700 ns, Total: 28500 ns
+[1.363s][info ][safepoint      ] Safepoint "ICBufferFull", Time since last: 1102520 ns, Reaching safepoint: 28301 ns, At safepoint: 1100 ns, Total: 29401 ns
+[1.364s][info ][safepoint      ] Safepoint "ICBufferFull", Time since last: 1461327 ns, Reaching safepoint: 16400 ns, At safepoint: 1100 ns, Total: 17500 ns
+[1.365s][info ][safepoint      ] Safepoint "ICBufferFull", Time since last: 1243323 ns, Reaching safepoint: 19700 ns, At safepoint: 7600 ns, Total: 27300 ns
+[1.367s][info ][safepoint      ] Safepoint "ICBufferFull", Time since last: 1344725 ns, Reaching safepoint: 31601 ns, At safepoint: 1400 ns, Total: 33001 ns
+[1.368s][info ][safepoint      ] Safepoint "ICBufferFull", Time since last: 1059119 ns, Reaching safepoint: 30501 ns, At safepoint: 900 ns, Total: 31401 ns
+[1.369s][info ][safepoint      ] Safepoint "ICBufferFull", Time since last: 1249923 ns, Reaching safepoint: 36200 ns, At safepoint: 8500 ns, Total: 44700 ns
+[1.370s][info ][safepoint      ] Safepoint "ICBufferFull", Time since last: 900417 ns, Reaching safepoint: 32600 ns, At safepoint: 3701 ns, Total: 36301 ns
+[1.371s][info ][safepoint      ] Safepoint "ICBufferFull", Time since last: 1167021 ns, Reaching safepoint: 19000 ns, At safepoint: 1100 ns, Total: 20100 ns
+[1.373s][info ][safepoint      ] Safepoint "ICBufferFull", Time since last: 1435927 ns, Reaching safepoint: 17600 ns, At safepoint: 1300 ns, Total: 18900 ns
+[1.375s][info ][safepoint      ] Safepoint "ICBufferFull", Time since last: 1924335 ns, Reaching safepoint: 39501 ns, At safepoint: 5400 ns, Total: 44901 ns
+[1.375s][info ][safepoint      ] Safepoint "ICBufferFull", Time since last: 638212 ns, Reaching safepoint: 26300 ns, At safepoint: 900 ns, Total: 27200 ns
+[1.378s][info ][safepoint      ] Safepoint "ICBufferFull", Time since last: 2483346 ns, Reaching safepoint: 39200 ns, At safepoint: 1500 ns, Total: 40700 ns
+[1.387s][info ][safepoint      ] Safepoint "ICBufferFull", Time since last: 8548757 ns, Reaching safepoint: 132403 ns, At safepoint: 6200 ns, Total: 138603 ns
+[1.390s][info ][safepoint      ] Safepoint "ICBufferFull", Time since last: 3309760 ns, Reaching safepoint: 37701 ns, At safepoint: 1900 ns, Total: 39601 ns
+[1.420s][info ][safepoint      ] Safepoint "ICBufferFull", Time since last: 29619043 ns, Reaching safepoint: 95801 ns, At safepoint: 3901 ns, Total: 99702 ns
+[1.420s][info ][safepoint      ] Safepoint "ICBufferFull", Time since last: 714113 ns, Reaching safepoint: 27500 ns, At safepoint: 1000 ns, Total: 28500 ns
+[1.463s][info ][safepoint      ] Safepoint "ICBufferFull", Time since last: 42444078 ns, Reaching safepoint: 155703 ns, At safepoint: 14700 ns, Total: 170403 ns
+[1.468s][info ][safepoint      ] Safepoint "ICBufferFull", Time since last: 4743087 ns, Reaching safepoint: 57901 ns, At safepoint: 12300 ns, Total: 70201 ns
+[1.470s][info ][safepoint      ] Safepoint "ICBufferFull", Time since last: 2613148 ns, Reaching safepoint: 31701 ns, At safepoint: 1300 ns, Total: 33001 ns
+[1.543s][info ][safepoint      ] Safepoint "ICBufferFull", Time since last: 72096721 ns, Reaching safepoint: 84401 ns, At safepoint: 3000 ns, Total: 87401 ns
+[1.549s][info ][safepoint      ] Safepoint "ICBufferFull", Time since last: 5925409 ns, Reaching safepoint: 50401 ns, At safepoint: 4000 ns, Total: 54401 ns
+[1.552s][info ][safepoint      ] Safepoint "ICBufferFull", Time since last: 3602966 ns, Reaching safepoint: 47501 ns, At safepoint: 3100 ns, Total: 50601 ns
+[1.554s][info ][safepoint      ] Safepoint "ICBufferFull", Time since last: 1863334 ns, Reaching safepoint: 34901 ns, At safepoint: 1600 ns, Total: 36501 ns
+[1.557s][info ][safepoint      ] Safepoint "ICBufferFull", Time since last: 3151157 ns, Reaching safepoint: 26601 ns, At safepoint: 1800 ns, Total: 28401 ns
+[1.559s][info ][safepoint      ] Safepoint "ICBufferFull", Time since last: 2170440 ns, Reaching safepoint: 19000 ns, At safepoint: 1200 ns, Total: 20200 ns
+[1.563s][info ][safepoint      ] Safepoint "ICBufferFull", Time since last: 2993855 ns, Reaching safepoint: 17600 ns, At safepoint: 1200 ns, Total: 18800 ns
+[1.563s][info ][safepoint      ] Safepoint "ICBufferFull", Time since last: 724214 ns, Reaching safepoint: 13900 ns, At safepoint: 700 ns, Total: 14600 ns
+[1.565s][info ][safepoint      ] Safepoint "ICBufferFull", Time since last: 1361925 ns, Reaching safepoint: 17400 ns, At safepoint: 1000 ns, Total: 18400 ns
+[1.565s][info ][safepoint      ] Safepoint "ICBufferFull", Time since last: 729814 ns, Reaching safepoint: 14500 ns, At safepoint: 800 ns, Total: 15300 ns
+[1.569s][info ][safepoint      ] Safepoint "ICBufferFull", Time since last: 3425463 ns, Reaching safepoint: 26200 ns, At safepoint: 1600 ns, Total: 27800 ns
+[1.570s][info ][safepoint      ] Safepoint "ICBufferFull", Time since last: 1548228 ns, Reaching safepoint: 27801 ns, At safepoint: 800 ns, Total: 28601 ns
+[1.572s][info ][safepoint      ] Safepoint "ICBufferFull", Time since last: 1181722 ns, Reaching safepoint: 26300 ns, At safepoint: 700 ns, Total: 27000 ns
+[1.573s][info ][safepoint      ] Safepoint "ICBufferFull", Time since last: 1264723 ns, Reaching safepoint: 25501 ns, At safepoint: 700 ns, Total: 26201 ns
+[1.576s][info ][safepoint      ] Safepoint "ICBufferFull", Time since last: 2682949 ns, Reaching safepoint: 22900 ns, At safepoint: 1300 ns, Total: 24200 ns
+[1.578s][info ][safepoint      ] Safepoint "ICBufferFull", Time since last: 2719850 ns, Reaching safepoint: 25301 ns, At safepoint: 1500 ns, Total: 26801 ns
+[1.580s][info ][safepoint      ] Safepoint "ICBufferFull", Time since last: 1692131 ns, Reaching safepoint: 31200 ns, At safepoint: 800 ns, Total: 32000 ns
+[1.581s][info ][safepoint      ] Safepoint "ICBufferFull", Time since last: 1380826 ns, Reaching safepoint: 21300 ns, At safepoint: 900 ns, Total: 22200 ns
+[1.585s][info ][safepoint      ] Safepoint "ICBufferFull", Time since last: 3804970 ns, Reaching safepoint: 32400 ns, At safepoint: 1500 ns, Total: 33900 ns
+[1.588s][info ][safepoint      ] Safepoint "ICBufferFull", Time since last: 2843853 ns, Reaching safepoint: 38700 ns, At safepoint: 1500 ns, Total: 40200 ns
+[1.599s][info ][safepoint      ] Safepoint "ICBufferFull", Time since last: 10682996 ns, Reaching safepoint: 128502 ns, At safepoint: 6300 ns, Total: 134802 ns
+[1.606s][info ][safepoint      ] Safepoint "ICBufferFull", Time since last: 7139831 ns, Reaching safepoint: 62101 ns, At safepoint: 3101 ns, Total: 65202 ns
+[1.610s][info ][safepoint      ] Safepoint "ICBufferFull", Time since last: 3628766 ns, Reaching safepoint: 50701 ns, At safepoint: 3300 ns, Total: 54001 ns
+[1.613s][info ][safepoint      ] Safepoint "ICBufferFull", Time since last: 2724950 ns, Reaching safepoint: 47301 ns, At safepoint: 6500 ns, Total: 53801 ns
+[1.616s][info ][safepoint      ] Safepoint "ICBufferFull", Time since last: 3061056 ns, Reaching safepoint: 49501 ns, At safepoint: 1900 ns, Total: 51401 ns
+[1.619s][info ][safepoint      ] Safepoint "ICBufferFull", Time since last: 2890553 ns, Reaching safepoint: 52001 ns, At safepoint: 2400 ns, Total: 54401 ns
+[1.622s][info ][safepoint      ] Safepoint "ICBufferFull", Time since last: 3048156 ns, Reaching safepoint: 30700 ns, At safepoint: 2700 ns, Total: 33400 ns
+[1.625s][info ][safepoint      ] Safepoint "ICBufferFull", Time since last: 3300661 ns, Reaching safepoint: 45101 ns, At safepoint: 2400 ns, Total: 47501 ns
+[1.626s][info ][safepoint      ] Safepoint "ICBufferFull", Time since last: 670312 ns, Reaching safepoint: 37701 ns, At safepoint: 1500 ns, Total: 39201 ns
+[1.629s][info ][safepoint      ] Safepoint "ICBufferFull", Time since last: 3539865 ns, Reaching safepoint: 31800 ns, At safepoint: 1200 ns, Total: 33000 ns
+[1.632s][info ][safepoint      ] Safepoint "ICBufferFull", Time since last: 2004437 ns, Reaching safepoint: 37401 ns, At safepoint: 1500 ns, Total: 38901 ns
+[1.634s][info ][safepoint      ] Safepoint "ICBufferFull", Time since last: 2359343 ns, Reaching safepoint: 24000 ns, At safepoint: 1500 ns, Total: 25500 ns
+[1.637s][info ][safepoint      ] Safepoint "ICBufferFull", Time since last: 3423063 ns, Reaching safepoint: 47101 ns, At safepoint: 5900 ns, Total: 53001 ns
+[1.638s][info ][safepoint      ] Safepoint "ICBufferFull", Time since last: 821515 ns, Reaching safepoint: 115002 ns, At safepoint: 7400 ns, Total: 122402 ns
+[1.642s][info ][safepoint      ] Safepoint "ICBufferFull", Time since last: 3356462 ns, Reaching safepoint: 111302 ns, At safepoint: 5900 ns, Total: 117202 ns
+[1.647s][info ][safepoint      ] Safepoint "ICBufferFull", Time since last: 4710186 ns, Reaching safepoint: 48101 ns, At safepoint: 1600 ns, Total: 49701 ns
+[1.647s][info ][safepoint      ] Safepoint "ICBufferFull", Time since last: 752314 ns, Reaching safepoint: 16100 ns, At safepoint: 800 ns, Total: 16900 ns
+[1.664s][info ][safepoint      ] Safepoint "ICBufferFull", Time since last: 16598104 ns, Reaching safepoint: 62902 ns, At safepoint: 3000 ns, Total: 65902 ns
+[1.665s][info ][safepoint      ] Safepoint "ICBufferFull", Time since last: 1461726 ns, Reaching safepoint: 32901 ns, At safepoint: 2000 ns, Total: 34901 ns
+[1.668s][info ][safepoint      ] Safepoint "ICBufferFull", Time since last: 2102339 ns, Reaching safepoint: 19600 ns, At safepoint: 1400 ns, Total: 21000 ns
+[1.670s][info ][safepoint      ] Safepoint "ICBufferFull", Time since last: 2468545 ns, Reaching safepoint: 35701 ns, At safepoint: 1200 ns, Total: 36901 ns
+[1.673s][info ][safepoint      ] Safepoint "ICBufferFull", Time since last: 3341461 ns, Reaching safepoint: 36901 ns, At safepoint: 5000 ns, Total: 41901 ns
+[1.676s][info ][safepoint      ] Safepoint "ICBufferFull", Time since last: 1998837 ns, Reaching safepoint: 43100 ns, At safepoint: 900 ns, Total: 44000 ns
+[1.680s][info ][safepoint      ] Safepoint "ICBufferFull", Time since last: 4390681 ns, Reaching safepoint: 38100 ns, At safepoint: 1801 ns, Total: 39901 ns
+[1.688s][info ][safepoint      ] Safepoint "ICBufferFull", Time since last: 7624239 ns, Reaching safepoint: 78402 ns, At safepoint: 2900 ns, Total: 81302 ns
+[1.690s][info ][safepoint      ] Safepoint "ICBufferFull", Time since last: 2552146 ns, Reaching safepoint: 60602 ns, At safepoint: 9600 ns, Total: 70202 ns
+[1.694s][info ][safepoint      ] Safepoint "ICBufferFull", Time since last: 3606366 ns, Reaching safepoint: 39301 ns, At safepoint: 12500 ns, Total: 51801 ns
+[1.695s][info ][safepoint      ] Safepoint "ICBufferFull", Time since last: 1294724 ns, Reaching safepoint: 21200 ns, At safepoint: 1000 ns, Total: 22200 ns
+[1.697s][info ][safepoint      ] Safepoint "ICBufferFull", Time since last: 1256123 ns, Reaching safepoint: 37601 ns, At safepoint: 1600 ns, Total: 39201 ns
+[1.701s][info ][safepoint      ] Safepoint "ICBufferFull", Time since last: 4044774 ns, Reaching safepoint: 45601 ns, At safepoint: 6900 ns, Total: 52501 ns
+[1.703s][info ][safepoint      ] Safepoint "ICBufferFull", Time since last: 1799333 ns, Reaching safepoint: 44201 ns, At safepoint: 5900 ns, Total: 50101 ns
+[1.703s][info ][safepoint      ] Safepoint "ICBufferFull", Time since last: 664712 ns, Reaching safepoint: 29300 ns, At safepoint: 1800 ns, Total: 31100 ns
+[1.705s][info ][safepoint      ] Safepoint "ICBufferFull", Time since last: 2120439 ns, Reaching safepoint: 21701 ns, At safepoint: 1200 ns, Total: 22901 ns
+[1.708s][info ][safepoint      ] Safepoint "ICBufferFull", Time since last: 2859852 ns, Reaching safepoint: 21700 ns, At safepoint: 1700 ns, Total: 23400 ns
+[1.710s][info ][safepoint      ] Safepoint "ICBufferFull", Time since last: 2176540 ns, Reaching safepoint: 29301 ns, At safepoint: 2000 ns, Total: 31301 ns
+[1.727s][info ][safepoint      ] Safepoint "ICBufferFull", Time since last: 16745607 ns, Reaching safepoint: 66101 ns, At safepoint: 5500 ns, Total: 71601 ns
+[1.746s][info ][safepoint      ] Safepoint "ICBufferFull", Time since last: 18720043 ns, Reaching safepoint: 65801 ns, At safepoint: 4200 ns, Total: 70001 ns
+[1.748s][info ][safepoint      ] Safepoint "ICBufferFull", Time since last: 1604230 ns, Reaching safepoint: 48401 ns, At safepoint: 2200 ns, Total: 50601 ns
+[1.749s][info ][safepoint      ] Safepoint "ICBufferFull", Time since last: 969318 ns, Reaching safepoint: 31000 ns, At safepoint: 2700 ns, Total: 33700 ns
+[1.750s][info ][safepoint      ] Safepoint "ICBufferFull", Time since last: 954918 ns, Reaching safepoint: 29700 ns, At safepoint: 1000 ns, Total: 30700 ns
+[1.751s][info ][safepoint      ] Safepoint "ICBufferFull", Time since last: 1150021 ns, Reaching safepoint: 18201 ns, At safepoint: 1000 ns, Total: 19201 ns
+[1.753s][info ][safepoint      ] Safepoint "ICBufferFull", Time since last: 2329542 ns, Reaching safepoint: 40401 ns, At safepoint: 1600 ns, Total: 42001 ns
+[1.755s][info ][safepoint      ] Safepoint "ICBufferFull", Time since last: 1935536 ns, Reaching safepoint: 41900 ns, At safepoint: 1600 ns, Total: 43500 ns
+[1.756s][info ][safepoint      ] Safepoint "ICBufferFull", Time since last: 950718 ns, Reaching safepoint: 21100 ns, At safepoint: 1300 ns, Total: 22400 ns
+[1.757s][info ][safepoint      ] Safepoint "ICBufferFull", Time since last: 1132921 ns, Reaching safepoint: 107502 ns, At safepoint: 5600 ns, Total: 113102 ns
+[1.761s][info ][safepoint      ] Safepoint "ICBufferFull", Time since last: 3441463 ns, Reaching safepoint: 57701 ns, At safepoint: 13600 ns, Total: 71301 ns
+[1.763s][info ][safepoint      ] Safepoint "ICBufferFull", Time since last: 1927936 ns, Reaching safepoint: 42100 ns, At safepoint: 2001 ns, Total: 44101 ns
+[1.764s][info ][safepoint      ] Safepoint "ICBufferFull", Time since last: 1391625 ns, Reaching safepoint: 34301 ns, At safepoint: 1500 ns, Total: 35801 ns
+[1.766s][info ][safepoint      ] Safepoint "ICBufferFull", Time since last: 1734931 ns, Reaching safepoint: 18301 ns, At safepoint: 7200 ns, Total: 25501 ns
+[1.771s][info ][safepoint      ] Safepoint "ICBufferFull", Time since last: 4367580 ns, Reaching safepoint: 46601 ns, At safepoint: 2200 ns, Total: 48801 ns
+[1.771s][info ][safepoint      ] Safepoint "ICBufferFull", Time since last: 788414 ns, Reaching safepoint: 25101 ns, At safepoint: 900 ns, Total: 26001 ns
+[1.773s][info ][safepoint      ] Safepoint "ICBufferFull", Time since last: 2091738 ns, Reaching safepoint: 31101 ns, At safepoint: 900 ns, Total: 32001 ns
+[1.775s][info ][safepoint      ] Safepoint "ICBufferFull", Time since last: 1443326 ns, Reaching safepoint: 16600 ns, At safepoint: 1200 ns, Total: 17800 ns
+[1.776s][info ][safepoint      ] Safepoint "ICBufferFull", Time since last: 1086020 ns, Reaching safepoint: 55001 ns, At safepoint: 2200 ns, Total: 57201 ns
+[1.778s][info ][safepoint      ] Safepoint "ICBufferFull", Time since last: 1623230 ns, Reaching safepoint: 32201 ns, At safepoint: 1700 ns, Total: 33901 ns
+[1.779s][info ][safepoint      ] Safepoint "ICBufferFull", Time since last: 1432526 ns, Reaching safepoint: 30001 ns, At safepoint: 1900 ns, Total: 31901 ns
+[1.781s][info ][safepoint      ] Safepoint "ICBufferFull", Time since last: 1499827 ns, Reaching safepoint: 19600 ns, At safepoint: 1200 ns, Total: 20800 ns
+[1.783s][info ][safepoint      ] Safepoint "ICBufferFull", Time since last: 1885535 ns, Reaching safepoint: 113202 ns, At safepoint: 5900 ns, Total: 119102 ns
+[1.784s][info ][safepoint      ] Safepoint "ICBufferFull", Time since last: 1643030 ns, Reaching safepoint: 32801 ns, At safepoint: 1200 ns, Total: 34001 ns
+[1.786s][info ][safepoint      ] Safepoint "ICBufferFull", Time since last: 1549828 ns, Reaching safepoint: 19601 ns, At safepoint: 700 ns, Total: 20301 ns
+[1.788s][info ][safepoint      ] Safepoint "ICBufferFull", Time since last: 2399944 ns, Reaching safepoint: 112702 ns, At safepoint: 6100 ns, Total: 118802 ns
+[1.790s][info ][safepoint      ] Safepoint "ICBufferFull", Time since last: 1579529 ns, Reaching safepoint: 31800 ns, At safepoint: 1700 ns, Total: 33500 ns
+[1.792s][info ][safepoint      ] Safepoint "ICBufferFull", Time since last: 1863935 ns, Reaching safepoint: 24800 ns, At safepoint: 4800 ns, Total: 29600 ns
+[1.794s][info ][safepoint      ] Safepoint "ICBufferFull", Time since last: 1967336 ns, Reaching safepoint: 42601 ns, At safepoint: 1200 ns, Total: 43801 ns
+[1.795s][info ][safepoint      ] Safepoint "ICBufferFull", Time since last: 1397126 ns, Reaching safepoint: 101501 ns, At safepoint: 5301 ns, Total: 106802 ns
+[1.797s][info ][safepoint      ] Safepoint "ICBufferFull", Time since last: 1563328 ns, Reaching safepoint: 36901 ns, At safepoint: 1200 ns, Total: 38101 ns
+[1.799s][info ][safepoint      ] Safepoint "ICBufferFull", Time since last: 1577329 ns, Reaching safepoint: 30400 ns, At safepoint: 1000 ns, Total: 31400 ns
+[1.801s][info ][safepoint      ] Safepoint "ICBufferFull", Time since last: 1819834 ns, Reaching safepoint: 37700 ns, At safepoint: 1100 ns, Total: 38800 ns
+[1.802s][info ][safepoint      ] Safepoint "ICBufferFull", Time since last: 1464627 ns, Reaching safepoint: 29201 ns, At safepoint: 1000 ns, Total: 30201 ns
+[1.804s][info ][safepoint      ] Safepoint "ICBufferFull", Time since last: 1678631 ns, Reaching safepoint: 29100 ns, At safepoint: 800 ns, Total: 29900 ns
+[1.804s][info ][safepoint      ] Safepoint "ICBufferFull", Time since last: 607011 ns, Reaching safepoint: 15001 ns, At safepoint: 800 ns, Total: 15801 ns
+[1.809s][info ][safepoint      ] Safepoint "ICBufferFull", Time since last: 4279678 ns, Reaching safepoint: 64601 ns, At safepoint: 4900 ns, Total: 69501 ns
+[1.811s][info ][safepoint      ] Safepoint "ICBufferFull", Time since last: 1778733 ns, Reaching safepoint: 37100 ns, At safepoint: 2301 ns, Total: 39401 ns
+[1.811s][info ][safepoint      ] Safepoint "ICBufferFull", Time since last: 814914 ns, Reaching safepoint: 37801 ns, At safepoint: 1900 ns, Total: 39701 ns
+[1.814s][info ][safepoint      ] Safepoint "ICBufferFull", Time since last: 2460945 ns, Reaching safepoint: 43401 ns, At safepoint: 2000 ns, Total: 45401 ns
+[1.817s][info ][safepoint      ] Safepoint "ICBufferFull", Time since last: 2835452 ns, Reaching safepoint: 32301 ns, At safepoint: 2700 ns, Total: 35001 ns
+[1.818s][info ][safepoint      ] Safepoint "ICBufferFull", Time since last: 806615 ns, Reaching safepoint: 21000 ns, At safepoint: 1500 ns, Total: 22500 ns
+[1.820s][info ][safepoint      ] Safepoint "ICBufferFull", Time since last: 2607748 ns, Reaching safepoint: 29600 ns, At safepoint: 1100 ns, Total: 30700 ns
+[1.823s][info ][safepoint      ] Safepoint "ICBufferFull", Time since last: 2654149 ns, Reaching safepoint: 32901 ns, At safepoint: 1700 ns, Total: 34601 ns
+[1.825s][info ][safepoint      ] Safepoint "ICBufferFull", Time since last: 1920335 ns, Reaching safepoint: 32000 ns, At safepoint: 1200 ns, Total: 33200 ns
+[1.827s][info ][safepoint      ] Safepoint "ICBufferFull", Time since last: 1853734 ns, Reaching safepoint: 31701 ns, At safepoint: 900 ns, Total: 32601 ns
+[1.829s][info ][safepoint      ] Safepoint "ICBufferFull", Time since last: 2051037 ns, Reaching safepoint: 21001 ns, At safepoint: 1000 ns, Total: 22001 ns
+[1.830s][info ][safepoint      ] Safepoint "ICBufferFull", Time since last: 1396425 ns, Reaching safepoint: 18001 ns, At safepoint: 1400 ns, Total: 19401 ns
+[1.832s][info ][safepoint      ] Safepoint "ICBufferFull", Time since last: 1719531 ns, Reaching safepoint: 38001 ns, At safepoint: 1800 ns, Total: 39801 ns
+[1.834s][info ][safepoint      ] Safepoint "ICBufferFull", Time since last: 1693631 ns, Reaching safepoint: 29201 ns, At safepoint: 1000 ns, Total: 30201 ns
+[1.836s][info ][safepoint      ] Safepoint "ICBufferFull", Time since last: 1983636 ns, Reaching safepoint: 21200 ns, At safepoint: 5800 ns, Total: 27000 ns
+[1.837s][info ][safepoint      ] Safepoint "ICBufferFull", Time since last: 1142121 ns, Reaching safepoint: 29801 ns, At safepoint: 1400 ns, Total: 31201 ns
+[1.838s][info ][safepoint      ] Safepoint "ICBufferFull", Time since last: 1103020 ns, Reaching safepoint: 27501 ns, At safepoint: 1700 ns, Total: 29201 ns
+[1.839s][info ][safepoint      ] Safepoint "ICBufferFull", Time since last: 931817 ns, Reaching safepoint: 89801 ns, At safepoint: 4901 ns, Total: 94702 ns
+[1.841s][info ][safepoint      ] Safepoint "ICBufferFull", Time since last: 1508727 ns, Reaching safepoint: 33501 ns, At safepoint: 1900 ns, Total: 35401 ns
+[1.842s][info ][safepoint      ] Safepoint "ICBufferFull", Time since last: 1008618 ns, Reaching safepoint: 28501 ns, At safepoint: 900 ns, Total: 29401 ns
+[1.844s][info ][safepoint      ] Safepoint "ICBufferFull", Time since last: 1912835 ns, Reaching safepoint: 60401 ns, At safepoint: 2400 ns, Total: 62801 ns
+[1.845s][info ][safepoint      ] Safepoint "ICBufferFull", Time since last: 970618 ns, Reaching safepoint: 35201 ns, At safepoint: 1800 ns, Total: 37001 ns
+[1.846s][info ][safepoint      ] Safepoint "ICBufferFull", Time since last: 1092320 ns, Reaching safepoint: 41700 ns, At safepoint: 4500 ns, Total: 46200 ns
+[1.847s][info ][safepoint      ] Safepoint "ICBufferFull", Time since last: 876516 ns, Reaching safepoint: 23601 ns, At safepoint: 1400 ns, Total: 25001 ns
+[1.848s][info ][safepoint      ] Safepoint "ICBufferFull", Time since last: 894716 ns, Reaching safepoint: 39501 ns, At safepoint: 1800 ns, Total: 41301 ns
+[1.849s][info ][safepoint      ] Safepoint "ICBufferFull", Time since last: 903417 ns, Reaching safepoint: 33600 ns, At safepoint: 2000 ns, Total: 35600 ns
+[1.850s][info ][safepoint      ] Safepoint "ICBufferFull", Time since last: 994118 ns, Reaching safepoint: 22501 ns, At safepoint: 1400 ns, Total: 23901 ns
+[1.851s][info ][safepoint      ] Safepoint "ICBufferFull", Time since last: 967018 ns, Reaching safepoint: 30100 ns, At safepoint: 900 ns, Total: 31000 ns
+[1.852s][info ][safepoint      ] Safepoint "ICBufferFull", Time since last: 989518 ns, Reaching safepoint: 73002 ns, At safepoint: 6200 ns, Total: 79202 ns
+[1.853s][info ][safepoint      ] Safepoint "ICBufferFull", Time since last: 864716 ns, Reaching safepoint: 29000 ns, At safepoint: 1300 ns, Total: 30300 ns
+[1.853s][info ][safepoint      ] Safepoint "ICBufferFull", Time since last: 796915 ns, Reaching safepoint: 16900 ns, At safepoint: 1400 ns, Total: 18300 ns
+[1.855s][info ][safepoint      ] Safepoint "ICBufferFull", Time since last: 1915735 ns, Reaching safepoint: 25301 ns, At safepoint: 6600 ns, Total: 31901 ns
+[1.857s][info ][safepoint      ] Safepoint "ICBufferFull", Time since last: 1778632 ns, Reaching safepoint: 51601 ns, At safepoint: 5500 ns, Total: 57101 ns
+[1.858s][info ][safepoint      ] Safepoint "ICBufferFull", Time since last: 1065620 ns, Reaching safepoint: 23400 ns, At safepoint: 1500 ns, Total: 24900 ns
+[1.859s][info ][safepoint      ] Safepoint "ICBufferFull", Time since last: 954018 ns, Reaching safepoint: 30901 ns, At safepoint: 1200 ns, Total: 32101 ns
+[1.864s][info ][safepoint      ] Safepoint "ICBufferFull", Time since last: 4435581 ns, Reaching safepoint: 69301 ns, At safepoint: 2400 ns, Total: 71701 ns
+[1.869s][info ][safepoint      ] Safepoint "ICBufferFull", Time since last: 5018792 ns, Reaching safepoint: 50301 ns, At safepoint: 13400 ns, Total: 63701 ns
+[1.873s][info ][safepoint      ] Safepoint "ICBufferFull", Time since last: 4309379 ns, Reaching safepoint: 44601 ns, At safepoint: 2000 ns, Total: 46601 ns
+[1.878s][info ][safepoint      ] Safepoint "ICBufferFull", Time since last: 4401381 ns, Reaching safepoint: 44801 ns, At safepoint: 3100 ns, Total: 47901 ns
+[1.882s][info ][safepoint      ] Safepoint "ICBufferFull", Time since last: 3988573 ns, Reaching safepoint: 34700 ns, At safepoint: 2500 ns, Total: 37200 ns
+[1.883s][info ][safepoint      ] Safepoint "ICBufferFull", Time since last: 1372826 ns, Reaching safepoint: 41100 ns, At safepoint: 1800 ns, Total: 42900 ns
+[1.885s][info ][safepoint      ] Safepoint "ICBufferFull", Time since last: 1657031 ns, Reaching safepoint: 89101 ns, At safepoint: 3600 ns, Total: 92701 ns
+[1.886s][info ][safepoint      ] Safepoint "ICBufferFull", Time since last: 1411926 ns, Reaching safepoint: 40601 ns, At safepoint: 5200 ns, Total: 45801 ns
+[1.888s][info ][safepoint      ] Safepoint "ICBufferFull", Time since last: 1313724 ns, Reaching safepoint: 41201 ns, At safepoint: 3000 ns, Total: 44201 ns
+[1.963s][info ][safepoint      ] Safepoint "ICBufferFull", Time since last: 75009674 ns, Reaching safepoint: 194704 ns, At safepoint: 7100 ns, Total: 201804 ns
+[2.430s][info ][safepoint      ] Safepoint "ICBufferFull", Time since last: 466990357 ns, Reaching safepoint: 295106 ns, At safepoint: 9100 ns, Total: 304206 ns
+[2.482s][info ][gc,start       ] GC(2) Pause Young (Metadata GC Threshold)
+[2.522s][debug][gc,phases      ] GC(2) Scavenge 39.749ms
+[2.522s][debug][gc,ref         ] GC(2) Skipped phase 1 of Reference Processing: no references
+[2.522s][debug][gc,ref         ] GC(2) Skipped phase 3 of Reference Processing: no references
+[2.522s][debug][gc,phases      ] GC(2) Reference Processing 0.254ms
+[2.523s][debug][gc,phases      ] GC(2) Weak Processing 1.045ms
+[2.523s][debug][gc,age         ] GC(2) Desired survivor size 536870912 bytes, new threshold 7 (max threshold 15)
+[2.523s][info ][gc,heap        ] GC(2) PSYoungGen: 446459K(1572864K)->49137K(1572864K) Eden: 434064K(1048576K)->0K(1048576K) From: 12395K(524288K)->49137K(524288K)
+[2.523s][info ][gc,heap        ] GC(2) ParOldGen: 5681K(6144K)->5689K(6144K)
+[2.523s][info ][gc,metaspace   ] GC(2) Metaspace: 34994K(35392K)->34994K(35392K) NonClass: 30619K(30848K)->30619K(30848K) Class: 4374K(4544K)->4374K(4544K)
+[2.523s][info ][gc             ] GC(2) Pause Young (Metadata GC Threshold) 441M->53M(1542M) 41.283ms
+[2.523s][info ][gc,cpu         ] GC(2) User=0.15s Sys=0.02s Real=0.04s
+[2.523s][debug][gc,phases      ] GC(3) Pre Compact 0.012ms
+[2.523s][info ][gc,start       ] GC(3) Pause Full (Metadata GC Threshold)
+[2.523s][info ][gc,phases,start] GC(3) Marking Phase
+[2.543s][debug][gc,phases      ] GC(3) Par Mark 19.963ms
+[2.543s][debug][gc,ref         ] GC(3) Skipped phase 1 of Reference Processing: no references
+[2.544s][debug][gc,ref         ] GC(3) Skipped phase 3 of Reference Processing: no references
+[2.544s][debug][gc,phases      ] GC(3) Reference Processing 0.185ms
+[2.544s][debug][gc,phases      ] GC(3) Weak Processing 0.469ms
+[2.544s][debug][gc,phases      ] GC(3) ClassLoaderData 0.061ms
+[2.544s][debug][gc,phases      ] GC(3) Trigger cleanups 0.000ms
+[2.550s][debug][gc,phases      ] GC(3) Class Unloading 6.367ms
+[2.550s][info ][gc,phases      ] GC(3) Marking Phase 27.193ms
+[2.550s][info ][gc,phases,start] GC(3) Summary Phase
+[2.550s][info ][gc,phases      ] GC(3) Summary Phase 0.009ms
+[2.550s][info ][gc,phases,start] GC(3) Adjust Roots
+[2.560s][info ][gc,phases      ] GC(3) Adjust Roots 9.816ms
+[2.560s][info ][gc,phases,start] GC(3) Compaction Phase
+[2.803s][info ][gc,phases      ] GC(3) Compaction Phase 243.096ms
+[2.804s][info ][gc,phases,start] GC(3) Post Compact
+[2.805s][info ][gc,phases      ] GC(3) Post Compact 1.070ms
+[2.805s][info ][gc,heap        ] GC(3) PSYoungGen: 49137K(1572864K)->49015K(1572864K) Eden: 0K(1048576K)->0K(1048576K) From: 49137K(524288K)->49015K(524288K)
+[2.805s][info ][gc,heap        ] GC(3) ParOldGen: 5689K(6144K)->5584K(6144K)
+[2.805s][info ][gc,metaspace   ] GC(3) Metaspace: 34994K(35392K)->34994K(35392K) NonClass: 30619K(30848K)->30619K(30848K) Class: 4374K(4544K)->4374K(4544K)
+[2.805s][info ][gc             ] GC(3) Pause Full (Metadata GC Threshold) 53M->53M(1542M) 281.396ms
+[2.805s][info ][gc,cpu         ] GC(3) User=0.57s Sys=0.02s Real=0.28s
+[2.805s][info ][safepoint      ] Safepoint "CollectForMetadataAllocation", Time since last: 51589245 ns, Reaching safepoint: 161803 ns, At safepoint: 322917118 ns, Total: 323078921 ns
+[3.388s][info ][safepoint      ] Safepoint "ICBufferFull", Time since last: 583284989 ns, Reaching safepoint: 353306 ns, At safepoint: 14700 ns, Total: 368006 ns
+[3.486s][info ][safepoint      ] Safepoint "ICBufferFull", Time since last: 97167281 ns, Reaching safepoint: 345206 ns, At safepoint: 23701 ns, Total: 368907 ns
+[3.560s][info ][safepoint      ] Safepoint "ICBufferFull", Time since last: 73360644 ns, Reaching safepoint: 343906 ns, At safepoint: 28801 ns, Total: 372707 ns
+[3.777s][info ][safepoint      ] Safepoint "ICBufferFull", Time since last: 216921275 ns, Reaching safepoint: 291005 ns, At safepoint: 33401 ns, Total: 324406 ns
+[3.777s][info ][safepoint      ] Safepoint "ICBufferFull", Time since last: 57601 ns, Reaching safepoint: 103802 ns, At safepoint: 26300 ns, Total: 130102 ns
+[3.777s][info ][safepoint      ] Safepoint "ICBufferFull", Time since last: 39501 ns, Reaching safepoint: 87102 ns, At safepoint: 19400 ns, Total: 106502 ns
+[3.820s][info ][safepoint      ] Safepoint "ICBufferFull", Time since last: 42326176 ns, Reaching safepoint: 281305 ns, At safepoint: 27500 ns, Total: 308805 ns
+[3.975s][info ][safepoint      ] Safepoint "ICBufferFull", Time since last: 154521332 ns, Reaching safepoint: 307506 ns, At safepoint: 31200 ns, Total: 338706 ns
+[3.980s][info ][safepoint      ] Safepoint "ICBufferFull", Time since last: 2390344 ns, Reaching safepoint: 3140858 ns, At safepoint: 23100 ns, Total: 3163958 ns
+[3.986s][info ][safepoint      ] Safepoint "ICBufferFull", Time since last: 5060593 ns, Reaching safepoint: 203504 ns, At safepoint: 26200 ns, Total: 229704 ns
+[3.990s][info ][safepoint      ] Safepoint "ICBufferFull", Time since last: 4362680 ns, Reaching safepoint: 137603 ns, At safepoint: 26700 ns, Total: 164303 ns
+[3.996s][info ][safepoint      ] Safepoint "ICBufferFull", Time since last: 6055711 ns, Reaching safepoint: 126402 ns, At safepoint: 28101 ns, Total: 154503 ns
+[3.999s][info ][safepoint      ] Safepoint "ICBufferFull", Time since last: 2201940 ns, Reaching safepoint: 129703 ns, At safepoint: 21900 ns, Total: 151603 ns
+[4.008s][info ][safepoint      ] Safepoint "ICBufferFull", Time since last: 8733960 ns, Reaching safepoint: 147503 ns, At safepoint: 24100 ns, Total: 171603 ns
+[4.010s][info ][safepoint      ] Safepoint "ICBufferFull", Time since last: 2286442 ns, Reaching safepoint: 100802 ns, At safepoint: 25200 ns, Total: 126002 ns
+[4.010s][info ][safepoint      ] Safepoint "ICBufferFull", Time since last: 66302 ns, Reaching safepoint: 97601 ns, At safepoint: 22201 ns, Total: 119802 ns
+[4.023s][info ][safepoint      ] Safepoint "ICBufferFull", Time since last: 11952019 ns, Reaching safepoint: 350106 ns, At safepoint: 25001 ns, Total: 375107 ns
+[4.025s][info ][safepoint      ] Safepoint "ICBufferFull", Time since last: 1959136 ns, Reaching safepoint: 185603 ns, At safepoint: 24601 ns, Total: 210204 ns
+[4.028s][info ][safepoint      ] Safepoint "ICBufferFull", Time since last: 3158657 ns, Reaching safepoint: 137703 ns, At safepoint: 22500 ns, Total: 160203 ns
+[4.030s][info ][safepoint      ] Safepoint "ICBufferFull", Time since last: 1901235 ns, Reaching safepoint: 115002 ns, At safepoint: 25901 ns, Total: 140903 ns
+[4.036s][info ][safepoint      ] Safepoint "ICBufferFull", Time since last: 1937835 ns, Reaching safepoint: 4276779 ns, At safepoint: 26100 ns, Total: 4302879 ns
+[4.041s][info ][safepoint      ] Safepoint "ICBufferFull", Time since last: 4192577 ns, Reaching safepoint: 157503 ns, At safepoint: 22600 ns, Total: 180103 ns
+[4.048s][info ][safepoint      ] Safepoint "ICBufferFull", Time since last: 6760024 ns, Reaching safepoint: 661012 ns, At safepoint: 28701 ns, Total: 689713 ns
+[4.051s][info ][safepoint      ] Safepoint "ICBufferFull", Time since last: 2309142 ns, Reaching safepoint: 123002 ns, At safepoint: 22001 ns, Total: 145003 ns
+[4.063s][info ][safepoint      ] Safepoint "ICBufferFull", Time since last: 12514829 ns, Reaching safepoint: 125302 ns, At safepoint: 29001 ns, Total: 154303 ns
+[4.065s][info ][safepoint      ] Safepoint "ICBufferFull", Time since last: 1960536 ns, Reaching safepoint: 122402 ns, At safepoint: 22501 ns, Total: 144903 ns
+[4.067s][info ][safepoint      ] Safepoint "ICBufferFull", Time since last: 1807633 ns, Reaching safepoint: 114702 ns, At safepoint: 21600 ns, Total: 136302 ns
+[4.070s][info ][safepoint      ] Safepoint "ICBufferFull", Time since last: 1957736 ns, Reaching safepoint: 178303 ns, At safepoint: 33701 ns, Total: 212004 ns
+[4.073s][info ][safepoint      ] Safepoint "ICBufferFull", Time since last: 3340861 ns, Reaching safepoint: 122002 ns, At safepoint: 20001 ns, Total: 142003 ns
+[4.075s][info ][safepoint      ] Safepoint "ICBufferFull", Time since last: 1621729 ns, Reaching safepoint: 120103 ns, At safepoint: 20700 ns, Total: 140803 ns
+[4.077s][info ][safepoint      ] Safepoint "ICBufferFull", Time since last: 1653030 ns, Reaching safepoint: 110602 ns, At safepoint: 28801 ns, Total: 139403 ns
+[4.079s][info ][safepoint      ] Safepoint "ICBufferFull", Time since last: 1976736 ns, Reaching safepoint: 106302 ns, At safepoint: 18800 ns, Total: 125102 ns
+[4.080s][info ][safepoint      ] Safepoint "ICBufferFull", Time since last: 1511328 ns, Reaching safepoint: 120302 ns, At safepoint: 24201 ns, Total: 144503 ns
+[4.144s][info ][safepoint      ] Safepoint "ICBufferFull", Time since last: 63214158 ns, Reaching safepoint: 339506 ns, At safepoint: 23501 ns, Total: 363007 ns
+[4.144s][info ][safepoint      ] Safepoint "ICBufferFull", Time since last: 91402 ns, Reaching safepoint: 92301 ns, At safepoint: 19801 ns, Total: 112102 ns
+[4.205s][info ][safepoint      ] Safepoint "ICBufferFull", Time since last: 57088046 ns, Reaching safepoint: 3381362 ns, At safepoint: 30200 ns, Total: 3411562 ns
+[4.214s][info ][safepoint      ] Safepoint "ICBufferFull", Time since last: 9063766 ns, Reaching safepoint: 166203 ns, At safepoint: 23101 ns, Total: 189304 ns
+[4.227s][info ][safepoint      ] Safepoint "ICBufferFull", Time since last: 12804135 ns, Reaching safepoint: 171503 ns, At safepoint: 21800 ns, Total: 193303 ns
+[4.239s][info ][safepoint      ] Safepoint "ICBufferFull", Time since last: 12250925 ns, Reaching safepoint: 148502 ns, At safepoint: 26001 ns, Total: 174503 ns
+[4.253s][info ][safepoint      ] Safepoint "ICBufferFull", Time since last: 13888954 ns, Reaching safepoint: 163203 ns, At safepoint: 29601 ns, Total: 192804 ns
+[4.270s][info ][safepoint      ] Safepoint "ICBufferFull", Time since last: 16839908 ns, Reaching safepoint: 178904 ns, At safepoint: 29100 ns, Total: 208004 ns
+[4.279s][info ][safepoint      ] Safepoint "ICBufferFull", Time since last: 8059748 ns, Reaching safepoint: 135602 ns, At safepoint: 26001 ns, Total: 161603 ns
+[4.299s][info ][safepoint      ] Safepoint "ICBufferFull", Time since last: 20350773 ns, Reaching safepoint: 162203 ns, At safepoint: 26800 ns, Total: 189003 ns
+[4.309s][info ][safepoint      ] Safepoint "ICBufferFull", Time since last: 9388872 ns, Reaching safepoint: 296906 ns, At safepoint: 22400 ns, Total: 319306 ns
+[4.335s][info ][safepoint      ] Safepoint "ICBufferFull", Time since last: 26118279 ns, Reaching safepoint: 378707 ns, At safepoint: 24300 ns, Total: 403007 ns
+[4.349s][info ][safepoint      ] Safepoint "ICBufferFull", Time since last: 11031202 ns, Reaching safepoint: 2193141 ns, At safepoint: 28000 ns, Total: 2221141 ns
+[4.367s][info ][safepoint      ] Safepoint "ICBufferFull", Time since last: 18064131 ns, Reaching safepoint: 161203 ns, At safepoint: 28701 ns, Total: 189904 ns
+[4.378s][info ][safepoint      ] Safepoint "ICBufferFull", Time since last: 10903699 ns, Reaching safepoint: 116503 ns, At safepoint: 28700 ns, Total: 145203 ns
+[4.395s][info ][safepoint      ] Safepoint "ICBufferFull", Time since last: 16593704 ns, Reaching safepoint: 148803 ns, At safepoint: 21000 ns, Total: 169803 ns
+[4.409s][info ][safepoint      ] Safepoint "ICBufferFull", Time since last: 13929056 ns, Reaching safepoint: 151902 ns, At safepoint: 20801 ns, Total: 172703 ns
+[4.417s][info ][safepoint      ] Safepoint "ICBufferFull", Time since last: 8288052 ns, Reaching safepoint: 139002 ns, At safepoint: 22001 ns, Total: 161003 ns
+[4.423s][info ][safepoint      ] Safepoint "ICBufferFull", Time since last: 5239496 ns, Reaching safepoint: 103502 ns, At safepoint: 26800 ns, Total: 130302 ns
+[4.428s][info ][safepoint      ] Safepoint "ICBufferFull", Time since last: 5629503 ns, Reaching safepoint: 179903 ns, At safepoint: 23401 ns, Total: 203304 ns
+[4.451s][info ][safepoint      ] Safepoint "ICBufferFull", Time since last: 22218607 ns, Reaching safepoint: 167203 ns, At safepoint: 21701 ns, Total: 188904 ns
+[4.466s][info ][safepoint      ] Safepoint "ICBufferFull", Time since last: 14838871 ns, Reaching safepoint: 147603 ns, At safepoint: 20501 ns, Total: 168104 ns
+[4.478s][info ][safepoint      ] Safepoint "ICBufferFull", Time since last: 12228224 ns, Reaching safepoint: 105502 ns, At safepoint: 21600 ns, Total: 127102 ns
+[4.488s][info ][safepoint      ] Safepoint "ICBufferFull", Time since last: 9813080 ns, Reaching safepoint: 156703 ns, At safepoint: 15400 ns, Total: 172103 ns
+[4.516s][info ][safepoint      ] Safepoint "ICBufferFull", Time since last: 24978758 ns, Reaching safepoint: 3262360 ns, At safepoint: 33400 ns, Total: 3295760 ns
+[4.525s][info ][safepoint      ] Safepoint "ICBufferFull", Time since last: 8048548 ns, Reaching safepoint: 173803 ns, At safepoint: 26600 ns, Total: 200403 ns
+[4.536s][info ][safepoint      ] Safepoint "ICBufferFull", Time since last: 10960901 ns, Reaching safepoint: 476509 ns, At safepoint: 27000 ns, Total: 503509 ns
+[4.545s][info ][safepoint      ] Safepoint "ICBufferFull", Time since last: 5159995 ns, Reaching safepoint: 3197759 ns, At safepoint: 34600 ns, Total: 3232359 ns
+[4.551s][info ][safepoint      ] Safepoint "ICBufferFull", Time since last: 6163513 ns, Reaching safepoint: 139903 ns, At safepoint: 25600 ns, Total: 165503 ns
+[4.560s][info ][safepoint      ] Safepoint "ICBufferFull", Time since last: 9213369 ns, Reaching safepoint: 145203 ns, At safepoint: 26100 ns, Total: 171303 ns
+[4.571s][info ][safepoint      ] Safepoint "ICBufferFull", Time since last: 10163586 ns, Reaching safepoint: 151803 ns, At safepoint: 25501 ns, Total: 177304 ns
+[4.580s][info ][safepoint      ] Safepoint "ICBufferFull", Time since last: 9050066 ns, Reaching safepoint: 154302 ns, At safepoint: 24301 ns, Total: 178603 ns
+[4.587s][info ][safepoint      ] Safepoint "ICBufferFull", Time since last: 7388735 ns, Reaching safepoint: 162003 ns, At safepoint: 27501 ns, Total: 189504 ns
+[4.591s][info ][safepoint      ] Safepoint "ICBufferFull", Time since last: 3824070 ns, Reaching safepoint: 138702 ns, At safepoint: 19801 ns, Total: 158503 ns
+[4.600s][info ][safepoint      ] Safepoint "ICBufferFull", Time since last: 8820161 ns, Reaching safepoint: 158503 ns, At safepoint: 26001 ns, Total: 184504 ns
+[4.626s][info ][safepoint      ] Safepoint "ICBufferFull", Time since last: 25780572 ns, Reaching safepoint: 161603 ns, At safepoint: 25801 ns, Total: 187404 ns
+[4.631s][info ][safepoint      ] Safepoint "ICBufferFull", Time since last: 4943190 ns, Reaching safepoint: 122602 ns, At safepoint: 24701 ns, Total: 147303 ns
+[4.635s][info ][safepoint      ] Safepoint "ICBufferFull", Time since last: 3784869 ns, Reaching safepoint: 119102 ns, At safepoint: 21501 ns, Total: 140603 ns
+[4.652s][info ][safepoint      ] Safepoint "ICBufferFull", Time since last: 16659305 ns, Reaching safepoint: 149403 ns, At safepoint: 22400 ns, Total: 171803 ns
+[4.655s][info ][safepoint      ] Safepoint "ICBufferFull", Time since last: 3001455 ns, Reaching safepoint: 125903 ns, At safepoint: 21200 ns, Total: 147103 ns
+[4.660s][info ][safepoint      ] Safepoint "ICBufferFull", Time since last: 4101275 ns, Reaching safepoint: 137903 ns, At safepoint: 21700 ns, Total: 159603 ns
+[4.664s][info ][safepoint      ] Safepoint "ICBufferFull", Time since last: 3797870 ns, Reaching safepoint: 132202 ns, At safepoint: 22201 ns, Total: 154403 ns
+[4.674s][info ][safepoint      ] Safepoint "ICBufferFull", Time since last: 9974482 ns, Reaching safepoint: 147803 ns, At safepoint: 25401 ns, Total: 173204 ns
+[4.677s][info ][safepoint      ] Safepoint "ICBufferFull", Time since last: 3098656 ns, Reaching safepoint: 193604 ns, At safepoint: 23600 ns, Total: 217204 ns
+[4.680s][info ][safepoint      ] Safepoint "ICBufferFull", Time since last: 2876953 ns, Reaching safepoint: 119402 ns, At safepoint: 21101 ns, Total: 140503 ns
+[4.680s][info ][safepoint      ] Safepoint "ICBufferFull", Time since last: 60101 ns, Reaching safepoint: 103002 ns, At safepoint: 23500 ns, Total: 126502 ns
+[4.692s][info ][safepoint      ] Safepoint "ICBufferFull", Time since last: 8945764 ns, Reaching safepoint: 3188858 ns, At safepoint: 25101 ns, Total: 3213959 ns
+[4.712s][info ][safepoint      ] Safepoint "ICBufferFull", Time since last: 19149951 ns, Reaching safepoint: 396107 ns, At safepoint: 49901 ns, Total: 446008 ns
+[4.717s][info ][safepoint      ] Safepoint "ICBufferFull", Time since last: 4395881 ns, Reaching safepoint: 185603 ns, At safepoint: 28700 ns, Total: 214303 ns
+[4.736s][info ][safepoint      ] Safepoint "ICBufferFull", Time since last: 18696943 ns, Reaching safepoint: 346206 ns, At safepoint: 26501 ns, Total: 372707 ns
+[4.785s][info ][gc,start       ] GC(4) Pause Young (Allocation Failure)
+[4.961s][debug][gc,phases      ] GC(4) Scavenge 176.805ms
+[4.961s][debug][gc,ref         ] GC(4) Skipped phase 1 of Reference Processing: no references
+[4.962s][debug][gc,ref         ] GC(4) Skipped phase 3 of Reference Processing: no references
+[4.962s][debug][gc,phases      ] GC(4) Reference Processing 0.881ms
+[4.965s][debug][gc,phases      ] GC(4) Weak Processing 2.763ms
+[4.965s][debug][gc,age         ] GC(4) Desired survivor size 536870912 bytes, new threshold 7 (max threshold 15)
+[4.965s][info ][gc,heap        ] GC(4) PSYoungGen: 1097591K(1572864K)->153712K(1572864K) Eden: 1048576K(1048576K)->0K(1048576K) From: 49015K(524288K)->153712K(524288K)
+[4.965s][info ][gc,heap        ] GC(4) ParOldGen: 5584K(6144K)->5600K(6144K)
+[4.965s][info ][gc,metaspace   ] GC(4) Metaspace: 49484K(49984K)->49484K(49984K) NonClass: 42331K(42624K)->42331K(42624K) Class: 7152K(7360K)->7152K(7360K)
+[4.965s][info ][gc             ] GC(4) Pause Young (Allocation Failure) 1077M->155M(1542M) 180.687ms
+[4.965s][info ][gc,cpu         ] GC(4) User=0.55s Sys=0.16s Real=0.18s
+[4.967s][info ][safepoint      ] Safepoint "ParallelGCFailedAllocation", Time since last: 46470652 ns, Reaching safepoint: 2269641 ns, At safepoint: 182653348 ns, Total: 184922989 ns
+[5.240s][info ][gc,start       ] GC(5) Pause Young (Allocation Failure)
+[5.339s][debug][gc,phases      ] GC(5) Scavenge 98.373ms
+[5.339s][debug][gc,ref         ] GC(5) Skipped phase 1 of Reference Processing: no references
+[5.339s][debug][gc,ref         ] GC(5) Skipped phase 3 of Reference Processing: no references
+[5.339s][debug][gc,phases      ] GC(5) Reference Processing 0.591ms
+[5.342s][debug][gc,phases      ] GC(5) Weak Processing 3.018ms
+[5.342s][debug][gc,age         ] GC(5) Desired survivor size 536870912 bytes, new threshold 7 (max threshold 15)
+[5.342s][info ][gc,heap        ] GC(5) PSYoungGen: 1202288K(1572864K)->165062K(1572864K) Eden: 1048576K(1048576K)->0K(1048576K) From: 153712K(524288K)->165062K(524288K)
+[5.342s][info ][gc,heap        ] GC(5) ParOldGen: 5600K(6144K)->5608K(6144K)
+[5.342s][info ][gc,metaspace   ] GC(5) Metaspace: 51192K(51712K)->51192K(51712K) NonClass: 43802K(44096K)->43802K(44096K) Class: 7390K(7616K)->7390K(7616K)
+[5.342s][info ][gc             ] GC(5) Pause Young (Allocation Failure) 1179M->166M(1542M) 102.261ms
+[5.342s][info ][gc,cpu         ] GC(5) User=0.29s Sys=0.10s Real=0.10s
+[5.343s][info ][safepoint      ] Safepoint "ParallelGCFailedAllocation", Time since last: 272128987 ns, Reaching safepoint: 894416 ns, At safepoint: 102408477 ns, Total: 103302893 ns
+[5.774s][info ][safepoint      ] Safepoint "ICBufferFull", Time since last: 431062200 ns, Reaching safepoint: 498909 ns, At safepoint: 40501 ns, Total: 539410 ns
+[5.893s][info ][gc,start       ] GC(6) Pause Young (Allocation Failure)
+[5.979s][debug][gc,phases      ] GC(6) Scavenge 85.837ms
+[5.979s][debug][gc,ref         ] GC(6) Skipped phase 1 of Reference Processing: no references
+[5.979s][debug][gc,ref         ] GC(6) Skipped phase 3 of Reference Processing: no references
+[5.980s][debug][gc,phases      ] GC(6) Reference Processing 0.800ms
+[5.983s][debug][gc,phases      ] GC(6) Weak Processing 3.111ms
+[5.983s][debug][gc,age         ] GC(6) Desired survivor size 253231104 bytes, new threshold 6 (max threshold 15)
+[5.983s][info ][gc,heap        ] GC(6) PSYoungGen: 1213638K(1572864K)->172866K(1572864K) Eden: 1048576K(1048576K)->0K(1048576K) From: 165062K(524288K)->172866K(524288K)
+[5.983s][info ][gc,heap        ] GC(6) ParOldGen: 5608K(6144K)->5616K(6144K)
+[5.983s][info ][gc,metaspace   ] GC(6) Metaspace: 53898K(54400K)->53898K(54400K) NonClass: 45987K(46272K)->45987K(46272K) Class: 7911K(8128K)->7911K(8128K)
+[5.983s][info ][gc             ] GC(6) Pause Young (Allocation Failure) 1190M->174M(1542M) 90.002ms
+[5.983s][info ][gc,cpu         ] GC(6) User=0.34s Sys=0.00s Real=0.09s
+[5.983s][info ][safepoint      ] Safepoint "ParallelGCFailedAllocation", Time since last: 114225094 ns, Reaching safepoint: 4289778 ns, At safepoint: 90181553 ns, Total: 94471331 ns
+[6.368s][info ][safepoint      ] Safepoint "ICBufferFull", Time since last: 382818416 ns, Reaching safepoint: 2474345 ns, At safepoint: 34001 ns, Total: 2508346 ns
+[6.398s][info ][gc,start       ] GC(7) Pause Young (Allocation Failure)
+[6.513s][debug][gc,phases      ] GC(7) Scavenge 115.071ms
+[6.513s][debug][gc,ref         ] GC(7) Skipped phase 1 of Reference Processing: no references
+[6.514s][debug][gc,ref         ] GC(7) Skipped phase 3 of Reference Processing: no references
+[6.514s][debug][gc,phases      ] GC(7) Reference Processing 0.555ms
+[6.517s][debug][gc,phases      ] GC(7) Weak Processing 3.025ms
+[6.517s][debug][gc,age         ] GC(7) Desired survivor size 270532608 bytes, new threshold 5 (max threshold 15)
+[6.517s][info ][gc,heap        ] GC(7) PSYoungGen: 1221442K(1572864K)->180366K(1816064K) Eden: 1048576K(1048576K)->0K(1568768K) From: 172866K(524288K)->180366K(247296K)
+[6.517s][info ][gc,heap        ] GC(7) ParOldGen: 5616K(6144K)->5624K(6144K)
+[6.517s][info ][gc,metaspace   ] GC(7) Metaspace: 54168K(54720K)->54168K(54720K) NonClass: 46245K(46528K)->46245K(46528K) Class: 7922K(8192K)->7922K(8192K)
+[6.517s][info ][gc             ] GC(7) Pause Young (Allocation Failure) 1198M->181M(1779M) 118.895ms
+[6.517s][info ][gc,cpu         ] GC(7) User=0.32s Sys=0.14s Real=0.12s
+[6.517s][info ][safepoint      ] Safepoint "ParallelGCFailedAllocation", Time since last: 29760945 ns, Reaching safepoint: 197904 ns, At safepoint: 119047982 ns, Total: 119245886 ns
+[7.126s][info ][gc,start       ] GC(8) Pause Young (Allocation Failure)
+[7.239s][debug][gc,phases      ] GC(8) Scavenge 112.259ms
+[7.239s][debug][gc,ref         ] GC(8) Skipped phase 1 of Reference Processing: no references
+[7.239s][debug][gc,ref         ] GC(8) Skipped phase 3 of Reference Processing: no references
+[7.239s][debug][gc,phases      ] GC(8) Reference Processing 0.388ms
+[7.242s][debug][gc,phases      ] GC(8) Weak Processing 2.976ms
+[7.242s][debug][gc,age         ] GC(8) Desired survivor size 258998272 bytes, new threshold 4 (max threshold 15)
+[7.242s][info ][gc,heap        ] GC(8) PSYoungGen: 1749134K(1816064K)->139193K(1832960K) Eden: 1568768K(1568768K)->0K(1568768K) From: 180366K(247296K)->139193K(264192K)
+[7.242s][info ][gc,heap        ] GC(8) ParOldGen: 5624K(6144K)->53935K(54784K)
+[7.242s][info ][gc,metaspace   ] GC(8) Metaspace: 54389K(54912K)->54389K(54912K) NonClass: 46436K(46720K)->46436K(46720K) Class: 7952K(8192K)->7952K(8192K)
+[7.242s][info ][gc             ] GC(8) Pause Young (Allocation Failure) 1713M->188M(1843M) 115.870ms
+[7.242s][info ][gc,cpu         ] GC(8) User=0.51s Sys=0.01s Real=0.12s
+[7.242s][debug][gc,phases      ] GC(9) Pre Compact 0.021ms
+[7.242s][info ][gc,start       ] GC(9) Pause Full (Ergonomics)
+[7.242s][info ][gc,phases,start] GC(9) Marking Phase
+[7.337s][debug][gc,phases      ] GC(9) Par Mark 94.685ms
+[7.337s][debug][gc,ref         ] GC(9) Skipped phase 1 of Reference Processing: no references
+[7.337s][debug][gc,ref         ] GC(9) Skipped phase 3 of Reference Processing: no references
+[7.337s][debug][gc,phases      ] GC(9) Reference Processing 0.349ms
+[7.338s][debug][gc,phases      ] GC(9) Weak Processing 0.797ms
+[7.339s][debug][gc,phases      ] GC(9) ClassLoaderData 0.273ms
+[7.339s][debug][gc,phases      ] GC(9) Trigger cleanups 0.002ms
+[7.356s][debug][gc,phases      ] GC(9) Class Unloading 18.131ms
+[7.356s][info ][gc,phases      ] GC(9) Marking Phase 114.245ms
+[7.356s][info ][gc,phases,start] GC(9) Summary Phase
+[7.356s][info ][gc,phases      ] GC(9) Summary Phase 0.014ms
+[7.356s][info ][gc,phases,start] GC(9) Adjust Roots
+[7.377s][info ][gc,phases      ] GC(9) Adjust Roots 20.207ms
+[7.377s][info ][gc,phases,start] GC(9) Compaction Phase
+[7.826s][info ][gc,phases      ] GC(9) Compaction Phase 448.721ms
+[7.826s][info ][gc,phases,start] GC(9) Post Compact
+[7.827s][info ][gc,phases      ] GC(9) Post Compact 1.442ms
+[7.827s][info ][gc,heap        ] GC(9) PSYoungGen: 139193K(1832960K)->137926K(1832960K) Eden: 0K(1568768K)->0K(1568768K) From: 139193K(264192K)->137926K(264192K)
+[7.827s][info ][gc,heap        ] GC(9) ParOldGen: 53935K(54784K)->54721K(88576K)
+[7.827s][info ][gc,metaspace   ] GC(9) Metaspace: 54389K(54912K)->54377K(54912K) NonClass: 46436K(46720K)->46428K(46720K) Class: 7952K(8192K)->7949K(8192K)
+[7.827s][info ][gc             ] GC(9) Pause Full (Ergonomics) 188M->188M(1876M) 584.985ms
+[7.827s][info ][gc,cpu         ] GC(9) User=1.93s Sys=0.01s Real=0.58s
+[7.827s][info ][safepoint      ] Safepoint "ParallelGCFailedAllocation", Time since last: 608770458 ns, Reaching safepoint: 252704 ns, At safepoint: 701107351 ns, Total: 701360055 ns
+[8.122s][info ][gc,start       ] GC(10) Pause Young (Allocation Failure)
+[8.234s][debug][gc,phases      ] GC(10) Scavenge 111.407ms
+[8.234s][debug][gc,ref         ] GC(10) Skipped phase 1 of Reference Processing: no references
+[8.234s][debug][gc,ref         ] GC(10) Skipped phase 3 of Reference Processing: no references
+[8.234s][debug][gc,phases      ] GC(10) Reference Processing 0.167ms
+[8.237s][debug][gc,phases      ] GC(10) Weak Processing 2.685ms
+[8.237s][debug][gc,age         ] GC(10) Desired survivor size 263716864 bytes, new threshold 3 (max threshold 15)
+[8.237s][info ][gc,heap        ] GC(10) PSYoungGen: 1706694K(1832960K)->22880K(1835008K) Eden: 1568768K(1568768K)->0K(1582080K) From: 137926K(264192K)->22880K(252928K)
+[8.237s][info ][gc,heap        ] GC(10) ParOldGen: 54721K(88576K)->171354K(171520K)
+[8.237s][info ][gc,metaspace   ] GC(10) Metaspace: 54996K(55424K)->54996K(55424K) NonClass: 46963K(47168K)->46963K(47168K) Class: 8032K(8256K)->8032K(8256K)
+[8.237s][info ][gc             ] GC(10) Pause Young (Allocation Failure) 1720M->189M(1959M) 114.513ms
+[8.237s][info ][gc,cpu         ] GC(10) User=0.40s Sys=0.05s Real=0.11s
+[8.237s][debug][gc,phases      ] GC(11) Pre Compact 0.020ms
+[8.237s][info ][gc,start       ] GC(11) Pause Full (Ergonomics)
+[8.237s][info ][gc,phases,start] GC(11) Marking Phase
+[8.344s][debug][gc,phases      ] GC(11) Par Mark 106.760ms
+[8.344s][debug][gc,ref         ] GC(11) Skipped phase 1 of Reference Processing: no references
+[8.345s][debug][gc,ref         ] GC(11) Skipped phase 3 of Reference Processing: no references
+[8.345s][debug][gc,phases      ] GC(11) Reference Processing 0.820ms
+[8.346s][debug][gc,phases      ] GC(11) Weak Processing 1.180ms
+[8.346s][debug][gc,phases      ] GC(11) ClassLoaderData 0.102ms
+[8.346s][debug][gc,phases      ] GC(11) Trigger cleanups 0.001ms
+[8.359s][debug][gc,phases      ] GC(11) Class Unloading 12.698ms
+[8.359s][info ][gc,phases      ] GC(11) Marking Phase 121.758ms
+[8.359s][info ][gc,phases,start] GC(11) Summary Phase
+[8.359s][info ][gc,phases      ] GC(11) Summary Phase 0.015ms
+[8.359s][info ][gc,phases,start] GC(11) Adjust Roots
+[8.374s][info ][gc,phases      ] GC(11) Adjust Roots 15.498ms
+[8.374s][info ][gc,phases,start] GC(11) Compaction Phase
+[8.682s][info ][gc,phases      ] GC(11) Compaction Phase 307.957ms
+[8.682s][info ][gc,phases,start] GC(11) Post Compact
+[8.683s][info ][gc,phases      ] GC(11) Post Compact 0.992ms
+[8.684s][info ][gc,heap        ] GC(11) PSYoungGen: 22880K(1835008K)->22250K(1835008K) Eden: 0K(1582080K)->0K(1582080K) From: 22880K(252928K)->22250K(252928K)
+[8.684s][info ][gc,heap        ] GC(11) ParOldGen: 171354K(171520K)->171460K(257536K)
+[8.684s][info ][gc,metaspace   ] GC(11) Metaspace: 54996K(55424K)->54996K(55424K) NonClass: 46963K(47168K)->46963K(47168K) Class: 8032K(8256K)->8032K(8256K)
+[8.684s][info ][gc             ] GC(11) Pause Full (Ergonomics) 189M->189M(2043M) 446.859ms
+[8.684s][info ][gc,cpu         ] GC(11) User=1.44s Sys=0.02s Real=0.45s
+[8.702s][info ][safepoint      ] Safepoint "ParallelGCFailedAllocation", Time since last: 294604499 ns, Reaching safepoint: 498209 ns, At safepoint: 579230917 ns, Total: 579729126 ns
+[9.036s][info ][safepoint      ] Safepoint "ICBufferFull", Time since last: 333696817 ns, Reaching safepoint: 466708 ns, At safepoint: 25401 ns, Total: 492109 ns
+[9.197s][info ][gc,start       ] GC(12) Pause Young (Allocation Failure)
+[9.242s][debug][gc,phases      ] GC(12) Scavenge 44.817ms
+[9.242s][debug][gc,ref         ] GC(12) Skipped phase 1 of Reference Processing: no references
+[9.242s][debug][gc,ref         ] GC(12) Skipped phase 3 of Reference Processing: no references
+[9.242s][debug][gc,phases      ] GC(12) Reference Processing 0.145ms
+[9.244s][debug][gc,phases      ] GC(12) Weak Processing 1.175ms
+[9.244s][debug][gc,age         ] GC(12) Desired survivor size 267911168 bytes, new threshold 4 (max threshold 15)
+[9.244s][info ][gc,heap        ] GC(12) PSYoungGen: 1604330K(1835008K)->4384K(1586688K) Eden: 1582080K(1582080K)->0K(1582080K) From: 22250K(252928K)->4384K(4608K)
+[9.244s][info ][gc,heap        ] GC(12) ParOldGen: 171460K(257536K)->184044K(257536K)
+[9.244s][info ][gc,metaspace   ] GC(12) Metaspace: 55870K(56384K)->55870K(56384K) NonClass: 47723K(48000K)->47723K(48000K) Class: 8146K(8384K)->8146K(8384K)
+[9.244s][info ][gc             ] GC(12) Pause Young (Allocation Failure) 1734M->184M(1801M) 46.410ms
+[9.244s][info ][gc,cpu         ] GC(12) User=0.17s Sys=0.01s Real=0.05s
+[9.244s][info ][safepoint      ] Safepoint "ParallelGCFailedAllocation", Time since last: 160992851 ns, Reaching safepoint: 310006 ns, At safepoint: 46579953 ns, Total: 46889959 ns
+[9.738s][info ][gc,start       ] GC(13) Pause Young (Allocation Failure)
+[9.746s][debug][gc,phases      ] GC(13) Scavenge 7.341ms
+[9.746s][debug][gc,ref         ] GC(13) Skipped phase 1 of Reference Processing: no references
+[9.746s][debug][gc,ref         ] GC(13) Skipped phase 3 of Reference Processing: no references
+[9.746s][debug][gc,phases      ] GC(13) Reference Processing 0.092ms
+[9.747s][debug][gc,phases      ] GC(13) Weak Processing 0.930ms
+[9.747s][debug][gc,age         ] GC(13) Desired survivor size 267911168 bytes, new threshold 5 (max threshold 15)
+[9.747s][info ][gc,heap        ] GC(13) PSYoungGen: 1586464K(1586688K)->6016K(1835520K) Eden: 1582080K(1582080K)->0K(1573888K) From: 4384K(4608K)->6016K(261632K)
+[9.747s][info ][gc,heap        ] GC(13) ParOldGen: 184044K(257536K)->184052K(257536K)
+[9.747s][info ][gc,metaspace   ] GC(13) Metaspace: 56202K(56768K)->56202K(56768K) NonClass: 48021K(48320K)->48021K(48320K) Class: 8180K(8448K)->8180K(8448K)
+[9.747s][info ][gc             ] GC(13) Pause Young (Allocation Failure) 1729M->185M(2044M) 8.633ms
+[9.747s][info ][gc,cpu         ] GC(13) User=0.03s Sys=0.00s Real=0.01s
+[9.747s][info ][safepoint      ] Safepoint "ParallelGCFailedAllocation", Time since last: 489980082 ns, Reaching safepoint: 4526983 ns, At safepoint: 8793261 ns, Total: 13320244 ns
+[10.083s][info ][safepoint      ] Safepoint "ICBufferFull", Time since last: 335745654 ns, Reaching safepoint: 504410 ns, At safepoint: 26900 ns, Total: 531310 ns
+[10.172s][info ][gc,start       ] GC(14) Pause Young (Allocation Failure)
+[10.180s][debug][gc,phases      ] GC(14) Scavenge 7.586ms
+[10.180s][debug][gc,ref         ] GC(14) Skipped phase 1 of Reference Processing: no references
+[10.180s][debug][gc,ref         ] GC(14) Skipped phase 3 of Reference Processing: no references
+[10.180s][debug][gc,ref         ] GC(14) Skipped phase 4 of Reference Processing: no references
+[10.180s][debug][gc,phases      ] GC(14) Reference Processing 0.096ms
+[10.182s][debug][gc,phases      ] GC(14) Weak Processing 2.037ms
+[10.182s][debug][gc,age         ] GC(14) Desired survivor size 264765440 bytes, new threshold 6 (max threshold 15)
+[10.182s][info ][gc,heap        ] GC(14) PSYoungGen: 1579904K(1835520K)->8032K(1835520K) Eden: 1573888K(1573888K)->0K(1573888K) From: 6016K(261632K)->8032K(261632K)
+[10.182s][info ][gc,heap        ] GC(14) ParOldGen: 184052K(257536K)->184052K(257536K)
+[10.182s][info ][gc,metaspace   ] GC(14) Metaspace: 56221K(56768K)->56221K(56768K) NonClass: 48039K(48320K)->48039K(48320K) Class: 8181K(8448K)->8181K(8448K)
+[10.182s][info ][gc             ] GC(14) Pause Young (Allocation Failure) 1722M->187M(2044M) 9.988ms
+[10.182s][info ][gc,cpu         ] GC(14) User=0.04s Sys=0.00s Real=0.01s
+[10.182s][info ][safepoint      ] Safepoint "ParallelGCFailedAllocation", Time since last: 88291119 ns, Reaching safepoint: 255804 ns, At safepoint: 10161386 ns, Total: 10417190 ns
+[10.457s][info ][safepoint      ] Safepoint "ICBufferFull", Time since last: 274376230 ns, Reaching safepoint: 385807 ns, At safepoint: 25100 ns, Total: 410907 ns
+[10.561s][info ][gc,start       ] GC(15) Pause Young (Allocation Failure)
+[10.571s][debug][gc,phases      ] GC(15) Scavenge 9.718ms
+[10.571s][debug][gc,ref         ] GC(15) Skipped phase 1 of Reference Processing: no references
+[10.571s][debug][gc,ref         ] GC(15) Skipped phase 3 of Reference Processing: no references
+[10.571s][debug][gc,ref         ] GC(15) Skipped phase 4 of Reference Processing: no references
+[10.571s][debug][gc,phases      ] GC(15) Reference Processing 0.065ms
+[10.572s][debug][gc,phases      ] GC(15) Weak Processing 0.742ms
+[10.572s][debug][gc,age         ] GC(15) Desired survivor size 259522560 bytes, new threshold 7 (max threshold 15)
+[10.572s][info ][gc,heap        ] GC(15) PSYoungGen: 1581920K(1835520K)->11520K(1843712K) Eden: 1573888K(1573888K)->0K(1585152K) From: 8032K(261632K)->11520K(258560K)
+[10.572s][info ][gc,heap        ] GC(15) ParOldGen: 184052K(257536K)->184052K(257536K)
+[10.572s][info ][gc,metaspace   ] GC(15) Metaspace: 56232K(56768K)->56232K(56768K) NonClass: 48049K(48320K)->48049K(48320K) Class: 8182K(8448K)->8182K(8448K)
+[10.572s][info ][gc             ] GC(15) Pause Young (Allocation Failure) 1724M->190M(2052M) 10.795ms
+[10.572s][info ][gc,cpu         ] GC(15) User=0.04s Sys=0.00s Real=0.01s
+[10.572s][info ][safepoint      ] Safepoint "ParallelGCFailedAllocation", Time since last: 102170273 ns, Reaching safepoint: 2229941 ns, At safepoint: 10970601 ns, Total: 13200542 ns
+[11.074s][info ][gc,start       ] GC(16) Pause Young (Allocation Failure)
+[11.087s][debug][gc,phases      ] GC(16) Scavenge 13.425ms
+[11.087s][debug][gc,ref         ] GC(16) Skipped phase 1 of Reference Processing: no references
+[11.087s][debug][gc,ref         ] GC(16) Skipped phase 3 of Reference Processing: no references
+[11.087s][debug][gc,phases      ] GC(16) Reference Processing 0.097ms
+[11.088s][debug][gc,phases      ] GC(16) Weak Processing 0.873ms
+[11.088s][debug][gc,age         ] GC(16) Desired survivor size 251658240 bytes, new threshold 8 (max threshold 15)
+[11.088s][info ][gc,heap        ] GC(16) PSYoungGen: 1596672K(1843712K)->14400K(1838592K) Eden: 1585152K(1585152K)->0K(1585152K) From: 11520K(258560K)->14400K(253440K)
+[11.088s][info ][gc,heap        ] GC(16) ParOldGen: 184052K(257536K)->184060K(257536K)
+[11.088s][info ][gc,metaspace   ] GC(16) Metaspace: 56943K(57536K)->56943K(57536K) NonClass: 48636K(48960K)->48636K(48960K) Class: 8306K(8576K)->8306K(8576K)
+[11.088s][info ][gc             ] GC(16) Pause Young (Allocation Failure) 1738M->193M(2047M) 14.681ms
+[11.088s][info ][gc,cpu         ] GC(16) User=0.06s Sys=0.00s Real=0.02s
+[11.089s][info ][safepoint      ] Safepoint "ParallelGCFailedAllocation", Time since last: 501166587 ns, Reaching safepoint: 355807 ns, At safepoint: 14843572 ns, Total: 15199379 ns
+[11.437s][info ][gc,start       ] GC(17) Pause Young (Allocation Failure)
+[11.448s][debug][gc,phases      ] GC(17) Scavenge 10.309ms
+[11.448s][debug][gc,ref         ] GC(17) Skipped phase 1 of Reference Processing: no references
+[11.448s][debug][gc,ref         ] GC(17) Skipped phase 3 of Reference Processing: no references
+[11.448s][debug][gc,phases      ] GC(17) Reference Processing 0.092ms
+[11.449s][debug][gc,phases      ] GC(17) Weak Processing 0.878ms
+[11.449s][debug][gc,age         ] GC(17) Desired survivor size 243269632 bytes, new threshold 9 (max threshold 15)
+[11.449s][info ][gc,heap        ] GC(17) PSYoungGen: 1599552K(1838592K)->14768K(1859584K) Eden: 1585152K(1585152K)->0K(1613824K) From: 14400K(253440K)->14768K(245760K)
+[11.449s][info ][gc,heap        ] GC(17) ParOldGen: 184060K(257536K)->184068K(257536K)
+[11.449s][info ][gc,metaspace   ] GC(17) Metaspace: 57606K(58240K)->57606K(58240K) NonClass: 49211K(49536K)->49211K(49536K) Class: 8394K(8704K)->8394K(8704K)
+[11.449s][info ][gc             ] GC(17) Pause Young (Allocation Failure) 1741M->194M(2067M) 11.520ms
+[11.449s][info ][gc,cpu         ] GC(17) User=0.04s Sys=0.01s Real=0.02s
+[11.449s][info ][safepoint      ] Safepoint "ParallelGCFailedAllocation", Time since last: 348479888 ns, Reaching safepoint: 338106 ns, At safepoint: 11678614 ns, Total: 12016720 ns
+[11.888s][info ][gc,start       ] GC(18) Pause Young (Allocation Failure)
+[11.906s][debug][gc,phases      ] GC(18) Scavenge 17.993ms
+[11.906s][debug][gc,ref         ] GC(18) Skipped phase 1 of Reference Processing: no references
+[11.906s][debug][gc,ref         ] GC(18) Skipped phase 3 of Reference Processing: no references
+[11.906s][debug][gc,phases      ] GC(18) Reference Processing 0.062ms
+[11.907s][debug][gc,phases      ] GC(18) Weak Processing 0.799ms
+[11.907s][debug][gc,age         ] GC(18) Desired survivor size 234356736 bytes, new threshold 10 (max threshold 15)
+[11.907s][info ][gc,heap        ] GC(18) PSYoungGen: 1628592K(1859584K)->15168K(1851392K) Eden: 1613824K(1613824K)->0K(1613824K) From: 14768K(245760K)->15168K(237568K)
+[11.907s][info ][gc,heap        ] GC(18) ParOldGen: 184068K(257536K)->184076K(257536K)
+[11.907s][info ][gc,metaspace   ] GC(18) Metaspace: 58708K(59264K)->58708K(59264K) NonClass: 50166K(50432K)->50166K(50432K) Class: 8541K(8832K)->8541K(8832K)
+[11.907s][info ][gc             ] GC(18) Pause Young (Allocation Failure) 1770M->194M(2059M) 19.088ms
+[11.907s][info ][gc,cpu         ] GC(18) User=0.05s Sys=0.00s Real=0.02s
+[11.907s][info ][safepoint      ] Safepoint "ParallelGCFailedAllocation", Time since last: 438606141 ns, Reaching safepoint: 252205 ns, At safepoint: 19239652 ns, Total: 19491857 ns
+[12.421s][info ][gc,start       ] GC(19) Pause Young (Allocation Failure)
+[12.438s][debug][gc,phases      ] GC(19) Scavenge 17.133ms
+[12.438s][debug][gc,ref         ] GC(19) Skipped phase 1 of Reference Processing: no references
+[12.438s][debug][gc,ref         ] GC(19) Skipped phase 3 of Reference Processing: no references
+[12.438s][debug][gc,phases      ] GC(19) Reference Processing 0.187ms
+[12.439s][debug][gc,phases      ] GC(19) Weak Processing 1.137ms
+[12.439s][debug][gc,age         ] GC(19) Desired survivor size 223346688 bytes, new threshold 11 (max threshold 15)
+[12.439s][info ][gc,heap        ] GC(19) PSYoungGen: 1628992K(1851392K)->22336K(1879040K) Eden: 1613824K(1613824K)->0K(1650176K) From: 15168K(237568K)->22336K(228864K)
+[12.439s][info ][gc,heap        ] GC(19) ParOldGen: 184076K(257536K)->184076K(257536K)
+[12.439s][info ][gc,metaspace   ] GC(19) Metaspace: 61605K(62144K)->61605K(62144K) NonClass: 52718K(52992K)->52718K(52992K) Class: 8886K(9152K)->8886K(9152K)
+[12.439s][info ][gc             ] GC(19) Pause Young (Allocation Failure) 1770M->201M(2086M) 18.727ms
+[12.439s][info ][gc,cpu         ] GC(19) User=0.09s Sys=0.00s Real=0.01s
+[12.439s][info ][safepoint      ] Safepoint "ParallelGCFailedAllocation", Time since last: 512682399 ns, Reaching safepoint: 766514 ns, At safepoint: 18912947 ns, Total: 19679461 ns
+[12.925s][info ][gc,start       ] GC(20) Pause Young (Allocation Failure)
+[12.966s][debug][gc,phases      ] GC(20) Scavenge 41.078ms
+[12.966s][debug][gc,ref         ] GC(20) Skipped phase 1 of Reference Processing: no references
+[12.967s][debug][gc,ref         ] GC(20) Skipped phase 3 of Reference Processing: no references
+[12.967s][debug][gc,phases      ] GC(20) Reference Processing 0.204ms
+[12.968s][debug][gc,phases      ] GC(20) Weak Processing 1.406ms
+[12.968s][debug][gc,age         ] GC(20) Desired survivor size 208142336 bytes, new threshold 12 (max threshold 15)
+[12.968s][info ][gc,heap        ] GC(20) PSYoungGen: 1672512K(1879040K)->48080K(1868288K) Eden: 1650176K(1650176K)->0K(1650176K) From: 22336K(228864K)->48080K(218112K)
+[12.968s][info ][gc,heap        ] GC(20) ParOldGen: 184076K(257536K)->184084K(257536K)
+[12.968s][info ][gc,metaspace   ] GC(20) Metaspace: 62105K(62720K)->62105K(62720K) NonClass: 53150K(53504K)->53150K(53504K) Class: 8955K(9216K)->8955K(9216K)
+[12.968s][info ][gc             ] GC(20) Pause Young (Allocation Failure) 1813M->226M(2076M) 42.963ms
+[12.968s][info ][gc,cpu         ] GC(20) User=0.15s Sys=0.01s Real=0.05s
+[12.968s][info ][safepoint      ] Safepoint "ParallelGCFailedAllocation", Time since last: 485415399 ns, Reaching safepoint: 232604 ns, At safepoint: 43128591 ns, Total: 43361195 ns
+[13.415s][info ][gc,start       ] GC(21) Pause Young (Allocation Failure)
+[13.480s][debug][gc,phases      ] GC(21) Scavenge 64.911ms
+[13.480s][debug][gc,ref         ] GC(21) Skipped phase 1 of Reference Processing: no references
+[13.481s][debug][gc,ref         ] GC(21) Skipped phase 3 of Reference Processing: no references
+[13.481s][debug][gc,phases      ] GC(21) Reference Processing 0.178ms
+[13.482s][debug][gc,phases      ] GC(21) Weak Processing 1.241ms
+[13.482s][debug][gc,age         ] GC(21) Desired survivor size 202899456 bytes, new threshold 13 (max threshold 15)
+[13.482s][info ][gc,heap        ] GC(21) PSYoungGen: 1698256K(1868288K)->81152K(1899008K) Eden: 1650176K(1650176K)->0K(1695744K) From: 48080K(218112K)->81152K(203264K)
+[13.482s][info ][gc,heap        ] GC(21) ParOldGen: 184084K(257536K)->184092K(257536K)
+[13.482s][info ][gc,metaspace   ] GC(21) Metaspace: 62707K(63232K)->62707K(63232K) NonClass: 53677K(53952K)->53677K(53952K) Class: 9030K(9280K)->9030K(9280K)
+[13.482s][info ][gc             ] GC(21) Pause Young (Allocation Failure) 1838M->259M(2106M) 66.608ms
+[13.482s][info ][gc,cpu         ] GC(21) User=0.32s Sys=0.00s Real=0.07s
+[13.482s][info ][safepoint      ] Safepoint "ParallelGCFailedAllocation", Time since last: 446362983 ns, Reaching safepoint: 678612 ns, At safepoint: 66781324 ns, Total: 67459936 ns
+[13.961s][info ][gc,start       ] GC(22) Pause Young (Allocation Failure)
+[14.030s][debug][gc,phases      ] GC(22) Scavenge 68.564ms
+[14.030s][debug][gc,ref         ] GC(22) Skipped phase 1 of Reference Processing: no references
+[14.030s][debug][gc,ref         ] GC(22) Skipped phase 3 of Reference Processing: no references
+[14.030s][debug][gc,phases      ] GC(22) Reference Processing 0.228ms
+[14.031s][debug][gc,phases      ] GC(22) Weak Processing 1.080ms
+[14.031s][debug][gc,age         ] GC(22) Desired survivor size 199753728 bytes, new threshold 14 (max threshold 15)
+[14.031s][info ][gc,heap        ] GC(22) PSYoungGen: 1776896K(1899008K)->87680K(1893888K) Eden: 1695744K(1695744K)->0K(1695744K) From: 81152K(203264K)->87680K(198144K)
+[14.031s][info ][gc,heap        ] GC(22) ParOldGen: 184092K(257536K)->184100K(257536K)
+[14.031s][info ][gc,metaspace   ] GC(22) Metaspace: 63263K(63872K)->63263K(63872K) NonClass: 54187K(54528K)->54187K(54528K) Class: 9075K(9344K)->9075K(9344K)
+[14.031s][info ][gc             ] GC(22) Pause Young (Allocation Failure) 1915M->265M(2101M) 70.126ms
+[14.031s][info ][gc,cpu         ] GC(22) User=0.28s Sys=0.05s Real=0.07s
+[14.031s][info ][safepoint      ] Safepoint "ParallelGCFailedAllocation", Time since last: 478444872 ns, Reaching safepoint: 386207 ns, At safepoint: 70288789 ns, Total: 70674996 ns
+[14.564s][info ][gc,start       ] GC(23) Pause Young (Allocation Failure)
+[14.616s][debug][gc,phases      ] GC(23) Scavenge 51.368ms
+[14.616s][debug][gc,ref         ] GC(23) Skipped phase 1 of Reference Processing: no references
+[14.616s][debug][gc,ref         ] GC(23) Skipped phase 3 of Reference Processing: no references
+[14.616s][debug][gc,phases      ] GC(23) Reference Processing 0.173ms
+[14.617s][debug][gc,phases      ] GC(23) Weak Processing 0.900ms
+[14.617s][debug][gc,age         ] GC(23) Desired survivor size 197656576 bytes, new threshold 15 (max threshold 15)
+[14.617s][info ][gc,heap        ] GC(23) PSYoungGen: 1783424K(1893888K)->91440K(1904128K) Eden: 1695744K(1695744K)->0K(1709056K) From: 87680K(198144K)->91440K(195072K)
+[14.617s][info ][gc,heap        ] GC(23) ParOldGen: 184100K(257536K)->184108K(257536K)
+[14.617s][info ][gc,metaspace   ] GC(23) Metaspace: 63353K(63872K)->63353K(63872K) NonClass: 54277K(54528K)->54277K(54528K) Class: 9075K(9344K)->9075K(9344K)
+[14.617s][info ][gc             ] GC(23) Pause Young (Allocation Failure) 1921M->269M(2111M) 52.685ms
+[14.617s][info ][gc,cpu         ] GC(23) User=0.21s Sys=0.00s Real=0.05s
+[14.617s][info ][safepoint      ] Safepoint "ParallelGCFailedAllocation", Time since last: 531278140 ns, Reaching safepoint: 1806733 ns, At safepoint: 52835969 ns, Total: 54642702 ns
+[15.040s][info ][gc,start       ] GC(24) Pause Young (Allocation Failure)
+[15.098s][debug][gc,phases      ] GC(24) Scavenge 58.816ms
+[15.099s][debug][gc,ref         ] GC(24) Skipped phase 1 of Reference Processing: no references
+[15.099s][debug][gc,ref         ] GC(24) Skipped phase 3 of Reference Processing: no references
+[15.099s][debug][gc,phases      ] GC(24) Reference Processing 0.178ms
+[15.100s][debug][gc,phases      ] GC(24) Weak Processing 1.124ms
+[15.100s][debug][gc,age         ] GC(24) Desired survivor size 196083712 bytes, new threshold 15 (max threshold 15)
+[15.100s][info ][gc,heap        ] GC(24) PSYoungGen: 1800496K(1904128K)->94032K(1902080K) Eden: 1709056K(1709056K)->0K(1709056K) From: 91440K(195072K)->94032K(193024K)
+[15.100s][info ][gc,heap        ] GC(24) ParOldGen: 184108K(257536K)->184116K(257536K)
+[15.100s][info ][gc,metaspace   ] GC(24) Metaspace: 63577K(64128K)->63577K(64128K) NonClass: 54481K(54784K)->54481K(54784K) Class: 9096K(9344K)->9096K(9344K)
+[15.100s][info ][gc             ] GC(24) Pause Young (Allocation Failure) 1938M->271M(2109M) 60.362ms
+[15.100s][info ][gc,cpu         ] GC(24) User=0.21s Sys=0.02s Real=0.06s
+[15.100s][info ][safepoint      ] Safepoint "ParallelGCFailedAllocation", Time since last: 418967181 ns, Reaching safepoint: 3372762 ns, At safepoint: 60565611 ns, Total: 63938373 ns
+[15.558s][info ][gc,start       ] GC(25) Pause Young (Allocation Failure)
+[15.603s][debug][gc,phases      ] GC(25) Scavenge 45.669ms
+[15.603s][debug][gc,ref         ] GC(25) Skipped phase 1 of Reference Processing: no references
+[15.604s][debug][gc,ref         ] GC(25) Skipped phase 3 of Reference Processing: no references
+[15.604s][debug][gc,phases      ] GC(25) Reference Processing 0.185ms
+[15.605s][debug][gc,phases      ] GC(25) Weak Processing 0.981ms
+[15.605s][debug][gc,age         ] GC(25) Desired survivor size 193462272 bytes, new threshold 15 (max threshold 15)
+[15.605s][info ][gc,heap        ] GC(25) PSYoungGen: 1803088K(1902080K)->93120K(1908224K) Eden: 1709056K(1709056K)->0K(1716736K) From: 94032K(193024K)->93120K(191488K)
+[15.605s][info ][gc,heap        ] GC(25) ParOldGen: 184116K(257536K)->186236K(257536K)
+[15.605s][info ][gc,metaspace   ] GC(25) Metaspace: 63593K(64192K)->63593K(64192K) NonClass: 54496K(54848K)->54496K(54848K) Class: 9096K(9344K)->9096K(9344K)
+[15.605s][info ][gc             ] GC(25) Pause Young (Allocation Failure) 1940M->272M(2115M) 47.056ms
+[15.605s][info ][gc,cpu         ] GC(25) User=0.17s Sys=0.00s Real=0.05s
+[15.605s][info ][safepoint      ] Safepoint "ParallelGCFailedAllocation", Time since last: 457317884 ns, Reaching safepoint: 232705 ns, At safepoint: 47217565 ns, Total: 47450270 ns
+[16.064s][info ][gc,start       ] GC(26) Pause Young (Allocation Failure)
+[16.111s][debug][gc,phases      ] GC(26) Scavenge 47.289ms
+[16.111s][debug][gc,ref         ] GC(26) Skipped phase 1 of Reference Processing: no references
+[16.111s][debug][gc,ref         ] GC(26) Skipped phase 3 of Reference Processing: no references
+[16.111s][debug][gc,phases      ] GC(26) Reference Processing 0.187ms
+[16.112s][debug][gc,phases      ] GC(26) Weak Processing 1.183ms
+[16.112s][debug][gc,age         ] GC(26) Desired survivor size 191365120 bytes, new threshold 15 (max threshold 15)
+[16.113s][info ][gc,heap        ] GC(26) PSYoungGen: 1809856K(1908224K)->96416K(1905664K) Eden: 1716736K(1716736K)->0K(1716736K) From: 93120K(191488K)->96416K(188928K)
+[16.113s][info ][gc,heap        ] GC(26) ParOldGen: 186236K(257536K)->187100K(257536K)
+[16.113s][info ][gc,metaspace   ] GC(26) Metaspace: 63607K(64192K)->63607K(64192K) NonClass: 54510K(54848K)->54510K(54848K) Class: 9096K(9344K)->9096K(9344K)
+[16.113s][info ][gc             ] GC(26) Pause Young (Allocation Failure) 1949M->276M(2112M) 48.909ms
+[16.113s][info ][gc,cpu         ] GC(26) User=0.17s Sys=0.02s Real=0.05s
+[16.113s][info ][safepoint      ] Safepoint "ParallelGCFailedAllocation", Time since last: 457981498 ns, Reaching safepoint: 802114 ns, At safepoint: 49095600 ns, Total: 49897714 ns
+[16.564s][info ][gc,start       ] GC(27) Pause Young (Allocation Failure)
+[16.610s][debug][gc,phases      ] GC(27) Scavenge 45.078ms
+[16.610s][debug][gc,ref         ] GC(27) Skipped phase 1 of Reference Processing: no references
+[16.610s][debug][gc,ref         ] GC(27) Skipped phase 3 of Reference Processing: no references
+[16.610s][debug][gc,phases      ] GC(27) Reference Processing 0.147ms
+[16.611s][debug][gc,phases      ] GC(27) Weak Processing 0.911ms
+[16.611s][debug][gc,age         ] GC(27) Desired survivor size 185597952 bytes, new threshold 15 (max threshold 15)
+[16.611s][info ][gc,heap        ] GC(27) PSYoungGen: 1813152K(1905664K)->87360K(1915904K) Eden: 1716736K(1716736K)->0K(1729024K) From: 96416K(188928K)->87360K(186880K)
+[16.611s][info ][gc,heap        ] GC(27) ParOldGen: 187100K(257536K)->188328K(257536K)
+[16.611s][info ][gc,metaspace   ] GC(27) Metaspace: 63623K(64192K)->63623K(64192K) NonClass: 54526K(54848K)->54526K(54848K) Class: 9096K(9344K)->9096K(9344K)
+[16.611s][info ][gc             ] GC(27) Pause Young (Allocation Failure) 1953M->269M(2122M) 46.364ms
+[16.611s][info ][gc,cpu         ] GC(27) User=0.17s Sys=0.00s Real=0.05s
+[16.611s][info ][safepoint      ] Safepoint "ParallelGCFailedAllocation", Time since last: 450610963 ns, Reaching safepoint: 995718 ns, At safepoint: 46550553 ns, Total: 47546271 ns
+[17.015s][info ][gc,start       ] GC(28) Pause Young (Allocation Failure)
+[17.052s][debug][gc,phases      ] GC(28) Scavenge 36.637ms
+[17.052s][debug][gc,ref         ] GC(28) Skipped phase 1 of Reference Processing: no references
+[17.052s][debug][gc,ref         ] GC(28) Skipped phase 3 of Reference Processing: no references
+[17.052s][debug][gc,phases      ] GC(28) Reference Processing 0.190ms
+[17.053s][debug][gc,phases      ] GC(28) Weak Processing 1.068ms
+[17.053s][debug][gc,age         ] GC(28) Desired survivor size 179306496 bytes, new threshold 15 (max threshold 15)
+[17.053s][info ][gc,heap        ] GC(28) PSYoungGen: 1816384K(1915904K)->86704K(1910272K) Eden: 1729024K(1729024K)->0K(1729024K) From: 87360K(186880K)->86704K(181248K)
+[17.053s][info ][gc,heap        ] GC(28) ParOldGen: 188328K(257536K)->189952K(257536K)
+[17.053s][info ][gc,metaspace   ] GC(28) Metaspace: 63640K(64192K)->63640K(64192K) NonClass: 54543K(54848K)->54543K(54848K) Class: 9096K(9344K)->9096K(9344K)
+[17.053s][info ][gc             ] GC(28) Pause Young (Allocation Failure) 1957M->270M(2117M) 38.135ms
+[17.053s][info ][gc,cpu         ] GC(28) User=0.15s Sys=0.00s Real=0.04s
+[17.054s][info ][safepoint      ] Safepoint "ParallelGCFailedAllocation", Time since last: 404132010 ns, Reaching safepoint: 298006 ns, At safepoint: 38301902 ns, Total: 38599908 ns
+[17.469s][info ][safepoint      ] Safepoint "ICBufferFull", Time since last: 415416117 ns, Reaching safepoint: 340307 ns, At safepoint: 28900 ns, Total: 369207 ns
+[17.548s][info ][gc,start       ] GC(29) Pause Young (Allocation Failure)
+[17.569s][debug][gc,phases      ] GC(29) Scavenge 20.931ms
+[17.569s][debug][gc,ref         ] GC(29) Skipped phase 1 of Reference Processing: no references
+[17.569s][debug][gc,ref         ] GC(29) Skipped phase 3 of Reference Processing: no references
+[17.569s][debug][gc,phases      ] GC(29) Reference Processing 0.143ms
+[17.570s][debug][gc,phases      ] GC(29) Weak Processing 1.032ms
+[17.570s][debug][gc,age         ] GC(29) Desired survivor size 171442176 bytes, new threshold 15 (max threshold 15)
+[17.570s][info ][gc,heap        ] GC(29) PSYoungGen: 1815728K(1910272K)->63744K(1929728K) Eden: 1729024K(1729024K)->0K(1754624K) From: 86704K(181248K)->63744K(175104K)
+[17.570s][info ][gc,heap        ] GC(29) ParOldGen: 189952K(257536K)->191992K(257536K)
+[17.570s][info ][gc,metaspace   ] GC(29) Metaspace: 64141K(64640K)->64141K(64640K) NonClass: 54969K(55232K)->54969K(55232K) Class: 9172K(9408K)->9172K(9408K)
+[17.570s][info ][gc             ] GC(29) Pause Young (Allocation Failure) 1958M->249M(2136M) 22.357ms
+[17.570s][info ][gc,cpu         ] GC(29) User=0.08s Sys=0.00s Real=0.03s
+[17.570s][info ][safepoint      ] Safepoint "ParallelGCFailedAllocation", Time since last: 77965930 ns, Reaching safepoint: 182003 ns, At safepoint: 22520613 ns, Total: 22702616 ns
+[17.793s][info ][safepoint      ] Safepoint "ICBufferFull", Time since last: 221795567 ns, Reaching safepoint: 673312 ns, At safepoint: 22001 ns, Total: 695313 ns
+[17.858s][info ][safepoint      ] Safepoint "ICBufferFull", Time since last: 65599703 ns, Reaching safepoint: 353306 ns, At safepoint: 19100 ns, Total: 372406 ns
+[17.885s][info ][safepoint      ] Safepoint "ICBufferFull", Time since last: 24697253 ns, Reaching safepoint: 2160340 ns, At safepoint: 30400 ns, Total: 2190740 ns
+[17.887s][info ][safepoint      ] Safepoint "ICBufferFull", Time since last: 1547029 ns, Reaching safepoint: 108702 ns, At safepoint: 20300 ns, Total: 129002 ns
+[18.064s][info ][safepoint      ] Safepoint "ICBufferFull", Time since last: 173974490 ns, Reaching safepoint: 3346862 ns, At safepoint: 27800 ns, Total: 3374662 ns
+[18.079s][info ][safepoint      ] Safepoint "ICBufferFull", Time since last: 14370164 ns, Reaching safepoint: 226004 ns, At safepoint: 29400 ns, Total: 255404 ns
+[18.100s][info ][safepoint      ] Safepoint "ICBufferFull", Time since last: 17578423 ns, Reaching safepoint: 3222859 ns, At safepoint: 33700 ns, Total: 3256559 ns
+[18.103s][info ][gc,start       ] GC(30) Pause Young (Allocation Failure)
+[18.120s][debug][gc,phases      ] GC(30) Scavenge 16.422ms
+[18.120s][debug][gc,ref         ] GC(30) Skipped phase 1 of Reference Processing: no references
+[18.120s][debug][gc,ref         ] GC(30) Skipped phase 3 of Reference Processing: no references
+[18.120s][debug][gc,phases      ] GC(30) Reference Processing 0.210ms
+[18.121s][debug][gc,phases      ] GC(30) Weak Processing 1.229ms
+[18.121s][debug][gc,age         ] GC(30) Desired survivor size 164102144 bytes, new threshold 15 (max threshold 15)
+[18.121s][info ][gc,heap        ] GC(30) PSYoungGen: 1818368K(1929728K)->58880K(1922048K) Eden: 1754624K(1754624K)->0K(1754624K) From: 63744K(175104K)->58880K(167424K)
+[18.121s][info ][gc,heap        ] GC(30) ParOldGen: 191992K(257536K)->195520K(257536K)
+[18.121s][info ][gc,metaspace   ] GC(30) Metaspace: 65126K(65664K)->65126K(65664K) NonClass: 55830K(56128K)->55830K(56128K) Class: 9296K(9536K)->9296K(9536K)
+[18.121s][info ][gc             ] GC(30) Pause Young (Allocation Failure) 1963M->248M(2128M) 18.126ms
+[18.121s][info ][gc,cpu         ] GC(30) User=0.07s Sys=0.00s Real=0.02s
+[18.121s][info ][safepoint      ] Safepoint "ParallelGCFailedAllocation", Time since last: 2961155 ns, Reaching safepoint: 150602 ns, At safepoint: 18285636 ns, Total: 18436238 ns
+[18.124s][info ][safepoint      ] Safepoint "ICBufferFull", Time since last: 2818551 ns, Reaching safepoint: 94302 ns, At safepoint: 20101 ns, Total: 114403 ns
+[18.162s][info ][safepoint      ] Safepoint "ICBufferFull", Time since last: 37340784 ns, Reaching safepoint: 213604 ns, At safepoint: 32201 ns, Total: 245805 ns
+[18.176s][info ][safepoint      ] Safepoint "ICBufferFull", Time since last: 14152359 ns, Reaching safepoint: 156903 ns, At safepoint: 26201 ns, Total: 183104 ns
+[18.178s][info ][safepoint      ] Safepoint "ICBufferFull", Time since last: 1859434 ns, Reaching safepoint: 131202 ns, At safepoint: 33101 ns, Total: 164303 ns
+[18.179s][info ][safepoint      ] Safepoint "ICBufferFull", Time since last: 841815 ns, Reaching safepoint: 105802 ns, At safepoint: 25601 ns, Total: 131403 ns
+[18.289s][info ][safepoint      ] Safepoint "ICBufferFull", Time since last: 107806576 ns, Reaching safepoint: 2254142 ns, At safepoint: 33700 ns, Total: 2287842 ns
+[18.371s][info ][safepoint      ] Safepoint "ICBufferFull", Time since last: 81899502 ns, Reaching safepoint: 223604 ns, At safepoint: 31901 ns, Total: 255505 ns
+[18.432s][info ][safepoint      ] Safepoint "ICBufferFull", Time since last: 58217467 ns, Reaching safepoint: 2182740 ns, At safepoint: 30401 ns, Total: 2213141 ns
+[18.478s][info ][safepoint      ] Safepoint "ICBufferFull", Time since last: 45572636 ns, Reaching safepoint: 421907 ns, At safepoint: 29001 ns, Total: 450908 ns
+[18.526s][info ][safepoint      ] Safepoint "ICBufferFull", Time since last: 48382987 ns, Reaching safepoint: 176503 ns, At safepoint: 25201 ns, Total: 201704 ns
+[18.609s][info ][safepoint      ] Safepoint "ICBufferFull", Time since last: 79059850 ns, Reaching safepoint: 3267159 ns, At safepoint: 34301 ns, Total: 3301460 ns
+[18.617s][info ][gc,start       ] GC(31) Pause Young (Allocation Failure)
+[18.633s][debug][gc,phases      ] GC(31) Scavenge 15.939ms
+[18.633s][debug][gc,ref         ] GC(31) Skipped phase 1 of Reference Processing: no references
+[18.633s][debug][gc,ref         ] GC(31) Skipped phase 3 of Reference Processing: no references
+[18.633s][debug][gc,phases      ] GC(31) Reference Processing 0.156ms
+[18.634s][debug][gc,phases      ] GC(31) Weak Processing 0.998ms
+[18.634s][debug][gc,age         ] GC(31) Desired survivor size 158334976 bytes, new threshold 15 (max threshold 15)
+[18.634s][info ][gc,heap        ] GC(31) PSYoungGen: 1813504K(1922048K)->56032K(1942528K) Eden: 1754624K(1754624K)->0K(1782272K) From: 58880K(167424K)->56032K(160256K)
+[18.634s][info ][gc,heap        ] GC(31) ParOldGen: 195520K(257536K)->198456K(257536K)
+[18.634s][info ][gc,metaspace   ] GC(31) Metaspace: 65417K(65984K)->65417K(65984K) NonClass: 56118K(56448K)->56118K(56448K) Class: 9298K(9536K)->9298K(9536K)
+[18.634s][info ][gc             ] GC(31) Pause Young (Allocation Failure) 1961M->248M(2148M) 17.342ms
+[18.634s][info ][gc,cpu         ] GC(31) User=0.07s Sys=0.00s Real=0.02s
+[18.634s][info ][safepoint      ] Safepoint "ParallelGCFailedAllocation", Time since last: 8090448 ns, Reaching safepoint: 118103 ns, At safepoint: 17502821 ns, Total: 17620924 ns
+[18.685s][info ][safepoint      ] Safepoint "ICBufferFull", Time since last: 50260221 ns, Reaching safepoint: 397607 ns, At safepoint: 32701 ns, Total: 430308 ns
+[18.702s][info ][safepoint      ] Safepoint "ICBufferFull", Time since last: 16412601 ns, Reaching safepoint: 183403 ns, At safepoint: 24801 ns, Total: 208204 ns
+[18.744s][info ][safepoint      ] Safepoint "ICBufferFull", Time since last: 42342676 ns, Reaching safepoint: 358207 ns, At safepoint: 24900 ns, Total: 383107 ns
+[18.806s][info ][safepoint      ] Safepoint "ICBufferFull", Time since last: 61480828 ns, Reaching safepoint: 393807 ns, At safepoint: 26300 ns, Total: 420107 ns
+[18.872s][info ][safepoint      ] Safepoint "ICBufferFull", Time since last: 64668886 ns, Reaching safepoint: 1109321 ns, At safepoint: 25700 ns, Total: 1135021 ns
+[18.911s][info ][safepoint      ] Safepoint "ICBufferFull", Time since last: 38707210 ns, Reaching safepoint: 247504 ns, At safepoint: 31701 ns, Total: 279205 ns
+[18.932s][info ][safepoint      ] Safepoint "ICBufferFull", Time since last: 18985748 ns, Reaching safepoint: 2156140 ns, At safepoint: 39300 ns, Total: 2195440 ns
+[18.993s][info ][safepoint      ] Safepoint "ICBufferFull", Time since last: 60186604 ns, Reaching safepoint: 202804 ns, At safepoint: 28700 ns, Total: 231504 ns
+[19.137s][info ][gc,start       ] GC(32) Pause Young (Allocation Failure)
+[19.152s][debug][gc,phases      ] GC(32) Scavenge 15.426ms
+[19.152s][debug][gc,ref         ] GC(32) Skipped phase 1 of Reference Processing: no references
+[19.152s][debug][gc,ref         ] GC(32) Skipped phase 3 of Reference Processing: no references
+[19.152s][debug][gc,phases      ] GC(32) Reference Processing 0.197ms
+[19.154s][debug][gc,phases      ] GC(32) Weak Processing 1.210ms
+[19.154s][debug][gc,age         ] GC(32) Desired survivor size 152043520 bytes, new threshold 15 (max threshold 15)
+[19.154s][info ][gc,heap        ] GC(32) PSYoungGen: 1838304K(1942528K)->55888K(1936896K) Eden: 1782272K(1782272K)->0K(1782272K) From: 56032K(160256K)->55888K(154624K)
+[19.154s][info ][gc,heap        ] GC(32) ParOldGen: 198456K(257536K)->198817K(257536K)
+[19.154s][info ][gc,metaspace   ] GC(32) Metaspace: 65622K(66176K)->65622K(66176K) NonClass: 56323K(56640K)->56323K(56640K) Class: 9299K(9536K)->9299K(9536K)
+[19.154s][info ][gc             ] GC(32) Pause Young (Allocation Failure) 1989M->248M(2143M) 17.106ms
+[19.154s][info ][gc,cpu         ] GC(32) User=0.05s Sys=0.01s Real=0.02s
+[19.154s][info ][safepoint      ] Safepoint "ParallelGCFailedAllocation", Time since last: 143443331 ns, Reaching safepoint: 334906 ns, At safepoint: 17287917 ns, Total: 17622823 ns
+[19.513s][info ][safepoint      ] Safepoint "ICBufferFull", Time since last: 355348216 ns, Reaching safepoint: 3384362 ns, At safepoint: 33701 ns, Total: 3418063 ns
+[19.633s][info ][gc,start       ] GC(33) Pause Young (Allocation Failure)
+[19.649s][debug][gc,phases      ] GC(33) Scavenge 15.044ms
+[19.649s][debug][gc,ref         ] GC(33) Skipped phase 1 of Reference Processing: no references
+[19.649s][debug][gc,ref         ] GC(33) Skipped phase 3 of Reference Processing: no references
+[19.649s][debug][gc,phases      ] GC(33) Reference Processing 0.180ms
+[19.650s][debug][gc,phases      ] GC(33) Weak Processing 1.118ms
+[19.650s][debug][gc,age         ] GC(33) Desired survivor size 146276352 bytes, new threshold 15 (max threshold 15)
+[19.650s][info ][gc,heap        ] GC(33) PSYoungGen: 1838160K(1936896K)->56240K(1954304K) Eden: 1782272K(1782272K)->0K(1805824K) From: 55888K(154624K)->56240K(148480K)
+[19.650s][info ][gc,heap        ] GC(33) ParOldGen: 198817K(257536K)->199273K(257536K)
+[19.650s][info ][gc,metaspace   ] GC(33) Metaspace: 67614K(68160K)->67614K(68160K) NonClass: 57989K(58304K)->57989K(58304K) Class: 9625K(9856K)->9625K(9856K)
+[19.650s][info ][gc             ] GC(33) Pause Young (Allocation Failure) 1989M->249M(2160M) 16.598ms
+[19.650s][info ][gc,cpu         ] GC(33) User=0.06s Sys=0.01s Real=0.02s
+[19.650s][info ][safepoint      ] Safepoint "ParallelGCFailedAllocation", Time since last: 120549510 ns, Reaching safepoint: 172504 ns, At safepoint: 16776607 ns, Total: 16949111 ns
+[20.056s][info ][safepoint      ] Safepoint "ICBufferFull", Time since last: 405165830 ns, Reaching safepoint: 975018 ns, At safepoint: 31401 ns, Total: 1006419 ns
+[20.133s][info ][gc,start       ] GC(34) Pause Young (Allocation Failure)
+[20.149s][debug][gc,phases      ] GC(34) Scavenge 15.856ms
+[20.149s][debug][gc,ref         ] GC(34) Skipped phase 1 of Reference Processing: no references
+[20.149s][debug][gc,ref         ] GC(34) Skipped phase 3 of Reference Processing: no references
+[20.149s][debug][gc,phases      ] GC(34) Reference Processing 0.168ms
+[20.150s][debug][gc,phases      ] GC(34) Weak Processing 1.311ms
+[20.150s][debug][gc,age         ] GC(34) Desired survivor size 141033472 bytes, new threshold 15 (max threshold 15)
+[20.150s][info ][gc,heap        ] GC(34) PSYoungGen: 1862064K(1954304K)->55232K(1948672K) Eden: 1805824K(1805824K)->0K(1805824K) From: 56240K(148480K)->55232K(142848K)
+[20.150s][info ][gc,heap        ] GC(34) ParOldGen: 199273K(257536K)->201959K(257536K)
+[20.150s][info ][gc,metaspace   ] GC(34) Metaspace: 69506K(70144K)->69506K(70144K) NonClass: 59674K(60032K)->59674K(60032K) Class: 9832K(10112K)->9832K(10112K)
+[20.150s][info ][gc             ] GC(34) Pause Young (Allocation Failure) 2013M->251M(2154M) 17.605ms
+[20.150s][info ][gc,cpu         ] GC(34) User=0.06s Sys=0.00s Real=0.02s
+[20.150s][info ][safepoint      ] Safepoint "ParallelGCFailedAllocation", Time since last: 72063821 ns, Reaching safepoint: 4352580 ns, At safepoint: 17794326 ns, Total: 22146906 ns
+[20.508s][info ][safepoint      ] Safepoint "ICBufferFull", Time since last: 356976947 ns, Reaching safepoint: 847515 ns, At safepoint: 25801 ns, Total: 873316 ns
+[20.669s][info ][gc,start       ] GC(35) Pause Young (Allocation Failure)
+[20.686s][debug][gc,phases      ] GC(35) Scavenge 17.253ms
+[20.686s][debug][gc,ref         ] GC(35) Skipped phase 1 of Reference Processing: no references
+[20.686s][debug][gc,ref         ] GC(35) Skipped phase 3 of Reference Processing: no references
+[20.687s][debug][gc,phases      ] GC(35) Reference Processing 0.151ms
+[20.688s][debug][gc,phases      ] GC(35) Weak Processing 1.248ms
+[20.688s][debug][gc,age         ] GC(35) Desired survivor size 136314880 bytes, new threshold 15 (max threshold 15)
+[20.688s][info ][gc,heap        ] GC(35) PSYoungGen: 1861056K(1948672K)->52233K(1964032K) Eden: 1805824K(1805824K)->0K(1826304K) From: 55232K(142848K)->52233K(137728K)
+[20.688s][info ][gc,heap        ] GC(35) ParOldGen: 201959K(257536K)->205765K(257536K)
+[20.688s][info ][gc,metaspace   ] GC(35) Metaspace: 72644K(73280K)->72644K(73280K) NonClass: 62412K(62720K)->62412K(62720K) Class: 10231K(10560K)->10231K(10560K)
+[20.688s][info ][gc             ] GC(35) Pause Young (Allocation Failure) 2014M->251M(2169M) 18.922ms
+[20.688s][info ][gc,cpu         ] GC(35) User=0.09s Sys=0.00s Real=0.01s
+[20.688s][info ][safepoint      ] Safepoint "ParallelGCFailedAllocation", Time since last: 157191683 ns, Reaching safepoint: 3301860 ns, At safepoint: 19132951 ns, Total: 22434811 ns
+[21.113s][info ][gc,start       ] GC(36) Pause Young (Allocation Failure)
+[21.128s][debug][gc,phases      ] GC(36) Scavenge 14.414ms
+[21.128s][debug][gc,ref         ] GC(36) Skipped phase 1 of Reference Processing: no references
+[21.128s][debug][gc,ref         ] GC(36) Skipped phase 3 of Reference Processing: no references
+[21.128s][debug][gc,phases      ] GC(36) Reference Processing 0.138ms
+[21.129s][debug][gc,phases      ] GC(36) Weak Processing 1.072ms
+[21.129s][debug][gc,age         ] GC(36) Desired survivor size 131596288 bytes, new threshold 15 (max threshold 15)
+[21.129s][info ][gc,heap        ] GC(36) PSYoungGen: 1878537K(1964032K)->51126K(1959424K) Eden: 1826304K(1826304K)->0K(1826304K) From: 52233K(137728K)->51126K(133120K)
+[21.129s][info ][gc,heap        ] GC(36) ParOldGen: 205765K(257536K)->206918K(257536K)
+[21.129s][info ][gc,metaspace   ] GC(36) Metaspace: 72761K(73408K)->72761K(73408K) NonClass: 62515K(62848K)->62515K(62848K) Class: 10246K(10560K)->10246K(10560K)
+[21.129s][info ][gc             ] GC(36) Pause Young (Allocation Failure) 2035M->251M(2165M) 15.856ms
+[21.129s][info ][gc,cpu         ] GC(36) User=0.06s Sys=0.00s Real=0.02s
+[21.129s][info ][safepoint      ] Safepoint "ParallelGCFailedAllocation", Time since last: 420904819 ns, Reaching safepoint: 4401781 ns, At safepoint: 16077895 ns, Total: 20479676 ns
+[21.408s][info ][safepoint      ] Safepoint "ICBufferFull", Time since last: 277832895 ns, Reaching safepoint: 467308 ns, At safepoint: 28501 ns, Total: 495809 ns
+[21.643s][info ][gc,start       ] GC(37) Pause Young (Allocation Failure)
+[21.662s][debug][gc,phases      ] GC(37) Scavenge 19.269ms
+[21.662s][debug][gc,ref         ] GC(37) Skipped phase 1 of Reference Processing: no references
+[21.662s][debug][gc,ref         ] GC(37) Skipped phase 3 of Reference Processing: no references
+[21.663s][debug][gc,phases      ] GC(37) Reference Processing 0.133ms
+[21.663s][debug][gc,phases      ] GC(37) Weak Processing 0.983ms
+[21.664s][debug][gc,age         ] GC(37) Desired survivor size 127401984 bytes, new threshold 15 (max threshold 15)
+[21.664s][info ][gc,heap        ] GC(37) PSYoungGen: 1877430K(1959424K)->51237K(1972736K) Eden: 1826304K(1826304K)->0K(1844224K) From: 51126K(133120K)->51237K(128512K)
+[21.664s][info ][gc,heap        ] GC(37) ParOldGen: 206918K(257536K)->212264K(257536K)
+[21.664s][info ][gc,metaspace   ] GC(37) Metaspace: 73584K(74240K)->73584K(74240K) NonClass: 63231K(63616K)->63231K(63616K) Class: 10353K(10624K)->10353K(10624K)
+[21.664s][info ][gc             ] GC(37) Pause Young (Allocation Failure) 2035M->257M(2178M) 20.638ms
+[21.664s][info ][gc,cpu         ] GC(37) User=0.08s Sys=0.00s Real=0.02s
+[21.664s][info ][safepoint      ] Safepoint "ParallelGCFailedAllocation", Time since last: 234853807 ns, Reaching safepoint: 319406 ns, At safepoint: 20824182 ns, Total: 21143588 ns
+[22.228s][info ][safepoint      ] Safepoint "ICBufferFull", Time since last: 563972443 ns, Reaching safepoint: 437308 ns, At safepoint: 27700 ns, Total: 465008 ns
+[22.234s][info ][gc,start       ] GC(38) Pause Young (Allocation Failure)
+[22.257s][debug][gc,phases      ] GC(38) Scavenge 22.916ms
+[22.257s][debug][gc,ref         ] GC(38) Skipped phase 1 of Reference Processing: no references
+[22.257s][debug][gc,ref         ] GC(38) Skipped phase 3 of Reference Processing: no references
+[22.257s][debug][gc,phases      ] GC(38) Reference Processing 0.171ms
+[22.258s][debug][gc,phases      ] GC(38) Weak Processing 1.163ms
+[22.258s][debug][gc,age         ] GC(38) Desired survivor size 123731968 bytes, new threshold 15 (max threshold 15)
+[22.259s][info ][gc,heap        ] GC(38) PSYoungGen: 1895461K(1972736K)->70043K(1968640K) Eden: 1844224K(1844224K)->0K(1844224K) From: 51237K(128512K)->70043K(124416K)
+[22.259s][info ][gc,heap        ] GC(38) ParOldGen: 212264K(257536K)->215897K(257536K)
+[22.259s][info ][gc,metaspace   ] GC(38) Metaspace: 73886K(74496K)->73886K(74496K) NonClass: 63490K(63808K)->63490K(63808K) Class: 10396K(10688K)->10396K(10688K)
+[22.259s][info ][gc             ] GC(38) Pause Young (Allocation Failure) 2058M->279M(2174M) 24.489ms
+[22.259s][info ][gc,cpu         ] GC(38) User=0.10s Sys=0.01s Real=0.02s
+[22.259s][info ][safepoint      ] Safepoint "ParallelGCFailedAllocation", Time since last: 5641904 ns, Reaching safepoint: 237704 ns, At safepoint: 24665152 ns, Total: 24902856 ns
+[22.702s][info ][safepoint      ] Safepoint "ICBufferFull", Time since last: 442332713 ns, Reaching safepoint: 648512 ns, At safepoint: 27800 ns, Total: 676312 ns
+[22.744s][info ][gc,start       ] GC(39) Pause Young (Allocation Failure)
+[22.768s][debug][gc,phases      ] GC(39) Scavenge 24.189ms
+[22.769s][debug][gc,ref         ] GC(39) Skipped phase 1 of Reference Processing: no references
+[22.769s][debug][gc,ref         ] GC(39) Skipped phase 3 of Reference Processing: no references
+[22.769s][debug][gc,phases      ] GC(39) Reference Processing 0.170ms
+[22.770s][debug][gc,phases      ] GC(39) Weak Processing 1.392ms
+[22.770s][debug][gc,age         ] GC(39) Desired survivor size 118489088 bytes, new threshold 15 (max threshold 15)
+[22.770s][info ][gc,heap        ] GC(39) PSYoungGen: 1914267K(1968640K)->64629K(1981440K) Eden: 1844224K(1844224K)->0K(1860608K) From: 70043K(124416K)->64629K(120832K)
+[22.770s][info ][gc,heap        ] GC(39) ParOldGen: 215897K(257536K)->222329K(257536K)
+[22.770s][info ][gc,metaspace   ] GC(39) Metaspace: 74250K(74880K)->74250K(74880K) NonClass: 63830K(64192K)->63830K(64192K) Class: 10419K(10688K)->10419K(10688K)
+[22.770s][info ][gc             ] GC(39) Pause Young (Allocation Failure) 2080M->280M(2186M) 26.027ms
+[22.770s][info ][gc,cpu         ] GC(39) User=0.07s Sys=0.02s Real=0.03s
+[22.770s][info ][safepoint      ] Safepoint "ParallelGCFailedAllocation", Time since last: 41538862 ns, Reaching safepoint: 927217 ns, At safepoint: 26192581 ns, Total: 27119798 ns
+[23.187s][info ][safepoint      ] Safepoint "ICBufferFull", Time since last: 416740143 ns, Reaching safepoint: 370507 ns, At safepoint: 27500 ns, Total: 398007 ns
+[23.245s][info ][gc,start       ] GC(40) Pause Young (Allocation Failure)
+[23.264s][debug][gc,phases      ] GC(40) Scavenge 18.692ms
+[23.264s][debug][gc,ref         ] GC(40) Skipped phase 1 of Reference Processing: no references
+[23.264s][debug][gc,ref         ] GC(40) Skipped phase 3 of Reference Processing: no references
+[23.264s][debug][gc,phases      ] GC(40) Reference Processing 0.156ms
+[23.265s][debug][gc,phases      ] GC(40) Weak Processing 1.270ms
+[23.265s][debug][gc,age         ] GC(40) Desired survivor size 113770496 bytes, new threshold 15 (max threshold 15)
+[23.265s][info ][gc,heap        ] GC(40) PSYoungGen: 1925237K(1981440K)->60460K(1976320K) Eden: 1860608K(1860608K)->0K(1860608K) From: 64629K(120832K)->60460K(115712K)
+[23.265s][info ][gc,heap        ] GC(40) ParOldGen: 222329K(257536K)->226146K(257536K)
+[23.265s][info ][gc,metaspace   ] GC(40) Metaspace: 74458K(75136K)->74458K(75136K) NonClass: 64024K(64384K)->64024K(64384K) Class: 10433K(10752K)->10433K(10752K)
+[23.265s][info ][gc             ] GC(40) Pause Young (Allocation Failure) 2097M->279M(2181M) 20.360ms
+[23.265s][info ][gc,cpu         ] GC(40) User=0.07s Sys=0.00s Real=0.02s
+[23.265s][info ][safepoint      ] Safepoint "ParallelGCFailedAllocation", Time since last: 57121948 ns, Reaching safepoint: 188903 ns, At safepoint: 20540477 ns, Total: 20729380 ns
+[23.736s][info ][safepoint      ] Safepoint "ICBufferFull", Time since last: 470611531 ns, Reaching safepoint: 332106 ns, At safepoint: 24101 ns, Total: 356207 ns
+[23.799s][info ][gc,start       ] GC(41) Pause Young (Allocation Failure)
+[23.820s][debug][gc,phases      ] GC(41) Scavenge 21.151ms
+[23.820s][debug][gc,ref         ] GC(41) Skipped phase 1 of Reference Processing: no references
+[23.820s][debug][gc,ref         ] GC(41) Skipped phase 3 of Reference Processing: no references
+[23.820s][debug][gc,phases      ] GC(41) Reference Processing 0.198ms
+[23.821s][debug][gc,phases      ] GC(41) Weak Processing 1.200ms
+[23.821s][debug][gc,age         ] GC(41) Desired survivor size 110100480 bytes, new threshold 15 (max threshold 15)
+[23.821s][info ][gc,heap        ] GC(41) PSYoungGen: 1921068K(1976320K)->54156K(1989632K) Eden: 1860608K(1860608K)->0K(1878528K) From: 60460K(115712K)->54156K(111104K)
+[23.821s][info ][gc,heap        ] GC(41) ParOldGen: 226146K(257536K)->232444K(257536K)
+[23.821s][info ][gc,metaspace   ] GC(41) Metaspace: 74613K(75264K)->74613K(75264K) NonClass: 64180K(64512K)->64180K(64512K) Class: 10433K(10752K)->10433K(10752K)
+[23.821s][info ][gc             ] GC(41) Pause Young (Allocation Failure) 2096M->279M(2194M) 22.772ms
+[23.821s][info ][gc,cpu         ] GC(41) User=0.09s Sys=0.01s Real=0.03s
+[23.822s][info ][safepoint      ] Safepoint "ParallelGCFailedAllocation", Time since last: 62064438 ns, Reaching safepoint: 188504 ns, At safepoint: 22961821 ns, Total: 23150325 ns
+[24.251s][info ][safepoint      ] Safepoint "ICBufferFull", Time since last: 429052669 ns, Reaching safepoint: 227004 ns, At safepoint: 21601 ns, Total: 248605 ns
+[24.365s][info ][gc,start       ] GC(42) Pause Young (Allocation Failure)
+[24.381s][debug][gc,phases      ] GC(42) Scavenge 16.056ms
+[24.381s][debug][gc,ref         ] GC(42) Skipped phase 1 of Reference Processing: no references
+[24.382s][debug][gc,ref         ] GC(42) Skipped phase 3 of Reference Processing: no references
+[24.382s][debug][gc,phases      ] GC(42) Reference Processing 0.185ms
+[24.383s][debug][gc,phases      ] GC(42) Weak Processing 1.191ms
+[24.383s][debug][gc,age         ] GC(42) Desired survivor size 108003328 bytes, new threshold 15 (max threshold 15)
+[24.383s][info ][gc,heap        ] GC(42) PSYoungGen: 1932684K(1989632K)->48425K(1986048K) Eden: 1878528K(1878528K)->0K(1878528K) From: 54156K(111104K)->48425K(107520K)
+[24.383s][info ][gc,heap        ] GC(42) ParOldGen: 232444K(257536K)->238493K(257536K)
+[24.383s][info ][gc,metaspace   ] GC(42) Metaspace: 74704K(75392K)->74704K(75392K) NonClass: 64270K(64640K)->64270K(64640K) Class: 10434K(10752K)->10434K(10752K)
+[24.383s][info ][gc             ] GC(42) Pause Young (Allocation Failure) 2114M->280M(2191M) 17.653ms
+[24.383s][info ][gc,cpu         ] GC(42) User=0.06s Sys=0.00s Real=0.02s
+[24.383s][info ][safepoint      ] Safepoint "ParallelGCFailedAllocation", Time since last: 109976817 ns, Reaching safepoint: 4400881 ns, At safepoint: 17836727 ns, Total: 22237608 ns
+[24.424s][info ][safepoint      ] Safepoint "ICBufferFull", Time since last: 40794548 ns, Reaching safepoint: 403107 ns, At safepoint: 35701 ns, Total: 438808 ns
+[24.701s][info ][safepoint      ] Safepoint "ICBufferFull", Time since last: 276558273 ns, Reaching safepoint: 207803 ns, At safepoint: 21601 ns, Total: 229404 ns
+[24.822s][info ][safepoint      ] Safepoint "ICBufferFull", Time since last: 118652376 ns, Reaching safepoint: 2258942 ns, At safepoint: 25200 ns, Total: 2284142 ns
+[24.846s][info ][gc,start       ] GC(43) Pause Young (Allocation Failure)
+[24.863s][debug][gc,phases      ] GC(43) Scavenge 17.060ms
+[24.863s][debug][gc,ref         ] GC(43) Skipped phase 1 of Reference Processing: no references
+[24.863s][debug][gc,ref         ] GC(43) Skipped phase 3 of Reference Processing: no references
+[24.863s][debug][gc,phases      ] GC(43) Reference Processing 0.160ms
+[24.865s][debug][gc,phases      ] GC(43) Weak Processing 1.194ms
+[24.865s][debug][gc,age         ] GC(43) Desired survivor size 107479040 bytes, new threshold 15 (max threshold 15)
+[24.865s][info ][gc,heap        ] GC(43) PSYoungGen: 1926953K(1986048K)->38914K(1992192K) Eden: 1878528K(1878528K)->0K(1886720K) From: 48425K(107520K)->38914K(105472K)
+[24.865s][info ][gc,heap        ] GC(43) ParOldGen: 238493K(257536K)->248550K(257536K)
+[24.865s][info ][gc,metaspace   ] GC(43) Metaspace: 74785K(75456K)->74785K(75456K) NonClass: 64350K(64704K)->64350K(64704K) Class: 10435K(10752K)->10435K(10752K)
+[24.865s][info ][gc             ] GC(43) Pause Young (Allocation Failure) 2114M->280M(2197M) 18.653ms
+[24.865s][info ][gc,cpu         ] GC(43) User=0.05s Sys=0.01s Real=0.02s
+[24.865s][debug][gc,phases      ] GC(44) Pre Compact 0.016ms
+[24.865s][info ][gc,start       ] GC(44) Pause Full (Ergonomics)
+[24.865s][info ][gc,phases,start] GC(44) Marking Phase
+[24.990s][debug][gc,phases      ] GC(44) Par Mark 125.622ms
+[24.991s][debug][gc,ref         ] GC(44) Skipped phase 1 of Reference Processing: no references
+[24.991s][debug][gc,ref         ] GC(44) Skipped phase 3 of Reference Processing: no references
+[24.991s][debug][gc,phases      ] GC(44) Reference Processing 0.825ms
+[24.993s][debug][gc,phases      ] GC(44) Weak Processing 1.366ms
+[24.993s][debug][gc,phases      ] GC(44) ClassLoaderData 0.130ms
+[24.993s][debug][gc,phases      ] GC(44) Trigger cleanups 0.001ms
+[25.014s][debug][gc,phases      ] GC(44) Class Unloading 21.691ms
+[25.014s][info ][gc,phases      ] GC(44) Marking Phase 149.807ms
+[25.014s][info ][gc,phases,start] GC(44) Summary Phase
+[25.014s][info ][gc,phases      ] GC(44) Summary Phase 0.014ms
+[25.015s][info ][gc,phases,start] GC(44) Adjust Roots
+[25.040s][info ][gc,phases      ] GC(44) Adjust Roots 25.426ms
+[25.040s][info ][gc,phases,start] GC(44) Compaction Phase
+[25.218s][info ][gc,phases      ] GC(44) Compaction Phase 178.379ms
+[25.218s][info ][gc,phases,start] GC(44) Post Compact
+[25.221s][info ][gc,phases      ] GC(44) Post Compact 2.458ms
+[25.221s][info ][gc,heap        ] GC(44) PSYoungGen: 38914K(1992192K)->35711K(1992192K) Eden: 0K(1886720K)->0K(1886720K) From: 38914K(105472K)->35711K(105472K)
+[25.221s][info ][gc,heap        ] GC(44) ParOldGen: 248550K(257536K)->246680K(286208K)
+[25.221s][info ][gc,metaspace   ] GC(44) Metaspace: 74785K(75456K)->74785K(75456K) NonClass: 64350K(64704K)->64350K(64704K) Class: 10435K(10752K)->10435K(10752K)
+[25.221s][info ][gc             ] GC(44) Pause Full (Ergonomics) 280M->275M(2225M) 356.495ms
+[25.221s][info ][gc,cpu         ] GC(44) User=1.24s Sys=0.00s Real=0.36s
+[25.225s][info ][safepoint      ] Safepoint "ParallelGCFailedAllocation", Time since last: 23720935 ns, Reaching safepoint: 162503 ns, At safepoint: 378996252 ns, Total: 379158755 ns
+[25.530s][info ][safepoint      ] Safepoint "ICBufferFull", Time since last: 305073695 ns, Reaching safepoint: 293706 ns, At safepoint: 34600 ns, Total: 328306 ns
+[25.718s][info ][gc,start       ] GC(45) Pause Young (Allocation Failure)
+[25.758s][debug][gc,phases      ] GC(45) Scavenge 39.489ms
+[25.758s][debug][gc,ref         ] GC(45) Skipped phase 1 of Reference Processing: no references
+[25.758s][debug][gc,ref         ] GC(45) Skipped phase 3 of Reference Processing: no references
+[25.758s][debug][gc,ref         ] GC(45) Skipped phase 4 of Reference Processing: no references
+[25.758s][debug][gc,phases      ] GC(45) Reference Processing 0.049ms
+[25.759s][debug][gc,phases      ] GC(45) Weak Processing 1.059ms
+[25.759s][debug][gc,age         ] GC(45) Desired survivor size 107479040 bytes, new threshold 15 (max threshold 15)
+[25.759s][info ][gc,heap        ] GC(45) PSYoungGen: 1922431K(1992192K)->31750K(1991680K) Eden: 1886720K(1886720K)->0K(1886720K) From: 35711K(105472K)->31750K(104960K)
+[25.759s][info ][gc,heap        ] GC(45) ParOldGen: 246680K(286208K)->251700K(286208K)
+[25.759s][info ][gc,metaspace   ] GC(45) Metaspace: 74793K(75456K)->74793K(75456K) NonClass: 64356K(64704K)->64356K(64704K) Class: 10437K(10752K)->10437K(10752K)
+[25.759s][info ][gc             ] GC(45) Pause Young (Allocation Failure) 2118M->276M(2224M) 40.835ms
+[25.759s][info ][gc,cpu         ] GC(45) User=0.15s Sys=0.00s Real=0.04s
+[25.759s][info ][safepoint      ] Safepoint "ParallelGCFailedAllocation", Time since last: 187344737 ns, Reaching safepoint: 543610 ns, At safepoint: 41005452 ns, Total: 41549062 ns
+[26.041s][info ][safepoint      ] Safepoint "ICBufferFull", Time since last: 280905853 ns, Reaching safepoint: 426807 ns, At safepoint: 23501 ns, Total: 450308 ns
+[26.229s][info ][safepoint      ] Safepoint "ICBufferFull", Time since last: 188145651 ns, Reaching safepoint: 160103 ns, At safepoint: 26600 ns, Total: 186703 ns
+[26.261s][info ][gc,start       ] GC(46) Pause Young (Allocation Failure)
+[26.276s][debug][gc,phases      ] GC(46) Scavenge 14.811ms
+[26.276s][debug][gc,ref         ] GC(46) Skipped phase 1 of Reference Processing: no references
+[26.276s][debug][gc,ref         ] GC(46) Skipped phase 3 of Reference Processing: no references
+[26.276s][debug][gc,ref         ] GC(46) Skipped phase 4 of Reference Processing: no references
+[26.276s][debug][gc,phases      ] GC(46) Reference Processing 0.042ms
+[26.277s][debug][gc,phases      ] GC(46) Weak Processing 0.967ms
+[26.277s][debug][gc,age         ] GC(46) Desired survivor size 106430464 bytes, new threshold 15 (max threshold 15)
+[26.277s][info ][gc,heap        ] GC(46) PSYoungGen: 1918470K(1991680K)->33109K(1993216K) Eden: 1886720K(1886720K)->0K(1888256K) From: 31750K(104960K)->33109K(104960K)
+[26.277s][info ][gc,heap        ] GC(46) ParOldGen: 251700K(286208K)->251992K(286208K)
+[26.277s][info ][gc,metaspace   ] GC(46) Metaspace: 74796K(75456K)->74796K(75456K) NonClass: 64359K(64704K)->64359K(64704K) Class: 10437K(10752K)->10437K(10752K)
+[26.277s][info ][gc             ] GC(46) Pause Young (Allocation Failure) 2119M->278M(2226M) 16.096ms
+[26.277s][info ][gc,cpu         ] GC(46) User=0.07s Sys=0.00s Real=0.01s
+[26.277s][info ][safepoint      ] Safepoint "ParallelGCFailedAllocation", Time since last: 31580780 ns, Reaching safepoint: 153602 ns, At safepoint: 16272099 ns, Total: 16425701 ns
+[26.529s][info ][safepoint      ] Safepoint "ICBufferFull", Time since last: 251835019 ns, Reaching safepoint: 212504 ns, At safepoint: 33101 ns, Total: 245605 ns
+[26.763s][info ][gc,start       ] GC(47) Pause Young (Allocation Failure)
+[26.773s][debug][gc,phases      ] GC(47) Scavenge 9.663ms
+[26.773s][debug][gc,ref         ] GC(47) Skipped phase 1 of Reference Processing: no references
+[26.773s][debug][gc,ref         ] GC(47) Skipped phase 3 of Reference Processing: no references
+[26.773s][debug][gc,phases      ] GC(47) Reference Processing 0.043ms
+[26.774s][debug][gc,phases      ] GC(47) Weak Processing 1.085ms
+[26.774s][debug][gc,age         ] GC(47) Desired survivor size 106430464 bytes, new threshold 15 (max threshold 15)
+[26.774s][info ][gc,heap        ] GC(47) PSYoungGen: 1921365K(1993216K)->24575K(1992192K) Eden: 1888256K(1888256K)->0K(1888256K) From: 33109K(104960K)->24575K(103936K)
+[26.774s][info ][gc,heap        ] GC(47) ParOldGen: 251992K(286208K)->252056K(286208K)
+[26.774s][info ][gc,metaspace   ] GC(47) Metaspace: 74850K(75520K)->74850K(75520K) NonClass: 64410K(64768K)->64410K(64768K) Class: 10440K(10752K)->10440K(10752K)
+[26.774s][info ][gc             ] GC(47) Pause Young (Allocation Failure) 2122M->270M(2225M) 10.994ms
+[26.774s][info ][gc,cpu         ] GC(47) User=0.04s Sys=0.00s Real=0.01s
+[26.775s][info ][safepoint      ] Safepoint "ParallelGCFailedAllocation", Time since last: 232213359 ns, Reaching safepoint: 2223041 ns, At safepoint: 11164505 ns, Total: 13387546 ns
+[27.288s][info ][gc,start       ] GC(48) Pause Young (Allocation Failure)
+[27.298s][debug][gc,phases      ] GC(48) Scavenge 9.508ms
+[27.298s][debug][gc,ref         ] GC(48) Skipped phase 1 of Reference Processing: no references
+[27.298s][debug][gc,ref         ] GC(48) Skipped phase 3 of Reference Processing: no references
+[27.298s][debug][gc,ref         ] GC(48) Skipped phase 4 of Reference Processing: no references
+[27.298s][debug][gc,phases      ] GC(48) Reference Processing 0.050ms
+[27.299s][debug][gc,phases      ] GC(48) Weak Processing 1.110ms
+[27.299s][debug][gc,age         ] GC(48) Desired survivor size 105381888 bytes, new threshold 15 (max threshold 15)
+[27.299s][info ][gc,heap        ] GC(48) PSYoungGen: 1912831K(1992192K)->24678K(1994240K) Eden: 1888256K(1888256K)->0K(1890304K) From: 24575K(103936K)->24678K(103936K)
+[27.299s][info ][gc,heap        ] GC(48) ParOldGen: 252056K(286208K)->252208K(286208K)
+[27.299s][info ][gc,metaspace   ] GC(48) Metaspace: 74885K(75520K)->74885K(75520K) NonClass: 64445K(64768K)->64445K(64768K) Class: 10440K(10752K)->10440K(10752K)
+[27.299s][info ][gc             ] GC(48) Pause Young (Allocation Failure) 2114M->270M(2227M) 10.907ms
+[27.299s][info ][gc,cpu         ] GC(48) User=0.04s Sys=0.00s Real=0.00s
+[27.299s][info ][safepoint      ] Safepoint "ParallelGCFailedAllocation", Time since last: 513534320 ns, Reaching safepoint: 127802 ns, At safepoint: 11070403 ns, Total: 11198205 ns
+[27.805s][info ][gc,start       ] GC(49) Pause Young (Allocation Failure)
+[27.815s][debug][gc,phases      ] GC(49) Scavenge 10.326ms
+[27.815s][debug][gc,ref         ] GC(49) Skipped phase 1 of Reference Processing: no references
+[27.815s][debug][gc,ref         ] GC(49) Skipped phase 3 of Reference Processing: no references
+[27.815s][debug][gc,ref         ] GC(49) Skipped phase 4 of Reference Processing: no references
+[27.815s][debug][gc,phases      ] GC(49) Reference Processing 0.040ms
+[27.816s][debug][gc,phases      ] GC(49) Weak Processing 1.077ms
+[27.816s][debug][gc,age         ] GC(49) Desired survivor size 103809024 bytes, new threshold 15 (max threshold 15)
+[27.816s][info ][gc,heap        ] GC(49) PSYoungGen: 1914982K(1994240K)->24470K(1993216K) Eden: 1890304K(1890304K)->0K(1890304K) From: 24678K(103936K)->24470K(102912K)
+[27.816s][info ][gc,heap        ] GC(49) ParOldGen: 252208K(286208K)->252740K(286208K)
+[27.816s][info ][gc,metaspace   ] GC(49) Metaspace: 74931K(75584K)->74931K(75584K) NonClass: 64491K(64832K)->64491K(64832K) Class: 10440K(10752K)->10440K(10752K)
+[27.816s][info ][gc             ] GC(49) Pause Young (Allocation Failure) 2116M->270M(2226M) 11.680ms
+[27.817s][info ][gc,cpu         ] GC(49) User=0.04s Sys=0.00s Real=0.01s
+[27.817s][info ][safepoint      ] Safepoint "ParallelGCFailedAllocation", Time since last: 504941963 ns, Reaching safepoint: 538610 ns, At safepoint: 11835717 ns, Total: 12374327 ns
+[28.345s][info ][gc,start       ] GC(50) Pause Young (Allocation Failure)
+[28.357s][debug][gc,phases      ] GC(50) Scavenge 11.850ms
+[28.357s][debug][gc,ref         ] GC(50) Skipped phase 1 of Reference Processing: no references
+[28.357s][debug][gc,ref         ] GC(50) Skipped phase 3 of Reference Processing: no references
+[28.357s][debug][gc,ref         ] GC(50) Skipped phase 4 of Reference Processing: no references
+[28.357s][debug][gc,phases      ] GC(50) Reference Processing 0.047ms
+[28.358s][debug][gc,phases      ] GC(50) Weak Processing 1.116ms
+[28.358s][debug][gc,age         ] GC(50) Desired survivor size 102236160 bytes, new threshold 15 (max threshold 15)
+[28.358s][info ][gc,heap        ] GC(50) PSYoungGen: 1914774K(1993216K)->23487K(1997312K) Eden: 1890304K(1890304K)->0K(1895936K) From: 24470K(102912K)->23487K(101376K)
+[28.358s][info ][gc,heap        ] GC(50) ParOldGen: 252740K(286208K)->254152K(286208K)
+[28.358s][info ][gc,metaspace   ] GC(50) Metaspace: 74940K(75584K)->74940K(75584K) NonClass: 64500K(64832K)->64500K(64832K) Class: 10440K(10752K)->10440K(10752K)
+[28.358s][info ][gc             ] GC(50) Pause Young (Allocation Failure) 2116M->271M(2230M) 13.302ms
+[28.358s][info ][gc,cpu         ] GC(50) User=0.05s Sys=0.01s Real=0.01s
+[28.359s][info ][safepoint      ] Safepoint "ParallelGCFailedAllocation", Time since last: 526186153 ns, Reaching safepoint: 2266441 ns, At safepoint: 13490548 ns, Total: 15756989 ns
+[28.762s][info ][safepoint      ] Safepoint "ICBufferFull", Time since last: 402806889 ns, Reaching safepoint: 244705 ns, At safepoint: 34600 ns, Total: 279305 ns
+[28.838s][info ][gc,start       ] GC(51) Pause Young (Allocation Failure)
+[28.850s][debug][gc,phases      ] GC(51) Scavenge 11.333ms
+[28.850s][debug][gc,ref         ] GC(51) Skipped phase 1 of Reference Processing: no references
+[28.850s][debug][gc,ref         ] GC(51) Skipped phase 3 of Reference Processing: no references
+[28.850s][debug][gc,ref         ] GC(51) Skipped phase 4 of Reference Processing: no references
+[28.850s][debug][gc,phases      ] GC(51) Reference Processing 0.047ms
+[28.851s][debug][gc,phases      ] GC(51) Weak Processing 0.893ms
+[28.851s][debug][gc,age         ] GC(51) Desired survivor size 99614720 bytes, new threshold 15 (max threshold 15)
+[28.851s][info ][gc,heap        ] GC(51) PSYoungGen: 1919423K(1997312K)->23712K(1995776K) Eden: 1895936K(1895936K)->0K(1895936K) From: 23487K(101376K)->23712K(99840K)
+[28.851s][info ][gc,heap        ] GC(51) ParOldGen: 254152K(286208K)->254900K(286208K)
+[28.851s][info ][gc,metaspace   ] GC(51) Metaspace: 74949K(75584K)->74949K(75584K) NonClass: 64508K(64832K)->64508K(64832K) Class: 10440K(10752K)->10440K(10752K)
+[28.851s][info ][gc             ] GC(51) Pause Young (Allocation Failure) 2122M->272M(2228M) 12.499ms
+[28.851s][info ][gc,cpu         ] GC(51) User=0.04s Sys=0.00s Real=0.02s
+[28.851s][info ][safepoint      ] Safepoint "ParallelGCFailedAllocation", Time since last: 76469403 ns, Reaching safepoint: 285105 ns, At safepoint: 12673133 ns, Total: 12958238 ns
+[29.288s][info ][gc,start       ] GC(52) Pause Young (Allocation Failure)
+[29.301s][debug][gc,phases      ] GC(52) Scavenge 12.760ms
+[29.301s][debug][gc,ref         ] GC(52) Skipped phase 1 of Reference Processing: no references
+[29.301s][debug][gc,ref         ] GC(52) Skipped phase 3 of Reference Processing: no references
+[29.301s][debug][gc,ref         ] GC(52) Skipped phase 4 of Reference Processing: no references
+[29.301s][debug][gc,phases      ] GC(52) Reference Processing 0.048ms
+[29.302s][debug][gc,phases      ] GC(52) Weak Processing 0.998ms
+[29.302s][debug][gc,age         ] GC(52) Desired survivor size 96993280 bytes, new threshold 15 (max threshold 15)
+[29.302s][info ][gc,heap        ] GC(52) PSYoungGen: 1919648K(1995776K)->24560K(2002432K) Eden: 1895936K(1895936K)->0K(1905152K) From: 23712K(99840K)->24560K(97280K)
+[29.302s][info ][gc,heap        ] GC(52) ParOldGen: 254900K(286208K)->255004K(286208K)
+[29.302s][info ][gc,metaspace   ] GC(52) Metaspace: 74950K(75584K)->74950K(75584K) NonClass: 64510K(64832K)->64510K(64832K) Class: 10440K(10752K)->10440K(10752K)
+[29.302s][info ][gc             ] GC(52) Pause Young (Allocation Failure) 2123M->273M(2235M) 14.105ms
+[29.302s][info ][gc,cpu         ] GC(52) User=0.06s Sys=0.01s Real=0.01s
+[29.302s][info ][safepoint      ] Safepoint "ParallelGCFailedAllocation", Time since last: 436327604 ns, Reaching safepoint: 709113 ns, At safepoint: 14294162 ns, Total: 15003275 ns
+[29.663s][info ][safepoint      ] Safepoint "ICBufferFull", Time since last: 360231609 ns, Reaching safepoint: 256605 ns, At safepoint: 35400 ns, Total: 292005 ns
+[29.863s][info ][gc,start       ] GC(53) Pause Young (Allocation Failure)
+[29.877s][debug][gc,phases      ] GC(53) Scavenge 13.695ms
+[29.877s][debug][gc,ref         ] GC(53) Skipped phase 1 of Reference Processing: no references
+[29.877s][debug][gc,ref         ] GC(53) Skipped phase 3 of Reference Processing: no references
+[29.877s][debug][gc,ref         ] GC(53) Skipped phase 4 of Reference Processing: no references
+[29.877s][debug][gc,phases      ] GC(53) Reference Processing 0.035ms
+[29.878s][debug][gc,phases      ] GC(53) Weak Processing 0.902ms
+[29.878s][debug][gc,age         ] GC(53) Desired survivor size 93847552 bytes, new threshold 15 (max threshold 15)
+[29.878s][info ][gc,heap        ] GC(53) PSYoungGen: 1929712K(2002432K)->25584K(1999872K) Eden: 1905152K(1905152K)->0K(1905152K) From: 24560K(97280K)->25584K(94720K)
+[29.878s][info ][gc,heap        ] GC(53) ParOldGen: 255004K(286208K)->255456K(286208K)
+[29.878s][info ][gc,metaspace   ] GC(53) Metaspace: 74952K(75584K)->74952K(75584K) NonClass: 64511K(64832K)->64511K(64832K) Class: 10440K(10752K)->10440K(10752K)
+[29.878s][info ][gc             ] GC(53) Pause Young (Allocation Failure) 2133M->274M(2232M) 14.883ms
+[29.878s][info ][gc,cpu         ] GC(53) User=0.07s Sys=0.00s Real=0.01s
+[29.878s][info ][safepoint      ] Safepoint "ParallelGCFailedAllocation", Time since last: 199945869 ns, Reaching safepoint: 182503 ns, At safepoint: 15052676 ns, Total: 15235179 ns
+[30.259s][info ][safepoint      ] Safepoint "ICBufferFull", Time since last: 380607483 ns, Reaching safepoint: 230604 ns, At safepoint: 24700 ns, Total: 255304 ns
+[30.376s][info ][gc,start       ] GC(54) Pause Young (Allocation Failure)
+[30.388s][debug][gc,phases      ] GC(54) Scavenge 11.585ms
+[30.388s][debug][gc,ref         ] GC(54) Skipped phase 1 of Reference Processing: no references
+[30.388s][debug][gc,ref         ] GC(54) Skipped phase 3 of Reference Processing: no references
+[30.388s][debug][gc,ref         ] GC(54) Skipped phase 4 of Reference Processing: no references
+[30.388s][debug][gc,phases      ] GC(54) Reference Processing 0.036ms
+[30.389s][debug][gc,phases      ] GC(54) Weak Processing 0.913ms
+[30.389s][debug][gc,age         ] GC(54) Desired survivor size 93847552 bytes, new threshold 15 (max threshold 15)
+[30.389s][info ][gc,heap        ] GC(54) PSYoungGen: 1930736K(1999872K)->8576K(2005504K) Eden: 1905152K(1905152K)->0K(1913856K) From: 25584K(94720K)->8576K(91648K)
+[30.389s][info ][gc,heap        ] GC(54) ParOldGen: 255456K(286208K)->272917K(286208K)
+[30.389s][info ][gc,metaspace   ] GC(54) Metaspace: 74965K(75648K)->74965K(75648K) NonClass: 64525K(64896K)->64525K(64896K) Class: 10440K(10752K)->10440K(10752K)
+[30.389s][info ][gc             ] GC(54) Pause Young (Allocation Failure) 2134M->274M(2238M) 12.783ms
+[30.389s][info ][gc,cpu         ] GC(54) User=0.04s Sys=0.00s Real=0.02s
+[30.389s][debug][gc,phases      ] GC(55) Pre Compact 0.016ms
+[30.389s][info ][gc,start       ] GC(55) Pause Full (Ergonomics)
+[30.389s][info ][gc,phases,start] GC(55) Marking Phase
+[30.513s][debug][gc,phases      ] GC(55) Par Mark 123.870ms
+[30.513s][debug][gc,ref         ] GC(55) Skipped phase 1 of Reference Processing: no references
+[30.513s][debug][gc,ref         ] GC(55) Skipped phase 3 of Reference Processing: no references
+[30.513s][debug][gc,phases      ] GC(55) Reference Processing 0.415ms
+[30.515s][debug][gc,phases      ] GC(55) Weak Processing 1.139ms
+[30.515s][debug][gc,phases      ] GC(55) ClassLoaderData 0.121ms
+[30.515s][debug][gc,phases      ] GC(55) Trigger cleanups 0.000ms
+[30.536s][debug][gc,phases      ] GC(55) Class Unloading 21.882ms
+[30.536s][info ][gc,phases      ] GC(55) Marking Phase 147.623ms
+[30.536s][info ][gc,phases,start] GC(55) Summary Phase
+[30.537s][info ][gc,phases      ] GC(55) Summary Phase 0.021ms
+[30.537s][info ][gc,phases,start] GC(55) Adjust Roots
+[30.554s][info ][gc,phases      ] GC(55) Adjust Roots 17.135ms
+[30.554s][info ][gc,phases,start] GC(55) Compaction Phase
+[30.627s][info ][gc,phases      ] GC(55) Compaction Phase 73.445ms
+[30.627s][info ][gc,phases,start] GC(55) Post Compact
+[30.629s][info ][gc,phases      ] GC(55) Post Compact 1.484ms
+[30.629s][info ][gc,heap        ] GC(55) PSYoungGen: 8576K(2005504K)->0K(2005504K) Eden: 0K(1913856K)->0K(1913856K) From: 8576K(91648K)->0K(91648K)
+[30.629s][info ][gc,heap        ] GC(55) ParOldGen: 272917K(286208K)->280849K(334336K)
+[30.629s][info ][gc,metaspace   ] GC(55) Metaspace: 74965K(75648K)->74965K(75648K) NonClass: 64525K(64896K)->64525K(64896K) Class: 10440K(10752K)->10440K(10752K)
+[30.629s][info ][gc             ] GC(55) Pause Full (Ergonomics) 274M->274M(2285M) 240.123ms
+[30.629s][info ][gc,cpu         ] GC(55) User=0.83s Sys=0.00s Real=0.24s
+[30.647s][info ][safepoint      ] Safepoint "ParallelGCFailedAllocation", Time since last: 113689386 ns, Reaching safepoint: 3296860 ns, At safepoint: 271537682 ns, Total: 274834542 ns
+[30.803s][info ][safepoint      ] Safepoint "ICBufferFull", Time since last: 154992444 ns, Reaching safepoint: 263405 ns, At safepoint: 28900 ns, Total: 292305 ns
+[30.804s][info ][safepoint      ] Safepoint "ICBufferFull", Time since last: 1084120 ns, Reaching safepoint: 104902 ns, At safepoint: 20800 ns, Total: 125702 ns
+[31.241s][info ][gc,start       ] GC(56) Pause Young (Allocation Failure)
+[31.257s][debug][gc,phases      ] GC(56) Scavenge 16.169ms
+[31.257s][debug][gc,ref         ] GC(56) Skipped phase 1 of Reference Processing: no references
+[31.257s][debug][gc,ref         ] GC(56) Skipped phase 2 of Reference Processing: no references
+[31.257s][debug][gc,ref         ] GC(56) Skipped phase 3 of Reference Processing: no references
+[31.257s][debug][gc,ref         ] GC(56) Skipped phase 4 of Reference Processing: no references
+[31.257s][debug][gc,phases      ] GC(56) Reference Processing 0.029ms
+[31.258s][debug][gc,phases      ] GC(56) Weak Processing 0.874ms
+[31.258s][debug][gc,age         ] GC(56) Desired survivor size 92274688 bytes, new threshold 15 (max threshold 15)
+[31.258s][info ][gc,heap        ] GC(56) PSYoungGen: 1913856K(2005504K)->10272K(2007040K) Eden: 1913856K(1913856K)->0K(1915392K) From: 0K(91648K)->10272K(91648K)
+[31.258s][info ][gc,heap        ] GC(56) ParOldGen: 280849K(334336K)->280849K(334336K)
+[31.258s][info ][gc,metaspace   ] GC(56) Metaspace: 75011K(75648K)->75011K(75648K) NonClass: 64569K(64896K)->64569K(64896K) Class: 10441K(10752K)->10441K(10752K)
+[31.258s][info ][gc             ] GC(56) Pause Young (Allocation Failure) 2143M->284M(2286M) 17.302ms
+[31.258s][info ][gc,cpu         ] GC(56) User=0.07s Sys=0.00s Real=0.01s
+[31.259s][info ][safepoint      ] Safepoint "ParallelGCFailedAllocation", Time since last: 434858078 ns, Reaching safepoint: 2243842 ns, At safepoint: 17469320 ns, Total: 19713162 ns
+[31.661s][info ][safepoint      ] Safepoint "ICBufferFull", Time since last: 401707370 ns, Reaching safepoint: 719313 ns, At safepoint: 34001 ns, Total: 753314 ns
+[31.742s][info ][gc,start       ] GC(57) Pause Young (Allocation Failure)
+[31.751s][debug][gc,phases      ] GC(57) Scavenge 9.143ms
+[31.752s][debug][gc,ref         ] GC(57) Skipped phase 1 of Reference Processing: no references
+[31.752s][debug][gc,ref         ] GC(57) Skipped phase 2 of Reference Processing: no references
+[31.752s][debug][gc,ref         ] GC(57) Skipped phase 3 of Reference Processing: no references
+[31.752s][debug][gc,ref         ] GC(57) Skipped phase 4 of Reference Processing: no references
+[31.752s][debug][gc,phases      ] GC(57) Reference Processing 0.076ms
+[31.753s][debug][gc,phases      ] GC(57) Weak Processing 1.021ms
+[31.753s][debug][gc,age         ] GC(57) Desired survivor size 90701824 bytes, new threshold 15 (max threshold 15)
+[31.753s][info ][gc,heap        ] GC(57) PSYoungGen: 1925664K(2007040K)->10656K(2005504K) Eden: 1915392K(1915392K)->0K(1915392K) From: 10272K(91648K)->10656K(90112K)
+[31.753s][info ][gc,heap        ] GC(57) ParOldGen: 280849K(334336K)->280849K(334336K)
+[31.753s][info ][gc,metaspace   ] GC(57) Metaspace: 75013K(75648K)->75013K(75648K) NonClass: 64571K(64896K)->64571K(64896K) Class: 10441K(10752K)->10441K(10752K)
+[31.753s][info ][gc             ] GC(57) Pause Young (Allocation Failure) 2154M->284M(2285M) 10.508ms
+[31.753s][info ][gc,cpu         ] GC(57) User=0.04s Sys=0.00s Real=0.01s
+[31.753s][info ][safepoint      ] Safepoint "ParallelGCFailedAllocation", Time since last: 77941330 ns, Reaching safepoint: 3241559 ns, At safepoint: 10699497 ns, Total: 13941056 ns
+[32.056s][info ][safepoint      ] Safepoint "ICBufferFull", Time since last: 301208126 ns, Reaching safepoint: 2274442 ns, At safepoint: 32200 ns, Total: 2306642 ns
+[32.244s][info ][gc,start       ] GC(58) Pause Young (Allocation Failure)
+[32.254s][debug][gc,phases      ] GC(58) Scavenge 9.436ms
+[32.254s][debug][gc,ref         ] GC(58) Skipped phase 1 of Reference Processing: no references
+[32.254s][debug][gc,ref         ] GC(58) Skipped phase 2 of Reference Processing: no references
+[32.254s][debug][gc,ref         ] GC(58) Skipped phase 3 of Reference Processing: no references
+[32.254s][debug][gc,ref         ] GC(58) Skipped phase 4 of Reference Processing: no references
+[32.254s][debug][gc,phases      ] GC(58) Reference Processing 0.028ms
+[32.255s][debug][gc,phases      ] GC(58) Weak Processing 0.963ms
+[32.255s][debug][gc,age         ] GC(58) Desired survivor size 88080384 bytes, new threshold 15 (max threshold 15)
+[32.255s][info ][gc,heap        ] GC(58) PSYoungGen: 1926048K(2005504K)->10944K(2011136K) Eden: 1915392K(1915392K)->0K(1922560K) From: 10656K(90112K)->10944K(88576K)
+[32.255s][info ][gc,heap        ] GC(58) ParOldGen: 280849K(334336K)->280849K(334336K)
+[32.255s][info ][gc,metaspace   ] GC(58) Metaspace: 75022K(75648K)->75022K(75648K) NonClass: 64580K(64896K)->64580K(64896K) Class: 10441K(10752K)->10441K(10752K)
+[32.255s][info ][gc             ] GC(58) Pause Young (Allocation Failure) 2155M->284M(2290M) 10.680ms
+[32.255s][info ][gc,cpu         ] GC(58) User=0.04s Sys=0.00s Real=0.01s
+[32.255s][info ][safepoint      ] Safepoint "ParallelGCFailedAllocation", Time since last: 187661844 ns, Reaching safepoint: 216304 ns, At safepoint: 10843398 ns, Total: 11059702 ns
+[32.511s][info ][safepoint      ] Safepoint "ICBufferFull", Time since last: 255238383 ns, Reaching safepoint: 373907 ns, At safepoint: 27201 ns, Total: 401108 ns
+[32.758s][info ][gc,start       ] GC(59) Pause Young (Allocation Failure)
+[32.767s][debug][gc,phases      ] GC(59) Scavenge 9.321ms
+[32.767s][debug][gc,ref         ] GC(59) Skipped phase 1 of Reference Processing: no references
+[32.767s][debug][gc,ref         ] GC(59) Skipped phase 2 of Reference Processing: no references
+[32.767s][debug][gc,ref         ] GC(59) Skipped phase 3 of Reference Processing: no references
+[32.767s][debug][gc,ref         ] GC(59) Skipped phase 4 of Reference Processing: no references
+[32.767s][debug][gc,phases      ] GC(59) Reference Processing 0.038ms
+[32.768s][debug][gc,phases      ] GC(59) Weak Processing 0.918ms
+[32.768s][debug][gc,age         ] GC(59) Desired survivor size 85458944 bytes, new threshold 15 (max threshold 15)
+[32.768s][info ][gc,heap        ] GC(59) PSYoungGen: 1933504K(2011136K)->11264K(2008576K) Eden: 1922560K(1922560K)->0K(1922560K) From: 10944K(88576K)->11264K(86016K)
+[32.768s][info ][gc,heap        ] GC(59) ParOldGen: 280849K(334336K)->280849K(334336K)
+[32.768s][info ][gc,metaspace   ] GC(59) Metaspace: 75022K(75648K)->75022K(75648K) NonClass: 64580K(64896K)->64580K(64896K) Class: 10441K(10752K)->10441K(10752K)
+[32.768s][info ][gc             ] GC(59) Pause Young (Allocation Failure) 2162M->285M(2288M) 10.562ms
+[32.768s][info ][gc,cpu         ] GC(59) User=0.04s Sys=0.00s Real=0.02s
+[32.768s][info ][safepoint      ] Safepoint "ParallelGCFailedAllocation", Time since last: 246759427 ns, Reaching safepoint: 200004 ns, At safepoint: 10736597 ns, Total: 10936601 ns
+[33.176s][info ][safepoint      ] Safepoint "ICBufferFull", Time since last: 407632579 ns, Reaching safepoint: 284305 ns, At safepoint: 27401 ns, Total: 311706 ns
+[33.271s][info ][gc,start       ] GC(60) Pause Young (Allocation Failure)
+[33.281s][debug][gc,phases      ] GC(60) Scavenge 9.718ms
+[33.281s][debug][gc,ref         ] GC(60) Skipped phase 1 of Reference Processing: no references
+[33.281s][debug][gc,ref         ] GC(60) Skipped phase 2 of Reference Processing: no references
+[33.281s][debug][gc,ref         ] GC(60) Skipped phase 3 of Reference Processing: no references
+[33.281s][debug][gc,ref         ] GC(60) Skipped phase 4 of Reference Processing: no references
+[33.281s][debug][gc,phases      ] GC(60) Reference Processing 0.033ms
+[33.282s][debug][gc,phases      ] GC(60) Weak Processing 0.914ms
+[33.282s][debug][gc,age         ] GC(60) Desired survivor size 82313216 bytes, new threshold 15 (max threshold 15)
+[33.282s][info ][gc,heap        ] GC(60) PSYoungGen: 1933824K(2008576K)->11488K(2016768K) Eden: 1922560K(1922560K)->0K(1933312K) From: 11264K(86016K)->11488K(83456K)
+[33.282s][info ][gc,heap        ] GC(60) ParOldGen: 280849K(334336K)->280849K(334336K)
+[33.282s][info ][gc,metaspace   ] GC(60) Metaspace: 75065K(75712K)->75065K(75712K) NonClass: 64623K(64960K)->64623K(64960K) Class: 10441K(10752K)->10441K(10752K)
+[33.282s][info ][gc             ] GC(60) Pause Young (Allocation Failure) 2162M->285M(2296M) 10.914ms
+[33.282s][info ][gc,cpu         ] GC(60) User=0.04s Sys=0.00s Real=0.01s
+[33.282s][info ][safepoint      ] Safepoint "ParallelGCFailedAllocation", Time since last: 94038425 ns, Reaching safepoint: 235305 ns, At safepoint: 11083303 ns, Total: 11318608 ns
+[33.793s][info ][gc,start       ] GC(61) Pause Young (Allocation Failure)
+[33.802s][debug][gc,phases      ] GC(61) Scavenge 9.381ms
+[33.802s][debug][gc,ref         ] GC(61) Skipped phase 1 of Reference Processing: no references
+[33.802s][debug][gc,ref         ] GC(61) Skipped phase 2 of Reference Processing: no references
+[33.802s][debug][gc,ref         ] GC(61) Skipped phase 3 of Reference Processing: no references
+[33.802s][debug][gc,ref         ] GC(61) Skipped phase 4 of Reference Processing: no references
+[33.802s][debug][gc,phases      ] GC(61) Reference Processing 0.038ms
+[33.803s][debug][gc,phases      ] GC(61) Weak Processing 0.982ms
+[33.803s][debug][gc,age         ] GC(61) Desired survivor size 79167488 bytes, new threshold 15 (max threshold 15)
+[33.803s][info ][gc,heap        ] GC(61) PSYoungGen: 1944800K(2016768K)->11840K(2013696K) Eden: 1933312K(1933312K)->0K(1933312K) From: 11488K(83456K)->11840K(80384K)
+[33.803s][info ][gc,heap        ] GC(61) ParOldGen: 280849K(334336K)->280849K(334336K)
+[33.803s][info ][gc,metaspace   ] GC(61) Metaspace: 75081K(75712K)->75081K(75712K) NonClass: 64639K(64960K)->64639K(64960K) Class: 10441K(10752K)->10441K(10752K)
+[33.803s][info ][gc             ] GC(61) Pause Young (Allocation Failure) 2173M->285M(2293M) 10.666ms
+[33.803s][info ][gc,cpu         ] GC(61) User=0.04s Sys=0.00s Real=0.01s
+[33.804s][info ][safepoint      ] Safepoint "ParallelGCFailedAllocation", Time since last: 508682034 ns, Reaching safepoint: 2268841 ns, At safepoint: 10869200 ns, Total: 13138041 ns
+[34.211s][info ][safepoint      ] Safepoint "ICBufferFull", Time since last: 407516077 ns, Reaching safepoint: 340606 ns, At safepoint: 31601 ns, Total: 372207 ns
+[34.312s][info ][gc,start       ] GC(62) Pause Young (Allocation Failure)
+[34.322s][debug][gc,phases      ] GC(62) Scavenge 9.184ms
+[34.322s][debug][gc,ref         ] GC(62) Skipped phase 1 of Reference Processing: no references
+[34.322s][debug][gc,ref         ] GC(62) Skipped phase 2 of Reference Processing: no references
+[34.322s][debug][gc,ref         ] GC(62) Skipped phase 3 of Reference Processing: no references
+[34.322s][debug][gc,ref         ] GC(62) Skipped phase 4 of Reference Processing: no references
+[34.322s][debug][gc,phases      ] GC(62) Reference Processing 0.029ms
+[34.323s][debug][gc,phases      ] GC(62) Weak Processing 0.785ms
+[34.323s][debug][gc,age         ] GC(62) Desired survivor size 75497472 bytes, new threshold 15 (max threshold 15)
+[34.323s][info ][gc,heap        ] GC(62) PSYoungGen: 1945152K(2013696K)->12224K(2023424K) Eden: 1933312K(1933312K)->0K(1946112K) From: 11840K(80384K)->12224K(77312K)
+[34.323s][info ][gc,heap        ] GC(62) ParOldGen: 280849K(334336K)->280857K(334336K)
+[34.323s][info ][gc,metaspace   ] GC(62) Metaspace: 75098K(75712K)->75098K(75712K) NonClass: 64657K(64960K)->64657K(64960K) Class: 10441K(10752K)->10441K(10752K)
+[34.323s][info ][gc             ] GC(62) Pause Young (Allocation Failure) 2173M->286M(2302M) 10.258ms
+[34.323s][info ][gc,cpu         ] GC(62) User=0.03s Sys=0.00s Real=0.01s
+[34.323s][info ][safepoint      ] Safepoint "ParallelGCFailedAllocation", Time since last: 100709148 ns, Reaching safepoint: 165803 ns, At safepoint: 10420991 ns, Total: 10586794 ns
+[34.829s][info ][safepoint      ] Safepoint "ICBufferFull", Time since last: 506456393 ns, Reaching safepoint: 218804 ns, At safepoint: 24301 ns, Total: 243105 ns
+[34.876s][info ][gc,start       ] GC(63) Pause Young (Allocation Failure)
+[34.888s][debug][gc,phases      ] GC(63) Scavenge 12.330ms
+[34.888s][debug][gc,ref         ] GC(63) Skipped phase 1 of Reference Processing: no references
+[34.888s][debug][gc,ref         ] GC(63) Skipped phase 2 of Reference Processing: no references
+[34.888s][debug][gc,ref         ] GC(63) Skipped phase 3 of Reference Processing: no references
+[34.888s][debug][gc,ref         ] GC(63) Skipped phase 4 of Reference Processing: no references
+[34.888s][debug][gc,phases      ] GC(63) Reference Processing 0.046ms
+[34.889s][debug][gc,phases      ] GC(63) Weak Processing 0.951ms
+[34.889s][debug][gc,age         ] GC(63) Desired survivor size 72351744 bytes, new threshold 15 (max threshold 15)
+[34.889s][info ][gc,heap        ] GC(63) PSYoungGen: 1958336K(2023424K)->12576K(2019840K) Eden: 1946112K(1946112K)->0K(1946112K) From: 12224K(77312K)->12576K(73728K)
+[34.889s][info ][gc,heap        ] GC(63) ParOldGen: 280857K(334336K)->280857K(334336K)
+[34.889s][info ][gc,metaspace   ] GC(63) Metaspace: 75107K(75712K)->75107K(75712K) NonClass: 64666K(64960K)->64666K(64960K) Class: 10441K(10752K)->10441K(10752K)
+[34.889s][info ][gc             ] GC(63) Pause Young (Allocation Failure) 2186M->286M(2299M) 13.535ms
+[34.889s][info ][gc,cpu         ] GC(63) User=0.04s Sys=0.00s Real=0.02s
+[34.889s][info ][safepoint      ] Safepoint "ParallelGCFailedAllocation", Time since last: 44084809 ns, Reaching safepoint: 2202840 ns, At safepoint: 13716552 ns, Total: 15919392 ns
+[35.382s][info ][safepoint      ] Safepoint "ICBufferFull", Time since last: 492448536 ns, Reaching safepoint: 224704 ns, At safepoint: 15800 ns, Total: 240504 ns
+[35.424s][info ][gc,start       ] GC(64) Pause Young (Allocation Failure)
+[35.438s][debug][gc,phases      ] GC(64) Scavenge 13.485ms
+[35.438s][debug][gc,ref         ] GC(64) Skipped phase 1 of Reference Processing: no references
+[35.438s][debug][gc,ref         ] GC(64) Skipped phase 2 of Reference Processing: no references
+[35.438s][debug][gc,ref         ] GC(64) Skipped phase 3 of Reference Processing: no references
+[35.438s][debug][gc,ref         ] GC(64) Skipped phase 4 of Reference Processing: no references
+[35.438s][debug][gc,phases      ] GC(64) Reference Processing 0.029ms
+[35.439s][debug][gc,phases      ] GC(64) Weak Processing 0.913ms
+[35.439s][debug][gc,age         ] GC(64) Desired survivor size 68681728 bytes, new threshold 15 (max threshold 15)
+[35.439s][info ][gc,heap        ] GC(64) PSYoungGen: 1958688K(2019840K)->13056K(2030080K) Eden: 1946112K(1946112K)->0K(1959424K) From: 12576K(73728K)->13056K(70656K)
+[35.439s][info ][gc,heap        ] GC(64) ParOldGen: 280857K(334336K)->280857K(334336K)
+[35.439s][info ][gc,metaspace   ] GC(64) Metaspace: 75111K(75712K)->75111K(75712K) NonClass: 64669K(64960K)->64669K(64960K) Class: 10441K(10752K)->10441K(10752K)
+[35.439s][info ][gc             ] GC(64) Pause Young (Allocation Failure) 2187M->287M(2309M) 14.710ms
+[35.439s][info ][gc,cpu         ] GC(64) User=0.03s Sys=0.01s Real=0.01s
+[35.439s][info ][safepoint      ] Safepoint "ParallelGCFailedAllocation", Time since last: 41428260 ns, Reaching safepoint: 313006 ns, At safepoint: 14878973 ns, Total: 15191979 ns
+[35.889s][info ][safepoint      ] Safepoint "ICBufferFull", Time since last: 449162542 ns, Reaching safepoint: 749514 ns, At safepoint: 25001 ns, Total: 774515 ns
+[35.908s][info ][gc,start       ] GC(65) Pause Young (Allocation Failure)
+[35.919s][debug][gc,phases      ] GC(65) Scavenge 10.695ms
+[35.919s][debug][gc,ref         ] GC(65) Skipped phase 1 of Reference Processing: no references
+[35.919s][debug][gc,ref         ] GC(65) Skipped phase 2 of Reference Processing: no references
+[35.919s][debug][gc,ref         ] GC(65) Skipped phase 3 of Reference Processing: no references
+[35.919s][debug][gc,ref         ] GC(65) Skipped phase 4 of Reference Processing: no references
+[35.919s][debug][gc,phases      ] GC(65) Reference Processing 0.029ms
+[35.920s][debug][gc,phases      ] GC(65) Weak Processing 0.913ms
+[35.920s][debug][gc,age         ] GC(65) Desired survivor size 65536000 bytes, new threshold 15 (max threshold 15)
+[35.920s][info ][gc,heap        ] GC(65) PSYoungGen: 1972480K(2030080K)->13440K(2026496K) Eden: 1959424K(1959424K)->0K(1959424K) From: 13056K(70656K)->13440K(67072K)
+[35.920s][info ][gc,heap        ] GC(65) ParOldGen: 280857K(334336K)->280857K(334336K)
+[35.920s][info ][gc,metaspace   ] GC(65) Metaspace: 75112K(75712K)->75112K(75712K) NonClass: 64670K(64960K)->64670K(64960K) Class: 10441K(10752K)->10441K(10752K)
+[35.920s][info ][gc             ] GC(65) Pause Young (Allocation Failure) 2200M->287M(2305M) 11.879ms
+[35.920s][info ][gc,cpu         ] GC(65) User=0.03s Sys=0.00s Real=0.01s
+[35.920s][info ][safepoint      ] Safepoint "ParallelGCFailedAllocation", Time since last: 19289754 ns, Reaching safepoint: 168703 ns, At safepoint: 12033820 ns, Total: 12202523 ns
+[36.474s][info ][gc,start       ] GC(66) Pause Young (Allocation Failure)
+[36.485s][debug][gc,phases      ] GC(66) Scavenge 11.558ms
+[36.486s][debug][gc,ref         ] GC(66) Skipped phase 1 of Reference Processing: no references
+[36.486s][debug][gc,ref         ] GC(66) Skipped phase 3 of Reference Processing: no references
+[36.486s][debug][gc,phases      ] GC(66) Reference Processing 0.034ms
+[36.487s][debug][gc,phases      ] GC(66) Weak Processing 1.003ms
+[36.487s][debug][gc,age         ] GC(66) Desired survivor size 61865984 bytes, new threshold 15 (max threshold 15)
+[36.487s][info ][gc,heap        ] GC(66) PSYoungGen: 1972864K(2026496K)->13856K(2036736K) Eden: 1959424K(1959424K)->0K(1972736K) From: 13440K(67072K)->13856K(64000K)
+[36.487s][info ][gc,heap        ] GC(66) ParOldGen: 280857K(334336K)->280865K(334336K)
+[36.487s][info ][gc,metaspace   ] GC(66) Metaspace: 75115K(75712K)->75115K(75712K) NonClass: 64672K(64960K)->64672K(64960K) Class: 10442K(10752K)->10442K(10752K)
+[36.487s][info ][gc             ] GC(66) Pause Young (Allocation Failure) 2200M->287M(2315M) 12.865ms
+[36.487s][info ][gc,cpu         ] GC(66) User=0.06s Sys=0.00s Real=0.01s
+[36.487s][info ][safepoint      ] Safepoint "ParallelGCFailedAllocation", Time since last: 553369855 ns, Reaching safepoint: 190903 ns, At safepoint: 13027940 ns, Total: 13218843 ns
+[37.099s][info ][gc,start       ] GC(67) Pause Young (Allocation Failure)
+[37.110s][debug][gc,phases      ] GC(67) Scavenge 10.682ms
+[37.110s][debug][gc,ref         ] GC(67) Skipped phase 1 of Reference Processing: no references
+[37.110s][debug][gc,ref         ] GC(67) Skipped phase 3 of Reference Processing: no references
+[37.110s][debug][gc,ref         ] GC(67) Skipped phase 4 of Reference Processing: no references
+[37.110s][debug][gc,phases      ] GC(67) Reference Processing 0.069ms
+[37.111s][debug][gc,phases      ] GC(67) Weak Processing 0.884ms
+[37.111s][debug][gc,age         ] GC(67) Desired survivor size 58720256 bytes, new threshold 15 (max threshold 15)
+[37.111s][info ][gc,heap        ] GC(67) PSYoungGen: 1986592K(2036736K)->14336K(2033152K) Eden: 1972736K(1972736K)->0K(1972736K) From: 13856K(64000K)->14336K(60416K)
+[37.111s][info ][gc,heap        ] GC(67) ParOldGen: 280865K(334336K)->280865K(334336K)
+[37.111s][info ][gc,metaspace   ] GC(67) Metaspace: 75131K(75776K)->75131K(75776K) NonClass: 64688K(65024K)->64688K(65024K) Class: 10442K(10752K)->10442K(10752K)
+[37.111s][info ][gc             ] GC(67) Pause Young (Allocation Failure) 2214M->288M(2312M) 11.870ms
+[37.111s][info ][gc,cpu         ] GC(67) User=0.05s Sys=0.00s Real=0.02s
+[37.111s][info ][safepoint      ] Safepoint "ParallelGCFailedAllocation", Time since last: 611848728 ns, Reaching safepoint: 171403 ns, At safepoint: 12040421 ns, Total: 12211824 ns
+[37.620s][info ][safepoint      ] Safepoint "ICBufferFull", Time since last: 508192926 ns, Reaching safepoint: 1131220 ns, At safepoint: 30501 ns, Total: 1161721 ns
+[37.699s][info ][gc,start       ] GC(68) Pause Young (Allocation Failure)
+[37.716s][debug][gc,phases      ] GC(68) Scavenge 16.625ms
+[37.716s][debug][gc,ref         ] GC(68) Skipped phase 1 of Reference Processing: no references
+[37.716s][debug][gc,ref         ] GC(68) Skipped phase 3 of Reference Processing: no references
+[37.716s][debug][gc,ref         ] GC(68) Skipped phase 4 of Reference Processing: no references
+[37.716s][debug][gc,phases      ] GC(68) Reference Processing 0.032ms
+[37.717s][debug][gc,phases      ] GC(68) Weak Processing 1.069ms
+[37.717s][debug][gc,age         ] GC(68) Desired survivor size 55574528 bytes, new threshold 15 (max threshold 15)
+[37.717s][info ][gc,heap        ] GC(68) PSYoungGen: 1987072K(2033152K)->14816K(2042880K) Eden: 1972736K(1972736K)->0K(1985536K) From: 14336K(60416K)->14816K(57344K)
+[37.717s][info ][gc,heap        ] GC(68) ParOldGen: 280865K(334336K)->280865K(334336K)
+[37.717s][info ][gc,metaspace   ] GC(68) Metaspace: 75133K(75776K)->75133K(75776K) NonClass: 64691K(65024K)->64691K(65024K) Class: 10442K(10752K)->10442K(10752K)
+[37.717s][info ][gc             ] GC(68) Pause Young (Allocation Failure) 2214M->288M(2321M) 17.926ms
+[37.717s][info ][gc,cpu         ] GC(68) User=0.05s Sys=0.00s Real=0.02s
+[37.717s][info ][safepoint      ] Safepoint "ParallelGCFailedAllocation", Time since last: 75261881 ns, Reaching safepoint: 3315461 ns, At safepoint: 18103832 ns, Total: 21419293 ns
+[38.206s][info ][safepoint      ] Safepoint "ICBufferFull", Time since last: 488969574 ns, Reaching safepoint: 218904 ns, At safepoint: 27000 ns, Total: 245904 ns
+[38.336s][info ][gc,start       ] GC(69) Pause Young (Allocation Failure)
+[38.347s][debug][gc,phases      ] GC(69) Scavenge 10.966ms
+[38.347s][debug][gc,ref         ] GC(69) Skipped phase 1 of Reference Processing: no references
+[38.347s][debug][gc,ref         ] GC(69) Skipped phase 3 of Reference Processing: no references
+[38.347s][debug][gc,ref         ] GC(69) Skipped phase 4 of Reference Processing: no references
+[38.347s][debug][gc,phases      ] GC(69) Reference Processing 0.041ms
+[38.348s][debug][gc,phases      ] GC(69) Weak Processing 0.955ms
+[38.348s][debug][gc,age         ] GC(69) Desired survivor size 52428800 bytes, new threshold 15 (max threshold 15)
+[38.348s][info ][gc,heap        ] GC(69) PSYoungGen: 2000352K(2042880K)->15456K(2039808K) Eden: 1985536K(1985536K)->0K(1985536K) From: 14816K(57344K)->15456K(54272K)
+[38.348s][info ][gc,heap        ] GC(69) ParOldGen: 280865K(334336K)->280865K(334336K)
+[38.348s][info ][gc,metaspace   ] GC(69) Metaspace: 75133K(75776K)->75133K(75776K) NonClass: 64691K(65024K)->64691K(65024K) Class: 10442K(10752K)->10442K(10752K)
+[38.348s][info ][gc             ] GC(69) Pause Young (Allocation Failure) 2227M->289M(2318M) 12.184ms
+[38.348s][info ][gc,cpu         ] GC(69) User=0.04s Sys=0.00s Real=0.02s
+[38.348s][info ][safepoint      ] Safepoint "ParallelGCFailedAllocation", Time since last: 129701480 ns, Reaching safepoint: 236405 ns, At safepoint: 12370827 ns, Total: 12607232 ns
+[38.854s][info ][safepoint      ] Safepoint "ICBufferFull", Time since last: 505556478 ns, Reaching safepoint: 208404 ns, At safepoint: 34600 ns, Total: 243004 ns
+[38.927s][info ][gc,start       ] GC(70) Pause Young (Allocation Failure)
+[38.940s][debug][gc,phases      ] GC(70) Scavenge 12.855ms
+[38.940s][debug][gc,ref         ] GC(70) Skipped phase 1 of Reference Processing: no references
+[38.940s][debug][gc,ref         ] GC(70) Skipped phase 3 of Reference Processing: no references
+[38.940s][debug][gc,ref         ] GC(70) Skipped phase 4 of Reference Processing: no references
+[38.940s][debug][gc,phases      ] GC(70) Reference Processing 0.032ms
+[38.941s][debug][gc,phases      ] GC(70) Weak Processing 0.888ms
+[38.941s][debug][gc,age         ] GC(70) Desired survivor size 49807360 bytes, new threshold 15 (max threshold 15)
+[38.941s][info ][gc,heap        ] GC(70) PSYoungGen: 2000992K(2039808K)->16128K(2048512K) Eden: 1985536K(1985536K)->0K(1997312K) From: 15456K(54272K)->16128K(51200K)
+[38.941s][info ][gc,heap        ] GC(70) ParOldGen: 280865K(334336K)->280865K(334336K)
+[38.941s][info ][gc,metaspace   ] GC(70) Metaspace: 75142K(75776K)->75142K(75776K) NonClass: 64699K(65024K)->64699K(65024K) Class: 10442K(10752K)->10442K(10752K)
+[38.941s][info ][gc             ] GC(70) Pause Young (Allocation Failure) 2228M->290M(2327M) 14.005ms
+[38.941s][info ][gc,cpu         ] GC(70) User=0.03s Sys=0.02s Real=0.02s
+[38.942s][info ][safepoint      ] Safepoint "ParallelGCFailedAllocation", Time since last: 73021440 ns, Reaching safepoint: 155003 ns, At safepoint: 14168660 ns, Total: 14323663 ns
+[39.475s][info ][gc,start       ] GC(71) Pause Young (Allocation Failure)
+[39.493s][debug][gc,phases      ] GC(71) Scavenge 18.151ms
+[39.493s][debug][gc,ref         ] GC(71) Skipped phase 1 of Reference Processing: no references
+[39.493s][debug][gc,ref         ] GC(71) Skipped phase 3 of Reference Processing: no references
+[39.493s][debug][gc,ref         ] GC(71) Skipped phase 4 of Reference Processing: no references
+[39.493s][debug][gc,phases      ] GC(71) Reference Processing 0.033ms
+[39.494s][debug][gc,phases      ] GC(71) Weak Processing 1.040ms
+[39.494s][debug][gc,age         ] GC(71) Desired survivor size 48234496 bytes, new threshold 15 (max threshold 15)
+[39.494s][info ][gc,heap        ] GC(71) PSYoungGen: 2013440K(2048512K)->6912K(2045952K) Eden: 1997312K(1997312K)->0K(1997312K) From: 16128K(51200K)->6912K(48640K)
+[39.494s][info ][gc,heap        ] GC(71) ParOldGen: 280865K(334336K)->290953K(334336K)
+[39.494s][info ][gc,metaspace   ] GC(71) Metaspace: 75153K(75776K)->75153K(75776K) NonClass: 64710K(65024K)->64710K(65024K) Class: 10442K(10752K)->10442K(10752K)
+[39.494s][info ][gc             ] GC(71) Pause Young (Allocation Failure) 2240M->290M(2324M) 19.462ms
+[39.494s][info ][gc,cpu         ] GC(71) User=0.06s Sys=0.01s Real=0.02s
+[39.494s][info ][safepoint      ] Safepoint "ParallelGCFailedAllocation", Time since last: 532957781 ns, Reaching safepoint: 207204 ns, At safepoint: 19647361 ns, Total: 19854565 ns
+[40.004s][info ][safepoint      ] Safepoint "ICBufferFull", Time since last: 509337848 ns, Reaching safepoint: 107302 ns, At safepoint: 8500 ns, Total: 115802 ns
+[40.553s][info ][safepoint      ] Safepoint "ICBufferFull", Time since last: 549526485 ns, Reaching safepoint: 148503 ns, At safepoint: 7200 ns, Total: 155703 ns
+[40.917s][info ][safepoint      ] Safepoint "ICBufferFull", Time since last: 363622774 ns, Reaching safepoint: 204104 ns, At safepoint: 9700 ns, Total: 213804 ns
+[41.254s][info ][safepoint      ] Safepoint "ICBufferFull", Time since last: 336445375 ns, Reaching safepoint: 234605 ns, At safepoint: 6100 ns, Total: 240705 ns
+[41.903s][info ][safepoint      ] Safepoint "ICBufferFull", Time since last: 649213216 ns, Reaching safepoint: 95701 ns, At safepoint: 10901 ns, Total: 106602 ns
+[42.454s][info ][safepoint      ] Safepoint "ICBufferFull", Time since last: 550827910 ns, Reaching safepoint: 97002 ns, At safepoint: 6600 ns, Total: 103602 ns
+[43.053s][info ][safepoint      ] Safepoint "ICBufferFull", Time since last: 598873792 ns, Reaching safepoint: 100002 ns, At safepoint: 7100 ns, Total: 107102 ns
+[43.653s][info ][safepoint      ] Safepoint "ICBufferFull", Time since last: 600026814 ns, Reaching safepoint: 98702 ns, At safepoint: 8200 ns, Total: 106902 ns
+[44.253s][info ][safepoint      ] Safepoint "ICBufferFull", Time since last: 599945113 ns, Reaching safepoint: 74901 ns, At safepoint: 17700 ns, Total: 92601 ns
+[44.854s][info ][safepoint      ] Safepoint "ICBufferFull", Time since last: 600149417 ns, Reaching safepoint: 94302 ns, At safepoint: 7200 ns, Total: 101502 ns
+[45.503s][info ][safepoint      ] Safepoint "ICBufferFull", Time since last: 649686426 ns, Reaching safepoint: 96802 ns, At safepoint: 18600 ns, Total: 115402 ns
+[46.103s][info ][safepoint      ] Safepoint "ICBufferFull", Time since last: 599884313 ns, Reaching safepoint: 89401 ns, At safepoint: 8600 ns, Total: 98001 ns
+[46.709s][info ][safepoint      ] Safepoint "ICBufferFull", Time since last: 605695120 ns, Reaching safepoint: 79601 ns, At safepoint: 7500 ns, Total: 87101 ns
+[47.253s][info ][safepoint      ] Safepoint "ICBufferFull", Time since last: 543820984 ns, Reaching safepoint: 128802 ns, At safepoint: 7900 ns, Total: 136702 ns
+[47.854s][info ][safepoint      ] Safepoint "ICBufferFull", Time since last: 600267020 ns, Reaching safepoint: 95402 ns, At safepoint: 6600 ns, Total: 102002 ns
+[48.454s][info ][safepoint      ] Safepoint "ICBufferFull", Time since last: 599970915 ns, Reaching safepoint: 87402 ns, At safepoint: 7000 ns, Total: 94402 ns
+[49.054s][info ][safepoint      ] Safepoint "ICBufferFull", Time since last: 600170919 ns, Reaching safepoint: 155503 ns, At safepoint: 9200 ns, Total: 164703 ns
+[49.653s][info ][safepoint      ] Safepoint "ICBufferFull", Time since last: 599208701 ns, Reaching safepoint: 89702 ns, At safepoint: 4300 ns, Total: 94002 ns
+[50.304s][info ][safepoint      ] Safepoint "ICBufferFull", Time since last: 650227739 ns, Reaching safepoint: 71501 ns, At safepoint: 9000 ns, Total: 80501 ns
+[50.904s][info ][safepoint      ] Safepoint "ICBufferFull", Time since last: 599880214 ns, Reaching safepoint: 95302 ns, At safepoint: 10800 ns, Total: 106102 ns
+[51.504s][info ][safepoint      ] Safepoint "ICBufferFull", Time since last: 599950316 ns, Reaching safepoint: 91902 ns, At safepoint: 7100 ns, Total: 99002 ns
+[52.103s][info ][safepoint      ] Safepoint "ICBufferFull", Time since last: 599709212 ns, Reaching safepoint: 94601 ns, At safepoint: 9901 ns, Total: 104502 ns
+[52.753s][info ][safepoint      ] Safepoint "ICBufferFull", Time since last: 649969234 ns, Reaching safepoint: 64202 ns, At safepoint: 3100 ns, Total: 67302 ns
+[53.404s][info ][safepoint      ] Safepoint "ICBufferFull", Time since last: 650106537 ns, Reaching safepoint: 84702 ns, At safepoint: 5900 ns, Total: 90602 ns
+[54.053s][info ][safepoint      ] Safepoint "ICBufferFull", Time since last: 649476326 ns, Reaching safepoint: 118403 ns, At safepoint: 4300 ns, Total: 122703 ns
+[54.703s][info ][safepoint      ] Safepoint "ICBufferFull", Time since last: 649762132 ns, Reaching safepoint: 77301 ns, At safepoint: 8300 ns, Total: 85601 ns
+[55.353s][info ][safepoint      ] Safepoint "ICBufferFull", Time since last: 649997437 ns, Reaching safepoint: 77501 ns, At safepoint: 3200 ns, Total: 80701 ns
+[55.903s][info ][safepoint      ] Safepoint "ICBufferFull", Time since last: 550024401 ns, Reaching safepoint: 101902 ns, At safepoint: 7000 ns, Total: 108902 ns
+[56.404s][info ][safepoint      ] Safepoint "ICBufferFull", Time since last: 500128385 ns, Reaching safepoint: 156403 ns, At safepoint: 8300 ns, Total: 164703 ns
+[56.953s][info ][safepoint      ] Safepoint "ICBufferFull", Time since last: 549553193 ns, Reaching safepoint: 130802 ns, At safepoint: 9300 ns, Total: 140102 ns
+[57.404s][info ][safepoint      ] Safepoint "ICBufferFull", Time since last: 450037765 ns, Reaching safepoint: 205304 ns, At safepoint: 12100 ns, Total: 217404 ns
+[57.860s][info ][safepoint      ] Safepoint "ICBufferFull", Time since last: 455923774 ns, Reaching safepoint: 151503 ns, At safepoint: 6100 ns, Total: 157603 ns
+[58.047s][info ][safepoint      ] Safepoint "ICBufferFull", Time since last: 187385141 ns, Reaching safepoint: 274105 ns, At safepoint: 5400 ns, Total: 279505 ns
+[58.454s][info ][safepoint      ] Safepoint "ICBufferFull", Time since last: 406056658 ns, Reaching safepoint: 175903 ns, At safepoint: 8901 ns, Total: 184804 ns
+[59.454s][info ][safepoint      ] Safepoint "Cleanup", Time since last: 1000178970 ns, Reaching safepoint: 235104 ns, At safepoint: 12900 ns, Total: 248004 ns
+[60.454s][info ][safepoint      ] Safepoint "Cleanup", Time since last: 1000152971 ns, Reaching safepoint: 230704 ns, At safepoint: 9400 ns, Total: 240104 ns
+[60.853s][info ][gc,start       ] GC(72) Pause Young (Allocation Failure)
+[60.860s][debug][gc,phases      ] GC(72) Scavenge 7.079ms
+[60.860s][debug][gc,ref         ] GC(72) Skipped phase 1 of Reference Processing: no references
+[60.860s][debug][gc,ref         ] GC(72) Skipped phase 3 of Reference Processing: no references
+[60.860s][debug][gc,phases      ] GC(72) Reference Processing 0.035ms
+[60.861s][debug][gc,phases      ] GC(72) Weak Processing 0.891ms
+[60.861s][debug][gc,age         ] GC(72) Desired survivor size 46661632 bytes, new threshold 15 (max threshold 15)
+[60.861s][info ][gc,heap        ] GC(72) PSYoungGen: 2004224K(2045952K)->8800K(2051584K) Eden: 1997312K(1997312K)->0K(2004480K) From: 6912K(48640K)->8800K(47104K)
+[60.861s][info ][gc,heap        ] GC(72) ParOldGen: 290953K(334336K)->291377K(334336K)
+[60.861s][info ][gc,metaspace   ] GC(72) Metaspace: 75489K(76096K)->75489K(76096K) NonClass: 65034K(65344K)->65034K(65344K) Class: 10454K(10752K)->10454K(10752K)
+[60.861s][info ][gc             ] GC(72) Pause Young (Allocation Failure) 2241M->293M(2330M) 8.237ms
+[60.861s][info ][gc,cpu         ] GC(72) User=0.03s Sys=0.01s Real=0.01s
+[60.861s][info ][safepoint      ] Safepoint "ParallelGCFailedAllocation", Time since last: 398420318 ns, Reaching safepoint: 88402 ns, At safepoint: 8368954 ns, Total: 8457356 ns
+[61.861s][info ][safepoint      ] Safepoint "Cleanup", Time since last: 1000096070 ns, Reaching safepoint: 137302 ns, At safepoint: 12201 ns, Total: 149503 ns
+[62.863s][info ][safepoint      ] Safepoint "ICBufferFull", Time since last: 1001320693 ns, Reaching safepoint: 323906 ns, At safepoint: 10000 ns, Total: 333906 ns
+[63.565s][info ][safepoint      ] Safepoint "ICBufferFull", Time since last: 701083679 ns, Reaching safepoint: 423608 ns, At safepoint: 14700 ns, Total: 438308 ns
+[64.565s][info ][safepoint      ] Safepoint "Cleanup", Time since last: 1000137173 ns, Reaching safepoint: 287105 ns, At safepoint: 9300 ns, Total: 296405 ns
+[65.565s][info ][safepoint      ] Safepoint "Cleanup", Time since last: 1000144074 ns, Reaching safepoint: 172103 ns, At safepoint: 9901 ns, Total: 182004 ns
+[66.566s][info ][safepoint      ] Safepoint "Cleanup", Time since last: 1000141474 ns, Reaching safepoint: 106802 ns, At safepoint: 12500 ns, Total: 119302 ns
+[67.566s][info ][safepoint      ] Safepoint "Cleanup", Time since last: 1000148175 ns, Reaching safepoint: 122403 ns, At safepoint: 11000 ns, Total: 133403 ns
+[68.566s][info ][safepoint      ] Safepoint "Cleanup", Time since last: 1000176476 ns, Reaching safepoint: 129903 ns, At safepoint: 15800 ns, Total: 145703 ns
+[69.720s][info ][safepoint      ] Safepoint "Cleanup", Time since last: 1153937702 ns, Reaching safepoint: 251705 ns, At safepoint: 13600 ns, Total: 265305 ns
+[70.721s][info ][safepoint      ] Safepoint "Cleanup", Time since last: 1000142778 ns, Reaching safepoint: 107302 ns, At safepoint: 18300 ns, Total: 125602 ns
+[71.721s][info ][safepoint      ] Safepoint "Cleanup", Time since last: 1000146778 ns, Reaching safepoint: 71601 ns, At safepoint: 6400 ns, Total: 78001 ns
+[72.721s][info ][safepoint      ] Safepoint "Cleanup", Time since last: 1000135479 ns, Reaching safepoint: 137402 ns, At safepoint: 11501 ns, Total: 148903 ns
+[73.722s][info ][safepoint      ] Safepoint "Cleanup", Time since last: 1000167280 ns, Reaching safepoint: 71901 ns, At safepoint: 8400 ns, Total: 80301 ns
+[74.722s][info ][safepoint      ] Safepoint "Cleanup", Time since last: 1000135380 ns, Reaching safepoint: 470709 ns, At safepoint: 12500 ns, Total: 483209 ns
+[75.037s][info ][safepoint      ] Safepoint "ICBufferFull", Time since last: 312633345 ns, Reaching safepoint: 2443845 ns, At safepoint: 21701 ns, Total: 2465546 ns
+[76.038s][info ][safepoint      ] Safepoint "Cleanup", Time since last: 1000169381 ns, Reaching safepoint: 195504 ns, At safepoint: 8900 ns, Total: 204404 ns
+[77.038s][info ][safepoint      ] Safepoint "Cleanup", Time since last: 1000136181 ns, Reaching safepoint: 180104 ns, At safepoint: 8100 ns, Total: 188204 ns
+[78.058s][info ][safepoint      ] Safepoint "ICBufferFull", Time since last: 1019996247 ns, Reaching safepoint: 409908 ns, At safepoint: 8900 ns, Total: 418808 ns
+[78.447s][info ][safepoint      ] Safepoint "ICBufferFull", Time since last: 388204735 ns, Reaching safepoint: 271105 ns, At safepoint: 6700 ns, Total: 277805 ns
+[79.447s][info ][safepoint      ] Safepoint "Cleanup", Time since last: 1000123883 ns, Reaching safepoint: 214304 ns, At safepoint: 18400 ns, Total: 232704 ns
+[80.447s][info ][safepoint      ] Safepoint "Cleanup", Time since last: 1000157285 ns, Reaching safepoint: 101401 ns, At safepoint: 7501 ns, Total: 108902 ns
+[81.448s][info ][safepoint      ] Safepoint "Cleanup", Time since last: 1000164085 ns, Reaching safepoint: 121302 ns, At safepoint: 14000 ns, Total: 135302 ns
+[82.448s][info ][safepoint      ] Safepoint "Cleanup", Time since last: 1000163086 ns, Reaching safepoint: 173703 ns, At safepoint: 11300 ns, Total: 185003 ns
+[83.448s][info ][safepoint      ] Safepoint "Cleanup", Time since last: 1000144586 ns, Reaching safepoint: 101002 ns, At safepoint: 9300 ns, Total: 110302 ns
+[84.449s][info ][safepoint      ] Safepoint "Cleanup", Time since last: 1000144187 ns, Reaching safepoint: 88202 ns, At safepoint: 10000 ns, Total: 98202 ns
+[85.567s][info ][safepoint      ] Safepoint "Cleanup", Time since last: 1118200658 ns, Reaching safepoint: 210904 ns, At safepoint: 12400 ns, Total: 223304 ns
+[86.807s][info ][safepoint      ] Safepoint "Cleanup", Time since last: 1240243202 ns, Reaching safepoint: 134503 ns, At safepoint: 14300 ns, Total: 148803 ns
+[87.808s][info ][safepoint      ] Safepoint "Cleanup", Time since last: 1000144389 ns, Reaching safepoint: 170603 ns, At safepoint: 13200 ns, Total: 183803 ns
+[88.808s][info ][safepoint      ] Safepoint "Cleanup", Time since last: 1000128890 ns, Reaching safepoint: 175403 ns, At safepoint: 11600 ns, Total: 187003 ns
+[89.808s][info ][safepoint      ] Safepoint "Cleanup", Time since last: 1000095790 ns, Reaching safepoint: 165103 ns, At safepoint: 9400 ns, Total: 174503 ns
+[90.809s][info ][safepoint      ] Safepoint "Cleanup", Time since last: 1000150591 ns, Reaching safepoint: 148203 ns, At safepoint: 9200 ns, Total: 157403 ns
+[91.809s][info ][safepoint      ] Safepoint "Cleanup", Time since last: 1000156692 ns, Reaching safepoint: 100601 ns, At safepoint: 12601 ns, Total: 113202 ns
+[92.809s][info ][safepoint      ] Safepoint "Cleanup", Time since last: 1000176693 ns, Reaching safepoint: 89501 ns, At safepoint: 6900 ns, Total: 96401 ns
+[93.809s][info ][safepoint      ] Safepoint "Cleanup", Time since last: 1000152993 ns, Reaching safepoint: 96702 ns, At safepoint: 8300 ns, Total: 105002 ns
+[94.810s][info ][safepoint      ] Safepoint "Cleanup", Time since last: 1000167694 ns, Reaching safepoint: 88602 ns, At safepoint: 5300 ns, Total: 93902 ns
+[95.810s][info ][safepoint      ] Safepoint "Cleanup", Time since last: 1000152195 ns, Reaching safepoint: 100601 ns, At safepoint: 12301 ns, Total: 112902 ns
+[96.810s][info ][safepoint      ] Safepoint "Cleanup", Time since last: 1000153995 ns, Reaching safepoint: 77701 ns, At safepoint: 11000 ns, Total: 88701 ns
+[97.811s][info ][safepoint      ] Safepoint "Cleanup", Time since last: 1000146696 ns, Reaching safepoint: 145203 ns, At safepoint: 8800 ns, Total: 154003 ns
+[98.811s][info ][safepoint      ] Safepoint "Cleanup", Time since last: 1000200197 ns, Reaching safepoint: 95702 ns, At safepoint: 9800 ns, Total: 105502 ns
+[99.811s][info ][safepoint      ] Safepoint "Cleanup", Time since last: 1000137797 ns, Reaching safepoint: 85201 ns, At safepoint: 9901 ns, Total: 95102 ns
+[100.811s][info ][safepoint      ] Safepoint "Cleanup", Time since last: 1000141197 ns, Reaching safepoint: 82702 ns, At safepoint: 9900 ns, Total: 92602 ns
+[101.812s][info ][safepoint      ] Safepoint "Cleanup", Time since last: 1000151598 ns, Reaching safepoint: 93402 ns, At safepoint: 9800 ns, Total: 103202 ns
+[103.812s][info ][safepoint      ] Safepoint "Cleanup", Time since last: 2000216197 ns, Reaching safepoint: 82201 ns, At safepoint: 9701 ns, Total: 91902 ns
+[104.812s][info ][safepoint      ] Safepoint "Cleanup", Time since last: 1000127399 ns, Reaching safepoint: 105502 ns, At safepoint: 9001 ns, Total: 114503 ns
+[106.812s][info ][safepoint      ] Safepoint "Cleanup", Time since last: 2000227301 ns, Reaching safepoint: 72901 ns, At safepoint: 9600 ns, Total: 82501 ns
+[107.813s][info ][safepoint      ] Safepoint "Cleanup", Time since last: 1000155502 ns, Reaching safepoint: 73302 ns, At safepoint: 12500 ns, Total: 85802 ns
+[108.813s][info ][safepoint      ] Safepoint "Cleanup", Time since last: 1000159103 ns, Reaching safepoint: 111302 ns, At safepoint: 14300 ns, Total: 125602 ns
+[111.813s][info ][safepoint      ] Safepoint "Cleanup", Time since last: 3000299310 ns, Reaching safepoint: 73701 ns, At safepoint: 9100 ns, Total: 82801 ns
+[112.814s][info ][safepoint      ] Safepoint "Cleanup", Time since last: 1000223207 ns, Reaching safepoint: 79501 ns, At safepoint: 4300 ns, Total: 83801 ns
+[113.255s][info ][gc,start       ] GC(73) Pause Young (Allocation Failure)
+[113.266s][debug][gc,phases      ] GC(73) Scavenge 11.163ms
+[113.266s][debug][gc,ref         ] GC(73) Skipped phase 1 of Reference Processing: no references
+[113.266s][debug][gc,ref         ] GC(73) Skipped phase 3 of Reference Processing: no references
+[113.266s][debug][gc,phases      ] GC(73) Reference Processing 0.089ms
+[113.267s][debug][gc,phases      ] GC(73) Weak Processing 1.101ms
+[113.267s][debug][gc,age         ] GC(73) Desired survivor size 45613056 bytes, new threshold 15 (max threshold 15)
+[113.267s][info ][gc,heap        ] GC(73) PSYoungGen: 2013280K(2051584K)->21440K(2050048K) Eden: 2004480K(2004480K)->0K(2004480K) From: 8800K(47104K)->21440K(45568K)
+[113.268s][info ][gc,heap        ] GC(73) ParOldGen: 291377K(334336K)->291657K(334336K)
+[113.268s][info ][gc,metaspace   ] GC(73) Metaspace: 76283K(76928K)->76283K(76928K) NonClass: 65768K(66112K)->65768K(66112K) Class: 10515K(10816K)->10515K(10816K)
+[113.268s][info ][gc             ] GC(73) Pause Young (Allocation Failure) 2250M->305M(2328M) 12.615ms
+[113.268s][info ][gc,cpu         ] GC(73) User=0.05s Sys=0.00s Real=0.01s
+[113.268s][info ][safepoint      ] Safepoint "ParallelGCFailedAllocation", Time since last: 441173619 ns, Reaching safepoint: 64202 ns, At safepoint: 12753834 ns, Total: 12818036 ns
+[114.268s][info ][safepoint      ] Safepoint "Cleanup", Time since last: 1000095806 ns, Reaching safepoint: 68901 ns, At safepoint: 8300 ns, Total: 77201 ns
+[115.268s][info ][safepoint      ] Safepoint "Cleanup", Time since last: 1000149007 ns, Reaching safepoint: 92702 ns, At safepoint: 16100 ns, Total: 108802 ns
+[116.268s][info ][safepoint      ] Safepoint "Cleanup", Time since last: 1000143007 ns, Reaching safepoint: 68202 ns, At safepoint: 7900 ns, Total: 76102 ns
+[117.904s][info ][safepoint      ] Safepoint "Cleanup", Time since last: 1635631205 ns, Reaching safepoint: 437008 ns, At safepoint: 11400 ns, Total: 448408 ns
+[118.905s][info ][safepoint      ] Safepoint "Cleanup", Time since last: 1000148409 ns, Reaching safepoint: 148303 ns, At safepoint: 12000 ns, Total: 160303 ns
+[120.905s][info ][safepoint      ] Safepoint "Cleanup", Time since last: 2000247419 ns, Reaching safepoint: 138703 ns, At safepoint: 8900 ns, Total: 147603 ns
+[121.905s][info ][safepoint      ] Safepoint "Cleanup", Time since last: 1000201812 ns, Reaching safepoint: 151503 ns, At safepoint: 9500 ns, Total: 161003 ns
+[122.906s][info ][safepoint      ] Safepoint "Cleanup", Time since last: 1000178412 ns, Reaching safepoint: 58801 ns, At safepoint: 7300 ns, Total: 66101 ns
+[124.906s][info ][safepoint      ] Safepoint "Cleanup", Time since last: 2000244225 ns, Reaching safepoint: 133802 ns, At safepoint: 13100 ns, Total: 146902 ns
+[126.906s][info ][safepoint      ] Safepoint "Cleanup", Time since last: 2000224927 ns, Reaching safepoint: 70601 ns, At safepoint: 8200 ns, Total: 78801 ns
+[135.907s][info ][safepoint      ] Safepoint "Cleanup", Time since last: 9000647143 ns, Reaching safepoint: 69901 ns, At safepoint: 3900 ns, Total: 73801 ns
+[137.907s][info ][safepoint      ] Safepoint "Cleanup", Time since last: 2000207740 ns, Reaching safepoint: 74401 ns, At safepoint: 12600 ns, Total: 87001 ns
+[139.908s][info ][safepoint      ] Safepoint "Cleanup", Time since last: 2000232343 ns, Reaching safepoint: 77201 ns, At safepoint: 4400 ns, Total: 81601 ns
+[146.908s][info ][safepoint      ] Safepoint "Cleanup", Time since last: 7000598164 ns, Reaching safepoint: 84401 ns, At safepoint: 9701 ns, Total: 94102 ns
+[154.909s][info ][safepoint      ] Safepoint "Cleanup", Time since last: 8000600121 ns, Reaching safepoint: 68101 ns, At safepoint: 5200 ns, Total: 73301 ns
+[163.910s][info ][safepoint      ] Safepoint "Cleanup", Time since last: 9000686694 ns, Reaching safepoint: 73801 ns, At safepoint: 6600 ns, Total: 80401 ns
+[171.911s][info ][safepoint      ] Safepoint "Cleanup", Time since last: 8000643401 ns, Reaching safepoint: 88801 ns, At safepoint: 12101 ns, Total: 100902 ns
+[174.911s][info ][safepoint      ] Safepoint "Cleanup", Time since last: 3000305523 ns, Reaching safepoint: 80801 ns, At safepoint: 4701 ns, Total: 85502 ns
+[177.911s][info ][safepoint      ] Safepoint "Cleanup", Time since last: 3000297628 ns, Reaching safepoint: 67001 ns, At safepoint: 7700 ns, Total: 74701 ns
+[194.913s][info ][safepoint      ] Safepoint "Cleanup", Time since last: 17001243113 ns, Reaching safepoint: 67701 ns, At safepoint: 9500 ns, Total: 77201 ns
+[195.913s][info ][safepoint      ] Safepoint "Cleanup", Time since last: 1000147555 ns, Reaching safepoint: 66701 ns, At safepoint: 4300 ns, Total: 71001 ns
+[210.914s][info ][safepoint      ] Safepoint "Cleanup", Time since last: 15001114856 ns, Reaching safepoint: 72301 ns, At safepoint: 5400 ns, Total: 77701 ns
+[233.916s][info ][safepoint      ] Safepoint "Cleanup", Time since last: 23001591238 ns, Reaching safepoint: 51801 ns, At safepoint: 4000 ns, Total: 55801 ns
+[241.916s][info ][safepoint      ] Safepoint "Cleanup", Time since last: 8000604999 ns, Reaching safepoint: 71301 ns, At safepoint: 4600 ns, Total: 75901 ns
+[241.923s][info ][gc,start       ] GC(74) Pause Young (Allocation Failure)
+[241.934s][debug][gc,phases      ] GC(74) Scavenge 10.939ms
+[241.934s][debug][gc,ref         ] GC(74) Skipped phase 1 of Reference Processing: no references
+[241.934s][debug][gc,ref         ] GC(74) Skipped phase 3 of Reference Processing: no references
+[241.934s][debug][gc,phases      ] GC(74) Reference Processing 0.062ms
+[241.935s][debug][gc,phases      ] GC(74) Weak Processing 0.895ms
+[241.935s][debug][gc,age         ] GC(74) Desired survivor size 42991616 bytes, new threshold 15 (max threshold 15)
+[241.935s][info ][gc,heap        ] GC(74) PSYoungGen: 2025920K(2050048K)->15488K(2055168K) Eden: 2004480K(2004480K)->0K(2010624K) From: 21440K(45568K)->15488K(44544K)
+[241.935s][info ][gc,heap        ] GC(74) ParOldGen: 291657K(334336K)->291993K(334336K)
+[241.935s][info ][gc,metaspace   ] GC(74) Metaspace: 76476K(77120K)->76476K(77120K) NonClass: 65957K(66304K)->65957K(66304K) Class: 10519K(10816K)->10519K(10816K)
+[241.935s][info ][gc             ] GC(74) Pause Young (Allocation Failure) 2263M->300M(2333M) 12.094ms
+[241.935s][info ][gc,cpu         ] GC(74) User=0.02s Sys=0.01s Real=0.01s
+[241.935s][info ][safepoint      ] Safepoint "ParallelGCFailedAllocation", Time since last: 6228615 ns, Reaching safepoint: 17600 ns, At safepoint: 12225526 ns, Total: 12243126 ns
+[244.935s][info ][safepoint      ] Safepoint "Cleanup", Time since last: 3000272534 ns, Reaching safepoint: 93402 ns, At safepoint: 5500 ns, Total: 98902 ns
+[285.938s][info ][safepoint      ] Safepoint "Cleanup", Time since last: 41003041511 ns, Reaching safepoint: 77202 ns, At safepoint: 7600 ns, Total: 84802 ns
+[301.940s][info ][safepoint      ] Safepoint "Cleanup", Time since last: 16001290121 ns, Reaching safepoint: 84202 ns, At safepoint: 12000 ns, Total: 96202 ns
+[317.941s][info ][safepoint      ] Safepoint "Cleanup", Time since last: 16001173631 ns, Reaching safepoint: 153503 ns, At safepoint: 12100 ns, Total: 165603 ns
+[378.700s][info ][gc,start       ] GC(75) Pause Young (Allocation Failure)
+[378.707s][debug][gc,phases      ] GC(75) Scavenge 7.606ms
+[378.708s][debug][gc,ref         ] GC(75) Skipped phase 1 of Reference Processing: no references
+[378.708s][debug][gc,ref         ] GC(75) Skipped phase 3 of Reference Processing: no references
+[378.708s][debug][gc,phases      ] GC(75) Reference Processing 0.063ms
+[378.709s][debug][gc,phases      ] GC(75) Weak Processing 0.917ms
+[378.709s][debug][gc,age         ] GC(75) Desired survivor size 40894464 bytes, new threshold 15 (max threshold 15)
+[378.709s][info ][gc,heap        ] GC(75) PSYoungGen: 2026112K(2055168K)->15200K(2052608K) Eden: 2010624K(2010624K)->0K(2010624K) From: 15488K(44544K)->15200K(41984K)
+[378.709s][info ][gc,heap        ] GC(75) ParOldGen: 291993K(334336K)->292297K(334336K)
+[378.709s][info ][gc,metaspace   ] GC(75) Metaspace: 76508K(77120K)->76508K(77120K) NonClass: 65985K(66304K)->65985K(66304K) Class: 10523K(10816K)->10523K(10816K)
+[378.709s][info ][gc             ] GC(75) Pause Young (Allocation Failure) 2263M->300M(2331M) 8.830ms
+[378.709s][info ][gc,cpu         ] GC(75) User=0.03s Sys=0.00s Real=0.02s
+[378.709s][info ][safepoint      ] Safepoint "ParallelGCFailedAllocation", Time since last: 60758585616 ns, Reaching safepoint: 75501 ns, At safepoint: 8953366 ns, Total: 9028867 ns
+[395.710s][info ][safepoint      ] Safepoint "Cleanup", Time since last: 17001242767 ns, Reaching safepoint: 61101 ns, At safepoint: 10300 ns, Total: 71401 ns
+[417.712s][info ][safepoint      ] Safepoint "Cleanup", Time since last: 22001690221 ns, Reaching safepoint: 66401 ns, At safepoint: 59101 ns, Total: 125502 ns
+[438.251s][info ][gc,heap,exit   ] Heap
+[438.251s][info ][gc,heap,exit   ]  PSYoungGen      total 2052608K, used 921359K [0x0000000780000000, 0x0000000800000000, 0x0000000800000000)
+[438.251s][info ][gc,heap,exit   ]   eden space 2010624K, 45% used [0x0000000780000000,0x00000007b74ebdc8,0x00000007fab80000)
+[438.251s][info ][gc,heap,exit   ]   from space 41984K, 36% used [0x00000007fab80000,0x00000007fba58148,0x00000007fd480000)
+[438.251s][info ][gc,heap,exit   ]   to   space 39936K, 0% used [0x00000007fd900000,0x00000007fd900000,0x0000000800000000)
+[438.251s][info ][gc,heap,exit   ]  ParOldGen       total 334336K, used 292297K [0x0000000740000000, 0x0000000754680000, 0x0000000780000000)
+[438.251s][info ][gc,heap,exit   ]   object space 334336K, 87% used [0x0000000740000000,0x0000000751d72400,0x0000000754680000)
+[438.251s][info ][gc,heap,exit   ]  Metaspace       used 76549K, committed 77184K, reserved 1122304K
+[438.251s][info ][gc,heap,exit   ]   class space    used 10526K, committed 10816K, reserved 1048576K
