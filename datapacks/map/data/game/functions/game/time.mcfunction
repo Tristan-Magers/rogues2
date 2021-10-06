@@ -100,3 +100,4 @@ execute as @s[scores={Time=10}] at @s run execute as @a[tag=ingame] at @s run pl
 
 execute as @s[scores={Time=1..}] at @s run scoreboard players add @e[scores={map=2}] lavatick 1
 execute as @s[scores={Time=1..}] at @s run scoreboard players add @e[scores={map=4}] lavatick 1
+execute as @s[scores={Time=1..}] at @s run scoreboard players add @e[scores={map=6}] lavatick 1

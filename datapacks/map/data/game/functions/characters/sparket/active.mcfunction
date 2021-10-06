@@ -33,8 +33,8 @@ scoreboard players set @p firefist 0
 
 #fire heal
 scoreboard players add @s fireheal 1
-scoreboard players add @s[scores={fireheal=80..}] healthshow 1
-scoreboard players set @s[scores={fireheal=80..}] fireheal 0
+scoreboard players add @s[scores={fireheal=70..}] healthshow 1
+scoreboard players set @s[scores={fireheal=70..}] fireheal 0
 scoreboard players set @s[scores={healthshow=15..}] fireheal -120
 
 #correct fist

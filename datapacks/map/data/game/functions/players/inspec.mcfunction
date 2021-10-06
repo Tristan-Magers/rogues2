@@ -63,6 +63,8 @@ execute if entity @e[scores={map=3}] run tag @s[x=120,y=12,z=113,distance=..30] 
 execute if entity @e[scores={map=4}] run tag @s[x=1170,y=41,z=-67,distance=..50] add inspec
 #island
 execute if entity @e[scores={map=5}] run tag @s[x=-1032,y=53,z=-1000,distance=..50] add inspec
+#forest
+execute if entity @e[scores={map=6}] run tag @s[x=1000,y=20,z=-990,distance=..40] add inspec
 
 team join spec @s
 

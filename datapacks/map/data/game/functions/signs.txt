@@ -1,6 +1,0 @@
-#tick by tick 4
-setblock ~ ~1 ~ birch_sign[rotation=10]{Text2:'{"text":"Tick-By-Tick 4","color":"dark_blue","bold":"true","clickEvent":{"action":"run_command","value":"/tag @s add tourn1"}}',Text3:'{"text":"Champions"}',Text4:'{"text":"2/28/2021","color":"gray"}'} destroy
-
-setblock ~ ~1 ~ birch_sign[rotation=10]{Text2:'{"text":"3rd Place","color":"#FFC3A1","bold":"true","clickEvent":{"action":"run_command","value":"/tag @s add t1win3"}}',Text3:'{"text":"Belded"}'} destroy
-setblock ~ ~1 ~ birch_sign[rotation=10]{Text2:'{"text":"2nd Place","color":"#E386A5","bold":"true","clickEvent":{"action":"run_command","value":"/tag @s add t1win2"}}',Text3:'{"text":"Sparky01"}'} destroy
-setblock ~ ~1 ~ birch_sign[rotation=10]{Text2:'{"text":"1st Place","color":"#84AFF0","bold":"true","clickEvent":{"action":"run_command","value":"/tag @s add t1win1"}}',Text3:'{"text":"Zephyrean_"}'} destroy

@@ -1,8 +1,8 @@
 tag @a remove isthrow
 
-#scoreboard players operation @a playerID -= @s playerID
+scoreboard players operation @a playerID -= @s playerID
 tag @a[scores={playerID=0}] add isthrow
-#scoreboard players operation @a playerID += @s playerID
+scoreboard players operation @a playerID += @s playerID
 
 function game:inblock
 

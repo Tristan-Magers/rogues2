@@ -1,4 +1,5 @@
 effect give @a minecraft:fire_resistance 10 10 true
+execute as @a run attribute @s minecraft:generic.knockback_resistance base set 0.0
 
 #leave
 scoreboard players add @a Leave 0
@@ -155,7 +156,7 @@ execute as @e[tag=charmask] at @s if entity @p[distance=..5] run tp @s ~ ~ ~ fac
 execute as @e[tag=charmask] at @s unless entity @p[distance=..5] run tp @s ~ ~ ~ facing 1014 12 1007
 
 scoreboard players add @e[scores={map=0..}] randommap 1
-scoreboard players set @e[scores={randommap=6..}] randommap 1
+scoreboard players set @e[scores={randommap=7..}] randommap 1
 
 function game:game/menu/portals
 
