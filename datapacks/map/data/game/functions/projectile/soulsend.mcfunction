@@ -20,7 +20,7 @@ execute as @s[tag=!in] at @s run tag @s add kill
 execute as @s[tag=!in,tag=!bar] at @s run function game:projectile/soulbacktrack 
 
 execute as @s[tag=kill,tag=!bar] at @s run scoreboard players operation @a playerID -= @s playerID
-execute as @s[tag=kill,tag=!bar] at @s run tp @p[tag=!spiritworld,scores={playerID=0,respawn=..0},distance=0.1..100] @s
+execute as @s[tag=kill,tag=!bar] at @s run tp @p[tag=!spiritworld,scores={playerID=0,respawn=..0},distance=0.1..100] @s[scores={stepcount=4..}]
 execute as @s[tag=kill,tag=!bar] at @s run scoreboard players set @p[tag=!spiritworld,scores={playerID=0,respawn=..0},distance=0.1..100] glowing 15
 execute as @s[tag=kill,tag=!bar] at @s run scoreboard players operation @a playerID += @s playerID
 

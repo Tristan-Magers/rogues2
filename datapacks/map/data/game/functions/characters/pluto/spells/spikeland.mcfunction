@@ -24,11 +24,7 @@ scoreboard players remove @e[tag=gethit,type=!player] healthreal 1
 
 execute as @e[tag=gethit,type=!player] at @s run execute store result entity @s Health double 1 run scoreboard players get @s healthreal
 
-execute as @a[tag=!isthrow,tag=gethit] at @s run summon minecraft:armor_stand ~ ~ ~ {Marker:1,Silent:1,Silent:1,Silent:1,Silent:1,Invisible:1b,Invulnerable:1,Tags:["damnum"],CustomNameVisible:1b,Duration:999999,CustomName:'{"text":"-1"}'}
-execute as @a[tag=!isthrow,tag=gethit] at @s run particle minecraft:block minecraft:redstone_block ~ ~1 ~ .3 .8 .3 2 20 force
-execute as @a[tag=!isthrow,tag=gethit] at @s run playsound minecraft:entity.player.hurt master @a
-
-scoreboard players remove @a[tag=!isthrow,tag=gethit] healthshow 1
+execute as @a[tag=!isthrow,tag=gethit] at @s run function game:players/damageone
 
 tag @s add kill
 

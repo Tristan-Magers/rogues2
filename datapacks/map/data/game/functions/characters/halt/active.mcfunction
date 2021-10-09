@@ -32,7 +32,7 @@ execute as @s[scores={haltdamage=160..}] at @s anchored eyes positioned ^ ^ ^1 r
 #draining claw delay
 execute as @s[scores={dcdelay=0}] at @s run function game:spells/manaup
 scoreboard players remove @s[scores={dcdelay=0..}] dcdelay 1
-scoreboard players set @s[scores={haltdamage=24..}] dcdelay 10
+scoreboard players set @s[scores={haltdamage=24..}] dcdelay 9
 
 scoreboard players set @s haltdamage 0
 

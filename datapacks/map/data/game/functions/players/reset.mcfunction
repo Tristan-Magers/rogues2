@@ -2,6 +2,8 @@ stopsound @s
 
 effect clear @s
 
+tag @s add spiritnoob
+
 tag @s remove tpno
 tag @s remove spiritworld
 tag @s remove spirlob

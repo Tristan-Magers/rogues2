@@ -12,16 +12,37 @@ execute as @s at @s unless block ~ ~ ~ water run tag @s remove watert
 scoreboard players set @s[scores={shift=1..}] run 0
 execute as @s[scores={walk=0,sneakd=0,run=0},tag=!walk] at @s run scoreboard players remove @s partdelay 3
 execute as @s[scores={walk=1..,partdelay=..20}] at @s run scoreboard players add @s partdelay 1
-execute as @s[scores={walk=1..,partdelay=12..}] at @s run particle dust 0 0 0 1 ~ ~.2 ~ .1 .1 .1 0 1 force
+execute as @s[scores={walk=1..,partdelay=13}] at @s run particle dust 0.8 0.8 0.8 0.8 ~ ~.2 ~ .1 .1 .1 0 1 force
+execute as @s[scores={walk=1..,partdelay=16}] at @s run particle dust 0.8 0.8 0.8 0.8 ~ ~.2 ~ .1 .1 .1 0 1 force
+execute as @s[scores={walk=1..,partdelay=19..}] at @s run particle dust 0.8 0.8 0.8 0.8 ~ ~.2 ~ .1 .1 .1 0 1 force
+
+xp set @s 99 levels
+xp set @s[scores={partdelay=..0}] 0 points
+xp set @s[scores={partdelay=1}] 61 points
+xp set @s[scores={partdelay=2}] 122 points
+xp set @s[scores={partdelay=3}] 183 points
+xp set @s[scores={partdelay=4}] 243 points
+xp set @s[scores={partdelay=5}] 304 points
+xp set @s[scores={partdelay=6}] 365 points
+xp set @s[scores={partdelay=7}] 426 points
+xp set @s[scores={partdelay=8}] 487 points
+xp set @s[scores={partdelay=9}] 547 points
+xp set @s[scores={partdelay=10}] 608 points
+xp set @s[scores={partdelay=11}] 669 points
+xp set @s[scores={partdelay=12..}] 730 points
+xp set @s 0 levels
+
 tag @s remove walk
 execute as @s[scores={walk=1..}] at @s run tag @s add walk
 scoreboard players set @s walk 0
 scoreboard players set @s[scores={partdelay=..0}] partdelay 0
+execute as @s[scores={run=1..,partdelay=..20}] at @s run scoreboard players set @s partdelay 20
 execute as @s[scores={run=1..}] at @s run particle minecraft:block minecraft:obsidian ~ ~.2 ~ .3 .4 .3 1 3 force
 execute as @s[scores={run=1..}] at @s run particle dust 0 0 0 1 ~ ~.2 ~ .1 .1 .1 0 1 force
 execute as @s[scores={run=1..}] at @s run particle minecraft:falling_dust minecraft:black_concrete ~ ~.1 ~ .12 .09 .12 1 2 force
 effect give @s[scores={run=0},gamemode=adventure] minecraft:invisibility 5 0 true
 scoreboard players set @s[scores={run=1..}] invisoff 5
+scoreboard players set @s[scores={invisoff=1..,jump=1..}] partdelay 35
 scoreboard players set @s[scores={invisoff=1..,jump=1..}] invisoff 14
 scoreboard players set @s run 0
 effect clear @s[scores={invisoff=1..},gamemode=adventure] minecraft:invisibility

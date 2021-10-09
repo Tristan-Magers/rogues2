@@ -25,7 +25,7 @@ tp @s[scores={move=1}] @e[limit=1,type=area_effect_cloud,tag=smoker,scores={play
 execute as @s at @s if block ~ ~-.2 ~ air run tp @s ~ ~-.1 ~
 execute as @s at @s if block ~ ~-.2 ~ air run tp @s ~ ~-.1 ~
 
-execute as @s at @s if entity @e[limit=1,type=area_effect_cloud,tag=smoker,scores={playerID=0}] run particle dust 0 0 0 1 ~ ~.2 ~ .1 .1 .1 0 1 force
+execute as @s at @s if entity @e[limit=1,type=area_effect_cloud,tag=smoker,scores={playerID=0}] run particle dust 0.8 0.8 0.8 0.8 ~ ~.2 ~ .1 .1 .1 0 1 force
 
 execute as @s at @s unless entity @e[limit=1,type=area_effect_cloud,tag=smoker,scores={playerID=0},distance=..0.5] run tp @s ^ ^ ^.24
 

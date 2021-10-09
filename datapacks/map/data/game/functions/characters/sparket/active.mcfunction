@@ -34,8 +34,16 @@ scoreboard players set @p firefist 0
 #fire heal
 scoreboard players add @s fireheal 1
 scoreboard players add @s[scores={fireheal=70..}] healthshow 1
+execute as @s[scores={fireheal=70..}] at @s run playsound minecraft:item.dye.use master @s ~ ~ ~ 1 0
+execute as @s[scores={fireheal=70..}] at @s run playsound minecraft:item.armor.equip_netherite master @s ~ ~ ~ 0.4 1.6
+execute as @s[scores={fireheal=70..}] at @s run playsound minecraft:entity.experience_orb.pickup master @s ~ ~ ~ 0.2 0.3
+execute as @s[scores={fireheal=70..}] at @s run playsound minecraft:entity.generic.extinguish_fire master @s ~ ~ ~ 0.4 1.4
 scoreboard players set @s[scores={fireheal=70..}] fireheal 0
 scoreboard players set @s[scores={healthshow=15..}] fireheal -120
+
+scoreboard players set @s[nbt=!{Fire:-20s}] fireheal -120
+scoreboard players set @s[scores={poison=1..}] fireheal -120
+scoreboard players set @s[scores={poison2=1..}] fireheal -120
 
 #correct fist
 item replace entity @s[scores={wtimer=60}] hotbar.0 with minecraft:wooden_sword{Enchantments:[{id:"minecraft:knockback",lvl:1},{id:"minecraft:fire_aspect",lvl:1}],AttributeModifiers:[{AttributeName:"generic.attack_speed",Name:"generic.attack_speed",Amount:-1.6,Operation:0,UUID:[I;170452042,-618446418,-1993398134,2121527740],Slot:"mainhand"},{AttributeName:"generic.attack_damage",Name:"generic.attack_damage",Amount:4,Operation:0,UUID:[I;-2116117351,-814987369,-1539314661,1434952524],Slot:"mainhand"},{AttributeName:"generic.movement_speed",Name:"generic.movement_speed",Amount:0.33,Operation:2,UUID:[I;-1794733450,173426169,-1787019437,449822666],Slot:"mainhand"}],display:{Name:"[{\"text\":\"Fire Fist\",\"color\":\"gold\",\"italic\":\"false\",\"bold\":\"true\"},{\"text\":\" [\",\"color\":\"white\",\"italic\":\"false\"},{\"text\":\"5 Damage\",\"color\":\"red\",\"italic\":\"false\"},{\"text\":\"]\",\"color\":\"white\",\"italic\":\"false\"}]"}} 1

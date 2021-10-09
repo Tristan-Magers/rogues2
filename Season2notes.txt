@@ -6,6 +6,12 @@ Goals: Improve game accessibility and quality of life.
 - Punches charge 42% slower (.25s -> .66s)
 - Crit hits give 2s of blindness and slowness 2
 - Crit hits no longer deal extra damage
+- Landing a crit tells you in chat (only you)
+- Walk particles are lighter and smaller
+- Walking takes 0.05s longer to start making particles
+- Less particles for first .3s of walking particles
+- XP bar shows inviswalk amount (time you can walk until making particles)
+- Sprinting and sprint jumping cause inviswalk cooldown 
 - Players get 1 more seconds of invulnerability when coming out of a portal (1s -> 2s)
 - Falling over 3 blocks creates particles
 	- To even things out for players of all settings
@@ -15,6 +21,9 @@ Goals: Improve game accessibility and quality of life.
 - Clicking passive moves explain the move
 - Stairs can now be shot through (treated as slabs)
 - Order of maps changed (loosely ordered from easiest to play to hardest)
+- Improved detection of arena area
+- Entering Spirit Realm the first time plays cutscene
+- Improved the look of Spirit Realm
 
 [Characters]
 
@@ -34,17 +43,18 @@ Emma
 - Bolt cost 1 less (6 -> 5)
 - Bolt does 3 less damage (12 -> 9)
 - Bolt moves 20% slower (60b/s -> 48b/s)
-- Bolt gives slowness 1 for 0.6s
+- Bolt recharges .25s slower (1.35s - 1.6s)
 
 Halt
+- Draining Claw recharges 0.05s faster (0.5s -> 0.45s)
+- Draining Claw does 1 less damage (13 -> 12) (doesn't impact healing)
 - Hover gives visibility for duration
 - Ghost Bow does 1 less damage through walls (6 -> 5)
-- Spiders deal 1 less damage (5 -> 4)
 
 Vohelm
 - First Sacred knife upgrade costs 1 less (3 -> 2)
 - Sacred Knife upgrades give 20% less speed (+20% MAX -> +16% MAX)
-- Sacred Knife charges 8% slower (~0.83s -> ~.91s)
+- Sacred Knife charges 10% slower (~0.83s -> ~.91s)
 - Sacred Knife has 1 less base damage (4 -> 3) (8 -> 7 MAX)
 - Shield no longer degrades knife extra
 - Totem gives 1 less level Jump Boost (3 -> 2)
@@ -54,19 +64,24 @@ Vohelm
 
 Pluto
 - Throwing Hurricane causes it's melee charge to reset
-- Hurricane has bigger block collision (.4 x .4 x .4)
+- Hurricane has bigger block collision (0.0 x 0.0 x 0.0 -> 0.4 x 0.4 x 0.4)
+- Hurricane has smaller hitbox (1.7 x 1.7 x 0.9 -> 1.4 x 1.4 x 0.9)
+- Hurricane does 1 less damage (8 -> 7 MAX) (3 -> 2 MIN)
+- Hurricane now shoots straight, with no offset
+	- Helps prevent feelings of inconsistancy
+	- Fixes issues with hitting players next to you
 - Shadow Spikes shoot 1 less spike (11 -> 10)
 - Soul Send makes you visible for 1.5s
 
 Barbose
-- Seeking Axe charges 7% slower (1.42s -> 1.54s)
-- Bombs deal 40% less damage to self
-- Bombs give .3s less visibility (.75s -> .45s) less spike (11 -> 9)
-
-Barbose
-- Seeking Axe charges 7% slower (1.42s -> 1.54s)
+- Seeking Axe charges 8% slower (1.42s -> 1.54s)
+- Seeking Axe does 1 less damage (13 -> 12)
+- Bombs explode .2s faster (1.7s -> 1.5s)
 - Bombs deal 40% less damage to self
 - Bombs give .3s less visibility (.75s -> .45s)
+- Decoy now fakes player holding axe
+- Decoy only explodes if player is close (8 blocks)
+	- Only revels you only explosion
 
 [Maps]
 
@@ -77,9 +92,12 @@ Mountain Temple
 - Relocated map to reduce large lag spikes
 
 [Textures]
+- "Recharging" has different texture to "Reloading"
+	- changed all "In-Use" to "Recharging" to make thing consistant
 - Reduced size of fire texture
 - Made passive effects textures transparent
 - Improved Seaking Axe texture
+- Retextured xp bar
 
 [Bug Fixes]
 - Some moves could bypass portal invulnerability
@@ -97,6 +115,11 @@ Mountain Temple
 - "Smoking" particle text did not work for many conditions
 - "Bubbles" visibility text wouldn't just happen during particles
 - Golden boots visible in inventory
+- Spectators could be listed as a "winner"
+- Soul Send could teleport players through blocks at short range
+- Hurricane hitbox had an offset of 0.1 block
+- Fixed graphical error with vohelm mask
+- Visibility status was not properly reset when in spirit realm
 
 [Backend]
 - Fixed issues for Spigot/Paper servers

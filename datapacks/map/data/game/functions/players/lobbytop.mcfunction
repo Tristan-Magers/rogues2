@@ -1,4 +1,5 @@
-tag @s[x=-122,y=53,z=3,distance=..22] add arena
+tag @s[x=-122,y=53,z=3,distance=..33] add arena
+tag @s[x=-125.0,y=58.0,z=26.0,dx=6,dy=10,dz=10,distance=..33] remove arena
 
 execute if block ~ ~ ~ minecraft:light_weighted_pressure_plate run tag @s add tele
 

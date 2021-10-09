@@ -14,4 +14,5 @@ execute as @s[scores={Mana=8..}] run item replace entity @s hotbar.1 with sugar_
 execute as @s[scores={Mana=5..}] run item replace entity @s hotbar.4 with yellow_dye{display:{Name:"[{\"text\":\"Regenerate\",\"color\":\"purple\",\"italic\":\"false\",\"bold\":\"true\"},{\"text\":\" [\",\"color\":\"white\",\"italic\":\"false\"},{\"text\":\"5 Mana\",\"color\":\"gold\",\"italic\":\"false\"},{\"text\":\"]\",\"color\":\"white\",\"italic\":\"false\"}]",Lore:['{"text":"Heals 4 health over 4 seconds, causing particles","color":"white","italic":false}']}}
 execute as @s[scores={Mana=3..}] run item replace entity @s hotbar.3 with bowl{display:{Name:"[{\"text\":\"Jump Pad\",\"color\":\"purple\",\"italic\":\"false\",\"bold\":\"true\"},{\"text\":\" [\",\"color\":\"white\",\"italic\":\"false\"},{\"text\":\"3 Mana\",\"color\":\"gold\",\"italic\":\"false\"},{\"text\":\"]\",\"color\":\"white\",\"italic\":\"false\"}]",Lore:['{"text":"Throws a jump pad","color":"white","italic":false}']}}
 
-execute as @s[scores={cooljp=1..}] run item replace entity @s hotbar.3 with barrier{display:{Name:"{\"text\":\"In-Use\",\"color\":\"white\",\"italic\":\"false\"}"}} 1
+execute as @s[scores={cooljp=1..}] run item replace entity @s hotbar.3 with ghast_tear{display:{Name:"{\"text\":\"Recharging\",\"color\":\"white\",\"italic\":\"false\"}"}} 1
+clear @s[scores={cooljp=..0}] ghast_tear

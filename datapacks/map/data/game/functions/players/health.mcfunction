@@ -60,8 +60,8 @@ scoreboard players set @s[scores={class=2,totemres=39},nbt={SelectedItem:{id:"mi
 scoreboard players set @s[scores={class=3},nbt={SelectedItem:{id:"minecraft:trident"}}] damageCap 70
 scoreboard players set @s[scores={class=3,manaboost=1..},nbt={SelectedItem:{id:"minecraft:trident"}}] damageCap 100
 scoreboard players set @s[scores={class=4},nbt={SelectedItem:{id:"minecraft:bow"}}] damageCap 70
-scoreboard players set @s[scores={class=5},nbt={SelectedItem:{id:"minecraft:stone_sword"}}] damageCap 130
-scoreboard players set @s[scores={class=6},nbt={SelectedItem:{id:"minecraft:diamond_axe"}}] damageCap 130
+scoreboard players set @s[scores={class=5},nbt={SelectedItem:{id:"minecraft:stone_sword"}}] damageCap 120
+scoreboard players set @s[scores={class=6},nbt={SelectedItem:{id:"minecraft:diamond_axe"}}] damageCap 120
 
 attribute @s minecraft:generic.attack_speed base set 1.666
 attribute @s[scores={damageCap=30..}] minecraft:generic.attack_speed base set 4
@@ -72,7 +72,6 @@ scoreboard players set @s damageDealt 0
 ## damage absorption, used to modify damage done. used for bolt and crit hits
 execute as @s[scores={healthreal=1..}] at @s run scoreboard players operation @s healthreal -= @s damageob
 scoreboard players set @s[scores={healthreal=..-1,damageob=1..}] healthreal 0
-scoreboard players set @s damageob 0
 
 ## change current health by damage
 execute as @s[tag=!zeroh] at @s run scoreboard players operation @s healthshow -= @s healthreal
