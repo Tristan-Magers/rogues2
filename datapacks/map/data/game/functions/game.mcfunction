@@ -66,7 +66,7 @@ tag @a[x=-150,y=48,z=20,dx=70,dy=50,dz=70,distance=..200] add ingame
 tag @a[x=-122,y=53,z=3,distance=..30] add ingame
 execute as @a[tag=ingame] at @s run function game:players/ingame
 execute as @a[tag=lobby] at @s run function game:players/lobby
-scoreboard players set @a damageob 0
+execute as @a[tag=ingame] at @s run function game:players/critcheck
 clear @a[gamemode=!creative,tag=lobby,tag=!ingame,tag=!clear]
 tag @a[gamemode=!creative,tag=lobby,tag=!ingame] add clear
 tag @a[gamemode=!creative,tag=lobby,tag=!ingame] add cleart
