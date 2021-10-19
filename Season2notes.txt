@@ -9,10 +9,10 @@ Goals: Improve game accessibility and quality of life.
 - Landing a crit tells you in chat (only you)
 - Walk particles are lighter and smaller
 - Walking takes 0.05s longer to start making particles
-- Less particles for first .3s of walking particles
+- Fewer particles for the first .3s of walking particles
 - XP bar shows inviswalk amount (time you can walk until making particles)
 - Sprinting and sprint jumping cause inviswalk cooldown 
-- Players get 1 more seconds of invulnerability when coming out of a portal (1s -> 2s)
+- Players get 1 more second of invulnerability when coming out of a portal (1s -> 2s)
 - Falling over 3 blocks creates particles
 	- To even things out for players of all settings
 - Projectiles shoot lower when shifting
@@ -21,9 +21,12 @@ Goals: Improve game accessibility and quality of life.
 - Clicking passive moves explain the move
 - Stairs can now be shot through (treated as slabs)
 - Order of maps changed (loosely ordered from easiest to play to hardest)
-- Improved detection of arena area
-- Entering Spirit Realm the first time plays cutscene
+- Improved detection of the arena area
+- Entering Spirit Realm the first time plays a cutscene
+- Added tutorial (clicking instructions now triggers tutorial)
 - Improved the look of Spirit Realm
+- Improved title area
+- Added lore when you touch masks in character selection
 
 [Characters]
 
@@ -32,10 +35,10 @@ Sparket
 	- 9.5s after damage, every 3.5s past that
 - Fire Fist makes sound and particle on activation
 - Fire Fist takes 0.4s to charge up
-	- Doesn't impact duration
+	- Doesn't impact the duration
 - Fire Fist charges 17% slower (~0.42s -> 0.5s)
 - Fire Fist 7% less speed (+33% -> 25%)
-- Zero-Gravity makes particle on landing
+- Zero-Gravity makes particles on landing
 
 Emma
 - Trident damaged 1 when unequipped 
@@ -76,28 +79,29 @@ Pluto
 Barbose
 - Seeking Axe charges 8% slower (1.42s -> 1.54s)
 - Seeking Axe does 1 less damage (13 -> 12)
+- Seeking Axe particle only visible for self
 - Bombs explode .2s faster (1.7s -> 1.5s)
 - Bombs deal 40% less damage to self
 - Bombs give .3s less visibility (.75s -> .45s)
 - Decoy now fakes player holding axe
-- Decoy only explodes if player is close (8 blocks)
-	- Only revels you only explosion
+- Decoy only explodes if a player is close (8 blocks)
+	- Only reveals you on explosion
 
 [Maps]
 
 Forest Temple
-- Added to game
+- Added to the game
 
 Mountain Temple
 - Relocated map to reduce large lag spikes
 
 [Textures]
-- "Recharging" has different texture to "Reloading"
-	- changed all "In-Use" to "Recharging" to make thing consistant
+- "Recharging" has a different texture to "Reloading"
+	- changed all "In-Use" to "Recharging" to make things consistent
 - Reduced size of fire texture
 - Made passive effects textures transparent
-- Improved Seaking Axe texture
-- Retextured xp bar
+- Improved Seeking Axe texture
+- Retextured XP bar
 
 [Bug Fixes]
 - Some moves could bypass portal invulnerability
@@ -108,9 +112,9 @@ Mountain Temple
 - Fixed Bolt being able to hit user in some cases
 - Fixed lore text on melee items
 - Ghost Bow said 3 arrows despite being 2
-- Fixed hole in lobby
-- Fixed visible slime blocks in lobby
-- Sacred Knife would degrade 1 level 5s after re-equiping
+- Fixed hole in the lobby
+- Fixed visible slime blocks in the lobby
+- Sacred Knife would degrade 1 level 5s after re-equipping
 - Burnout could phase through some blocks
 - "Smoking" particle text did not work for many conditions
 - "Bubbles" visibility text wouldn't just happen during particles
@@ -118,8 +122,8 @@ Mountain Temple
 - Spectators could be listed as a "winner"
 - Soul Send could teleport players through blocks at short range
 - Hurricane hitbox had an offset of 0.1 block
-- Fixed graphical error with vohelm mask
-- Visibility status was not properly reset when in spirit realm
+- Fixed graphical error with Vohelm mask
+- Visibility status was not properly reset when in the Spirit Realm
 
 [Backend]
 - Fixed issues for Spigot/Paper servers

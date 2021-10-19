@@ -210,6 +210,14 @@ tag @a remove t1win1
 #title area
 clear @a[x=-145,y=23,z=-45,distance=..20,gamemode=adventure]
 
+#tutorial
+execute as @a[scores={tutorialtime=1..}] at @s run function game:players/tutorial
+
+#lore
+effect give @a[tag=lore1] blindness 10 0 true
+tellraw @a[tag=lore1] {"text":"\n\nWhile souls cross over, they pass just by the world of dead. Mischievous spirits play with these lost souls, grabbing them up and returning them to the spirit realm.\n\nIn legend, the life lived by a soul can be understood by which spirit is chosen to return it.\n\nAs they vigorously fight, sometimes souls touch the spirits many times. Eventually, however, every soul is returned, when the world finally decides what spirit should be the guild."}
+tag @a remove lore1
+
 #reset scores
 scoreboard players set @a damageTaken 0
 scoreboard players set @a 10 10

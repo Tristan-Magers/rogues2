@@ -44,6 +44,10 @@ execute unless entity @s[scores={class=5,selwait=..10}] if entity @e[tag=selnow,
 execute unless entity @s[scores={class=6,selwait=..10}] if entity @e[tag=selnow,tag=barboseselect] run scoreboard players set @s selwait 0
 
 execute if entity @s[tag=insel,x=1012,y=14,z=1006,distance=..20,x_rotation=-100..-40] unless entity @s[scores={selwait=..10}] unless entity @e[tag=selnow] run tellraw @s [{"text":"Selected: "},{"text":"Random","color":"gray"},{"text":""}]
+execute if entity @s[tag=insel,x=1012,y=14,z=1006,distance=..20,x_rotation=-100..-40] unless entity @s[scores={selwait=..10}] unless entity @e[tag=selnow] run playsound minecraft:entity.wither.hurt master @s ~ ~ ~ 0.1 1.8
+execute if entity @s[tag=insel,x=1012,y=14,z=1006,distance=..20,x_rotation=-100..-40] unless entity @s[scores={selwait=..10}] unless entity @e[tag=selnow] run playsound minecraft:block.respawn_anchor.deplete master @a ~ ~ ~ .2 2
+execute if entity @s[tag=insel,x=1012,y=14,z=1006,distance=..20,x_rotation=-100..-40] unless entity @s[scores={selwait=..10}] unless entity @e[tag=selnow] run playsound minecraft:block.respawn_anchor.set_spawn master @a ~ ~ ~ .3 2
+execute if entity @s[tag=insel,x=1012,y=14,z=1006,distance=..20,x_rotation=-100..-40] unless entity @s[scores={selwait=..10}] unless entity @e[tag=selnow] run playsound minecraft:block.note_block.didgeridoo master @a ~ ~ ~ 1 0
 execute if entity @s[tag=insel,x=1012,y=14,z=1006,distance=..20,tag=!ranchar,x_rotation=-100..-40] unless entity @s[scores={selwait=..10}] unless entity @e[tag=selnow] run tag @s add ranchar
 
 tag @e[tag=selnow] remove selnow
@@ -77,6 +81,7 @@ playsound minecraft:block.ancient_debris.break master @s[nbt={SelectedItem:{id:"
 playsound minecraft:block.note_block.basedrum master @s[nbt={SelectedItem:{id:"minecraft:golden_horse_armor"}}] ~ ~ ~ 1 2
 playsound minecraft:block.note_block.basedrum master @s[nbt={SelectedItem:{id:"minecraft:iron_horse_armor"}}] ~ ~ ~ 1 1
 
-scoreboard players set @s[nbt={SelectedItem:{id:"minecraft:diamond_horse_armor"}}] loretext 180
-effect give @s[nbt={SelectedItem:{id:"minecraft:diamond_horse_armor"}}] blindness 10 0 true
-tellraw @s[nbt={SelectedItem:{id:"minecraft:diamond_horse_armor"}}] {"text":"\n\nWhile souls cross over, they pass just by the world of dead. Mischievous spirits play with these lost souls, grabbing them up and returning them to the spirit realm.\n\nIn legend, the life lived by a soul can be understood by which spirit is chosen to return it.\n\nAs they vigorously fight, sometimes souls touch the spirits many times. Eventually, however, every soul is returned, when the world finally decides what spirit should be the guild."}
+scoreboard players set @s[nbt={SelectedItem:{id:"minecraft:diamond_horse_armor"}}] tutorialtime 1
+#scoreboard players set @s[nbt={SelectedItem:{id:"minecraft:diamond_horse_armor"}}] loretext 180
+#effect give @s[nbt={SelectedItem:{id:"minecraft:diamond_horse_armor"}}] blindness 10 0 true
+#tellraw @s[nbt={SelectedItem:{id:"minecraft:diamond_horse_armor"}}] {"text":"\n\nWhile souls cross over, they pass just by the world of dead. Mischievous spirits play with these lost souls, grabbing them up and returning them to the spirit realm.\n\nIn legend, the life lived by a soul can be understood by which spirit is chosen to return it.\n\nAs they vigorously fight, sometimes souls touch the spirits many times. Eventually, however, every soul is returned, when the world finally decides what spirit should be the guild."}

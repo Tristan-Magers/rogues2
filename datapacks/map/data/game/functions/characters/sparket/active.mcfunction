@@ -34,10 +34,10 @@ scoreboard players set @p firefist 0
 #fire heal
 scoreboard players add @s fireheal 1
 scoreboard players add @s[scores={fireheal=70..}] healthshow 1
-execute as @s[scores={fireheal=70..}] at @s run playsound minecraft:item.dye.use master @s ~ ~ ~ 1 0
-execute as @s[scores={fireheal=70..}] at @s run playsound minecraft:item.armor.equip_netherite master @s ~ ~ ~ 0.4 1.6
-execute as @s[scores={fireheal=70..}] at @s run playsound minecraft:entity.experience_orb.pickup master @s ~ ~ ~ 0.2 0.3
-execute as @s[scores={fireheal=70..}] at @s run playsound minecraft:entity.generic.extinguish_fire master @s ~ ~ ~ 0.4 1.4
+execute as @s[scores={fireheal=70..}] at @s run playsound minecraft:item.dye.use master @s ~ ~ ~ 0.5 0
+execute as @s[scores={fireheal=70..}] at @s run playsound minecraft:item.armor.equip_netherite master @s ~ ~ ~ 0.2 1.6
+execute as @s[scores={fireheal=70..}] at @s run playsound minecraft:entity.experience_orb.pickup master @s ~ ~ ~ 0.1 0.3
+execute as @s[scores={fireheal=70..}] at @s run playsound minecraft:entity.generic.extinguish_fire master @s ~ ~ ~ 0.2 1.4
 scoreboard players set @s[scores={fireheal=70..}] fireheal 0
 scoreboard players set @s[scores={healthshow=15..}] fireheal -120
 

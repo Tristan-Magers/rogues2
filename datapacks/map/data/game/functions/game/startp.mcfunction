@@ -7,6 +7,9 @@ effect give @s minecraft:weakness 8 4 true
 effect give @s minecraft:fire_resistance 8 0 true
 effect give @s minecraft:blindness 2
 
+gamemode adventure @s
+
+scoreboard players set @s tutorialtime 0
 scoreboard players set @s invisoff 80
 scoreboard players set @s Invul 160
 scoreboard players set @s healthshow 100
