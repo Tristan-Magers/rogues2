@@ -14,6 +14,7 @@ execute if block ~ ~ ~ grass run tag @s add in
 execute if block ~ ~ ~ tall_grass run tag @s add in
 execute if block ~ ~ ~ #minecraft:small_flowers run tag @s add in
 execute if block ~ ~ ~ fern run tag @s add in
+execute if block ~ ~ ~ large_fern run tag @s add in
 
 execute if block ~ ~ ~ #minecraft:climbable
 execute if block ~ ~ ~ air run tag @s add in
@@ -21,6 +22,13 @@ execute if block ~ ~ ~ air run tag @s add in
 #y x2
 execute if block ~ ~ ~ minecraft:dead_fire_coral run tag @s add in
 execute if block ~ ~ ~ minecraft:dead_fire_coral_fan run tag @s add in
+execute if block ~ ~ ~ minecraft:dead_brain_coral run tag @s add in
+execute if block ~ ~ ~ minecraft:dead_horn_coral_fan run tag @s add in
+
+execute if block ~ ~ ~ minecraft:hanging_roots run tag @s add in
+execute if block ~ ~ ~ minecraft:small_dripleaf run tag @s add in
+execute if block ~ ~ ~ minecraft:big_dripleaf run tag @s add in
+execute if block ~ ~ ~ minecraft:big_dripleaf_stem run tag @s add in
 
 execute if block ~ ~ ~ #minecraft:climbable run tag @s add in
 execute if block ~ ~ ~ #minecraft:coral_plants run tag @s add in
@@ -38,6 +46,9 @@ execute if block ~ ~ ~ structure_void run tag @s add in
 
 execute if block ~ ~.5 ~ #minecraft:slabs[type=top] run tag @s add in
 execute if block ~ ~-.5 ~ #minecraft:slabs[type=bottom] run tag @s add in
+
+execute if block ~ ~.5 ~ #minecraft:stairs[half=top] run tag @s add in
+execute if block ~ ~-.5 ~ #minecraft:stairs[half=bottom] run tag @s add in
 
 execute if block ~ ~ ~ #minecraft:fences run tag @s add in
 execute if block ~ ~ ~ end_rod run tag @s add in
@@ -61,3 +72,5 @@ execute as @s[type=player] if block ~ ~ ~ cobweb run tag @s add in
 execute as @s[type=cave_spider] if block ~ ~ ~ cobweb run tag @s add in
 execute as @s[type=player] if block ~ ~ ~ #minecraft:leaves run tag @s remove in
 execute as @s[tag=soulsend] if block ~ ~ ~ #minecraft:leaves run tag @s remove in
+
+execute if block ~ ~ ~ tinted_glass run tag @s remove in

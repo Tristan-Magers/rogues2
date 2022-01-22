@@ -52,3 +52,7 @@ scoreboard players remove @s[scores={coolblack=0..}] coolblack 1
 execute as @s[scores={coolblack=0}] at @s run function game:spells/manaup
 
 scoreboard players remove @s[scores={portalcool=-1..}] portalcool 1
+
+#correct axe
+clear @s[scores={wtimer=3..},nbt=!{Inventory:[{id:"minecraft:diamond_axe",Slot:0b}]}] diamond_axe
+scoreboard players set @s[scores={wtimer=3..},nbt=!{Inventory:[{id:"minecraft:diamond_axe",Slot:0b}]}] wtimer 2

@@ -1,6 +1,7 @@
 tag @s remove zeroh
 tag @s[scores={health=20}] add zeroh
 
+## MAX HEALTH
 scoreboard players set @s[scores={class=1,healthshow=16..}] healthshow 15
 scoreboard players set @s[scores={class=2,healthshow=19..}] healthshow 18
 scoreboard players set @s[scores={class=3,healthshow=19..}] healthshow 18
@@ -8,6 +9,7 @@ scoreboard players set @s[scores={class=4,healthshow=17..}] healthshow 16
 scoreboard players set @s[scores={class=5,healthshow=17..}] healthshow 16
 scoreboard players set @s[scores={class=6,healthshow=23..}] healthshow 22
 
+## Visibility text/effects based on items
 scoreboard players set @s[scores={healthshow=1..},nbt={SelectedItem:{id:"minecraft:wooden_sword"}}] item 2
 scoreboard players set @s[scores={healthshow=1..},nbt={SelectedItem:{id:"minecraft:bow"}}] item 2
 scoreboard players set @s[scores={healthshow=1..},nbt={SelectedItem:{id:"minecraft:diamond_axe"}}] item 2
@@ -17,7 +19,8 @@ scoreboard players set @s[scores={healthshow=1..},nbt={SelectedItem:{id:"minecra
 scoreboard players set @s[scores={healthshow=1..},nbt={SelectedItem:{id:"minecraft:golden_apple"}}] item 1
 scoreboard players set @s[scores={class=2},tag=wood] item 2
 
-scoreboard players set @s[scores={healthshow=1..,walk=1..}] particles 5
+## Particles based on motion/status
+scoreboard players set @s[scores={healthshow=1..,walk=1..,partdelay=12..}] particles 5
 scoreboard players set @s[scores={healthshow=1..,spiderwall=1..}] particles 2
 scoreboard players set @s[scores={healthshow=1..,plutospike=1..}] particles 2
 scoreboard players set @s[scores={healthshow=1..,jump=1..}] particles 14
@@ -26,42 +29,57 @@ scoreboard players set @s[scores={healthshow=1..,manaboost=1..}] particles 2
 scoreboard players set @s[scores={healthshow=1..},tag=totemdust] particles 2
 tag @s[tag=totemdust] remove totemdust
 
+## find damage done. also mana for some reason
 scoreboard players set @s[scores={Mana=..0}] Mana 0
 execute as @s at @s run scoreboard players set @s healthreal 60
 execute as @s at @s run scoreboard players operation @s healthreal -= @s health
 
+## lobby health
 scoreboard players set @s[scores={healthshow=..0},tag=lobby,tag=!arena] healthshow 100
 
+## prvent fall damage. used by jump pad
 scoreboard players set @s[nbt={OnGround:1b},tag=nofalldam] healthreal 0
 scoreboard players set @s[scores={nofalldamage=1..2}] healthreal 0
 scoreboard players remove @s[nbt={OnGround:1b},tag=nofalldam] nofalldamage 1
 tag @s[scores={nofalldamage=..0}] remove nofalldam
 
+## damage absorption, used to modify damage done. used for bolt and crit hits
+execute as @s[scores={healthreal=1..}] at @s run scoreboard players operation @s healthreal -= @s damageob
+scoreboard players set @s[scores={healthreal=..-1,damageob=1..}] healthreal 0
+scoreboard players set @s damageob 0
+
+## change current health by damage
 execute as @s[tag=!zeroh] at @s run scoreboard players operation @s healthshow -= @s healthreal
 execute as @s[tag=!zeroh,scores={healthshow=..-1}] at @s run scoreboard players operation @s healthreal += @s healthshow
 
-execute as @s[scores={healthreal=1}] at @s run summon minecraft:armor_stand ~ ~ ~ {Marker:1,Invisible:1b,Invulnerable:1,Tags:["damnum"],CustomNameVisible:1b,Duration:999999,CustomName:'{"text":"-1"}'}
-execute as @s[scores={healthreal=2}] at @s run summon minecraft:armor_stand ~ ~ ~ {Marker:1,Invisible:1b,Invulnerable:1,Tags:["damnum"],CustomNameVisible:1b,Duration:999999,CustomName:'{"text":"-2"}'}
-execute as @s[scores={healthreal=3}] at @s run summon minecraft:armor_stand ~ ~ ~ {Marker:1,Invisible:1b,Invulnerable:1,Tags:["damnum"],CustomNameVisible:1b,Duration:999999,CustomName:'{"text":"-3"}'}
-execute as @s[scores={healthreal=4}] at @s run summon minecraft:armor_stand ~ ~ ~ {Marker:1,Invisible:1b,Invulnerable:1,Tags:["damnum"],CustomNameVisible:1b,Duration:999999,CustomName:'{"text":"-4"}'}
-execute as @s[scores={healthreal=5}] at @s run summon minecraft:armor_stand ~ ~ ~ {Marker:1,Invisible:1b,Invulnerable:1,Tags:["damnum"],CustomNameVisible:1b,Duration:999999,CustomName:'{"text":"-5"}'}
-execute as @s[scores={healthreal=6}] at @s run summon minecraft:armor_stand ~ ~ ~ {Marker:1,Invisible:1b,Invulnerable:1,Tags:["damnum"],CustomNameVisible:1b,Duration:999999,CustomName:'{"text":"-6"}'}
-execute as @s[scores={healthreal=7}] at @s run summon minecraft:armor_stand ~ ~ ~ {Marker:1,Invisible:1b,Invulnerable:1,Tags:["damnum"],CustomNameVisible:1b,Duration:999999,CustomName:'{"text":"-7"}'}
-execute as @s[scores={healthreal=8}] at @s run summon minecraft:armor_stand ~ ~ ~ {Marker:1,Invisible:1b,Invulnerable:1,Tags:["damnum"],CustomNameVisible:1b,Duration:999999,CustomName:'{"text":"-8"}'}
-execute as @s[scores={healthreal=9}] at @s run summon minecraft:armor_stand ~ ~ ~ {Marker:1,Invisible:1b,Invulnerable:1,Tags:["damnum"],CustomNameVisible:1b,Duration:999999,CustomName:'{"text":"-9"}'}
-execute as @s[scores={healthreal=10}] at @s run summon minecraft:armor_stand ~ ~ ~ {Marker:1,Invisible:1b,Invulnerable:1,Tags:["damnum"],CustomNameVisible:1b,Duration:999999,CustomName:'{"text":"-10"}'}
-execute as @s[scores={healthreal=11}] at @s run summon minecraft:armor_stand ~ ~ ~ {Marker:1,Invisible:1b,Invulnerable:1,Tags:["damnum"],CustomNameVisible:1b,Duration:999999,CustomName:'{"text":"-11"}'}
-execute as @s[scores={healthreal=12}] at @s run summon minecraft:armor_stand ~ ~ ~ {Marker:1,Invisible:1b,Invulnerable:1,Tags:["damnum"],CustomNameVisible:1b,Duration:999999,CustomName:'{"text":"-12"}'}
-execute as @s[scores={healthreal=13}] at @s run summon minecraft:armor_stand ~ ~ ~ {Marker:1,Invisible:1b,Invulnerable:1,Tags:["damnum"],CustomNameVisible:1b,Duration:999999,CustomName:'{"text":"-13"}'}
-execute as @s[scores={healthreal=14}] at @s run summon minecraft:armor_stand ~ ~ ~ {Marker:1,Invisible:1b,Invulnerable:1,Tags:["damnum"],CustomNameVisible:1b,Duration:999999,CustomName:'{"text":"-14"}'}
-execute as @s[scores={healthreal=15}] at @s run summon minecraft:armor_stand ~ ~ ~ {Marker:1,Invisible:1b,Invulnerable:1,Tags:["damnum"],CustomNameVisible:1b,Duration:999999,CustomName:'{"text":"-15"}'}
-execute as @s[scores={healthreal=16}] at @s run summon minecraft:armor_stand ~ ~ ~ {Marker:1,Invisible:1b,Invulnerable:1,Tags:["damnum"],CustomNameVisible:1b,Duration:999999,CustomName:'{"text":"-16"}'}
-execute as @s[scores={healthreal=17}] at @s run summon minecraft:armor_stand ~ ~ ~ {Marker:1,Invisible:1b,Invulnerable:1,Tags:["damnum"],CustomNameVisible:1b,Duration:999999,CustomName:'{"text":"-17"}'}
-execute as @s[scores={healthreal=18}] at @s run summon minecraft:armor_stand ~ ~ ~ {Marker:1,Invisible:1b,Invulnerable:1,Tags:["damnum"],CustomNameVisible:1b,Duration:999999,CustomName:'{"text":"-18"}'}
-execute as @s[scores={healthreal=19}] at @s run summon minecraft:armor_stand ~ ~ ~ {Marker:1,Invisible:1b,Invulnerable:1,Tags:["damnum"],CustomNameVisible:1b,Duration:999999,CustomName:'{"text":"-19"}'}
-execute as @s[scores={healthreal=20}] at @s run summon minecraft:armor_stand ~ ~ ~ {Marker:1,Invisible:1b,Invulnerable:1,Tags:["damnum"],CustomNameVisible:1b,Duration:999999,CustomName:'{"text":"-20"}'}
-execute as @s[scores={healthreal=21}] at @s run summon minecraft:armor_stand ~ ~ ~ {Marker:1,Invisible:1b,Invulnerable:1,Tags:["damnum"],CustomNameVisible:1b,Duration:999999,CustomName:'{"text":"-21"}'}
-execute as @s[scores={healthreal=22..}] at @s run summon minecraft:armor_stand ~ ~ ~ {Marker:1,Invisible:1b,Invulnerable:1,Tags:["damnum"],CustomNameVisible:1b,Duration:999999,CustomName:'{"text":"-22"}'}
+## cap damage
+#scoreboard players set @s[scores={healthreal=14..}] healthreal 14
+
+## damage number show
+execute as @s[scores={healthreal=1}] at @s run summon minecraft:armor_stand ~ ~ ~ {Marker:1,Silent:1,Silent:1,Silent:1,Silent:1,Invisible:1b,Invulnerable:1,Tags:["damnum"],CustomNameVisible:1b,Duration:999999,CustomName:'{"text":"-1"}'}
+execute as @s[scores={healthreal=2}] at @s run summon minecraft:armor_stand ~ ~ ~ {Marker:1,Silent:1,Silent:1,Silent:1,Silent:1,Invisible:1b,Invulnerable:1,Tags:["damnum"],CustomNameVisible:1b,Duration:999999,CustomName:'{"text":"-2"}'}
+execute as @s[scores={healthreal=3}] at @s run summon minecraft:armor_stand ~ ~ ~ {Marker:1,Silent:1,Silent:1,Silent:1,Silent:1,Invisible:1b,Invulnerable:1,Tags:["damnum"],CustomNameVisible:1b,Duration:999999,CustomName:'{"text":"-3"}'}
+execute as @s[scores={healthreal=4}] at @s run summon minecraft:armor_stand ~ ~ ~ {Marker:1,Silent:1,Silent:1,Silent:1,Silent:1,Invisible:1b,Invulnerable:1,Tags:["damnum"],CustomNameVisible:1b,Duration:999999,CustomName:'{"text":"-4"}'}
+execute as @s[scores={healthreal=5}] at @s run summon minecraft:armor_stand ~ ~ ~ {Marker:1,Silent:1,Silent:1,Silent:1,Silent:1,Invisible:1b,Invulnerable:1,Tags:["damnum"],CustomNameVisible:1b,Duration:999999,CustomName:'{"text":"-5"}'}
+execute as @s[scores={healthreal=6}] at @s run summon minecraft:armor_stand ~ ~ ~ {Marker:1,Silent:1,Silent:1,Silent:1,Silent:1,Invisible:1b,Invulnerable:1,Tags:["damnum"],CustomNameVisible:1b,Duration:999999,CustomName:'{"text":"-6"}'}
+execute as @s[scores={healthreal=7}] at @s run summon minecraft:armor_stand ~ ~ ~ {Marker:1,Silent:1,Silent:1,Silent:1,Silent:1,Invisible:1b,Invulnerable:1,Tags:["damnum"],CustomNameVisible:1b,Duration:999999,CustomName:'{"text":"-7"}'}
+execute as @s[scores={healthreal=8}] at @s run summon minecraft:armor_stand ~ ~ ~ {Marker:1,Silent:1,Silent:1,Silent:1,Silent:1,Invisible:1b,Invulnerable:1,Tags:["damnum"],CustomNameVisible:1b,Duration:999999,CustomName:'{"text":"-8"}'}
+execute as @s[scores={healthreal=9}] at @s run summon minecraft:armor_stand ~ ~ ~ {Marker:1,Silent:1,Silent:1,Silent:1,Silent:1,Invisible:1b,Invulnerable:1,Tags:["damnum"],CustomNameVisible:1b,Duration:999999,CustomName:'{"text":"-9"}'}
+execute as @s[scores={healthreal=10}] at @s run summon minecraft:armor_stand ~ ~ ~ {Marker:1,Silent:1,Silent:1,Silent:1,Silent:1,Invisible:1b,Invulnerable:1,Tags:["damnum"],CustomNameVisible:1b,Duration:999999,CustomName:'{"text":"-10"}'}
+execute as @s[scores={healthreal=11}] at @s run summon minecraft:armor_stand ~ ~ ~ {Marker:1,Silent:1,Silent:1,Silent:1,Silent:1,Invisible:1b,Invulnerable:1,Tags:["damnum"],CustomNameVisible:1b,Duration:999999,CustomName:'{"text":"-11"}'}
+execute as @s[scores={healthreal=12}] at @s run summon minecraft:armor_stand ~ ~ ~ {Marker:1,Silent:1,Silent:1,Silent:1,Silent:1,Invisible:1b,Invulnerable:1,Tags:["damnum"],CustomNameVisible:1b,Duration:999999,CustomName:'{"text":"-12"}'}
+execute as @s[scores={healthreal=13}] at @s run summon minecraft:armor_stand ~ ~ ~ {Marker:1,Silent:1,Silent:1,Silent:1,Silent:1,Invisible:1b,Invulnerable:1,Tags:["damnum"],CustomNameVisible:1b,Duration:999999,CustomName:'{"text":"-13"}'}
+execute as @s[scores={healthreal=14}] at @s run summon minecraft:armor_stand ~ ~ ~ {Marker:1,Silent:1,Silent:1,Silent:1,Silent:1,Invisible:1b,Invulnerable:1,Tags:["damnum"],CustomNameVisible:1b,Duration:999999,CustomName:'{"text":"-14"}'}
+execute as @s[scores={healthreal=15}] at @s run summon minecraft:armor_stand ~ ~ ~ {Marker:1,Silent:1,Silent:1,Silent:1,Silent:1,Invisible:1b,Invulnerable:1,Tags:["damnum"],CustomNameVisible:1b,Duration:999999,CustomName:'{"text":"-15"}'}
+execute as @s[scores={healthreal=16}] at @s run summon minecraft:armor_stand ~ ~ ~ {Marker:1,Silent:1,Silent:1,Silent:1,Silent:1,Invisible:1b,Invulnerable:1,Tags:["damnum"],CustomNameVisible:1b,Duration:999999,CustomName:'{"text":"-16"}'}
+execute as @s[scores={healthreal=17}] at @s run summon minecraft:armor_stand ~ ~ ~ {Marker:1,Silent:1,Silent:1,Silent:1,Silent:1,Invisible:1b,Invulnerable:1,Tags:["damnum"],CustomNameVisible:1b,Duration:999999,CustomName:'{"text":"-17"}'}
+execute as @s[scores={healthreal=18}] at @s run summon minecraft:armor_stand ~ ~ ~ {Marker:1,Silent:1,Silent:1,Silent:1,Silent:1,Invisible:1b,Invulnerable:1,Tags:["damnum"],CustomNameVisible:1b,Duration:999999,CustomName:'{"text":"-18"}'}
+execute as @s[scores={healthreal=19}] at @s run summon minecraft:armor_stand ~ ~ ~ {Marker:1,Silent:1,Silent:1,Silent:1,Silent:1,Invisible:1b,Invulnerable:1,Tags:["damnum"],CustomNameVisible:1b,Duration:999999,CustomName:'{"text":"-19"}'}
+execute as @s[scores={healthreal=20}] at @s run summon minecraft:armor_stand ~ ~ ~ {Marker:1,Silent:1,Silent:1,Silent:1,Silent:1,Invisible:1b,Invulnerable:1,Tags:["damnum"],CustomNameVisible:1b,Duration:999999,CustomName:'{"text":"-20"}'}
+execute as @s[scores={healthreal=21}] at @s run summon minecraft:armor_stand ~ ~ ~ {Marker:1,Silent:1,Silent:1,Silent:1,Silent:1,Invisible:1b,Invulnerable:1,Tags:["damnum"],CustomNameVisible:1b,Duration:999999,CustomName:'{"text":"-21"}'}
+execute as @s[scores={healthreal=22..}] at @s run summon minecraft:armor_stand ~ ~ ~ {Marker:1,Silent:1,Silent:1,Silent:1,Silent:1,Invisible:1b,Invulnerable:1,Tags:["damnum"],CustomNameVisible:1b,Duration:999999,CustomName:'{"text":"-22"}'}
+
+scoreboard players set @s[scores={healthreal=1..},tag=!zeroh] fireheal -120
 
 execute as @s[scores={healthreal=1..},tag=!zeroh] at @s run particle minecraft:block minecraft:redstone_block ~ ~1 ~ .3 .8 .3 2 40 force
 effect give @s[scores={health=..59}] minecraft:health_boost 999999 9 true
@@ -73,14 +91,15 @@ execute as @s[scores={healthshow=..0}] at @s positioned ~ ~.5 ~ run tp @e[distan
 
 execute as @s[scores={healthshow=..0,class=2}] at @s run function game:characters/vohelm/die
 
+## Visibility text
 execute as @s[scores={healthshow=1..}] at @s run execute as @e[tag=stealth] at @s run data merge entity @s {CustomName:"\"Invisible\""}
 execute as @s[scores={healthshow=1..}] at @s run team join invisible @e[tag=stealth]
-execute as @s[scores={healthshow=1..,particles=1..,partdelay=12..}] at @s run execute as @e[tag=stealth] at @s run data merge entity @s {CustomName:"\"Smoking\""}
-execute as @s[scores={healthshow=1..,particles=1..,partdelay=12..}] at @s run team join smoke @e[tag=stealth]
+execute as @s[scores={healthshow=1..,particles=1..}] at @s run execute as @e[tag=stealth] at @s run data merge entity @s {CustomName:"\"Smoking\""}
+execute as @s[scores={healthshow=1..,particles=1..}] at @s run team join smoke @e[tag=stealth]
 execute as @s[scores={healthshow=1..,plutoregen=0..}] at @s run execute as @e[tag=stealth] at @s run data merge entity @s {CustomName:"\"Hearts\""}
 execute as @s[scores={healthshow=1..,plutoregen=0..}] at @s run team join visible @e[tag=stealth]
-execute as @s[scores={healthshow=1..}] at @s if block ~ ~ ~ water run execute as @e[tag=stealth] at @s run data merge entity @s {CustomName:"\"Bubbles\""}
-execute as @s[scores={healthshow=1..}] at @s if block ~ ~ ~ water run team join smoke @e[tag=stealth]
+execute as @s[scores={healthshow=1..,particles=1..}] at @s if block ~ ~ ~ water run execute as @e[tag=stealth] at @s run data merge entity @s {CustomName:"\"Bubbles\""}
+execute as @s[scores={healthshow=1..,particles=1..}] at @s if block ~ ~ ~ water run team join shield @e[tag=stealth]
 execute as @s[scores={healthshow=1..,item=1}] at @s run execute as @e[tag=stealth] at @s run data merge entity @s {CustomName:"\"Item\""}
 execute as @s[scores={healthshow=1..,item=1}] at @s run team join smoke @e[tag=stealth]
 execute as @s[scores={healthshow=1..,item=2}] at @s run execute as @e[tag=stealth] at @s run data merge entity @s {CustomName:"\"Weapon/Mask\""}
@@ -98,6 +117,7 @@ execute as @s[scores={healthshow=1..,glowing=1..}] at @s run team join glowing @
 
 scoreboard players set @s[scores={invisoff=0..}] item 2
 
+## Health text
 execute as @s[scores={healthshow=13..16}] at @s run title @s actionbar ["",{"text":"Health: ","bold":true},{"score":{"name":"@s","objective":"healthshow"},"color":"dark_green","bold":true},{"text":" Mana: ","bold":true},{"score":{"name":"@s","objective":"Mana"},"color":"gold","bold":true},{"text":" Visibility: ","bold":true},{"selector":"@e[tag=stealth]","bold":true}]
 execute as @s[scores={healthshow=9..12}] at @s run title @s actionbar ["",{"text":"Health: ","bold":true},{"score":{"name":"@s","objective":"healthshow"},"color":"gold","bold":true},{"text":" Mana: ","bold":true},{"score":{"name":"@s","objective":"Mana"},"color":"gold","bold":true},{"text":" Visibility: ","bold":true},{"selector":"@e[tag=stealth]","bold":true}]
 execute as @s[scores={healthshow=5..8}] at @s run title @s actionbar ["",{"text":"Health: ","bold":true},{"score":{"name":"@s","objective":"healthshow"},"color":"red","bold":true},{"text":" Mana: ","bold":true},{"score":{"name":"@s","objective":"Mana"},"color":"gold","bold":true},{"text":" Visibility: ","bold":true},{"selector":"@e[tag=stealth]","bold":true}]

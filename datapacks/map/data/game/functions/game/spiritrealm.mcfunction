@@ -1,20 +1,43 @@
+execute as @s[tag=!spiritworld,tag=spiritnoob] at @s run scoreboard players set @s spiritcutscene 20
+execute as @s[tag=!spiritworld] at @s run title @s times 10 20 10
+execute as @s[tag=!spiritworld] at @s run title @s title [{"text":"Spirit ","color":"dark_aqua"},{"text":"Realm","color":"dark_aqua"}]
+execute as @s[tag=!spiritworld] at @s run title @s subtitle [{"text":"Home of souls","color":"aqua"}]
+execute as @s[tag=!spiritworld] at @s run tp @s[tag=!spiritnoob] 69 38.05 -30 180 0
+
+tp @s[scores={spiritcutscene=20}] 69 45 -32 180 40
+tp @s[scores={spiritcutscene=2..19}] ~ ~-.37 ~0.11 180 ~-2
+tp @s[scores={spiritcutscene=1}] 69 38.05 -30 180 0
+effect give @s[scores={spiritcutscene=1..}] minecraft:slow_falling 1 10 true
+execute as @s[scores={spiritcutscene=1..}] at @s run tp @s @s
+tag @s[scores={spiritcutscene=1}] remove spiritnoob
+
 tag @s add spiritworld
+
+scoreboard players set @s walk 0
+scoreboard players set @s run 0
+scoreboard players set @s jump 0
+scoreboard players set @s partdelay 0
+scoreboard players set @s noname 50
+xp set @s 0 points
 
 tag @s[tag=game] remove spirlob
 tag @s[tag=!game] add spirlob
 item replace entity @s[tag=!game] hotbar.8 with air
 
 effect clear @s minecraft:jump_boost
-effect clear @s minecraft:slow_falling
+effect clear @s[scores={spiritcutscene=..0}] minecraft:slow_falling
 effect clear @s minecraft:slowness
 effect clear @s minecraft:levitation
 
 effect give @s minecraft:fire_resistance 1 100 true
-effect give @s minecraft:resistance 1 100 true
+effect give @s minecraft:resistance 2 100 true
 effect give @s minecraft:weakness 1 100 true
 effect give @s minecraft:invisibility 1 100 true
 
-execute as @s[x=69,y=35,z=-33,distance=..2,nbt={Fire:-20s}] run tp @s 69 38.3 -30 180 0
+scoreboard players set @s Invul 40
+
+execute as @s[x=69,y=35,z=-33,distance=..2,nbt={Fire:-20s},tag=spiritnoob] run scoreboard players set @s spiritcutscene 21
+execute as @s[x=69,y=35,z=-33,distance=..2,nbt={Fire:-20s},tag=!spiritnoob] run tp @s 69 38.05 -30 180 0
 execute as @s[nbt=!{Fire:-20s}] run tp 69 35 -33
 
 clear @s nether_star
@@ -56,3 +79,5 @@ item replace entity @s armor.head with air
 item replace entity @s armor.chest with air
 item replace entity @s armor.legs with air
 item replace entity @s armor.feet with air
+
+scoreboard players remove @s spiritcutscene 1

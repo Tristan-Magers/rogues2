@@ -21,9 +21,9 @@ scoreboard players set @s[scores={noname=0..}] noname -2
 scoreboard players add @s[tag=!ready,tag=!insel] readytext 1
 scoreboard players set @s[tag=ready] readytext 0
 
-title @s[scores={readytext=299..}] times 16 30 16
-title @s[scores={readytext=300..}] title [{"text":""}]
-title @s[scores={readytext=300..}] actionbar [{"text":"Not Ready","color":"red"},{"text":" (won't join game)","color":"white"}]
+title @s[scores={readytext=299..,tutorialtime=..0}] times 16 30 16
+title @s[scores={readytext=300..,tutorialtime=..0}] title [{"text":""}]
+title @s[scores={readytext=300..,tutorialtime=..0}] actionbar [{"text":"Not Ready","color":"red"},{"text":" (won't join game)","color":"white"}]
 scoreboard players set @s[scores={readytext=300..}] readytext 0
 
 tag @s[tag=insel2] add instart
@@ -36,9 +36,7 @@ clear @s[x=-144,y=23,z=-42,distance=..20,tag=!instart]
 tag @s[x=-144,y=23,z=-42,distance=..20] add insel2
 tag @s[x=-87,y=41,z=65,distance=..7] add insel
 
-scoreboard players add @s[x=1015,y=14,z=1015,distance=..50] inseltext 1
-title @s[scores={inseltext=100..}] actionbar [{"text":"RIGHT-CLICK","color":"gold"},{"text":" to select class","color":"white"}]
-scoreboard players set @s[scores={inseltext=100..}] inseltext 0
+execute as @s[x=1015,y=14,z=1015,distance=..50] at @s run function game:players/charactersel
 
 effect give @s[tag=!insel] minecraft:speed 1 1 true
 effect give @s[tag=insel] minecraft:speed 1 0 true
@@ -75,3 +73,5 @@ item replace entity @s[scores={class=6},tag=ready,tag=!ranchar] armor.head with 
 #execute if block ~ ~ ~ minecraft:warped_pressure_plate if entity @e[scores={Time=1..}] run function game:players/spartspec
 
 execute if block ~ ~ ~ minecraft:warped_pressure_plate run function game:players/spartspec
+
+execute if block ~ ~ ~ minecraft:crimson_pressure_plate run scoreboard players set @s tutorialtime 1

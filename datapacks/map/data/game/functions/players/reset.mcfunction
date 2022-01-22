@@ -2,6 +2,8 @@ stopsound @s
 
 effect clear @s
 
+tag @s add spiritnoob
+
 tag @s remove tpno
 tag @s remove spiritworld
 tag @s remove spirlob
@@ -74,7 +76,13 @@ scoreboard players set @s invisoff 0
 scoreboard players set @s dcdelay 0
 scoreboard players set @s boltdelay 0
 
+scoreboard players set @s fireheal 0
+
+scoreboard players set @s damageob 0
+scoreboard players add @s tutorialtime 0
+
 clear @s
 title @s times 0 25 10
 
 gamemode adventure @s
+attribute @s minecraft:generic.attack_damage base get

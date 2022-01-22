@@ -1,3 +1,7 @@
+#remove res
+effect clear @s[tag=nores] resistance
+tag @s remove nores
+
 #remove lev
 scoreboard players remove @s[scores={nolev=0..}] nolev 1
 effect clear @s[scores={nolev=0}] levitation

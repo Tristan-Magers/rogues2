@@ -9,13 +9,17 @@ execute if entity @e[scores={map=2}] run function game:game/maps/map2/portal
 execute if entity @e[scores={map=3}] run function game:game/maps/map3/portal
 execute if entity @e[scores={map=4}] run function game:game/maps/map4/portal
 execute if entity @e[scores={map=5}] run function game:game/maps/map5/portal
+execute if entity @e[scores={map=6}] run function game:game/maps/map6/portal
 
 #spec correct
 
 #lavatick
 execute if entity @e[scores={map=2,lavatick=100..}] run function game:game/maps/map2/lavatick
-execute if entity @e[scores={map=4,lavatick=5..}] run fill 212 26 -107 171 26 -36 air replace water
+execute if entity @e[scores={map=4,lavatick=5..}] run fill 1212 26 -107 1171 26 -36 air replace water
 execute if entity @e[scores={map=4,lavatick=5..}] run scoreboard players set @e[scores={lavatick=1..}] lavatick 0
+
+execute if entity @e[scores={map=6,lavatick=5..}] run fill 1017 22 -983 1016 20 -983 vine[south=true] replace air
+execute if entity @e[scores={map=6,lavatick=5..}] run scoreboard players set @e[scores={lavatick=1..}] lavatick 0
 
 #capture point code
 tag @a remove point
@@ -24,6 +28,7 @@ execute if entity @e[scores={map=2}] run execute as @e[tag=map2,name=point,type=
 execute if entity @e[scores={map=3}] run execute as @e[tag=map3,name=point,type=minecraft:armor_stand] at @s run function game:game/point
 execute if entity @e[scores={map=4}] run execute as @e[tag=map4,name=point,type=minecraft:armor_stand] at @s run function game:game/point
 execute if entity @e[scores={map=5}] run execute as @e[tag=map5,name=point,type=minecraft:armor_stand] at @s run function game:game/point
+execute if entity @e[scores={map=6}] run execute as @e[tag=map6,name=point,type=minecraft:armor_stand] at @s run function game:game/point
 scoreboard players set @a[tag=!point] pointsT 0
 scoreboard players remove @a[scores={nocap=1..}] nocap 1
 
@@ -31,5 +36,5 @@ scoreboard players remove @a[scores={nocap=1..}] nocap 1
 execute as @e[scores={Time=-5..}] at @s run function game:game/time
 
 #mountain cliff
-effect give @a[gamemode=adventure,x=150,y=24,z=-105,dx=70,dy=8,dz=80] minecraft:slow_falling 1 100 true
-scoreboard players set @a[gamemode=adventure,x=150,y=24,z=-105,dx=70,dy=4,dz=80] healthshow 0
+effect give @a[gamemode=adventure,x=1150,y=24,z=-105,dx=70,dy=8,dz=80] minecraft:slow_falling 1 100 true
+scoreboard players set @a[gamemode=adventure,x=1150,y=24,z=-105,dx=70,dy=4,dz=80] healthshow 0

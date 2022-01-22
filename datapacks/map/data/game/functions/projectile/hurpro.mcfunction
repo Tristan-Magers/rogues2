@@ -2,34 +2,107 @@ tag @e remove gethit
 
 tag @a remove isthrow
 
+#find throwing player (to prevent damage and col with that player)
 scoreboard players operation @a playerID -= @s playerID
 tag @a[scores={playerID=0}] add isthrow
 scoreboard players operation @a playerID += @s playerID
 
-execute as @s at @s run tp @s ^ ^ ^.15
-execute as @s at @s positioned ~ ~1.5 ~ run function game:inblock
+execute as @s[scores={hurpower=1..}] at @s run tp @s ^ ^ ^.15
+execute as @s[scores={hurpower=1..}] at @s positioned ~ ~1.5 ~ run function game:inblock
+execute as @s[scores={hurpower=1..,stepcount=5..},tag=in] at @s positioned ~.2 ~1.3 ~.2 run function game:inblock
+execute as @s[scores={hurpower=1..,stepcount=5..},tag=in] at @s positioned ~.2 ~1.3 ~-.2 run function game:inblock
+execute as @s[scores={hurpower=1..,stepcount=5..},tag=in] at @s positioned ~-.2 ~1.3 ~.2 run function game:inblock
+execute as @s[scores={hurpower=1..,stepcount=5..},tag=in] at @s positioned ~-.2 ~1.3 ~-.2 run function game:inblock
+execute as @s[scores={hurpower=1..,stepcount=5..},tag=in] at @s positioned ~.2 ~1.7 ~.2 run function game:inblock
+execute as @s[scores={hurpower=1..,stepcount=5..},tag=in] at @s positioned ~.2 ~1.7 ~-.2 run function game:inblock
+execute as @s[scores={hurpower=1..,stepcount=5..},tag=in] at @s positioned ~-.2 ~1.7 ~.2 run function game:inblock
+execute as @s[scores={hurpower=1..,stepcount=5..},tag=in] at @s positioned ~-.2 ~1.7 ~-.2 run function game:inblock
 
-execute as @s at @s run tp @s ^ ^ ^.15
-execute as @s at @s positioned ~ ~1.5 ~ run function game:inblock
+scoreboard players add @s stepcount 1
+
+#do base movement twice for better detection
+execute as @s[scores={hurpower=1..},tag=in] at @s run tp @s ^ ^ ^.15
+execute as @s[scores={hurpower=1..},tag=in] at @s positioned ~ ~1.5 ~ run function game:inblock
+execute as @s[scores={hurpower=1..,stepcount=5..},tag=in] at @s positioned ~.2 ~1.3 ~.2 run function game:inblock
+execute as @s[scores={hurpower=1..,stepcount=5..},tag=in] at @s positioned ~.2 ~1.3 ~-.2 run function game:inblock
+execute as @s[scores={hurpower=1..,stepcount=5..},tag=in] at @s positioned ~-.2 ~1.3 ~.2 run function game:inblock
+execute as @s[scores={hurpower=1..,stepcount=5..},tag=in] at @s positioned ~-.2 ~1.3 ~-.2 run function game:inblock
+execute as @s[scores={hurpower=1..,stepcount=5..},tag=in] at @s positioned ~.2 ~1.7 ~.2 run function game:inblock
+execute as @s[scores={hurpower=1..,stepcount=5..},tag=in] at @s positioned ~.2 ~1.7 ~-.2 run function game:inblock
+execute as @s[scores={hurpower=1..,stepcount=5..},tag=in] at @s positioned ~-.2 ~1.7 ~.2 run function game:inblock
+execute as @s[scores={hurpower=1..,stepcount=5..},tag=in] at @s positioned ~-.2 ~1.7 ~-.2 run function game:inblock
+
+scoreboard players add @s stepcount 1
 
 execute as @s[scores={hurpower=2..},tag=in] at @s run tp @s ^ ^ ^.28
-execute as @s[scores={hurpower=2..}] at @s positioned ~ ~1.5 ~ run function game:inblock
+execute as @s[scores={hurpower=2..},tag=in] at @s positioned ~ ~1.5 ~ run function game:inblock
+execute as @s[scores={hurpower=2..,stepcount=5..},tag=in] at @s positioned ~.2 ~1.3 ~.2 run function game:inblock
+execute as @s[scores={hurpower=2..,stepcount=5..},tag=in] at @s positioned ~.2 ~1.3 ~-.2 run function game:inblock
+execute as @s[scores={hurpower=2..,stepcount=5..},tag=in] at @s positioned ~-.2 ~1.3 ~.2 run function game:inblock
+execute as @s[scores={hurpower=2..,stepcount=5..},tag=in] at @s positioned ~-.2 ~1.3 ~-.2 run function game:inblock
+execute as @s[scores={hurpower=2..,stepcount=5..},tag=in] at @s positioned ~.2 ~1.7 ~.2 run function game:inblock
+execute as @s[scores={hurpower=2..,stepcount=5..},tag=in] at @s positioned ~.2 ~1.7 ~-.2 run function game:inblock
+execute as @s[scores={hurpower=2..,stepcount=5..},tag=in] at @s positioned ~-.2 ~1.7 ~.2 run function game:inblock
+execute as @s[scores={hurpower=2..,stepcount=5..},tag=in] at @s positioned ~-.2 ~1.7 ~-.2 run function game:inblock
+
+scoreboard players add @s stepcount 1
 
 execute as @s[scores={hurpower=3..},tag=in] at @s run tp @s ^ ^ ^.24
-execute as @s[scores={hurpower=3..}] at @s positioned ~ ~1.5 ~ run function game:inblock
+execute as @s[scores={hurpower=3..},tag=in] at @s positioned ~ ~1.5 ~ run function game:inblock
+execute as @s[scores={hurpower=3..,stepcount=5..},tag=in] at @s positioned ~.2 ~1.3 ~.2 run function game:inblock
+execute as @s[scores={hurpower=3..,stepcount=5..},tag=in] at @s positioned ~.2 ~1.3 ~-.2 run function game:inblock
+execute as @s[scores={hurpower=3..,stepcount=5..},tag=in] at @s positioned ~-.2 ~1.3 ~.2 run function game:inblock
+execute as @s[scores={hurpower=3..,stepcount=5..},tag=in] at @s positioned ~-.2 ~1.3 ~-.2 run function game:inblock
+execute as @s[scores={hurpower=3..,stepcount=5..},tag=in] at @s positioned ~.2 ~1.7 ~.2 run function game:inblock
+execute as @s[scores={hurpower=3..,stepcount=5..},tag=in] at @s positioned ~.2 ~1.7 ~-.2 run function game:inblock
+execute as @s[scores={hurpower=3..,stepcount=5..},tag=in] at @s positioned ~-.2 ~1.7 ~.2 run function game:inblock
+execute as @s[scores={hurpower=3..,stepcount=5..},tag=in] at @s positioned ~-.2 ~1.7 ~-.2 run function game:inblock
+
+scoreboard players add @s stepcount 1
 
 execute as @s[scores={hurpower=4..},tag=in] at @s run tp @s ^ ^ ^.21
-execute as @s[scores={hurpower=4..}] at @s positioned ~ ~1.5 ~ run function game:inblock
+execute as @s[scores={hurpower=4..},tag=in] at @s positioned ~ ~1.5 ~ run function game:inblock
+execute as @s[scores={hurpower=4..,stepcount=5..},tag=in] at @s positioned ~.2 ~1.3 ~.2 run function game:inblock
+execute as @s[scores={hurpower=4..,stepcount=5..},tag=in] at @s positioned ~.2 ~1.3 ~-.2 run function game:inblock
+execute as @s[scores={hurpower=4..,stepcount=5..},tag=in] at @s positioned ~-.2 ~1.3 ~.2 run function game:inblock
+execute as @s[scores={hurpower=4..,stepcount=5..},tag=in] at @s positioned ~-.2 ~1.3 ~-.2 run function game:inblock
+execute as @s[scores={hurpower=4..,stepcount=5..},tag=in] at @s positioned ~.2 ~1.7 ~.2 run function game:inblock
+execute as @s[scores={hurpower=4..,stepcount=5..},tag=in] at @s positioned ~.2 ~1.7 ~-.2 run function game:inblock
+execute as @s[scores={hurpower=4..,stepcount=5..},tag=in] at @s positioned ~-.2 ~1.7 ~.2 run function game:inblock
+execute as @s[scores={hurpower=4..,stepcount=5..},tag=in] at @s positioned ~-.2 ~1.7 ~-.2 run function game:inblock
+
+scoreboard players add @s stepcount 1
 
 execute as @s[scores={hurpower=5..},tag=in] at @s run tp @s ^ ^ ^.19
-execute as @s[scores={hurpower=5..}] at @s positioned ~ ~1.5 ~ run function game:inblock
+execute as @s[scores={hurpower=5..},tag=in] at @s positioned ~ ~1.5 ~ run function game:inblock
+execute as @s[scores={hurpower=5..,stepcount=5..},tag=in] at @s positioned ~.2 ~1.3 ~.2 run function game:inblock
+execute as @s[scores={hurpower=5..,stepcount=5..},tag=in] at @s positioned ~.2 ~1.3 ~-.2 run function game:inblock
+execute as @s[scores={hurpower=5..,stepcount=5..},tag=in] at @s positioned ~-.2 ~1.3 ~.2 run function game:inblock
+execute as @s[scores={hurpower=5..,stepcount=5..},tag=in] at @s positioned ~-.2 ~1.3 ~-.2 run function game:inblock
+execute as @s[scores={hurpower=5..,stepcount=5..},tag=in] at @s positioned ~.2 ~1.7 ~.2 run function game:inblock
+execute as @s[scores={hurpower=5..,stepcount=5..},tag=in] at @s positioned ~.2 ~1.7 ~-.2 run function game:inblock
+execute as @s[scores={hurpower=5..,stepcount=5..},tag=in] at @s positioned ~-.2 ~1.7 ~.2 run function game:inblock
+execute as @s[scores={hurpower=5..,stepcount=5..},tag=in] at @s positioned ~-.2 ~1.7 ~-.2 run function game:inblock
+
+scoreboard players add @s stepcount 1
 
 execute as @s[scores={hurpower=6..},tag=in] at @s run tp @s ^ ^ ^.17
-execute as @s[scores={hurpower=6..}] at @s positioned ~ ~1.5 ~ run function game:inblock
+execute as @s[scores={hurpower=6..},tag=in] at @s positioned ~ ~1.5 ~ run function game:inblock
+execute as @s[scores={hurpower=6..,stepcount=5..},tag=in] at @s positioned ~.2 ~1.3 ~.2 run function game:inblock
+execute as @s[scores={hurpower=6..,stepcount=5..},tag=in] at @s positioned ~.2 ~1.3 ~-.2 run function game:inblock
+execute as @s[scores={hurpower=6..,stepcount=5..},tag=in] at @s positioned ~-.2 ~1.3 ~.2 run function game:inblock
+execute as @s[scores={hurpower=6..,stepcount=5..},tag=in] at @s positioned ~-.2 ~1.3 ~-.2 run function game:inblock
+execute as @s[scores={hurpower=6..,stepcount=5..},tag=in] at @s positioned ~.2 ~1.7 ~.2 run function game:inblock
+execute as @s[scores={hurpower=6..,stepcount=5..},tag=in] at @s positioned ~.2 ~1.7 ~-.2 run function game:inblock
+execute as @s[scores={hurpower=6..,stepcount=5..},tag=in] at @s positioned ~-.2 ~1.7 ~.2 run function game:inblock
+execute as @s[scores={hurpower=6..,stepcount=5..},tag=in] at @s positioned ~-.2 ~1.7 ~-.2 run function game:inblock
 
+#step back after hit
+tag @s[tag=!in] add hit
 execute as @s[tag=!in] at @s run tp @s ^ ^ ^-.15
 execute as @s[tag=!in] at @s positioned ~ ~1.5 ~ run function game:inblock
 execute as @s[tag=!in] at @s run tp @s ^ ^ ^-.15
+tag @s[tag=hit] remove in
 
 execute as @s[tag=!in] at @s positioned ~ ~1.5 ~ run tag @a[tag=hittest,distance=..1.2] add gethit
 
@@ -47,12 +120,12 @@ execute as @s[tag=!in] at @s run tag @e[tag=!isthrow,tag=gethit] add resremove
 tag @e[tag=gethit,type=!player] add ded
 
 execute as @e[tag=gethit,type=!player] store result score @s healthreal run data get entity @s Health
-execute as @s[scores={hurpower=1},tag=!in] at @s run scoreboard players remove @e[tag=gethit,type=!player] healthreal 3
-execute as @s[scores={hurpower=2},tag=!in] at @s run scoreboard players remove @e[tag=gethit,type=!player] healthreal 4
-execute as @s[scores={hurpower=3},tag=!in] at @s run scoreboard players remove @e[tag=gethit,type=!player] healthreal 5
-execute as @s[scores={hurpower=4},tag=!in] at @s run scoreboard players remove @e[tag=gethit,type=!player] healthreal 6
-execute as @s[scores={hurpower=5},tag=!in] at @s run scoreboard players remove @e[tag=gethit,type=!player] healthreal 7
-execute as @s[scores={hurpower=6},tag=!in] at @s run scoreboard players remove @e[tag=gethit,type=!player] healthreal 8
+execute as @s[scores={hurpower=1},tag=!in] at @s run scoreboard players remove @e[tag=gethit,type=!player] healthreal 2
+execute as @s[scores={hurpower=2},tag=!in] at @s run scoreboard players remove @e[tag=gethit,type=!player] healthreal 3
+execute as @s[scores={hurpower=3},tag=!in] at @s run scoreboard players remove @e[tag=gethit,type=!player] healthreal 4
+execute as @s[scores={hurpower=4},tag=!in] at @s run scoreboard players remove @e[tag=gethit,type=!player] healthreal 5
+execute as @s[scores={hurpower=5},tag=!in] at @s run scoreboard players remove @e[tag=gethit,type=!player] healthreal 6
+execute as @s[scores={hurpower=6},tag=!in] at @s run scoreboard players remove @e[tag=gethit,type=!player] healthreal 7
 execute as @e[tag=gethit,type=!player] at @s run execute store result entity @s Health double 1 run scoreboard players get @s healthreal
 
 execute as @s[tag=!in] at @s run execute as @a[tag=!isthrow,tag=gethit] at @s run particle minecraft:block minecraft:redstone_block ~ ~1 ~ .3 .8 .3 2 40 force
@@ -63,28 +136,25 @@ execute as @s[tag=!in] at @s run execute as @a[tag=gethit] at @s run playsound m
 tag @a[tag=!isthrow,tag=gethit] add hasres
 tag @a[tag=!isthrow,tag=gethit,scores={manaboost=..0},tag=!totemres] remove hasres
 
-execute as @s[scores={hurpower=1},tag=!in] at @s run execute as @a[tag=!isthrow,tag=gethit] at @s run summon minecraft:armor_stand ~ ~ ~ {Marker:1,Invisible:1b,Invulnerable:1,Tags:["damnum"],CustomNameVisible:1b,Duration:999999,CustomName:'{"text":"-3"}'}
-execute as @s[scores={hurpower=2},tag=!in] at @s run execute as @a[tag=!isthrow,tag=gethit] at @s run summon minecraft:armor_stand ~ ~ ~ {Marker:1,Invisible:1b,Invulnerable:1,Tags:["damnum"],CustomNameVisible:1b,Duration:999999,CustomName:'{"text":"-4"}'}
-execute as @s[scores={hurpower=3},tag=!in] at @s run execute as @a[tag=!isthrow,tag=gethit,tag=!hasres] at @s run summon minecraft:armor_stand ~ ~ ~ {Marker:1,Invisible:1b,Invulnerable:1,Tags:["damnum"],CustomNameVisible:1b,Duration:999999,CustomName:'{"text":"-5"}'}
-execute as @s[scores={hurpower=4},tag=!in] at @s run execute as @a[tag=!isthrow,tag=gethit,tag=!hasres] at @s run summon minecraft:armor_stand ~ ~ ~ {Marker:1,Invisible:1b,Invulnerable:1,Tags:["damnum"],CustomNameVisible:1b,Duration:999999,CustomName:'{"text":"-6"}'}
-execute as @s[scores={hurpower=5},tag=!in] at @s run execute as @a[tag=!isthrow,tag=gethit,tag=!hasres] at @s run summon minecraft:armor_stand ~ ~ ~ {Marker:1,Invisible:1b,Invulnerable:1,Tags:["damnum"],CustomNameVisible:1b,Duration:999999,CustomName:'{"text":"-7"}'}
-execute as @s[scores={hurpower=6},tag=!in] at @s run execute as @a[tag=!isthrow,tag=gethit,tag=!hasres] at @s run summon minecraft:armor_stand ~ ~ ~ {Marker:1,Invisible:1b,Invulnerable:1,Tags:["damnum"],CustomNameVisible:1b,Duration:999999,CustomName:'{"text":"-8"}'}
-execute as @s[scores={hurpower=3},tag=!in] at @s run execute as @a[tag=!isthrow,tag=gethit,tag=hasres] at @s run summon minecraft:armor_stand ~ ~ ~ {Marker:1,Invisible:1b,Invulnerable:1,Tags:["damnum"],CustomNameVisible:1b,Duration:999999,CustomName:'{"text":"-4"}'}
-execute as @s[scores={hurpower=4},tag=!in] at @s run execute as @a[tag=!isthrow,tag=gethit,tag=hasres] at @s run summon minecraft:armor_stand ~ ~ ~ {Marker:1,Invisible:1b,Invulnerable:1,Tags:["damnum"],CustomNameVisible:1b,Duration:999999,CustomName:'{"text":"-5"}'}
-execute as @s[scores={hurpower=5},tag=!in] at @s run execute as @a[tag=!isthrow,tag=gethit,tag=hasres] at @s run summon minecraft:armor_stand ~ ~ ~ {Marker:1,Invisible:1b,Invulnerable:1,Tags:["damnum"],CustomNameVisible:1b,Duration:999999,CustomName:'{"text":"-6"}'}
-execute as @s[scores={hurpower=6},tag=!in] at @s run execute as @a[tag=!isthrow,tag=gethit,tag=hasres] at @s run summon minecraft:armor_stand ~ ~ ~ {Marker:1,Invisible:1b,Invulnerable:1,Tags:["damnum"],CustomNameVisible:1b,Duration:999999,CustomName:'{"text":"-7"}'}
+execute as @s[scores={hurpower=1},tag=!in] at @s run execute as @a[tag=!isthrow,tag=gethit] at @s run summon minecraft:armor_stand ~ ~ ~ {Marker:1,Silent:1,Silent:1,Silent:1,Silent:1,Invisible:1b,Invulnerable:1,Tags:["damnum"],CustomNameVisible:1b,Duration:999999,CustomName:'{"text":"-2"}'}
+execute as @s[scores={hurpower=2},tag=!in] at @s run execute as @a[tag=!isthrow,tag=gethit] at @s run summon minecraft:armor_stand ~ ~ ~ {Marker:1,Silent:1,Silent:1,Silent:1,Silent:1,Invisible:1b,Invulnerable:1,Tags:["damnum"],CustomNameVisible:1b,Duration:999999,CustomName:'{"text":"-3"}'}
+execute as @s[scores={hurpower=3},tag=!in] at @s run execute as @a[tag=!isthrow,tag=gethit] at @s run summon minecraft:armor_stand ~ ~ ~ {Marker:1,Silent:1,Silent:1,Silent:1,Silent:1,Invisible:1b,Invulnerable:1,Tags:["damnum"],CustomNameVisible:1b,Duration:999999,CustomName:'{"text":"-4"}'}
+execute as @s[scores={hurpower=4},tag=!in] at @s run execute as @a[tag=!isthrow,tag=gethit,tag=!hasres] at @s run summon minecraft:armor_stand ~ ~ ~ {Marker:1,Silent:1,Silent:1,Silent:1,Silent:1,Invisible:1b,Invulnerable:1,Tags:["damnum"],CustomNameVisible:1b,Duration:999999,CustomName:'{"text":"-5"}'}
+execute as @s[scores={hurpower=5},tag=!in] at @s run execute as @a[tag=!isthrow,tag=gethit,tag=!hasres] at @s run summon minecraft:armor_stand ~ ~ ~ {Marker:1,Silent:1,Silent:1,Silent:1,Silent:1,Invisible:1b,Invulnerable:1,Tags:["damnum"],CustomNameVisible:1b,Duration:999999,CustomName:'{"text":"-6"}'}
+execute as @s[scores={hurpower=6},tag=!in] at @s run execute as @a[tag=!isthrow,tag=gethit,tag=!hasres] at @s run summon minecraft:armor_stand ~ ~ ~ {Marker:1,Silent:1,Silent:1,Silent:1,Silent:1,Invisible:1b,Invulnerable:1,Tags:["damnum"],CustomNameVisible:1b,Duration:999999,CustomName:'{"text":"-7"}'}
+execute as @s[scores={hurpower=4},tag=!in] at @s run execute as @a[tag=!isthrow,tag=gethit,tag=hasres] at @s run summon minecraft:armor_stand ~ ~ ~ {Marker:1,Silent:1,Silent:1,Silent:1,Silent:1,Invisible:1b,Invulnerable:1,Tags:["damnum"],CustomNameVisible:1b,Duration:999999,CustomName:'{"text":"-4"}'}
+execute as @s[scores={hurpower=5},tag=!in] at @s run execute as @a[tag=!isthrow,tag=gethit,tag=hasres] at @s run summon minecraft:armor_stand ~ ~ ~ {Marker:1,Silent:1,Silent:1,Silent:1,Silent:1,Invisible:1b,Invulnerable:1,Tags:["damnum"],CustomNameVisible:1b,Duration:999999,CustomName:'{"text":"-5"}'}
+execute as @s[scores={hurpower=6},tag=!in] at @s run execute as @a[tag=!isthrow,tag=gethit,tag=hasres] at @s run summon minecraft:armor_stand ~ ~ ~ {Marker:1,Silent:1,Silent:1,Silent:1,Silent:1,Invisible:1b,Invulnerable:1,Tags:["damnum"],CustomNameVisible:1b,Duration:999999,CustomName:'{"text":"-6"}'}
 
-
-execute as @s[scores={hurpower=1},tag=!in] at @s run scoreboard players remove @a[tag=!isthrow,tag=gethit] healthshow 3
-execute as @s[scores={hurpower=2},tag=!in] at @s run scoreboard players remove @a[tag=!isthrow,tag=gethit] healthshow 4
-execute as @s[scores={hurpower=3},tag=!in] at @s run scoreboard players remove @a[tag=!isthrow,tag=gethit,tag=!hasres] healthshow 5
-execute as @s[scores={hurpower=4},tag=!in] at @s run scoreboard players remove @a[tag=!isthrow,tag=gethit,tag=!hasres] healthshow 6
-execute as @s[scores={hurpower=5},tag=!in] at @s run scoreboard players remove @a[tag=!isthrow,tag=gethit,tag=!hasres] healthshow 7
-execute as @s[scores={hurpower=6},tag=!in] at @s run scoreboard players remove @a[tag=!isthrow,tag=gethit,tag=!hasres] healthshow 8
-execute as @s[scores={hurpower=3},tag=!in] at @s run scoreboard players remove @a[tag=!isthrow,tag=gethit,tag=hasres] healthshow 4
-execute as @s[scores={hurpower=4},tag=!in] at @s run scoreboard players remove @a[tag=!isthrow,tag=gethit,tag=hasres] healthshow 5
-execute as @s[scores={hurpower=5},tag=!in] at @s run scoreboard players remove @a[tag=!isthrow,tag=gethit,tag=hasres] healthshow 6
-execute as @s[scores={hurpower=6},tag=!in] at @s run scoreboard players remove @a[tag=!isthrow,tag=gethit,tag=hasres] healthshow 7
+execute as @s[scores={hurpower=1},tag=!in] at @s run scoreboard players remove @a[tag=!isthrow,tag=gethit] healthshow 2
+execute as @s[scores={hurpower=2},tag=!in] at @s run scoreboard players remove @a[tag=!isthrow,tag=gethit] healthshow 3
+execute as @s[scores={hurpower=3},tag=!in] at @s run scoreboard players remove @a[tag=!isthrow,tag=gethit] healthshow 4
+execute as @s[scores={hurpower=4},tag=!in] at @s run scoreboard players remove @a[tag=!isthrow,tag=gethit,tag=!hasres] healthshow 5
+execute as @s[scores={hurpower=5},tag=!in] at @s run scoreboard players remove @a[tag=!isthrow,tag=gethit,tag=!hasres] healthshow 6
+execute as @s[scores={hurpower=6},tag=!in] at @s run scoreboard players remove @a[tag=!isthrow,tag=gethit,tag=!hasres] healthshow 7
+execute as @s[scores={hurpower=4},tag=!in] at @s run scoreboard players remove @a[tag=!isthrow,tag=gethit,tag=hasres] healthshow 4
+execute as @s[scores={hurpower=5},tag=!in] at @s run scoreboard players remove @a[tag=!isthrow,tag=gethit,tag=hasres] healthshow 5
+execute as @s[scores={hurpower=6},tag=!in] at @s run scoreboard players remove @a[tag=!isthrow,tag=gethit,tag=hasres] healthshow 6
 
 execute as @s[tag=!in] at @s run effect clear @e[tag=gethit] minecraft:levitation
 execute as @s[tag=!in] at @s run effect give @e[tag=gethit] minecraft:levitation 1 0 true
@@ -119,6 +189,6 @@ kill @s[tag=!in]
 
 scoreboard players add @s stepcount 1
 
-kill @s[scores={stepcount=140..}]
+kill @s[scores={stepcount=900..}]
 
 tag @a remove isthrow

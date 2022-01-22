@@ -76,3 +76,4 @@ tag @s remove me
 scoreboard players set @s portal -2
 scoreboard players set @s dummylook -2
 scoreboard players set @s shotCharge -2
+scoreboard players set @s boltdelay 2

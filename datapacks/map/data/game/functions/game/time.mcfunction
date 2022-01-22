@@ -25,6 +25,8 @@ execute as @s[scores={Time=5380}] at @s run execute as @e[scores={map=3}] run fu
 execute as @s[scores={Time=5380}] at @s run execute as @e[scores={map=4}] run function game:game/maps/map4/start
 execute as @s[scores={Time=5380}] at @s run execute as @e[scores={map=5}] run function game:game/maps/map5/start
 execute as @s[scores={Time=5374}] at @s run execute as @e[scores={map=5}] run function game:game/maps/map5/start
+execute as @s[scores={Time=5380}] at @s run execute as @e[scores={map=6}] run function game:game/maps/map6/start
+execute as @s[scores={Time=5374}] at @s run execute as @e[scores={map=6}] run function game:game/maps/map6/start
 
 execute as @s[scores={Time=1..}] at @s run scoreboard players add @a presstut 1
 execute as @s[scores={Time=1..}] at @s run scoreboard players add @a[scores={points=1..,Score=0}] scoretut 1
@@ -98,3 +100,4 @@ execute as @s[scores={Time=10}] at @s run execute as @a[tag=ingame] at @s run pl
 
 execute as @s[scores={Time=1..}] at @s run scoreboard players add @e[scores={map=2}] lavatick 1
 execute as @s[scores={Time=1..}] at @s run scoreboard players add @e[scores={map=4}] lavatick 1
+execute as @s[scores={Time=1..}] at @s run scoreboard players add @e[scores={map=6}] lavatick 1

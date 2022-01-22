@@ -1,19 +1,19 @@
 #red port
-execute positioned 79.01 25 -30 run effect give @a[tag=spirlob,gamemode=adventure,distance=..100,dx=-2.2,dz=-10,dy=25] blindness 1 0 true
+execute positioned 70.51 25 -43.5 run effect give @a[tag=spirlob,gamemode=adventure,distance=..100,dz=2.2,dx=10,dy=25] blindness 1 0 true
 execute positioned -81.9 58.0 40.0 run effect give @a[tag=lobby,gamemode=adventure,distance=..100,dx=1,dz=6,dy=5] blindness 1 0 true
 
-execute positioned 79.01 25 -30 run tag @a[tag=spirlob,gamemode=adventure,distance=..100,dx=-2.2,dz=-10,dy=25] add tpno
-execute positioned 79.01 25 -30 run tp @a[tag=spirlob,gamemode=adventure,distance=..100,dx=-2.2,dz=-10,dy=25] -84 58 42 90 0
+execute positioned 70.51 25 -43.5 run tag @a[tag=spirlob,gamemode=adventure,distance=..100,dz=2.2,dx=10,dy=25] add tpno
+execute positioned 70.51 25 -43.5 run tp @a[tag=spirlob,gamemode=adventure,distance=..100,dz=2.2,dx=10,dy=25] -84 58 42 90 0
 
 execute positioned -81.9 58.0 40.0 run tag @a[tag=lobby,gamemode=adventure,distance=..100,dx=1,dz=6,dy=5] add spirlob
 execute positioned -81.9 58.0 40.0 run execute as @a[tag=lobby,gamemode=adventure,distance=..100,dx=1,dz=6,dy=5] at @s run tp @s 69 38.3 -30 180 0
 
 #blue port
-execute positioned 59.01 25 -30 run effect give @a[tag=spirlob,gamemode=adventure,distance=..100,dx=2.2,dz=-10,dy=25] blindness 1 0 true
+execute positioned 68.01 25 -43.5 run effect give @a[tag=spirlob,gamemode=adventure,distance=..100,dz=2.2,dx=-10,dy=25] blindness 1 0 true
 execute positioned -129.0 54.0 67.0 run effect give @a[tag=lobby,gamemode=adventure,distance=..100,dx=-4,dz=6,dy=5] blindness 1 0 true
 
-execute positioned 59.01 25 -30 run tag @a[tag=spirlob,gamemode=adventure,distance=..100,dx=2.2,dz=-10,dy=25] add tpno
-execute positioned 59.01 25 -30 run tp @a[tag=spirlob,gamemode=adventure,distance=..100,dx=2.2,dz=-10,dy=25] -127 53.00 69 -90 0
+execute positioned 68.01 25 -43.5 run tag @a[tag=spirlob,gamemode=adventure,distance=..100,dz=2.2,dx=-10,dy=25] add tpno
+execute positioned 68.01 25 -43.5 run tp @a[tag=spirlob,gamemode=adventure,distance=..100,dz=2.2,dx=-10,dy=25] -127 53.00 69 -90 0
 
 execute positioned -129.0 54.0 67.0 run tag @a[tag=lobby,gamemode=adventure,distance=..100,dx=-4,dz=6,dy=5] add spirlob
 execute positioned -129.0 54.0 67.0 run execute as @a[tag=lobby,gamemode=adventure,distance=..100,dx=-4,dz=6,dy=5] at @s run tp @s 69 38.3 -30 180 0

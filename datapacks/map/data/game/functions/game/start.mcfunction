@@ -15,6 +15,7 @@ execute as @e[scores={map=2}] run function game:game/maps/map2/spawn
 execute as @e[scores={map=3}] run function game:game/maps/map3/spawn
 execute as @e[scores={map=4}] run function game:game/maps/map4/spawn
 execute as @e[scores={map=5}] run function game:game/maps/map5/spawn
+execute as @e[scores={map=6}] run function game:game/maps/map6/spawn
 
 time set 0
 

@@ -1,4 +1,5 @@
 effect give @a minecraft:fire_resistance 10 10 true
+execute as @a run attribute @s minecraft:generic.knockback_resistance base set 0.0
 
 #leave
 scoreboard players add @a Leave 0
@@ -37,7 +38,7 @@ scoreboard players add @e[type=arrow] arrowlife 1
 time add 12
 
 kill @e[type=minecraft:experience_orb]
-xp add @a -10 levels
+xp set @a 0 levels
 effect give @a[scores={hunger=..19}] minecraft:saturation 1 10 true
 
 scoreboard players add @a playerID 0
@@ -48,6 +49,7 @@ tag @a remove hittest
 tag @a[gamemode=adventure] add hittest
 tag @e[type=villager] add hittest
 tag @e[type=creeper] add hittest
+tag @e[type=zombie] add hittest
 tag @e[tag=totem] add hittest
 tag @e[tag=portalset] add hittest
 tag @e[type=cave_spider] add hittest2
@@ -64,6 +66,7 @@ tag @a[x=-150,y=48,z=20,dx=70,dy=50,dz=70,distance=..200] add ingame
 tag @a[x=-122,y=53,z=3,distance=..30] add ingame
 execute as @a[tag=ingame] at @s run function game:players/ingame
 execute as @a[tag=lobby] at @s run function game:players/lobby
+execute as @a[tag=ingame] at @s run function game:players/critcheck
 clear @a[gamemode=!creative,tag=lobby,tag=!ingame,tag=!clear]
 tag @a[gamemode=!creative,tag=lobby,tag=!ingame] add clear
 tag @a[gamemode=!creative,tag=lobby,tag=!ingame] add cleart
@@ -113,8 +116,8 @@ effect clear @e[tag=resremove] minecraft:resistance
 tag @e[tag=resremove] remove resremove
 
 #spirit world
-tag @a remove spiritworld
-execute as @a[x=69,y=38,z=-30,distance=..20] at @s run function game:game/spiritrealm
+tag @a[x=69,y=38,z=-30,distance=30..] remove spiritworld
+execute as @a[x=69,y=38,z=-30,distance=..30] at @s run function game:game/spiritrealm
 
 #manage items
 execute as @e[type=item] at @s run function game:game/item
@@ -155,7 +158,7 @@ execute as @e[tag=charmask] at @s if entity @p[distance=..5] run tp @s ~ ~ ~ fac
 execute as @e[tag=charmask] at @s unless entity @p[distance=..5] run tp @s ~ ~ ~ facing 1014 12 1007
 
 scoreboard players add @e[scores={map=0..}] randommap 1
-scoreboard players set @e[scores={randommap=6..}] randommap 1
+scoreboard players set @e[scores={randommap=7..}] randommap 1
 
 function game:game/menu/portals
 
@@ -206,3 +209,17 @@ tag @a remove t1win1
 
 #title area
 clear @a[x=-145,y=23,z=-45,distance=..20,gamemode=adventure]
+
+#tutorial
+execute as @a[scores={tutorialtime=1..}] at @s run function game:players/tutorial
+
+#lore
+effect give @a[tag=lore1] blindness 10 0 true
+tellraw @a[tag=lore1] {"text":"\n\nWhile souls cross over, they pass just by the world of dead. Mischievous spirits play with these lost souls, grabbing them up and returning them to the spirit realm.\n\nIn legend, the life lived by a soul can be understood by which spirit is chosen to return it.\n\nAs they vigorously fight, sometimes souls touch the spirits many times. Eventually, however, every soul is returned, when the world finally decides what spirit should be the guild."}
+tag @a remove lore1
+
+#reset scores
+scoreboard players set @a damageTaken 0
+scoreboard players set @a 10 10
+
+effect clear @a minecraft:bad_omen

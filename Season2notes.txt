@@ -1,3 +1,129 @@
 * Season 2 Update *
 
-TBA
+Goals: Improve game accessibility and quality of life.
+
+[Gernal]
+- Punches charge 42% slower (.25s -> .66s)
+- Crit hits give 2s of blindness and slowness 2
+- Crit hits no longer deal extra damage
+- Landing a crit tells you in chat (only you)
+- Walk particles are lighter and smaller
+- Walking takes 0.05s longer to start making particles
+- Fewer particles for the first .3s of walking particles
+- XP bar shows inviswalk amount (time you can walk until making particles)
+- Sprinting and sprint jumping cause inviswalk cooldown 
+- Players get 1 more second of invulnerability when coming out of a portal (1s -> 2s)
+- Falling over 3 blocks creates particles
+	- To even things out for players of all settings
+- Projectiles shoot lower when shifting
+- All items and spells have lore text that gives details on the move
+- Generally improved colors for item text
+- Clicking passive moves explain the move
+- Stairs can now be shot through (treated as slabs)
+- Order of maps changed (loosely ordered from easiest to play to hardest)
+- Improved detection of the arena area
+- Entering Spirit Realm the first time plays a cutscene
+- Added tutorial (clicking instructions now triggers tutorial)
+- Improved the look of Spirit Realm
+- Improved title area
+- Added lore when you touch masks in character selection
+
+[Characters]
+
+Sparket
+- Added "Healing Fire",  a passive heal
+	- 9.5s after damage, every 3.5s past that
+- Fire Fist makes sound and particle on activation
+- Fire Fist takes 0.4s to charge up
+	- Doesn't impact the duration
+- Fire Fist charges 17% slower (~0.42s -> 0.5s)
+- Fire Fist 7% less speed (+33% -> 25%)
+- Zero-Gravity makes particles on landing
+
+Emma
+- Trident damaged 1 when unequipped 
+- Trident makes sound on breaking, summoning, and unequipping
+- Bolt cost 1 less (6 -> 5)
+- Bolt does 3 less damage (12 -> 9)
+- Bolt moves 20% slower (60b/s -> 48b/s)
+- Bolt recharges .25s slower (1.35s - 1.6s)
+
+Halt
+- Draining Claw recharges 0.05s faster (0.5s -> 0.45s)
+- Draining Claw does 1 less damage (13 -> 12) (doesn't impact healing)
+- Hover gives visibility for duration
+- Ghost Bow does 1 less damage through walls (6 -> 5)
+
+Vohelm
+- First Sacred knife upgrade costs 1 less (3 -> 2)
+- Sacred Knife upgrades give 20% less speed (+20% MAX -> +16% MAX)
+- Sacred Knife charges 10% slower (~0.83s -> ~.91s)
+- Sacred Knife has 1 less base damage (4 -> 3) (8 -> 7 MAX)
+- Shield no longer degrades knife extra
+- Totem gives 1 less level Jump Boost (3 -> 2)
+- Totem strength ends immediately on death (previously 1s)
+- Sacred Berries cost 1 less (6 -> 5)
+- Sacred Berries heal 1 less (6 -> 5)
+
+Pluto
+- Throwing Hurricane causes it's melee charge to reset
+- Hurricane has bigger block collision (0.0 x 0.0 x 0.0 -> 0.4 x 0.4 x 0.4)
+- Hurricane has smaller hitbox (1.7 x 1.7 x 0.9 -> 1.4 x 1.4 x 0.9)
+- Hurricane does 1 less damage (8 -> 7 MAX) (3 -> 2 MIN)
+- Hurricane now shoots straight, with no offset
+	- Helps prevent feelings of inconsistancy
+	- Fixes issues with hitting players next to you
+- Shadow Spikes shoot 1 less spike (11 -> 10)
+- Soul Send makes you visible for 1.5s
+
+Barbose
+- Seeking Axe charges 8% slower (1.42s -> 1.54s)
+- Seeking Axe does 1 less damage (13 -> 12)
+- Seeking Axe particle only visible for self
+- Bombs explode .2s faster (1.7s -> 1.5s)
+- Bombs deal 40% less damage to self
+- Bombs give .3s less visibility (.75s -> .45s)
+- Decoy now fakes player holding axe
+- Decoy only explodes if a player is close (8 blocks)
+	- Only reveals you on explosion
+
+[Maps]
+
+Forest Temple
+- Added to the game
+
+Mountain Temple
+- Relocated map to reduce large lag spikes
+
+[Textures]
+- "Recharging" has a different texture to "Reloading"
+	- changed all "In-Use" to "Recharging" to make things consistent
+- Reduced size of fire texture
+- Made passive effects textures transparent
+- Improved Seeking Axe texture
+- Retextured XP bar
+
+[Bug Fixes]
+- Some moves could bypass portal invulnerability
+- Fixed being able to delete bows and some melee items
+- Despawing Frost Pillars could break part of active frost pillars
+- Fixed Bolt hitbox bugginess on block hit
+	- Extending past hit and hitting nearby players
+- Fixed Bolt being able to hit user in some cases
+- Fixed lore text on melee items
+- Ghost Bow said 3 arrows despite being 2
+- Fixed hole in the lobby
+- Fixed visible slime blocks in the lobby
+- Sacred Knife would degrade 1 level 5s after re-equipping
+- Burnout could phase through some blocks
+- "Smoking" particle text did not work for many conditions
+- "Bubbles" visibility text wouldn't just happen during particles
+- Golden boots visible in inventory
+- Spectators could be listed as a "winner"
+- Soul Send could teleport players through blocks at short range
+- Hurricane hitbox had an offset of 0.1 block
+- Fixed graphical error with Vohelm mask
+- Visibility status was not properly reset when in the Spirit Realm
+
+[Backend]
+- Fixed issues for Spigot/Paper servers

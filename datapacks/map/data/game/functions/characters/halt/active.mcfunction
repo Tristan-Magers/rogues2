@@ -24,15 +24,15 @@ scoreboard players add @s[scores={haltdamage=80..}] healthshow 1
 scoreboard players add @s[scores={haltdamage=120..}] healthshow 1
 scoreboard players add @s[scores={haltdamage=160..}] healthshow 1
 
-execute as @s[scores={haltdamage=40..79}] at @s anchored eyes positioned ^ ^ ^1 run summon minecraft:armor_stand ~ ~-1 ~ {Marker:1,Invulnerable:1,Tags:["damnum","plus"],CustomNameVisible:1b,Duration:999999,CustomName:'{"text":"+1"}'}
-execute as @s[scores={haltdamage=80..119}] at @s anchored eyes positioned ^ ^ ^1 run summon minecraft:armor_stand ~ ~-1 ~ {Marker:1,Invulnerable:1,Tags:["damnum","plus"],CustomNameVisible:1b,Duration:999999,CustomName:'{"text":"+2"}'}
-execute as @s[scores={haltdamage=120..159}] at @s anchored eyes positioned ^ ^ ^1 run summon minecraft:armor_stand ~ ~-1 ~ {Marker:1,Invulnerable:1,Tags:["damnum","plus"],CustomNameVisible:1b,Duration:999999,CustomName:'{"text":"+3"}'}
-execute as @s[scores={haltdamage=160..}] at @s anchored eyes positioned ^ ^ ^1 run summon minecraft:armor_stand ~ ~-1 ~ {Marker:1,Invulnerable:1,Tags:["damnum","plus"],CustomNameVisible:1b,Duration:999999,CustomName:'{"text":"+4"}'}
+execute as @s[scores={haltdamage=40..79}] at @s anchored eyes positioned ^ ^ ^1 run summon minecraft:armor_stand ~ ~-1 ~ {Marker:1,Silent:1,Silent:1,Invulnerable:1,Tags:["damnum","plus"],CustomNameVisible:1b,Duration:999999,CustomName:'{"text":"+1"}'}
+execute as @s[scores={haltdamage=80..119}] at @s anchored eyes positioned ^ ^ ^1 run summon minecraft:armor_stand ~ ~-1 ~ {Marker:1,Silent:1,Silent:1,Invulnerable:1,Tags:["damnum","plus"],CustomNameVisible:1b,Duration:999999,CustomName:'{"text":"+2"}'}
+execute as @s[scores={haltdamage=120..159}] at @s anchored eyes positioned ^ ^ ^1 run summon minecraft:armor_stand ~ ~-1 ~ {Marker:1,Silent:1,Silent:1,Invulnerable:1,Tags:["damnum","plus"],CustomNameVisible:1b,Duration:999999,CustomName:'{"text":"+3"}'}
+execute as @s[scores={haltdamage=160..}] at @s anchored eyes positioned ^ ^ ^1 run summon minecraft:armor_stand ~ ~-1 ~ {Marker:1,Silent:1,Silent:1,Invulnerable:1,Tags:["damnum","plus"],CustomNameVisible:1b,Duration:999999,CustomName:'{"text":"+4"}'}
 
 #draining claw delay
 execute as @s[scores={dcdelay=0}] at @s run function game:spells/manaup
 scoreboard players remove @s[scores={dcdelay=0..}] dcdelay 1
-scoreboard players set @s[scores={haltdamage=24..}] dcdelay 10
+scoreboard players set @s[scores={haltdamage=24..}] dcdelay 9
 
 scoreboard players set @s haltdamage 0
 
@@ -62,3 +62,11 @@ execute as @s[scores={bowshot=1..}] run execute as @e[tag=harrow,scores={arrowli
 execute as @s[scores={bowshot=1..}] run execute as @e[tag=harrow,scores={arrowlife=..1,arrowmot=..31664},limit=1] at @s run playsound minecraft:item.axe.strip master @a ~ ~ ~ 1 0
 execute as @s[scores={bowshot=1..}] run execute as @e[tag=harrow,scores={arrowlife=..1,arrowmot=..31664},limit=1] at @s run playsound minecraft:item.shield.break master @a ~ ~ ~ 0.7 1.2
 execute as @s[scores={bowshot=1..}] run execute as @e[tag=harrow,scores={arrowlife=..1,arrowmot=..31664},limit=1] at @s run kill @s
+
+#correct claws
+clear @s[scores={wtimer=10..},nbt=!{Inventory:[{id:"minecraft:stone_sword",Slot:0b}]}] stone_sword
+scoreboard players set @s[scores={wtimer=10..},nbt=!{Inventory:[{id:"minecraft:stone_sword",Slot:0b}]}] wtimer 2
+
+#correct bow
+clear @s[scores={btimer=0..},nbt=!{Inventory:[{id:"minecraft:bow",Slot:1b}]}] bow
+scoreboard players set @s[scores={btimer=0..},nbt=!{Inventory:[{id:"minecraft:bow",Slot:1b}]}] btimer -1
