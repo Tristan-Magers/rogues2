@@ -1,16 +1,16 @@
 #red port
-execute positioned 70.51 25 -43.5 run effect give @a[gamemode=adventure,distance=..100,dz=2.2,dx=10,dy=25] blindness 1 0 true
-execute positioned 997.0 19 -1004.0 run effect give @a[gamemode=adventure,distance=..100,dx=6,dz=1,dy=6] blindness 1 0 true
+execute positioned 70.51 25 -43.5 run effect give @a[gamemode=adventure,distance=..100,dz=2.2,dx=10,dy=25,scores={notele=..0}] blindness 1 0 true
+execute positioned 997.0 19 -1004.0 run effect give @a[gamemode=adventure,distance=..100,dx=6,dz=1,dy=6,scores={notele=..0}] blindness 1 0 true
 
-execute positioned 70.51 25 -43.5 run tp @a[gamemode=adventure,distance=..100,dz=2.2,dx=10,dy=25] 1000 20 -1001 0 0
-execute positioned 997.0 19 -1004.0 run execute as @a[gamemode=adventure,distance=..100,dx=6,dz=1,dy=6] at @s run tp @s 69 38.3 -30 180 0
+execute positioned 70.51 25 -43.5 run tp @a[gamemode=adventure,distance=..100,dz=2.2,dx=10,dy=25,scores={notele=..0}] 1000 20 -1001 0 0
+execute positioned 997.0 19 -1004.0 run execute as @a[gamemode=adventure,distance=..100,dx=6,dz=1,dy=6,scores={notele=..0}] at @s run tp @s 69 38.3 -30 180 0
 
 #blue port
-execute positioned 68.01 25 -43.5 run effect give @a[gamemode=adventure,distance=..100,dz=2.2,dx=-10,dy=25] blindness 1 0 true
-execute positioned 1011.0 21 -974.0 run effect give @a[gamemode=adventure,distance=..100,dz=1,dx=6,dy=7] blindness 1 0 true
+execute positioned 68.01 25 -43.5 run effect give @a[gamemode=adventure,distance=..100,dz=2.2,dx=-10,dy=25,scores={notele=..0}] blindness 1 0 true
+execute positioned 1011.0 21 -974.0 run effect give @a[gamemode=adventure,distance=..100,dz=1,dx=6,dy=7,scores={notele=..0}] blindness 1 0 true
 
-execute positioned 68.01 25 -43.5 run tp @a[gamemode=adventure,distance=..100,dz=2.2,dx=-10,dy=25] 1013 24 -976 180 0
-execute positioned 1011.0 21 -974.0 run execute as @a[gamemode=adventure,distance=..100,dz=1,dx=6,dy=7] at @s run tp @s 69 38.3 -30 180 0
+execute positioned 68.01 25 -43.5 run tp @a[gamemode=adventure,distance=..100,dz=2.2,dx=-10,dy=25,scores={notele=..0}] 1013 24 -976 180 0
+execute positioned 1011.0 21 -974.0 run execute as @a[gamemode=adventure,distance=..100,dz=1,dx=6,dy=7,scores={notele=..0}] at @s run tp @s 69 38.3 -30 180 0
 
 
 #particles

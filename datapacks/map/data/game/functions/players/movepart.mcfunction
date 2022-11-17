@@ -46,7 +46,9 @@ scoreboard players set @s[scores={invisoff=1..,jump=1..}] partdelay 35
 scoreboard players set @s[scores={invisoff=1..,jump=1..}] invisoff 14
 scoreboard players set @s run 0
 effect clear @s[scores={invisoff=1..},gamemode=adventure] minecraft:invisibility
+execute if score @s invisoff_t > @s invisoff run scoreboard players operation @s invisoff = @s invisoff_t
 scoreboard players remove @s[scores={invisoff=-5..}] invisoff 1
+scoreboard players operation @s invisoff_t = @s invisoff
 scoreboard players set @s[scores={jump=1..,boostT=1..}] boostpart 15
 execute as @s[scores={jump=1..,shift=0}] at @s run particle minecraft:falling_dust minecraft:white_stained_glass ~ ~.05 ~ .3 .05 .3 .5 20 force
 execute as @s[scores={jump=1..,shift=1..}] at @s run particle minecraft:falling_dust minecraft:white_stained_glass ~ ~-.1 ~ .1 0 .1 .1 4 force

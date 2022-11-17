@@ -1,5 +1,5 @@
 scoreboard players add @s wave 1
-execute as @s[scores={wave=1}] at @s run function game:getdir
+execute as @s[scores={wave=1}] at @s run function game:projectile/getdir2
 
 scoreboard players operation @a playerID -= @s playerID
 

@@ -23,6 +23,9 @@ scoreboard players set @s diaaxehit 0
 execute as @s[scores={dummylook=4..}] at @s run function game:characters/barbose/active/dummylook
 scoreboard players remove @s dummylook 1
 
+scoreboard players remove @s[scores={project_cool=0..}] project_cool 1
+execute as @s[scores={project_cool=0}] at @s run function game:spells/manaup
+
 execute as @s[scores={dummylook=-30}] at @s run function game:spells/manaup
 
 execute as @s[scores={portal=..-1}] at @s run scoreboard players operation @e[tag=portalset] playerID -= @s playerID
@@ -44,7 +47,10 @@ scoreboard players set @s[scores={portal=10}] portal 0
 
 tag @a remove searcher
 tag @s[nbt={SelectedItem:{id:"minecraft:diamond_axe"}}] add searcher
-execute if entity @s[nbt={SelectedItem:{id:"minecraft:diamond_axe"}}] run execute as @a[gamemode=adventure,limit=1,sort=nearest,distance=0.1..80,scores={respawn=..0}] at @s run function game:characters/barbose/active/tracker
+scoreboard players set @s[scores={wtimer=..2}] axe_pulse 0
+scoreboard players add @s[scores={wtimer=3..}] axe_pulse 1
+scoreboard players set @s[scores={axe_pulse=10..}] axe_pulse 1
+execute if entity @s[nbt={SelectedItem:{id:"minecraft:diamond_axe"}},scores={axe_pulse=3}] run execute as @a[gamemode=adventure,limit=1,sort=nearest,distance=0.1..80,scores={respawn=..0}] at @s run function game:characters/barbose/active/tracker
 execute if entity @s[nbt=!{Inventory:[{id:"minecraft:red_dye",Slot:3b}]},scores={portal=..0,Mana=6..}] run function game:spells/manaup
 
 #blackhole cooldown
@@ -54,5 +60,5 @@ execute as @s[scores={coolblack=0}] at @s run function game:spells/manaup
 scoreboard players remove @s[scores={portalcool=-1..}] portalcool 1
 
 #correct axe
-clear @s[scores={wtimer=3..},nbt=!{Inventory:[{id:"minecraft:diamond_axe",Slot:0b}]}] diamond_axe
-scoreboard players set @s[scores={wtimer=3..},nbt=!{Inventory:[{id:"minecraft:diamond_axe",Slot:0b}]}] wtimer 2
+clear @s[scores={wtimer=3..},nbt=!{SelectedItem:{id:"minecraft:diamond_axe"}}] diamond_axe
+scoreboard players set @s[scores={wtimer=3..},nbt=!{SelectedItem:{id:"minecraft:diamond_axe"}}] wtimer 2

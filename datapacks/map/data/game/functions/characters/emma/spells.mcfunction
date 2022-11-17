@@ -12,10 +12,11 @@ execute as @s[scores={shotCharge=..-3},nbt={SelectedItem:{id:"minecraft:light_bl
 execute as @s[scores={shotCharge=..-3},nbt={SelectedItem:{id:"minecraft:light_blue_dye"}}] at @s run playsound minecraft:block.dispenser.dispense master @a ~ ~ ~ 1 1.2
 execute as @s[scores={shotCharge=..-3},nbt={SelectedItem:{id:"minecraft:light_blue_dye"}}] at @s run playsound minecraft:entity.firework_rocket.launch master @a ~ ~ ~ 1 1.4
 scoreboard players remove @s[scores={shotCharge=..-3},nbt={SelectedItem:{id:"minecraft:light_blue_dye"}}] Mana 5
-scoreboard players set @s[scores={shotCharge=..-3},nbt={SelectedItem:{id:"minecraft:light_blue_dye"}}] glowing 22
+scoreboard players set @s[scores={shotCharge=..-3},nbt={SelectedItem:{id:"minecraft:light_blue_dye"}}] glowing 20
 scoreboard players set @s[scores={shotCharge=..-3},nbt={SelectedItem:{id:"minecraft:light_blue_dye"}}] boltdelay 999
 effect give @s[scores={shotCharge=..-3},nbt={SelectedItem:{id:"minecraft:light_blue_dye"}}] glowing 1
 scoreboard players set @s[scores={shotCharge=..-3},nbt={SelectedItem:{id:"minecraft:light_blue_dye"}}] shotCharge 7
+clear @s[scores={shotCharge=..-3},nbt={SelectedItem:{id:"minecraft:light_blue_dye"}}] light_blue_dye
 
 #frost pillar
 execute as @s[nbt={SelectedItem:{id:"minecraft:diamond"}}] at @s run summon minecraft:armor_stand ~ ~ ~ {NoGravity:1,Marker:1,Silent:1,Silent:1,Invulnerable:1,Tags:["frostwall"],ArmorItems:[{},{},{},{Count:1,id:ice}],Invisible:1}

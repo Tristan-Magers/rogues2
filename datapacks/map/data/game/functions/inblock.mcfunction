@@ -19,3 +19,5 @@ execute as @s[tag=hurpro] at @s positioned ~ ~ ~ run execute as @e[tag=hittest,t
 execute as @s[tag=hurpro] at @s positioned ~ ~ ~ run execute as @e[tag=hittest,distance=..5] at @s positioned ~-.7 ~-1.7 ~-.7 if entity @e[dx=0.4,dz=0.4,dy=1.9,tag=hurpro,distance=..5] run tag @s add gethit
 execute as @s[tag=hurpro] at @s positioned ~ ~ ~ run execute as @e[tag=hittest2,tag=!isthrow,distance=..1.5] at @s positioned ~ ~ ~ run tag @e[tag=hurpro,distance=..1.5] remove in
 execute as @s[tag=hurpro] at @s positioned ~ ~ ~ run execute as @e[tag=hittest2,distance=..1.5] at @s positioned ~ ~ ~ if entity @e[tag=hurpro,distance=..1.5] run tag @s add gethit
+
+execute as @s[tag=project] run execute if block ~ ~ ~ barrier run tag @s remove in

@@ -223,3 +223,6 @@ scoreboard players set @a damageTaken 0
 scoreboard players set @a 10 10
 
 effect clear @a minecraft:bad_omen
+
+#
+#execute as @a[tag=water_remove_target] at @s run function game:test2

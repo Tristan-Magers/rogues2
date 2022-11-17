@@ -6,7 +6,7 @@ scoreboard players remove @s[nbt={SelectedItem:{id:"minecraft:coal"}}] Mana 6
 execute as @s[nbt={SelectedItem:{id:"minecraft:coal"}}] at @s run playsound minecraft:item.flintandsteel.use master @a ~ ~ ~ 1 0
 execute as @s[nbt={SelectedItem:{id:"minecraft:coal"}}] at @s run playsound minecraft:item.flintandsteel.use master @a ~ ~ ~ 1 1
 execute as @s[nbt={SelectedItem:{id:"minecraft:coal"}}] at @s run playsound minecraft:entity.player.hurt_on_fire master @a ~ ~ ~ 1 0
-#execute as @s[nbt={SelectedItem:{id:"minecraft:coal"}}] at @s run item replace entity @s hotbar.0 with minecraft:wooden_sword{Enchantments:[{id:"minecraft:knockback",lvl:1},{id:"minecraft:fire_aspect",lvl:1}],AttributeModifiers:[{AttributeName:"generic.attack_speed",Name:"generic.attack_speed",Amount:-2.0,Operation:0,UUID:[I;170452042,-618446418,-1993398134,2121527740],Slot:"mainhand"},{AttributeName:"generic.attack_damage",Name:"generic.attack_damage",Amount:4,Operation:0,UUID:[I;-2116117351,-814987369,-1539314661,1434952524],Slot:"mainhand"},{AttributeName:"generic.movement_speed",Name:"generic.movement_speed",Amount:0.25,Operation:2,UUID:[I;-1794733450,173426169,-1787019437,449822666],Slot:"mainhand"}],display:{Name:"[{\"text\":\"Fire Fist\",\"color\":\"gold\",\"italic\":\"false\",\"bold\":\"true\"},{\"text\":\" [\",\"color\":\"white\",\"italic\":\"false\"},{\"text\":\"5 Damage\",\"color\":\"red\",\"italic\":\"false\"},{\"text\":\"]\",\"color\":\"white\",\"italic\":\"false\"}]"}} 1
+#execute as @s[nbt={SelectedItem:{id:"minecraft:coal"}}] at @s run item replace entity @s hotbar.0 with minecraft:wooden_sword{Enchantments:[{id:"minecraft:knockback",lvl:1},{id:"minecraft:fire_aspect",lvl:1}],AttributeModifiers:[{AttributeName:"generic.attack_speed",Name:"generic.attack_speed",Amount:-2.0,Operation:0,UUID:[I;170452042,-618446418,-1993398134,2121527740],Slot:"mainhand"},{AttributeName:"generic.attack_damage",Name:"generic.attack_damage",Amount:3,Operation:0,UUID:[I;-2116117351,-814987369,-1539314661,1434952524],Slot:"mainhand"},{AttributeName:"generic.movement_speed",Name:"generic.movement_speed",Amount:0.24,Operation:2,UUID:[I;-1794733450,173426169,-1787019437,449822666],Slot:"mainhand"}],display:{Name:"[{\"text\":\"Fire Fist\",\"color\":\"gold\",\"italic\":\"false\",\"bold\":\"true\"},{\"text\":\" [\",\"color\":\"white\",\"italic\":\"false\"},{\"text\":\"5 Damage\",\"color\":\"red\",\"italic\":\"false\"},{\"text\":\"]\",\"color\":\"white\",\"italic\":\"false\"}]"}} 1
 execute as @s[nbt={SelectedItem:{id:"minecraft:coal"}}] at @s run item replace entity @s hotbar.0 with minecraft:golden_sword{AttributeModifiers:[{AttributeName:"generic.attack_speed",Name:"generic.attack_speed",Amount:2,Operation:0,UUID:[I;170452042,-618446418,-1993398134,2121527740],Slot:"mainhand"},{AttributeName:"generic.attack_damage",Name:"generic.attack_damage",Amount:0,Operation:0,UUID:[I;-2116117351,-814987369,-1539314661,1434952524],Slot:"mainhand"},{AttributeName:"generic.movement_speed",Name:"generic.movement_speed",Amount:0.18,Operation:2,UUID:[I;-1794733450,173426169,-1787019437,449822666],Slot:"mainhand"}],display:{Name:"[{\"text\":\"\",\"color\":\"gold\",\"italic\":\"false\",\"bold\":\"true\"},{\"text\":\"[\",\"color\":\"white\",\"italic\":\"false\"},{\"text\":\"CHARGING\",\"color\":\"dark_red\",\"italic\":\"false\"},{\"text\":\"]\",\"color\":\"white\",\"italic\":\"false\"}]"}} 1
 
 #flame bow
@@ -25,11 +25,12 @@ scoreboard players set @s[scores={FBreload=..0},nbt={SelectedItem:{id:"minecraft
 
 #burnout
 scoreboard players set @s[nbt={SelectedItem:{id:"minecraft:blaze_powder"}}] burnout 20
-scoreboard players set @s[nbt={SelectedItem:{id:"minecraft:blaze_powder"}}] burnoutT 23
+scoreboard players set @s[nbt={SelectedItem:{id:"minecraft:blaze_powder"}}] burnoutT 50
 execute as @s[nbt={SelectedItem:{id:"minecraft:blaze_powder"}}] at @s run playsound minecraft:entity.ghast.shoot master @a ~ ~ ~ 1 1.6
 execute as @s[nbt={SelectedItem:{id:"minecraft:blaze_powder"}}] at @s run playsound minecraft:entity.firework_rocket.launch master @a ~ ~ ~ 1 1.3
 scoreboard players remove @s[nbt={SelectedItem:{id:"minecraft:blaze_powder"}}] Mana 7
 execute as @s[nbt={SelectedItem:{id:"minecraft:blaze_powder"}}] at @s run function game:getdir
+clear @s[nbt={SelectedItem:{id:"minecraft:blaze_powder"}}] blaze_powder
 
 #zero-gravity
 execute as @s[nbt={SelectedItem:{id:"minecraft:brick"}}] at @s run playsound minecraft:block.chest.locked master @a ~ ~ ~ .5 .6

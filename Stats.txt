@@ -1,7 +1,7 @@
 ### MELEE DPS ###
 
 Fire Fist - 10
-(+33% speed) (%60 with z-gravity)
+(+25% speed) (%60 with z-gravity)
 
 Trident - 7.7 (11.0 w/ storm energy)
 (+0% speed) (+20% with storm energy)
@@ -15,9 +15,12 @@ Hurricane - 5.6
 (+14% speed)
 
 Sacred Knife - 3.3 , 4.4 , 5.5 , 6.6 , 7.7 (+3.3 w/ totem)
-(+0% speed -> +16% speed)
+(+21% speed -> +5% speed)
+
+#Sacred Knife - 3.3 , 4.4 , 5.5 , 6.6 , 7.7 (+3.3 w/ totem)
+#(+0% speed -> +16% speed)
 
 Seeking Axe - 8.45
-(+15% speed) (points to closest player)
+(+14% speed) (points to closest player)
 
 Normal Fist - 1.3

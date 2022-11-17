@@ -7,11 +7,11 @@ scoreboard players set @s[scores={class=2},nbt={SelectedItem:{id:"minecraft:ston
 scoreboard players set @s[scores={class=2},nbt={SelectedItem:{id:"minecraft:iron_hoe"}}] damageCap 50
 scoreboard players set @s[scores={class=2},nbt={SelectedItem:{id:"minecraft:golden_hoe"}}] damageCap 60
 scoreboard players set @s[scores={class=2},nbt={SelectedItem:{id:"minecraft:diamond_hoe"}}] damageCap 70
-scoreboard players set @s[scores={class=2,totemres=39},nbt={SelectedItem:{id:"minecraft:wooden_hoe"}}] damageCap 60
-scoreboard players set @s[scores={class=2,totemres=39},nbt={SelectedItem:{id:"minecraft:stone_hoe"}}] damageCap 80
-scoreboard players set @s[scores={class=2,totemres=39},nbt={SelectedItem:{id:"minecraft:iron_hoe"}}] damageCap 90
+scoreboard players set @s[scores={class=2,totemres=39},nbt={SelectedItem:{id:"minecraft:wooden_hoe"}}] damageCap 40
+scoreboard players set @s[scores={class=2,totemres=39},nbt={SelectedItem:{id:"minecraft:stone_hoe"}}] damageCap 60
+scoreboard players set @s[scores={class=2,totemres=39},nbt={SelectedItem:{id:"minecraft:iron_hoe"}}] damageCap 80
 scoreboard players set @s[scores={class=2,totemres=39},nbt={SelectedItem:{id:"minecraft:golden_hoe"}}] damageCap 100
-scoreboard players set @s[scores={class=2,totemres=39},nbt={SelectedItem:{id:"minecraft:diamond_hoe"}}] damageCap 110
+scoreboard players set @s[scores={class=2,totemres=39},nbt={SelectedItem:{id:"minecraft:diamond_hoe"}}] damageCap 120
 scoreboard players set @s[scores={class=3},nbt={SelectedItem:{id:"minecraft:trident"}}] damageCap 70
 scoreboard players set @s[scores={class=3,manaboost=1..},nbt={SelectedItem:{id:"minecraft:trident"}}] damageCap 100
 scoreboard players set @s[scores={class=4},nbt={SelectedItem:{id:"minecraft:bow"}}] damageCap 70

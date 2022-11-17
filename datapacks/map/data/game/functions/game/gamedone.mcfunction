@@ -1,3 +1,5 @@
+kill @e[tag=project_save_spot]
+
 gamemode adventure @a[gamemode=!creative,tag=game]
 tag @a[tag=ingame,tag=!lobby,gamemode=adventure,tag=!spirlob,tag=!tpno] add tpback
 tp @a[tag=tpback] -128 38 54 -90 0

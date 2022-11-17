@@ -1,3 +1,6 @@
+#
+execute as @a run attribute @s minecraft:generic.movement_speed base set .1
+
 #remove res
 effect clear @s[tag=nores] resistance
 tag @s remove nores
@@ -86,17 +89,48 @@ effect give @s[scores={fire=2},gamemode=adventure] slowness 1 1 true
 scoreboard players set @s[scores={fire=10..}] fire 0
 execute at @s if block ~ ~ ~ lava run scoreboard players set @s[scores={fire=4..}] fire 0
 
+execute store result score @s fire_time run data get entity @s Fire 1
+execute if score @s fire_time > @s fire_time_t run scoreboard players set @s[scores={fire_time=10..140}] fire_time_effect 61
+execute if score @s fire_time > @s fire_time_t run scoreboard players set @s[scores={fire_time=140..}] fire_time_effect 81
+execute if score @s fire_time > @s fire_time_t run scoreboard players set @s invisoff 6
+scoreboard players operation @s fire_time_t = @s fire_time
+scoreboard players remove @s fire_time_effect 1
 tag @s remove nofire
-tag @s[nbt={Fire:-20s}] add nofire
+tag @s[scores={fire_time_effect=..0}] add nofire
 tag @s[scores={Invul=1..}] add nofire
 tag @s[scores={shield=1..}] add nofire
 scoreboard players add @s[tag=!nofire] fireT 1
 scoreboard players set @s[tag=nofire] fireT 0
+scoreboard players set @s[tag=nofire] fire_time_effect 0
+scoreboard players set @s[scores={Invul=1..}] fire_time_effect 0
+scoreboard players set @s[scores={shield=1..}] fire_time_effect 0
 execute as @s[scores={fireT=10},gamemode=adventure] run function game:players/firehit
-scoreboard players set @s[scores={fireT=30..}] fireT 0
+scoreboard players set @s[scores={fireT=20..}] fireT 0
 
 effect clear @s[scores={firehit=0,poison=..0,poison2=..0}] slowness
 scoreboard players remove @s[scores={firehit=0..}] firehit 1
+
+item replace entity @s[scores={fire_time_effect=80}] hotbar.6 with minecraft:carrot
+item replace entity @s[scores={fire_time_effect=60}] hotbar.6 with minecraft:carrot
+clear @s[scores={fire_time_effect=..0}] carrot
+
+execute as @s[scores={fireT=1},gamemode=adventure] run particle minecraft:large_smoke ~ ~0.2 ~ 0.22 0.1 0.22 0.02 1 force
+execute as @s[scores={fireT=5},gamemode=adventure] run particle minecraft:large_smoke ~ ~0.2 ~ 0.22 0.1 0.22 0.02 1 force
+execute as @s[scores={fireT=9},gamemode=adventure] run particle minecraft:large_smoke ~ ~0.2 ~ 0.22 0.1 0.22 0.02 1 force
+execute as @s[scores={fireT=13},gamemode=adventure] run particle minecraft:large_smoke ~ ~0.2 ~ 0.22 0.1 0.22 0.02 1 force
+execute as @s[scores={fireT=17},gamemode=adventure] run particle minecraft:large_smoke ~ ~0.2 ~ 0.22 0.1 0.22 0.02 1 force
+
+execute as @s[scores={fireT=2},gamemode=adventure] run particle minecraft:lava ~ ~0.5 ~ 0.15 0.3 0.15 0.02 1 force
+execute as @s[scores={fireT=6},gamemode=adventure] run particle minecraft:lava ~ ~0.5 ~ 0.15 0.3 0.15 0.02 1 force
+execute as @s[scores={fireT=10},gamemode=adventure] run particle minecraft:lava ~ ~0.5 ~ 0.15 0.3 0.15 0.02 1 force
+execute as @s[scores={fireT=14},gamemode=adventure] run particle minecraft:lava ~ ~0.5 ~ 0.15 0.3 0.15 0.02 1 force
+execute as @s[scores={fireT=18},gamemode=adventure] run particle minecraft:lava ~ ~0.5 ~ 0.15 0.3 0.15 0.02 1 force
+
+execute as @s[scores={fireT=3},gamemode=adventure] run particle minecraft:flame ~ ~0.8 ~ 0.2 0.4 0.2 0.02 2 force
+execute as @s[scores={fireT=7},gamemode=adventure] run particle minecraft:flame ~ ~0.8 ~ 0.2 0.4 0.2 0.02 2 force
+execute as @s[scores={fireT=11},gamemode=adventure] run particle minecraft:flame ~ ~0.8 ~ 0.2 0.4 0.2 0.02 2 force
+execute as @s[scores={fireT=15},gamemode=adventure] run particle minecraft:flame ~ ~0.8 ~ 0.2 0.4 0.2 0.02 2 force
+execute as @s[scores={fireT=19},gamemode=adventure] run particle minecraft:flame ~ ~0.8 ~ 0.2 0.4 0.2 0.02 2 force
 
 #poison
 execute as @s[scores={poison=40,Invul=..0,shield=..0},gamemode=adventure] run function game:players/firehit

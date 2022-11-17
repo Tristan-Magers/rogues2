@@ -7,7 +7,7 @@ scoreboard players set @s[scores={class=2,healthshow=19..}] healthshow 18
 scoreboard players set @s[scores={class=3,healthshow=19..}] healthshow 18
 scoreboard players set @s[scores={class=4,healthshow=17..}] healthshow 16
 scoreboard players set @s[scores={class=5,healthshow=17..}] healthshow 16
-scoreboard players set @s[scores={class=6,healthshow=23..}] healthshow 22
+scoreboard players set @s[scores={class=6,healthshow=22..}] healthshow 21
 
 ## Visibility text/effects based on items
 scoreboard players set @s[scores={healthshow=1..},nbt={SelectedItem:{id:"minecraft:wooden_sword"}}] item 2
@@ -91,6 +91,10 @@ execute as @s[scores={healthshow=..0}] at @s positioned ~ ~.5 ~ run tp @e[distan
 
 execute as @s[scores={healthshow=..0,class=2}] at @s run function game:characters/vohelm/die
 
+#
+execute as @s[scores={healthreal=2..,class=6,healthshow=1..}] at @s run function game:characters/barbose/active/check_save_spot
+execute as @s[scores={healthreal=2..,class=6,healthshow=..0}] at @s run function game:characters/barbose/active/remove_save_spot
+
 ## Visibility text
 execute as @s[scores={healthshow=1..}] at @s run execute as @e[tag=stealth] at @s run data merge entity @s {CustomName:"\"Invisible\""}
 execute as @s[scores={healthshow=1..}] at @s run team join invisible @e[tag=stealth]
@@ -144,6 +148,8 @@ item replace entity @s[tag=!spiritworld,scores={item=2,class=6}] armor.head with
 item replace entity @s[tag=!spiritworld,scores={item=2},nbt=!{Inventory:[{id:"minecraft:golden_boots",Slot:100b}]}] armor.feet with minecraft:golden_boots{HideFlags:6,Unbreakable:1b,AttributeModifiers:[{AttributeName:"generic.armorToughness",Name:"generic.armorToughness",Amount:-1,Operation:0,UUIDLeast:529172,UUIDMost:361804}]} 1
 item replace entity @s[scores={item=..1}] armor.head with minecraft:air
 item replace entity @s[scores={item=..1}] armor.feet with minecraft:air
+
+item replace entity @s[tag=!spiritworld,nbt=!{Inventory:[{id:"minecraft:golden_leggings",Slot:101b}]}] armor.legs with minecraft:golden_leggings{Enchantments:[{id:"minecraft:swift_sneak",lvl:1s}],HideFlags:6,Unbreakable:1b,AttributeModifiers:[{AttributeName:"generic.armorToughness",Name:"generic.armorToughness",Amount:-1,Operation:0,UUIDLeast:529172,UUIDMost:361804}]} 1
 
 scoreboard players set @s item 0
 

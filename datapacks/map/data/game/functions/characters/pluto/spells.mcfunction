@@ -4,17 +4,18 @@ execute as @s[nbt={SelectedItem:{id:"minecraft:flint"}}] at @s run function game
 
 #regen
 scoreboard players remove @s[nbt={SelectedItem:{id:"minecraft:yellow_dye"}}] Mana 5
-scoreboard players set @s[nbt={SelectedItem:{id:"minecraft:yellow_dye"}}] plutoregen 60
+scoreboard players set @s[nbt={SelectedItem:{id:"minecraft:yellow_dye"}}] plutoregen 40
 
 #spike
 scoreboard players remove @s[nbt={SelectedItem:{id:"minecraft:sugar_cane"}}] Mana 8
-scoreboard players set @s[nbt={SelectedItem:{id:"minecraft:sugar_cane"}}] plutospike 24
+scoreboard players set @s[nbt={SelectedItem:{id:"minecraft:sugar_cane"}}] plutospike 20
 scoreboard players set @s[nbt={SelectedItem:{id:"minecraft:sugar_cane"}}] invisoff 24
 execute as @s[nbt={SelectedItem:{id:"minecraft:sugar_cane"}}] at @s run playsound minecraft:entity.firework_rocket.blast_far master @a ~ ~ ~ 1 0
 execute as @s[nbt={SelectedItem:{id:"minecraft:sugar_cane"}}] at @s run playsound minecraft:entity.ghast.death master @a ~ ~ ~ 1 2
 execute as @s[nbt={SelectedItem:{id:"minecraft:sugar_cane"}}] at @s run playsound minecraft:entity.ghast.warn master @a ~ ~ ~ 0.3 2
 execute as @s[nbt={SelectedItem:{id:"minecraft:sugar_cane"}}] at @s run playsound minecraft:entity.zombie.infect master @a ~ ~ ~ 1 1.4
 execute as @s[nbt={SelectedItem:{id:"minecraft:sugar_cane"}}] at @s run playsound minecraft:entity.bee.sting master @a ~ ~ ~ 1 0
+clear @s[nbt={SelectedItem:{id:"minecraft:sugar_cane"}}] sugar_cane
 
 #jump pad
 execute as @s[nbt={SelectedItem:{id:"minecraft:bowl"}}] at @s run summon minecraft:armor_stand ~ ~ ~ {Small:1,Marker:0,Invulnerable:1,Tags:["jp"],Invisible:1,ArmorItems:[{},{},{},{Count:1,id:sea_pickle}],DisabledSlots:4144959}
@@ -22,3 +23,4 @@ execute as @s[nbt={SelectedItem:{id:"minecraft:bowl"}}] at @s run tp @e[tag=jp,d
 scoreboard players remove @s[nbt={SelectedItem:{id:"minecraft:bowl"}}] Mana 3
 scoreboard players set @s[nbt={SelectedItem:{id:"minecraft:bowl"}}] cooljp 140
 execute as @s[nbt={SelectedItem:{id:"minecraft:bowl"}}] at @s run function game:spells/manaup
+clear @s[nbt={SelectedItem:{id:"minecraft:bowl"}}] bowl

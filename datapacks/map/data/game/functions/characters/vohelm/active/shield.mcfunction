@@ -1,9 +1,9 @@
 item replace entity @s[scores={shield=2..},nbt=!{Inventory:[{id:"minecraft:iron_chestplate",Slot:102b}]}] armor.chest with minecraft:iron_chestplate
-item replace entity @s[scores={shield=2..},nbt=!{Inventory:[{id:"minecraft:iron_leggings",Slot:101b}]}] armor.legs with minecraft:iron_leggings
+#item replace entity @s[scores={shield=2..},nbt=!{Inventory:[{id:"minecraft:iron_leggings",Slot:101b}]}] armor.legs with minecraft:iron_leggings
 
 item replace entity @s[scores={shield=1}] armor.head with air
 item replace entity @s[scores={shield=1}] armor.chest with air
-item replace entity @s[scores={shield=1}] armor.legs with air
+#item replace entity @s[scores={shield=1}] armor.legs with air
 item replace entity @s[scores={shield=1}] armor.feet with air
 
 effect clear @s[scores={shield=1}] resistance

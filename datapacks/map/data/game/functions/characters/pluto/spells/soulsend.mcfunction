@@ -7,4 +7,4 @@ scoreboard players operation @e[tag=soulsend,distance=...1,limit=1,sort=nearest]
 execute as @s at @s[tag=!isshift] run tp @e[tag=soulsend,distance=...1,limit=1,sort=nearest] ~ ~1.5 ~
 execute as @s at @s[tag=isshift] run tp @e[tag=soulsend,distance=...1,limit=1,sort=nearest] ~ ~1.2 ~
 
-scoreboard players set @s invisoff 30
+scoreboard players set @s invisoff 40

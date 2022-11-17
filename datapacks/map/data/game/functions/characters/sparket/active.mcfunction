@@ -46,13 +46,16 @@ scoreboard players set @s[scores={poison=1..}] fireheal -120
 scoreboard players set @s[scores={poison2=1..}] fireheal -120
 
 #correct fist
-item replace entity @s[scores={wtimer=60}] hotbar.0 with minecraft:wooden_sword{Enchantments:[{id:"minecraft:knockback",lvl:1},{id:"minecraft:fire_aspect",lvl:1}],AttributeModifiers:[{AttributeName:"generic.attack_speed",Name:"generic.attack_speed",Amount:-1.6,Operation:0,UUID:[I;170452042,-618446418,-1993398134,2121527740],Slot:"mainhand"},{AttributeName:"generic.attack_damage",Name:"generic.attack_damage",Amount:4,Operation:0,UUID:[I;-2116117351,-814987369,-1539314661,1434952524],Slot:"mainhand"},{AttributeName:"generic.movement_speed",Name:"generic.movement_speed",Amount:0.33,Operation:2,UUID:[I;-1794733450,173426169,-1787019437,449822666],Slot:"mainhand"}],display:{Name:"[{\"text\":\"Fire Fist\",\"color\":\"gold\",\"italic\":\"false\",\"bold\":\"true\"},{\"text\":\" [\",\"color\":\"white\",\"italic\":\"false\"},{\"text\":\"5 Damage\",\"color\":\"red\",\"italic\":\"false\"},{\"text\":\"]\",\"color\":\"white\",\"italic\":\"false\"}]"}} 1
+item replace entity @s[scores={wtimer=60}] hotbar.0 with minecraft:wooden_sword{Enchantments:[{id:"minecraft:knockback",lvl:1},{id:"minecraft:fire_aspect",lvl:1}],AttributeModifiers:[{AttributeName:"generic.attack_speed",Name:"generic.attack_speed",Amount:-2.0,Operation:0,UUID:[I;170452042,-618446418,-1993398134,2121527740],Slot:"mainhand"},{AttributeName:"generic.attack_damage",Name:"generic.attack_damage",Amount:4,Operation:0,UUID:[I;-2116117351,-814987369,-1539314661,1434952524],Slot:"mainhand"},{AttributeName:"generic.movement_speed",Name:"generic.movement_speed",Amount:0.26,Operation:2,UUID:[I;-1794733450,173426169,-1787019437,449822666],Slot:"mainhand"}],display:{Name:"[{\"text\":\"Fire Fist\",\"color\":\"gold\",\"italic\":\"false\",\"bold\":\"true\"},{\"text\":\" [\",\"color\":\"white\",\"italic\":\"false\"},{\"text\":\"5 Damage\",\"color\":\"red\",\"italic\":\"false\"},{\"text\":\"]\",\"color\":\"white\",\"italic\":\"false\"}]"}} 1
 execute as @s[scores={wtimer=60}] at @s run playsound minecraft:item.flintandsteel.use master @a ~ ~ ~ 1 1.5
 execute as @s[scores={wtimer=60}] at @s run playsound minecraft:item.flintandsteel.use master @a ~ ~ ~ 1 0.5
 execute as @s[scores={wtimer=60}] at @s anchored eyes run particle minecraft:flame ^ ^ ^1 0.2 0.2 0.2 0.1 4
 clear @s[scores={wtimer=60}] golden_sword
 clear @s[scores={wtimer=3..59},nbt=!{Inventory:[{id:"minecraft:wooden_sword",Slot:0b}]}] wooden_sword
 scoreboard players set @s[scores={wtimer=3..59},nbt=!{Inventory:[{id:"minecraft:wooden_sword",Slot:0b}]}] wtimer 2
+
+# give players knockback res
+execute as @s[scores={wtimer=2..59},nbt={Inventory:[{id:"minecraft:wooden_sword",Slot:0b}]}] at @s run execute as @a[distance=0.01..10] run attribute @s minecraft:generic.knockback_resistance base set 0.25
 
 #correct bow
 clear @s[scores={btimer=0..},nbt=!{Inventory:[{id:"minecraft:bow",Slot:1b}]}] bow

@@ -2,7 +2,7 @@
 
 Goals: Improve game accessibility and quality of life.
 
-[Gernal]
+[General]
 - Punches charge 42% slower (.25s -> .66s)
 - Crit hits give 2s of blindness and slowness 2
 - Crit hits no longer deal extra damage
@@ -44,13 +44,16 @@ Emma
 - Trident damaged 1 when unequipped 
 - Trident makes sound on breaking, summoning, and unequipping
 - Bolt cost 1 less (6 -> 5)
-- Bolt does 3 less damage (12 -> 9)
+- Bolt gives .1s less glowing (1.1s -> 1s)
+- Bolt does 4 less damage (12 -> 8)
+- Bolt has .1s longer cooldown (1.35s -> 1.45s)
 - Bolt moves 20% slower (60b/s -> 48b/s)
-- Bolt recharges .25s slower (1.35s - 1.6s)
 
 Halt
 - Draining Claw recharges 0.05s faster (0.5s -> 0.45s)
 - Draining Claw does 1 less damage (13 -> 12) (doesn't impact healing)
+- Draining Claw lasts only 7 seconds (previously infinite)
+- Switching off Drawing Claws cancels Draining Claws
 - Hover gives visibility for duration
 - Ghost Bow does 1 less damage through walls (6 -> 5)
 
@@ -77,9 +80,10 @@ Pluto
 - Soul Send makes you visible for 1.5s
 
 Barbose
+- Max health reduced by 1 (22 -> 21)
 - Seeking Axe charges 8% slower (1.42s -> 1.54s)
 - Seeking Axe does 1 less damage (13 -> 12)
-- Seeking Axe particle only visible for self
+- Switching off Seeking Axe canels Seeking Axe
 - Bombs explode .2s faster (1.7s -> 1.5s)
 - Bombs deal 40% less damage to self
 - Bombs give .3s less visibility (.75s -> .45s)
@@ -94,6 +98,10 @@ Forest Temple
 
 Mountain Temple
 - Relocated map to reduce large lag spikes
+
+Snow Temple
+- Jump Pad gives 1.25s less glowing (2s -> .75s)
+- Using Jump Pad prevents all fall damage
 
 [Textures]
 - "Recharging" has a different texture to "Reloading"
@@ -127,3 +135,85 @@ Mountain Temple
 
 [Backend]
 - Fixed issues for Spigot/Paper servers
+
+* Patch 2.1 Notes *
+
+[General]
+- Becoming visible no longer plays a sound for others or yourself
+- Sneaking is 33% faster
+- For every player over 2, souls heal an extra 4
+- Fire in general has been reworked
+    - Fire deals damage 0.5s faster (every 1.5s -> every 1s)
+    - Fire no longer covers player in flames
+    - Fire no longer covers player's screen (now just a screen icon)
+    - Fire now gives players a cloud of particles
+    - Fire makes players visible for 0.3s when set on fire and 0.2s each time it damages them
+    - Fire blocks (fire and lava) are capped at setting the player on fire for 4 seconds max (starting when they leave the block) [4 damage]
+    - Invulnerability removes and prevents fire
+- Visibility moves, like glowing, do not override each other's timing
+    - You can't get invisible faster using moves that give short visibility
+
+[Characters]
+
+Sparket
+- Fire Fist has 25% less knockback (still level 1 but players take 25% less knockback [154% of normal])
+- Fire Fist gives +1% more speed speed (25% -> 26%)
+- Fire Fist gives 1s less fire (4s -> 3s) (doesn't impact damage {3}) [see changes in general]
+- Fixed bug where season 2 fist fist charge/speed nerfs were not in effect
+- Flame Bow sets players on flame for 2s less (5s -> 3s) (damage not impacted {3}) [see changes in general]
+- Fire Breath (and all fire blocks) give 6s less fire (10s -> 4s) (4 damage) [see changes in general]
+- Burnout has actual cooldown after use (0.15s -> 1.5s)
+
+Emma
+- After Trident is summoned, there is a 1s window where unequipping doesn't damage it
+    - Note: to make summoning it without damage much more natural and friendly
+- Wave knockback decreased by 15% (0.8 b/s -> 0.74 b/s)
+
+Halt
+- Draining Claws get 2 knockback (previously none)
+- Draining Claw heals 1 more (for each value) (2-4)
+- Draining Claw charges 19% faster (2.38s -> 2s)
+- Draining Claws last 1s longer (7s -> 8s)
+- Hover no longer gives visibility (still gives particles)
+- Hover can now be canceled (Cost 1 Mana) [Mana not needed]
+    - Takes 0.4s, gives you 0.4s visibility, makes a quiet sound
+- Spider takes 0.15s longer to be able to attack players (0.6s -> 0.75s)
+
+Vohelm
+- Max knife has knockback (weakened knockback [see Sparket changes])
+- Upgrading knife boosts speed by 19% for 2.15s (stacks with other speed)
+- Sacred Knife now +5 speed for all levels (previously started at 0% and gained to 16%)
+- All knife levels cost 2 mana (previously 2 and 3 costed 3)
+- Totem health reduced by 2 (5 -> 3)
+- Totem range reduced by 0.5 (7 -> 6.5)
+- Totem explosion now has 0.75 fuse (includes sounds and effects)
+- Thorns have 0.3s delay before activating
+- Thorns flash goes 0.3 block further (2.8 -> 3.1)
+
+- Shield now puts out fire [see changes in general]
+- Totems take no fall damage
+- Knife downgrading plays a sound (just for you) (quality of life)
+- Knife model/texture/sound has had minor improvements
+- Knife clarifies that off-handing will reset levels (in lore)
+
+Pluto
+- Shadow Spikes shoot 2 less spikes (10 -> 8)
+- Regeneration heals 3 over 3 seconds (previously 4 over 4 seconds)
+- Soul Send gives 0.5s more visibility (1.5s -> 2s)
+
+Barbose
+- Seeking Axe pulses it's pointer every 0.5s (instead of constantly)
+- Seeking Axe gives 2% less speed (15% -> 13%)
+- (!!!) Decoy replaced with Project
+- Returning to Portal 1s slower (1s -> 2s)
+- Replaced returning to portal blindness with darkness
+- Returning to portal slowness 4 levels higher (level 3 -> level 7)
+- (!!!) Blackhole replaced with Smoke Wall
+
+[Bug Fixes]
+- Graphical fix for Island Temple map select build
+- Some items could be used multiple times past their use cooldown (ex. Jump Pad, Shield, Burnout, etc.)
+- Burnout would would cancel Zero-Gravity slow falling
+- Soul Send does not list visibility as feature
+- *Mountain Temple sometimes spawns points with incorrect timings
+- *Wrong player is sometimes announced as winner

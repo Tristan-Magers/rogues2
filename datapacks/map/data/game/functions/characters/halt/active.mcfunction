@@ -2,10 +2,9 @@ execute as @s[tag=!spiritworld,scores={shift=1..}] at @s run function game:chara
 execute as @s[tag=!spiritworld,scores={spiderwall=0..}] at @s run function game:characters/halt/active/wallmove
 execute as @s[scores={haltboost=1..}] at @s run function game:characters/halt/active/haltboost
 
-#clear @s[nbt=!{Inventory:[{id:"minecraft:iron_nugget",Slot:1b}]}] iron_nugget
-#execute as @s[nbt=!{Inventory:[{id:"minecraft:iron_nugget",Slot:1b}]}] run item replace entity @s hotbar.1 with iron_nugget{display:{Name:"[{\"text\":\"Hover\",\"color\":\"gray\",\"italic\":\"false\",\"bold\":\"true\"},{\"text\":\" (\",\"color\":\"white\",\"italic\":\"false\"},{\"text\":\"Hold to use\",\"color\":\"gold\",\"italic\":\"false\"},{\"text\":\")\",\"color\":\"white\",\"italic\":\"false\"}]"}}
 execute as @s[scores={hover=1..}] at @s run function game:characters/halt/active/hover
 execute as @s[scores={hover=0}] at @s run effect clear @s levitation
+execute as @s[scores={hover=0}] at @s run scoreboard players set @s nolev 2
 scoreboard players set @s[scores={hover=0}] invisoff 8
 
 scoreboard players remove @s hover 1
@@ -19,15 +18,15 @@ execute if entity @s[scores={haltdamage=160..}] run playsound minecraft:entity.a
 
 scoreboard players set @s[scores={haltdamage=24..}] wtimer 2
 
-scoreboard players add @s[scores={haltdamage=40..}] healthshow 1
+scoreboard players add @s[scores={haltdamage=40..}] healthshow 2
 scoreboard players add @s[scores={haltdamage=80..}] healthshow 1
 scoreboard players add @s[scores={haltdamage=120..}] healthshow 1
 scoreboard players add @s[scores={haltdamage=160..}] healthshow 1
 
-execute as @s[scores={haltdamage=40..79}] at @s anchored eyes positioned ^ ^ ^1 run summon minecraft:armor_stand ~ ~-1 ~ {Marker:1,Silent:1,Silent:1,Invulnerable:1,Tags:["damnum","plus"],CustomNameVisible:1b,Duration:999999,CustomName:'{"text":"+1"}'}
-execute as @s[scores={haltdamage=80..119}] at @s anchored eyes positioned ^ ^ ^1 run summon minecraft:armor_stand ~ ~-1 ~ {Marker:1,Silent:1,Silent:1,Invulnerable:1,Tags:["damnum","plus"],CustomNameVisible:1b,Duration:999999,CustomName:'{"text":"+2"}'}
-execute as @s[scores={haltdamage=120..159}] at @s anchored eyes positioned ^ ^ ^1 run summon minecraft:armor_stand ~ ~-1 ~ {Marker:1,Silent:1,Silent:1,Invulnerable:1,Tags:["damnum","plus"],CustomNameVisible:1b,Duration:999999,CustomName:'{"text":"+3"}'}
-execute as @s[scores={haltdamage=160..}] at @s anchored eyes positioned ^ ^ ^1 run summon minecraft:armor_stand ~ ~-1 ~ {Marker:1,Silent:1,Silent:1,Invulnerable:1,Tags:["damnum","plus"],CustomNameVisible:1b,Duration:999999,CustomName:'{"text":"+4"}'}
+execute as @s[scores={haltdamage=40..79}] at @s anchored eyes positioned ^ ^ ^1 run summon minecraft:armor_stand ~ ~-1 ~ {Marker:1,Silent:1,Silent:1,Invulnerable:1,Tags:["damnum","plus"],CustomNameVisible:1b,Duration:999999,CustomName:'{"text":"+2"}'}
+execute as @s[scores={haltdamage=80..119}] at @s anchored eyes positioned ^ ^ ^1 run summon minecraft:armor_stand ~ ~-1 ~ {Marker:1,Silent:1,Silent:1,Invulnerable:1,Tags:["damnum","plus"],CustomNameVisible:1b,Duration:999999,CustomName:'{"text":"+3"}'}
+execute as @s[scores={haltdamage=120..159}] at @s anchored eyes positioned ^ ^ ^1 run summon minecraft:armor_stand ~ ~-1 ~ {Marker:1,Silent:1,Silent:1,Invulnerable:1,Tags:["damnum","plus"],CustomNameVisible:1b,Duration:999999,CustomName:'{"text":"+4"}'}
+execute as @s[scores={haltdamage=160..}] at @s anchored eyes positioned ^ ^ ^1 run summon minecraft:armor_stand ~ ~-1 ~ {Marker:1,Silent:1,Silent:1,Invulnerable:1,Tags:["damnum","plus"],CustomNameVisible:1b,Duration:999999,CustomName:'{"text":"+5"}'}
 
 #draining claw delay
 execute as @s[scores={dcdelay=0}] at @s run function game:spells/manaup
@@ -64,8 +63,8 @@ execute as @s[scores={bowshot=1..}] run execute as @e[tag=harrow,scores={arrowli
 execute as @s[scores={bowshot=1..}] run execute as @e[tag=harrow,scores={arrowlife=..1,arrowmot=..31664},limit=1] at @s run kill @s
 
 #correct claws
-clear @s[scores={wtimer=10..},nbt=!{Inventory:[{id:"minecraft:stone_sword",Slot:0b}]}] stone_sword
-scoreboard players set @s[scores={wtimer=10..},nbt=!{Inventory:[{id:"minecraft:stone_sword",Slot:0b}]}] wtimer 2
+clear @s[scores={wtimer=10..},nbt=!{SelectedItem:{id:"minecraft:stone_sword"}}] stone_sword
+scoreboard players set @s[scores={wtimer=10..},nbt=!{SelectedItem:{id:"minecraft:stone_sword"}}] wtimer 2
 
 #correct bow
 clear @s[scores={btimer=0..},nbt=!{Inventory:[{id:"minecraft:bow",Slot:1b}]}] bow

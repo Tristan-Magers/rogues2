@@ -32,6 +32,9 @@ execute if entity @e[scores={map=6}] run execute as @e[tag=map6,name=point,type=
 scoreboard players set @a[tag=!point] pointsT 0
 scoreboard players remove @a[scores={nocap=1..}] nocap 1
 
+#
+scoreboard players remove @a[scores={notele=1..}] notele 1
+
 #time
 execute as @e[scores={Time=-5..}] at @s run function game:game/time
 

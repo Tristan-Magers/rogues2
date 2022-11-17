@@ -81,6 +81,15 @@ scoreboard players set @s fireheal 0
 scoreboard players set @s damageob 0
 scoreboard players add @s tutorialtime 0
 
+scoreboard players set @s poison2 0
+scoreboard players set @s notele 0
+
+scoreboard players set @s project_cool 0
+scoreboard players set @s sword_switch_cool 0
+
+scoreboard players set @s sword_boost 0
+scoreboard players set @s boostT 0
+
 clear @s
 title @s times 0 25 10
 

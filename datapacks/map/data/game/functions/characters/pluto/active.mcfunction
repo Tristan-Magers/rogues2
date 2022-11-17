@@ -26,8 +26,8 @@ execute as @s[scores={plutoregen=0}] at @s run particle minecraft:heart ~ ~1 ~ .
 scoreboard players remove @s[scores={plutoregen=0..}] plutoregen 1
 
 #execute as @s[scores={plutospike=22}] at @s run function game:characters/pluto/spells/newspike
-execute as @s[scores={plutospike=20}] at @s run function game:characters/pluto/spells/newspike
-execute as @s[scores={plutospike=18}] at @s run function game:characters/pluto/spells/newspike
+#execute as @s[scores={plutospike=20}] at @s run function game:characters/pluto/spells/newspike
+#execute as @s[scores={plutospike=18}] at @s run function game:characters/pluto/spells/newspike
 execute as @s[scores={plutospike=16}] at @s run function game:characters/pluto/spells/newspike
 execute as @s[scores={plutospike=14}] at @s run function game:characters/pluto/spells/newspike
 execute as @s[scores={plutospike=12}] at @s run function game:characters/pluto/spells/newspike

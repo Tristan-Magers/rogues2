@@ -28,8 +28,8 @@ execute as @s[tag=!wall,tag=in] at @s run tp @s ~ ~-.1 ~
 tag @s add tag
 scoreboard players operation @a[gamemode=adventure] playerID -= @s playerID
 
-tag @e[type=villager] add other
-tag @a[gamemode=adventure] add other
+tag @e[type=villager,scores={spiderT=15..}] add other
+tag @a[gamemode=adventure,scores={spiderT=15..}] add other
 tag @a[scores={playerID=0}] remove other
 
 execute as @s at @s positioned ^6 ^ ^6 run execute as @e[tag=other,distance=..5.7] run execute as @e[tag=tag] at @s run tp @s ~ ~ ~ ~-5 0

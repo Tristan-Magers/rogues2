@@ -1,16 +1,16 @@
 #red port
-execute positioned 70.51 25 -43.5 run effect give @a[gamemode=adventure,distance=..100,dz=2.2,dx=10,dy=25] blindness 1 0 true
-execute positioned -16 21 225 run effect give @a[gamemode=adventure,distance=..100,dx=1,dz=6,dy=5] blindness 1 0 true
+execute positioned 70.51 25 -43.5 run effect give @a[gamemode=adventure,distance=..100,dz=2.2,dx=10,dy=25,scores={notele=..0}] blindness 1 0 true
+execute positioned -16 21 225 run effect give @a[gamemode=adventure,distance=..100,dx=1,dz=6,dy=5,scores={notele=..0}] blindness 1 0 true
 
-execute positioned 70.51 25 -43.5 run tp @a[gamemode=adventure,distance=..100,dz=2.2,dx=10,dy=25] -13 22 228
-execute positioned -16 21 225 run execute as @a[gamemode=adventure,distance=..100,dx=1,dz=6,dy=5] at @s run tp @s 69 38.3 -30 180 0
+execute positioned 70.51 25 -43.5 run tp @a[gamemode=adventure,distance=..100,dz=2.2,dx=10,dy=25,scores={notele=..0}] -13 22 228
+execute positioned -16 21 225 run execute as @a[gamemode=adventure,distance=..100,dx=1,dz=6,dy=5,scores={notele=..0}] at @s run tp @s 69 38.3 -30 180 0
 
 #blue port
-execute positioned 68.01 25 -43.5 run effect give @a[gamemode=adventure,distance=..100,dz=2.2,dx=-10,dy=25] blindness 1 0 true
-execute positioned 3 27 203 run effect give @a[gamemode=adventure,distance=..100,dx=8,dz=2,dy=10] blindness 1 0 true
+execute positioned 68.01 25 -43.5 run effect give @a[gamemode=adventure,distance=..100,dz=2.2,dx=-10,dy=25,scores={notele=..0}] blindness 1 0 true
+execute positioned 3 27 203 run effect give @a[gamemode=adventure,distance=..100,dx=8,dz=2,dy=10,scores={notele=..0}] blindness 1 0 true
 
-execute positioned 68.01 25 -43.5 run tp @a[gamemode=adventure,distance=..100,dz=2.2,dx=-10,dy=25] 7 28 207 ~0 ~
-execute positioned 3 27 203 run execute as @a[gamemode=adventure,distance=..100,dx=8,dz=2,dy=10] at @s run tp @s 69 38.3 -30 180 0
+execute positioned 68.01 25 -43.5 run tp @a[gamemode=adventure,distance=..100,dz=2.2,dx=-10,dy=25,scores={notele=..0}] 7 28 207 ~0 ~
+execute positioned 3 27 203 run execute as @a[gamemode=adventure,distance=..100,dx=8,dz=2,dy=10,scores={notele=..0}] at @s run tp @s 69 38.3 -30 180 0
 
 #particles
 

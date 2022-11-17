@@ -1,3 +1,6 @@
+item replace entity @s[scores={tutorialtime=1..670}] armor.head with minecraft:carved_pumpkin
+item replace entity @s[scores={tutorialtime=680}] armor.head with minecraft:air
+
 title @s[scores={tutorialtime=1}] times 20 180 20
 tp @s[scores={tutorialtime=1}] -156 41 -42 90 0
 title @s[scores={tutorialtime=1}] actionbar {"text":"Welcome to Rogues 2."}

@@ -19,6 +19,13 @@ execute as @s[scores={pointsT=800..,pointAmount=2}] at @s positioned ~-1 ~-1 ~-1
 execute as @s[scores={pointsT=800..,pointAmount=3}] at @s positioned ~-1 ~-1 ~-1 run scoreboard players add @a[gamemode=adventure,distance=..100,dx=3,dz=3,dy=2,scores={pointsT=30..}] points 3
 
 execute as @s[scores={pointsT=800..}] at @s positioned ~-1 ~-1 ~-1 run execute as @a[gamemode=adventure,distance=..100,dx=3,dz=3,dy=2,scores={pointsT=30..}] run function game:players/souldisplay
+execute if entity @e[scores={playercount=9..}] run execute as @s[scores={pointsT=800..}] at @s positioned ~-1 ~-1 ~-1 run scoreboard players add @a[gamemode=adventure,distance=..100,dx=3,dz=3,dy=2,scores={pointsT=30..}] healthshow 4
+execute if entity @e[scores={playercount=8..}] run execute as @s[scores={pointsT=800..}] at @s positioned ~-1 ~-1 ~-1 run scoreboard players add @a[gamemode=adventure,distance=..100,dx=3,dz=3,dy=2,scores={pointsT=30..}] healthshow 4
+execute if entity @e[scores={playercount=7..}] run execute as @s[scores={pointsT=800..}] at @s positioned ~-1 ~-1 ~-1 run scoreboard players add @a[gamemode=adventure,distance=..100,dx=3,dz=3,dy=2,scores={pointsT=30..}] healthshow 4
+execute if entity @e[scores={playercount=6..}] run execute as @s[scores={pointsT=800..}] at @s positioned ~-1 ~-1 ~-1 run scoreboard players add @a[gamemode=adventure,distance=..100,dx=3,dz=3,dy=2,scores={pointsT=30..}] healthshow 4
+execute if entity @e[scores={playercount=5..}] run execute as @s[scores={pointsT=800..}] at @s positioned ~-1 ~-1 ~-1 run scoreboard players add @a[gamemode=adventure,distance=..100,dx=3,dz=3,dy=2,scores={pointsT=30..}] healthshow 4
+execute if entity @e[scores={playercount=4..}] run execute as @s[scores={pointsT=800..}] at @s positioned ~-1 ~-1 ~-1 run scoreboard players add @a[gamemode=adventure,distance=..100,dx=3,dz=3,dy=2,scores={pointsT=30..}] healthshow 4
+execute if entity @e[scores={playercount=3..}] run execute as @s[scores={pointsT=800..}] at @s positioned ~-1 ~-1 ~-1 run scoreboard players add @a[gamemode=adventure,distance=..100,dx=3,dz=3,dy=2,scores={pointsT=30..}] healthshow 4
 execute as @s[scores={pointsT=800..}] at @s positioned ~-1 ~-1 ~-1 run scoreboard players add @a[gamemode=adventure,distance=..100,dx=3,dz=3,dy=2,scores={pointsT=30..}] healthshow 4
 execute as @s[scores={pointsT=600..799}] at @s positioned ~-1 ~-1 ~-1 run title @a[gamemode=adventure,distance=..100,dx=1,dz=1,dy=3] title [{"text":" "}]
 execute as @s[scores={pointsT=600..799}] at @s positioned ~-1 ~-1 ~-1 run title @a[gamemode=adventure,distance=..100,dx=3,dz=3,dy=2] times 0 3 10

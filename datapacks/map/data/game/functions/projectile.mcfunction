@@ -24,6 +24,13 @@ execute as @e[tag=wave] at @s run function game:projectile/wave
 #blackhole
 execute as @e[tag=blackhole] at @s run function game:projectile/blackhole
 
+#smoke wall
+execute as @e[tag=smoke_wall] at @s run function game:projectile/smoke_wall
+execute as @e[tag=smoke_wall_vis] at @s run function game:projectile/smoke_wall_vis
+
+#projection save spot
+execute as @e[tag=project_save_spot] at @s run function game:projectile/project_save_spot
+
 #fire breath projectile
 execute as @e[type=armor_stand,name=Fire] at @s run function game:projectile/fireb
 

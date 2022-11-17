@@ -1,3 +1,5 @@
+execute as @a[tag=ready] run function game:characters/barbose/active/remove_save_spot
+
 tp @a[tag=ready,tag=lobby] -91 41 61
 tp @a[tag=ready,tag=spirlob] -91 41 61
 tag @a[tag=ready,tag=spirlob] add lobby

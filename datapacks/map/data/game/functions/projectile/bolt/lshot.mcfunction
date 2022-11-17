@@ -8,7 +8,7 @@ function game:inblock
 
 execute as @s[tag=!in] at @s positioned ~-.5 ~-2 ~-.5 run effect give @e[tag=portalset,distance=..3,dx=0,dz=0,dy=1] instant_damage 1 1 true
 execute as @s[tag=!in] at @s positioned ~-.5 ~-2 ~-.5 run effect give @e[tag=!isthrow,type=player,distance=..3,dx=0,dz=0,dy=1] instant_damage 1 1 true
-execute as @s[tag=!in] at @s positioned ~-.5 ~-2 ~-.5 run scoreboard players set @e[tag=!isthrow,type=player,distance=..3,dx=0,dz=0,dy=1] damageob 3
+execute as @s[tag=!in] at @s positioned ~-.5 ~-2 ~-.5 run scoreboard players set @e[tag=!isthrow,type=player,distance=..3,dx=0,dz=0,dy=1] damageob 4
 execute as @s[tag=!in] at @s positioned ~-.5 ~-2 ~-.5 run effect give @e[tag=!isthrow,tag=hittest,distance=..3,dx=0,dz=0,dy=1] instant_damage 1 1 true
 execute as @s[tag=!in] at @s positioned ~-.5 ~-2 ~-.5 run tag @e[tag=!isthrow,tag=hittest,distance=..3,dx=0,dz=0,dy=1] add ded
 execute as @s[tag=!in] at @s positioned ~ ~ ~ run effect give @e[tag=hittest2,distance=..1.6] instant_damage 1 1 true

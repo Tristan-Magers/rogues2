@@ -55,6 +55,8 @@ scoreboard players set @s plutoregen -1
 scoreboard players set @s poison -1
 scoreboard players set @s poison2 -1
 
+scoreboard players set @s fire_time_effect -1
+
 scoreboard players set @s press 0
 scoreboard players set @s burnout -100
 scoreboard players set @s invis 2
@@ -77,7 +79,7 @@ execute as @s[scores={class=5}] run item replace entity @s hotbar.1 with barrier
 
 item replace entity @s armor.head with air
 item replace entity @s armor.chest with air
-item replace entity @s armor.legs with air
+#item replace entity @s armor.legs with air
 item replace entity @s armor.feet with air
 
 scoreboard players remove @s spiritcutscene 1
