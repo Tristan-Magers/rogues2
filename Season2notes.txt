@@ -141,7 +141,7 @@ Snow Temple
 [General]
 - Becoming visible no longer plays a sound for others or yourself
 - Sneaking is 33% faster
-- For every player over 2, souls heal an extra 4
+- For every player count over 2, souls heal an extra 4
 - Fire in general has been reworked
     - Fire deals damage 0.5s faster (every 1.5s -> every 1s)
     - Fire no longer covers player in flames
@@ -178,6 +178,10 @@ Halt
 - Hover can now be canceled (Cost 1 Mana) [Mana not needed]
     - Takes 0.4s, gives you 0.4s visibility, makes a quiet sound
 - Spider takes 0.15s longer to be able to attack players (0.6s -> 0.75s)
+- Spider causes 0.5s less glowing (3s -> 2.5s)
+- Spider causes 2 levels less of slowness (level 3 -> level 1)
+- Webs move 25% faster (20 b/s -> 25 b/s)
+- Webs take 0.3s to activate on hit
 
 Vohelm
 - Max knife has knockback (weakened knockback [see Sparket changes])
@@ -215,5 +219,6 @@ Barbose
 - Some items could be used multiple times past their use cooldown (ex. Jump Pad, Shield, Burnout, etc.)
 - Burnout would would cancel Zero-Gravity slow falling
 - Soul Send does not list visibility as feature
+- Fixed version sign linking to wrong patchnotes
 - *Mountain Temple sometimes spawns points with incorrect timings
 - *Wrong player is sometimes announced as winner

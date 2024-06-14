@@ -1,0 +1,24 @@
+clear @s barrier
+clear @s[scores={Mana=..3,wtimer=..0}] feather
+clear @s[scores={Mana=..7,btimer=..0}] nether_brick
+clear @s[scores={Mana=..4}] iron_ingot
+clear @s[scores={Mana=..5}] bone_meal
+clear @s[scores={Mana=..5}] iron_nugget
+
+execute as @s[scores={Mana=..2,wtimer=..0}] run item replace entity @s hotbar.0 with barrier[custom_name='{"color":"white","italic":false,"text":"Reloading"}'] 1
+execute as @s[scores={Mana=..3}] run item replace entity @s hotbar.2 with barrier[custom_name='{"color":"white","italic":false,"text":"Reloading"}'] 1
+execute as @s[scores={Mana=..6,btimer=..0}] run item replace entity @s hotbar.1 with barrier[custom_name='{"color":"white","italic":false,"text":"Reloading"}'] 1
+execute as @s[scores={Mana=..5}] run item replace entity @s hotbar.3 with barrier[custom_name='{"color":"white","italic":false,"text":"Reloading"}'] 1
+execute as @s[scores={Mana=..4}] run item replace entity @s hotbar.4 with barrier[custom_name='{"color":"white","italic":false,"text":"Reloading"}'] 1
+
+execute as @s[scores={Mana=3..,wtimer=..0,dcdelay=..0}] run item replace entity @s hotbar.0 with feather[custom_name='[{"text":"Draining Claw","color":"white","italic":false,"bold":true},{"text":" (","color":"white","italic":false},{"text":"8s","color":"green","italic":false},{"text":") (","color":"white","italic":false},{"text":"one use","color":"red","italic":false},{"text":") [","color":"white","italic":false},{"text":"3 Mana","color":"gold","italic":false},{"text":"]","color":"white","italic":false}]',lore=['{"text":"Deadly claws that steal health","color":"white","italic":false}','{"text":"12 max damage, slow charge","color":"gold","italic":false}','{"text":"+5% speed","color":"green","italic":false}','{"text":"2-4 Health steal","color":"green","italic":false}','{"text":"Speed and jump boost on hit","color":"green","italic":false}','{"text":"1 use","color":"red","italic":false}']]
+execute as @s[scores={Mana=4..,hover=..27}] run item replace entity @s hotbar.2 with iron_nugget[custom_name='[{"text":"Hover","color":"white","italic":false,"bold":true},{"text":" (","color":"white","italic":false},{"text":"2s","color":"green","italic":false},{"text":") [","color":"white","italic":false},{"text":"4 Mana","color":"gold","italic":false},{"text":"]","color":"white","italic":false}]',lore=['{"text":"Hover for 2 seconds","color":"white","italic":false}','{"text":"Makes you visible","color":"red","italic":false}']]
+execute as @s[scores={Mana=7..,btimer=..0}] run item replace entity @s hotbar.1 with nether_brick[custom_name='[{"text":"Ghost Shot","color":"red","italic":false,"bold":true},{"text":" (","color":"white","italic":false},{"text":"2 Arrows","color":"aqua","italic":false},{"text":") [","color":"white","italic":false},{"text":"7 Mana","color":"gold","italic":false},{"text":"]","color":"white","italic":false}]',lore=['{"text":"Get a bow that can shoot through walls","color":"white","italic":false}','{"text":"7 damage","color":"green","italic":false}','{"text":"5 damage through walls","color":"red","italic":false}']]
+execute as @s[scores={Mana=5..}] run item replace entity @s hotbar.3 with iron_ingot[custom_name='[{"text":"Web Shot","color":"white","italic":false,"bold":true},{"text":" [","color":"white","italic":false},{"text":"5 Mana","color":"gold","italic":false},{"text":"]","color":"white","italic":false}]',lore=['{"text":"Shoot a wall of webs","color":"white","italic":false}','{"text":"Lasts 1.8 seconds","color":"gold","italic":false}']]
+execute as @s[scores={Mana=5..}] run item replace entity @s hotbar.4 with bone_meal[custom_name='[{"text":"Spider","color":"red","italic":false,"bold":true},{"text":" [","color":"white","italic":false},{"text":"5 Mana","color":"gold","italic":false},{"text":"]","color":"white","italic":false}]',lore=['{"text":"Send a spider that tracks players","color":"white","italic":false}','{"text":"Tracks invisible players","color":"green","italic":false}','{"text":"Blinds, glows, and poisons players","color":"green","italic":false}','{"text":"8 health","color":"red","italic":false}']]
+
+execute as @s[scores={Mana=0..}] run item replace entity @s hotbar.5 with paper[custom_name='[{"text":"Sticky Hands","color":"gold","italic":false,"bold":true},{"text":" : Crouch to climb walls (passive)","color":"white","italic":false,"bold":false}]',lore=['{"text":"Hold shift while looking at a block to climb.","color":"white","italic":false}']]
+
+execute as @s[scores={hover=16..}] run item replace entity @s hotbar.2 with potato[custom_name='{"text":"Cancel (Cost 1)","color":"white","italic":false}'] 1
+execute as @s[scores={dcdelay=1..}] run item replace entity @s hotbar.0 with ghast_tear[custom_name='{"text":"Recharging","color":"white","italic":false}'] 1
+clear @s[scores={dcdelay=..0,hover=..15}] ghast_tear
