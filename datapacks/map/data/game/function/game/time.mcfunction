@@ -17,12 +17,12 @@ execute as @s[scores={Time=2..,playercount=1}] at @s if entity @a[tag=lobby,tag=
 execute as @s[scores={Time=2..}] at @s unless entity @a[tag=ingame,tag=!lobby,tag=game] run tellraw @a {"text":"No players, game has ended"}
 execute as @s[scores={Time=2..,playercount=1}] at @s if entity @a[tag=lobby,tag=ready] run scoreboard players set @s Time 1
 execute as @s[scores={Time=2..}] at @s unless entity @a[tag=ingame,tag=!lobby,tag=game] run scoreboard players set @s Time 1
-scoreboard players remove @s[scores={Time=0..}] Time 1
+scoreboard players remove @s[scores={Time=-1..}] Time 1
 
 #gamedone
 execute as @s[scores={Time=0}] at @s run function game:game/testwin
 execute as @s[scores={Time=0}] at @s run scoreboard players set @s restartcool 200
-execute as @s[scores={Time=..-1}] at @s run function game:game/gamedone
+execute as @s[scores={Time=-1}] at @s run function game:game/gamedone
 
 execute as @s[scores={Time=5380}] at @s run bossbar add time {"text":"time"}
 execute as @s[scores={Time=5380}] at @s run bossbar set minecraft:time color purple

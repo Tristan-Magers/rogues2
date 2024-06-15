@@ -90,6 +90,8 @@ scoreboard players set @s sword_switch_cool 0
 scoreboard players set @s sword_boost 0
 scoreboard players set @s boostT 0
 
+scoreboard players set @s effect_immune 0
+
 clear @s
 title @s times 0 25 10
 

@@ -5,7 +5,7 @@ execute as @s[scores={shield=1..}] at @s run function game:characters/vohelm/act
 execute as @s[tag=!spiritworld] at @s run function game:characters/vohelm/active/weapon
 
 #execute as @s[tag=!spiritworld,scores={Mana=3..},nbt=!{Inventory:[{id:"minecraft:golden_apple",Slot:4b}]}] run item replace entity @s hotbar.4 with golden_apple[custom_name='[{"text":"Sacred Berries","color":"green","italic":false,"bold":true},{"text":" (","color":"white","italic":false},{"text":"Heal 4","color":"red","italic":false},{"text":" / ","color":"white","italic":false},{"text":"Glow nearest enemy","color":"gray","italic":false},{"text":") [","color":"white","italic":false},{"text":"3 Mana","color":"gold","italic":false},{"text":"]","color":"white","italic":false}]"}}
-execute as @s[tag=!spiritworld,scores={Mana=4..},nbt=!{Inventory:[{id:"minecraft:golden_apple",Slot:4b}]}] run item replace entity @s hotbar.4 with golden_apple[custom_name='[{"text":"Sacred Berries","color":"green","italic":false,"bold":true},{"text":" (","color":"white","italic":false},{"text":"Heal 4","color":"red","italic":false},{"text":") [","color":"white","italic":false},{"text":"4 Mana","color":"gold","italic":false},{"text":"]","color":"white","italic":false}]',lore=['{"text":"Heal 4 health","color":"green","italic":false}','{"text":"4 seconds of +20% speed","color":"green","italic":false}']]
+execute as @s[tag=!spiritworld,scores={Mana=4..},nbt=!{Inventory:[{id:"minecraft:golden_apple",Slot:4b}]}] run item replace entity @s hotbar.4 with golden_apple[custom_name='[{"text":"Sacred Berries","color":"green","italic":false,"bold":true},{"text":" (","color":"white","italic":false},{"text":"Heal 4","color":"red","italic":false},{"text":") [","color":"white","italic":false},{"text":"4 Mana","color":"gold","italic":false},{"text":"]","color":"white","italic":false}]',lore=['{"text":"Heal 4 health","color":"green","italic":false}','{"text":"4s of +20% speed","color":"green","italic":false}']]
 
 attribute @s minecraft:generic.attack_damage base set 1
 
@@ -37,5 +37,5 @@ scoreboard players remove @s[scores={shieldT=0..}] shieldT 1
 execute as @s[nbt={Inventory:[{id:"minecraft:diamond_hoe",Slot:0b}]}] at @s run execute as @a[distance=0.01..10] run attribute @s minecraft:generic.knockback_resistance base set 0.25
 
 #
-execute as @a run attribute @s[scores={sword_boost=1..}] minecraft:generic.movement_speed base set .120
+execute as @a run attribute @s[scores={sword_boost=1..}] minecraft:generic.movement_speed base set .119
 scoreboard players remove @s[scores={sword_boost=1..}] sword_boost 1

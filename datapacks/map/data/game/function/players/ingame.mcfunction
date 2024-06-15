@@ -158,3 +158,6 @@ execute as @s[scores={invis=..0}] at @s run function game:players/movepart
 
 #Invul
 scoreboard players remove @s Invul 1
+
+#Effect immune (Coming from portals)
+scoreboard players remove @s[scores={effect_immune=0..}] effect_immune 1

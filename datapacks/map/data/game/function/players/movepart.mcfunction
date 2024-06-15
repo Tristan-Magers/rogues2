@@ -56,6 +56,14 @@ scoreboard players set @s shift 0
 scoreboard players set @s sneakd 0
 scoreboard players set @s jump 0
 
+execute as @s[scores={effect_immune=1..}] at @s if block ~0.3 ~1 ~0.3 minecraft:cobweb run setblock ~0.3 ~1 ~0.3 air
+execute as @s[scores={effect_immune=1..}] at @s if block ~-0.3 ~1 ~0.3 minecraft:cobweb run setblock ~-0.3 ~1 ~0.3 air
+execute as @s[scores={effect_immune=1..}] at @s if block ~0.3 ~1 ~-0.3 minecraft:cobweb run setblock ~0.3 ~1 ~-0.3 air
+execute as @s[scores={effect_immune=1..}] at @s if block ~-0.3 ~1 ~-0.3 minecraft:cobweb run setblock ~-0.3 ~1 ~-0.3 air
+execute as @s[scores={effect_immune=1..}] at @s if block ~0.3 ~ ~0.3 minecraft:cobweb run setblock ~0.3 ~ ~0.3 air
+execute as @s[scores={effect_immune=1..}] at @s if block ~-0.3 ~ ~0.3 minecraft:cobweb run setblock ~-0.3 ~ ~0.3 air
+execute as @s[scores={effect_immune=1..}] at @s if block ~0.3 ~ ~-0.3 minecraft:cobweb run setblock ~0.3 ~ ~-0.3 air
+execute as @s[scores={effect_immune=1..}] at @s if block ~-0.3 ~ ~-0.3 minecraft:cobweb run setblock ~-0.3 ~ ~-0.3 air
 execute as @s at @s if block ~ ~ ~ minecraft:cobweb run particle minecraft:spit ~ ~1 ~ .1 .3 .1 0 1
 
 scoreboard players add @s[scores={run=..0,invisoff=..0,noname=..50},tag=!lobby] noname 4

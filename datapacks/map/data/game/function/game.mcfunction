@@ -39,7 +39,8 @@ scoreboard players set @a[x=69,y=38,z=-30,distance=..20] press 0
 
 scoreboard players add @e[type=arrow] arrowlife 1
 
-time add 12
+execute unless entity @a[tag=ingame,tag=!lobby] run time set 12500
+execute if entity @a[tag=ingame,tag=!lobby] run time add 12
 
 kill @e[type=minecraft:experience_orb]
 xp set @a 0 levels

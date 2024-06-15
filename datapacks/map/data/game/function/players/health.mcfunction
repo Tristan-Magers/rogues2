@@ -93,7 +93,7 @@ execute as @s[scores={healthshow=..0,class=2}] at @s run function game:character
 
 #
 tag @s remove project_hit
-tag @s[scores={healthreal=1..,class=6,notele=1..}] add project_hit
+tag @s[scores={healthreal=2..,class=6,notele=1..}] add project_hit
 execute as @s[tag=project_hit] at @s run say half
 execute as @s[tag=project_hit] at @s run scoreboard players operation @s healthreal /= .2 .num
 execute as @s[tag=project_hit] at @s run scoreboard players operation @s healthshow += @s healthreal

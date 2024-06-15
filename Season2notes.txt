@@ -139,15 +139,17 @@ Snow Temple
 * Patch 2.1 Notes *
 
 [General]
-- Pluto is now the default class (previously Sparket)
 - Improved UI 
 - Minor improvements to tutorial
 - Turorial triggers automatically on joining
+- Pluto is now the default class (previously Sparket)
+- Improved item descriptions
 
 [General Gameplay]
 - Becoming visible no longer plays a sound for others or yourself
 - Sneaking is 33% faster
 - For every player count over 2, souls heal an extra 4
+- Coming out of portal makes you immune disruptive moves for 1.5s
 - Fire in general has been reworked
     - Fire deals damage 0.5s faster (every 1.5s -> every 1s)
     - Fire no longer covers player in flames
@@ -163,6 +165,7 @@ Snow Temple
 
 Sparket
 - Fire Fist does 1 less damage (5 -> 4)
+- Fire Fist charges 25% slower (0.5s -> 0.625s)
 - Fire Fist has 25% less knockback (still level 1 but players take 25% less knockback [154% of normal])
 - Fire Fist gives +1% more speed speed (25% -> 26%)
 - Fire Fist gives 1s less fire (4s -> 3s) (doesn't impact damage {3}) [see changes in general]
@@ -178,7 +181,7 @@ Emma
 
 Halt
 - Draining Claws get 2 knockback (previously none)
-- Draining Claw heals 1 more (for each value) (2-4)
+- Draining Claw heals 1 more (for each value) (1-3 -> 2-4)
 - Draining Claw charges 19% faster (2.38s -> 2s)
 - Draining Claws last 1s longer (7s -> 8s)
 - Hover no longer gives visibility (still gives particles)
@@ -188,11 +191,11 @@ Halt
 - Spider causes 0.5s less glowing (3s -> 2.5s)
 - Spider causes 2 levels less of slowness (level 3 -> level 1)
 - Webs move 25% faster (20 b/s -> 25 b/s)
-- Webs take 0.3s to activate on hit
+- Webs take 0.25s to activate on hit
 
 Vohelm
 - Max knife has knockback (weakened knockback [see Sparket changes])
-- Upgrading knife boosts speed by 20% for 1.6s (stacks with other speed)
+- Upgrading knife boosts speed by 19% for 1.6s (stacks with other speed)
 - Sacred Knife now +5 speed for all levels (previously started at 0% and gained to 16%)
 - All knife levels cost 2 mana (previously 2 and 3 costed 3)
 - Totem health reduced by 2 (5 -> 3)
@@ -216,11 +219,11 @@ Pluto
 Barbose
 - Seeking Axe pulses it's pointer every 0.5s (instead of constantly)
 - Seeking Axe gives 2% less speed (15% -> 13%)
-- (!!!) Decoy replaced with Project
+- Decoy replaced with Project
 - Returning to Portal 0.5s slower (1s -> 1.5s)
 - Replaced returning to portal blindness with darkness
 - Returning to portal slowness 4 levels higher (level 3 -> level 7)
-- (!!!) Blackhole replaced with Smoke Wall
+- Blackhole replaced with Smoke Wall
 
 [Bug Fixes]
 - Graphical fix for Island Temple map select build
@@ -230,4 +233,4 @@ Barbose
 - Fixed version sign linking to wrong patchnotes
 - Mountain Temple sometimes spawns points with incorrect timings
 - Trident Riptide hits would count as critical hits
-- *Wrong player is sometimes announced as winner
+- Wrong player is sometimes announced as winner

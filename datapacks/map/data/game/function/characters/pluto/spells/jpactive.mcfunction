@@ -16,18 +16,18 @@ execute as @s[scores={gertimer=150..}] at @s run tp @s ~ ~ ~ ~2 ~
 execute as @s[scores={gertimer=175..}] at @s run tp @s ~ ~ ~ ~2 ~
 execute as @s[scores={gertimer=200..}] at @s run tp @s ~ ~ ~ ~2 ~
 
-execute as @s[scores={gertimer=20..}] at @s if entity @a[distance=..1.3,gamemode=adventure,tag=!nofalldam] run playsound minecraft:block.beacon.power_select master @a ~ ~ ~ .5 1.3
-execute as @s[scores={gertimer=20..}] at @s if entity @a[distance=..1.3,gamemode=adventure,tag=!nofalldam] run particle minecraft:cloud ~ ~1 ~ .1 .1 .1 .1 10 force
+execute as @s[scores={gertimer=20..}] at @s if entity @a[distance=..1.3,gamemode=adventure,tag=!nofalldam,scores={effect_immune=..0}] run playsound minecraft:block.beacon.power_select master @a ~ ~ ~ .5 1.3
+execute as @s[scores={gertimer=20..}] at @s if entity @a[distance=..1.3,gamemode=adventure,tag=!nofalldam,scores={effect_immune=..0}] run particle minecraft:cloud ~ ~1 ~ .1 .1 .1 .1 10 force
 
-execute as @s[scores={gertimer=20..}] at @s if entity @a[distance=..1.3,gamemode=adventure,tag=nofalldam,scores={glowing=..20}] run playsound minecraft:block.beacon.power_select master @a ~ ~ ~ .5 1.3
-execute as @s[scores={gertimer=20..}] at @s if entity @a[distance=..1.3,gamemode=adventure,tag=nofalldam,scores={glowing=..20}] run particle minecraft:cloud ~ ~1 ~ .1 .1 .1 .1 10 force
+execute as @s[scores={gertimer=20..}] at @s if entity @a[distance=..1.3,gamemode=adventure,tag=nofalldam,scores={glowing=..20,effect_immune=..0}] run playsound minecraft:block.beacon.power_select master @a ~ ~ ~ .5 1.3
+execute as @s[scores={gertimer=20..}] at @s if entity @a[distance=..1.3,gamemode=adventure,tag=nofalldam,scores={glowing=..20,effect_immune=..0}] run particle minecraft:cloud ~ ~1 ~ .1 .1 .1 .1 10 force
 
-execute as @s[scores={gertimer=20..}] at @s run scoreboard players set @a[distance=..1.3,gamemode=adventure] invisoff 40
-execute as @s[scores={gertimer=20..}] at @s run effect give @a[distance=..1.3,gamemode=adventure] minecraft:levitation 1 12 true
-execute as @s[scores={gertimer=20..}] at @s run effect give @a[distance=..1.3,gamemode=adventure] minecraft:speed 2 2 true
+execute as @s[scores={gertimer=20..}] at @s run scoreboard players set @a[distance=..1.3,gamemode=adventure,scores={effect_immune=..0}] invisoff 40
+execute as @s[scores={gertimer=20..}] at @s run effect give @a[distance=..1.3,gamemode=adventure,scores={effect_immune=..0}] minecraft:levitation 1 12 true
+execute as @s[scores={gertimer=20..}] at @s run effect give @a[distance=..1.3,gamemode=adventure,scores={effect_immune=..0}] minecraft:speed 2 2 true
 #execute as @s[scores={gertimer=20..}] at @s run effect give @a[distance=..1.3,gamemode=adventure] minecraft:slow_falling 2 0 true
-execute as @s[scores={gertimer=20..}] at @s run tag @a[distance=..1.5,gamemode=adventure] add nofalldam
-execute as @s[scores={gertimer=20..}] at @s run scoreboard players set @a[distance=..1.5,gamemode=adventure] nofalldamage 3
+execute as @s[scores={gertimer=20..}] at @s run tag @a[distance=..1.5,gamemode=adventure,scores={effect_immune=..0}] add nofalldam
+execute as @s[scores={gertimer=20..}] at @s run scoreboard players set @a[distance=..1.5,gamemode=adventure,scores={effect_immune=..0}] nofalldamage 3
 
 execute as @s[scores={gertimer=130}] at @s run playsound minecraft:block.beacon.power_select master @a ~ ~ ~ .7 0
 execute as @s[scores={gertimer=130}] at @s run playsound minecraft:block.beacon.deactivate master @a ~ ~ ~ .7 1.4

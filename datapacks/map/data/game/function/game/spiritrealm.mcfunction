@@ -18,6 +18,7 @@ scoreboard players set @s run 0
 scoreboard players set @s jump 0
 scoreboard players set @s partdelay 0
 scoreboard players set @s noname 50
+scoreboard players set @s effect_immune 30
 xp set @s 0 points
 
 tag @s[tag=game] remove spirlob
