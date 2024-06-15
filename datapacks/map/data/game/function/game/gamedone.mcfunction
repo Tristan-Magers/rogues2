@@ -9,5 +9,7 @@ tag @a[tag=tpback] remove tpback
 
 tag @a[tag=tpno] remove tpno
 
+bossbar set minecraft:time visible false
+
 tag @a remove game
 #tag @a remove spec

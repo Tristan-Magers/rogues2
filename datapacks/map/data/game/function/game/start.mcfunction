@@ -22,10 +22,10 @@ execute as @e[scores={map=6}] run function game:game/maps/map6/spawn
 time set 0
 
 scoreboard objectives remove Score
-scoreboard objectives add Score dummy
+scoreboard objectives add Score dummy {"text":"Souls","font":"fancy"}
 scoreboard objectives setdisplay sidebar Score
 
-scoreboard players set Time Score 270
+scoreboard players set Time .data 270
 scoreboard players set @e[name="Time Left"] Time 5400
 scoreboard players set @e[name="Time Left"] TimeS 20
 

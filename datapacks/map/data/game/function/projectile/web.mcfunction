@@ -4,7 +4,9 @@ execute as @s[scores={move=1..700}] at @s run function game:projectile/webmove
 execute as @s[scores={move=1..700}] at @s run function game:projectile/webmove
 execute as @s[scores={move=1..700}] at @s run function game:projectile/webmove
 
-execute as @s[scores={move=994}] at @s run particle minecraft:poof ~ ~0.6 ~ 0.1 0.5 0.1 0.2 25 force
+execute as @s[scores={move=995}] at @s run particle minecraft:explosion ~ ~0.6 ~ 0.1 0.5 0.1 0.25 12 force
+execute as @s[scores={move=995}] at @s run particle minecraft:poof ~ ~0.6 ~ 0.1 0.5 0.1 0.25 12 force
+execute as @s[scores={move=995..999}] at @s run particle minecraft:poof ~ ~0.6 ~ 0.1 0.5 0.1 0.1 3 force
 
 execute as @s[scores={move=1000}] at @s run fill ^ ^-.4 ^ ^ ^1.6 ^ cobweb replace air
 execute as @s[scores={move=1000}] at @s run fill ^1 ^-.4 ^ ^1 ^1.6 ^ cobweb replace air

@@ -63,14 +63,14 @@ playsound minecraft:block.ancient_debris.break master @s[nbt={SelectedItem:{id:"
 playsound minecraft:block.note_block.basedrum master @s[nbt={SelectedItem:{id:"minecraft:spider_eye"}}] ~ ~ ~ 1 2
 playsound minecraft:block.note_block.basedrum master @s[nbt={SelectedItem:{id:"minecraft:magma_cream"}}] ~ ~ ~ 1 1
 
-title @s[nbt={SelectedItem:{id:"minecraft:spider_eye"}}] title {"text":"Ready","color":"dark_aqua"}
-title @s[nbt={SelectedItem:{id:"minecraft:magma_cream"}}] title {"text":"Not Ready","color":"red"}
+title @s[nbt={SelectedItem:{id:"minecraft:spider_eye"}}] title {"text":"Ready","color":"dark_aqua","font":"fancy"}
+title @s[nbt={SelectedItem:{id:"minecraft:magma_cream"}}] title {"text":"Not Ready","color":"red","font":"fancy"}
 
 tag @s[nbt={SelectedItem:{id:"minecraft:spider_eye"}}] add ready
 tag @s[nbt={SelectedItem:{id:"minecraft:magma_cream"}}] remove ready
 
-title @s[nbt={SelectedItem:{id:"minecraft:iron_horse_armor"}}] title {"text":"Music Disabled","color":"red"}
-title @s[nbt={SelectedItem:{id:"minecraft:golden_horse_armor"}}] title {"text":"Music Enabled","color":"dark_aqua"}
+title @s[nbt={SelectedItem:{id:"minecraft:iron_horse_armor"}}] title {"text":"Music Disabled","color":"red","font":"fancy"}
+title @s[nbt={SelectedItem:{id:"minecraft:golden_horse_armor"}}] title {"text":"Music Enabled","color":"dark_aqua","font":"fancy"}
 
 stopsound @s[nbt={SelectedItem:{id:"minecraft:iron_horse_armor"}}]
 tag @s[nbt={SelectedItem:{id:"minecraft:iron_horse_armor"}}] add nomusic

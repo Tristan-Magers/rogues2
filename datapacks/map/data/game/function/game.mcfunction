@@ -1,6 +1,10 @@
 effect give @a minecraft:fire_resistance 10 10 true
 execute as @a run attribute @s minecraft:generic.knockback_resistance base set 0.0
 
+#new player
+scoreboard players set @a[tag=!has_joined] tutorialtime 1
+tag @a add has_joined
+
 #leave
 scoreboard players add @a Leave 0
 execute as @a[scores={Leave=0..}] at @s run function game:players/leave
@@ -223,6 +227,9 @@ scoreboard players set @a damageTaken 0
 scoreboard players set @a 10 10
 
 effect clear @a minecraft:bad_omen
+
+scoreboard players add @e[tag=turoial_view] t1 1
+kill @e[tag=turoial_view,scores={t1=800..}]
 
 #
 #execute as @a[tag=water_remove_target] at @s run function game:test2

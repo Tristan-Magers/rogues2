@@ -26,16 +26,16 @@ gamemode spectator @s[scores={respawn=201}]
 execute as @s[scores={respawn=220}] at @s run tp @s ~ ~1 ~
 execute as @s[scores={respawn=0..200}] at @s run tp @s -11 39 197 90 0
 
-title @s[scores={respawn=200}] title [{"text":"Respawn in "},{"text":"10","color":"gray"}]
-title @s[scores={respawn=180}] title [{"text":"Respawn in "},{"text":"9","color":"dark_red"}]
-title @s[scores={respawn=160}] title [{"text":"Respawn in "},{"text":"8","color":"dark_red"}]
-title @s[scores={respawn=140}] title [{"text":"Respawn in "},{"text":"7","color":"red"}]
-title @s[scores={respawn=120}] title [{"text":"Respawn in "},{"text":"6","color":"red"}]
-title @s[scores={respawn=100}] title [{"text":"Respawn in "},{"text":"5","color":"gold"}]
-title @s[scores={respawn=80}] title [{"text":"Respawn in "},{"text":"4","color":"gold"}]
-title @s[scores={respawn=60}] title [{"text":"Respawn in "},{"text":"3","color":"dark_green"}]
-title @s[scores={respawn=40}] title [{"text":"Respawn in "},{"text":"2","color":"dark_green"}]
-title @s[scores={respawn=20}] title [{"text":"Respawn in "},{"text":"1","color":"green"}]
+title @s[scores={respawn=200}] title [{"text":"Respawn in ","font":"fancy"},{"text":"10","color":"gray","font":"fancy"}]
+title @s[scores={respawn=180}] title [{"text":"Respawn in ","font":"fancy"},{"text":"9","color":"dark_red","font":"fancy"}]
+title @s[scores={respawn=160}] title [{"text":"Respawn in ","font":"fancy"},{"text":"8","color":"dark_red","font":"fancy"}]
+title @s[scores={respawn=140}] title [{"text":"Respawn in ","font":"fancy"},{"text":"7","color":"red","font":"fancy"}]
+title @s[scores={respawn=120}] title [{"text":"Respawn in ","font":"fancy"},{"text":"6","color":"red","font":"fancy"}]
+title @s[scores={respawn=100}] title [{"text":"Respawn in ","font":"fancy"},{"text":"5","color":"gold","font":"fancy"}]
+title @s[scores={respawn=80}] title [{"text":"Respawn in ","font":"fancy"},{"text":"4","color":"gold","font":"fancy"}]
+title @s[scores={respawn=60}] title [{"text":"Respawn in ","font":"fancy"},{"text":"3","color":"dark_green","font":"fancy"}]
+title @s[scores={respawn=40}] title [{"text":"Respawn in ","font":"fancy"},{"text":"2","color":"dark_green","font":"fancy"}]
+title @s[scores={respawn=20}] title [{"text":"Respawn in ","font":"fancy"},{"text":"1","color":"green","font":"fancy"}]
 title @s[scores={respawn=1}] title [{"text":""}]
 
 title @s[scores={respawn=1..}] times 0 30 10

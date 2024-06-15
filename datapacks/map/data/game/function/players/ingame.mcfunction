@@ -95,6 +95,7 @@ execute if score @s fire_time > @s fire_time_t run scoreboard players set @s[sco
 execute if score @s fire_time > @s fire_time_t run scoreboard players set @s invisoff 6
 scoreboard players operation @s fire_time_t = @s fire_time
 scoreboard players remove @s fire_time_effect 1
+execute as @s at @s if block ~ ~ ~ water run scoreboard players set @s fire_time_effect 0
 tag @s remove nofire
 tag @s[scores={fire_time_effect=..0}] add nofire
 tag @s[scores={Invul=1..}] add nofire

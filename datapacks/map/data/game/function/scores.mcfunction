@@ -21,8 +21,17 @@ scoreboard objectives add dy dummy
 scoreboard objectives add dz dummy
 scoreboard objectives add class dummy
 
+scoreboard objectives add .data dummy
+
+scoreboard objectives add chibi_icon dummy
+
+scoreboard objectives add .num dummy
+
 scoreboard objectives add press minecraft.used:minecraft.carrot_on_a_stick
 scoreboard objectives add jump minecraft.custom:minecraft.jump
 scoreboard objectives add shift minecraft.custom:minecraft.sneak_time
 scoreboard objectives add run minecraft.custom:minecraft.sprint_one_cm
 scoreboard objectives add walk minecraft.custom:minecraft.walk_one_cm
+
+#
+scoreboard players set .2 .num 2

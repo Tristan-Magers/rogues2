@@ -139,6 +139,12 @@ Snow Temple
 * Patch 2.1 Notes *
 
 [General]
+- Pluto is now the default class (previously Sparket)
+- Improved UI 
+- Minor improvements to tutorial
+- Turorial triggers automatically on joining
+
+[General Gameplay]
 - Becoming visible no longer plays a sound for others or yourself
 - Sneaking is 33% faster
 - For every player count over 2, souls heal an extra 4
@@ -156,6 +162,7 @@ Snow Temple
 [Characters]
 
 Sparket
+- Fire Fist does 1 less damage (5 -> 4)
 - Fire Fist has 25% less knockback (still level 1 but players take 25% less knockback [154% of normal])
 - Fire Fist gives +1% more speed speed (25% -> 26%)
 - Fire Fist gives 1s less fire (4s -> 3s) (doesn't impact damage {3}) [see changes in general]
@@ -185,20 +192,21 @@ Halt
 
 Vohelm
 - Max knife has knockback (weakened knockback [see Sparket changes])
-- Upgrading knife boosts speed by 19% for 2.15s (stacks with other speed)
+- Upgrading knife boosts speed by 20% for 1.6s (stacks with other speed)
 - Sacred Knife now +5 speed for all levels (previously started at 0% and gained to 16%)
 - All knife levels cost 2 mana (previously 2 and 3 costed 3)
 - Totem health reduced by 2 (5 -> 3)
-- Totem range reduced by 0.5 (7 -> 6.5)
+- Totem range reduced by 0.25 (7 -> 6.75)
 - Totem explosion now has 0.75 fuse (includes sounds and effects)
-- Thorns have 0.3s delay before activating
+- Thorns have 0.25s delay before activating
 - Thorns flash goes 0.3 block further (2.8 -> 3.1)
-
 - Shield now puts out fire [see changes in general]
 - Totems take no fall damage
 - Knife downgrading plays a sound (just for you) (quality of life)
 - Knife model/texture/sound has had minor improvements
 - Knife clarifies that off-handing will reset levels (in lore)
+- Sacred Berries cost 1 less (5 -> 4)
+- Sacred Berries heal 1 less (5 -> 4)
 
 Pluto
 - Shadow Spikes shoot 2 less spikes (10 -> 8)
@@ -209,7 +217,7 @@ Barbose
 - Seeking Axe pulses it's pointer every 0.5s (instead of constantly)
 - Seeking Axe gives 2% less speed (15% -> 13%)
 - (!!!) Decoy replaced with Project
-- Returning to Portal 1s slower (1s -> 2s)
+- Returning to Portal 0.5s slower (1s -> 1.5s)
 - Replaced returning to portal blindness with darkness
 - Returning to portal slowness 4 levels higher (level 3 -> level 7)
 - (!!!) Blackhole replaced with Smoke Wall
@@ -220,5 +228,6 @@ Barbose
 - Burnout would would cancel Zero-Gravity slow falling
 - Soul Send does not list visibility as feature
 - Fixed version sign linking to wrong patchnotes
-- *Mountain Temple sometimes spawns points with incorrect timings
+- Mountain Temple sometimes spawns points with incorrect timings
+- Trident Riptide hits would count as critical hits
 - *Wrong player is sometimes announced as winner

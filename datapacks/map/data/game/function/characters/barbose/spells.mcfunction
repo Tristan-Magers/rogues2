@@ -5,9 +5,6 @@ execute as @s[nbt={SelectedItem:{id:"minecraft:glowstone_dust"}}] at @s run item
 
 #project
 execute as @s[nbt={SelectedItem:{id:"minecraft:green_dye"}}] at @s run function game:characters/barbose/spells/project
-scoreboard players set @s[nbt={SelectedItem:{id:"minecraft:green_dye"}}] project_cool 200
-scoreboard players set @s[nbt={SelectedItem:{id:"minecraft:green_dye"}}] nocap 100
-scoreboard players set @s[nbt={SelectedItem:{id:"minecraft:green_dye"}}] notele 100
 clear @s[nbt={SelectedItem:{id:"minecraft:green_dye"}}] green_dye
 
 #dummy (replaced with project)
@@ -33,7 +30,7 @@ scoreboard players remove @s[nbt={SelectedItem:{id:"minecraft:red_dye"}}] Mana 3
 clear @s[nbt={SelectedItem:{id:"minecraft:red_dye"}}] red_dye
 
 #go to portal
-scoreboard players set @s[scores={portal=..9,portalcool=..0},nbt={SelectedItem:{id:"minecraft:cocoa_beans"}}] invisoff 70
+scoreboard players set @s[scores={portal=..9,portalcool=..0},nbt={SelectedItem:{id:"minecraft:cocoa_beans"}}] invisoff 60
 effect give @s[scores={portal=..9,portalcool=..0},nbt={SelectedItem:{id:"minecraft:cocoa_beans"}}] darkness 3
 effect give @s[scores={portal=..9,portalcool=..0},nbt={SelectedItem:{id:"minecraft:cocoa_beans"}}] slowness 2 6
 
@@ -41,7 +38,7 @@ execute as @s[scores={portal=..9,portalcool=..0},nbt={SelectedItem:{id:"minecraf
 execute as @s[scores={portal=..9,portalcool=..0},nbt={SelectedItem:{id:"minecraft:cocoa_beans"}}] at @s run playsound minecraft:entity.enderman.teleport master @a ~ ~ ~ 1 0
 execute as @s[scores={portal=..9,portalcool=..0},nbt={SelectedItem:{id:"minecraft:cocoa_beans"}}] at @s run playsound minecraft:entity.enderman.teleport master @a ~ ~ ~ 1 .5
 
-scoreboard players set @s[scores={portal=..9,portalcool=..0},nbt={SelectedItem:{id:"minecraft:cocoa_beans"}}] portal 50
+scoreboard players set @s[scores={portal=..9,portalcool=..0},nbt={SelectedItem:{id:"minecraft:cocoa_beans"}}] portal 40
 
 #wall
 execute as @s[nbt={SelectedItem:{id:"minecraft:ink_sac"}}] at @s run function game:characters/barbose/spells/smoke_wall_start

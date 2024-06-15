@@ -52,8 +52,8 @@ execute as @s[scores={timer=20..}] at @s positioned ~ ~3.5 ~ run scoreboard play
 #execute as @s[scores={timer=20..}] at @s positioned ~ ~3 ~ run scoreboard players set @a[distance=..1.2,scores={poison2=..19}] poison2 36
 #execute as @s[scores={timer=20..}] at @s positioned ~ ~3.5 ~ run scoreboard players set @a[distance=..1.2,scores={poison2=..19}] poison2 36
 
-execute as @s[scores={timer=1}] at @s positioned ~ ~1 ~ run playsound minecraft:entity.warden.dig master @a ~ ~ ~ 0.4 2
+execute as @s[scores={timer=1}] at @s positioned ~ ~1 ~ run playsound minecraft:entity.warden.dig master @a ~ ~ ~ 0.3 2
 execute as @s[scores={timer=1}] at @s positioned ~ ~1 ~ run playsound minecraft:entity.generic.extinguish_fire master @a ~ ~ ~ 1 2
 execute as @s[scores={timer=15}] at @s positioned ~ ~1 ~ run playsound minecraft:entity.generic.extinguish_fire master @a ~ ~ ~ 1 0
-execute as @s[scores={timer=20}] at @s positioned ~ ~1 ~ run playsound minecraft:ambient.underwater.loop.additions.ultra_rare master @a ~ ~ ~ 1 2
+execute as @s[scores={timer=10}] at @s positioned ~ ~1 ~ run playsound minecraft:entity.warden.attack_impact master @a ~ ~ ~ 0.4 0
 execute as @s[scores={timer=120}] at @s positioned ~ ~1 ~ run playsound minecraft:entity.generic.extinguish_fire master @a ~ ~ ~ 1 1.5

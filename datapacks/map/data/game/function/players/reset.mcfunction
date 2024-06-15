@@ -16,7 +16,7 @@ scoreboard players set @s wtimer 0
 scoreboard players set @s btimer 0
 
 scoreboard players add @s class 0
-scoreboard players set @s[scores={class=0}] class 1
+scoreboard players set @s[scores={class=0}] class 4
 
 scoreboard players set @s cooljp 0
 scoreboard players set @s coolblack 0

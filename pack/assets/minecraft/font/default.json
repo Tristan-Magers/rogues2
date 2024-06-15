@@ -1,0 +1,11 @@
+{
+    "providers": [
+      {
+        "type": "bitmap",
+        "file": "minecraft:font/name_back.png",
+        "ascent": 40,
+        "height": 80,
+        "chars": [ "ބ" ]
+      }
+    ]
+}

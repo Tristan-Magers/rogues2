@@ -92,41 +92,77 @@ execute as @s[scores={healthshow=..0}] at @s positioned ~ ~.5 ~ run tp @e[distan
 execute as @s[scores={healthshow=..0,class=2}] at @s run function game:characters/vohelm/die
 
 #
-execute as @s[scores={healthreal=2..,class=6,healthshow=1..}] at @s run function game:characters/barbose/active/check_save_spot
-execute as @s[scores={healthreal=2..,class=6,healthshow=..0}] at @s run function game:characters/barbose/active/remove_save_spot
+tag @s remove project_hit
+tag @s[scores={healthreal=1..,class=6,notele=1..}] add project_hit
+execute as @s[tag=project_hit] at @s run say half
+execute as @s[tag=project_hit] at @s run scoreboard players operation @s healthreal /= .2 .num
+execute as @s[tag=project_hit] at @s run scoreboard players operation @s healthshow += @s healthreal
+execute as @s[tag=project_hit,scores={healthshow=1..}] at @s run function game:characters/barbose/active/check_save_spot
+execute as @s[tag=project_hit,scores={healthshow=..0}] at @s run function game:characters/barbose/active/remove_save_spot
 
 ## Visibility text
-execute as @s[scores={healthshow=1..}] at @s run execute as @e[tag=stealth] at @s run data merge entity @s {CustomName:'{"text":"Invisible"}'}
+execute as @s[scores={healthshow=1..}] at @s run execute as @e[tag=stealth] at @s run data merge entity @s {CustomName:'{"text":"±Invisible±"}'}
 execute as @s[scores={healthshow=1..}] at @s run team join invisible @e[tag=stealth]
-execute as @s[scores={healthshow=1..,particles=1..}] at @s run execute as @e[tag=stealth] at @s run data merge entity @s {CustomName:'{"text":"Smoking"}'}
+execute as @s[scores={healthshow=1..,particles=1..}] at @s run execute as @e[tag=stealth] at @s run data merge entity @s {CustomName:'{"text":"±±Smoking±±"}'}
 execute as @s[scores={healthshow=1..,particles=1..}] at @s run team join smoke @e[tag=stealth]
-execute as @s[scores={healthshow=1..,plutoregen=0..}] at @s run execute as @e[tag=stealth] at @s run data merge entity @s {CustomName:'{"text":"Hearts"}'}
+execute as @s[scores={healthshow=1..,plutoregen=0..}] at @s run execute as @e[tag=stealth] at @s run data merge entity @s {CustomName:'{"text":"±±±Heart±±±"}'}
 execute as @s[scores={healthshow=1..,plutoregen=0..}] at @s run team join visible @e[tag=stealth]
-execute as @s[scores={healthshow=1..,particles=1..}] at @s if block ~ ~ ~ water run execute as @e[tag=stealth] at @s run data merge entity @s {CustomName:'{"text":"Bubbles"}'}
+execute as @s[scores={healthshow=1..,particles=1..}] at @s if block ~ ~ ~ water run scoreboard players set @s fire_time_effect 0
+execute as @s[scores={healthshow=1..,particles=1..}] at @s if block ~ ~ ~ water run execute as @e[tag=stealth] at @s run data merge entity @s {CustomName:'{"text":"±±Bubbles±±"}'}
 execute as @s[scores={healthshow=1..,particles=1..}] at @s if block ~ ~ ~ water run team join shield @e[tag=stealth]
-execute as @s[scores={healthshow=1..,item=1}] at @s run execute as @e[tag=stealth] at @s run data merge entity @s {CustomName:'{"text":"Item"}'}
+execute as @s[scores={healthshow=1..,item=1}] at @s run execute as @e[tag=stealth] at @s run data merge entity @s {CustomName:'{"text":"±±±±Item±±±"}'}
 execute as @s[scores={healthshow=1..,item=1}] at @s run team join smoke @e[tag=stealth]
-execute as @s[scores={healthshow=1..,item=2}] at @s run execute as @e[tag=stealth] at @s run data merge entity @s {CustomName:'{"text":"Weapon/Mask"}'}
+execute as @s[scores={healthshow=1..,item=2}] at @s run execute as @e[tag=stealth] at @s run data merge entity @s {CustomName:'{"text":"±Item/Mask±"}'}
 execute as @s[scores={healthshow=1..,item=2}] at @s run team join smoke @e[tag=stealth]
-execute as @s[scores={healthshow=1..,invisoff=-2..}] at @s run execute as @e[tag=stealth] at @s run data merge entity @s {CustomName:'{"text":"Visible"}'}
+execute as @s[scores={healthshow=1..,invisoff=-2..}] at @s run execute as @e[tag=stealth] at @s run data merge entity @s {CustomName:'{"text":"±±Visible±±"}'}
 execute as @s[scores={healthshow=1..,invisoff=-2..}] at @s run team join visible @e[tag=stealth]
-execute as @s[scores={healthshow=1..,fire_time_effect=1..}] at @s run execute as @e[tag=stealth] at @s run data merge entity @s {CustomName:'{"text":"FIRE!!"}'}
+execute as @s[scores={healthshow=1..,fire_time_effect=1..}] at @s run execute as @e[tag=stealth] at @s run data merge entity @s {CustomName:'{"text":"±±FIRE!!!±±"}'}
 execute as @s[scores={healthshow=1..,fire_time_effect=1..}] at @s run team join visible @e[tag=stealth]
-execute as @s[scores={healthshow=1..,shield=1..}] at @s run execute as @e[tag=stealth] at @s run data merge entity @s {CustomName:'{"text":"Armor"}'}
+execute as @s[scores={healthshow=1..,shield=1..}] at @s run execute as @e[tag=stealth] at @s run data merge entity @s {CustomName:'{"text":"±±±Armor±±±"}'}
 execute as @s[scores={healthshow=1..,shield=1..}] at @s run team join shield @e[tag=stealth]
-execute as @s[scores={healthshow=1..,noname=..-1,invisoff=-2..},tag=!lobby] at @s run execute as @e[tag=stealth] at @s run data merge entity @s {CustomName:'{"text":"NAMETAG"}'}
+execute as @s[scores={healthshow=1..,noname=..-1,invisoff=-2..},tag=!lobby] at @s run execute as @e[tag=stealth] at @s run data merge entity @s {CustomName:'{"text":"±±NAMETAG±±"}'}
 execute as @s[scores={healthshow=1..,noname=..-1,invisoff=-2..},tag=!lobby] at @s run team join darkred @e[tag=stealth]
-execute as @s[scores={healthshow=1..,glowing=1..}] at @s run execute as @e[tag=stealth] at @s run data merge entity @s {CustomName:'{"text":"GLOWING"}'}
+execute as @s[scores={healthshow=1..,glowing=1..}] at @s run execute as @e[tag=stealth] at @s run data merge entity @s {CustomName:'{"text":"±±GLOWING±±"}'}
 execute as @s[scores={healthshow=1..,glowing=1..}] at @s run team join glowing @e[tag=stealth]
 
 scoreboard players set @s[scores={invisoff=0..}] item 2
 
+## Spacing for health and mana variance
+execute as @e[tag=mana_spacing] at @s run data merge entity @s {CustomName:'{"text":""}'}
+execute as @e[tag=health_spacing] at @s run data merge entity @s {CustomName:'{"text":""}'}
+execute as @s[scores={healthshow=..9}] at @s run execute as @e[tag=health_spacing] at @s run data merge entity @s {CustomName:'{"text":"±"}'}
+execute as @s[scores={Mana=..9}] at @s run execute as @e[tag=mana_spacing] at @s run data merge entity @s {CustomName:'{"text":"±"}'}
+
 ## Health text
-execute as @s[scores={healthshow=13..16}] at @s run title @s actionbar ["",{"text":"Health: ","bold":true},{"score":{"name":"@s","objective":"healthshow"},"color":"dark_green","bold":true},{"text":" Mana: ","bold":true},{"score":{"name":"@s","objective":"Mana"},"color":"gold","bold":true},{"text":" Visibility: ","bold":true},{"selector":"@e[tag=stealth]","bold":true}]
-execute as @s[scores={healthshow=9..12}] at @s run title @s actionbar ["",{"text":"Health: ","bold":true},{"score":{"name":"@s","objective":"healthshow"},"color":"gold","bold":true},{"text":" Mana: ","bold":true},{"score":{"name":"@s","objective":"Mana"},"color":"gold","bold":true},{"text":" Visibility: ","bold":true},{"selector":"@e[tag=stealth]","bold":true}]
-execute as @s[scores={healthshow=5..8}] at @s run title @s actionbar ["",{"text":"Health: ","bold":true},{"score":{"name":"@s","objective":"healthshow"},"color":"red","bold":true},{"text":" Mana: ","bold":true},{"score":{"name":"@s","objective":"Mana"},"color":"gold","bold":true},{"text":" Visibility: ","bold":true},{"selector":"@e[tag=stealth]","bold":true}]
-execute as @s[scores={healthshow=1..4}] at @s run title @s actionbar ["",{"text":"Health: ","bold":true},{"score":{"name":"@s","objective":"healthshow"},"color":"dark_red","bold":true},{"text":" Mana: ","bold":true},{"score":{"name":"@s","objective":"Mana"},"color":"gold","bold":true},{"text":" Visibility: ","bold":true},{"selector":"@e[tag=stealth]","bold":true}]
-execute as @s[scores={healthshow=17..}] at @s run title @s actionbar ["",{"text":"Health: ","bold":true},{"score":{"name":"@s","objective":"healthshow"},"color":"green","bold":true},{"text":" Mana: ","bold":true},{"score":{"name":"@s","objective":"Mana"},"color":"gold","bold":true},{"text":" Visibility: ","bold":true},{"selector":"@e[tag=stealth]","bold":true}]
+scoreboard players set @s chibi_icon 0
+
+scoreboard players set @s[scores={healthshow=1..}] chibi_icon 1
+scoreboard players set @s[scores={healthshow=1..,invisoff=-1..}] chibi_icon 2
+
+scoreboard players set @s[scores={class=4,healthshow=1..,invisoff=..-2}] chibi_icon 401
+scoreboard players set @s[scores={class=4,healthshow=1..,particles=1..}] chibi_icon 402
+scoreboard players set @s[scores={class=4,healthshow=1..,plutoregen=0..}] chibi_icon 410
+scoreboard players set @s[scores={class=4,healthshow=1..},nbt={SelectedItem:{id:"minecraft:bow"}}] chibi_icon 430
+scoreboard players set @s[scores={class=4,healthshow=1..,invisoff=-1..}] chibi_icon 400
+scoreboard players set @s[scores={class=4,healthshow=1..,invisoff=-1..,plutoregen=0..}] chibi_icon 450
+scoreboard players set @s[scores={class=4,healthshow=1..,invisoff=-1..},nbt={SelectedItem:{id:"minecraft:bow"}}] chibi_icon 440
+scoreboard players set @s[scores={class=4,healthshow=1..,plutospike=1..}] chibi_icon 420
+scoreboard players set @s[scores={class=4,healthshow=1..,glowing=1..}] chibi_icon 403
+
+execute as @s[scores={chibi_icon=1}] at @s run function game:players/health_bar_macro {"icon":0001}
+execute as @s[scores={chibi_icon=2}] at @s run function game:players/health_bar_macro {"icon":0002}
+
+execute as @s[scores={chibi_icon=401}] at @s run function game:players/health_bar_macro {"icon":0401}
+execute as @s[scores={chibi_icon=402}] at @s run function game:players/health_bar_macro {"icon":0402}
+execute as @s[scores={chibi_icon=410}] at @s run function game:players/health_bar_macro {"icon":0410}
+execute as @s[scores={chibi_icon=430}] at @s run function game:players/health_bar_macro {"icon":0430}
+execute as @s[scores={chibi_icon=400}] at @s run function game:players/health_bar_macro {"icon":0400}
+execute as @s[scores={chibi_icon=440}] at @s run function game:players/health_bar_macro {"icon":0440}
+execute as @s[scores={chibi_icon=450}] at @s run function game:players/health_bar_macro {"icon":0450}
+execute as @s[scores={chibi_icon=420}] at @s run function game:players/health_bar_macro {"icon":0420}
+execute as @s[scores={chibi_icon=403}] at @s run function game:players/health_bar_macro {"icon":0403}
+
+## Dies and REspawns
 scoreboard players set @s[scores={healthshow=..0},tag=!arena] respawn 221
 
 #arena

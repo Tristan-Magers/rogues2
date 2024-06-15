@@ -44,10 +44,10 @@ tellraw @s[tag=end,scores={upgradedtextcool=..0}] {"text":"Weapon fully upgraded
 execute as @s[tag=end,scores={upgradedtextcool=..0}] at @s run playsound minecraft:block.note_block.snare master @p ~ ~ ~ .4 .5
 scoreboard players set @s[tag=end] upgradedtextcool 10
 
-execute as @s[scores={Mana=2..},nbt={SelectedItem:{id:"minecraft:wooden_hoe"}}] at @s run scoreboard players set @s sword_boost 23
-execute as @s[scores={Mana=2..},nbt={SelectedItem:{id:"minecraft:stone_hoe"}}] at @s run scoreboard players set @s sword_boost 23
-execute as @s[scores={Mana=2..},nbt={SelectedItem:{id:"minecraft:iron_hoe"}}] at @s run scoreboard players set @s sword_boost 23
-execute as @s[scores={Mana=2..},nbt={SelectedItem:{id:"minecraft:golden_hoe"}}] at @s run scoreboard players set @s sword_boost 23
+execute as @s[scores={Mana=2..},nbt={SelectedItem:{id:"minecraft:wooden_hoe"}}] at @s run scoreboard players set @s sword_boost 32
+execute as @s[scores={Mana=2..},nbt={SelectedItem:{id:"minecraft:stone_hoe"}}] at @s run scoreboard players set @s sword_boost 32
+execute as @s[scores={Mana=2..},nbt={SelectedItem:{id:"minecraft:iron_hoe"}}] at @s run scoreboard players set @s sword_boost 32
+execute as @s[scores={Mana=2..},nbt={SelectedItem:{id:"minecraft:golden_hoe"}}] at @s run scoreboard players set @s sword_boost 32
 
 execute as @s[scores={Mana=2..},nbt={SelectedItem:{id:"minecraft:wooden_hoe"}}] at @s run playsound minecraft:item.armor.equip_turtle master @a ~ ~ ~ .4 1.1
 execute as @s[scores={Mana=2..},nbt={SelectedItem:{id:"minecraft:stone_hoe"}}] at @s run playsound minecraft:item.armor.equip_turtle master @a ~ ~ ~ .4 1.3

@@ -17,8 +17,8 @@ effect give @a[scores={blindstop=0}] minecraft:blindness 1 10
 scoreboard players set @a[x=-111,y=38,z=40.0,dx=6,dy=6,dz=1,distance=..20] blindstop 10
 scoreboard players set @a[x=-102,y=43,z=36.0,dz=6,dy=6,dx=1,distance=..20] blindstop 10
 
-title @a[x=-111,y=38,z=40.0,dx=6,dy=6,dz=1,distance=..20] title {"text":"Select Spirit","color":"blue"}
-title @a[x=-102,y=43,z=36.0,dz=6,dy=6,dx=1,distance=..20] title {"text":"Select Spirit","color":"blue"}
+title @a[x=-111,y=38,z=40.0,dx=6,dy=6,dz=1,distance=..20] title {"text":"Select Spirit","color":"blue","font":"fancy"}
+title @a[x=-102,y=43,z=36.0,dz=6,dy=6,dx=1,distance=..20] title {"text":"Select Spirit","color":"blue","font":"fancy"}
 
 effect give @a[x=-111,y=38,z=40.0,dx=6,dy=6,dz=1,distance=..20] minecraft:blindness 2
 effect give @a[x=-102,y=43,z=36.0,dz=6,dy=6,dx=1,distance=..20] minecraft:blindness 2

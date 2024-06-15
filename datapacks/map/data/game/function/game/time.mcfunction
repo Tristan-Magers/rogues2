@@ -1,5 +1,10 @@
 scoreboard players remove @s[scores={TimeS=1..}] TimeS 1
-execute as @s[scores={TimeS=0,Time=1..}] at @s run scoreboard players remove Time Score 1
+execute as @s[scores={TimeS=0,Time=1..}] at @s run scoreboard players remove Time .data 1
+
+execute as @s[scores={TimeS=0,Time=1..}] at @s run bossbar set minecraft:time name [{"text":"TIME ","bold":false,"color":"#b8ab9d","font":"fancy"},{"score":{"name":"Time","objective":".data"},"color":"#cac3bf","bold":false,"font":"fancy"}]
+execute as @s[scores={TimeS=0,Time=1..}] at @s run bossbar set minecraft:time visible true
+execute as @s[scores={TimeS=0,Time=1..}] at @s run bossbar set minecraft:time players @a[tag=ingame]
+
 scoreboard players set @s[scores={TimeS=0}] TimeS 20
 
 tag @e remove me
@@ -18,6 +23,10 @@ scoreboard players remove @s[scores={Time=0..}] Time 1
 execute as @s[scores={Time=0}] at @s run function game:game/testwin
 execute as @s[scores={Time=0}] at @s run scoreboard players set @s restartcool 200
 execute as @s[scores={Time=..-1}] at @s run function game:game/gamedone
+
+execute as @s[scores={Time=5380}] at @s run bossbar add time {"text":"time"}
+execute as @s[scores={Time=5380}] at @s run bossbar set minecraft:time color purple
+execute as @s[scores={Time=5300}] at @s run bossbar set minecraft:time visible true
 
 execute as @s[scores={Time=5380}] at @s run execute as @e[scores={map=1}] run function game:game/maps/map1/start
 execute as @s[scores={Time=5380}] at @s run execute as @e[scores={map=2}] run function game:game/maps/map2/start
@@ -41,12 +50,12 @@ execute as @s[scores={Time=1..}] at @s run scoreboard players set @a[scores={poi
 execute as @s[scores={Time=1..}] at @s run scoreboard players set @a[scores={scoretut=250..}] scoretut -300
 
 execute as @s[scores={Time=5390}] at @s run title @a[tag=game,scores={respawn=..1}] times 10 40 10
-execute as @s[scores={Time=5390}] at @s run title @a[tag=game,scores={respawn=..1}] title {"text":"Collect souls","color":"aqua"}
-execute as @s[scores={Time=5390}] at @s run title @a[tag=game,scores={respawn=..1}] subtitle {"text":"(glowing points)","color":"white"}
+execute as @s[scores={Time=5390}] at @s run title @a[tag=game,scores={respawn=..1}] title {"text":"Collect souls","color":"aqua","font":"fancy_small"}
+execute as @s[scores={Time=5390}] at @s run title @a[tag=game,scores={respawn=..1}] subtitle {"text":"(glowing points)","color":"white","font":"fancy"}
 
 execute as @s[scores={Time=5340}] at @s run title @a[tag=game,scores={respawn=..1}] times 10 40 10
-execute as @s[scores={Time=5340}] at @s run title @a[tag=game,scores={respawn=..1}] title {"text":"Return to Soul Realm","color":"gold"}
-execute as @s[scores={Time=5340}] at @s run title @a[tag=game,scores={respawn=..1}] subtitle {"text":"(the portals)","color":"white"}
+execute as @s[scores={Time=5340}] at @s run title @a[tag=game,scores={respawn=..1}] title {"text":"Return to Soul Realm","color":"gold","font":"fancy_small"}
+execute as @s[scores={Time=5340}] at @s run title @a[tag=game,scores={respawn=..1}] subtitle {"text":"(the portals)","color":"white","font":"fancy"}
 
 execute as @s[scores={Time=5300}] at @s run title @a[tag=game,scores={respawn=..1}] times 0 20 10
 
@@ -60,20 +69,20 @@ execute as @s[scores={Time=1200}] at @s run title @a[tag=game,scores={respawn=..
 execute as @s[scores={Time=300}] at @s run title @a[tag=game,scores={respawn=..1}] times 0 25 10
 
 execute as @s[scores={Time=3600}] at @s run execute as @a at @s run playsound minecraft:ui.toast.challenge_complete master @s ~ ~ ~ 1 0
-execute as @s[scores={Time=3560..3600}] at @s run title @a[tag=game,scores={respawn=..1}] title {"text":"Twilight Intensifies","color":"dark_aqua"}
-execute as @s[scores={Time=3560..3600}] at @s run title @a[tag=game,scores={respawn=..1}] subtitle {"text":"More souls spawn on points","color":"blue"}
+execute as @s[scores={Time=3560..3600}] at @s run title @a[tag=game,scores={respawn=..1}] title {"text":"Twilight Intensifies","color":"dark_aqua","font":"fancy_small"}
+execute as @s[scores={Time=3560..3600}] at @s run title @a[tag=game,scores={respawn=..1}] subtitle {"text":"More souls spawn on points","color":"blue","font":"fancy"}
 
 execute as @s[scores={Time=1800}] at @s run execute as @a at @s run playsound minecraft:ui.toast.challenge_complete master @s ~ ~ ~ 1 0
-execute as @s[scores={Time=1760..1800}] at @s run title @a[tag=game,scores={respawn=..1}] title {"text":"Twilight Intensifies","color":"dark_aqua"}
-execute as @s[scores={Time=1760..1800}] at @s run title @a[tag=game,scores={respawn=..1}] subtitle {"text":"More souls spawn on points","color":"blue"}
+execute as @s[scores={Time=1760..1800}] at @s run title @a[tag=game,scores={respawn=..1}] title {"text":"Twilight Intensifies","color":"dark_aqua","font":"fancy_small"}
+execute as @s[scores={Time=1760..1800}] at @s run title @a[tag=game,scores={respawn=..1}] subtitle {"text":"More souls spawn on points","color":"blue","font":"fancy"}
 
 scoreboard players set @e[name=point,tag=!stable] pointAmount 1
 execute as @s[scores={Time=..3600}] at @s run scoreboard players set @e[name=point,tag=!stable] pointAmount 2
 execute as @s[scores={Time=..1800}] at @s run scoreboard players set @e[name=point,tag=!stable] pointAmount 3
 
-execute as @s[scores={Time=1200}] at @s run title @a[tag=game,scores={respawn=..1}] title {"text":"One Minute Left","color":"dark_red"}
+execute as @s[scores={Time=1200}] at @s run title @a[tag=game,scores={respawn=..1}] title {"text":"One Minute Left","color":"dark_red","font":"fancy_small"}
 execute as @s[scores={Time=1200}] at @s run tellraw @a {"text":"One Minute Left","color":"red"}
-execute as @s[scores={Time=300}] at @s run title @a[tag=game,scores={respawn=..1}] title {"text":"15 Seconds Left","color":"dark_red"}
+execute as @s[scores={Time=300}] at @s run title @a[tag=game,scores={respawn=..1}] title {"text":"15 Seconds Left","color":"dark_red","font":"fancy_small"}
 execute as @s[scores={Time=300}] at @s run tellraw @a {"text":"15 Seconds Left","color":"red"}
 
 execute as @s[scores={Time=1200}] at @s run execute as @a at @s run playsound minecraft:entity.ender_dragon.growl master @p ~ ~ ~ .4 .8

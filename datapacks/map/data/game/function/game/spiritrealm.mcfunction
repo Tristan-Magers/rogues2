@@ -1,7 +1,7 @@
 execute as @s[tag=!spiritworld,tag=spiritnoob] at @s run scoreboard players set @s spiritcutscene 20
 execute as @s[tag=!spiritworld] at @s run title @s times 10 20 10
-execute as @s[tag=!spiritworld] at @s run title @s title [{"text":"Spirit ","color":"dark_aqua"},{"text":"Realm","color":"dark_aqua"}]
-execute as @s[tag=!spiritworld] at @s run title @s subtitle [{"text":"Home of souls","color":"aqua"}]
+execute as @s[tag=!spiritworld] at @s run title @s title [{"text":"Spirit ","color":"dark_aqua","font":"fancy"},{"text":"Realm","color":"dark_aqua","font":"fancy"}]
+execute as @s[tag=!spiritworld] at @s run title @s subtitle [{"text":"Home of souls","color":"aqua","font":"fancy"}]
 execute as @s[tag=!spiritworld] at @s run tp @s[tag=!spiritnoob] 69 38.05 -30 180 0
 
 tp @s[scores={spiritcutscene=20}] 69 45 -32 180 40

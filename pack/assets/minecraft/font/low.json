@@ -1,0 +1,107 @@
+{
+    "providers": [
+        {
+            "type": "reference",
+            "id": "minecraft:include/space"
+        },
+        {
+            "type": "reference",
+            "id": "minecraft:include/default_low"
+        },
+        {
+            "type": "reference",
+            "id": "minecraft:include/unifont"
+        },
+        {
+            "type": "bitmap",
+            "file": "minecraft:font/name_back.png",
+            "ascent": -12,
+            "height": 32,
+            "chars": ["\uF000"]
+        },
+        {
+            "type": "bitmap",
+            "file": "minecraft:font/life.png",
+            "ascent":-20,
+            "height":8,
+            "chars": ["\uF001"]
+        },
+        {
+            "type": "bitmap",
+            "file": "minecraft:item/sol_bow.png",
+            "ascent":-20,
+            "height":8,
+            "chars": ["\uF0c0"]
+        },
+        {
+            "type": "bitmap",
+            "file": "minecraft:item/ass_bow.png",
+            "ascent":-20,
+            "height":8,
+            "chars": ["\uF0c1"]
+        },
+        {
+            "type": "bitmap",
+            "file": "minecraft:item/gho_bow.png",
+            "ascent":-20,
+            "height":8,
+            "chars": ["\uF0c2"]
+        },
+        {
+            "type": "bitmap",
+            "file": "minecraft:item/tra_bow_pulling_1.png",
+            "ascent":-20,
+            "height":8,
+            "chars": ["\uF0c3"]
+        },
+        {
+            "type": "bitmap",
+            "file": "minecraft:item/wizt_bow.png",
+            "ascent":-20,
+            "height":8,
+            "chars": ["\uF0c4"]
+        },
+        {
+            "type": "bitmap",
+            "file": "minecraft:item/mad_bow.png",
+            "ascent":-20,
+            "height":8,
+            "chars": ["\uF0c5"]
+        },
+        {
+            "type": "bitmap",
+            "file": "minecraft:item/rea_bow.png",
+            "ascent":-20,
+            "height":8,
+            "chars": ["\uF0c6"]
+        },
+        {
+            "type": "bitmap",
+            "file": "minecraft:item/ech_bow.png",
+            "ascent":-20,
+            "height":8,
+            "chars": ["\uF0c7"]
+        },
+        {
+            "type": "bitmap",
+            "file": "minecraft:item/gar_bow.png",
+            "ascent":-20,
+            "height":8,
+            "chars": ["\uF0c8"]
+        },
+        {
+            "type": "bitmap",
+            "file": "minecraft:item/diamond_pickaxe.png",
+            "ascent":-20,
+            "height":8,
+            "chars": ["\uF0c9"]
+        },
+        {
+            "type": "bitmap",
+            "file": "minecraft:item/sha_bow.png",
+            "ascent":-20,
+            "height":8,
+            "chars": ["\uF0ca"]
+        }
+    ]
+}

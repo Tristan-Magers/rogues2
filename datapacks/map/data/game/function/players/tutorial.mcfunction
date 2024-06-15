@@ -1,55 +1,83 @@
-item replace entity @s[scores={tutorialtime=1..670}] armor.head with minecraft:carved_pumpkin
-item replace entity @s[scores={tutorialtime=680}] armor.head with minecraft:air
+item replace entity @s[scores={tutorialtime=1..50}] armor.head with minecraft:air
+item replace entity @s[scores={tutorialtime=51..569}] armor.head with minecraft:carved_pumpkin
+item replace entity @s[scores={tutorialtime=570}] armor.head with minecraft:air
 
-title @s[scores={tutorialtime=1}] times 20 180 20
+#
+title @s[scores={tutorialtime=47}] times 3 3 3
+#title @s[scores={tutorialtime=47}] title {"translate":"\u0001","font":"title"}
+title @s[scores={tutorialtime=97}] times 3 3 3
+title @s[scores={tutorialtime=97}] title {"translate":"\u0001","font":"title"}
+title @s[scores={tutorialtime=167}] title {"translate":"\u0001","font":"title"}
+title @s[scores={tutorialtime=217}] title {"translate":"\u0001","font":"title"}
+title @s[scores={tutorialtime=267}] title {"translate":"\u0001","font":"title"}
+title @s[scores={tutorialtime=527}] times 30 20 10
+title @s[scores={tutorialtime=527}] title {"translate":"\u0001","font":"title"}
+
+gamemode adventure @s[scores={tutorialtime=1..579}]
+
 tp @s[scores={tutorialtime=1}] -156 41 -42 90 0
-title @s[scores={tutorialtime=1}] actionbar {"text":"Welcome to Rogues 2."}
-effect give @s[scores={tutorialtime=1}] blindness 1 0 true
-tp @s[scores={tutorialtime=2..60}] ^ ^ ^.1 90 0
+tp @s[scores={tutorialtime=51}] -109 45 56 180 30
+tp @s[scores={tutorialtime=101}] 1014 14 1009 -60 0
+tp @s[scores={tutorialtime=171}] 1000 26 -994 0 27
+tp @s[scores={tutorialtime=221}] 1000 26 -980 -180 30
+tp @s[scores={tutorialtime=271}] 1001 34 -985 90 15
 
-title @s[scores={tutorialtime=61}] times 20 180 20
-tp @s[scores={tutorialtime=61}] -109 45 56 180 30
-title @s[scores={tutorialtime=61}] actionbar {"text":"A full moon is coming."}
-effect give @s[scores={tutorialtime=59}] blindness 1 0 true
-tp @s[scores={tutorialtime=62..120}] ^ ^ ^.1 180 30
+gamemode spectator @s[scores={tutorialtime=1..579}]
 
-title @s[scores={tutorialtime=121}] times 20 180 20
-tp @s[scores={tutorialtime=121}] 1014 14 1009 -60 0
-title @s[scores={tutorialtime=121}] actionbar {"text":"Select a Spirit to embody."}
-effect give @s[scores={tutorialtime=119}] blindness 1 0 true
-tp @s[scores={tutorialtime=122..240}] ^-0.04 ^ ^ ~1 ~
+#
+execute as @s[scores={tutorialtime=1}] at @s run function game:players/tutorial_view
+execute as @s[scores={tutorialtime=51}] at @s run function game:players/tutorial_view
+execute as @s[scores={tutorialtime=101}] at @s run function game:players/tutorial_view
+execute as @s[scores={tutorialtime=171}] at @s run function game:players/tutorial_view
+execute as @s[scores={tutorialtime=221}] at @s run function game:players/tutorial_view
 
-title @s[scores={tutorialtime=241}] times 20 180 20
-tp @s[scores={tutorialtime=241}] 1000 26 -994 0 27
-title @s[scores={tutorialtime=241}] actionbar {"text":"Collect Souls."}
-effect give @s[scores={tutorialtime=239}] blindness 1 0 true
-tp @s[scores={tutorialtime=242..300}] ^ ^ ^.1 0 27
+#
+scoreboard players operation @e[tag=tutorial_view] playerID -= @s playerID
 
-tp @s[scores={tutorialtime=301}] 1000 26 -980 -180 30
-title @s[scores={tutorialtime=301}] actionbar [{"text":"Return them to the "},{"text":"Spirit Realm","color":"gold"},{"text":" (portals).","color":"white"}]
-effect give @s[scores={tutorialtime=299}] blindness 1 0 true
-tp @s[scores={tutorialtime=302..380}] ^ ^ ^.1 -180 30
+tag @e[tag=tutorial_view] remove my_tut_view
+tag @e[tag=tutorial_view,scores={playerID=0},limit=1] add my_tut_view
+kill @e[tag=tutorial_view,tag=!my_tut_view,scores={playerID=0}]
 
-tp @s[scores={tutorialtime=301}] 1000 26 -980 -180 30
-title @s[scores={tutorialtime=301}] actionbar [{"text":"Return them to the "},{"text":"Spirit Realm","color":"gold"},{"text":" (portals).","color":"white"}]
-effect give @s[scores={tutorialtime=299}] blindness 1 0 true
-tp @s[scores={tutorialtime=302..380}] ^ ^ ^.1 -180 30
+#
+scoreboard players operation @e[tag=tutorial_view] playerID += @s playerID
 
-tp @s[scores={tutorialtime=381}] 1001 34 -985 90 15
-title @s[scores={tutorialtime=381}] actionbar [{"text":"Fend off other spirits."}]
-title @s[scores={tutorialtime=471}] actionbar [{"text":"Remember, you are invisible."}]
-title @s[scores={tutorialtime=561}] actionbar [{"text":"The more you move, the more visible you are."}]
-title @s[scores={tutorialtime=651}] actionbar [{"text":"Good luck."}]
-effect give @s[scores={tutorialtime=379}] blindness 1 0 true
-effect give @s[scores={tutorialtime=620}] blindness 5 0 true
-tp @s[scores={tutorialtime=382..450}] ^ ^-0.09 ^ facing 972 20 -985
-tp @s[scores={tutorialtime=451..620}] ^ ^ ^0.12 facing 972 20 -985
+#
+#title @s[scores={tutorialtime=1}] actionbar {"text":"Welcome to Rogues 2","font":"fancy"}
+execute as @s[scores={tutorialtime=1}] as @e[tag=my_tut_view] at @s run tp @s -156 42 -42 90 -10
+execute as @s[scores={tutorialtime=2..50}] as @e[tag=my_tut_view] at @s run tp @s ^ ^ ^.1 90 0
 
-tp @s[scores={tutorialtime=700}] -145 23 -43 90 -1
+title @s[scores={tutorialtime=51}] actionbar {"text":"A full moon is coming","font":"fancy"}
+execute as @s[scores={tutorialtime=51}] as @e[tag=my_tut_view] at @s run tp @s -109 45 56 180 15
+execute as @s[scores={tutorialtime=52..100}] as @e[tag=my_tut_view] at @s run tp @s ^0.01 ^-0.01 ^.05 180 15
 
-gamemode spectator @s[scores={tutorialtime=..700}]
-gamemode adventure @s[scores={tutorialtime=700}]
+title @s[scores={tutorialtime=101}] actionbar {"text":"Select a Spirit to embody","font":"fancy"}
+execute as @s[scores={tutorialtime=101}] as @e[tag=my_tut_view] at @s run tp @s 1014 15 1009 -60 0
+execute as @s[scores={tutorialtime=102..170}] as @e[tag=my_tut_view] at @s run tp @s ^-0.04 ^ ^ ~1.96 ~
+
+title @s[scores={tutorialtime=171}] actionbar {"text":"Collect Souls","font":"fancy"}
+execute as @s[scores={tutorialtime=171}] as @e[tag=my_tut_view] at @s run tp @s 1000 26 -994 0 7
+execute as @s[scores={tutorialtime=172..220}] as @e[tag=my_tut_view] at @s run tp @s ^ ^ ^.11 0 7
+
+title @s[scores={tutorialtime=221}] actionbar [{"text":"Return them to the ","font":"fancy"},{"text":"Spirit Realm","color":"gold","font":"fancy"},{"text":" (portals).","color":"white","font":"fancy"}]
+execute as @s[scores={tutorialtime=221}] as @e[tag=my_tut_view] at @s run tp @s 1000 26 -980 -180 10
+execute as @s[scores={tutorialtime=222..270}] as @e[tag=my_tut_view] at @s run tp @s ^ ^ ^.15 -180 10
+
+title @s[scores={tutorialtime=271}] actionbar [{"text":"Fend off other spirits","font":"fancy"}]
+title @s[scores={tutorialtime=331}] actionbar [{"text":"You are invisible...however","font":"fancy"}]
+title @s[scores={tutorialtime=391}] actionbar [{"text":"The more you move, the more you can be seen","font":"fancy"}]
+title @s[scores={tutorialtime=491}] actionbar [{"text":"Good luck","font":"fancy"}]
+execute as @s[scores={tutorialtime=271}] as @e[tag=my_tut_view] at @s run tp @s 1001 35 -985 90 15
+execute as @s[scores={tutorialtime=272..340}] as @e[tag=my_tut_view] at @s run tp @s ^ ^-0.102 ^ ~ ~-0.09
+execute as @s[scores={tutorialtime=341..491}] as @e[tag=my_tut_view] at @s run tp @s ^ ^ ^0.135
+
+execute as @s[scores={tutorialtime=1..568}] run spectate @e[tag=my_tut_view,limit=1]
+
+execute as @s[scores={tutorialtime=569}] run kill @e[tag=my_tut_view]
+
+tp @s[scores={tutorialtime=570}] -145 23 -43 90 -1
+
+gamemode adventure @s[scores={tutorialtime=570}]
 
 scoreboard players add @s tutorialtime 1
-scoreboard players set @s[scores={tutorialtime=701..}] tutorialtime 0
+scoreboard players set @s[scores={tutorialtime=571..}] tutorialtime 0
 effect clear @s speed

@@ -12,7 +12,7 @@ scoreboard players set @s[scores={class=2,totemres=39},nbt={SelectedItem:{id:"mi
 scoreboard players set @s[scores={class=2,totemres=39},nbt={SelectedItem:{id:"minecraft:iron_hoe"}}] damageCap 80
 scoreboard players set @s[scores={class=2,totemres=39},nbt={SelectedItem:{id:"minecraft:golden_hoe"}}] damageCap 100
 scoreboard players set @s[scores={class=2,totemres=39},nbt={SelectedItem:{id:"minecraft:diamond_hoe"}}] damageCap 120
-scoreboard players set @s[scores={class=3},nbt={SelectedItem:{id:"minecraft:trident"}}] damageCap 70
+scoreboard players set @s[scores={class=3},nbt={SelectedItem:{id:"minecraft:trident"}}] damageCap 80
 scoreboard players set @s[scores={class=3,manaboost=1..},nbt={SelectedItem:{id:"minecraft:trident"}}] damageCap 100
 scoreboard players set @s[scores={class=4},nbt={SelectedItem:{id:"minecraft:bow"}}] damageCap 70
 scoreboard players set @s[scores={class=5},nbt={SelectedItem:{id:"minecraft:stone_sword"}}] damageCap 120

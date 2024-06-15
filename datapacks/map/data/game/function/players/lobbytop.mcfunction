@@ -10,12 +10,12 @@ execute as @s[tag=tele] at @s run playsound minecraft:entity.enderman.teleport m
 tag @s remove tele
 
 title @s[tag=arena,tag=!inarena,scores={tutorialtime=..0}] times 4 18 10
-title @s[tag=arena,tag=!inarena] title {"text":"Entering Arena","color":"gold"}
-title @s[tag=arena,tag=!inarena] subtitle {"text":"PVP ENABLED","color":"red"}
+title @s[tag=arena,tag=!inarena] title {"text":"Entering Arena","color":"gold","font":"fancy"}
+title @s[tag=arena,tag=!inarena] subtitle {"text":"PVP ENABLED","color":"red","font":"fancy"}
 
 title @s[tag=!arena,tag=inarena,scores={tutorialtime=..0}] times 4 18 10
-title @s[tag=!arena,tag=inarena] title {"text":"Leaving Arena","color":"gold"}
-title @s[tag=!arena,tag=inarena] subtitle {"text":"PVP DISABLED","color":"green"}
+title @s[tag=!arena,tag=inarena] title {"text":"Leaving Arena","color":"gold","font":"fancy"}
+title @s[tag=!arena,tag=inarena] subtitle {"text":"PVP DISABLED","color":"green","font":"fancy"}
 
 effect clear @s[tag=arena] weakness
 
