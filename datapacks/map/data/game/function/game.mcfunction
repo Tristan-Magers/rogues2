@@ -11,6 +11,9 @@ execute as @a[scores={Leave=0..}] at @s run function game:players/leave
 effect give @a[gamemode=adventure,x=-144,y=23,z=-42,distance=..20] minecraft:resistance 3 3 true
 effect give @a[gamemode=adventure,x=-144,y=23,z=-42,distance=..20] minecraft:weakness 3 3 true
 
+# arena dummies
+execute as @e[tag=arena_dummy] at @s run function game:game/arena_dummy
+
 #heads
 execute as @e[tag=phead] run data merge entity @s {CustomNameVisible:0b}
 execute as @a at @s positioned ^ ^ ^3.5 run execute as @e[tag=phead,distance=..4] run data merge entity @s {CustomNameVisible:1b}
@@ -21,13 +24,16 @@ execute as @a[tag=spec] at @s run function game:players/inspec
 #music
 scoreboard players add @a[tag=lobby] music1 1
 scoreboard players add @a[tag=spiritworldt,tag=spirlob] music1 1
-scoreboard players set @a[tag=!lobby,tag=!spiritworldt,tag=!spiritworldt2] music1 0
-scoreboard players set @a[tag=nomusic] music1 0
+#scoreboard players set @a[tag=!lobby,tag=!spiritworldt,tag=!spiritworldt2] music1 0
+scoreboard players set @a[tag=nomusic,scores={music1=..2}] music1 0
+scoreboard players set @a[tag=nomusic,scores={music1=3..2110}] music1 2107
+scoreboard players set @a[tag=nomusic,scores={music1=3..2110}] music1 2107
+scoreboard players set @a[tag=nomusic,scores={music1=2111..}] music1 0
 scoreboard players set @a[scores={music1=4400..}] music1 0
 execute as @a[scores={music1=2}] at @s run stopsound @s
-execute as @a[scores={music1=2}] at @s run playsound minecraft:music.credits master @s ~ ~ ~ 0.8 1
+execute as @a[scores={music1=2}] at @s run playsound minecraft:music_disc.stal master @s ~ ~ ~ 0.8 1
 execute as @a[scores={music1=2110}] at @s run stopsound @s
-execute as @a[scores={music1=2110}] at @s run playsound minecraft:music.dragon master @s ~ ~ ~ 0.8 1
+execute as @a[scores={music1=2110}] at @s run playsound minecraft:music_disc.chirp master @s ~ ~ ~ 0.8 1
 
 #spawn
 scoreboard players set @a[x=14,y=4,z=-41,distance=..20,gamemode=adventure,tag=game] respawn 100

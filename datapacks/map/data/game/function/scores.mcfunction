@@ -22,6 +22,14 @@ scoreboard objectives add dz dummy
 scoreboard objectives add class dummy
 scoreboard objectives add effect_immune dummy
 
+scoreboard objectives add t1 dummy
+scoreboard objectives add t2 dummy
+scoreboard objectives add t3 dummy
+scoreboard objectives add t4 dummy
+scoreboard objectives add t5 dummy
+
+scoreboard objectives add macro dummy
+
 scoreboard objectives add .data dummy
 
 scoreboard objectives add chibi_icon dummy

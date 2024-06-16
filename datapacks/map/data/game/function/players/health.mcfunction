@@ -1,14 +1,6 @@
 tag @s remove zeroh
 tag @s[scores={health=20}] add zeroh
 
-## MAX HEALTH
-scoreboard players set @s[scores={class=1,healthshow=16..}] healthshow 15
-scoreboard players set @s[scores={class=2,healthshow=19..}] healthshow 18
-scoreboard players set @s[scores={class=3,healthshow=19..}] healthshow 18
-scoreboard players set @s[scores={class=4,healthshow=17..}] healthshow 16
-scoreboard players set @s[scores={class=5,healthshow=17..}] healthshow 16
-scoreboard players set @s[scores={class=6,healthshow=22..}] healthshow 21
-
 ## Visibility text/effects based on items
 scoreboard players set @s[scores={healthshow=1..},nbt={SelectedItem:{id:"minecraft:wooden_sword"}}] item 2
 scoreboard players set @s[scores={healthshow=1..},nbt={SelectedItem:{id:"minecraft:bow"}}] item 2
@@ -133,6 +125,14 @@ execute as @e[tag=health_spacing] at @s run data merge entity @s {CustomName:'{"
 execute as @s[scores={healthshow=..9}] at @s run execute as @e[tag=health_spacing] at @s run data merge entity @s {CustomName:'{"text":"±"}'}
 execute as @s[scores={Mana=..9}] at @s run execute as @e[tag=mana_spacing] at @s run data merge entity @s {CustomName:'{"text":"±"}'}
 
+## MAX HEALTH
+scoreboard players set @s[scores={class=1,healthshow=16..}] healthshow 15
+scoreboard players set @s[scores={class=2,healthshow=19..}] healthshow 18
+scoreboard players set @s[scores={class=3,healthshow=19..}] healthshow 18
+scoreboard players set @s[scores={class=4,healthshow=17..}] healthshow 16
+scoreboard players set @s[scores={class=5,healthshow=17..}] healthshow 16
+scoreboard players set @s[scores={class=6,healthshow=22..}] healthshow 21
+
 ## Health text
 scoreboard players set @s chibi_icon 0
 
@@ -147,6 +147,7 @@ scoreboard players set @s[scores={class=4,healthshow=1..,invisoff=-1..}] chibi_i
 scoreboard players set @s[scores={class=4,healthshow=1..,invisoff=-1..,plutoregen=0..}] chibi_icon 450
 scoreboard players set @s[scores={class=4,healthshow=1..,invisoff=-1..},nbt={SelectedItem:{id:"minecraft:bow"}}] chibi_icon 440
 scoreboard players set @s[scores={class=4,healthshow=1..,plutospike=1..}] chibi_icon 420
+scoreboard players set @s[scores={class=4,healthshow=1..,fire_time_effect=1..}] chibi_icon 404
 scoreboard players set @s[scores={class=4,healthshow=1..,glowing=1..}] chibi_icon 403
 
 execute as @s[scores={chibi_icon=1}] at @s run function game:players/health_bar_macro {"icon":0001}
@@ -161,6 +162,7 @@ execute as @s[scores={chibi_icon=440}] at @s run function game:players/health_ba
 execute as @s[scores={chibi_icon=450}] at @s run function game:players/health_bar_macro {"icon":0450}
 execute as @s[scores={chibi_icon=420}] at @s run function game:players/health_bar_macro {"icon":0420}
 execute as @s[scores={chibi_icon=403}] at @s run function game:players/health_bar_macro {"icon":0403}
+execute as @s[scores={chibi_icon=404}] at @s run function game:players/health_bar_macro {"icon":0404}
 
 ## Dies and REspawns
 scoreboard players set @s[scores={healthshow=..0},tag=!arena] respawn 221

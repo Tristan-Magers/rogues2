@@ -7,7 +7,9 @@ tag @s remove spec
 tag @s remove lobby
 tag @s remove lobbyt
 scoreboard players set @s Leave -1
-scoreboard players set @s music1 0
+scoreboard players add @s music1 0
+scoreboard players set @s[scores={music1=..2109}] music1 2107
+scoreboard players set @s[scores={music1=2110..}] music1 0
 clear @s
 stopsound @s
 gamemode adventure

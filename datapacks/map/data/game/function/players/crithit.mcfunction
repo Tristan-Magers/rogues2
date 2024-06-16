@@ -15,6 +15,12 @@ execute as @p[distance=0.01..10,scores={damageTaken=0}] at @s run particle minec
 
 execute if entity @p[distance=0.01..10,scores={damageTaken=0}] run tellraw @s [{"text":"CRITICAL","color":"red"},{"text":" HIT!","color":"gray"}]
 
+execute as @e[distance=0.01..10,tag=arena_dummy,nbt={HurtTime:10s}] at @s run particle minecraft:crit ~ ~1 ~ 0.5 0.5 0.5 0.3 20 force
+execute if entity @e[distance=0.01..10,tag=arena_dummy,nbt={HurtTime:10s}] run tellraw @s [{"text":"CRITICAL","color":"red"},{"text":" HIT!","color":"gray"}]
+
 scoreboard players operation @p[distance=0.01..10,scores={damageTaken=0}] damageob += @s critDamage
+scoreboard players operation @e[distance=0.01..10,tag=arena_dummy,nbt={HurtTime:10s}] t3 -= @s critDamage
 
 scoreboard players operation @a[distance=0.01..10] damageTaken += @s damageDealt
+
+#say @e[distance=0.01..10,tag=arena_dummy,nbt={HurtTime:10s}] 10

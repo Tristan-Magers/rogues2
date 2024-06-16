@@ -14,7 +14,7 @@ execute store result score @s[scores={timer=1},nbt={inGround:0b},tag=harrow] dz 
 
 execute as @s[scores={timer=2..},nbt={inGround:0b,Fire:-1s},tag=harrow] at @s run function game:projectile/ghostarrow
 
-execute as @s at @s run data merge entity @s {Crit:0b}
+data merge entity @s[scores={timer=1}] {crit:0b}
 execute as @e[type=arrow,nbt={pickup:1b}] run data merge entity @s {pickup:0b}
 
 kill @s[nbt={inGround:1b}]

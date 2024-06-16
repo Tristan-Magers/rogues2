@@ -92,6 +92,8 @@ scoreboard players set @s boostT 0
 
 scoreboard players set @s effect_immune 0
 
+scoreboard players add @s music1 0
+
 clear @s
 title @s times 0 25 10
 
