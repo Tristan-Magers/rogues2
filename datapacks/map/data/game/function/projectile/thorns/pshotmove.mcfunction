@@ -7,7 +7,8 @@ execute as @s[tag=!hit] at @s run function game:projectile/thorns/pshot
 scoreboard players add @s timer 1
 scoreboard players set @s[tag=hit,scores={timer=..1000}] timer 1000
 
-execute as @s[scores={timer=1005}] at @s run summon area_effect_cloud ~ ~.3 ~ {Particle:{type:"crit"},ReapplicationDelay:0,RadiusPerTick:-.05f,Radius:3f,Duration:60,potion_contents:{potion:"minecraft:harming"},Tags:["thorns"]}
+execute as @s[scores={timer=1005}] at @s run summon area_effect_cloud ~ ~.6 ~ {Particle:{type:"crit"},ReapplicationDelay:0,RadiusPerTick:-.05f,Radius:3f,Duration:60,potion_contents:{potion:"minecraft:harming"},Tags:["thorns"]}
+execute as @s[scores={timer=1005}] at @s run summon area_effect_cloud ~ ~.6 ~ {Particle:{type:"crit"},ReapplicationDelay:0,RadiusPerTick:-.05f,Radius:3f,Duration:60,potion_contents:{custom_effects:[{id:"minecraft:luck",amplifier:1,duration:30,show_particles:0b,show_icon:0b}]}}
 execute as @s[scores={timer=1000}] at @s run particle minecraft:witch ~ ~.3 ~ .8 .8 .8 .2 100
 execute as @s[scores={timer=1000}] at @s run particle minecraft:crit ~ ~.3 ~ .8 .8 .8 .2 100
 execute as @s[scores={timer=1000}] at @s run playsound minecraft:entity.arrow.hit master @a ~ ~ ~ 1 .8 .2

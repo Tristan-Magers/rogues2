@@ -174,6 +174,8 @@ Sparket
 - Fire Fist gives 1s less fire (4s -> 3s) (doesn't impact damage {3}) [see changes in general]
 - Fixed bug where season 2 fist fist charge/speed nerfs were not in effect
 - Flame Bow sets players on flame for 2s less (5s -> 3s) (damage not impacted {3}) [see changes in general]
+- Flame Bow does max damage of 6 (previously random 6-10)
+- Flame Bow does 1 more damage
 - Fire Breath (and all fire blocks) give 6s less fire (10s -> 4s) (4 damage) [see changes in general]
 - Burnout has actual cooldown after use (0.15s -> 1.5s)
 
@@ -199,19 +201,24 @@ Halt
 
 Vohelm
 - Max knife has knockback (weakened knockback [see Sparket changes])
+- Sacred Knife charges 8.4% faster (0.91s -> 0.83s) [all levels]
 - Upgrading knife boosts speed by 19% for 1.6s (stacks with other speed)
 - Sacred Knife now +5 speed for all levels (previously started at 0% and gained to 16%)
 - All knife levels cost 2 mana (previously 2 and 3 costed 3)
+- Tome gives 1 less damage boost (3 -> 2)
 - Totem health reduced by 2 (5 -> 3)
 - Totem range reduced by 0.25 (7 -> 6.75)
 - Totem explosion now has 0.75 fuse (includes sounds and effects)
 - Thorns have 0.25s delay before activating
 - Thorns flash goes 0.3 block further (2.8 -> 3.1)
+- Thorns spawn 0.3 blocks higher (quality of life)
 - Shield now puts out fire [see changes in general]
 - Totems take no fall damage
 - Knife downgrading plays a sound (just for you) (quality of life)
 - Knife model/texture/sound has had minor improvements
 - Knife clarifies that off-handing will reset levels (in lore)
+- Sacred Berries cost 1 less (5 -> 4)
+- Sacred Berries heal 1 less (5 -> 4)
 
 Pluto
 - Shadow Spikes shoot 2 less spikes (10 -> 8)
@@ -237,3 +244,4 @@ Barbose
 - Mountain Temple sometimes spawns points with incorrect timings
 - Trident Riptide hits would count as critical hits
 - Wrong player is sometimes announced as winner
+- As a weapon breaks, a hit could count as a critical hit

@@ -23,6 +23,16 @@ scoreboard players set @s[scores={t1=9821..9830}] t2 17
 scoreboard players set @s[scores={t1=9811..9820}] t2 18
 scoreboard players set @s[scores={t1=9801..9810}] t2 19
 scoreboard players set @s[scores={t1=9791..9800}] t2 20
+scoreboard players set @s[scores={t1=9781..9790}] t2 21
+scoreboard players set @s[scores={t1=9771..9780}] t2 22
+scoreboard players set @s[scores={t1=9761..9770}] t2 23
+scoreboard players set @s[scores={t1=9751..9760}] t2 24
+scoreboard players set @s[scores={t1=9741..9750}] t2 25
+scoreboard players set @s[scores={t1=9731..9740}] t2 26
+scoreboard players set @s[scores={t1=9721..9730}] t2 27
+scoreboard players set @s[scores={t1=9711..9720}] t2 28
+scoreboard players set @s[scores={t1=9701..9710}] t2 29
+scoreboard players set @s[scores={t1=9691..9700}] t2 30
 
 #Fire
 tag @s add notinfire
@@ -45,7 +55,9 @@ effect give @s[scores={fire=2}] slowness 1 1 true
 scoreboard players set @s[scores={fire=10..}] fire 0
 execute at @s if block ~ ~ ~ lava run scoreboard players set @s[scores={fire=4..}] fire 0
 
+tag @s remove flame_arrow_hit
 execute store result score @s fire_time run data get entity @s Fire 1
+execute if score @s fire_time > @s fire_time_t as @s[scores={fire_time=100}] run tag @s add flame_arrow_hit
 execute if score @s fire_time > @s fire_time_t run scoreboard players set @s[scores={fire_time=10..140}] fire_time_effect 61
 execute if score @s fire_time > @s fire_time_t run scoreboard players set @s[scores={fire_time=140..}] fire_time_effect 81
 execute if score @s fire_time > @s fire_time_t run scoreboard players set @s invisoff 6
@@ -86,6 +98,16 @@ execute as @s[scores={fireT=11}] run particle minecraft:flame ~ ~0.8 ~ 0.2 0.4 0
 execute as @s[scores={fireT=15}] run particle minecraft:flame ~ ~0.8 ~ 0.2 0.4 0.2 0.02 2 force
 execute as @s[scores={fireT=19}] run particle minecraft:flame ~ ~0.8 ~ 0.2 0.4 0.2 0.02 2 force
 
+scoreboard players add @s[tag=flame_arrow_hit] t2 1
+scoreboard players set @s[tag=flame_arrow_hit,scores={t2=6..}] t2 6
+
+#thorns
+execute store success score @s t6 run effect clear @s minecraft:luck
+scoreboard players add @s[scores={t6=1}] t7 1
+execute as @s[scores={t7=2..}] at @s run playsound minecraft:entity.player.hurt master @a
+scoreboard players add @s[scores={t7=2..}] t2 3
+scoreboard players set @s[scores={t7=2..}] t7 0
+
 # add to damage total
 execute as @s[scores={t2=1..}] run scoreboard players operation @s t3 += @s t2
 execute as @s[scores={t2=1..}] run scoreboard players set @s t4 0
@@ -100,14 +122,18 @@ scoreboard players set @s[scores={t4=34..}] t3 0
 scoreboard players set @s[scores={t4=34..}] t5 0
 scoreboard players set @s[scores={t4=34..}] t4 0
 
-scoreboard players add @s[scores={t3=1..}] t5 1
-scoreboard players set @s[scores={t5=120..}] t3 0
-scoreboard players set @s[scores={t5=120..}] t4 0
-scoreboard players set @s[scores={t5=120..}] t5 0
+#scoreboard players add @s[scores={t3=1..}] t5 1
+#scoreboard players set @s[scores={t5=120..}] t3 0
+#scoreboard players set @s[scores={t5=120..}] t4 0
+#scoreboard players set @s[scores={t5=120..}] t5 0
 
 #
+item replace entity @s armor.legs with golden_leggings[unbreakable={},enchantments={levels:{"minecraft:blast_protection":7}},attribute_modifiers=[{id:"armor",type:"generic.armor",amount:0,operation:"add_multiplied_base"}]] 1
 data merge entity @s {NoAI:0,Silent:1,Health:1000f,attributes:[{id:"minecraft:generic.armor",base:0},{id:"minecraft:generic.max_health",base:1000},{id:"minecraft:generic.attack_damage",base:0},{id:"minecraft:generic.follow_range",base:0},{id:"minecraft:generic.jump_strength",base:0},{id:"minecraft:generic.knockback_resistance",base:1},{id:"minecraft:generic.movement_speed",base:0},{id:"minecraft:generic.step_height",base:0},{id:"minecraft:generic.explosion_knockback_resistance",base:1}]}
 execute at @s if entity @a[distance=..20] run data merge entity @s {CustomNameVisible:1b}
 execute at @s unless entity @a[distance=..20] run data merge entity @s {CustomNameVisible:0b}
 tp @s -121.5 54.00 23.50 180 0
 effect give @s minecraft:fire_resistance infinite 0 true
+
+#
+scoreboard players set @s[scores={t3=..-1}] t3 0

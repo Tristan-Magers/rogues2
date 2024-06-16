@@ -14,6 +14,7 @@ scoreboard players operation @a playerID -= @s playerID
 tag @a[scores={playerID=0}] add puser
 scoreboard players operation @a playerID += @s playerID
 
+tag @e[tag=arena_dummy] add metarget
 tag @e[type=villager] add metarget
 tag @e[type=creeper] add metarget
 tag @e[tag=portalset] add metarget
@@ -50,13 +51,13 @@ scoreboard players set @a[tag=ehit,scores={shield=1..}] glowing 28
 tag @a[scores={shield=1..}] remove ehit
 tag @a[scores={Invul=1..}] remove ehit
 
-effect give @e[tag=ehit,tag=!me] instant_damage
-effect give @e[tag=ehit,tag=!me] resistance 1 10 true
-
 execute as @s[tag=weakhit] run execute as @e[tag=ehit,limit=1] run execute as @e[tag=puser] at @s run playsound minecraft:entity.arrow.hit_player master @s ~ ~ ~ 1 0.7
 execute as @s[tag=!weakhit] run execute as @e[tag=ehit,limit=1] run execute as @e[tag=puser] at @s run playsound minecraft:entity.arrow.hit_player master @s ~ ~ ~ 1 1.1
 
 execute as @e[tag=ehit,tag=!me,type=!player] store result score @s healthreal run data get entity @s Health
+
+execute as @s[tag=weakhit] run scoreboard players remove @e[tag=ehit,tag=!me,tag=arena_dummy] t3 1
+execute as @s[tag=!weakhit] run damage @e[tag=ehit,tag=!me,tag=arena_dummy,limit=1,sort=nearest] 1
 
 execute as @s[tag=!weakhit] run scoreboard players remove @e[tag=ehit,tag=!me,type=!player] healthreal 7
 execute as @s[tag=weakhit] run scoreboard players remove @e[tag=ehit,tag=!me,type=!player] healthreal 6

@@ -89,7 +89,9 @@ effect give @s[scores={fire=2},gamemode=adventure] slowness 1 1 true
 scoreboard players set @s[scores={fire=10..}] fire 0
 execute at @s if block ~ ~ ~ lava run scoreboard players set @s[scores={fire=4..}] fire 0
 
+tag @s remove flame_arrow_hit
 execute store result score @s fire_time run data get entity @s Fire 1
+execute if score @s fire_time > @s fire_time_t as @s[scores={fire_time=99}] run tag @s add flame_arrow_hit
 execute if score @s fire_time > @s fire_time_t run scoreboard players set @s[scores={fire_time=10..140}] fire_time_effect 61
 execute if score @s fire_time > @s fire_time_t run scoreboard players set @s[scores={fire_time=140..}] fire_time_effect 81
 execute if score @s fire_time > @s fire_time_t run scoreboard players set @s invisoff 6

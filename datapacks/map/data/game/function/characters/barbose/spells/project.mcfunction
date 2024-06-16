@@ -23,7 +23,7 @@ execute as @e[tag=project,limit=1,tag=!hit_barrier] at @s run function game:dete
 
 #
 execute if entity @e[tag=project,limit=1,tag=bool,tag=!hit_barrier] at @s run particle minecraft:squid_ink ~ ~1 ~ 0.1 0.3 0.1 0 10 force
-execute if entity @e[tag=project,limit=1,tag=bool,tag=!hit_barrier] at @s run particle minecraft:flash ~ ~1 ~ 0 0 0 0 1 force
+#execute if entity @e[tag=project,limit=1,tag=bool,tag=!hit_barrier] at @s run particle minecraft:flash ~ ~1 ~ 0 0 0 0 1 force
 
 #
 tp @s @e[tag=project,limit=1,tag=bool,tag=!hit_barrier]

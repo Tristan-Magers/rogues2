@@ -27,6 +27,8 @@ scoreboard objectives add t2 dummy
 scoreboard objectives add t3 dummy
 scoreboard objectives add t4 dummy
 scoreboard objectives add t5 dummy
+scoreboard objectives add t6 dummy
+scoreboard objectives add t7 dummy
 
 scoreboard objectives add macro dummy
 

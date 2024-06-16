@@ -40,6 +40,10 @@ execute as @s[scores={healthreal=1..}] at @s run scoreboard players operation @s
 scoreboard players set @s[scores={healthreal=..-1,damageob=1..}] healthreal 0
 scoreboard players set @s damageob 0
 
+## lock fire arrow damage
+execute as @s[tag=flame_arrow_hit] run scoreboard players add @s healthreal 1
+execute as @s[tag=flame_arrow_hit,scores={healthreal=6..}] run scoreboard players set @s healthreal 6
+
 ## change current health by damage
 execute as @s[tag=!zeroh] at @s run scoreboard players operation @s healthshow -= @s healthreal
 execute as @s[tag=!zeroh,scores={healthshow=..-1}] at @s run scoreboard players operation @s healthreal += @s healthshow

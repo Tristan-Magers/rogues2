@@ -11,7 +11,10 @@ execute as @a[scores={Leave=0..}] at @s run function game:players/leave
 effect give @a[gamemode=adventure,x=-144,y=23,z=-42,distance=..20] minecraft:resistance 3 3 true
 effect give @a[gamemode=adventure,x=-144,y=23,z=-42,distance=..20] minecraft:weakness 3 3 true
 
-# arena dummies
+#max damage
+execute as @a run function game:players/maxdamage
+
+#arena dummies
 execute as @e[tag=arena_dummy] at @s run function game:game/arena_dummy
 
 #heads

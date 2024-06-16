@@ -24,6 +24,9 @@ scoreboard players remove @e[tag=gethit,type=!player] healthreal 1
 
 execute as @e[tag=gethit,type=!player] at @s run execute store result entity @s Health double 1 run scoreboard players get @s healthreal
 
+execute as @e[tag=gethit,tag=arena_dummy] at @s run scoreboard players add @s t3 1
+execute as @e[tag=gethit,tag=arena_dummy] at @s run scoreboard players set @s t4 0
+
 execute as @a[tag=!isthrow,tag=gethit] at @s run function game:players/damageone
 
 tag @s add kill

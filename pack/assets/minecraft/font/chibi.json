@@ -2,14 +2,14 @@
   "providers": [
     {
       "type": "bitmap",
-      "file": "minecraft:font/chibi/base.png",
+      "file": "minecraft:font/chibi/pluto_vis.png",
       "ascent": 0,
       "height": 64,
       "chars": ["\u0001"]
     },
     {
       "type": "bitmap",
-      "file": "minecraft:font/chibi/base_char.png",
+      "file": "minecraft:font/chibi/pluto_vis.png",
       "ascent": 0,
       "height": 64,
       "chars": ["\u0002"]
@@ -55,6 +55,13 @@
       "ascent": -12,
       "height": 64,
       "chars": ["\u0403"]
+    },
+    {
+      "type": "bitmap",
+      "file": "minecraft:font/chibi/pluto_fire.png",
+      "ascent": -12,
+      "height": 64,
+      "chars": ["\u0404"]
     },
     {
       "type": "bitmap",
