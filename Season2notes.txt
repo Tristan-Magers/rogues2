@@ -159,7 +159,7 @@ Snow Temple
     - Fire no longer covers player's screen (now just a screen icon)
     - Fire now gives players a cloud of particles
     - Fire makes players visible for 0.3s when set on fire and 0.2s each time it damages them
-    - Fire blocks (fire and lava) are capped at setting the player on fire for 4 seconds max (starting when they leave the block) [4 damage]
+    - Fire blocks (fire and lava) are capped at setting the player on fire for 5 seconds max (starting when they leave the block) [5 damage]
     - Invulnerability removes and prevents fire
 - Visibility moves, like glowing, do not override each other's timing
     - You can't get invisible faster using moves that give short visibility
@@ -174,15 +174,16 @@ Sparket
 - Fire Fist gives 1s less fire (4s -> 3s) (doesn't impact damage {3}) [see changes in general]
 - Fixed bug where season 2 fist fist charge/speed nerfs were not in effect
 - Flame Bow sets players on flame for 2s less (5s -> 3s) (damage not impacted {3}) [see changes in general]
-- Flame Bow does max damage of 6 (previously random 6-10)
+- Flame Bow does max damage of 7 (previously random 6-10)
 - Flame Bow does 1 more damage
-- Fire Breath (and all fire blocks) give 6s less fire (10s -> 4s) (4 damage) [see changes in general]
+- Fire Breath (and all fire blocks) give 5s less fire (10s -> 5s) (5 damage) [see changes in general]
 - Burnout has actual cooldown after use (0.15s -> 1.5s)
 
 Emma
 - After Trident is summoned, there is a 1s window where unequipping doesn't damage it
     - Note: to make summoning it without damage much more natural and friendly
 - Wave knockback decreased by 15% (0.8 b/s -> 0.74 b/s)
+- Storm Energy costs 1 less Mana (4 -> 3)
 
 Halt
 - Draining Claws do 1 more damage (12 -> 13)
@@ -209,7 +210,7 @@ Vohelm
 - Totem health reduced by 2 (5 -> 3)
 - Totem range reduced by 0.25 (7 -> 6.75)
 - Totem explosion now has 0.75 fuse (includes sounds and effects)
-- Thorns have 0.25s delay before activating
+- Thorns have 0.3s delay before activating
 - Thorns flash goes 0.3 block further (2.8 -> 3.1)
 - Thorns spawn 0.3 blocks higher (quality of life)
 - Shield now puts out fire [see changes in general]
@@ -219,6 +220,7 @@ Vohelm
 - Knife clarifies that off-handing will reset levels (in lore)
 - Sacred Berries cost 1 less (5 -> 4)
 - Sacred Berries heal 1 less (5 -> 4)
+- Sacred Berries give 1s less of speed (4 -> 3)
 
 Pluto
 - Shadow Spikes shoot 2 less spikes (10 -> 8)
@@ -232,6 +234,7 @@ Barbose
 - Returning to Portal 0.5s slower (1s -> 1.5s)
 - Replaced returning to portal blindness with darkness
 - Returning to portal slowness 4 levels higher (level 3 -> level 7)
+- Delay before you can teleport back to portal increased 1.4s (0.6s -> 2s)
 - Blackhole replaced with Smoke Wall
 - Improvements to Seeking Axe model
 

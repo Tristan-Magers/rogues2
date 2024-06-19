@@ -93,7 +93,7 @@ tag @s remove flame_arrow_hit
 execute store result score @s fire_time run data get entity @s Fire 1
 execute if score @s fire_time > @s fire_time_t as @s[scores={fire_time=99}] run tag @s add flame_arrow_hit
 execute if score @s fire_time > @s fire_time_t run scoreboard players set @s[scores={fire_time=10..140}] fire_time_effect 61
-execute if score @s fire_time > @s fire_time_t run scoreboard players set @s[scores={fire_time=140..}] fire_time_effect 81
+execute if score @s fire_time > @s fire_time_t run scoreboard players set @s[scores={fire_time=140..}] fire_time_effect 101
 execute if score @s fire_time > @s fire_time_t run scoreboard players set @s invisoff 6
 scoreboard players operation @s fire_time_t = @s fire_time
 scoreboard players remove @s[scores={fire_time_t=2..}] fire_time_t 1

@@ -3,7 +3,7 @@ scoreboard players remove @s healthshow 1
 
 scoreboard players remove @s Mana 4
 scoreboard players set @s goldenap 0
-effect give @s minecraft:speed 4 0 true
+effect give @s minecraft:speed 3 0 true
 effect give @s minecraft:absorption 900 9 true
 effect clear @s minecraft:regeneration
 function game:spells/manaup

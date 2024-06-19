@@ -41,3 +41,25 @@ scoreboard players remove @s[scores={loretext=1..}] loretext 1
 clear @s[gamemode=adventure,nbt=!{Inventory:[{id:"minecraft:diamond_horse_armor",Slot:5b}]}] diamond_horse_armor
 clear @s[gamemode=adventure,scores={loretext=1..}] diamond_horse_armor
 item replace entity @s[scores={loretext=..0},tag=!insel,gamemode=adventure,nbt=!{Inventory:[{id:"minecraft:diamond_horse_armor",Slot:5b}]}] hotbar.5 with minecraft:diamond_horse_armor[custom_name='[{"text":"","color":"white","italic":false,"bold":true},{"text":"","color":"gold","italic":false},{"text":"","color":"white","italic":false}]']
+
+# Character masks
+#clear @s[tag=!insel,gamemode=adventure,nbt=!{Inventory:[{id:"minecraft:gray_dye",Slot:8b}]},scores={class=6}] gray_dye
+#item replace entity @s[tag=!insel,gamemode=adventure,nbt=!{Inventory:[{id:"minecraft:gray_dye",Slot:8b}]},scores={class=6}] hotbar.8 with minecraft:gray_dye[custom_name='[{"text":"Spirit Selected : ","italic":false},{"text":"BARBOSE","color":"yellow"}]']
+#clear @s[tag=!insel,gamemode=adventure,nbt=!{Inventory:[{id:"minecraft:pink_dye",Slot:8b}]},scores={class=1}] pink_dye
+#item replace entity @s[tag=!insel,gamemode=adventure,nbt=!{Inventory:[{id:"minecraft:pink_dye",Slot:8b}]},scores={class=1}] hotbar.8 with minecraft:pink_dye[custom_name='[{"text":"Spirit Selected : ","italic":false},{"text":"SPARKET","color":"red"}]']
+#clear @s[tag=!insel,gamemode=adventure,nbt=!{Inventory:[{id:"minecraft:melon_seeds",Slot:8b}]},scores={class=2}] melon_seeds
+#item replace entity @s[tag=!insel,gamemode=adventure,nbt=!{Inventory:[{id:"minecraft:melon_seeds",Slot:8b}]},scores={class=2}] hotbar.8 with minecraft:melon_seeds[custom_name='[{"text":"Spirit Selected : ","italic":false},{"text":"VOHELM","color":"green"}]']
+#clear @s[tag=!insel,gamemode=adventure,nbt=!{Inventory:[{id:"minecraft:cyan_dye",Slot:8b}]},scores={class=3}] cyan_dye
+#item replace entity @s[tag=!insel,gamemode=adventure,nbt=!{Inventory:[{id:"minecraft:cyan_dye",Slot:8b}]},scores={class=3}] hotbar.8 with minecraft:cyan_dye[custom_name='[{"text":"Spirit Selected : ","italic":false},{"text":"EMMA","color":"aqua"}]']
+#clear @s[tag=!insel,gamemode=adventure,nbt=!{Inventory:[{id:"minecraft:light_gray_dye",Slot:8b}]},scores={class=5}] light_gray_dye
+#item replace entity @s[tag=!insel,gamemode=adventure,nbt=!{Inventory:[{id:"minecraft:light_gray_dye",Slot:8b}]},scores={class=5}] hotbar.8 with minecraft:light_gray_dye[custom_name='[{"text":"Spirit Selected : ","italic":false},{"text":"HALT","color":"gold"}]']
+#clear @s[tag=!insel,gamemode=adventure,nbt=!{Inventory:[{id:"minecraft:gold_nugget",Slot:8b}]},scores={class=4}] gold_nugget
+#item replace entity @s[tag=!insel,gamemode=adventure,nbt=!{Inventory:[{id:"minecraft:gold_nugget",Slot:8b}]},scores={class=4}] hotbar.8 with minecraft:gold_nugget[custom_name='[{"text":"Spirit Selected : ","italic":false},{"text":"PLUTO","color":"gray"}]']
+
+
+#item replace entity @s[tag=!spiritworld,scores={item=2,class=2}] armor.head with minecraft:melon_seeds[custom_name='{"text":"Mask"}']
+#item replace entity @s[tag=!spiritworld,scores={item=2,class=4}] armor.head with minecraft:gold_nugget[custom_name='{"text":"Mask"}']
+#item replace entity @s[tag=!spiritworld,scores={item=2,class=1}] armor.head with minecraft:pink_dye[custom_name='{"text":"Mask"}']
+#item replace entity @s[tag=!spiritworld,scores={item=2,class=3}] armor.head with minecraft:cyan_dye[custom_name='{"text":"Mask"}']
+#item replace entity @s[tag=!spiritworld,scores={item=2,class=5}] armor.head with minecraft:light_gray_dye[custom_name='{"text":"Mask"}']
+#item replace entity @s[tag=!spiritworld,scores={item=2,class=6}] armor.head with minecraft:gray_dye[custom_name='{"text":"Mask"}']

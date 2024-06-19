@@ -36,6 +36,8 @@ scoreboard objectives add .data dummy
 
 scoreboard objectives add chibi_icon dummy
 
+scoreboard objectives add char_text dummy
+
 scoreboard objectives add .num dummy
 
 scoreboard objectives add press minecraft.used:minecraft.carrot_on_a_stick

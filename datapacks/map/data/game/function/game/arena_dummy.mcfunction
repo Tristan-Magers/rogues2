@@ -59,7 +59,7 @@ tag @s remove flame_arrow_hit
 execute store result score @s fire_time run data get entity @s Fire 1
 execute if score @s fire_time > @s fire_time_t as @s[scores={fire_time=100}] run tag @s add flame_arrow_hit
 execute if score @s fire_time > @s fire_time_t run scoreboard players set @s[scores={fire_time=10..140}] fire_time_effect 61
-execute if score @s fire_time > @s fire_time_t run scoreboard players set @s[scores={fire_time=140..}] fire_time_effect 81
+execute if score @s fire_time > @s fire_time_t run scoreboard players set @s[scores={fire_time=140..}] fire_time_effect 101
 execute if score @s fire_time > @s fire_time_t run scoreboard players set @s invisoff 6
 scoreboard players operation @s fire_time_t = @s fire_time
 scoreboard players remove @s[scores={fire_time_t=2..}] fire_time_t 1
@@ -99,7 +99,22 @@ execute as @s[scores={fireT=15}] run particle minecraft:flame ~ ~0.8 ~ 0.2 0.4 0
 execute as @s[scores={fireT=19}] run particle minecraft:flame ~ ~0.8 ~ 0.2 0.4 0.2 0.02 2 force
 
 scoreboard players add @s[tag=flame_arrow_hit] t2 1
-scoreboard players set @s[tag=flame_arrow_hit,scores={t2=6..}] t2 6
+scoreboard players set @s[tag=flame_arrow_hit,scores={t2=7..}] t2 7
+
+#poison
+execute as @s[scores={poison2=75}] run playsound minecraft:entity.player.hurt_on_fire master @a ~ ~ ~ 0.5 1
+execute as @s[scores={poison2=60}] run playsound minecraft:entity.player.hurt_on_fire master @a ~ ~ ~ 0.5 1
+execute as @s[scores={poison2=45}] run playsound minecraft:entity.player.hurt_on_fire master @a ~ ~ ~ 0.5 1
+execute as @s[scores={poison2=30}] run playsound minecraft:entity.player.hurt_on_fire master @a ~ ~ ~ 0.5 1
+execute as @s[scores={poison2=15}] run playsound minecraft:entity.player.hurt_on_fire master @a ~ ~ ~ 0.5 1
+
+execute as @s[scores={poison2=75}] run scoreboard players add @s t2 1
+execute as @s[scores={poison2=60}] run scoreboard players add @s t2 1
+execute as @s[scores={poison2=45}] run scoreboard players add @s t2 1
+execute as @s[scores={poison2=30}] run scoreboard players add @s t2 1
+execute as @s[scores={poison2=15}] run scoreboard players add @s t2 1
+
+scoreboard players remove @s[scores={poison2=1..}] poison2 1
 
 #thorns
 execute store success score @s t6 run effect clear @s minecraft:luck
@@ -128,7 +143,7 @@ scoreboard players set @s[scores={t4=34..}] t4 0
 #scoreboard players set @s[scores={t5=120..}] t5 0
 
 #
-item replace entity @s armor.legs with golden_leggings[unbreakable={},enchantments={levels:{"minecraft:blast_protection":7}},attribute_modifiers=[{id:"armor",type:"generic.armor",amount:0,operation:"add_multiplied_base"}]] 1
+item replace entity @s armor.legs with golden_leggings[unbreakable={show_in_tooltip:false},enchantments={levels:{"minecraft:blast_protection":7}},attribute_modifiers=[{id:"armor",type:"generic.armor",amount:0,operation:"add_multiplied_base"}]] 1
 data merge entity @s {NoAI:0,Silent:1,Health:1000f,attributes:[{id:"minecraft:generic.armor",base:0},{id:"minecraft:generic.max_health",base:1000},{id:"minecraft:generic.attack_damage",base:0},{id:"minecraft:generic.follow_range",base:0},{id:"minecraft:generic.jump_strength",base:0},{id:"minecraft:generic.knockback_resistance",base:1},{id:"minecraft:generic.movement_speed",base:0},{id:"minecraft:generic.step_height",base:0},{id:"minecraft:generic.explosion_knockback_resistance",base:1}]}
 execute at @s if entity @a[distance=..20] run data merge entity @s {CustomNameVisible:1b}
 execute at @s unless entity @a[distance=..20] run data merge entity @s {CustomNameVisible:0b}
