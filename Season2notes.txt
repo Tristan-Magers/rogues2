@@ -139,44 +139,49 @@ Snow Temple
 * Patch 2.1 Notes *
 
 [General]
+- Updated to Minecraft 1.21
 - Improved UI
 - Added icons for players
 - Time moved to bossbar
 - Improved fonts
-- Minor improvements to tutorial
+- Minor improvements to the tutorial
 - Turorial triggers automatically on joining
 - Pluto is now the default class (previously Sparket)
 - Improved item descriptions
+- Improvements to music volume and system
 
 [General Gameplay]
+- Removed UI indicator if you are hovering over a player (bug)
 - Becoming visible no longer plays a sound for others or yourself
 - Sneaking is 33% faster
 - For every player count over 2, souls heal an extra 4
-- Coming out of portal makes you immune disruptive moves for 1.5s
+- Coming out of portal makes you immune to disruptive moves for 1.5s
+- Coming out of portal make you take no knockback for 1.5s
 - Fire in general has been reworked
     - Fire deals damage 0.5s faster (every 1.5s -> every 1s)
-    - Fire no longer covers player in flames
-    - Fire no longer covers player's screen (now just a screen icon)
+    - Fire no longer covers players in flames
+    - Fire no longer covers the player's screen (now just a screen icon)
     - Fire now gives players a cloud of particles
     - Fire makes players visible for 0.3s when set on fire and 0.2s each time it damages them
     - Fire blocks (fire and lava) are capped at setting the player on fire for 5 seconds max (starting when they leave the block) [5 damage]
     - Invulnerability removes and prevents fire
 - Visibility moves, like glowing, do not override each other's timing
     - You can't get invisible faster using moves that give short visibility
+- Players start with 2 Mana instead of 0 at game start
 
 [Characters]
 
 Sparket
-- Fire Fist does 1 less damage (5 -> 4)
-- Fire Fist charges 20% slower (0.5s -> 0.6s)
+- Fire Fist charges 50% slower (0.5s -> 0.75s)
 - Fire Fist has 25% less knockback (still level 1 but players take 25% less knockback [154% of normal])
 - Fire Fist gives +1% more speed speed (25% -> 26%)
-- Fire Fist gives 1s less fire (4s -> 3s) (doesn't impact damage {3}) [see changes in general]
-- Fixed bug where season 2 fist fist charge/speed nerfs were not in effect
-- Flame Bow sets players on flame for 2s less (5s -> 3s) (damage not impacted {3}) [see changes in general]
-- Flame Bow does max damage of 7 (previously random 6-10)
+- Fire Fist gives 2s less fire (4s -> 2s) (2 damage) [see changes in general]
+- Fixed bug where season 2 fire fist charge/speed nerfs were not in effect
+- Flame Bow sets players on flame for 3s less (5s -> 2s) (2 damage) [see changes in general]
+- Flame Bow does max damage of 6 (previously random 6-10)
 - Flame Bow does 1 more damage
 - Fire Breath (and all fire blocks) give 5s less fire (10s -> 5s) (5 damage) [see changes in general]
+- Burnout lasts 0.1s shorter (1s -> 0.9s)
 - Burnout has actual cooldown after use (0.15s -> 1.5s)
 
 Emma
@@ -184,6 +189,7 @@ Emma
     - Note: to make summoning it without damage much more natural and friendly
 - Wave knockback decreased by 15% (0.8 b/s -> 0.74 b/s)
 - Storm Energy costs 1 less Mana (4 -> 3)
+- Storm Energy lasts 0.6s shorter (5s -> 4.4s)
 
 Halt
 - Draining Claws do 1 more damage (12 -> 13)
@@ -199,13 +205,14 @@ Halt
 - Spider causes 2 levels less of slowness (level 3 -> level 1)
 - Webs move 25% faster (20 b/s -> 25 b/s)
 - Webs take 0.25s to activate on hit
+- Climbing Wall detection range increased and improved
 
 Vohelm
 - Max knife has knockback (weakened knockback [see Sparket changes])
 - Sacred Knife charges 8.4% faster (0.91s -> 0.83s) [all levels]
-- Upgrading knife boosts speed by 19% for 1.6s (stacks with other speed)
+- Upgrading knife boosts speed by 17% for 1.5s (stacks with other speed)
 - Sacred Knife now +5 speed for all levels (previously started at 0% and gained to 16%)
-- All knife levels cost 2 mana (previously 2 and 3 costed 3)
+- All knife levels cost 2 mana (previously 2 and 3 cost 3)
 - Tome gives 1 less damage boost (3 -> 2)
 - Totem health reduced by 2 (5 -> 3)
 - Totem range reduced by 0.25 (7 -> 6.75)
@@ -223,6 +230,7 @@ Vohelm
 - Sacred Berries give 1s less of speed (4 -> 3)
 
 Pluto
+- Hurricane melee charges 8% faster (1.25s -> 1.15s)
 - Shadow Spikes shoot 2 less spikes (10 -> 8)
 - Regeneration heals 3 over 3 seconds (previously 4 over 4 seconds)
 - Soul Send gives 0.5s more visibility (1.5s -> 2s)
@@ -234,17 +242,18 @@ Barbose
 - Returning to Portal 0.5s slower (1s -> 1.5s)
 - Replaced returning to portal blindness with darkness
 - Returning to portal slowness 4 levels higher (level 3 -> level 7)
-- Delay before you can teleport back to portal increased 1.4s (0.6s -> 2s)
+- Delay before you can teleport back to the portal increased 1.4s (0.6s -> 2s)
 - Blackhole replaced with Smoke Wall
 - Improvements to Seeking Axe model
 
 [Bug Fixes]
 - Graphical fix for Island Temple map select build
 - Some items could be used multiple times past their use cooldown (ex. Jump Pad, Shield, Burnout, etc.)
-- Burnout would would cancel Zero-Gravity slow falling
-- Soul Send does not list visibility as feature
-- Fixed version sign linking to wrong patchnotes
+- Burnout would cancel Zero-Gravity slow-falling
+- Soul Send does not list visibility as a feature
+- Fixed version sign linking to wrong patch notes
 - Mountain Temple sometimes spawns points with incorrect timings
 - Trident Riptide hits would count as critical hits
-- Wrong player is sometimes announced as winner
+- The wrong player is sometimes announced as the winner
 - As a weapon breaks, a hit could count as a critical hit
+- Book could overwrite join toggle in lobby combat zone

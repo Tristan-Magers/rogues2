@@ -9,6 +9,8 @@ tag @s remove spiritworld
 tag @s remove spirlob
 tag @s remove arena
 
+scoreboard players set @s char_text 0
+
 scoreboard players set @s nolev -1
 scoreboard players set @s nocap 0
 
@@ -64,7 +66,7 @@ scoreboard players set @s points 0
 
 scoreboard players set @s manaT 20
 scoreboard players set @s Mana -1
-scoreboard players set @s Mana -1
+scoreboard players set @s Mana 1
 
 scoreboard players set @s noname 1
 

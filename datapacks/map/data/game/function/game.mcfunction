@@ -5,6 +5,20 @@ execute as @a run attribute @s minecraft:generic.knockback_resistance base set 0
 scoreboard players set @a[tag=!has_joined] tutorialtime 1
 tag @a add has_joined
 
+#
+tag @a remove weapon_degrade
+tag @a[nbt={Inventory:[{id:"minecraft:wooden_hoe",Slot:-106b}]}] add weapon_degrade
+tag @a[nbt={Inventory:[{id:"minecraft:stone_hoe",Slot:-106b}]}] add weapon_degrade
+tag @a[nbt={Inventory:[{id:"minecraft:iron_hoe",Slot:-106b}]}] add weapon_degrade
+tag @a[nbt={Inventory:[{id:"minecraft:golden_hoe",Slot:-106b}]}] add weapon_degrade
+tag @a[nbt={Inventory:[{id:"minecraft:diamond_hoe",Slot:-106b}]}] add weapon_degrade
+
+execute as @a run item replace entity @s[nbt={Inventory:[{id:"minecraft:wooden_hoe",Slot:-106b}]}] hotbar.0 from entity @s weapon.offhand
+execute as @a run item replace entity @s[nbt={Inventory:[{id:"minecraft:stone_hoe",Slot:-106b}]}] hotbar.0 from entity @s weapon.offhand
+execute as @a run item replace entity @s[nbt={Inventory:[{id:"minecraft:iron_hoe",Slot:-106b}]}] hotbar.0 from entity @s weapon.offhand
+execute as @a run item replace entity @s[nbt={Inventory:[{id:"minecraft:golden_hoe",Slot:-106b}]}] hotbar.0 from entity @s weapon.offhand
+execute as @a run item replace entity @s[nbt={Inventory:[{id:"minecraft:diamond_hoe",Slot:-106b}]}] hotbar.0 from entity @s weapon.offhand
+
 #leave
 scoreboard players add @a Leave 0
 execute as @a[scores={Leave=0..}] at @s run function game:players/leave
@@ -34,9 +48,9 @@ scoreboard players set @a[tag=nomusic,scores={music1=3..2110}] music1 2107
 scoreboard players set @a[tag=nomusic,scores={music1=2111..}] music1 0
 scoreboard players set @a[scores={music1=4400..}] music1 0
 execute as @a[scores={music1=2}] at @s run stopsound @s
-execute as @a[scores={music1=2}] at @s run playsound minecraft:music_disc.stal master @s ~ ~ ~ 0.8 1
+execute as @a[scores={music1=2}] at @s run playsound minecraft:music_disc.stal master @s ~ ~ ~ 0.65 1
 execute as @a[scores={music1=2110}] at @s run stopsound @s
-execute as @a[scores={music1=2110}] at @s run playsound minecraft:music_disc.chirp master @s ~ ~ ~ 0.8 1
+execute as @a[scores={music1=2110}] at @s run playsound minecraft:music_disc.chirp master @s ~ ~ ~ 0.65 1
 
 #spawn
 scoreboard players set @a[x=14,y=4,z=-41,distance=..20,gamemode=adventure,tag=game] respawn 100
@@ -180,8 +194,9 @@ function game:game/menu/portals
 scoreboard players set @a bowshot 0
 
 #carrot on a stick
+clear @a[gamemode=adventure,tag=ingame,nbt=!{Inventory:[{id:"minecraft:carrot_on_a_stick",Slot:-106b}]}] carrot_on_a_stick
 execute as @a[gamemode=adventure,tag=ingame,nbt=!{Inventory:[{id:"minecraft:carrot_on_a_stick",Slot:-106b}]}] at @s run function game:spells/manaup
-item replace entity @a[gamemode=adventure,nbt=!{Inventory:[{id:"minecraft:carrot_on_a_stick",Slot:-106b}]}] weapon.offhand with minecraft:carrot_on_a_stick
+item replace entity @a[gamemode=adventure,nbt=!{Inventory:[{id:"minecraft:carrot_on_a_stick",Slot:-106b}]}] weapon.offhand with minecraft:carrot_on_a_stick[custom_name='{"text":" "}']
 
 #menu
 execute unless entity @e[scores={Time=1..}] if entity @e[scores={mapcdelay=0}] if block -93 41 66 minecraft:lever[face=wall,powered=true,facing=north] run function game:game/menu/mapnext
@@ -240,6 +255,9 @@ effect clear @a minecraft:bad_omen
 
 scoreboard players add @e[tag=turoial_view] t1 1
 kill @e[tag=turoial_view,scores={t1=800..}]
+
+# portal knockback res
+execute as @a[scores={effect_immune=1..}] run attribute @s minecraft:generic.knockback_resistance base set 1.0
 
 #
 #execute as @a[tag=water_remove_target] at @s run function game:test2

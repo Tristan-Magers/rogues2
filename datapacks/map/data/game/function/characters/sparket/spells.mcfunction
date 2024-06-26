@@ -12,7 +12,7 @@ execute as @s[nbt={SelectedItem:{id:"minecraft:coal"}}] at @s run item replace e
 #flame bow
 scoreboard players set @s[nbt={SelectedItem:{id:"minecraft:charcoal"}}] btimer 2
 scoreboard players remove @s[nbt={SelectedItem:{id:"minecraft:charcoal"}}] Mana 8
-execute as @s[nbt={SelectedItem:{id:"minecraft:charcoal"}}] at @s run item replace entity @s hotbar.1 with minecraft:bow[damage=40,unbreakable={show_in_tooltip:false},enchantments={levels:{"minecraft:flame":1},show_in_tooltip:false},custom_name='[{"text":"Flame Bow","color":"red","italic":false,"bold":true}]',lore=['{"text":"A bow that sets players on fire!","color":"white","italic":false}','{"text":"10 max damage","color":"gold","italic":false}','{"text":"3s fire (3 damage)","color":"green","italic":false}','{"text":"Only 2 arrows","color":"red","italic":false}']] 1
+execute as @s[nbt={SelectedItem:{id:"minecraft:charcoal"}}] at @s run item replace entity @s hotbar.1 with minecraft:bow[damage=40,unbreakable={show_in_tooltip:false},enchantments={levels:{"minecraft:flame":1},show_in_tooltip:false},custom_name='[{"text":"Flame Bow","color":"red","italic":false,"bold":true}]',lore=['{"text":"A bow that sets players on fire!","color":"white","italic":false}','{"text":"7 max damage","color":"gold","italic":false}','{"text":"2s fire (2 damage)","color":"green","italic":false}','{"text":"Only 2 arrows","color":"red","italic":false}']] 1
 
 #fire breath
 execute as @s[scores={FBreload=..0},nbt={SelectedItem:{id:"minecraft:blaze_rod"}}] at @s run summon minecraft:armor_stand ~ ~ ~ {NoGravity:1,CustomName:'{"text":"Fire"}',Invulnerable:1,Invisible:1,Small:0,Marker:1}
@@ -24,8 +24,8 @@ scoreboard players remove @s[scores={FBreload=..0},nbt={SelectedItem:{id:"minecr
 scoreboard players set @s[scores={FBreload=..0},nbt={SelectedItem:{id:"minecraft:blaze_rod"}}] FBreload 5
 
 #burnout
-scoreboard players set @s[nbt={SelectedItem:{id:"minecraft:blaze_powder"}}] burnout 20
-scoreboard players set @s[nbt={SelectedItem:{id:"minecraft:blaze_powder"}}] burnoutT 50
+scoreboard players set @s[nbt={SelectedItem:{id:"minecraft:blaze_powder"}}] burnout 18
+scoreboard players set @s[nbt={SelectedItem:{id:"minecraft:blaze_powder"}}] burnoutT 48
 execute as @s[nbt={SelectedItem:{id:"minecraft:blaze_powder"}}] at @s run playsound minecraft:entity.ghast.shoot master @a ~ ~ ~ 1 1.6
 execute as @s[nbt={SelectedItem:{id:"minecraft:blaze_powder"}}] at @s run playsound minecraft:entity.firework_rocket.launch master @a ~ ~ ~ 1 1.3
 scoreboard players remove @s[nbt={SelectedItem:{id:"minecraft:blaze_powder"}}] Mana 7

@@ -112,8 +112,8 @@ execute as @s[scores={healthshow=1..,item=2}] at @s run execute as @e[tag=stealt
 execute as @s[scores={healthshow=1..,item=2}] at @s run team join smoke @e[tag=stealth]
 execute as @s[scores={healthshow=1..,invisoff=-2..}] at @s run execute as @e[tag=stealth] at @s run data merge entity @s {CustomName:'{"text":"±±Visible±±"}'}
 execute as @s[scores={healthshow=1..,invisoff=-2..}] at @s run team join visible @e[tag=stealth]
-execute as @s[scores={healthshow=1..,fire_time_effect=1..}] at @s run execute as @e[tag=stealth] at @s run data merge entity @s {CustomName:'{"text":"±±±FIRE!±±±"}'}
-execute as @s[scores={healthshow=1..,fire_time_effect=1..}] at @s run team join visible @e[tag=stealth]
+execute as @s[scores={healthshow=1..,fire_time_effect=1..}] at @s run execute as @e[tag=stealth] at @s run data merge entity @s {CustomName:'{"text":"±±burning±±"}'}
+execute as @s[scores={healthshow=1..,fire_time_effect=1..}] at @s run team leave @e[tag=stealth]
 execute as @s[scores={healthshow=1..,shield=1..}] at @s run execute as @e[tag=stealth] at @s run data merge entity @s {CustomName:'{"text":"±±±Armor±±±"}'}
 execute as @s[scores={healthshow=1..,shield=1..}] at @s run team join shield @e[tag=stealth]
 execute as @s[scores={healthshow=1..,noname=..-1,invisoff=-2..},tag=!lobby] at @s run execute as @e[tag=stealth] at @s run data merge entity @s {CustomName:'{"text":"±±NAMETAG±±"}'}
@@ -147,11 +147,42 @@ scoreboard players set @s[scores={class=1,healthshow=1..,invisoff=..-2}] chibi_i
 scoreboard players set @s[scores={class=1,healthshow=1..,particles=1..}] chibi_icon 102
 scoreboard players set @s[scores={class=1,healthshow=1..},nbt={SelectedItem:{id:"minecraft:golden_sword"}}] chibi_icon 110
 scoreboard players set @s[scores={class=1,healthshow=1..},nbt={SelectedItem:{id:"minecraft:wooden_sword"}}] chibi_icon 110
+scoreboard players set @s[scores={class=1,healthshow=1..},nbt={SelectedItem:{id:"minecraft:bow"}}] chibi_icon 130
 scoreboard players set @s[scores={class=1,healthshow=1..,invisoff=-1..}] chibi_icon 100
 scoreboard players set @s[scores={class=1,healthshow=1..,invisoff=-1..},nbt={SelectedItem:{id:"minecraft:golden_sword"}}] chibi_icon 120
 scoreboard players set @s[scores={class=1,healthshow=1..,invisoff=-1..},nbt={SelectedItem:{id:"minecraft:wooden_sword"}}] chibi_icon 120
+scoreboard players set @s[scores={class=1,healthshow=1..,invisoff=-1..},nbt={SelectedItem:{id:"minecraft:bow"}}] chibi_icon 140
 scoreboard players set @s[scores={class=1,healthshow=1..,fire_time_effect=1..}] chibi_icon 104
 scoreboard players set @s[scores={class=1,healthshow=1..,glowing=1..}] chibi_icon 103
+
+scoreboard players set @s[scores={class=2,healthshow=1..,invisoff=..-2}] chibi_icon 201
+scoreboard players set @s[scores={class=2,healthshow=1..,particles=1..}] chibi_icon 202
+scoreboard players set @s[scores={class=2,healthshow=1..},nbt={SelectedItem:{id:"minecraft:wooden_hoe"}}] chibi_icon 210
+scoreboard players set @s[scores={class=2,healthshow=1..},nbt={SelectedItem:{id:"minecraft:stone_hoe"}}] chibi_icon 210
+scoreboard players set @s[scores={class=2,healthshow=1..},nbt={SelectedItem:{id:"minecraft:iron_hoe"}}] chibi_icon 210
+scoreboard players set @s[scores={class=2,healthshow=1..},nbt={SelectedItem:{id:"minecraft:golden_hoe"}}] chibi_icon 210
+scoreboard players set @s[scores={class=2,healthshow=1..},nbt={SelectedItem:{id:"minecraft:diamond_hoe"}}] chibi_icon 210
+scoreboard players set @s[scores={class=2,healthshow=1..},nbt={SelectedItem:{id:"minecraft:golden_apple"}}] chibi_icon 250
+scoreboard players set @s[scores={class=2,healthshow=1..,invisoff=-1..}] chibi_icon 200
+scoreboard players set @s[scores={class=2,healthshow=1..,invisoff=-1..},nbt={SelectedItem:{id:"minecraft:wooden_hoe"}}] chibi_icon 220
+scoreboard players set @s[scores={class=2,healthshow=1..,invisoff=-1..},nbt={SelectedItem:{id:"minecraft:stone_hoe"}}] chibi_icon 220
+scoreboard players set @s[scores={class=2,healthshow=1..,invisoff=-1..},nbt={SelectedItem:{id:"minecraft:iron_hoe"}}] chibi_icon 220
+scoreboard players set @s[scores={class=2,healthshow=1..,invisoff=-1..},nbt={SelectedItem:{id:"minecraft:golden_hoe"}}] chibi_icon 220
+scoreboard players set @s[scores={class=2,healthshow=1..,invisoff=-1..},nbt={SelectedItem:{id:"minecraft:diamond_hoe"}}] chibi_icon 220
+scoreboard players set @s[scores={class=2,healthshow=1..,invisoff=-1..},nbt={SelectedItem:{id:"minecraft:golden_apple"}}] chibi_icon 240
+scoreboard players set @s[scores={class=2,healthshow=1..,fire_time_effect=1..}] chibi_icon 204
+scoreboard players set @s[scores={class=2,healthshow=1..,shield=1..}] chibi_icon 230
+scoreboard players set @s[scores={class=2,healthshow=1..,glowing=1..}] chibi_icon 203
+
+scoreboard players set @s[scores={class=3,healthshow=1..,invisoff=..-2}] chibi_icon 301
+scoreboard players set @s[scores={class=3,healthshow=1..,particles=1..}] chibi_icon 302
+scoreboard players set @s[scores={class=3,healthshow=1..},nbt={SelectedItem:{id:"minecraft:trident"}}] chibi_icon 310
+scoreboard players set @s[scores={class=3,healthshow=1..},nbt={SelectedItem:{id:"minecraft:potion"}}] chibi_icon 330
+scoreboard players set @s[scores={class=3,healthshow=1..,invisoff=-1..}] chibi_icon 300
+scoreboard players set @s[scores={class=3,healthshow=1..,invisoff=-1..},nbt={SelectedItem:{id:"minecraft:trident"}}] chibi_icon 320
+scoreboard players set @s[scores={class=3,healthshow=1..,invisoff=-1..},nbt={SelectedItem:{id:"minecraft:potion"}}] chibi_icon 340
+scoreboard players set @s[scores={class=3,healthshow=1..,fire_time_effect=1..}] chibi_icon 304
+scoreboard players set @s[scores={class=3,healthshow=1..,glowing=1..}] chibi_icon 303
 
 scoreboard players set @s[scores={class=4,healthshow=1..,invisoff=..-2}] chibi_icon 401
 scoreboard players set @s[scores={class=4,healthshow=1..,particles=1..}] chibi_icon 402
@@ -164,10 +195,22 @@ scoreboard players set @s[scores={class=4,healthshow=1..,plutospike=1..}] chibi_
 scoreboard players set @s[scores={class=4,healthshow=1..,fire_time_effect=1..}] chibi_icon 404
 scoreboard players set @s[scores={class=4,healthshow=1..,glowing=1..}] chibi_icon 403
 
+scoreboard players set @s[scores={class=5,healthshow=1..,invisoff=..-2}] chibi_icon 501
+scoreboard players set @s[scores={class=5,healthshow=1..,particles=1..}] chibi_icon 502
+scoreboard players set @s[scores={class=5,healthshow=1..},nbt={SelectedItem:{id:"minecraft:stone_sword"}}] chibi_icon 510
+scoreboard players set @s[scores={class=5,healthshow=1..},nbt={SelectedItem:{id:"minecraft:bow"}}] chibi_icon 530
+scoreboard players set @s[scores={class=5,healthshow=1..,invisoff=-1..}] chibi_icon 500
+scoreboard players set @s[scores={class=5,healthshow=1..,invisoff=-1..},nbt={SelectedItem:{id:"minecraft:stone_sword"}}] chibi_icon 520
+scoreboard players set @s[scores={class=5,healthshow=1..,invisoff=-1..},nbt={SelectedItem:{id:"minecraft:bow"}}] chibi_icon 540
+scoreboard players set @s[scores={class=5,healthshow=1..,fire_time_effect=1..}] chibi_icon 504
+scoreboard players set @s[scores={class=5,healthshow=1..,glowing=1..}] chibi_icon 503
+
 scoreboard players set @s[scores={class=6,healthshow=1..,invisoff=..-2}] chibi_icon 601
 scoreboard players set @s[scores={class=6,healthshow=1..,particles=1..}] chibi_icon 602
+scoreboard players set @s[scores={class=6,healthshow=1..},nbt={SelectedItem:{id:"minecraft:diamond_axe"}}] chibi_icon 610
 scoreboard players set @s[scores={class=6,healthshow=1..,invisoff=-1..}] chibi_icon 600
-#scoreboard players set @s[scores={class=6,healthshow=1..,fire_time_effect=1..}] chibi_icon 604
+scoreboard players set @s[scores={class=6,healthshow=1..,invisoff=-1..},nbt={SelectedItem:{id:"minecraft:diamond_axe"}}] chibi_icon 620
+scoreboard players set @s[scores={class=6,healthshow=1..,fire_time_effect=1..}] chibi_icon 604
 scoreboard players set @s[scores={class=6,healthshow=1..,glowing=1..}] chibi_icon 603
 
 execute as @s[scores={chibi_icon=1}] at @s run function game:players/health_bar_macro {"icon":0001}
@@ -180,6 +223,29 @@ execute as @s[scores={chibi_icon=103}] at @s run function game:players/health_ba
 execute as @s[scores={chibi_icon=104}] at @s run function game:players/health_bar_macro {"icon":0104}
 execute as @s[scores={chibi_icon=110}] at @s run function game:players/health_bar_macro {"icon":0110}
 execute as @s[scores={chibi_icon=120}] at @s run function game:players/health_bar_macro {"icon":0120}
+execute as @s[scores={chibi_icon=130}] at @s run function game:players/health_bar_macro {"icon":0130}
+execute as @s[scores={chibi_icon=140}] at @s run function game:players/health_bar_macro {"icon":0140}
+
+execute as @s[scores={chibi_icon=200}] at @s run function game:players/health_bar_macro {"icon":0200}
+execute as @s[scores={chibi_icon=201}] at @s run function game:players/health_bar_macro {"icon":0201}
+execute as @s[scores={chibi_icon=202}] at @s run function game:players/health_bar_macro {"icon":0202}
+execute as @s[scores={chibi_icon=203}] at @s run function game:players/health_bar_macro {"icon":0203}
+execute as @s[scores={chibi_icon=204}] at @s run function game:players/health_bar_macro {"icon":0204}
+execute as @s[scores={chibi_icon=210}] at @s run function game:players/health_bar_macro {"icon":0210}
+execute as @s[scores={chibi_icon=220}] at @s run function game:players/health_bar_macro {"icon":0220}
+execute as @s[scores={chibi_icon=230}] at @s run function game:players/health_bar_macro {"icon":0230}
+execute as @s[scores={chibi_icon=240}] at @s run function game:players/health_bar_macro {"icon":0240}
+execute as @s[scores={chibi_icon=250}] at @s run function game:players/health_bar_macro {"icon":0250}
+
+execute as @s[scores={chibi_icon=300}] at @s run function game:players/health_bar_macro {"icon":0300}
+execute as @s[scores={chibi_icon=301}] at @s run function game:players/health_bar_macro {"icon":0301}
+execute as @s[scores={chibi_icon=302}] at @s run function game:players/health_bar_macro {"icon":0302}
+execute as @s[scores={chibi_icon=303}] at @s run function game:players/health_bar_macro {"icon":0303}
+execute as @s[scores={chibi_icon=304}] at @s run function game:players/health_bar_macro {"icon":0304}
+execute as @s[scores={chibi_icon=310}] at @s run function game:players/health_bar_macro {"icon":0310}
+execute as @s[scores={chibi_icon=320}] at @s run function game:players/health_bar_macro {"icon":0320}
+execute as @s[scores={chibi_icon=330}] at @s run function game:players/health_bar_macro {"icon":0330}
+execute as @s[scores={chibi_icon=340}] at @s run function game:players/health_bar_macro {"icon":0340}
 
 execute as @s[scores={chibi_icon=401}] at @s run function game:players/health_bar_macro {"icon":0401}
 execute as @s[scores={chibi_icon=402}] at @s run function game:players/health_bar_macro {"icon":0402}
@@ -191,6 +257,16 @@ execute as @s[scores={chibi_icon=450}] at @s run function game:players/health_ba
 execute as @s[scores={chibi_icon=420}] at @s run function game:players/health_bar_macro {"icon":0420}
 execute as @s[scores={chibi_icon=403}] at @s run function game:players/health_bar_macro {"icon":0403}
 execute as @s[scores={chibi_icon=404}] at @s run function game:players/health_bar_macro {"icon":0404}
+
+execute as @s[scores={chibi_icon=500}] at @s run function game:players/health_bar_macro {"icon":0500}
+execute as @s[scores={chibi_icon=501}] at @s run function game:players/health_bar_macro {"icon":0501}
+execute as @s[scores={chibi_icon=502}] at @s run function game:players/health_bar_macro {"icon":0502}
+execute as @s[scores={chibi_icon=503}] at @s run function game:players/health_bar_macro {"icon":0503}
+execute as @s[scores={chibi_icon=504}] at @s run function game:players/health_bar_macro {"icon":0504}
+execute as @s[scores={chibi_icon=510}] at @s run function game:players/health_bar_macro {"icon":0510}
+execute as @s[scores={chibi_icon=520}] at @s run function game:players/health_bar_macro {"icon":0520}
+execute as @s[scores={chibi_icon=530}] at @s run function game:players/health_bar_macro {"icon":0530}
+execute as @s[scores={chibi_icon=540}] at @s run function game:players/health_bar_macro {"icon":0540}
 
 execute as @s[scores={chibi_icon=600}] at @s run function game:players/health_bar_macro {"icon":0600}
 execute as @s[scores={chibi_icon=601}] at @s run function game:players/health_bar_macro {"icon":0601}

@@ -63,6 +63,9 @@ playsound minecraft:block.ancient_debris.break master @s[nbt={SelectedItem:{id:"
 playsound minecraft:block.note_block.basedrum master @s[nbt={SelectedItem:{id:"minecraft:spider_eye"}}] ~ ~ ~ 1 2
 playsound minecraft:block.note_block.basedrum master @s[nbt={SelectedItem:{id:"minecraft:magma_cream"}}] ~ ~ ~ 1 1
 
+scoreboard players set @s[nbt={SelectedItem:{id:"minecraft:spider_eye"}}] char_text 0
+scoreboard players set @s[nbt={SelectedItem:{id:"minecraft:magma_cream"}}] char_text 0
+
 title @s[nbt={SelectedItem:{id:"minecraft:spider_eye"}}] title {"text":"Ready","color":"dark_aqua","font":"fancy"}
 title @s[nbt={SelectedItem:{id:"minecraft:magma_cream"}}] title {"text":"Not Ready","color":"red","font":"fancy"}
 

@@ -1,5 +1,8 @@
 kill @e[tag=project_save_spot]
 
+scoreboard players set @a[scores={music1=..2109}] music1 2107
+scoreboard players set @a[scores={music1=2110..}] music1 0
+
 gamemode adventure @a[gamemode=!creative,tag=game]
 tag @a[tag=ingame,tag=!lobby,gamemode=adventure,tag=!spirlob,tag=!tpno] add tpback
 tp @a[tag=tpback] -128 38 54 -90 0

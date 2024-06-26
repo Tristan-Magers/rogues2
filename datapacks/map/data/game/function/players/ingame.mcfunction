@@ -92,7 +92,7 @@ execute at @s if block ~ ~ ~ lava run scoreboard players set @s[scores={fire=4..
 tag @s remove flame_arrow_hit
 execute store result score @s fire_time run data get entity @s Fire 1
 execute if score @s fire_time > @s fire_time_t as @s[scores={fire_time=99}] run tag @s add flame_arrow_hit
-execute if score @s fire_time > @s fire_time_t run scoreboard players set @s[scores={fire_time=10..140}] fire_time_effect 61
+execute if score @s fire_time > @s fire_time_t run scoreboard players set @s[scores={fire_time=10..140}] fire_time_effect 41
 execute if score @s fire_time > @s fire_time_t run scoreboard players set @s[scores={fire_time=140..}] fire_time_effect 101
 execute if score @s fire_time > @s fire_time_t run scoreboard players set @s invisoff 6
 scoreboard players operation @s fire_time_t = @s fire_time
@@ -114,8 +114,8 @@ scoreboard players set @s[scores={fireT=20..}] fireT 0
 effect clear @s[scores={firehit=0,poison=..0,poison2=..0}] slowness
 scoreboard players remove @s[scores={firehit=0..}] firehit 1
 
-item replace entity @s[scores={fire_time_effect=80}] hotbar.6 with minecraft:carrot
-item replace entity @s[scores={fire_time_effect=60}] hotbar.6 with minecraft:carrot
+item replace entity @s[scores={fire_time_effect=80},tag=vengeuse] hotbar.6 with minecraft:carrot
+item replace entity @s[scores={fire_time_effect=60},tag=vengeuse] hotbar.6 with minecraft:carrot
 clear @s[scores={fire_time_effect=..0}] carrot
 
 execute as @s[scores={fireT=1},gamemode=adventure] run particle minecraft:large_smoke ~ ~0.2 ~ 0.22 0.1 0.22 0.02 1 force
