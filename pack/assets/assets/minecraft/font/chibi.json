@@ -1,0 +1,116 @@
+{
+  "providers": [
+    {
+      "type": "bitmap",
+      "file": "minecraft:font/chibi/pluto_vis.png",
+      "ascent": -12,
+      "height": 64,
+      "chars": ["\u0001"]
+    },
+    {
+      "type": "bitmap",
+      "file": "minecraft:font/chibi/pluto_vis.png",
+      "ascent": -12,
+      "height": 64,
+      "chars": ["\u0002"]
+    },
+    {
+      "type": "bitmap",
+      "file": "minecraft:font/chibi/sparket_vis.png",
+      "ascent": -12,
+      "height": 64,
+      "chars": ["\u0100"]
+    },
+    {
+      "type": "bitmap",
+      "file": "minecraft:font/chibi/sparket_invis.png",
+      "ascent": -12,
+      "height": 64,
+      "chars": ["\u0101"]
+    },
+    {
+      "type": "bitmap",
+      "file": "minecraft:font/chibi/sparket_smoke.png",
+      "ascent": -12,
+      "height": 64,
+      "chars": ["\u0102"]
+    },
+    {
+      "type": "bitmap",
+      "file": "minecraft:font/chibi/sparket_glow.png",
+      "ascent": -12,
+      "height": 64,
+      "chars": ["\u0103"]
+    },
+    {
+      "type": "bitmap",
+      "file": "minecraft:font/chibi/pluto_vis.png",
+      "ascent": -12,
+      "height": 64,
+      "chars": ["\u0400"]
+    },
+    {
+      "type": "bitmap",
+      "file": "minecraft:font/chibi/pluto_invis.png",
+      "ascent": -12,
+      "height": 64,
+      "chars": ["\u0401"]
+    },
+    {
+      "type": "bitmap",
+      "file": "minecraft:font/chibi/pluto_smoke.png",
+      "ascent": -12,
+      "height": 64,
+      "chars": ["\u0402"]
+    },
+    {
+      "type": "bitmap",
+      "file": "minecraft:font/chibi/pluto_heart.png",
+      "ascent": -12,
+      "height": 64,
+      "chars": ["\u0410"]
+    },
+    {
+      "type": "bitmap",
+      "file": "minecraft:font/chibi/pluto_shoot.png",
+      "ascent": -12,
+      "height": 64,
+      "chars": ["\u0420"]
+    },
+    {
+      "type": "bitmap",
+      "file": "minecraft:font/chibi/pluto_glow.png",
+      "ascent": -12,
+      "height": 64,
+      "chars": ["\u0403"]
+    },
+    {
+      "type": "bitmap",
+      "file": "minecraft:font/chibi/pluto_fire.png",
+      "ascent": -12,
+      "height": 64,
+      "chars": ["\u0404"]
+    },
+    {
+      "type": "bitmap",
+      "file": "minecraft:font/chibi/pluto_disk.png",
+      "ascent": -12,
+      "height": 64,
+      "chars": ["\u0430"]
+    },
+    {
+      "type": "bitmap",
+      "file": "minecraft:font/chibi/pluto_disk_vis.png",
+      "ascent": -12,
+      "height": 64,
+      "chars": ["\u0440"]
+    },
+    {
+      "type": "bitmap",
+      "file": "minecraft:font/chibi/pluto_heart_vis.png",
+      "ascent": -12,
+      "height": 64,
+      "chars": ["\u0450"]
+    }
+  ]
+}

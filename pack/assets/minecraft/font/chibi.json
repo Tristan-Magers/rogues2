@@ -16,73 +16,381 @@
     },
     {
       "type": "bitmap",
+      "file": "minecraft:font/chibi/sparket_vis.png",
+      "ascent": -11,
+      "height": 64,
+      "chars": ["\u0100"]
+    },
+    {
+      "type": "bitmap",
+      "file": "minecraft:font/chibi/sparket_invis.png",
+      "ascent": -11,
+      "height": 64,
+      "chars": ["\u0101"]
+    },
+    {
+      "type": "bitmap",
+      "file": "minecraft:font/chibi/sparket_smoke.png",
+      "ascent": -11,
+      "height": 64,
+      "chars": ["\u0102"]
+    },
+    {
+      "type": "bitmap",
+      "file": "minecraft:font/chibi/sparket_glow.png",
+      "ascent": -11,
+      "height": 64,
+      "chars": ["\u0103"]
+    },
+    {
+      "type": "bitmap",
+      "file": "minecraft:font/chibi/sparket_fire.png",
+      "ascent": -11,
+      "height": 64,
+      "chars": ["\u0104"]
+    },
+    {
+      "type": "bitmap",
+      "file": "minecraft:font/chibi/sparket_fist.png",
+      "ascent": -11,
+      "height": 64,
+      "chars": ["\u0110"]
+    },
+    {
+      "type": "bitmap",
+      "file": "minecraft:font/chibi/sparket_fist_vis.png",
+      "ascent": -11,
+      "height": 64,
+      "chars": ["\u0120"]
+    },
+    {
+      "type": "bitmap",
+      "file": "minecraft:font/chibi/sparket_bow.png",
+      "ascent": -11,
+      "height": 64,
+      "chars": ["\u0130"]
+    },
+    {
+      "type": "bitmap",
+      "file": "minecraft:font/chibi/sparket_bow_vis.png",
+      "ascent": -11,
+      "height": 64,
+      "chars": ["\u0140"]
+    },
+    {
+      "type": "bitmap",
+      "file": "minecraft:font/chibi/vohelm_vis.png",
+      "ascent": -10,
+      "height": 64,
+      "chars": ["\u0200"]
+    },
+    {
+      "type": "bitmap",
+      "file": "minecraft:font/chibi/vohelm_invis.png",
+      "ascent": -10,
+      "height": 64,
+      "chars": ["\u0201"]
+    },
+    {
+      "type": "bitmap",
+      "file": "minecraft:font/chibi/vohelm_smoke.png",
+      "ascent": -10,
+      "height": 64,
+      "chars": ["\u0202"]
+    },
+    {
+      "type": "bitmap",
+      "file": "minecraft:font/chibi/vohelm_glow.png",
+      "ascent": -10,
+      "height": 64,
+      "chars": ["\u0203"]
+    },
+    {
+      "type": "bitmap",
+      "file": "minecraft:font/chibi/vohelm_fire.png",
+      "ascent": -10,
+      "height": 64,
+      "chars": ["\u0204"]
+    },
+    {
+      "type": "bitmap",
+      "file": "minecraft:font/chibi/vohelm_knife.png",
+      "ascent": -10,
+      "height": 64,
+      "chars": ["\u0220"]
+    },
+    {
+      "type": "bitmap",
+      "file": "minecraft:font/chibi/vohelm_knife_invis.png",
+      "ascent": -10,
+      "height": 64,
+      "chars": ["\u0210"]
+    },
+    {
+      "type": "bitmap",
+      "file": "minecraft:font/chibi/vohelm_armor.png",
+      "ascent": -10,
+      "height": 64,
+      "chars": ["\u0230"]
+    },
+    {
+      "type": "bitmap",
+      "file": "minecraft:font/chibi/vohelm_berry_vis.png",
+      "ascent": -10,
+      "height": 64,
+      "chars": ["\u0240"]
+    },
+    {
+      "type": "bitmap",
+      "file": "minecraft:font/chibi/vohelm_berry.png",
+      "ascent": -10,
+      "height": 64,
+      "chars": ["\u0250"]
+    },
+    {
+      "type": "bitmap",
+      "file": "minecraft:font/chibi/emma_vis.png",
+      "ascent": -9,
+      "height": 64,
+      "chars": ["\u0300"]
+    },
+    {
+      "type": "bitmap",
+      "file": "minecraft:font/chibi/emma_invis.png",
+      "ascent": -9,
+      "height": 64,
+      "chars": ["\u0301"]
+    },
+    {
+      "type": "bitmap",
+      "file": "minecraft:font/chibi/emma_smoke.png",
+      "ascent": -9,
+      "height": 64,
+      "chars": ["\u0302"]
+    },
+    {
+      "type": "bitmap",
+      "file": "minecraft:font/chibi/emma_glow.png",
+      "ascent": -9,
+      "height": 64,
+      "chars": ["\u0303"]
+    },
+    {
+      "type": "bitmap",
+      "file": "minecraft:font/chibi/emma_fire.png",
+      "ascent": -9,
+      "height": 64,
+      "chars": ["\u0304"]
+    },
+    {
+      "type": "bitmap",
+      "file": "minecraft:font/chibi/emma_trident.png",
+      "ascent": -9,
+      "height": 64,
+      "chars": ["\u0310"]
+    },
+    {
+      "type": "bitmap",
+      "file": "minecraft:font/chibi/emma_trident_vis.png",
+      "ascent": -9,
+      "height": 64,
+      "chars": ["\u0320"]
+    },
+    {
+      "type": "bitmap",
+      "file": "minecraft:font/chibi/emma_potion.png",
+      "ascent": -9,
+      "height": 64,
+      "chars": ["\u0330"]
+    },
+    {
+      "type": "bitmap",
+      "file": "minecraft:font/chibi/emma_potion_vis.png",
+      "ascent": -9,
+      "height": 64,
+      "chars": ["\u0340"]
+    },
+    {
+      "type": "bitmap",
       "file": "minecraft:font/chibi/pluto_vis.png",
-      "ascent": -12,
+      "ascent": -11,
       "height": 64,
       "chars": ["\u0400"]
     },
     {
       "type": "bitmap",
       "file": "minecraft:font/chibi/pluto_invis.png",
-      "ascent": -12,
+      "ascent": -11,
       "height": 64,
       "chars": ["\u0401"]
     },
     {
       "type": "bitmap",
       "file": "minecraft:font/chibi/pluto_smoke.png",
-      "ascent": -12,
+      "ascent": -11,
       "height": 64,
       "chars": ["\u0402"]
     },
     {
       "type": "bitmap",
       "file": "minecraft:font/chibi/pluto_heart.png",
-      "ascent": -12,
+      "ascent": -11,
       "height": 64,
       "chars": ["\u0410"]
     },
     {
       "type": "bitmap",
       "file": "minecraft:font/chibi/pluto_shoot.png",
-      "ascent": -12,
+      "ascent": -11,
       "height": 64,
       "chars": ["\u0420"]
     },
     {
       "type": "bitmap",
       "file": "minecraft:font/chibi/pluto_glow.png",
-      "ascent": -12,
+      "ascent": -11,
       "height": 64,
       "chars": ["\u0403"]
     },
     {
       "type": "bitmap",
       "file": "minecraft:font/chibi/pluto_fire.png",
-      "ascent": -12,
+      "ascent": -11,
       "height": 64,
       "chars": ["\u0404"]
     },
     {
       "type": "bitmap",
       "file": "minecraft:font/chibi/pluto_disk.png",
-      "ascent": -12,
+      "ascent": -11,
       "height": 64,
       "chars": ["\u0430"]
     },
     {
       "type": "bitmap",
       "file": "minecraft:font/chibi/pluto_disk_vis.png",
-      "ascent": -12,
+      "ascent": -11,
       "height": 64,
       "chars": ["\u0440"]
     },
     {
       "type": "bitmap",
       "file": "minecraft:font/chibi/pluto_heart_vis.png",
-      "ascent": -12,
+      "ascent": -11,
       "height": 64,
       "chars": ["\u0450"]
+    },
+    {
+      "type": "bitmap",
+      "file": "minecraft:font/chibi/halt_vis.png",
+      "ascent": -9,
+      "height": 64,
+      "chars": ["\u0500"]
+    },
+    {
+      "type": "bitmap",
+      "file": "minecraft:font/chibi/halt_invis.png",
+      "ascent": -9,
+      "height": 64,
+      "chars": ["\u0501"]
+    },
+    {
+      "type": "bitmap",
+      "file": "minecraft:font/chibi/halt_smoke.png",
+      "ascent": -9,
+      "height": 64,
+      "chars": ["\u0502"]
+    },
+    {
+      "type": "bitmap",
+      "file": "minecraft:font/chibi/halt_glow.png",
+      "ascent": -9,
+      "height": 64,
+      "chars": ["\u0503"]
+    },
+    {
+      "type": "bitmap",
+      "file": "minecraft:font/chibi/halt_fire.png",
+      "ascent": -9,
+      "height": 64,
+      "chars": ["\u0504"]
+    },
+    {
+      "type": "bitmap",
+      "file": "minecraft:font/chibi/halt_claws_vis.png",
+      "ascent": -9,
+      "height": 64,
+      "chars": ["\u0520"]
+    },
+    {
+      "type": "bitmap",
+      "file": "minecraft:font/chibi/halt_claws.png",
+      "ascent": -9,
+      "height": 64,
+      "chars": ["\u0510"]
+    },
+    {
+      "type": "bitmap",
+      "file": "minecraft:font/chibi/halt_bow_vis.png",
+      "ascent": -9,
+      "height": 64,
+      "chars": ["\u0540"]
+    },
+    {
+      "type": "bitmap",
+      "file": "minecraft:font/chibi/halt_bow.png",
+      "ascent": -9,
+      "height": 64,
+      "chars": ["\u0530"]
+    },
+    {
+      "type": "bitmap",
+      "file": "minecraft:font/chibi/barbose_vis.png",
+      "ascent": -9,
+      "height": 64,
+      "chars": ["\u0600"]
+    },
+    {
+      "type": "bitmap",
+      "file": "minecraft:font/chibi/barbose_invis.png",
+      "ascent": -9,
+      "height": 64,
+      "chars": ["\u0601"]
+    },
+    {
+      "type": "bitmap",
+      "file": "minecraft:font/chibi/barbose_smoke.png",
+      "ascent": -9,
+      "height": 64,
+      "chars": ["\u0602"]
+    },
+    {
+      "type": "bitmap",
+      "file": "minecraft:font/chibi/barbose_glow.png",
+      "ascent": -9,
+      "height": 64,
+      "chars": ["\u0603"]
+    },
+    {
+      "type": "bitmap",
+      "file": "minecraft:font/chibi/barbose_fire.png",
+      "ascent": -9,
+      "height": 64,
+      "chars": ["\u0604"]
+    },
+    {
+      "type": "bitmap",
+      "file": "minecraft:font/chibi/barbose_axe.png",
+      "ascent": -9,
+      "height": 64,
+      "chars": ["\u0610"]
+    },
+    {
+      "type": "bitmap",
+      "file": "minecraft:font/chibi/barbose_axe_vis.png",
+      "ascent": -9,
+      "height": 64,
+      "chars": ["\u0620"]
     }
   ]
 }
