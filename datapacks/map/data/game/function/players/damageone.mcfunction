@@ -5,3 +5,4 @@ playsound minecraft:entity.player.hurt master @a
 scoreboard players remove @s healthshow 1
 
 scoreboard players set @s fireheal -120
+scoreboard players set @s plutoregen -1

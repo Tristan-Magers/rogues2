@@ -232,7 +232,7 @@ Vohelm
 Pluto
 - Hurricane melee charges 8% faster (1.25s -> 1.15s)
 - Shadow Spikes shoot 2 less spikes (10 -> 8)
-- Regeneration heals 3 over 3 seconds (previously 4 over 4 seconds)
+- Regeneration heals 3 over 3 seconds (previously 4 over 3 seconds)
 - Soul Send gives 0.5s more visibility (1.5s -> 2s)
 
 Barbose
@@ -257,3 +257,29 @@ Barbose
 - The wrong player is sometimes announced as the winner
 - As a weapon breaks, a hit could count as a critical hit
 - Book could overwrite join toggle in lobby combat zone
+
+* Patch 2.1.1 Notes *
+
+Note: minor changes to polish 2.1
+
+[General]
+- Shifting skips intro cutscene
+- Explosion knockback immunity included in immunity while exiting portal
+
+[Characters]
+
+Emma
+- Storm ENergy lasts 0.5s shorter (4.4s -> 3.9s)
+
+Pluto
+- Soul Send gives 0.5s less visibility (2s -> 1.5s) [note: undoing 2.1 change]
+- Soul Send damages user 2 if killed
+- Soul Send has 1.3s cooldown
+- Regeneration costs 1 less (5 -> 4)
+- Regeneration stops healing if you take damage
+- Regeneration causes particles more frequently
+- Bug fix: regeneration happened over 2 seconds, not 3
+- Minor lore improvements
+
+[Bug Fixed]
+- Players would not be announced as winner if dead, even if they won

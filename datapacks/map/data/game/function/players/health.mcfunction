@@ -76,6 +76,7 @@ execute as @s[scores={healthreal=21}] at @s run summon minecraft:armor_stand ~ ~
 execute as @s[scores={healthreal=22..}] at @s run summon minecraft:armor_stand ~ ~ ~ {Marker:1,Silent:1,Silent:1,Silent:1,Silent:1,Invisible:1b,Invulnerable:1,Tags:["damnum"],CustomNameVisible:1b,Duration:999999,CustomName:'{"text":"-22"}'}
 
 scoreboard players set @s[scores={healthreal=1..},tag=!zeroh] fireheal -120
+scoreboard players set @s[scores={healthreal=1..},tag=!zeroh] plutoregen -1
 
 execute as @s[scores={healthreal=1..},tag=!zeroh] at @s run particle minecraft:block{block_state:"minecraft:redstone_block"} ~ ~1 ~ .3 .8 .3 2 40 force
 effect give @s[scores={health=..59}] minecraft:health_boost 999999 9 true

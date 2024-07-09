@@ -1,10 +1,11 @@
 #soul send
 scoreboard players remove @s[nbt={SelectedItem:{id:"minecraft:flint"}}] Mana 5
+scoreboard players set @s[nbt={SelectedItem:{id:"minecraft:flint"}}] soul_send_cooldown 26
 execute as @s[nbt={SelectedItem:{id:"minecraft:flint"}}] at @s run function game:characters/pluto/spells/soulsend
 
 #regen
-scoreboard players remove @s[nbt={SelectedItem:{id:"minecraft:yellow_dye"}}] Mana 5
-scoreboard players set @s[nbt={SelectedItem:{id:"minecraft:yellow_dye"}}] plutoregen 40
+scoreboard players remove @s[nbt={SelectedItem:{id:"minecraft:yellow_dye"}}] Mana 4
+scoreboard players set @s[nbt={SelectedItem:{id:"minecraft:yellow_dye"}}] plutoregen 60
 
 #spike
 scoreboard players remove @s[nbt={SelectedItem:{id:"minecraft:sugar_cane"}}] Mana 8

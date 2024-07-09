@@ -1,5 +1,10 @@
+# detect leaving tutorial
+execute as @a[scores={tutorialtime=5..524}] at @s positioned ~ ~ ~ unless entity @e[tag=tutorial_view,distance=..0.1] run scoreboard players set @s tutorialtime 526
+
+# default attributes
 effect give @a minecraft:fire_resistance 10 10 true
 execute as @a run attribute @s minecraft:generic.knockback_resistance base set 0.0
+execute as @a run attribute @s minecraft:generic.explosion_knockback_resistance base set 0.0
 
 #new player
 scoreboard players set @a[tag=!has_joined] tutorialtime 1
@@ -258,6 +263,7 @@ kill @e[tag=turoial_view,scores={t1=800..}]
 
 # portal knockback res
 execute as @a[scores={effect_immune=1..}] run attribute @s minecraft:generic.knockback_resistance base set 1.0
+execute as @a[scores={effect_immune=1..}] run attribute @s minecraft:generic.explosion_knockback_resistance base set 1.0
 
 #
 #execute as @a[tag=water_remove_target] at @s run function game:test2

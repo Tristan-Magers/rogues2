@@ -96,6 +96,8 @@ scoreboard players set @s effect_immune 0
 
 scoreboard players add @s music1 0
 
+scoreboard players set @s soul_send_cooldown -1
+
 clear @s
 title @s times 0 25 10
 

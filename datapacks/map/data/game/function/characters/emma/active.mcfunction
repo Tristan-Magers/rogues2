@@ -64,7 +64,7 @@ scoreboard players remove @s manaboost 1
 execute as @s[scores={manaboost=1..}] at @s run particle minecraft:rain ~ ~.5 ~ .25 .4 .25 0 2 force
 
 scoreboard players remove @s[nbt={Inventory:[{id:"minecraft:glass_bottle",Slot:4b}]}] Mana 3
-scoreboard players set @s[nbt={Inventory:[{id:"minecraft:glass_bottle",Slot:4b}]}] manaboost 88
+scoreboard players set @s[nbt={Inventory:[{id:"minecraft:glass_bottle",Slot:4b}]}] manaboost 78
 clear @s[nbt={Inventory:[{id:"minecraft:glass_bottle",Slot:4b}]}] glass_bottle
 effect give @s[scores={manaboost=20..}] jump_boost 1 1 true
 effect give @s[scores={manaboost=20..}] resistance 1 0 true
@@ -74,7 +74,7 @@ effect clear @s[nbt=!{SelectedItem:{id:"minecraft:trident"}}] strength
 scoreboard players set @s potion 0
 
 clear @s[tag=!spiritworld,scores={Mana=3..},nbt=!{Inventory:[{id:"minecraft:potion",Slot:4b}]}] potion
-execute as @s[tag=!spiritworld,scores={Mana=3..},nbt=!{Inventory:[{id:"minecraft:potion",Slot:4b}]}] run item replace entity @s hotbar.4 with potion[custom_name='[{"text":"Storm Energy","color":"aqua","italic":false,"bold":true},{"text":" (","color":"white","italic":false},{"text":"Boost/Strength","color":"white","bold":false,"italic":false},{"text":") [","color":"white","italic":false},{"text":"3 Mana","color":"gold","italic":false},{"text":"]","color":"white","italic":false}]',lore=['{"text":"4.4s duration","color":"white","italic":false}','{"text":"+20% speed","color":"green","italic":false}','{"text":"+3 damage on Trident melee","color":"green","italic":false}','{"text":"20% damage resistance","color":"green","italic":false}','{"text":"Jump boost","color":"green","italic":false}','{"text":"Causes particle","color":"red","italic":false}'],hide_additional_tooltip={},potion_contents={potion:"minecraft:thick",custom_effects:[{id:"minecraft:speed",amplifier:0,duration:88},{id:"minecraft:jump_boost",amplifier:1,duration:88},{id:"minecraft:resistance",amplifier:0,duration:88}]}]
+execute as @s[tag=!spiritworld,scores={Mana=3..},nbt=!{Inventory:[{id:"minecraft:potion",Slot:4b}]}] run item replace entity @s hotbar.4 with potion[custom_name='[{"text":"Storm Energy","color":"aqua","italic":false,"bold":true},{"text":" (","color":"white","italic":false},{"text":"Boost/Strength","color":"white","bold":false,"italic":false},{"text":") [","color":"white","italic":false},{"text":"3 Mana","color":"gold","italic":false},{"text":"]","color":"white","italic":false}]',lore=['{"text":"3.9s duration","color":"white","italic":false}','{"text":"+20% speed","color":"green","italic":false}','{"text":"+3 damage on Trident melee","color":"green","italic":false}','{"text":"20% damage resistance","color":"green","italic":false}','{"text":"Jump boost","color":"green","italic":false}','{"text":"Causes particle","color":"red","italic":false}'],hide_additional_tooltip={},potion_contents={potion:"minecraft:thick",custom_effects:[{id:"minecraft:speed",amplifier:0,duration:78},{id:"minecraft:jump_boost",amplifier:1,duration:78},{id:"minecraft:resistance",amplifier:0,duration:78}]}]
 
 #bolt delay
 #effect clear @s[scores={boltdelay=15}] slowness

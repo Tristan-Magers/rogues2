@@ -22,6 +22,9 @@ scoreboard objectives add dz dummy
 scoreboard objectives add class dummy
 scoreboard objectives add effect_immune dummy
 
+scoreboard objectives add soul_send_count dummy
+scoreboard objectives add soul_send_count_t dummy
+
 scoreboard objectives add t1 dummy
 scoreboard objectives add t2 dummy
 scoreboard objectives add t3 dummy
