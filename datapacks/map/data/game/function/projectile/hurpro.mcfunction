@@ -186,6 +186,9 @@ execute as @s[scores={hurpower=4},tag=!in] at @s run scoreboard players set @e[t
 execute as @s[scores={hurpower=5},tag=!in] at @s run scoreboard players set @e[tag=gethit] glowing 30
 execute as @s[scores={hurpower=6},tag=!in] at @s run scoreboard players set @e[tag=gethit] glowing 35
 
+execute as @s[scores={hurpower=1..6},tag=!in] at @s run scoreboard players set @a[tag=gethit] fireheal -120
+execute as @s[scores={hurpower=1..6},tag=!in] at @s run scoreboard players set @a[tag=gethit] plutoregen -1
+
 execute as @s[tag=!in] at @s run playsound minecraft:block.crop.break master @a ~ ~ ~ 1 0
 execute as @s[tag=!in] at @s run playsound minecraft:block.bell.use master @a ~ ~ ~ 1 2
 execute as @s[tag=!in] at @s run playsound minecraft:block.composter.empty master @a ~ ~ ~ 1 0

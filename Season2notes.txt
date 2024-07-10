@@ -302,3 +302,4 @@ Barbose
 - Players would not be announced as winner if dead, even if they won
 - Duplication bug with Sacred Berries
 - Power 2 hurricane was invisible
+- Ghost Arrows and Hurricane didn't reset timer on Healing Flame
