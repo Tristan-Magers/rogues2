@@ -276,9 +276,8 @@ Emma
 - Taking damage interrupts drinking Storm Energy
 
 Halt
-- Draining Claws do one less damage (13 -> 12)
-    - Note: healing numbers and range not impacted
-- Webs last 0.1s shorter (1.8s -> 1.65s)
+- Draining Claws charge 7.5% slower (2s -> 2.15s)
+- Webs last 0.15s shorter (1.8s -> 1.65s)
 - Killing Spider gives 1 less mana (5 -> 4)
 
 Vohelm
@@ -302,3 +301,4 @@ Barbose
 [Bug Fixed]
 - Players would not be announced as winner if dead, even if they won
 - Duplication bug with Sacred Berries
+- Power 2 hurricane was invisible

@@ -6,8 +6,17 @@ execute as @e[tag=soulsend] if score @s playerID = @e[tag=me,limit=1] playerID r
 
 scoreboard players operation @s soul_send_count -= @s soul_send_count_t
 
-execute as @s[scores={soul_send_count=..-1}] run function game:players/damageone
-execute as @s[scores={soul_send_count=..-1}] run function game:players/damageone
+execute as @s[scores={soul_send_count=..-1,Invul=..1},tag=!spiritworld] run function game:players/damageone
+execute as @s[scores={soul_send_count=..-1,Invul=..1},tag=!spiritworld] run function game:players/damageone
+
+execute as @s[scores={soul_send_count=..-2,Invul=..1},tag=!spiritworld] run function game:players/damageone
+execute as @s[scores={soul_send_count=..-2,Invul=..1},tag=!spiritworld] run function game:players/damageone
+
+execute as @s[scores={soul_send_count=..-3,Invul=..1},tag=!spiritworld] run function game:players/damageone
+execute as @s[scores={soul_send_count=..-3,Invul=..1},tag=!spiritworld] run function game:players/damageone
+
+execute as @s[scores={soul_send_count=..-4,Invul=..1},tag=!spiritworld] run function game:players/damageone
+execute as @s[scores={soul_send_count=..-4,Invul=..1},tag=!spiritworld] run function game:players/damageone
 
 scoreboard players operation @s soul_send_count += @s soul_send_count_t
 

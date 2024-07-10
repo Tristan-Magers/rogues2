@@ -8,4 +8,7 @@ function game:game/menu/mapchange
 time set night
 
 #version sign
-setblock -101 41 64 birch_sign[rotation=10]{Text2:'{"text":"Version 2.0.0","color":"black","bold":true,"clickEvent":{"action":"run_command","value":"/tag @s add notesclick"}}',Text3:'{"text":"Click for note","italic":true}'} destroy
+data merge block -101 41 64 {front_text:{messages:['{"text":""}','{"text":"Version 2.1.1","bold":true}','{"text":"click for changes","italic":true,"clickEvent":{"action":"run_command","value":"/tag @s add notesclick"}}','{"text":""}']}}
+
+#
+setblock -112 57 35 minecraft:crimson_roots
