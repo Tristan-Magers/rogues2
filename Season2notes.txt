@@ -269,12 +269,12 @@ Note: minor changes to polish 2.1
 [Characters]
 
 Emma
-- Storm ENergy lasts 0.5s shorter (4.4s -> 3.9s)
+- Storm Energy lasts 0.5s shorter (4.4s -> 3.9s)
 
 Pluto
 - Soul Send gives 0.5s less visibility (2s -> 1.5s) [note: undoing 2.1 change]
 - Soul Send damages user 2 if killed
-- Soul Send has 1.3s cooldown
+- Soul Send has 1s cooldown
 - Regeneration costs 1 less (5 -> 4)
 - Regeneration stops healing if you take damage
 - Regeneration causes particles more frequently

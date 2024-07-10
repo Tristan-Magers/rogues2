@@ -1,6 +1,6 @@
 #soul send
 scoreboard players remove @s[nbt={SelectedItem:{id:"minecraft:flint"}}] Mana 5
-scoreboard players set @s[nbt={SelectedItem:{id:"minecraft:flint"}}] soul_send_cooldown 26
+scoreboard players set @s[nbt={SelectedItem:{id:"minecraft:flint"}}] soul_send_cooldown 20
 execute as @s[nbt={SelectedItem:{id:"minecraft:flint"}}] at @s run function game:characters/pluto/spells/soulsend
 
 #regen
