@@ -42,7 +42,7 @@ scoreboard players set @s damageob 0
 
 ## lock fire arrow damage
 execute as @s[tag=flame_arrow_hit] run scoreboard players add @s healthreal 1
-execute as @s[tag=flame_arrow_hit,scores={healthreal=7..}] run scoreboard players set @s healthreal 7
+execute as @s[tag=flame_arrow_hit,scores={healthreal=6..}] run scoreboard players set @s healthreal 6
 
 ## change current health by damage
 execute as @s[tag=!zeroh] at @s run scoreboard players operation @s healthshow -= @s healthreal
@@ -77,6 +77,8 @@ execute as @s[scores={healthreal=22..}] at @s run summon minecraft:armor_stand ~
 
 scoreboard players set @s[scores={healthreal=1..},tag=!zeroh] fireheal -120
 scoreboard players set @s[scores={healthreal=1..},tag=!zeroh] plutoregen -1
+clear @s[scores={healthreal=1..},tag=!zeroh] golden_apple
+clear @s[scores={healthreal=1..},tag=!zeroh] potion[custom_data={StormEnergy:1}]
 
 execute as @s[scores={healthreal=1..},tag=!zeroh] at @s run particle minecraft:block{block_state:"minecraft:redstone_block"} ~ ~1 ~ .3 .8 .3 2 40 force
 effect give @s[scores={health=..59}] minecraft:health_boost 999999 9 true

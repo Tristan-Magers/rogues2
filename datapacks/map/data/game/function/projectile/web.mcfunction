@@ -22,8 +22,8 @@ execute as @s[scores={move=1045}] at @s run execute as @e[name=webnoblock] at @s
 execute as @s[scores={move=1045}] at @s run particle minecraft:cloud ~ ~ ~ 1 1 1 0 15 force
 scoreboard players add @s move 1
 
-#safe way to reduce life from 2.15s
-scoreboard players add @s[scores={move=1002}] move 7
+#safe way to reduce life from 2.15s -> 1.65s
+scoreboard players add @s[scores={move=1002}] move 10
 
 kill @s[scores={move=500}]
 kill @s[scores={move=1046..}]

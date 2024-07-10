@@ -45,9 +45,9 @@ tag @s remove me
 scoreboard players operation @s scounttest -= @s spidercount
 
 execute as @s[scores={cavekill=1..,scounttest=1..}] at @s run playsound minecraft:ui.toast.challenge_complete master @a ~ ~ ~ 0.3 2
-scoreboard players add @s[scores={cavekill=1..,scounttest=1..}] Mana 5
+scoreboard players add @s[scores={cavekill=1..,scounttest=1..}] Mana 4
 scoreboard players set @s[scores={Mana=15..}] Mana 15
-tellraw @s[scores={cavekill=1..,scounttest=1..}] [{"text":"["},{"bold":true,"color":"gold","text":"★"},{"text":"] SPIDER KILL +"},{"bold":true,"color":"gold","text":"5 MANA"}]
+tellraw @s[scores={cavekill=1..,scounttest=1..}] [{"text":"["},{"bold":true,"color":"gold","text":"★"},{"text":"] SPIDER KILL +"},{"bold":true,"color":"gold","text":"4 MANA"}]
 scoreboard players set @s[scores={cavekill=1..}] cavekill 0
 
 scoreboard players operation @s scounttest = @s spidercount

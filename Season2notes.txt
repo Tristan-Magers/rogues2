@@ -268,14 +268,28 @@ Note: minor changes to polish 2.1
 
 [Characters]
 
+Sparket
+- Flame Bow max damage reduced by 1  (7 -> 6)
+
 Emma
 - Storm Energy lasts 0.5s shorter (4.4s -> 3.9s)
+- Taking damage interupts drinking Storm Energy
+
+Halt
+- Draining Claws do one less damage (13 -> 12)
+    - Note: healing numbers and range not impacted
+- Webs last 0.1s shorter (1.8s -> 1.65s)
+- Killing Spider gives 1 less mana (5 -> 4)
+
+Vohelm
+- Taking damage interupts eating Sacred Berries
 
 Pluto
 - Soul Send gives 0.5s less visibility (2s -> 1.5s) [note: undoing 2.1 change]
 - Soul Send damages user 2 if killed
 - Soul Send has 1s cooldown
 - Regeneration costs 1 less (5 -> 4)
+- Using Regeneration puts out fire
 - Regeneration stops healing if you take damage
 - Regeneration causes particles more frequently
 - Bug fix: regeneration happened over 2 seconds, not 3
@@ -283,3 +297,4 @@ Pluto
 
 [Bug Fixed]
 - Players would not be announced as winner if dead, even if they won
+- Duplication bug with Sacred Berries

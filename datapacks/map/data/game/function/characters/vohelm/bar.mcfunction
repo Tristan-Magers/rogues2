@@ -7,7 +7,7 @@ clear @s[scores={Mana=..6}] bone
 execute as @s[scores={Mana=..5}] run item replace entity @s hotbar.1 with barrier[custom_name='{"color":"white","italic":false,"text":"Reloading"}'] 1
 execute as @s[scores={Mana=..5}] run item replace entity @s hotbar.2 with barrier[custom_name='{"color":"white","italic":false,"text":"Reloading"}'] 1
 execute as @s[scores={Mana=..5}] run item replace entity @s hotbar.3 with barrier[custom_name='{"color":"white","italic":false,"text":"Reloading"}'] 1
-execute as @s[scores={Mana=..5}] run item replace entity @s hotbar.4 with barrier[custom_name='{"color":"white","italic":false,"text":"Reloading"}'] 1
+execute as @s[scores={Mana=..4}] run item replace entity @s hotbar.4 with barrier[custom_name='{"color":"white","italic":false,"text":"Reloading"}'] 1
 
 execute as @s[scores={Mana=6..,shieldT=1..}] run item replace entity @s hotbar.2 with ghast_tear[custom_name='{"text":"Recharging","color":"white","italic":false}'] 1
 clear @s[scores={Mana=6..,shieldT=..0}] ghast_tear

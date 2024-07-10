@@ -99,7 +99,7 @@ execute as @s[scores={fireT=15}] run particle minecraft:flame ~ ~0.8 ~ 0.2 0.4 0
 execute as @s[scores={fireT=19}] run particle minecraft:flame ~ ~0.8 ~ 0.2 0.4 0.2 0.02 2 force
 
 scoreboard players add @s[tag=flame_arrow_hit] t2 1
-scoreboard players set @s[tag=flame_arrow_hit,scores={t2=7..}] t2 7
+scoreboard players set @s[tag=flame_arrow_hit,scores={t2=6..}] t2 6
 
 #poison
 execute as @s[scores={poison2=75}] run playsound minecraft:entity.player.hurt_on_fire master @a ~ ~ ~ 0.5 1

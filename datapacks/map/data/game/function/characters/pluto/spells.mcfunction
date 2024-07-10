@@ -6,6 +6,7 @@ execute as @s[nbt={SelectedItem:{id:"minecraft:flint"}}] at @s run function game
 #regen
 scoreboard players remove @s[nbt={SelectedItem:{id:"minecraft:yellow_dye"}}] Mana 4
 scoreboard players set @s[nbt={SelectedItem:{id:"minecraft:yellow_dye"}}] plutoregen 60
+scoreboard players set @s[nbt={SelectedItem:{id:"minecraft:yellow_dye"}}] fire_time_effect -1
 
 #spike
 scoreboard players remove @s[nbt={SelectedItem:{id:"minecraft:sugar_cane"}}] Mana 8
