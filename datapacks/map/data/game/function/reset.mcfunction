@@ -1,6 +1,6 @@
 scoreboard objectives setdisplay sidebar
 scoreboard players set @a Leave 1
-scoreboard players set @a music1 1
+scoreboard players set @a music1 -10
 scoreboard players set @a class 4
 tag @a remove ranchar
 scoreboard players set @e[scores={map=0..}] mapnumber 1

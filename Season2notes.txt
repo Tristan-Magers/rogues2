@@ -286,7 +286,7 @@ Vohelm
 Pluto
 - Soul Send gives 0.5s less visibility (2s -> 1.5s) [note: undoing 2.1 change]
 - Soul Send damages user 2 if killed
-- Soul Send has 1s cooldown
+- Soul Send has 0.6s cooldown
 - Regeneration costs 1 less (5 -> 4)
 - Using Regeneration puts out fire
 - Regeneration stops healing if you take damage
