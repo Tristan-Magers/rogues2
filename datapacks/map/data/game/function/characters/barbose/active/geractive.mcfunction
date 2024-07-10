@@ -10,6 +10,7 @@ execute as @s[scores={gertimer=30}] at @s run tag @p[scores={playerID=0},distanc
 execute as @s[scores={gertimer=30}] at @s run scoreboard players operation @a playerID += @s playerID
 
 execute as @s[scores={gertimer=30}] at @s run summon creeper ~ ~.8 ~ {ingited:1,Fuse:0,ExplosionRadius:2}
+execute as @s[scores={gertimer=30}] at @s run particle minecraft:explosion_emitter
 execute as @s[scores={gertimer=30}] at @s run scoreboard players set @e[distance=..4,name=web] move 1045
 
 tp @s[scores={gertimer=34..}] ~ ~-1000 ~

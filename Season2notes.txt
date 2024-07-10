@@ -273,7 +273,7 @@ Sparket
 
 Emma
 - Storm Energy lasts 0.5s shorter (4.4s -> 3.9s)
-- Taking damage interupts drinking Storm Energy
+- Taking damage interrupts drinking Storm Energy
 
 Halt
 - Draining Claws do one less damage (13 -> 12)
@@ -282,7 +282,7 @@ Halt
 - Killing Spider gives 1 less mana (5 -> 4)
 
 Vohelm
-- Taking damage interupts eating Sacred Berries
+- Taking damage interrupts eating Sacred Berries
 
 Pluto
 - Soul Send gives 0.5s less visibility (2s -> 1.5s) [note: undoing 2.1 change]
@@ -294,6 +294,10 @@ Pluto
 - Regeneration causes particles more frequently
 - Bug fix: regeneration happened over 2 seconds, not 3
 - Minor lore improvements
+
+Barbose
+- Seeking Axe gives 1% less speed (+13% -> +12%)
+- Bombs cause more particles
 
 [Bug Fixed]
 - Players would not be announced as winner if dead, even if they won
