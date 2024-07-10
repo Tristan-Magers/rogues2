@@ -14,5 +14,7 @@ tag @a[tag=tpno] remove tpno
 
 bossbar set minecraft:time visible false
 
+gamerule reducedDebugInfo false
+
 tag @a remove game
 #tag @a remove spec

@@ -48,3 +48,5 @@ execute as @a[tag=game,scores={class=3},tag=ranchar] at @s run tellraw @a [{"sel
 execute as @a[tag=game,scores={class=4},tag=ranchar] at @s run tellraw @a [{"selector":"@s","color":"gold"},{"text":" spawning as: ","color":"white"},{"text":"Pluto","color":"gray"},{"text":" (random)","color":"white"}]
 execute as @a[tag=game,scores={class=5},tag=ranchar] at @s run tellraw @a [{"selector":"@s","color":"gold"},{"text":" spawning as: ","color":"white"},{"text":"Halt","color":"gold"},{"text":" (random)","color":"white"}]
 execute as @a[tag=game,scores={class=6},tag=ranchar] at @s run tellraw @a [{"selector":"@s","color":"gold"},{"text":" spawning as: ","color":"white"},{"text":"Barbose","color":"yellow"},{"text":" (random)","color":"white"}]
+
+gamerule reducedDebugInfo true
