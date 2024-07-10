@@ -45,3 +45,10 @@ execute if entity @e[tag=other,distance=..1.3] run kill @s
 #effect give @a[distance=..1.3] wither 1 2
 
 scoreboard players operation @a[gamemode=adventure] playerID += @s playerID
+
+tag @e remove me
+tag @s add me
+
+execute as @s[nbt={HurtTime:10s}] on attacker unless score @s playerID = @e[tag=me,limit=1] playerID run tag @s add wrong_spider
+
+tag @s remove me

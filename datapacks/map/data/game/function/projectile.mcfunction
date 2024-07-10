@@ -64,9 +64,6 @@ execute as @e[tag=gernade] at @s run function game:characters/barbose/active/ger
 #jump pad
 execute as @e[tag=jp] at @s run function game:characters/pluto/spells/jpactive
 
-#spider
-execute as @e[type=cave_spider] at @s run function game:characters/halt/active/spider
-
 #trident
 execute as @e[type=trident] at @s run function game:projectile/trident
 

@@ -57,6 +57,9 @@ execute as @a[scores={music1=2}] at @s run playsound minecraft:music_disc.stal m
 execute as @a[scores={music1=2110}] at @s run stopsound @s
 execute as @a[scores={music1=2110}] at @s run playsound minecraft:music_disc.chirp master @s ~ ~ ~ 0.65 1
 
+#spider projectile (needs to happen before player)
+execute as @e[type=cave_spider] at @s run function game:characters/halt/active/spider
+
 #spawn
 scoreboard players set @a[x=14,y=4,z=-41,distance=..20,gamemode=adventure,tag=game] respawn 100
 tp @a[x=14,y=4,z=-41,distance=..20,gamemode=adventure,tag=!game] -145 23 -43 90 -1

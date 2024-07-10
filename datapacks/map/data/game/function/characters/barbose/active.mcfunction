@@ -26,7 +26,8 @@ scoreboard players remove @s dummylook 1
 scoreboard players remove @s[scores={project_cool=0..}] project_cool 1
 execute as @s[scores={project_cool=0}] at @s run function game:spells/manaup
 execute as @s[scores={project_cool=101}] at @s run function game:spells/manaup
-execute as @s[scores={project_cool=150}] at @s run function game:spells/manaup
+execute as @s[scores={project_cool=170}] at @s run function game:spells/manaup
+execute as @s[scores={project_cool=199}] at @s run function game:spells/manaup
 
 execute as @s[scores={dummylook=-30}] at @s run function game:spells/manaup
 

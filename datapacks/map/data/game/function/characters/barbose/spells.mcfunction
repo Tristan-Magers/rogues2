@@ -21,12 +21,12 @@ scoreboard players set @s[nbt={SelectedItem:{id:"minecraft:leather"}},scores={Ma
 scoreboard players remove @s[nbt={SelectedItem:{id:"minecraft:leather"}},scores={Mana=6..}] Mana 6
 
 #set portal
-execute as @s[nbt={SelectedItem:{id:"minecraft:red_dye"}}] at @s run summon minecraft:evoker ~ ~ ~ {NoGravity:0,NoAI:1,Invulnerable:0,ArmorItems:[{},{},{},{count:1,id:apple}],Health:6.0,Silent:1,Silent:1,Tags:["portalset"]}
+execute as @s[nbt={SelectedItem:{id:"minecraft:red_dye"}}] at @s run summon minecraft:evoker ~ ~ ~ {PersistenceRequired:1b,NoGravity:0,NoAI:1,Invulnerable:0,ArmorItems:[{},{},{},{count:1,id:apple}],Health:6.0,Silent:1,Silent:1,Tags:["portalset"]}
 execute as @s[nbt={SelectedItem:{id:"minecraft:red_dye"}}] at @s run tp @e[tag=portalset,distance=...1,limit=1,sort=nearest] @p
 execute as @s[nbt={SelectedItem:{id:"minecraft:red_dye"}}] at @s run scoreboard players operation @e[tag=portalset,distance=...1,limit=1,sort=nearest] playerID = @s playerID
 execute as @s[nbt={SelectedItem:{id:"minecraft:red_dye"}}] at @s run tp @e[tag=portalset,distance=...1,limit=1,sort=nearest] ~ ~-.3 ~ ~ 0
 scoreboard players set @s[nbt={SelectedItem:{id:"minecraft:red_dye"}}] portal 1
-scoreboard players set @s[nbt={SelectedItem:{id:"minecraft:red_dye"}}] portalcool 40
+scoreboard players set @s[nbt={SelectedItem:{id:"minecraft:red_dye"}}] portalcool 100
 scoreboard players remove @s[nbt={SelectedItem:{id:"minecraft:red_dye"}}] Mana 3
 clear @s[nbt={SelectedItem:{id:"minecraft:red_dye"}}] red_dye
 
@@ -49,7 +49,7 @@ execute as @s[nbt={SelectedItem:{id:"minecraft:ink_sac"}}] at @s run function ga
 clear @s[scores={coolblack=1..}] ink_sac
 
 #cancel project
-scoreboard players remove @s[nbt={SelectedItem:{id:"minecraft:rabbit_hide"}}] Mana 2
+scoreboard players remove @s[nbt={SelectedItem:{id:"minecraft:rabbit_hide"}}] Mana 1
 execute as @s[nbt={SelectedItem:{id:"minecraft:rabbit_hide"}}] at @s run tag @s add project_cancel
 execute as @s[nbt={SelectedItem:{id:"minecraft:rabbit_hide"}}] at @s run function game:characters/barbose/active/check_save_spot
 

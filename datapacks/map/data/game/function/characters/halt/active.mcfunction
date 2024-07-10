@@ -1,3 +1,30 @@
+#wrong spider
+#execute as @s[tag=wrong_spider] run say ws
+scoreboard players set @s[tag=wrong_spider] haltboost 0
+scoreboard players set @s[tag=wrong_spider] haltdamage 0
+tag @s remove wrong_spider
+
+#spider kill
+tag @s add me
+scoreboard players operation @e[type=cave_spider] playerID -= @s playerID
+execute as @e[type=cave_spider,scores={playerID=0}] run scoreboard players add @a[tag=me] spidercount 1
+scoreboard players operation @e[type=cave_spider] playerID += @s playerID
+tag @s remove me
+
+scoreboard players operation @s scounttest -= @s spidercount
+
+execute as @s[scores={cavekill=1..,scounttest=1..}] at @s run playsound minecraft:ui.toast.challenge_complete master @a ~ ~ ~ 0.3 2
+scoreboard players add @s[scores={cavekill=1..,scounttest=1..}] Mana 4
+scoreboard players set @s[scores={Mana=15..}] Mana 15
+scoreboard players set @s[scores={cavekill=1..,scounttest=..0}] haltboost 0
+scoreboard players set @s[scores={cavekill=1..,scounttest=..0}] haltdamage 0
+tellraw @s[scores={cavekill=1..,scounttest=1..}] [{"text":"["},{"bold":true,"color":"gold","text":"★"},{"text":"] SPIDER KILL +"},{"bold":true,"color":"gold","text":"4 MANA"}]
+scoreboard players set @s[scores={cavekill=1..}] cavekill 0
+
+scoreboard players operation @s scounttest = @s spidercount
+scoreboard players set @s spidercount 0
+
+#
 execute as @s[tag=!spiritworld,scores={shift=1..}] at @s run function game:characters/halt/active/walldetect
 execute as @s[tag=!spiritworld,scores={spiderwall=0..}] at @s run function game:characters/halt/active/wallmove
 execute as @s[scores={haltboost=1..}] at @s run function game:characters/halt/active/haltboost
@@ -11,6 +38,7 @@ scoreboard players remove @s hover 1
 
 execute as @s[scores={hover=-1}] at @s run function game:spells/manaup
 
+#
 execute if entity @s[scores={haltdamage=40..}] run playsound minecraft:entity.arrow.hit_player master @a ~ ~ ~ 1 2
 execute if entity @s[scores={haltdamage=80..}] run playsound minecraft:entity.arrow.hit_player master @a ~ ~ ~ 1 1.4
 execute if entity @s[scores={haltdamage=120..}] run playsound minecraft:entity.arrow.hit_player master @a ~ ~ ~ 1 0.7
@@ -34,24 +62,6 @@ scoreboard players remove @s[scores={dcdelay=0..}] dcdelay 1
 scoreboard players set @s[scores={haltdamage=24..}] dcdelay 9
 
 scoreboard players set @s haltdamage 0
-
-#spider kill
-tag @s add me
-scoreboard players operation @e[type=cave_spider] playerID -= @s playerID
-execute as @e[type=cave_spider,scores={playerID=0}] run scoreboard players add @a[tag=me] spidercount 1
-scoreboard players operation @e[type=cave_spider] playerID += @s playerID
-tag @s remove me
-
-scoreboard players operation @s scounttest -= @s spidercount
-
-execute as @s[scores={cavekill=1..,scounttest=1..}] at @s run playsound minecraft:ui.toast.challenge_complete master @a ~ ~ ~ 0.3 2
-scoreboard players add @s[scores={cavekill=1..,scounttest=1..}] Mana 4
-scoreboard players set @s[scores={Mana=15..}] Mana 15
-tellraw @s[scores={cavekill=1..,scounttest=1..}] [{"text":"["},{"bold":true,"color":"gold","text":"★"},{"text":"] SPIDER KILL +"},{"bold":true,"color":"gold","text":"4 MANA"}]
-scoreboard players set @s[scores={cavekill=1..}] cavekill 0
-
-scoreboard players operation @s scounttest = @s spidercount
-scoreboard players set @s spidercount 0
 
 #bow detect
 execute as @s[scores={bowshot=1..}] run scoreboard players operation @e[type=arrow,scores={arrowlife=1},distance=..3] playerID = @s playerID
