@@ -300,7 +300,7 @@ Barbose
 - Seeking Axe gives 1% less speed (+13% -> +12%)
 - Project cancel costs 1 less (2 -> 1)
 - Project can cancel 1s sooner (2.5s -> 1.5s)
-- Portal takes 3s longer to ready (2s -> 5s)
+- Portal takes 1s longer to ready (2s -> 3s)
 - Bombs cause more particles
 
 [Bug Fixed]
