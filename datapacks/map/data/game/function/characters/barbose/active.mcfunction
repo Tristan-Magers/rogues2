@@ -60,6 +60,7 @@ execute if entity @s[nbt=!{Inventory:[{id:"minecraft:red_dye",Slot:3b}]},scores=
 scoreboard players remove @s[scores={coolblack=0..}] coolblack 1
 execute as @s[scores={coolblack=0}] at @s run function game:spells/manaup
 
+execute as @s[scores={portalcool=0}] at @s run function game:spells/manaup
 scoreboard players remove @s[scores={portalcool=-1..}] portalcool 1
 
 #correct axe

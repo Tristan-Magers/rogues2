@@ -6,3 +6,6 @@ scoreboard players remove @s healthshow 1
 
 scoreboard players set @s fireheal -120
 scoreboard players set @s plutoregen -1
+
+clear @s golden_apple
+clear @s potion[custom_data={StormEnergy:1}]

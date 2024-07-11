@@ -62,8 +62,11 @@ execute as @s[tag=!weakhit] run damage @e[tag=ehit,tag=!me,tag=arena_dummy,limit
 execute as @s[tag=!weakhit] run scoreboard players remove @e[tag=ehit,tag=!me,type=!player] healthreal 7
 execute as @s[tag=weakhit] run scoreboard players remove @e[tag=ehit,tag=!me,type=!player] healthreal 6
 
-scoreboard players set @e[tag=ehit,tag=!me,type=!player] fireheal -120
-scoreboard players set @e[tag=ehit,tag=!me,type=!player] plutoregen -1
+scoreboard players set @e[tag=ehit,tag=!me] fireheal -120
+scoreboard players set @e[tag=ehit,tag=!me] plutoregen -1
+
+clear @e[tag=ehit,tag=!me] golden_apple
+clear @e[tag=ehit,tag=!me] potion[custom_data={StormEnergy:1}]
 
 execute as @e[tag=ehit,tag=!me,type=!player] at @s run execute store result entity @s Health double 1 run scoreboard players get @s healthreal
 
