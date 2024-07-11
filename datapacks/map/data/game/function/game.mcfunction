@@ -1,5 +1,5 @@
 # detect leaving tutorial
-execute as @a[scores={tutorialtime=20..524}] at @s positioned ~ ~ ~ unless entity @e[tag=tutorial_view,distance=..0.01] run scoreboard players set @s tutorialtime 526
+execute as @a[scores={tutorialtime=10..524}] at @s positioned ~ ~ ~ unless entity @e[tag=tutorial_view,distance=..0.001] run scoreboard players set @s tutorialtime 526
 
 # default attributes
 effect give @a minecraft:fire_resistance 10 10 true

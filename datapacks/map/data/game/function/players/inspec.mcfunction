@@ -45,7 +45,7 @@ scoreboard players set @a[tag=specp2,scores={class=6,healthshow=23..}] healthsho
 scoreboard players add @s specpart 1
 scoreboard players set @s[scores={specpart=7..}] specpart 0
 
-execute if entity @s[scores={specpart=1}] at @a[tag=specp1] run particle entity_effect{color:[1.000,0.000,0.000,1.00]} ~ ~ ~ 0 0 0 1 0 normal @s
+execute if entity @s[scores={specpart=1}] at @a[tag=specp1] run particle entity_effect{color:[1.000,1.000,0.000,1.00]} ~ ~ ~ 0 0 0 1 0 normal @s
 execute if entity @s[scores={specpart=1}] at @a[tag=specp2] run particle entity_effect{color:[0.000,0.000,1.000,1.00]} ~ ~ ~ 0 0 0 1 0 normal @s
 
 execute if entity @a[tag=specp1] run title @s actionbar [{"selector":"@p[tag=specp1]","color":"yellow"},{"text":" ","color":"white"},{"score":{"name":"@p[tag=specp1]","objective":"points"},"color":"dark_aqua"},{"text":"/","color":"white"},{"score":{"name":"@p[tag=specp1]","objective":"healthshow"},"color":"red"},{"text":"/","color":"white"},{"score":{"name":"@p[tag=specp1]","objective":"Mana"},"color":"gold"}]

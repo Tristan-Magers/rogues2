@@ -265,6 +265,7 @@ Note: minor changes to polish 2.1
 [General]
 - Shifting skips intro cutscene
 - Explosion knockback immunity included in immunity while exiting portal
+- Reduced debug info while ingame
 
 [Characters]
 
@@ -308,3 +309,4 @@ Barbose
 - Power 2 hurricane was invisible
 - Ghost Arrows and Hurricane didn't reset timer on Healing Flame
 - Portal could sometimes despawn naturally
+- Wrong color for spectator particles over players
