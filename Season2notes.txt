@@ -298,9 +298,8 @@ Pluto
 
 Barbose
 - Seeking Axe gives 1% less speed (+13% -> +12%)
-- Project cancel costs 1 less (2 -> 1)
 - Project can cancel 1s sooner (2.5s -> 1.5s)
-- Portal takes 0.5s longer to ready (2s -> 2.5s)
+- Portal takes 0.75s longer to ready (2s -> 2.75s)
 - Bombs cause more particles
 
 [Bug Fixed]
@@ -310,4 +309,4 @@ Barbose
 - Ghost Arrows and Hurricane didn't reset timer on Healing Flame
 - Portal could sometimes despawn naturally
 - Wrong color for spectator particles over players
-- Fixed "Return to Protal" not having consistent timing for being given
+- Fixed "Return to Portal" not having consistent timing for being given

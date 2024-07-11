@@ -26,7 +26,7 @@ execute as @s[nbt={SelectedItem:{id:"minecraft:red_dye"}}] at @s run tp @e[tag=p
 execute as @s[nbt={SelectedItem:{id:"minecraft:red_dye"}}] at @s run scoreboard players operation @e[tag=portalset,distance=...1,limit=1,sort=nearest] playerID = @s playerID
 execute as @s[nbt={SelectedItem:{id:"minecraft:red_dye"}}] at @s run tp @e[tag=portalset,distance=...1,limit=1,sort=nearest] ~ ~-.3 ~ ~ 0
 scoreboard players set @s[nbt={SelectedItem:{id:"minecraft:red_dye"}}] portal 1
-scoreboard players set @s[nbt={SelectedItem:{id:"minecraft:red_dye"}}] portalcool 50
+scoreboard players set @s[nbt={SelectedItem:{id:"minecraft:red_dye"}}] portalcool 55
 scoreboard players remove @s[nbt={SelectedItem:{id:"minecraft:red_dye"}}] Mana 3
 clear @s[nbt={SelectedItem:{id:"minecraft:red_dye"}}] red_dye
 
@@ -49,7 +49,7 @@ execute as @s[nbt={SelectedItem:{id:"minecraft:ink_sac"}}] at @s run function ga
 clear @s[scores={coolblack=1..}] ink_sac
 
 #cancel project
-scoreboard players remove @s[nbt={SelectedItem:{id:"minecraft:rabbit_hide"}}] Mana 1
+scoreboard players remove @s[nbt={SelectedItem:{id:"minecraft:rabbit_hide"}}] Mana 2
 execute as @s[nbt={SelectedItem:{id:"minecraft:rabbit_hide"}}] at @s run tag @s add project_cancel
 execute as @s[nbt={SelectedItem:{id:"minecraft:rabbit_hide"}}] at @s run function game:characters/barbose/active/check_save_spot
 
