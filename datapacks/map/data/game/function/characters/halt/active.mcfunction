@@ -4,6 +4,10 @@ scoreboard players set @s[tag=wrong_spider] haltboost 0
 scoreboard players set @s[tag=wrong_spider] haltdamage 0
 tag @s remove wrong_spider
 
+#
+execute as @s[scores={spider_delay=0}] at @s run function game:spells/manaup
+scoreboard players remove @s[scores={spider_delay=0..}] spider_delay 1
+
 #spider kill
 tag @s add me
 scoreboard players operation @e[type=cave_spider] playerID -= @s playerID

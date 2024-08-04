@@ -98,8 +98,12 @@ scoreboard players add @s music1 0
 
 scoreboard players set @s soul_send_cooldown -1
 
+scoreboard players set @s spider_delay -1
+
 clear @s
 title @s times 0 25 10
+
+attribute @s minecraft:generic.attack_damage base set 1
 
 gamemode adventure @s
 attribute @s minecraft:generic.attack_damage base get

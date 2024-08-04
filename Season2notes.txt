@@ -310,3 +310,17 @@ Barbose
 - Portal could sometimes despawn naturally
 - Wrong color for spectator particles over players
 - Fixed "Return to Portal" not having consistent timing for being given
+
+* Patch 2.1.1 Notes *
+
+[General]
+- Updated lobby with GGC3 tournament results
+
+[Characters]
+
+Halt
+- Claw boost lasts 1s shorter (4s -> 3s)
+- Spiders has 1s cooldown
+
+[Bug Fixes]
+- Fixed bug where player could be stuck doing higher damage
