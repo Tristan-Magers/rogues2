@@ -2,7 +2,7 @@ execute as @s at @s run function game:characters/barbose/spells/getdirsb
 
 scoreboard players add @s y 100
 
-summon minecraft:slime ~ ~.5 ~ {Size:0,ActiveEffects:[{Id:14b,Amplifier:1b,Duration:1000}],Tags:["gernade"],Invulnerable:1,Attributes:[{Name:generic.follow_range,Base:0},{Name:generic.movement_speed,Base:-1},{Name:generic.attack_damage,Base:0},{Name:generic.attackKnockback,Base:0}],Passengers:[{id:"minecraft:armor_stand",Small:1,Marker:1,Silent:1,Silent:1,Invulnerable:1,Tags:["head"],Invisible:1,ArmorItems:[{},{},{},{count:1,id:lime_dye}],DisabledSlots:4144959}]}
+summon minecraft:slime ~ ~.5 ~ {Size:0,ActiveEffects:[{Id:14b,Amplifier:1b,Duration:1000}],Tags:["gernade"],Invulnerable:1,Attributes:[{Name:follow_range,Base:0},{Name:movement_speed,Base:-1},{Name:attack_damage,Base:0},{Name:attackKnockback,Base:0}],Passengers:[{id:"minecraft:armor_stand",Small:1,Marker:1,Silent:1,Silent:1,Invulnerable:1,Tags:["head"],Invisible:1,ArmorItems:[{},{},{},{count:1,id:lime_dye}],DisabledSlots:4144959}]}
 #say @e[tag=gernade,distance=..1,limit=1,sort=nearest,type=slime]
 scoreboard players operation @e[tag=gernade,distance=..1,limit=1,sort=nearest,type=slime] playerID = @s playerID
 

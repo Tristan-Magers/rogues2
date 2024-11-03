@@ -1,4 +1,4 @@
-effect give @s speed 3 0 true
+effect give @s speed 2 0 true
 effect give @s jump_boost 3 1 true
 #scoreboard players set @s regen 20
 #particle minecraft:heart ~ ~1 ~ .4 0 .4 0 1 force

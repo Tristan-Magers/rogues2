@@ -143,8 +143,8 @@ scoreboard players set @s[scores={t4=34..}] t4 0
 #scoreboard players set @s[scores={t5=120..}] t5 0
 
 #
-item replace entity @s armor.legs with golden_leggings[unbreakable={show_in_tooltip:false},enchantments={levels:{"minecraft:blast_protection":7}},attribute_modifiers=[{id:"armor",type:"generic.armor",amount:0,operation:"add_multiplied_base"}]] 1
-data merge entity @s {NoAI:0,Silent:1,Health:1000f,attributes:[{id:"minecraft:generic.armor",base:0},{id:"minecraft:generic.max_health",base:1000},{id:"minecraft:generic.attack_damage",base:0},{id:"minecraft:generic.follow_range",base:0},{id:"minecraft:generic.jump_strength",base:0},{id:"minecraft:generic.knockback_resistance",base:1},{id:"minecraft:generic.movement_speed",base:0},{id:"minecraft:generic.step_height",base:0},{id:"minecraft:generic.explosion_knockback_resistance",base:1}]}
+item replace entity @s armor.legs with golden_leggings[unbreakable={show_in_tooltip:false},enchantments={levels:{"minecraft:blast_protection":7}},attribute_modifiers=[{id:"armor",type:"armor",amount:0,operation:"add_multiplied_base"}]] 1
+data merge entity @s {NoAI:0,Silent:1,Health:1000f,attributes:[{id:"minecraft:armor",base:0},{id:"minecraft:max_health",base:1000},{id:"minecraft:attack_damage",base:0},{id:"minecraft:follow_range",base:0},{id:"minecraft:jump_strength",base:0},{id:"minecraft:knockback_resistance",base:1},{id:"minecraft:movement_speed",base:0},{id:"minecraft:step_height",base:0},{id:"minecraft:explosion_knockback_resistance",base:1}]}
 execute at @s if entity @a[distance=..20] run data merge entity @s {CustomNameVisible:1b}
 execute at @s unless entity @a[distance=..20] run data merge entity @s {CustomNameVisible:0b}
 tp @s -121.5 54.00 23.50 180 0

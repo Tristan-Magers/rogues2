@@ -1,5 +1,5 @@
 #
-execute as @a run attribute @s minecraft:generic.movement_speed base set .1
+execute as @a run attribute @s minecraft:movement_speed base set .1
 
 #remove res
 effect clear @s[tag=nores] resistance

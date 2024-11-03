@@ -311,7 +311,7 @@ Barbose
 - Wrong color for spectator particles over players
 - Fixed "Return to Portal" not having consistent timing for being given
 
-* Patch 2.1.1 Notes *
+* Patch 2.1.2 Notes *
 
 [General]
 - Updated lobby with GGC3 tournament results
@@ -324,3 +324,51 @@ Halt
 
 [Bug Fixes]
 - Fixed bug where player could be stuck doing higher damage
+
+* Patch 2.1.3 Notes *
+
+[Game]
+- Updated minecraft version to 1.21.3
+
+[Characters]
+
+Halt
+- Claw boost lasts 1s shorter (3s -> 2s)
+
+* Patch 2.1.4 Notes *
+
+[Characters]
+
+Emma
+- New passive: Pure souls
+    - Capturing souls heals an extra 4
+
+Halt
+- Bug into feature: fully charged claw hits now cause cirital hits
+    - Fixed it to require 14 damage, not 12
+
+* Patch 2.1.5 Notes *
+
+[Characters]
+
+Sparket
+- Fire Fist charges 0.05s faster (0.75s -> 0.7s)
+- Reduced knockback on Fire Fist is now 20% less instead of 25% less
+
+Vohelm
+- Reduced knockback on Max Knife is now 20% less instead of 25% less
+
+Emma
+- Pure Souls (passive) heals 2 less (4 -> 2)
+- Frost Pillars last 0.1s shorter (1.9s -> 1.8s)
+
+Halt
+- Webs last 0.1s shorter (1.65s -> 1.55s)
+
+Barbose
+- Seeking Axe lasts 0.1s longer (4s -> 4.1s)
+- Seeking Axe pulses 0.05s faster (0.5s -> 0.45s)
+
+[Bug Fixes]
+- Decoy no longer says you died when canceled
+- Removed debug text when decoy prevents half of damage

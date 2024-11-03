@@ -52,7 +52,7 @@ tag @a remove searcher
 tag @s[nbt={SelectedItem:{id:"minecraft:diamond_axe"}}] add searcher
 scoreboard players set @s[scores={wtimer=..2}] axe_pulse 0
 scoreboard players add @s[scores={wtimer=3..}] axe_pulse 1
-scoreboard players set @s[scores={axe_pulse=10..}] axe_pulse 1
+scoreboard players set @s[scores={axe_pulse=9..}] axe_pulse 1
 execute if entity @s[nbt={SelectedItem:{id:"minecraft:diamond_axe"}},scores={axe_pulse=3}] run execute as @a[gamemode=adventure,limit=1,sort=nearest,distance=0.1..80,scores={respawn=..0}] at @s run function game:characters/barbose/active/tracker
 execute if entity @s[nbt=!{Inventory:[{id:"minecraft:red_dye",Slot:3b}]},scores={portal=..0,Mana=6..}] run function game:spells/manaup
 
@@ -66,3 +66,6 @@ scoreboard players remove @s[scores={portalcool=-1..}] portalcool 1
 #correct axe
 clear @s[scores={wtimer=3..},nbt=!{SelectedItem:{id:"minecraft:diamond_axe"}}] diamond_axe
 scoreboard players set @s[scores={wtimer=3..},nbt=!{SelectedItem:{id:"minecraft:diamond_axe"}}] wtimer 2
+
+#
+#tag @s remove project_cancel

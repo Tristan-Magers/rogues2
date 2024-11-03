@@ -3,8 +3,8 @@ execute as @a[scores={tutorialtime=10..524}] at @s positioned ~ ~ ~ unless entit
 
 # default attributes
 effect give @a minecraft:fire_resistance 10 10 true
-execute as @a run attribute @s minecraft:generic.knockback_resistance base set 0.0
-execute as @a run attribute @s minecraft:generic.explosion_knockback_resistance base set 0.0
+execute as @a run attribute @s minecraft:knockback_resistance base set 0.0
+execute as @a run attribute @s minecraft:explosion_knockback_resistance base set 0.0
 
 #new player
 scoreboard players set @a[tag=!has_joined] tutorialtime 1
@@ -265,8 +265,8 @@ scoreboard players add @e[tag=turoial_view] t1 1
 kill @e[tag=turoial_view,scores={t1=800..}]
 
 # portal knockback res
-execute as @a[scores={effect_immune=1..}] run attribute @s minecraft:generic.knockback_resistance base set 1.0
-execute as @a[scores={effect_immune=1..}] run attribute @s minecraft:generic.explosion_knockback_resistance base set 1.0
+execute as @a[scores={effect_immune=1..}] run attribute @s minecraft:knockback_resistance base set 1.0
+execute as @a[scores={effect_immune=1..}] run attribute @s minecraft:explosion_knockback_resistance base set 1.0
 
 #
 #execute as @a[tag=water_remove_target] at @s run function game:test2

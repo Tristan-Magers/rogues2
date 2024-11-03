@@ -103,7 +103,7 @@ scoreboard players set @s spider_delay -1
 clear @s
 title @s times 0 25 10
 
-attribute @s minecraft:generic.attack_damage base set 1
+attribute @s minecraft:attack_damage base set 1
 
 gamemode adventure @s
-attribute @s minecraft:generic.attack_damage base get
+attribute @s minecraft:attack_damage base get

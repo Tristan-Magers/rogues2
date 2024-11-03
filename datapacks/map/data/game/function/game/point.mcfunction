@@ -27,6 +27,7 @@ execute if entity @e[scores={playercount=5..}] run execute as @s[scores={pointsT
 execute if entity @e[scores={playercount=4..}] run execute as @s[scores={pointsT=800..}] at @s positioned ~-1 ~-1 ~-1 run scoreboard players add @a[gamemode=adventure,distance=..100,dx=3,dz=3,dy=2,scores={pointsT=30..}] healthshow 4
 execute if entity @e[scores={playercount=3..}] run execute as @s[scores={pointsT=800..}] at @s positioned ~-1 ~-1 ~-1 run scoreboard players add @a[gamemode=adventure,distance=..100,dx=3,dz=3,dy=2,scores={pointsT=30..}] healthshow 4
 execute as @s[scores={pointsT=800..}] at @s positioned ~-1 ~-1 ~-1 run scoreboard players add @a[gamemode=adventure,distance=..100,dx=3,dz=3,dy=2,scores={pointsT=30..}] healthshow 4
+execute as @s[scores={pointsT=800..}] at @s positioned ~-1 ~-1 ~-1 run scoreboard players add @a[gamemode=adventure,distance=..100,dx=3,dz=3,dy=2,scores={pointsT=30..,class=3}] healthshow 2
 execute as @s[scores={pointsT=600..799}] at @s positioned ~-1 ~-1 ~-1 run title @a[gamemode=adventure,distance=..100,dx=1,dz=1,dy=3] title [{"text":" "}]
 execute as @s[scores={pointsT=600..799}] at @s positioned ~-1 ~-1 ~-1 run title @a[gamemode=adventure,distance=..100,dx=3,dz=3,dy=2] times 0 3 10
 execute as @s[scores={pointsT=600..799}] at @s positioned ~-1 ~-1 ~-1 run title @a[gamemode=adventure,distance=..100,dx=3,dz=3,dy=2] subtitle {"text":"A Soul is Coming...","color":"light_purple","font":"fancy"}

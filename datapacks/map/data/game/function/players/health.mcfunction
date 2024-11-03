@@ -93,7 +93,7 @@ execute as @s[scores={healthshow=..0,class=2}] at @s run function game:character
 #
 tag @s remove project_hit
 tag @s[scores={healthreal=2..,class=6,notele=1..}] add project_hit
-execute as @s[tag=project_hit] at @s run say half
+#execute as @s[tag=project_hit] at @s run say half
 execute as @s[tag=project_hit] at @s run scoreboard players operation @s healthreal /= .2 .num
 execute as @s[tag=project_hit] at @s run scoreboard players operation @s healthshow += @s healthreal
 execute as @s[tag=project_hit,scores={healthshow=1..}] at @s run function game:characters/barbose/active/check_save_spot
@@ -299,12 +299,12 @@ item replace entity @s[tag=!spiritworld,scores={item=2,class=3}] armor.head with
 item replace entity @s[tag=!spiritworld,scores={item=2,class=5}] armor.head with minecraft:light_gray_dye[custom_name='{"text":"Mask"}']
 item replace entity @s[tag=!spiritworld,scores={item=2,class=6}] armor.head with minecraft:gray_dye[custom_name='{"text":"Mask"}']
 clear @s[tag=!spiritworld,scores={item=2},nbt=!{Inventory:[{id:"minecraft:golden_boots",Slot:100b}]}] golden_boots
-item replace entity @s[tag=!spiritworld,scores={item=2},nbt=!{Inventory:[{id:"minecraft:golden_boots",Slot:100b}]}] armor.feet with golden_boots[custom_name='{"text":" "}',unbreakable={show_in_tooltip:false},attribute_modifiers={modifiers:[{id:"armor",type:"generic.armor",amount:0,operation:"add_multiplied_base",slot:"any"}],show_in_tooltip:false}] 1
+item replace entity @s[tag=!spiritworld,scores={item=2},nbt=!{Inventory:[{id:"minecraft:golden_boots",Slot:100b}]}] armor.feet with golden_boots[custom_name='{"text":" "}',unbreakable={show_in_tooltip:false},attribute_modifiers={modifiers:[{id:"armor",type:"armor",amount:0,operation:"add_multiplied_base",slot:"any"}],show_in_tooltip:false}] 1
 item replace entity @s[scores={item=..1}] armor.head with minecraft:air
 item replace entity @s[scores={item=..1}] armor.feet with minecraft:air
 
 clear @s[tag=!spiritworld,nbt=!{Inventory:[{id:"minecraft:golden_leggings",Slot:101b}]}] golden_leggings
-item replace entity @s[tag=!spiritworld,nbt=!{Inventory:[{id:"minecraft:golden_leggings",Slot:101b}]}] armor.legs with golden_leggings[custom_name='{"text":" "}',unbreakable={show_in_tooltip:false},enchantments={levels:{"minecraft:swift_sneak":1},show_in_tooltip:false},attribute_modifiers={modifiers:[{id:"armor",type:"generic.armor",amount:0,operation:"add_multiplied_base",slot:"any"}],show_in_tooltip:false}] 1
+item replace entity @s[tag=!spiritworld,nbt=!{Inventory:[{id:"minecraft:golden_leggings",Slot:101b}]}] armor.legs with golden_leggings[custom_name='{"text":" "}',unbreakable={show_in_tooltip:false},enchantments={levels:{"minecraft:swift_sneak":1},show_in_tooltip:false},attribute_modifiers={modifiers:[{id:"armor",type:"armor",amount:0,operation:"add_multiplied_base",slot:"any"}],show_in_tooltip:false}] 1
 
 scoreboard players set @s item 0
 
