@@ -354,6 +354,7 @@ Halt
 Sparket
 - Fire Fist charges 0.05s faster (0.75s -> 0.7s)
 - Reduced knockback on Fire Fist is now 20% less instead of 25% less
+- Fire Breath removes water in its path
 
 Vohelm
 - Reduced knockback on Max Knife is now 20% less instead of 25% less
@@ -363,7 +364,10 @@ Emma
 - Frost Pillars last 0.1s shorter (1.9s -> 1.8s)
 
 Halt
-- Webs last 0.1s shorter (1.65s -> 1.55s)
+- Webs last 0.3s shorter (1.65s -> 1.35s)
+- Webs spawn 0.15s slower
+- Webs no longer spawn differently if shot at a downward/upward angle, making a consistent wall
+- Webs make sound on summoning and decaying
 
 Barbose
 - Seeking Axe lasts 0.1s longer (4s -> 4.1s)
@@ -371,4 +375,4 @@ Barbose
 
 [Bug Fixes]
 - Decoy no longer says you died when canceled
-- Removed debug text when decoy prevents half of damage
+- Removed debug text when decoy prevents half of the damage
