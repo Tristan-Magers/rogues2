@@ -12,7 +12,11 @@ attribute @s minecraft:attack_damage base set 1
 
 scoreboard players operation @e[tag=totem] playerID -= @s playerID
 execute as @s at @s if entity @e[tag=totem,distance=..6.5,scores={playerID=0,gertimer=..9990}] run effect give @s minecraft:jump_boost 2 1
-execute as @s at @s if entity @e[tag=totem,distance=..6.5,scores={playerID=0,gertimer=..9990}] run attribute @s minecraft:attack_damage base set 3
+execute as @s[nbt={SelectedItem:{id:"minecraft:wooden_hoe"}}] at @s if entity @e[tag=totem,distance=..6.5,scores={playerID=0,gertimer=..9990}] run attribute @s minecraft:attack_damage base set 3
+execute as @s[nbt={SelectedItem:{id:"minecraft:stone_hoe"}}] at @s if entity @e[tag=totem,distance=..6.5,scores={playerID=0,gertimer=..9990}] run attribute @s minecraft:attack_damage base set 3
+execute as @s[nbt={SelectedItem:{id:"minecraft:iron_hoe"}}] at @s if entity @e[tag=totem,distance=..6.5,scores={playerID=0,gertimer=..9990}] run attribute @s minecraft:attack_damage base set 3
+execute as @s[nbt={SelectedItem:{id:"minecraft:golden_hoe"}}] at @s if entity @e[tag=totem,distance=..6.5,scores={playerID=0,gertimer=..9990}] run attribute @s minecraft:attack_damage base set 3
+execute as @s[nbt={SelectedItem:{id:"minecraft:diamond_hoe"}}] at @s if entity @e[tag=totem,distance=..6.5,scores={playerID=0,gertimer=..9990}] run attribute @s minecraft:attack_damage base set 3
 #execute as @s at @s if entity @e[tag=totem,distance=..6.5,scores={playerID=0,gertimer=..9990}] run attribute @s[tag=wood,nbt={SelectedItem:{id:"minecraft:wooden_hoe"}}] minecraft:attack_damage base set 2
 #execute as @s at @s if entity @e[tag=totem,distance=..6.5,scores={playerID=0,gertimer=..9990}] run attribute @s[tag=wood,nbt={SelectedItem:{id:"minecraft:stone_hoe"}}] minecraft:attack_damage base set 3
 #execute as @s at @s if entity @e[tag=totem,distance=..6.5,scores={playerID=0,gertimer=..9990}] run attribute @s[tag=wood,nbt={SelectedItem:{id:"minecraft:iron_hoe"}}] minecraft:attack_damage base set 4
@@ -21,7 +25,7 @@ execute as @s at @s if entity @e[tag=totem,distance=..6.5,scores={playerID=0,ger
 execute as @s at @s if entity @e[tag=totem,distance=..6.75,scores={playerID=0,gertimer=..9990}] run execute as @e[tag=totem,distance=..6.75,scores={playerID=0}] at @s run particle dust{color:[1.000,0.500,0.500],scale:1} ~ ~1 ~ .3 .5 .3 0 2 force
 execute as @s at @s if entity @e[tag=totem,distance=..6.75,scores={playerID=0,gertimer=..9990}] run particle dust{color:[1.000,0.500,0.500],scale:1} ~ ~1 ~ .3 .5 .3 0 2 force
 execute as @s at @s if entity @e[tag=totem,distance=..6.75,scores={playerID=0,gertimer=..9990}] run tag @s add totemdust
-execute as @s at @s if entity @e[tag=totem,distance=..6.75,scores={playerID=0,gertimer=..9990}] run scoreboard players set @s totemres 40
+#execute as @s at @s if entity @e[tag=totem,distance=..6.75,scores={playerID=0,gertimer=..9990}] run scoreboard players set @s totemres 40
 execute as @s at @s run execute as @e[tag=totem,distance=6.75..,scores={playerID=0,gertimer=..9990}] at @s run scoreboard players set @s gertimer 9990
 scoreboard players operation @e[tag=totem] playerID += @s playerID
 

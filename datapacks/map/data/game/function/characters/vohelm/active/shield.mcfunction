@@ -8,7 +8,7 @@ item replace entity @s[scores={shield=1}] armor.feet with air
 
 effect clear @s[scores={shield=1}] resistance
 
-execute as @s[scores={shield=1}] at @s run playsound minecraft:block.beacon.deactivate master @a ~ ~ ~ .8 1.4
+#execute as @s[scores={shield=1}] at @s run playsound minecraft:block.beacon.deactivate master @a ~ ~ ~ .8 1.4
 execute as @s[scores={shield=1}] at @s run playsound minecraft:block.coral_block.fall master @a ~ ~ ~ 1 0
 execute as @s[scores={shield=1}] at @s run playsound minecraft:item.shield.break master @a ~ ~ ~ 1 .4
 

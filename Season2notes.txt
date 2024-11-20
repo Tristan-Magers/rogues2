@@ -60,7 +60,7 @@ Halt
 Vohelm
 - First Sacred knife upgrade costs 1 less (3 -> 2)
 - Sacred Knife upgrades give 20% less speed (+20% MAX -> +16% MAX)
-- Sacred Knife charges 10% slower (~0.83s -> ~.91s)
+- Sacred Knife charges 10% slower (~0.85s -> ~.91s)
 - Sacred Knife has 1 less base damage (4 -> 3) (8 -> 7 MAX)
 - Shield no longer degrades knife extra
 - Totem gives 1 less level Jump Boost (3 -> 2)
@@ -209,7 +209,7 @@ Halt
 
 Vohelm
 - Max knife has knockback (weakened knockback [see Sparket changes])
-- Sacred Knife charges 8.4% faster (0.91s -> 0.83s) [all levels]
+- Sacred Knife charges 8.4% faster (0.91s -> 0.85s) [all levels]
 - Upgrading knife boosts speed by 17% for 1.5s (stacks with other speed)
 - Sacred Knife now +5 speed for all levels (previously started at 0% and gained to 16%)
 - All knife levels cost 2 mana (previously 2 and 3 cost 3)
@@ -352,7 +352,7 @@ Halt
 [Characters]
 
 Sparket
-- Fire Fist charges 0.05s faster (0.75s -> 0.7s)
+- Fire Fist charges 0.051s faster (0.75s -> 0.69s)
 - Reduced knockback on Fire Fist is now 20% less instead of 25% less
 - Fire Breath removes water in its path
 
@@ -372,7 +372,32 @@ Halt
 Barbose
 - Seeking Axe lasts 0.1s longer (4s -> 4.1s)
 - Seeking Axe pulses 0.05s faster (0.5s -> 0.45s)
+- Seeking Axe costs 1 mana less (4 -> 3)
 
 [Bug Fixes]
 - Decoy no longer says you died when canceled
 - Removed debug text when decoy prevents half of the damage
+
+* Patch 2.1.6 Notes *
+
+Note: This is a final update in a series of polishing changes to remove the most serious cases of moves preventing counterplay.
+We hope after these rapid mini-changes the game remains mostly the same but is in a healthier state.
+
+[General]
+- If multiple players are on a point, players start regressing their capture time equal to the time multiple players are on
+
+[Characters]
+
+Sparket
+- Fire Fist charges 0.01s faster (0.69s -> 0.68s)
+
+Vohelm
+- Knife charges 0.02s slower (0.83s -> 0.85s)
+- Shield costs 1 mana less (6 -> 5)
+- Shield lasts 0.7s shorter (2.2s - 1.5s)
+- Shield cooldown is 0.75s longer (0.75s -> 1.5s)
+- Totem has 3 more health (3 -> 5)
+- Totem explodes 0.15s faster (0.8s -> 0.65s)
+
+Barbose
+- Seeking Axe costs 1 mana most (3 -> 4)
