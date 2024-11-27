@@ -38,6 +38,7 @@ scoreboard players set @s spiderwall 0
 
 scoreboard players set @s shield -1
 scoreboard players set @s shieldT -1
+scoreboard players set @s thorns_cool -1
 scoreboard players set @s totemres 0
 tag @s remove totemres
 
@@ -97,6 +98,8 @@ scoreboard players set @s effect_immune 0
 scoreboard players add @s music1 0
 
 scoreboard players set @s soul_send_cooldown -1
+
+scoreboard players set @s shadow_cool -1
 
 scoreboard players set @s spider_delay -1
 

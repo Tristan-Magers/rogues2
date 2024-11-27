@@ -401,3 +401,61 @@ Vohelm
 
 Barbose
 - Seeking Axe costs 1 mana most (3 -> 4)
+
+* Patch 2.1.7 Notes *
+
+Note: I lied
+
+[General]
+- Removed: If multiple players are on a point, players start regressing their capture time equal to the time multiple players are on
+
+[Characters]
+
+Pluto
+- Hurricane gives levitation to players in shield (still no damage)
+- Hurricane has better hit particles
+- Shadow Spikes cost 1 less mana (8 -> 7)
+- Shadow Spikes give 0.1s less visibility (1.2s -> 1.1s)
+- Shadow Spikes shoot 1 less spike (8 -> 7)
+- Shadow Spikes have a 2.6s cooldown
+
+Barbose
+- Seeking Axe lasts 0.05s shorter (4.1s -> 4.05s)
+- Seeking Axe pulses 0.1s slower (0.4s -> 0.5s)
+
+[Bug fixes]
+- Clicking a spirit to select with ready toggle won't toggle if you are ready
+- Pure Souls had no text on clicking
+- Pure Souls didn't specify it was a passive effect
+- Pure Souls item had a model
+
+* Patch 2.1.8 Notes *
+
+[General]
+- If no souls are glowing, all souls start spawning x10 faster until one is
+
+[Characters]
+
+Halt
+- Draining Claws have 0.15s longer cooldown (0.45s -> 0.6s)
+- Webs last 0.05s longer (1.35s -> 1.4s)
+
+Vohelm
+- Thorns cost 1 less (6 -> 5)
+- Thorns have 2s cooldown
+- Totems have knockback resistance
+- Totems have 0.25 less range (6.75 -> 6.5)
+
+Barbose
+- Bombs have slightly lower gravity and higher step height
+    - Note: to help game feel
+- Ending Project removes fire and poison status effects
+- Smoke Wall costs 1 less (4 -> 3)
+- Smoke Wall has 1.5s longer cooldown (7.5s -> 9s)
+
+[Bug fixes]
+- Totem could apply critical hits instead of extra damage
+- Totem has a small range where extra damage was not applied
+- Shield would reload after cooldown inconsistency
+- Many minor bugs with Vohelm hotbar
+- Claw/Spider cooldown not listed on the item

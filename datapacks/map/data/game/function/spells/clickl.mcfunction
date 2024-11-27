@@ -29,6 +29,13 @@ execute unless entity @s[scores={class=4,selwait=..10}] if entity @e[tag=selnow,
 execute unless entity @s[scores={class=5,selwait=..10}] if entity @e[tag=selnow,tag=haltselect] run tag @s remove ranchar
 execute unless entity @s[scores={class=6,selwait=..10}] if entity @e[tag=selnow,tag=barboseselect] run tag @s remove ranchar
 
+execute unless entity @s[scores={class=1,selwait=..10}] if entity @e[tag=selnow,tag=sparketselect] run tag @s add chose_char
+execute unless entity @s[scores={class=2,selwait=..10}] if entity @e[tag=selnow,tag=vohelmselect] run tag @s add chose_char
+execute unless entity @s[scores={class=3,selwait=..10}] if entity @e[tag=selnow,tag=emmaselect] run tag @s add chose_char
+execute unless entity @s[scores={class=4,selwait=..10}] if entity @e[tag=selnow,tag=plutoselect] run tag @s add chose_char
+execute unless entity @s[scores={class=5,selwait=..10}] if entity @e[tag=selnow,tag=haltselect] run tag @s add chose_char
+execute unless entity @s[scores={class=6,selwait=..10}] if entity @e[tag=selnow,tag=barboseselect] run tag @s add chose_char
+
 execute unless entity @s[scores={class=1,selwait=..10}] if entity @e[tag=selnow,tag=sparketselect] run scoreboard players set @s class 1
 execute unless entity @s[scores={class=2,selwait=..10}] if entity @e[tag=selnow,tag=vohelmselect] run scoreboard players set @s class 2
 execute unless entity @s[scores={class=3,selwait=..10}] if entity @e[tag=selnow,tag=emmaselect] run scoreboard players set @s class 3
@@ -50,13 +57,13 @@ execute if entity @s[tag=insel,x=1012,y=14,z=1006,distance=..20,x_rotation=-100.
 execute if entity @s[tag=insel,x=1012,y=14,z=1006,distance=..20,x_rotation=-100..-40] unless entity @s[scores={selwait=..10}] unless entity @e[tag=selnow] run playsound minecraft:block.note_block.didgeridoo master @a ~ ~ ~ 1 0
 execute if entity @s[tag=insel,x=1012,y=14,z=1006,distance=..20,tag=!ranchar,x_rotation=-100..-40] unless entity @s[scores={selwait=..10}] unless entity @e[tag=selnow] run tag @s add ranchar
 
-tag @e[tag=selnow] remove selnow
-
 scoreboard players set @s pressdelay 0
 scoreboard players set @s press 0
 
-title @s[nbt={SelectedItem:{id:"minecraft:spider_eye"}}] times 0 14 10
-title @s[nbt={SelectedItem:{id:"minecraft:magma_cream"}}] times 0 14 10
+title @s[tag=!chose_char,nbt={SelectedItem:{id:"minecraft:spider_eye"}}] times 0 14 10
+title @s[tag=!chose_char,nbt={SelectedItem:{id:"minecraft:magma_cream"}}] times 0 14 10
+
+tag @e[tag=selnow] remove selnow
 
 playsound minecraft:block.ancient_debris.break master @s[nbt={SelectedItem:{id:"minecraft:spider_eye"}}] ~ ~ ~ 1 2
 playsound minecraft:block.ancient_debris.break master @s[nbt={SelectedItem:{id:"minecraft:magma_cream"}}] ~ ~ ~ 1 1
@@ -66,11 +73,13 @@ playsound minecraft:block.note_block.basedrum master @s[nbt={SelectedItem:{id:"m
 scoreboard players set @s[nbt={SelectedItem:{id:"minecraft:spider_eye"}}] char_text 0
 scoreboard players set @s[nbt={SelectedItem:{id:"minecraft:magma_cream"}}] char_text 0
 
-title @s[nbt={SelectedItem:{id:"minecraft:spider_eye"}}] title {"text":"Ready","color":"dark_aqua","font":"fancy"}
-title @s[nbt={SelectedItem:{id:"minecraft:magma_cream"}}] title {"text":"Not Ready","color":"red","font":"fancy"}
+title @s[tag=!chose_char,nbt={SelectedItem:{id:"minecraft:spider_eye"}}] title {"text":"Ready","color":"dark_aqua","font":"fancy"}
+title @s[tag=!chose_char,nbt={SelectedItem:{id:"minecraft:magma_cream"}}] title {"text":"Not Ready","color":"red","font":"fancy"}
 
-tag @s[nbt={SelectedItem:{id:"minecraft:spider_eye"}}] add ready
-tag @s[nbt={SelectedItem:{id:"minecraft:magma_cream"}}] remove ready
+tag @s[tag=!chose_char,nbt={SelectedItem:{id:"minecraft:spider_eye"}}] add ready
+tag @s[tag=!chose_char,nbt={SelectedItem:{id:"minecraft:magma_cream"}}] remove ready
+
+tag @s remove chose_char
 
 title @s[nbt={SelectedItem:{id:"minecraft:iron_horse_armor"}}] title {"text":"Music Disabled","color":"red","font":"fancy"}
 title @s[nbt={SelectedItem:{id:"minecraft:golden_horse_armor"}}] title {"text":"Music Enabled","color":"dark_aqua","font":"fancy"}

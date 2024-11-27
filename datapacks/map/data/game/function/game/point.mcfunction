@@ -3,7 +3,8 @@ scoreboard players add @s[scores={pointsT=..799}] pointsT 1
 scoreboard players set @s people 0
 execute as @s[scores={pointsT=800..}] at @s positioned ~-1 ~-1 ~-1 run execute as @a[gamemode=adventure,distance=..100,dx=1,dz=1,dy=3] at @s run scoreboard players add @e[name=point,type=minecraft:armor_stand,distance=..10] people 1
 execute as @s[scores={pointsT=800..,people=1}] at @s positioned ~-1 ~-1 ~-1 run scoreboard players add @a[gamemode=adventure,distance=..100,dx=1,dz=1,dy=3,scores={nocap=..0}] pointsT 1
-execute as @s[scores={pointsT=800..,people=2..}] at @s positioned ~-1 ~-1 ~-1 run scoreboard players remove @a[gamemode=adventure,distance=..100,dx=1,dz=1,dy=3,scores={pointsT=2..29}] pointsT 1
+#viral sucks
+#execute as @s[scores={pointsT=800..,people=2..}] at @s positioned ~-1 ~-1 ~-1 run scoreboard players remove @a[gamemode=adventure,distance=..100,dx=1,dz=1,dy=3,scores={pointsT=2..29}] pointsT 1
 execute as @s[scores={pointsT=800..,people=1}] at @s positioned ~-1 ~-1 ~-1 run execute as @a[gamemode=adventure,distance=..100,dx=1,dz=1,dy=3,scores={nocap=..0}] at @s run execute as @e[name=point,distance=..8] at @s run particle minecraft:falling_dust{block_state:"minecraft:snow"} ~ ~2 ~ .6 .6 .6 .05 2 force
 execute as @s[scores={pointsT=800..,people=0}] at @s positioned ~-1 ~-1 ~-1 unless entity @a[gamemode=adventure,distance=..100,dx=1,dz=1,dy=3,scores={nocap=..0}] run execute as @e[tag=smokerloc,distance=..100,dx=1,dz=1,dy=3] at @s run execute as @e[name=point,distance=..8] at @s run particle minecraft:falling_dust{block_state:"minecraft:snow"} ~ ~2 ~ .6 .6 .6 .05 2 force
 execute as @s[scores={pointsT=800..,people=1..}] at @s positioned ~-1 ~-1 ~-1 run title @a[gamemode=adventure,distance=..100,dx=1,dz=1,dy=3] title [{"text":" "}]

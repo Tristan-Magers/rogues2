@@ -1,3 +1,7 @@
+
+attribute @s minecraft:step_height base set 1
+attribute @s minecraft:gravity base set 0.07
+
 scoreboard players add @s gertimer 1
 
 #execute as @s[scores={gertimer=5}] at @s run tp @s ~ ~1 ~

@@ -9,9 +9,10 @@ scoreboard players set @s[nbt={SelectedItem:{id:"minecraft:yellow_dye"}}] plutor
 scoreboard players set @s[nbt={SelectedItem:{id:"minecraft:yellow_dye"}}] fire_time_effect -1
 
 #spike
-scoreboard players remove @s[nbt={SelectedItem:{id:"minecraft:sugar_cane"}}] Mana 8
+scoreboard players remove @s[nbt={SelectedItem:{id:"minecraft:sugar_cane"}}] Mana 7
 scoreboard players set @s[nbt={SelectedItem:{id:"minecraft:sugar_cane"}}] plutospike 20
-scoreboard players set @s[nbt={SelectedItem:{id:"minecraft:sugar_cane"}}] invisoff 24
+scoreboard players set @s[nbt={SelectedItem:{id:"minecraft:sugar_cane"}}] shadow_cool 52
+scoreboard players set @s[nbt={SelectedItem:{id:"minecraft:sugar_cane"}}] invisoff 22
 execute as @s[nbt={SelectedItem:{id:"minecraft:sugar_cane"}}] at @s run playsound minecraft:entity.firework_rocket.blast_far master @a ~ ~ ~ 1 0
 execute as @s[nbt={SelectedItem:{id:"minecraft:sugar_cane"}}] at @s run playsound minecraft:entity.ghast.death master @a ~ ~ ~ 1 2
 execute as @s[nbt={SelectedItem:{id:"minecraft:sugar_cane"}}] at @s run playsound minecraft:entity.ghast.warn master @a ~ ~ ~ 0.3 2

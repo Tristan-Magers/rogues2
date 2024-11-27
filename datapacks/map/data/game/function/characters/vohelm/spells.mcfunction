@@ -8,7 +8,8 @@ execute as @s[nbt={SelectedItem:{id:"minecraft:purple_dye"}},tag=!isshift] at @s
 execute as @s[nbt={SelectedItem:{id:"minecraft:purple_dye"}},tag=isshift] at @s run tp @e[tag=pshot,sort=nearest,limit=1] ~ ~1.4 ~
 execute as @s[nbt={SelectedItem:{id:"minecraft:purple_dye"}}] at @s run execute as @e[tag=pshot,sort=nearest,limit=1] at @s run function game:faceaway
 scoreboard players set @s[nbt={SelectedItem:{id:"minecraft:purple_dye"}}] invisoff 13
-scoreboard players remove @s[nbt={SelectedItem:{id:"minecraft:purple_dye"}}] Mana 6
+scoreboard players remove @s[nbt={SelectedItem:{id:"minecraft:purple_dye"}}] Mana 5
+scoreboard players set @s[nbt={SelectedItem:{id:"minecraft:purple_dye"}}] thorns_cool 40
 
 #invul
 execute as @s[nbt={SelectedItem:{id:"minecraft:sugar"}}] at @s run playsound minecraft:block.beacon.power_select master @a ~ ~ ~ .7 1.65
@@ -31,7 +32,7 @@ clear @s[nbt={SelectedItem:{id:"minecraft:sugar"}}] sugar
 #scoreboard players remove @s[nbt={SelectedItem:{id:"minecraft:bone"}}] Mana 4
 
 #totem
-execute as @s[nbt={SelectedItem:{id:"minecraft:bone"}}] at @s run summon minecraft:vindicator ~ ~ ~ {Tags:["totem"],Invulnerable:0b,IsBaby:0b,Health:5f,ArmorItems:[{id:"minecraft:golden_boots",count:1,components:{"minecraft:attribute_modifiers":[{id:"armor",type:"armor",amount:0,operation:"add_multiplied_base"}]}},{},{},{id:"minecraft:bamboo",count:1}],attributes:[{id:"minecraft:attack_damage",base:0},{id:"minecraft:fall_damage_multiplier",base:0},{id:"minecraft:follow_range",base:0},{id:"minecraft:movement_speed",base:0}],Silent:1}
+execute as @s[nbt={SelectedItem:{id:"minecraft:bone"}}] at @s run summon minecraft:vindicator ~ ~ ~ {Tags:["totem"],Invulnerable:0b,IsBaby:0b,Health:5f,ArmorItems:[{id:"minecraft:golden_boots",count:1,components:{"minecraft:enchantments":{levels:{"minecraft:blast_protection":255}},"minecraft:attribute_modifiers":[{id:"armor",type:"armor",amount:0,operation:"add_multiplied_base"}]}},{},{},{id:"minecraft:bamboo",count:1}],attributes:[{id:"minecraft:attack_damage",base:0},{id:"minecraft:fall_damage_multiplier",base:0},{id:"minecraft:follow_range",base:0},{id:"minecraft:movement_speed",base:0}],Silent:1}
 #team join noColide @e[tag=totem,sort=nearest,limit=1]
 execute as @s[nbt={SelectedItem:{id:"minecraft:bone"}}] at @s run tp @e[tag=totem,sort=nearest,limit=1] @p
 execute as @s[nbt={SelectedItem:{id:"minecraft:bone"}}] at @s run scoreboard players operation @e[tag=totem,distance=...1,limit=1,sort=nearest] playerID = @s playerID

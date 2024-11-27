@@ -50,6 +50,8 @@ execute if block ~ ~-.5 ~ #minecraft:slabs[type=bottom] run tag @s add in
 execute if block ~ ~.5 ~ #minecraft:stairs[half=top] run tag @s add in
 execute if block ~ ~-.5 ~ #minecraft:stairs[half=bottom] run tag @s add in
 
+execute if block ~ ~ ~ #minecraft:climbable run tag @s add in
+
 execute if block ~ ~ ~ #minecraft:fences run tag @s add in
 execute if block ~ ~ ~ end_rod run tag @s add in
 execute if block ~ ~ ~ bamboo run tag @s add in

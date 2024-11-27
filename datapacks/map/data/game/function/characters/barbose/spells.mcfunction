@@ -1,5 +1,5 @@
 #axe
-scoreboard players set @s[nbt={SelectedItem:{id:"minecraft:glowstone_dust"}}] wtimer 82
+scoreboard players set @s[nbt={SelectedItem:{id:"minecraft:glowstone_dust"}}] wtimer 81
 scoreboard players remove @s[nbt={SelectedItem:{id:"minecraft:glowstone_dust"}}] Mana 4
 execute as @s[nbt={SelectedItem:{id:"minecraft:glowstone_dust"}}] at @s run item replace entity @s hotbar.0 with minecraft:diamond_axe[attribute_modifiers={modifiers:[{id:"attack_speed",type:"attack_speed",amount:-3.4,operation:"add_value",slot:"any"},{id:"attack_damage",type:"attack_damage",amount:11,operation:"add_value",slot:"any"},{id:"movement_speed",type:"movement_speed",amount:0.12,operation:"add_multiplied_total",slot:"any"}],show_in_tooltip:false},custom_name='[{"text":"Seeking Axe","color":"yellow","italic":false,"bold":true},{"text":" [","color":"white","italic":false},{"text":"12 Damage","color":"red","italic":false},{"text":"]","color":"white","italic":false}]',lore=['{"text":"A lethal axe that makes men cower","color":"white","italic":false}','{"text":"12 damage, 1.7s charge","color":"gold","italic":false}','{"text":"+12% speed","color":"green","italic":false}','{"text":"Points towards nearest player","color":"green","italic":false}','{"text":"Breaks if unequipped","color":"red","italic":false}']]
 
@@ -43,13 +43,14 @@ scoreboard players set @s[scores={portal=..9,portalcool=..0},nbt={SelectedItem:{
 
 #wall
 execute as @s[nbt={SelectedItem:{id:"minecraft:ink_sac"}}] at @s run function game:characters/barbose/spells/smoke_wall_start
-scoreboard players remove @s[nbt={SelectedItem:{id:"minecraft:ink_sac"}}] Mana 4
-scoreboard players set @s[nbt={SelectedItem:{id:"minecraft:ink_sac"}}] coolblack 170
+scoreboard players remove @s[nbt={SelectedItem:{id:"minecraft:ink_sac"}}] Mana 3
+scoreboard players set @s[nbt={SelectedItem:{id:"minecraft:ink_sac"}}] coolblack 180
 execute as @s[nbt={SelectedItem:{id:"minecraft:ink_sac"}}] at @s run function game:spells/manaup
 clear @s[scores={coolblack=1..}] ink_sac
 
 #cancel project
 scoreboard players remove @s[nbt={SelectedItem:{id:"minecraft:rabbit_hide"}}] Mana 2
+execute as @s[nbt={SelectedItem:{id:"minecraft:rabbit_hide"}}] at @s run particle minecraft:squid_ink ~ ~1 ~ 0.1 0.3 0.1 0 10 force
 execute as @s[nbt={SelectedItem:{id:"minecraft:rabbit_hide"}}] at @s run tag @s add project_cancel
 execute as @s[nbt={SelectedItem:{id:"minecraft:rabbit_hide"}}] at @s run function game:characters/barbose/active/check_save_spot
 

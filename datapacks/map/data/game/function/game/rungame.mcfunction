@@ -29,6 +29,21 @@ execute if entity @e[scores={map=3}] run execute as @e[tag=map3,name=point,type=
 execute if entity @e[scores={map=4}] run execute as @e[tag=map4,name=point,type=minecraft:armor_stand] at @s run function game:game/point
 execute if entity @e[scores={map=5}] run execute as @e[tag=map5,name=point,type=minecraft:armor_stand] at @s run function game:game/point
 execute if entity @e[scores={map=6}] run execute as @e[tag=map6,name=point,type=minecraft:armor_stand] at @s run function game:game/point
+
+tag @e[name=point] remove current_game_point
+execute if entity @e[scores={Time=1..5000}] if entity @e[scores={map=1}] run execute as @e[tag=map1,name=point,type=minecraft:armor_stand] at @s run tag @s add current_game_point
+execute if entity @e[scores={Time=1..5000}] if entity @e[scores={map=2}] run execute as @e[tag=map2,name=point,type=minecraft:armor_stand] at @s run tag @s add current_game_point
+execute if entity @e[scores={Time=1..5000}] if entity @e[scores={map=3}] run execute as @e[tag=map3,name=point,type=minecraft:armor_stand] at @s run tag @s add current_game_point
+execute if entity @e[scores={Time=1..5000}] if entity @e[scores={map=4}] run execute as @e[tag=map4,name=point,type=minecraft:armor_stand] at @s run tag @s add current_game_point
+execute if entity @e[scores={Time=1..5000}] if entity @e[scores={map=5}] run execute as @e[tag=map5,name=point,type=minecraft:armor_stand] at @s run tag @s add current_game_point
+execute if entity @e[scores={Time=1..5000}] if entity @e[scores={map=6}] run execute as @e[tag=map6,name=point,type=minecraft:armor_stand] at @s run tag @s add current_game_point
+
+#if no points are ready, start spawning faster x10
+execute unless entity @e[tag=current_game_point,name=point,type=minecraft:armor_stand,scores={pointsT=460..}] run scoreboard players add @e[tag=current_game_point] pointsT 4
+execute unless entity @e[tag=current_game_point,name=point,type=minecraft:armor_stand,scores={pointsT=460..}] run scoreboard players add @e[tag=current_game_point] pointsT 2
+execute unless entity @e[tag=current_game_point,name=point,type=minecraft:armor_stand,scores={pointsT=460..}] run scoreboard players add @e[tag=current_game_point] pointsT 2
+execute unless entity @e[tag=current_game_point,name=point,type=minecraft:armor_stand,scores={pointsT=460..}] run scoreboard players add @e[tag=current_game_point] pointsT 1
+
 scoreboard players set @a[tag=!point] pointsT 0
 scoreboard players remove @a[scores={nocap=1..}] nocap 1
 

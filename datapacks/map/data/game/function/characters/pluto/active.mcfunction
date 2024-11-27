@@ -37,7 +37,7 @@ execute as @s[scores={plutospike=10}] at @s run function game:characters/pluto/s
 execute as @s[scores={plutospike=8}] at @s run function game:characters/pluto/spells/newspike
 execute as @s[scores={plutospike=6}] at @s run function game:characters/pluto/spells/newspike
 execute as @s[scores={plutospike=4}] at @s run function game:characters/pluto/spells/newspike
-execute as @s[scores={plutospike=2}] at @s run function game:characters/pluto/spells/newspike
+#execute as @s[scores={plutospike=2}] at @s run function game:characters/pluto/spells/newspike
 #execute as @s[scores={plutospike=0}] at @s run function game:characters/pluto/spells/newspike
 
 execute as @s[scores={plutospike=0..}] at @s run particle minecraft:squid_ink ~ ~.23 ~ .12 .1 .12 .1 2 force
@@ -55,3 +55,7 @@ execute as @s[scores={cooljp=0}] at @s run function game:spells/manaup
 
 #
 scoreboard players remove @s[scores={soul_send_cooldown=0..}] soul_send_cooldown 1
+
+#
+scoreboard players remove @s[scores={shadow_cool=0..}] shadow_cool 1
+execute as @s[scores={shadow_cool=0}] at @s run function game:spells/manaup

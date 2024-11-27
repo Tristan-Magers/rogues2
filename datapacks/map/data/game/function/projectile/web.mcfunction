@@ -26,8 +26,8 @@ execute as @s[scores={move=1045}] at @s run particle minecraft:cloud ~ ~ ~ 1 1 1
 execute as @s[scores={move=1045}] at @s run playsound minecraft:block.cobweb.break master @a ~ ~ ~ 1 2
 scoreboard players add @s move 1
 
-#safe way to reduce life from 2.25s -> 1.3s
-scoreboard players add @s[scores={move=1002}] move 18
+#safe way to reduce life from 2.25s -> 1.4s
+scoreboard players add @s[scores={move=1002}] move 17
 
 kill @s[scores={move=500}]
 kill @s[scores={move=1046..}]

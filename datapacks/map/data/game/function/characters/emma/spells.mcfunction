@@ -34,3 +34,6 @@ scoreboard players set @s[nbt={SelectedItem:{id:"minecraft:clay_ball"}}] glowing
 scoreboard players remove @s[nbt={SelectedItem:{id:"minecraft:clay_ball"}}] Mana 6
 execute as @s[nbt={SelectedItem:{id:"minecraft:clay_ball"}}] at @s run playsound minecraft:item.bucket.fill master @a ~ ~ ~ 1 .1
 execute as @s[nbt={SelectedItem:{id:"minecraft:clay_ball"}}] at @s run playsound minecraft:ambient.underwater.exit master @a ~ ~ ~ 1 1.2
+
+#pure souls
+tellraw @s[nbt={SelectedItem:{id:"minecraft:netherite_ingot"}}] {"text":"[§c§l!§r] Move is active at all times and requires no further action.\n§6Souls Heals 2 Extra."}
