@@ -33,14 +33,23 @@ execute as @s[scores={spiderT=15..}] run tag @e[type=villager] add other
 execute as @s[scores={spiderT=15..}] run tag @a[gamemode=adventure] add other
 tag @a[scores={playerID=0}] remove other
 
-execute as @s at @s positioned ^6 ^ ^6 run execute as @e[tag=other,distance=..5.7] run execute as @e[tag=tag] at @s run tp @s ~ ~ ~ ~-5 0
-execute as @s at @s positioned ^-6 ^ ^6 run execute as @e[tag=other,distance=..5.7] run execute as @e[tag=tag] at @s run tp @s ~ ~ ~ ~5 0
+tag @s remove left
+tag @s remove right
+
+execute as @s at @s positioned ^6 ^ ^6 if entity @e[tag=other,distance=..5.99] run tag @s add left
+execute as @s at @s positioned ^-6 ^ ^6 if entity @e[tag=other,distance=..5.99] run tag @s add right
+
+execute as @s at @s positioned ^3 ^ ^3 if entity @e[tag=other,distance=..2.99] run tag @s add left
+execute as @s at @s positioned ^-3 ^ ^3 if entity @e[tag=other,distance=..2.99] run tag @s add right
+
+execute as @s[tag=tag,tag=left] at @s run tp @s ~ ~ ~ ~-2.5 0
+execute as @s[tag=tag,tag=right] at @s run tp @s ~ ~ ~ ~2.5 0
 
 tag @s remove tag
 
 scoreboard players set @e[tag=other,distance=..1.3] glowing 50
-effect give @e[tag=other,distance=..1.3] slowness 3 0
-scoreboard players set @e[tag=other,distance=..1.3] poison2 76
+effect give @e[tag=other,distance=..1.3] slowness 2 0
+scoreboard players set @e[tag=other,distance=..1.3] poison2 50
 execute if entity @e[tag=other,distance=..1.3] run kill @s
 #effect give @a[distance=..1.3] wither 1 2
 

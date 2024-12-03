@@ -15,3 +15,5 @@ execute as @s[scores={shield=1}] at @s run playsound minecraft:item.shield.break
 particle minecraft:cloud ~ ~.5 ~ .2 .2 .2 0 9 force
 scoreboard players remove @s shield 1
 scoreboard players set @s invisoff 2
+
+scoreboard players set @s poison2 0

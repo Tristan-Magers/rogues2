@@ -16,10 +16,12 @@ execute as @s[nbt={SelectedItem:{id:"minecraft:sugar"}}] at @s run playsound min
 execute as @s[nbt={SelectedItem:{id:"minecraft:sugar"}}] at @s run playsound minecraft:item.armor.equip_iron master @a ~ ~ ~ 1.5 1.2
 execute as @s[nbt={SelectedItem:{id:"minecraft:sugar"}}] at @s run playsound minecraft:block.anvil.land master @a ~ ~ ~ .3 .2
 effect give @s[nbt={SelectedItem:{id:"minecraft:sugar"}}] resistance 3 10
-scoreboard players set @s[nbt={SelectedItem:{id:"minecraft:sugar"}}] shield 30
+scoreboard players set @s[nbt={SelectedItem:{id:"minecraft:sugar"}}] shield 32
 scoreboard players set @s[nbt={SelectedItem:{id:"minecraft:sugar"}}] shieldT 60
+scoreboard players set @s[nbt={SelectedItem:{id:"minecraft:sugar"}}] poison2 0
+effect clear @s[nbt={SelectedItem:{id:"minecraft:sugar"}}] wither
 #tag @s[nbt={SelectedItem:{id:"minecraft:sugar"}}] add sworddeg
-scoreboard players set @s[nbt={SelectedItem:{id:"minecraft:sugar"}}] nocap 30
+scoreboard players set @s[nbt={SelectedItem:{id:"minecraft:sugar"}}] nocap 31
 scoreboard players remove @s[nbt={SelectedItem:{id:"minecraft:sugar"}}] Mana 5
 clear @s[nbt={SelectedItem:{id:"minecraft:sugar"}}] sugar
 

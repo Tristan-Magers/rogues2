@@ -1,4 +1,4 @@
-tp @s ^ ^ ^.19
+tp @s ^ ^ ^.21
 
 scoreboard players add @s stepcount 1
 
@@ -14,7 +14,7 @@ execute as @s[tag=in] at @s positioned ~-.2 ~.5 ~-.2 run function game:inblock
 data merge entity @s[tag=bar] {Invulnerable:1}
 
 execute as @s at @s run particle minecraft:firework ^ ^.2 ^-1 .2 .2 .2 0 1 force
-execute as @s[tag=!in] at @s run tp @s ^ ^ ^-.2
+execute as @s[tag=!in] at @s run tp @s ^ ^ ^-.22
 execute as @s[tag=!in] at @s run tag @s add kill
 
 execute as @s[tag=!in,tag=!bar] at @s run function game:projectile/soulbacktrack 

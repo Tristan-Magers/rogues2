@@ -459,3 +459,34 @@ Barbose
 - Shield would reload after cooldown inconsistency
 - Many minor bugs with Vohelm hotbar
 - Claw/Spider cooldown not listed on the item
+
+Last update until 2.2
+
+* Patch 2.1.9 Notes *
+
+[General]
+- If no souls are within 20s of spawning, all souls respawn 10x faster (previously 16.5s)
+
+Vohelm
+- Shield lasts 0.1s longer (1.5s -> 1.6s)
+- Shield prevents spider poison and Snow Temple void poison
+
+Halt
+- Draining Claws take 0.6s to get knockback
+- Draining Claws have 20% less knockback (consistent with reduction of Fire Fist and Sacred Knife)
+- Ghost Bow costs 1 more mana (7 -> 8)
+- Spiders no longer have a blindspot in front of them and will track more accurately
+- Spiders turn 50% slower (100 degrees per sec -> 50)
+- Spiders give 1s less slowness (3s -> 2s)
+- Spider do 1s less poison (3.5s -> 2.5s) [5 damage -> 3 damage]
+    - Note: Consistent with glowing time
+
+Basbose
+- Cannot enter Spirit Realm for 1.2s after teleporting to portal
+
+Pluto
+- Max Hurricane lev lasts 0.1s shorter (0.75s -> 0.65s) (still gives roughly same hieght and same fall damage)
+- Max Hurricane gives 0.1s less glowing (1.75s -> 1.65s)
+- 1st, 2nd, 3rd level charge hurricane give 0.05s longer lev (0.5s,0.55s,0.6s -> 0.55s,0.6s,0.65s)
+- Note: Hurricane now more consistent with lev scaling, starting at 0.55s and gaining a tick per level
+- Soul send moves 10% faster (7.6 b/s -> 8.4 b/s)

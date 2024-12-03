@@ -174,18 +174,18 @@ execute as @s[scores={hurpower=4},tag=!in] at @s run effect give @e[tag=gethit] 
 execute as @s[scores={hurpower=5},tag=!in] at @s run effect give @e[tag=gethit] minecraft:levitation 1 4 true
 execute as @s[scores={hurpower=6},tag=!in] at @s run effect give @e[tag=gethit] minecraft:levitation 1 5 true
 
-execute as @s[scores={hurpower=1},tag=!in] at @s run scoreboard players set @e[tag=gethit] nolev 10
-execute as @s[scores={hurpower=2},tag=!in] at @s run scoreboard players set @e[tag=gethit] nolev 11
-execute as @s[scores={hurpower=3},tag=!in] at @s run scoreboard players set @e[tag=gethit] nolev 12
+execute as @s[scores={hurpower=1},tag=!in] at @s run scoreboard players set @e[tag=gethit] nolev 11
+execute as @s[scores={hurpower=2},tag=!in] at @s run scoreboard players set @e[tag=gethit] nolev 12
+execute as @s[scores={hurpower=3},tag=!in] at @s run scoreboard players set @e[tag=gethit] nolev 13
 execute as @s[scores={hurpower=4},tag=!in] at @s run scoreboard players set @e[tag=gethit] nolev 14
-execute as @s[scores={hurpower=5},tag=!in] at @s run scoreboard players set @e[tag=gethit] nolev 17
+execute as @s[scores={hurpower=5},tag=!in] at @s run scoreboard players set @e[tag=gethit] nolev 15
 
 execute as @s[scores={hurpower=1},tag=!in] at @s run scoreboard players set @e[tag=gethit] glowing 10
 execute as @s[scores={hurpower=2},tag=!in] at @s run scoreboard players set @e[tag=gethit] glowing 15
 execute as @s[scores={hurpower=3},tag=!in] at @s run scoreboard players set @e[tag=gethit] glowing 20
 execute as @s[scores={hurpower=4},tag=!in] at @s run scoreboard players set @e[tag=gethit] glowing 25
 execute as @s[scores={hurpower=5},tag=!in] at @s run scoreboard players set @e[tag=gethit] glowing 30
-execute as @s[scores={hurpower=6},tag=!in] at @s run scoreboard players set @e[tag=gethit] glowing 35
+execute as @s[scores={hurpower=6},tag=!in] at @s run scoreboard players set @e[tag=gethit] glowing 33
 
 execute as @s[scores={hurpower=1..6},tag=!in] at @s run scoreboard players set @a[tag=gethit] fireheal -120
 execute as @s[scores={hurpower=1..6},tag=!in] at @s run scoreboard players set @a[tag=gethit] plutoregen -1

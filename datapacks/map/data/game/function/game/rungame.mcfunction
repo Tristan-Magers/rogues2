@@ -1,4 +1,4 @@
-execute as @a at @s if block ~ ~-.4 ~ minecraft:black_stained_glass run effect give @s wither 1 20
+execute as @a[scores={Invul=..0,shield=..0}] at @s if block ~ ~-.4 ~ minecraft:black_stained_glass run effect give @s wither 1 20
 
 execute as @e[type=minecraft:skeleton] at @s run tp @s ~ ~-.1 ~
 
@@ -39,10 +39,10 @@ execute if entity @e[scores={Time=1..5000}] if entity @e[scores={map=5}] run exe
 execute if entity @e[scores={Time=1..5000}] if entity @e[scores={map=6}] run execute as @e[tag=map6,name=point,type=minecraft:armor_stand] at @s run tag @s add current_game_point
 
 #if no points are ready, start spawning faster x10
-execute unless entity @e[tag=current_game_point,name=point,type=minecraft:armor_stand,scores={pointsT=460..}] run scoreboard players add @e[tag=current_game_point] pointsT 4
-execute unless entity @e[tag=current_game_point,name=point,type=minecraft:armor_stand,scores={pointsT=460..}] run scoreboard players add @e[tag=current_game_point] pointsT 2
-execute unless entity @e[tag=current_game_point,name=point,type=minecraft:armor_stand,scores={pointsT=460..}] run scoreboard players add @e[tag=current_game_point] pointsT 2
-execute unless entity @e[tag=current_game_point,name=point,type=minecraft:armor_stand,scores={pointsT=460..}] run scoreboard players add @e[tag=current_game_point] pointsT 1
+execute unless entity @e[tag=current_game_point,name=point,type=minecraft:armor_stand,scores={pointsT=390..}] run scoreboard players add @e[tag=current_game_point] pointsT 4
+execute unless entity @e[tag=current_game_point,name=point,type=minecraft:armor_stand,scores={pointsT=390..}] run scoreboard players add @e[tag=current_game_point] pointsT 2
+execute unless entity @e[tag=current_game_point,name=point,type=minecraft:armor_stand,scores={pointsT=390..}] run scoreboard players add @e[tag=current_game_point] pointsT 2
+execute unless entity @e[tag=current_game_point,name=point,type=minecraft:armor_stand,scores={pointsT=390..}] run scoreboard players add @e[tag=current_game_point] pointsT 1
 
 scoreboard players set @a[tag=!point] pointsT 0
 scoreboard players remove @a[scores={nocap=1..}] nocap 1

@@ -41,6 +41,7 @@ scoreboard players remove @s[scores={portal=10..}] portal 1
 execute as @s[scores={portal=11..}] at @s run particle minecraft:large_smoke ~ ~1 ~ .2 .5 .2 .1 1
 execute as @s[scores={portal=18}] at @s run execute as @s[nbt={SelectedItem:{id:"minecraft:cocoa_beans"}}] at @s run playsound minecraft:entity.enderman.teleport master @a ~ ~ ~ 1 1
 execute as @s[scores={portal=10}] at @s run particle minecraft:large_smoke ~ ~1 ~ .2 .5 .2 .1 40
+execute as @s[scores={portal=10}] at @s run scoreboard players set @s notele 24
 execute as @s[scores={portal=10}] at @s run scoreboard players operation @e[tag=portalset] playerID -= @s playerID
 execute as @s[scores={portal=10}] at @s run tp @p @e[tag=portalset,limit=1,sort=nearest,scores={playerID=0}]
 execute as @s[scores={portal=10}] at @s run execute as @e[tag=portalset,limit=1,sort=nearest,scores={playerID=0}] at @s run tp @p ~ ~.3 ~
