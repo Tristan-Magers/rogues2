@@ -472,7 +472,7 @@ Vohelm
 - Shield prevents spider poison and Snow Temple void poison
 
 Halt
-- Draining Claws take 0.6s to get knockback
+- Draining Claws take 0.45s to get knockback
 - Draining Claws have 20% less knockback (consistent with reduction of Fire Fist and Sacred Knife)
 - Ghost Bow costs 1 more mana (7 -> 8)
 - Spiders no longer have a blindspot in front of them and will track more accurately
@@ -485,8 +485,8 @@ Basbose
 - Cannot enter Spirit Realm for 1.2s after teleporting to portal
 
 Pluto
-- Max Hurricane lev lasts 0.1s shorter (0.75s -> 0.65s) (still gives roughly same hieght and same fall damage)
-- Max Hurricane gives 0.1s less glowing (1.75s -> 1.65s)
+- Max Hurricane (5) lev lasts 0.05s shorter (0.85s -> 0.8s) (still gives roughly same height and same fall damage)
+- Max Hurricane (5) gives 0.1s less glowing (1.75s -> 1.65s)
 - 1st, 2nd, 3rd level charge hurricane give 0.05s longer lev (0.5s,0.55s,0.6s -> 0.55s,0.6s,0.65s)
-- Note: Hurricane now more consistent with lev scaling, starting at 0.55s and gaining a tick per level
+- Note: Hurricane now more consistent with lev scaling, starting at 0.55s and gaining a tick per level (besides last)
 - Soul send moves 10% faster (7.6 b/s -> 8.4 b/s)

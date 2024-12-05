@@ -178,7 +178,7 @@ execute as @s[scores={hurpower=1},tag=!in] at @s run scoreboard players set @e[t
 execute as @s[scores={hurpower=2},tag=!in] at @s run scoreboard players set @e[tag=gethit] nolev 12
 execute as @s[scores={hurpower=3},tag=!in] at @s run scoreboard players set @e[tag=gethit] nolev 13
 execute as @s[scores={hurpower=4},tag=!in] at @s run scoreboard players set @e[tag=gethit] nolev 14
-execute as @s[scores={hurpower=5},tag=!in] at @s run scoreboard players set @e[tag=gethit] nolev 15
+execute as @s[scores={hurpower=5},tag=!in] at @s run scoreboard players set @e[tag=gethit] nolev 16
 
 execute as @s[scores={hurpower=1},tag=!in] at @s run scoreboard players set @e[tag=gethit] glowing 10
 execute as @s[scores={hurpower=2},tag=!in] at @s run scoreboard players set @e[tag=gethit] glowing 15

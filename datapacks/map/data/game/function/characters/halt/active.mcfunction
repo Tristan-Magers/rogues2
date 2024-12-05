@@ -80,7 +80,7 @@ execute as @s[scores={bowshot=1..}] run execute as @e[tag=harrow,scores={arrowli
 clear @s[scores={wtimer=10..},nbt=!{SelectedItem:{id:"minecraft:stone_sword"}}] stone_sword
 scoreboard players set @s[scores={wtimer=10..},nbt=!{SelectedItem:{id:"minecraft:stone_sword"}}] wtimer 2
 
-execute as @s[scores={wtimer=1..150},nbt={SelectedItem:{id:"minecraft:stone_sword"}}] at @s run item modify entity @s weapon.mainhand game:knockback
+execute as @s[scores={wtimer=1..151},nbt={SelectedItem:{id:"minecraft:stone_sword"}}] at @s run item modify entity @s weapon.mainhand game:knockback
 
 execute as @s[nbt={SelectedItem:{id:"minecraft:stone_sword"}}] at @s run execute as @a[distance=0.01..10] run attribute @s minecraft:knockback_resistance base set 0.2
 
