@@ -31,7 +31,7 @@ scoreboard players remove @s[nbt={SelectedItem:{id:"minecraft:red_dye"}}] Mana 3
 clear @s[nbt={SelectedItem:{id:"minecraft:red_dye"}}] red_dye
 
 #go to portal
-scoreboard players set @s[scores={portal=..9,portalcool=..0},nbt={SelectedItem:{id:"minecraft:cocoa_beans"}}] invisoff 40
+scoreboard players set @s[scores={portal=..9,portalcool=..0},nbt={SelectedItem:{id:"minecraft:cocoa_beans"}}] invisoff 50
 effect give @s[scores={portal=..9,portalcool=..0},nbt={SelectedItem:{id:"minecraft:cocoa_beans"}}] darkness 3
 effect give @s[scores={portal=..9,portalcool=..0},nbt={SelectedItem:{id:"minecraft:cocoa_beans"}}] slowness 2 2
 
@@ -40,7 +40,7 @@ execute as @s[scores={portal=..9,portalcool=..0},nbt={SelectedItem:{id:"minecraf
 execute as @s[scores={portal=..9,portalcool=..0},nbt={SelectedItem:{id:"minecraft:cocoa_beans"}}] at @s run playsound minecraft:entity.enderman.teleport master @a ~ ~ ~ 1 0
 execute as @s[scores={portal=..9,portalcool=..0},nbt={SelectedItem:{id:"minecraft:cocoa_beans"}}] at @s run playsound minecraft:entity.enderman.teleport master @a ~ ~ ~ 1 .5
 
-scoreboard players set @s[scores={portal=..9,portalcool=..0},nbt={SelectedItem:{id:"minecraft:cocoa_beans"}}] portal 32
+scoreboard players set @s[scores={portal=..9,portalcool=..0},nbt={SelectedItem:{id:"minecraft:cocoa_beans"}}] portal 31
 
 #wall
 execute as @s[nbt={SelectedItem:{id:"minecraft:ink_sac"}}] at @s run function game:characters/barbose/spells/smoke_wall_start

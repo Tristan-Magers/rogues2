@@ -145,6 +145,9 @@ execute as @s[tag=!in] at @s run execute as @a[tag=gethit] at @s run playsound m
 tag @a[tag=!has_shield,tag=!isthrow,tag=gethit] add hasres
 tag @a[tag=!has_shield,tag=!isthrow,tag=gethit,scores={manaboost=..0},tag=!totemres] remove hasres
 
+tag @a remove in_project
+tag @a[scores={class=6,notele=1..}] add in_project
+
 execute as @s[scores={hurpower=1},tag=!in] at @s run execute as @a[tag=!has_shield,tag=!isthrow,tag=gethit] at @s run summon minecraft:armor_stand ~ ~ ~ {Marker:1,Silent:1,Silent:1,Silent:1,Silent:1,Invisible:1b,Invulnerable:1,Tags:["damnum"],CustomNameVisible:1b,Duration:999999,CustomName:'{"text":"-2"}'}
 execute as @s[scores={hurpower=2},tag=!in] at @s run execute as @a[tag=!has_shield,tag=!isthrow,tag=gethit] at @s run summon minecraft:armor_stand ~ ~ ~ {Marker:1,Silent:1,Silent:1,Silent:1,Silent:1,Invisible:1b,Invulnerable:1,Tags:["damnum"],CustomNameVisible:1b,Duration:999999,CustomName:'{"text":"-3"}'}
 execute as @s[scores={hurpower=3},tag=!in] at @s run execute as @a[tag=!has_shield,tag=!isthrow,tag=gethit] at @s run summon minecraft:armor_stand ~ ~ ~ {Marker:1,Silent:1,Silent:1,Silent:1,Silent:1,Invisible:1b,Invulnerable:1,Tags:["damnum"],CustomNameVisible:1b,Duration:999999,CustomName:'{"text":"-4"}'}
@@ -155,15 +158,21 @@ execute as @s[scores={hurpower=4},tag=!in] at @s run execute as @a[tag=!has_shie
 execute as @s[scores={hurpower=5},tag=!in] at @s run execute as @a[tag=!has_shield,tag=!isthrow,tag=gethit,tag=hasres] at @s run summon minecraft:armor_stand ~ ~ ~ {Marker:1,Silent:1,Silent:1,Silent:1,Silent:1,Invisible:1b,Invulnerable:1,Tags:["damnum"],CustomNameVisible:1b,Duration:999999,CustomName:'{"text":"-5"}'}
 execute as @s[scores={hurpower=6},tag=!in] at @s run execute as @a[tag=!has_shield,tag=!isthrow,tag=gethit,tag=hasres] at @s run summon minecraft:armor_stand ~ ~ ~ {Marker:1,Silent:1,Silent:1,Silent:1,Silent:1,Invisible:1b,Invulnerable:1,Tags:["damnum"],CustomNameVisible:1b,Duration:999999,CustomName:'{"text":"-6"}'}
 
-execute as @s[scores={hurpower=1},tag=!in] at @s run scoreboard players remove @a[tag=!has_shield,tag=!isthrow,tag=gethit] healthshow 2
-execute as @s[scores={hurpower=2},tag=!in] at @s run scoreboard players remove @a[tag=!has_shield,tag=!isthrow,tag=gethit] healthshow 3
-execute as @s[scores={hurpower=3},tag=!in] at @s run scoreboard players remove @a[tag=!has_shield,tag=!isthrow,tag=gethit] healthshow 4
-execute as @s[scores={hurpower=4},tag=!in] at @s run scoreboard players remove @a[tag=!has_shield,tag=!isthrow,tag=gethit,tag=!hasres] healthshow 5
-execute as @s[scores={hurpower=5},tag=!in] at @s run scoreboard players remove @a[tag=!has_shield,tag=!isthrow,tag=gethit,tag=!hasres] healthshow 6
-execute as @s[scores={hurpower=6},tag=!in] at @s run scoreboard players remove @a[tag=!has_shield,tag=!isthrow,tag=gethit,tag=!hasres] healthshow 7
-execute as @s[scores={hurpower=4},tag=!in] at @s run scoreboard players remove @a[tag=!has_shield,tag=!isthrow,tag=gethit,tag=hasres] healthshow 4
-execute as @s[scores={hurpower=5},tag=!in] at @s run scoreboard players remove @a[tag=!has_shield,tag=!isthrow,tag=gethit,tag=hasres] healthshow 5
-execute as @s[scores={hurpower=6},tag=!in] at @s run scoreboard players remove @a[tag=!has_shield,tag=!isthrow,tag=gethit,tag=hasres] healthshow 6
+execute as @s[scores={hurpower=1},tag=!in] at @s run scoreboard players remove @a[tag=!in_project,tag=!has_shield,tag=!isthrow,tag=gethit] healthshow 2
+execute as @s[scores={hurpower=2},tag=!in] at @s run scoreboard players remove @a[tag=!in_project,tag=!has_shield,tag=!isthrow,tag=gethit] healthshow 3
+execute as @s[scores={hurpower=3},tag=!in] at @s run scoreboard players remove @a[tag=!in_project,tag=!has_shield,tag=!isthrow,tag=gethit] healthshow 4
+execute as @s[scores={hurpower=4},tag=!in] at @s run scoreboard players remove @a[tag=!in_project,tag=!has_shield,tag=!isthrow,tag=gethit,tag=!hasres] healthshow 5
+execute as @s[scores={hurpower=5},tag=!in] at @s run scoreboard players remove @a[tag=!in_project,tag=!has_shield,tag=!isthrow,tag=gethit,tag=!hasres] healthshow 6
+execute as @s[scores={hurpower=6},tag=!in] at @s run scoreboard players remove @a[tag=!in_project,tag=!has_shield,tag=!isthrow,tag=gethit,tag=!hasres] healthshow 7
+execute as @s[scores={hurpower=4},tag=!in] at @s run scoreboard players remove @a[tag=!in_project,tag=!has_shield,tag=!isthrow,tag=gethit,tag=hasres] healthshow 4
+execute as @s[scores={hurpower=5},tag=!in] at @s run scoreboard players remove @a[tag=!in_project,tag=!has_shield,tag=!isthrow,tag=gethit,tag=hasres] healthshow 5
+execute as @s[scores={hurpower=6},tag=!in] at @s run scoreboard players remove @a[tag=!in_project,tag=!has_shield,tag=!isthrow,tag=gethit,tag=hasres] healthshow 6
+execute as @s[scores={hurpower=1},tag=!in] at @s run scoreboard players remove @a[tag=in_project,tag=!has_shield,tag=!isthrow,tag=gethit] healthshow 1
+execute as @s[scores={hurpower=2},tag=!in] at @s run scoreboard players remove @a[tag=in_project,tag=!has_shield,tag=!isthrow,tag=gethit] healthshow 2
+execute as @s[scores={hurpower=3},tag=!in] at @s run scoreboard players remove @a[tag=in_project,tag=!has_shield,tag=!isthrow,tag=gethit] healthshow 2
+execute as @s[scores={hurpower=4},tag=!in] at @s run scoreboard players remove @a[tag=in_project,tag=!has_shield,tag=!isthrow,tag=gethit] healthshow 3
+execute as @s[scores={hurpower=5},tag=!in] at @s run scoreboard players remove @a[tag=in_project,tag=!has_shield,tag=!isthrow,tag=gethit] healthshow 3
+execute as @s[scores={hurpower=6},tag=!in] at @s run scoreboard players remove @a[tag=in_project,tag=!has_shield,tag=!isthrow,tag=gethit] healthshow 4
 
 execute as @s[tag=!in] at @s run effect clear @e[tag=gethit] minecraft:levitation
 execute as @s[tag=!in] at @s run effect give @e[tag=gethit] minecraft:levitation 1 0 true
