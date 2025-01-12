@@ -32,6 +32,6 @@ execute positioned -79.0 44.0 39.0 run execute as @a[tag=lobby,gamemode=adventur
 
 execute positioned -156.0 22.0 -45.0 run title @a[distance=..100,dx=-4,dz=6,dy=5] times 20 30 20
 execute positioned -156.0 22.0 -45.0 run title @a[distance=..100,dx=-4,dz=6,dy=5] title {"text":"Rogues II","font":"fancy"}
-execute positioned -156.0 22.0 -45.0 run title @a[distance=..100,dx=-4,dz=6,dy=5] subtitle {"text":"Season 2.1.9","font":"fancy","color":"gray"}
+execute positioned -156.0 22.0 -45.0 run title @a[distance=..100,dx=-4,dz=6,dy=5] subtitle {"text":"Season 2.1.10","font":"fancy","color":"gray"}
 execute positioned -156.0 22.0 -45.0 run tag @a[distance=..100,dx=-4,dz=6,dy=5] add portsound2
 execute positioned -156.0 22.0 -45.0 run tp @a[distance=..100,dx=-4,dz=6,dy=5] -80 44 41 96.2 ~

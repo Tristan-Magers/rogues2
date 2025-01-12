@@ -1,4 +1,4 @@
-tp @s ^ ^ ^.21
+tp @s ^ ^ ^.2
 
 scoreboard players add @s stepcount 1
 

@@ -465,7 +465,7 @@ Last update until 2.2
 * Patch 2.1.9 Notes *
 
 [General]
-- If no souls are within 20s of spawning, all souls respawn 10x faster (previously 16.5s)
+- If no souls are within 25s of spawning, all souls respawn 10x faster (previously 16.5s)
 
 Vohelm
 - Shield lasts 0.1s longer (1.5s -> 1.6s)
@@ -489,4 +489,22 @@ Pluto
 - Max Hurricane (5) gives 0.1s less glowing (1.75s -> 1.65s)
 - 1st, 2nd, 3rd level charge hurricane give 0.05s longer lev (0.5s,0.55s,0.6s -> 0.55s,0.6s,0.65s)
 - Note: Hurricane now more consistent with lev scaling, starting at 0.55s and gaining a tick per level (besides last)
-- Soul send moves 10% faster (7.6 b/s -> 8.4 b/s)
+- Soul send moves 5% faster (7.6 b/s -> 8 b/s)
+
+* Patch 2.1.10 Notes *
+
+Halt
+- Webs last 0.1s longer (1.4s -> 1.5s)
+
+Basbose
+- Teleport to portal 0.4s faster (1.5s -> 1.1s)
+- Portal return gives level 3 slowness instead of 6
+- Portal return makes you visible 0.5s less (3s -> 2.5s)
+- Taking 2 or more damage cancels teleportation and puts return to portal on 1s cooldown
+- Portal takes 2.25s longer to ready (2.75s -> 5s)
+    - Note: this makes it impossible to place and start teleport to portal during a project
+- Project costs 1 less mana (4 -> 3)
+- Canceling project costs 1 less mana (2 -> 1)
+
+[Bug Fixes]
+- Hurricane hits did not end project

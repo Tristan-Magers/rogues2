@@ -1,3 +1,19 @@
+#
+execute unless entity @s[scores={health_temp=1..}] run scoreboard players operation @s health_temp = @s healthshow
+scoreboard players operation .health .calc = @s healthshow
+scoreboard players operation .health .calc -= @s health_temp
+
+execute if score .health .calc matches ..-2 as @s[scores={portal=11..}] run playsound minecraft:item.wolf_armor.break master @a ~ ~ ~ 1 1.8
+execute if score .health .calc matches ..-2 run effect clear @s[scores={portal=11..}] slowness
+execute if score .health .calc matches ..-2 run effect clear @s[scores={portal=11..}] darkness
+execute if score .health .calc matches ..-2 run scoreboard players set @s[scores={portal=11..}] portalcool 21
+execute if score .health .calc matches ..-2 run tag @s add reload_bar
+execute if score .health .calc matches ..-2 run scoreboard players set @s[scores={portal=11..}] portal 1
+
+execute as @s[tag=reload_bar] run function game:spells/manaup
+tag @s remove reload_bar
+
+#
 tag @s remove portaltest
 tag @s[scores={portal=1}] add self
 

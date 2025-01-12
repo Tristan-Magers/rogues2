@@ -15,5 +15,5 @@ execute as @s[scores={timer=1000}] at @s run playsound minecraft:entity.arrow.hi
 execute as @s[scores={timer=1000}] at @s run playsound minecraft:item.trident.hit_ground master @a ~ ~ ~ 1 2
 execute as @s[scores={timer=1000}] at @s run playsound minecraft:entity.firework_rocket.twinkle master @a ~ ~ ~ .5 1.1 .1
 execute as @s[scores={timer=1000}] at @s run playsound minecraft:entity.firework_rocket.twinkle master @a ~ ~ ~ .3 .4 .07
-execute as @s[scores={timer=1000}] at @s run scoreboard players set @e[distance=..3,name=web] move 1045
+execute as @s[scores={timer=1000}] at @s run scoreboard players set @e[distance=..3,name=web] move 1046
 kill @s[scores={timer=1006}]

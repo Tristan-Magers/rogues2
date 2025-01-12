@@ -15,7 +15,7 @@ execute as @s[scores={gertimer=30}] at @s run scoreboard players operation @a pl
 
 execute as @s[scores={gertimer=30}] at @s run summon creeper ~ ~.8 ~ {ingited:1,Fuse:0,ExplosionRadius:2}
 execute as @s[scores={gertimer=30}] at @s run particle minecraft:explosion_emitter
-execute as @s[scores={gertimer=30}] at @s run scoreboard players set @e[distance=..4,name=web] move 1045
+execute as @s[scores={gertimer=30}] at @s run scoreboard players set @e[distance=..4,name=web] move 1046
 
 tp @s[scores={gertimer=34..}] ~ ~-1000 ~
 execute if entity @s[scores={gertimer=34..}] run kill @e[tag=head,limit=1,sort=nearest]

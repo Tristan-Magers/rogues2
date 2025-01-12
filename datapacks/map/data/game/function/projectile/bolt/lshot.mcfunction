@@ -17,7 +17,7 @@ execute as @s[tag=!in] at @s run particle minecraft:end_rod ~ ~.4 ~ .1 .1 .1 .25
 execute as @s[tag=!in] at @s run playsound minecraft:entity.dragon_fireball.explode master @a ~ ~ ~ .5 2 .2
 execute as @s[tag=!in] at @s run playsound minecraft:entity.dragon_fireball.explode master @a ~ ~ ~ .3 1 .3
 execute as @s[tag=!in] at @s run playsound minecraft:entity.firework_rocket.blast master @a ~ ~ ~ .3 2 .1
-execute as @s[tag=!in] at @s run scoreboard players set @e[distance=..3,name=web] move 1045
+execute as @s[tag=!in] at @s run scoreboard players set @e[distance=..3,name=web] move 1046
 tag @s[tag=!in] add hitsome
 kill @s[tag=!in]
 particle minecraft:end_rod ~ ~ ~ .01 .01 .01 .007 1 force

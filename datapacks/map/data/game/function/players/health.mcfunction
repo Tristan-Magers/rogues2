@@ -93,11 +93,14 @@ execute as @s[scores={healthshow=..0,class=2}] at @s run function game:character
 #
 tag @s remove project_hit
 tag @s[scores={healthreal=2..,class=6,notele=1..}] add project_hit
+tag @s[tag=end_project] add project_hit
 #execute as @s[tag=project_hit] at @s run say half
 execute as @s[tag=project_hit] at @s run scoreboard players operation @s healthreal /= .2 .num
 execute as @s[tag=project_hit] at @s run scoreboard players operation @s healthshow += @s healthreal
 execute as @s[tag=project_hit,scores={healthshow=1..}] at @s run function game:characters/barbose/active/check_save_spot
 execute as @s[tag=project_hit,scores={healthshow=..0}] at @s run function game:characters/barbose/active/remove_save_spot
+
+tag @s remove end_project
 
 ## Visibility text
 execute as @s[scores={healthshow=1..}] at @s run execute as @e[tag=stealth] at @s run data merge entity @s {CustomName:'{"text":"±Invisible±"}'}

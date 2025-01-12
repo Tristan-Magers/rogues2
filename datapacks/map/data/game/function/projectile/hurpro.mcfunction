@@ -180,6 +180,8 @@ execute as @s[scores={hurpower=3},tag=!in] at @s run scoreboard players set @e[t
 execute as @s[scores={hurpower=4},tag=!in] at @s run scoreboard players set @e[tag=gethit] nolev 14
 execute as @s[scores={hurpower=5},tag=!in] at @s run scoreboard players set @e[tag=gethit] nolev 16
 
+execute as @s[scores={hurpower=1..},tag=!in] at @s run tag @a[tag=gethit] add end_project
+
 execute as @s[scores={hurpower=1},tag=!in] at @s run scoreboard players set @e[tag=gethit] glowing 10
 execute as @s[scores={hurpower=2},tag=!in] at @s run scoreboard players set @e[tag=gethit] glowing 15
 execute as @s[scores={hurpower=3},tag=!in] at @s run scoreboard players set @e[tag=gethit] glowing 20
@@ -199,7 +201,7 @@ execute as @s[tag=!in] at @s run playsound minecraft:block.composter.empty maste
 
 execute as @s[tag=!in] at @s run particle minecraft:crit ~ ~1.5 ~ 0.1 0.1 0.1 0 5 force
 execute as @s[tag=!in] at @s run particle minecraft:firework ~ ~1.5 ~ .6 .6 .6 .15 25 force
-execute as @s[tag=!in] at @s run scoreboard players set @e[distance=..3,name=web] move 1045
+execute as @s[tag=!in] at @s run scoreboard players set @e[distance=..3,name=web] move 1046
 
 kill @s[tag=!in]
 

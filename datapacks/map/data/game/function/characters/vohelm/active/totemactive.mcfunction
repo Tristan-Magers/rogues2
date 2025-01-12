@@ -13,7 +13,7 @@ execute as @s[scores={gertimer=9991}] at @s run playsound minecraft:block.amethy
 execute as @s[scores={gertimer=9996}] at @s run playsound minecraft:item.firecharge.use master @a
 execute as @s[scores={gertimer=9994}] at @s run playsound minecraft:entity.creeper.primed master @a ~ ~ ~ 1 2
 
-execute as @s[scores={gertimer=10003..}] at @s run scoreboard players set @e[distance=..4,name=web] move 1045
+execute as @s[scores={gertimer=10003..}] at @s run scoreboard players set @e[distance=..4,name=web] move 1046
 execute as @s[scores={gertimer=10003..}] at @s run summon creeper ~ ~ ~ {ignited:1,Fuse:0,ExplosionRadius:2}
 execute as @s[scores={gertimer=10003..}] at @s run tp @s ~ ~-1000 ~
 

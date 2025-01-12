@@ -4,7 +4,7 @@ scoreboard players remove @s[nbt={SelectedItem:{id:"minecraft:glowstone_dust"}}]
 execute as @s[nbt={SelectedItem:{id:"minecraft:glowstone_dust"}}] at @s run item replace entity @s hotbar.0 with minecraft:diamond_axe[attribute_modifiers={modifiers:[{id:"attack_speed",type:"attack_speed",amount:-3.4,operation:"add_value",slot:"any"},{id:"attack_damage",type:"attack_damage",amount:11,operation:"add_value",slot:"any"},{id:"movement_speed",type:"movement_speed",amount:0.12,operation:"add_multiplied_total",slot:"any"}],show_in_tooltip:false},custom_name='[{"text":"Seeking Axe","color":"yellow","italic":false,"bold":true},{"text":" [","color":"white","italic":false},{"text":"12 Damage","color":"red","italic":false},{"text":"]","color":"white","italic":false}]',lore=['{"text":"A lethal axe that makes men cower","color":"white","italic":false}','{"text":"12 damage, 1.7s charge","color":"gold","italic":false}','{"text":"+12% speed","color":"green","italic":false}','{"text":"Points towards nearest player","color":"green","italic":false}','{"text":"Breaks if unequipped","color":"red","italic":false}']]
 
 #project
-scoreboard players remove @s[nbt={SelectedItem:{id:"minecraft:green_dye"}}] Mana 4
+scoreboard players remove @s[nbt={SelectedItem:{id:"minecraft:green_dye"}}] Mana 3
 execute as @s[nbt={SelectedItem:{id:"minecraft:green_dye"}}] at @s run function game:characters/barbose/spells/project
 clear @s[nbt={SelectedItem:{id:"minecraft:green_dye"}}] green_dye
 
@@ -26,20 +26,21 @@ execute as @s[nbt={SelectedItem:{id:"minecraft:red_dye"}}] at @s run tp @e[tag=p
 execute as @s[nbt={SelectedItem:{id:"minecraft:red_dye"}}] at @s run scoreboard players operation @e[tag=portalset,distance=...1,limit=1,sort=nearest] playerID = @s playerID
 execute as @s[nbt={SelectedItem:{id:"minecraft:red_dye"}}] at @s run tp @e[tag=portalset,distance=...1,limit=1,sort=nearest] ~ ~-.3 ~ ~ 0
 scoreboard players set @s[nbt={SelectedItem:{id:"minecraft:red_dye"}}] portal 1
-scoreboard players set @s[nbt={SelectedItem:{id:"minecraft:red_dye"}}] portalcool 55
+scoreboard players set @s[nbt={SelectedItem:{id:"minecraft:red_dye"}}] portalcool 99
 scoreboard players remove @s[nbt={SelectedItem:{id:"minecraft:red_dye"}}] Mana 3
 clear @s[nbt={SelectedItem:{id:"minecraft:red_dye"}}] red_dye
 
 #go to portal
-scoreboard players set @s[scores={portal=..9,portalcool=..0},nbt={SelectedItem:{id:"minecraft:cocoa_beans"}}] invisoff 60
+scoreboard players set @s[scores={portal=..9,portalcool=..0},nbt={SelectedItem:{id:"minecraft:cocoa_beans"}}] invisoff 40
 effect give @s[scores={portal=..9,portalcool=..0},nbt={SelectedItem:{id:"minecraft:cocoa_beans"}}] darkness 3
-effect give @s[scores={portal=..9,portalcool=..0},nbt={SelectedItem:{id:"minecraft:cocoa_beans"}}] slowness 2 6
+effect give @s[scores={portal=..9,portalcool=..0},nbt={SelectedItem:{id:"minecraft:cocoa_beans"}}] slowness 2 2
 
+execute as @s[scores={portal=..9,portalcool=..0},nbt={SelectedItem:{id:"minecraft:cocoa_beans"}}] at @s run scoreboard players operation @s health_temp = @s healthshow
 execute as @s[scores={portal=..9,portalcool=..0},nbt={SelectedItem:{id:"minecraft:cocoa_beans"}}] at @s run playsound minecraft:entity.enderman.scream master @a ~ ~ ~ 1 1
 execute as @s[scores={portal=..9,portalcool=..0},nbt={SelectedItem:{id:"minecraft:cocoa_beans"}}] at @s run playsound minecraft:entity.enderman.teleport master @a ~ ~ ~ 1 0
 execute as @s[scores={portal=..9,portalcool=..0},nbt={SelectedItem:{id:"minecraft:cocoa_beans"}}] at @s run playsound minecraft:entity.enderman.teleport master @a ~ ~ ~ 1 .5
 
-scoreboard players set @s[scores={portal=..9,portalcool=..0},nbt={SelectedItem:{id:"minecraft:cocoa_beans"}}] portal 40
+scoreboard players set @s[scores={portal=..9,portalcool=..0},nbt={SelectedItem:{id:"minecraft:cocoa_beans"}}] portal 32
 
 #wall
 execute as @s[nbt={SelectedItem:{id:"minecraft:ink_sac"}}] at @s run function game:characters/barbose/spells/smoke_wall_start
@@ -49,7 +50,7 @@ execute as @s[nbt={SelectedItem:{id:"minecraft:ink_sac"}}] at @s run function ga
 clear @s[scores={coolblack=1..}] ink_sac
 
 #cancel project
-scoreboard players remove @s[nbt={SelectedItem:{id:"minecraft:rabbit_hide"}}] Mana 2
+scoreboard players remove @s[nbt={SelectedItem:{id:"minecraft:rabbit_hide"}}] Mana 1
 execute as @s[nbt={SelectedItem:{id:"minecraft:rabbit_hide"}}] at @s run particle minecraft:squid_ink ~ ~1 ~ 0.1 0.3 0.1 0 10 force
 execute as @s[nbt={SelectedItem:{id:"minecraft:rabbit_hide"}}] at @s run tag @s add project_cancel
 execute as @s[nbt={SelectedItem:{id:"minecraft:rabbit_hide"}}] at @s run function game:characters/barbose/active/check_save_spot
